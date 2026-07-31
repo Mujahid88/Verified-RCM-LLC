@@ -42,55 +42,25 @@ works at a domain root, in a subfolder, or straight off your local disk.
 
 ---
 
-## 2. Before you go live — required
+## 2. Before you go live
 
-### a) Formspree (contact form)
-The form does not send anywhere until you add your endpoint.
+### a) Formspree (contact form) — done
+Both forms (the About page contact form and the footer email capture on every page) point to
+`https://formspree.io/f/xzdnqnly`. Client-side validation runs before submit (required fields,
+email format, min lengths, phone pattern) and shows inline errors plus a status message.
 
-1. Create a free form at <https://formspree.io>.
-2. Copy your endpoint ID (looks like `mqkrwxyz`).
-3. Find/replace **`YOUR_FORM_ID`** across all files. It appears in two places:
-   - `about.html` — the main contact form (marked with an HTML comment)
-   - the footer email capture — **in every page's footer**
+### b) Your real domain — done
+Every page's `<link rel="canonical">`, Open Graph `og:url`, JSON-LD, `robots.txt`, and
+`sitemap.xml` point at `https://www.verifiedrcm.com` (confirmed as the real domain).
 
-   Fastest way (macOS/Linux):
-   ```bash
-   grep -rl YOUR_FORM_ID . | xargs sed -i '' 's/YOUR_FORM_ID/mqkrwxyz/g'
-   ```
-   (On Linux drop the `''` after `-i`.)
+### c) Photography — done
+`images/` holds licensed photography (Unsplash, free license) at every filename, including
+per-article blog images, the homepage/about/testimonial photos, and the social-share cover image.
+Old placeholder graphics are kept out of the deploy in `_backups/` for reference only.
 
-Client-side validation already runs before submit (required fields, email format,
-min lengths, phone pattern) and shows inline errors plus a status message. Until the ID
-is swapped in, submitting shows a "form not configured yet" notice instead of failing silently.
-
-### b) Your real domain
-Every page has `<link rel="canonical">`, Open Graph `og:url`, and JSON-LD pointing at
-`https://www.verifiedrcm.com`. Replace that with your live domain everywhere:
-
-```bash
-grep -rl 'www.verifiedrcm.com' . | xargs sed -i '' 's|https://www.verifiedrcm.com|https://YOURDOMAIN.com|g'
-```
-
-Also update the `Sitemap:` line in `robots.txt` and the `<loc>` values in `sitemap.xml`.
-
-### c) Photography
-`images/` currently holds **branded placeholders**, not real photos — each one says so on
-the image. Replace with licensed photography at the same filenames and aspect ratios:
-
-| File | Suggested size | Used on |
-| --- | --- | --- |
-| `hero.jpg` | 1600×1100 | Homepage hero |
-| `about.jpg` | 1200×1400 (portrait) | Homepage + About |
-| `why-choose.jpg` | 1200×1000 | Homepage "Why choose us" |
-| `testimonial.jpg` | 1200×900 | Homepage testimonials |
-| `og-cover.jpg` | 1200×630 | Link previews (LinkedIn, email, Twitter) |
-| `blog/<slug>.jpg` | 1200×800 | One per article |
-
-Alt text is already written on every `<img>` — update it if the new photo shows something different.
-
-### d) Contact details
-Currently `+1 (623) 231-2306` and `hello@verifiedrcm.com` (footer of every page + `about.html`).
-Change the email if that isn't your real inbox.
+### d) Contact details — confirmed
+`+1 (623) 231-2306` and `hello@verifiedrcm.com` (footer of every page + `about.html`) are the
+real business contact details.
 
 ---
 
@@ -108,9 +78,9 @@ Change the email if that isn't your real inbox.
   </picture>
   ```
   (Or let Netlify/Cloudflare do format negotiation for you — usually easier.)
-- **Fonts** — the site uses Archivo with a `system-ui` fallback and loads **no external font
-  files**, so it has zero third-party requests. If you want Archivo self-hosted, drop the
-  `.woff2` files into `fonts/` and add an `@font-face` block at the top of `css/style.css`.
+- **Fonts** — Archivo is self-hosted (`fonts/Archivo-Variable.woff2`, ~35KB, one variable-weight
+  file covering all weights used) with a `system-ui` fallback, so it has zero third-party
+  font requests.
 - **Dark mode** — already built in via the moon/sun button in the nav; the choice persists
   in `localStorage`. Delete `#themeToggle` from each page's header if you don't want it.
 
@@ -152,9 +122,13 @@ because all paths are relative.
 
 - Unique `<title>` and `<meta name="description">` per page, written for a US medical
   billing / RCM audience
-- Open Graph + Twitter card tags on all 39 pages
+- `<meta name="robots" content="index, follow">` on all 39 pages
+- Open Graph + Twitter card tags on all 39 pages; blog posts use `og:type=article` and their
+  own photo (not the generic cover) for social-share previews
 - `<link rel="canonical">` per page
-- `MedicalBusiness` JSON-LD schema (name, URL, logo, phone, area served)
+- `MedicalBusiness` JSON-LD schema on every page (name, URL, logo, phone, area served)
+- `BlogPosting` JSON-LD schema on all 9 articles (headline, image, dates, author, publisher)
+- `FAQPage` JSON-LD schema on the homepage and About page (enables FAQ rich snippets in search)
 - `sitemap.xml` (39 URLs, prioritised) and `robots.txt`
 - Viewport meta on every page
 - One `<h1>` per page, semantic `<main>` / `<section>` / `<article>` / `<nav>` / `<footer>`,
@@ -162,20 +136,24 @@ because all paths are relative.
 - Alt text on every image
 - Responsive and verified at **375px**, **768px** and **1440px** (collapsing nav with a
   hamburger menu, single-column stacks, full-width buttons on small screens)
-- WCAG AA contrast: body text is `#181a14` on `#F7F8F2`; the lime accent is only used for
-  large text, fills and chrome, with the deeper `--color-accent-700` for accent-coloured
-  body copy and links
-- Keyboard focus rings (`:focus-visible`), `prefers-reduced-motion` respected
-- No console errors, no external requests
+- WCAG AA contrast: body text is `#181a14` on `#F7F8F2`; accent-coloured body copy and links
+  use `--color-accent-800` (~6.45:1 against the background, above the 4.5:1 AA minimum) —
+  the lime accent itself is reserved for large text, fills and chrome
+- Animated number counters (stats count up on scroll into view), staggered card/grid reveal,
+  nav bar shrink-on-scroll, subtle pulse on badge indicator dots — all respect
+  `prefers-reduced-motion`
+- Keyboard focus rings (`:focus-visible`)
+- No console errors, no external requests (fonts and images are all self-hosted)
 
 ---
 
 ## 6. Quick checklist
 
-- [ ] Replace `YOUR_FORM_ID` with your Formspree endpoint (about + every footer)
-- [ ] Replace `https://www.verifiedrcm.com` with your real domain (HTML + sitemap + robots)
-- [ ] Swap placeholder images in `images/` and `images/blog/` for licensed photography
-- [ ] Confirm phone number and email address
-- [ ] Add your analytics snippet
+- [x] Formspree endpoint wired in (about + every footer)
+- [x] Real domain confirmed everywhere (HTML + sitemap + robots)
+- [x] Licensed images in place in `images/` and `images/blog/`
+- [x] Phone number and email confirmed
+- [ ] Add your analytics snippet (optional, see section 3)
+- [ ] Decide on final deploy target (GitHub Pages / Netlify / Vercel / Namecheap hosting)
 - [ ] Submit `sitemap.xml` in Google Search Console
 - [ ] Test the contact form end to end after adding the Formspree ID
