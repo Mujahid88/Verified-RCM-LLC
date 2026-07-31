@@ -38,6 +38,10 @@
       <a href="blog.html" class="nav-link">Blog</a>
       <a href="about.html" class="nav-link">About us</a>
     </nav>
+    <div class="hero-toggle" id="heroToggle" role="group" aria-label="Homepage layout">
+      <button type="button" class="chip active" data-hero-choice="split">Home Page</button>
+      <button type="button" class="chip" data-hero-choice="bleed">Core Services</button>
+    </div>
     <div class="nav-spacer"></div>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
     <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
@@ -52,7 +56,30 @@
   </div>
 </div>
 <main>
-<section class="hero-bleed wrap">
+<section class="hero wrap" data-hero-panel="split">
+  <div class="split hero-split">
+    <div>
+      <div class="badge"><span class="dot"></span>Welcome to Verified RCM</div>
+      <h1>Full-service medical billing that gets you paid <span class="accent-text">faster</span>.</h1>
+      <p class="lede">From coding and claim submission to credentialing and collections, Verified RCM runs your revenue cycle end to end, so your team can focus on patient care instead of paperwork.</p>
+      <div class="hero-ctas">
+        <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free consultation</a>
+        <a href="services.html" class="btn btn-outline btn-lg">Explore services</a>
+      </div>
+      <div class="card hero-stats">
+        <div><div class="stat-big accent-text">99%</div><div class="stat-label">Clean claim ratio</div></div>
+        <div><div class="stat-big accent-text">+30%</div><div class="stat-label">Revenue increase</div></div>
+        <div><div class="stat-big accent-text">15+</div><div class="stat-label">Years experience</div></div>
+      </div>
+    </div>
+    <div class="hero-split-wrap">
+      <div class="photo hero-photo"><img src="images/hero-split.jpg" alt="Healthcare team reviewing patient charts and billing records" loading="lazy"></div>
+      <div class="hero-float-badge"><span class="icon-circle">&#10003;</span>HIPAA compliant</div>
+      <div class="hero-float-stat"><div class="stat-big accent-text">97.35%</div><div class="stat-label">First-pass acceptance</div></div>
+    </div>
+  </div>
+</section>
+<section class="hero-bleed wrap" data-hero-panel="bleed" hidden>
   <div class="hero-bleed-photo photo">
     <img src="images/hero.jpg" alt="Physician showing a patient billing and revenue insights on a tablet" loading="lazy">
     <div class="hero-bleed-overlay"></div>
