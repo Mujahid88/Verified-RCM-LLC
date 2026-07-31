@@ -67,6 +67,22 @@
     });
   }
 
+  /* ---------- homepage hero A/B toggle ---------- */
+  var heroToggle = document.getElementById('heroToggle');
+  if (heroToggle) {
+    var heroPanels = document.querySelectorAll('[data-hero-panel]');
+    heroToggle.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-hero-choice]');
+      if (!btn) return;
+      heroToggle.querySelectorAll('[data-hero-choice]').forEach(function (c) { c.classList.remove('active'); });
+      btn.classList.add('active');
+      var want = btn.getAttribute('data-hero-choice');
+      heroPanels.forEach(function (p) {
+        p.hidden = p.getAttribute('data-hero-panel') !== want;
+      });
+    });
+  }
+
   /* ---------- nav shrink on scroll ---------- */
   var navBar = document.getElementById('navBar');
   if (navBar) {
