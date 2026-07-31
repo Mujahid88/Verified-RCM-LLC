@@ -67,15 +67,76 @@
     });
   }
 
-  /* ---------- scroll reveal ---------- */
+  /* ---------- nav shrink on scroll ---------- */
+  var navBar = document.getElementById('navBar');
+  if (navBar) {
+    var navScrolled = false;
+    var onNavScroll = function () {
+      var scrolled = window.scrollY > 24;
+      if (scrolled !== navScrolled) {
+        navBar.classList.toggle('scrolled', scrolled);
+        navScrolled = scrolled;
+      }
+    };
+    window.addEventListener('scroll', onNavScroll, { passive: true });
+    onNavScroll();
+  }
+
+  /* ---------- scroll reveal (staggered within grids/stacks) ---------- */
   var targets = document.querySelectorAll('.card, .photo, h1, h2, .lede, .trust-bar');
+  var siblingIndex = new Map();
+  targets.forEach(function (t) {
+    t.classList.add('reveal');
+    if (t.matches('.card, .photo')) {
+      var parent = t.parentElement;
+      var idx = siblingIndex.get(parent) || 0;
+      t.style.transitionDelay = Math.min(idx * 70, 420) + 'ms';
+      siblingIndex.set(parent, idx + 1);
+    }
+  });
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
-    targets.forEach(function (t) { t.classList.add('reveal'); io.observe(t); });
+    targets.forEach(function (t) { io.observe(t); });
+  }
+
+  /* ---------- animated number counters ---------- */
+  var counters = document.querySelectorAll('.stat-big, .svc-stat-value, .trust-val');
+  function animateCounter(el) {
+    var raw = el.textContent.trim();
+    var m = raw.match(/^(\+)?(\d[\d,]*(?:\.\d+)?)(.*)$/);
+    if (!m) return;
+    var prefix = m[1] || '';
+    var numStr = m[2].replace(/,/g, '');
+    var suffix = m[3];
+    var end = parseFloat(numStr);
+    if (isNaN(end)) return;
+    var decimals = (numStr.split('.')[1] || '').length;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      el.textContent = raw;
+      return;
+    }
+    var duration = 1100;
+    var start = null;
+    function step(ts) {
+      if (start === null) start = ts;
+      var p = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = prefix + (end * eased).toFixed(decimals) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if ('IntersectionObserver' in window && counters.length) {
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { animateCounter(en.target); cio.unobserve(en.target); }
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(function (c) { cio.observe(c); });
   }
 
   /* ---------- contact form validation + Formspree submit ---------- */
