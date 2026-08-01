@@ -78,9 +78,10 @@ real business contact details.
   </picture>
   ```
   (Or let Netlify/Cloudflare do format negotiation for you — usually easier.)
-- **Fonts** — Archivo is self-hosted (`fonts/Archivo-Variable.woff2`, ~35KB, one variable-weight
-  file covering all weights used) with a `system-ui` fallback, so it has zero third-party
-  font requests.
+- **Fonts** — the "Corporate Trust" pairing, both self-hosted (latin subset, variable weight,
+  ~72KB total) with a `system-ui` fallback, so there are zero third-party font requests:
+  - `fonts/Lexend-Variable.woff2` (~39KB) — headings. Designed for reading proficiency.
+  - `fonts/SourceSans3-Variable.woff2` (~29KB) — body copy.
 - **Dark mode** — already built in via the moon/sun button in the nav; the choice persists
   in `localStorage`. Delete `#themeToggle` from each page's header if you don't want it.
 
@@ -136,12 +137,24 @@ because all paths are relative.
 - Alt text on every image
 - Responsive and verified at **375px**, **768px** and **1440px** (collapsing nav with a
   hamburger menu, single-column stacks, full-width buttons on small screens)
-- WCAG AA contrast: body text is `#181a14` on `#F7F8F2`; accent-coloured body copy and links
-  use `--color-accent-800` (~6.45:1 against the background, above the 4.5:1 AA minimum) —
-  the lime accent itself is reserved for large text, fills and chrome
-- Animated number counters (stats count up on scroll into view), staggered card/grid reveal,
-  nav bar shrink-on-scroll, subtle pulse on badge indicator dots — all respect
+- WCAG AA contrast, verified by computing every pairing rather than eyeballing it:
+  body text `#0B1B21` on `#F6FAFB` (16.75:1); muted text `#52636A` (5.96:1); accent body
+  copy and links use `--color-accent-800` (6.92:1). The base teal `--color-accent`
+  (`#0891B2`, 3.5:1) is a **fill/chrome colour only** and never carries body copy.
+  Gradients are checked at *every stop*, since white button labels sit on the lightest
+  one — `--grad-brand` bottoms out at 5.36:1 and `--grad-vivid` (which carries the
+  headline text) at 4.77:1.
+- Ink on solid accent fills is dark, not white (4.60:1 vs 3.68:1 on teal). Do not lighten
+  `--on-accent`: `#04222B` lands at 4.49:1 and misses AA by a hair.
+- Skip-to-content link on all 40 pages, `<main id="main">` landmark
+- Touch targets: 44×44px on nav links, chips, toggles, slider controls and FAQ rows
+  (AAA 2.5.5). Dense footer link lists target the AA 2.5.8 minimum (24×24) instead, since
+  44px rows would balloon the footer
+- Animated number counters, staggered card/grid reveal (~60ms per sibling, capped at 360ms),
+  nav shrink-on-scroll, floating hero cards, badge pulse, button shine sweep — all respect
   `prefers-reduced-motion`
+- Testimonial slider built on native scroll-snap: fully usable with no JS, keyboard
+  arrow-key support, ARIA labels, and dots that stay in sync with scroll position
 - Keyboard focus rings (`:focus-visible`)
 - No console errors, no external requests (fonts and images are all self-hosted)
 

@@ -98,7 +98,10 @@
     onNavScroll();
   }
 
-  /* ---------- scroll reveal (staggered within grids/stacks) ---------- */
+  /* ---------- scroll reveal (staggered within grids/stacks) ----------
+     Stagger follows the Stagger List preset: ~60ms per sibling, capped so
+     long grids never feel sluggish (the preset warns against >8 staggered
+     children / >0.1s per item). */
   var targets = document.querySelectorAll('.card, .photo, h1, h2, .lede, .trust-bar');
   var siblingIndex = new Map();
   targets.forEach(function (t) {
@@ -106,7 +109,7 @@
     if (t.matches('.card, .photo')) {
       var parent = t.parentElement;
       var idx = siblingIndex.get(parent) || 0;
-      t.style.transitionDelay = Math.min(idx * 70, 420) + 'ms';
+      t.style.transitionDelay = Math.min(idx * 60, 360) + 'ms';
       siblingIndex.set(parent, idx + 1);
     }
   });
@@ -154,6 +157,56 @@
     }, { threshold: 0.4 });
     counters.forEach(function (c) { cio.observe(c); });
   }
+
+  /* ---------- sliders (scroll-snap carousels) ----------
+     The viewport scrolls natively, so the slider is fully usable with no JS,
+     via touch, trackpad, or keyboard. This only wires up the optional
+     prev/next buttons and keeps the dots in sync with scroll position. */
+  document.querySelectorAll('.slider').forEach(function (slider) {
+    var vp = slider.querySelector('.slider-viewport');
+    if (!vp) return;
+    var prev = slider.querySelector('[data-slider-prev]');
+    var next = slider.querySelector('[data-slider-next]');
+    var dots = Array.prototype.slice.call(slider.querySelectorAll('.slider-dot'));
+    var slides = Array.prototype.slice.call(vp.children);
+
+    function step() {
+      // Advance by one slide width (incl. gap) rather than a magic number.
+      if (slides.length < 2) return vp.clientWidth;
+      return Math.round(slides[1].getBoundingClientRect().left - slides[0].getBoundingClientRect().left) || vp.clientWidth;
+    }
+    function sync() {
+      var s = step();
+      // scrollWidth-clientWidth can be off by a sub-pixel; allow 2px slack.
+      var maxScroll = vp.scrollWidth - vp.clientWidth;
+      var atStart = vp.scrollLeft <= 2;
+      var atEnd = vp.scrollLeft >= maxScroll - 2;
+      // When several slides are visible at once the scroller runs out of room
+      // before the final slide reaches the left edge, so the last dot would
+      // never light up. Pin it to the last dot once we're scrolled to the end.
+      var i = atEnd ? dots.length - 1 : (s ? Math.round(vp.scrollLeft / s) : 0);
+      if (prev) prev.disabled = atStart;
+      if (next) next.disabled = atEnd;
+      dots.forEach(function (d, di) { d.setAttribute('aria-selected', di === i ? 'true' : 'false'); });
+    }
+    if (prev) prev.addEventListener('click', function () { vp.scrollLeft -= step(); });
+    if (next) next.addEventListener('click', function () { vp.scrollLeft += step(); });
+    dots.forEach(function (d, di) {
+      d.addEventListener('click', function () { vp.scrollLeft = di * step(); });
+    });
+    // Keyboard support on the scroller itself (it is focusable via tabindex).
+    vp.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); vp.scrollLeft += step(); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); vp.scrollLeft -= step(); }
+    });
+    var raf = null;
+    vp.addEventListener('scroll', function () {
+      if (raf) return;
+      raf = requestAnimationFrame(function () { raf = null; sync(); });
+    }, { passive: true });
+    window.addEventListener('resize', sync, { passive: true });
+    sync();
+  });
 
   /* ---------- contact form validation + Formspree submit ---------- */
   var form = document.getElementById('contactForm');
