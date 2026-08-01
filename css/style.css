@@ -1216,6 +1216,28 @@ p{margin:0 0 16px;text-wrap:pretty}
 .cta-band h3{color:#fff;margin:0 0 6px;font-size:21px}
 .cta-band p{margin:0;color:rgba(255,255,255,.76);font-size:14.5px;max-width:60ch}
 .cta-band .btn{flex:0 0 auto}
+/* Numbered procedure steps for the credentialing guides */
+.cred-steps{list-style:none;counter-reset:cs;margin:26px 0;padding:0;display:flex;flex-direction:column;gap:2px}
+.cred-steps li{
+  counter-increment:cs;display:grid;grid-template-columns:auto minmax(0,1fr);
+  gap:6px 18px;padding:20px 22px;background:var(--color-surface);
+  border:1px solid var(--color-line);border-bottom:0;
+}
+.cred-steps li:first-child{border-radius:var(--radius-md) var(--radius-md) 0 0}
+.cred-steps li:last-child{border-bottom:1px solid var(--color-line);border-radius:0 0 var(--radius-md) var(--radius-md)}
+.cred-steps li::before{
+  content:counter(cs);grid-row:1 / span 2;
+  width:34px;height:34px;border-radius:999px;display:grid;place-items:center;
+  background:var(--color-accent);color:var(--on-accent);
+  font-family:"Lexend",inherit;font-size:14px;font-weight:700;
+}
+.cred-steps b{font-family:"Lexend",inherit;font-size:16px;font-weight:700;letter-spacing:-.015em;align-self:center}
+.cred-steps span{font-size:14.5px;line-height:1.6;color:var(--muted)}
+@media (max-width:560px){
+  .cred-steps li{padding:16px}
+  .cred-steps b{align-self:start}
+}
+
 /* Key-takeaways box */
 .takeaways{
   margin:0 0 34px;padding:24px 26px;border-radius:var(--radius-md);
