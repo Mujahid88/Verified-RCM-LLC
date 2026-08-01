@@ -133,7 +133,17 @@ p{margin:0 0 16px;text-wrap:pretty}
 
 /* ---------- layout ---------- */
 .wrap{max-width:1280px;margin:0 auto;padding:0 24px}
-.section{padding-bottom:90px}
+.section{padding-bottom:96px}
+/* Section rhythm: the intro block (badge / heading / lede) is a tight group,
+   then a generous gap before the content it introduces. Previously the lede
+   sat 16px from the content — the same gap as between two paragraphs — so the
+   intro read as part of the content instead of as a header for it. */
+.section>.badge{margin-bottom:14px}
+.section>.badge+h2,.section>h2{margin-bottom:14px}
+.section>h2+.lede,.section>.lede{margin-bottom:44px}
+.section>.lede:last-child{margin-bottom:0}
+/* A heading that follows content needs more air above it than below. */
+.section>*+h2{margin-top:12px}
 .section-tight{padding-bottom:60px}
 .narrow{max-width:860px}
 .page-head{padding-top:130px}
@@ -236,12 +246,18 @@ p{margin:0 0 16px;text-wrap:pretty}
 .btn-accent:hover{color:var(--on-accent);box-shadow:var(--shadow-glow)}
 .btn-amber{background:var(--grad-warm);color:var(--on-accent-2);box-shadow:var(--shadow-sm)}
 .btn-amber:hover{color:var(--on-accent-2);box-shadow:0 16px 40px rgba(245,165,36,.34)}
-/* Glass outline button */
+/* Secondary button. Deliberately NOT glass: a translucent white surface on a
+   light page reads as an unfinished shape rather than a control. It needs a
+   visible edge and a solid surface to look pressable. */
 .btn-outline{
-  background:var(--glass-bg);border:1px solid var(--glass-border);color:var(--color-text);
-  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  background:var(--color-surface);
+  border:1.5px solid color-mix(in srgb,var(--color-text) 22%, transparent);
+  color:var(--color-text);box-shadow:var(--shadow-sm);
 }
-.btn-outline:hover{background:var(--glass-bg-strong);color:var(--color-text);box-shadow:var(--shadow-md)}
+.btn-outline:hover{
+  background:var(--color-surface);color:var(--color-text);
+  border-color:var(--color-accent-700);box-shadow:var(--shadow-md);
+}
 /* Reduced motion: kill the sweep + lift, keep colour feedback */
 @media (prefers-reduced-motion:reduce){
   .btn::after{display:none}
@@ -360,7 +376,30 @@ p{margin:0 0 16px;text-wrap:pretty}
 .stat-card{padding:26px;border-radius:var(--radius-lg)}
 .stat-row{gap:14px}
 .stat-mini{gap:12px;margin-bottom:20px}
-.hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding:26px 30px;border-radius:var(--radius-lg);margin-top:32px}
+/* Hero proof bar. Dividers between the figures make it read as one measured
+   set rather than three numbers sharing a white box; the accent top edge ties
+   it to the brand instead of leaving it as an undifferentiated slab. */
+.hero-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:0;padding:24px 8px;border-radius:var(--radius-lg);margin-top:34px;
+  position:relative;overflow:hidden;
+}
+.hero-stats::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-brand);
+}
+.hero-stats>div{
+  padding:2px 22px;position:relative;
+}
+.hero-stats>div+div::before{
+  content:"";position:absolute;left:0;top:6px;bottom:6px;width:1px;
+  background:var(--color-line);
+}
+.hero-stats .stat-big{font-size:32px}
+.hero-stats .stat-label{margin-top:4px}
+@media (max-width:560px){
+  .hero-stats>div+div::before{display:none}
+  .hero-stats>div{padding:14px 22px;border-top:1px solid var(--color-line)}
+}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
 .hero-split{align-items:center}
 .trust-bar{
@@ -445,6 +484,27 @@ p{margin:0 0 16px;text-wrap:pretty}
   font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
   color:var(--muted);margin-bottom:10px;
 }
+/* Reviews section header — heading left, headline metrics right, so the
+   testimonials below get the full content width instead of half of it. */
+.reviews-head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:36px;flex-wrap:wrap;margin-bottom:34px;
+}
+.reviews-head>div:first-child{flex:1 1 460px;min-width:0}
+.reviews-head h2{margin-bottom:12px}
+.reviews-head .lede{margin:0}
+.reviews-metrics{display:flex;gap:12px;flex:0 0 auto}
+.reviews-metrics .card{min-width:148px;padding:18px 22px}
+.reviews-metrics .stat-big{font-size:30px}
+/* Full-width testimonial rail: three cards visible on desktop instead of two
+   half-width ones, so each quote has room to be read. */
+#testimonialSlider .slider-viewport{grid-auto-columns:minmax(330px,1fr)}
+@media (max-width:900px){
+  .reviews-head{align-items:flex-start;gap:22px}
+  .reviews-metrics{width:100%}
+  .reviews-metrics .card{flex:1}
+}
+
 /* Provenance note — states plainly what these quotes are */
 .reviews-note{
   display:flex;gap:10px;align-items:flex-start;margin-top:18px;padding:14px 16px;
