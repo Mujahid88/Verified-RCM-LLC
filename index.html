@@ -28,6 +28,7 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <div class="nav-wrap">
   <div class="nav-bar" id="navBar">
     <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
@@ -55,12 +56,12 @@
     <a href="about.html">About us</a>
   </div>
 </div>
-<main>
+<main id="main">
 <section class="hero wrap" data-hero-panel="split">
   <div class="split hero-split">
     <div>
       <div class="badge"><span class="dot"></span>Welcome to Verified RCM</div>
-      <h1>Full-service medical billing that gets you paid <span class="accent-text">faster</span>.</h1>
+      <h1>Full-service medical billing that gets you paid <span class="grad-text">faster</span>.</h1>
       <p class="lede">From coding and claim submission to credentialing and collections, Verified RCM runs your revenue cycle end to end, so your team can focus on patient care instead of paperwork.</p>
       <div class="hero-ctas">
         <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free consultation</a>
@@ -243,11 +244,23 @@
       <p class="lede">Every review comes from a verified practice we actively bill for.</p>
       <div class="photo"><img src="images/testimonial.jpg" alt="Healthcare provider satisfied with Verified RCM service" loading="lazy"></div>
     </div>
-    <div class="quote-list">
-      <figure class="card quote-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>&ldquo;Our aged A/R dropped by two thirds in the first quarter, and I stopped chasing denials at nine at night.&rdquo;</blockquote><figcaption><span class="avatar">AR</span><span><b>Dr. A. Rehman</b><br><span class="muted">Internal medicine, 2 providers</span></span></figcaption></figure>
-      <figure class="card quote-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>&ldquo;They rebuilt our prior-auth workflow before touching billing. That alone paid for the engagement.&rdquo;</blockquote><figcaption><span class="avatar">MO</span><span><b>M. Okafor</b><br><span class="muted">Practice administrator</span></span></figcaption></figure>
-      <figure class="card quote-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>&ldquo;Credentialing used to stall for months. Now new hires are billable weeks earlier.&rdquo;</blockquote><figcaption><span class="avatar">JA</span><span><b>J. Alvarez</b><br><span class="muted">Operations lead, behavioral health</span></span></figcaption></figure>
-      <figure class="card quote-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>&ldquo;Switching felt risky, but the onboarding was genuinely four days. Claims went out clean from day one.&rdquo;</blockquote><figcaption><span class="avatar">SM</span><span><b>Dr. S. Malik</b><br><span class="muted">Family medicine, solo practice</span></span></figcaption></figure>
+    <div class="slider" id="testimonialSlider">
+      <div class="slider-viewport" tabindex="0" role="group" aria-label="Client testimonials, use arrow keys to browse">
+        <figure class="card quote-card"><div class="stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>&ldquo;Our aged A/R dropped by two thirds in the first quarter, and I stopped chasing denials at nine at night.&rdquo;</blockquote><figcaption><span class="avatar" aria-hidden="true">AR</span><span><b>Dr. A. Rehman</b><br><span class="muted">Internal medicine, 2 providers</span></span></figcaption></figure>
+        <figure class="card quote-card"><div class="stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>&ldquo;They rebuilt our prior-auth workflow before touching billing. That alone paid for the engagement.&rdquo;</blockquote><figcaption><span class="avatar" aria-hidden="true">MO</span><span><b>M. Okafor</b><br><span class="muted">Practice administrator</span></span></figcaption></figure>
+        <figure class="card quote-card"><div class="stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>&ldquo;Credentialing used to stall for months. Now new hires are billable weeks earlier.&rdquo;</blockquote><figcaption><span class="avatar" aria-hidden="true">JA</span><span><b>J. Alvarez</b><br><span class="muted">Operations lead, behavioral health</span></span></figcaption></figure>
+        <figure class="card quote-card"><div class="stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>&ldquo;Switching felt risky, but the onboarding was genuinely four days. Claims went out clean from day one.&rdquo;</blockquote><figcaption><span class="avatar" aria-hidden="true">SM</span><span><b>Dr. S. Malik</b><br><span class="muted">Family medicine, solo practice</span></span></figcaption></figure>
+      </div>
+      <div class="slider-controls">
+        <button type="button" class="slider-btn" data-slider-prev aria-label="Previous testimonial">&#8592;</button>
+        <button type="button" class="slider-btn" data-slider-next aria-label="Next testimonial">&#8594;</button>
+        <div class="slider-dots" role="tablist" aria-label="Choose testimonial">
+          <button type="button" class="slider-dot" role="tab" aria-selected="true" aria-label="Testimonial 1"></button>
+          <button type="button" class="slider-dot" role="tab" aria-selected="false" aria-label="Testimonial 2"></button>
+          <button type="button" class="slider-dot" role="tab" aria-selected="false" aria-label="Testimonial 3"></button>
+          <button type="button" class="slider-dot" role="tab" aria-selected="false" aria-label="Testimonial 4"></button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
