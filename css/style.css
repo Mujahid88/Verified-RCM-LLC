@@ -160,28 +160,37 @@ p{margin:0 0 16px;text-wrap:pretty}
 .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:36px;flex-wrap:wrap;margin-bottom:28px}
-/* Intro row: lede on the left, a summary panel on the right. Without this the
-   lede's 62ch measure left the right half of the row empty. */
-.section-intro{
-  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
-  gap:48px;align-items:start;margin-bottom:44px;
+/* A lede that introduces a whole section can run wider than a lede sitting
+   beside a photo. 78ch keeps it readable while using the full column, so the
+   right half of the row is not left empty. */
+.lede-wide{max-width:82ch}
+/* Engagement terms as an open strip with rules between items, not a boxed
+   panel. Proximity does the grouping; a container would only add weight. */
+.terms-strip{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:0;margin:30px 0 44px;padding:22px 0;
+  border-top:1px solid var(--color-line);border-bottom:1px solid var(--color-line);
 }
-.section-intro .lede{margin:0}
-.intro-panel{
-  background:var(--color-surface);border:1px solid var(--color-line);
-  border-radius:var(--radius-lg);padding:24px 26px;box-shadow:var(--shadow-sm);
+.terms-item{padding:0 26px;position:relative;min-width:0}
+.terms-item:first-child{padding-left:0}
+.terms-item+.terms-item::before{
+  content:"";position:absolute;left:0;top:2px;bottom:2px;width:1px;background:var(--color-line);
 }
-.intro-panel-title{
-  font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
-  color:var(--muted);margin-bottom:14px;
+.terms-value{
+  display:block;font-family:"Lexend",inherit;font-size:17px;font-weight:700;
+  letter-spacing:-.02em;color:var(--color-accent-800);margin-bottom:4px;
 }
-.intro-facts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
-.intro-facts li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.5}
-.intro-facts svg{flex:0 0 auto;margin-top:3px;color:var(--color-accent-800)}
-[data-theme="dark"] .intro-facts svg{color:var(--color-accent-400)}
-.intro-facts b{font-weight:700}
+[data-theme="dark"] .terms-value{color:var(--color-accent-300)}
+.terms-label{display:block;font-size:13.5px;line-height:1.45;color:var(--muted)}
 @media (max-width:900px){
-  .section-intro{grid-template-columns:minmax(0,1fr);gap:26px}
+  .terms-strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 0}
+  .terms-item:nth-child(3){padding-left:0}
+  .terms-item:nth-child(3)::before{display:none}
+}
+@media (max-width:520px){
+  .terms-strip{grid-template-columns:minmax(0,1fr);gap:18px}
+  .terms-item{padding:0}
+  .terms-item::before{display:none}
 }
 
 /* ---------- skip link (rule 45) ----------
@@ -364,6 +373,15 @@ p{margin:0 0 16px;text-wrap:pretty}
 .amber-fill{background:var(--grad-warm);color:var(--on-accent-2);border-color:transparent}
 .amber-fill .stat-label{color:var(--on-accent-2)}
 .panel{border:1px solid var(--color-line);border-radius:var(--radius-lg);padding:48px;background:var(--color-surface);box-shadow:var(--shadow-sm)}
+/* Inside a panel the photo was inheriting the base .photo min-height and
+   sitting shorter than its text column, which is the height/width mismatch
+   flagged in review. Stretching it to the row height fixes both sides. */
+.panel .split{align-items:stretch}
+.panel .split > .photo{height:100%;min-height:340px;border-radius:var(--radius-md)}
+.panel .split > .photo img{height:100%;width:100%;object-fit:cover}
+@media (max-width:900px){
+  .panel .split > .photo{min-height:260px}
+}
 .link-card{display:block;color:var(--color-text)}
 .link-card:hover{color:var(--color-text)}
 .link-card-title{font-size:17px;font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
@@ -442,22 +460,47 @@ p{margin:0 0 16px;text-wrap:pretty}
 .trust-label{font-size:12.5px;font-weight:600;color:var(--muted)}
 .divider{width:1px;height:28px;background:var(--color-line)}
 
-/* ---------- comparison ---------- */
-.compare-card{padding:0;overflow:hidden}
+/* ---------- comparison ----------
+   Follows the comparison-table pattern: the winning column is visually
+   elevated and runs edge to edge as a continuous band, rows alternate, and
+   the whole row highlights on hover. Previously both columns were weighted
+   identically, so the table stated a preference it never showed. */
+.compare-card{padding:0;overflow:hidden;position:relative}
 .compare-card:hover{transform:none;box-shadow:var(--shadow-sm)}
 .compare-head{
-  display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:20px 34px;
-  background:var(--color-bg);border-bottom:1px solid var(--color-line);
-  font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  border-bottom:1px solid var(--color-line);
+  font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+}
+.compare-head span{padding:20px 30px;color:var(--muted)}
+.compare-head span:last-child{
+  background:var(--color-accent-100);color:var(--color-accent-800);
+  display:flex;align-items:center;gap:9px;
+}
+[data-theme="dark"] .compare-head span:last-child{
+  background:color-mix(in srgb,var(--color-accent) 16%,transparent);color:var(--color-accent-300);
+}
+.compare-head span:last-child::before{
+  content:"";width:8px;height:8px;border-radius:999px;background:var(--color-accent);flex:0 0 auto;
 }
 .compare-row{
-  display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:20px 34px;
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
   border-bottom:1px solid var(--color-line);transition:background .3s ease;
 }
 .compare-row:last-child{border-bottom:0}
-.compare-row:hover{background:color-mix(in srgb, var(--color-accent) 8%, transparent)}
-.compare-row>div{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.5}
-.compare-row>div:last-child{font-weight:600}
+.compare-row:nth-child(even){background:color-mix(in srgb,var(--color-text) 2.5%,transparent)}
+.compare-row:hover{background:color-mix(in srgb, var(--color-accent) 9%, transparent)}
+.compare-row>div{
+  display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.55;padding:20px 30px;
+}
+/* The "with us" column reads as a continuous highlighted band down the table */
+.compare-row>div:last-child{
+  font-weight:600;background:color-mix(in srgb,var(--color-accent) 7%,transparent);
+}
+.compare-row:hover>div:last-child{background:color-mix(in srgb,var(--color-accent) 15%,transparent)}
+@media (max-width:900px){
+  .compare-row>div:last-child{background:color-mix(in srgb,var(--color-accent) 9%,transparent)}
+}
 
 /* ---------- photos ---------- */
 .photo{position:relative;min-height:320px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);background:var(--color-accent-100)}
@@ -465,15 +508,26 @@ p{margin:0 0 16px;text-wrap:pretty}
 .photo:hover img{transform:scale(1.045)}
 .photo.tall{min-height:420px}
 .hero-photo{min-height:440px}
-.post-photo{height:200px;border-radius:0;box-shadow:none}
 .article-photo{height:360px;margin-bottom:36px}
 
-/* ---------- posts + specialties ---------- */
-.post-card{padding:0;overflow:hidden}
-.post-card a{display:block;color:var(--color-text)}
-.post-body{padding:24px}
+/* ---------- posts + specialties ----------
+   Post cards were uneven: headlines of different lengths pushed the "Read
+   more" link to different heights across the row. The body is now a column
+   with the link pinned to the bottom, so the row shares a baseline. */
+.post-card{padding:0;overflow:hidden;display:flex}
+.post-card a{display:flex;flex-direction:column;color:var(--color-text);width:100%}
+.post-body{padding:24px;display:flex;flex-direction:column;flex:1}
+.post-body h3{font-size:18px;line-height:1.3;margin:0 0 14px}
 .post-meta{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
 .post-body p{font-size:13.5px;line-height:1.55;color:var(--muted)}
+.post-body .tag-pill{align-self:flex-start;margin-bottom:12px}
+.post-body .link-cta{
+  margin-top:auto;padding-top:14px;display:inline-flex;align-items:center;gap:7px;min-height:28px;
+}
+.post-card:hover .link-cta{color:var(--color-accent-600)}
+/* Image height is fixed so every card in the row starts its text at the same
+   point regardless of the source photo's aspect ratio. */
+.post-photo{height:210px;border-radius:0;box-shadow:none;min-height:0}
 .spec-card{display:block;color:var(--color-text)}
 .spec-card p{font-size:13.5px;line-height:1.55;color:var(--muted);margin:8px 0 14px}
 .spec-card .tag-pill{margin-bottom:12px}
@@ -543,13 +597,26 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 .reviews-note svg{flex:0 0 auto;margin-top:1px}
 
-/* ---------- FAQ ---------- */
-.faq-list{display:flex;flex-direction:column;gap:12px}
-.faq-item{
-  background:var(--color-surface);border:1px solid var(--color-line);
-  border-radius:var(--radius-md);padding:20px 24px;transition:box-shadow .3s ease;
+/* ---------- FAQ ----------
+   Rows share one bordered container rather than floating as separate cards,
+   so the list reads as a single document. The open row lifts and takes an
+   accent edge, which is the only state that needs emphasis. */
+.faq-list{
+  display:flex;flex-direction:column;gap:0;
+  border:1px solid var(--color-line);border-radius:var(--radius-lg);
+  overflow:hidden;background:var(--color-surface);
 }
-.faq-item:hover{box-shadow:var(--shadow-sm)}
+.faq-item{
+  background:transparent;border:0;border-bottom:1px solid var(--color-line);
+  border-radius:0;padding:4px 26px;position:relative;
+  transition:background .3s ease;
+}
+.faq-item:last-child{border-bottom:0}
+.faq-item:hover{background:color-mix(in srgb,var(--color-accent) 6%,transparent);box-shadow:none}
+.faq-item[open]{background:color-mix(in srgb,var(--color-accent) 8%,transparent)}
+.faq-item[open]::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--color-accent);
+}
 .faq-item summary{
   font-size:16.5px;font-weight:800;letter-spacing:-.015em;cursor:pointer;list-style:none;
   display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px;
@@ -805,13 +872,43 @@ p{margin:0 0 16px;text-wrap:pretty}
   .explorer-body{padding:24px}
 }
 
-/* ---------- CTA banner (dark, full width) ---------- */
-.cta-dark{background:linear-gradient(135deg, var(--color-ink-fixed), color-mix(in srgb, var(--color-ink-fixed) 80%, var(--color-accent-2-900)));color:#fff;padding:56px;text-align:center}
+/* ---------- CTA banner (dark, full width) ----------
+   The four inclusions were a centred run-on line of check marks that read as
+   decoration. They are now a bordered grid of real deliverables, which is
+   what makes the offer concrete enough to act on. */
+.cta-dark{
+  background:var(--color-ink-fixed);color:#fff;padding:56px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.cta-dark::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(60% 70% at 12% 0%, rgba(143,199,26,.20) 0%, transparent 62%),
+             radial-gradient(50% 60% at 92% 100%, rgba(245,165,36,.14) 0%, transparent 60%);
+}
+.cta-dark>*{position:relative;z-index:1}
 .cta-dark:hover{transform:none}
-.cta-dark h2{color:#fff}
-.cta-dark p{color:rgba(255,255,255,.75);max-width:56ch;margin:0 auto 28px}
-.audit-includes{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 26px;margin-bottom:30px}
-.audit-includes span{font-size:14px;font-weight:600;color:rgba(255,255,255,.9)}
+.cta-dark h2{color:#fff;max-width:20ch;margin-left:auto;margin-right:auto}
+.cta-dark p{color:rgba(255,255,255,.75);max-width:56ch;margin:0 auto 34px}
+.audit-includes{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;
+  margin:0 auto 34px;max-width:1000px;text-align:left;
+}
+.audit-includes span{
+  display:flex;gap:10px;align-items:flex-start;
+  padding:16px 18px;border-radius:var(--radius-sm);
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+  font-size:13.5px;font-weight:600;line-height:1.45;color:rgba(255,255,255,.9);
+}
+.audit-includes span::before{
+  content:"";flex:0 0 auto;width:18px;height:18px;border-radius:999px;margin-top:1px;
+  background:var(--color-accent);
+  -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'><path d='m5 12 5 5L19 8'/></svg>") center/13px no-repeat,
+        linear-gradient(#000,#000);
+  -webkit-mask-composite:xor;
+  mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'><path d='m5 12 5 5L19 8'/></svg>") center/13px no-repeat;
+}
+@media (max-width:900px){.audit-includes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.audit-includes{grid-template-columns:minmax(0,1fr)}}
 
 /* ---------- core services tabbed page ---------- */
 .svc-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
