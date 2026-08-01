@@ -99,18 +99,59 @@
       <p><b>+1 (623) 231-2306</b><br>hello@verifiedrcm.com</p>
     </div>
     <form class="card contact-form" id="contactForm" action="https://formspree.io/f/xzdnqnly" method="POST" novalidate>
-      <label for="cf-name">Full name</label>
-      <input id="cf-name" name="name" type="text" required minlength="2" autocomplete="name">
-      <label for="cf-email">Work email</label>
-      <input id="cf-email" name="email" type="email" required autocomplete="email">
-      <label for="cf-phone">Phone</label>
-      <input id="cf-phone" name="phone" type="tel" pattern="[0-9()+\-. ]{7,}" autocomplete="tel">
-      <label for="cf-practice">Practice name &amp; specialty</label>
-      <input id="cf-practice" name="practice" type="text" required>
-      <label for="cf-message">What do you need help with?</label>
-      <textarea id="cf-message" name="message" rows="4" required minlength="10"></textarea>
-      <button type="submit" class="btn btn-accent btn-lg">Request my consultation</button>
-      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      <div class="form-header">
+        <div class="form-header-title">Request your free practice review</div>
+        <p class="form-header-sub">Takes about a minute. We reply within one business day with a concrete read on where revenue is leaking.</p>
+      </div>
+      <div class="form-body">
+        <div class="form-grid">
+          <div class="field">
+            <label for="cf-name">Full name <span class="req">Required</span></label>
+            <input id="cf-name" name="name" type="text" required minlength="2" autocomplete="name" placeholder="Dr. Jane Okafor">
+          </div>
+          <div class="field">
+            <label for="cf-email">Work email <span class="req">Required</span></label>
+            <input id="cf-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="jane@yourpractice.com">
+          </div>
+          <div class="field">
+            <label for="cf-phone">Phone <span class="optional">Optional</span></label>
+            <input id="cf-phone" name="phone" type="tel" pattern="[0-9()+\-. ]{7,}" autocomplete="tel" inputmode="tel" placeholder="(623) 231-2306">
+            <p class="field-hint" id="cf-phone-hint">Fastest way to reach you for the review call.</p>
+          </div>
+          <div class="field">
+            <label for="cf-practice">Practice name <span class="req">Required</span></label>
+            <input id="cf-practice" name="practice" type="text" required placeholder="Riverbend Internal Medicine">
+          </div>
+          <div class="field field-full">
+            <label for="cf-specialty">Primary specialty <span class="optional">Optional</span></label>
+            <select id="cf-specialty" name="specialty">
+              <option value="">Select a specialty</option>
+              <option>Internal medicine</option>
+              <option>Family medicine</option>
+              <option>Pediatrics</option>
+              <option>Urgent care</option>
+              <option>Cardiology</option>
+              <option>Mental / behavioral health</option>
+              <option>Physical or occupational therapy</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field field-full">
+            <label for="cf-message">What do you need help with? <span class="req">Required</span></label>
+            <textarea id="cf-message" name="message" rows="4" required minlength="10" data-error-label="tell us what you need help with" placeholder="e.g. Aged A/R over 120 days is climbing and denials are taking weeks to rework."></textarea>
+            <p class="field-hint">A sentence or two is plenty — we will ask the detailed questions on the call.</p>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-accent btn-lg">Request my free review</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </div>
+        <div class="form-trust">
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"></path><path d="m9 12 2 2 4-4"></path></svg>HIPAA-compliant handling</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Reply within 1 business day</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="m9.5 14.5 1.75 1.75L15 12.5"></path></svg>No long-term contract</span>
+        </div>
+      </div>
     </form>
   </div>
 </section>

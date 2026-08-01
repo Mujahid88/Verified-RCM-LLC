@@ -229,47 +229,94 @@
   if (form) {
     var status = document.getElementById('formStatus');
 
+    // Errors are appended inside the field's own wrapper so they sit under the
+    // control (and its hint) instead of being injected mid-layout, and are tied
+    // to the input with aria-describedby so screen readers announce them.
+    function errorHost(field) {
+      return field.closest('.field') || field.parentElement;
+    }
     function showError(field, msg) {
       field.classList.add('invalid');
       field.setAttribute('aria-invalid', 'true');
-      var next = field.nextElementSibling;
-      if (!next || !next.classList.contains('field-error')) {
-        var p = document.createElement('p');
-        p.className = 'field-error';
-        field.insertAdjacentElement('afterend', p);
-        next = p;
+      var host = errorHost(field);
+      var el = host.querySelector('.field-error');
+      if (!el) {
+        el = document.createElement('p');
+        el.className = 'field-error';
+        el.id = (field.id || 'f' + Math.abs(field.name.length * 7)) + '-err';
+        host.appendChild(el);
       }
-      next.textContent = msg;
+      el.textContent = msg;
+      field.setAttribute('aria-describedby', el.id);
     }
     function clearError(field) {
       field.classList.remove('invalid');
       field.removeAttribute('aria-invalid');
-      var next = field.nextElementSibling;
-      if (next && next.classList.contains('field-error')) next.remove();
+      field.removeAttribute('aria-describedby');
+      var el = errorHost(field).querySelector('.field-error');
+      if (el) el.remove();
     }
+    // Builds the "required" message. Question-style labels ("What do you need
+    // help with?") don't slot into "Please enter your ___", so a field can
+    // supply its own phrasing via data-error-label.
+    function requiredMsg(field) {
+      var custom = field.getAttribute('data-error-label');
+      if (custom) return 'Please ' + custom + '.';
+      var label = (field.labels && field.labels[0])
+        ? field.labels[0].textContent.replace(/required|optional/ig, '').trim().toLowerCase()
+        : '';
+      if (!label || /\?$/.test(label)) return 'This field is required.';
+      return 'Please enter your ' + label + '.';
+    }
+    // Name the problem AND the recovery, rather than a generic "invalid".
     function validate() {
       var ok = true;
-      form.querySelectorAll('input, textarea').forEach(function (field) {
+      var firstBad = null;
+      form.querySelectorAll('input, textarea, select').forEach(function (field) {
         clearError(field);
-        var val = field.value.trim();
-        if (field.required && !val) { showError(field, 'This field is required.'); ok = false; return; }
+        var val = (field.value || '').trim();
+        function fail(msg) { showError(field, msg); ok = false; if (!firstBad) firstBad = field; }
+        if (field.required && !val) { fail(requiredMsg(field)); return; }
         if (!val) return;
         if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val)) {
-          showError(field, 'Enter a valid email address.'); ok = false; return;
+          fail('That email looks incomplete — check for a missing @ or domain.'); return;
         }
         if (field.minLength > 0 && val.length < field.minLength) {
-          showError(field, 'Please enter at least ' + field.minLength + ' characters.'); ok = false; return;
+          fail('Add a little more detail (at least ' + field.minLength + ' characters).'); return;
         }
         if (field.pattern && !new RegExp('^(?:' + field.pattern + ')$').test(val)) {
-          showError(field, 'Please check this value.'); ok = false;
+          fail('Use digits only, e.g. (623) 231-2306.');
         }
       });
       return ok;
     }
 
     form.addEventListener('input', function (e) {
-      if (e.target.matches('input, textarea')) clearError(e.target);
+      if (e.target.matches('input, textarea, select')) clearError(e.target);
     });
+    // Validate a field once the user leaves it, so errors surface early
+    // rather than all at once on submit.
+    form.addEventListener('blur', function (e) {
+      if (!e.target.matches('input, textarea, select')) return;
+      var val = (e.target.value || '').trim();
+      if (!val && !e.target.required) return;
+      validateOne(e.target);
+    }, true);
+    function validateOne(field) {
+      clearError(field);
+      var val = (field.value || '').trim();
+      if (field.required && !val) { showError(field, requiredMsg(field)); return; }
+      if (!val) return;
+      if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val)) {
+        showError(field, 'That email looks incomplete — check for a missing @ or domain.'); return;
+      }
+      if (field.minLength > 0 && val.length < field.minLength) {
+        showError(field, 'Add a little more detail (at least ' + field.minLength + ' characters).'); return;
+      }
+      if (field.pattern && !new RegExp('^(?:' + field.pattern + ')$').test(val)) {
+        showError(field, 'Use digits only, e.g. (623) 231-2306.');
+      }
+    }
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -285,6 +332,8 @@
         return;
       }
       var btn = form.querySelector('button[type="submit"]');
+      // Capture the real label so it restores correctly whatever the copy says.
+      var btnLabel = btn ? btn.textContent : '';
       if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
       fetch(form.action, {
         method: 'POST',
@@ -297,7 +346,7 @@
       }).catch(function () {
         if (status) { status.className = 'form-status err'; status.textContent = 'Something went wrong. Please email hello@verifiedrcm.com instead.'; }
       }).finally(function () {
-        if (btn) { btn.disabled = false; btn.textContent = 'Request my consultation'; }
+        if (btn) { btn.disabled = false; btn.textContent = btnLabel; }
       });
     });
   }

@@ -416,7 +416,9 @@ p{margin:0 0 16px;text-wrap:pretty}
 .article p{font-size:16.5px;line-height:1.75;color:color-mix(in srgb, var(--color-text) 80%, transparent)}
 .article .check-list{margin-bottom:20px}
 
-/* ---------- quotes ---------- */
+/* ---------- quotes ----------
+   Each card carries the outcome it is evidence for, so the section argues
+   with numbers instead of adjectives: situation -> what changed -> result. */
 .quote-list{display:flex;flex-direction:column;gap:14px}
 .quote-card{display:flex;flex-direction:column;margin:0}
 .stars{font-size:15px;color:var(--color-gold);letter-spacing:.1em;margin-bottom:12px}
@@ -426,6 +428,30 @@ p{margin:0 0 16px;text-wrap:pretty}
   width:36px;height:36px;flex:0 0 auto;border-radius:999px;background:var(--color-accent-200);
   color:var(--color-accent-800);display:grid;place-items:center;font-weight:800;font-size:13px;
 }
+/* Outcome strip pinned above the attribution */
+.quote-result{
+  display:flex;align-items:center;gap:12px;margin:0 0 16px;padding:14px 16px;
+  border-radius:var(--radius-sm);background:var(--color-accent-100);
+  border:1px solid color-mix(in srgb,var(--color-accent) 26%,transparent);
+}
+[data-theme="dark"] .quote-result{background:color-mix(in srgb,var(--color-accent) 12%,transparent)}
+.quote-result b{
+  font-family:"Lexend",inherit;font-size:22px;font-weight:800;letter-spacing:-.035em;
+  color:var(--color-accent-800);line-height:1;flex:0 0 auto;
+}
+[data-theme="dark"] .quote-result b{color:var(--color-accent-300)}
+.quote-result span{font-size:13px;font-weight:600;color:var(--muted);line-height:1.35}
+.quote-context{
+  font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:10px;
+}
+/* Provenance note — states plainly what these quotes are */
+.reviews-note{
+  display:flex;gap:10px;align-items:flex-start;margin-top:18px;padding:14px 16px;
+  border-radius:var(--radius-sm);border:1px dashed var(--color-line);
+  font-size:12.5px;line-height:1.5;color:var(--muted);
+}
+.reviews-note svg{flex:0 0 auto;margin-top:1px}
 
 /* ---------- FAQ ---------- */
 .faq-list{display:flex;flex-direction:column;gap:12px}
@@ -443,23 +469,66 @@ p{margin:0 0 16px;text-wrap:pretty}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin:14px 0 0;font-size:14.5px;line-height:1.65;color:var(--muted)}
 
-/* ---------- forms ---------- */
-.contact-form{display:flex;flex-direction:column;gap:6px}
+/* ---------- lead capture form ----------
+   Two-column field grid so the form reads as short; a labelled header and a
+   trust strip below the button answer the two questions that stall a form
+   submit ("what happens next" / "who gets my data"). */
+.contact-form{display:block;padding:0;overflow:hidden}
 .contact-form:hover{transform:none;box-shadow:var(--shadow-sm)}
-.contact-form label{font-size:13px;font-weight:700;margin-top:12px}
-.contact-form input,.contact-form textarea{
-  width:100%;padding:13px 16px;border-radius:var(--radius-sm);
-  border:1px solid var(--color-line);background:var(--color-bg);color:var(--color-text);
-  font-family:inherit;font-size:15px;transition:border-color .3s ease;
+.form-header{
+  padding:26px 30px;border-bottom:1px solid var(--color-line);
+  background:linear-gradient(150deg,var(--color-accent-100),transparent 70%);
 }
-.contact-form input:focus,.contact-form textarea:focus{border-color:var(--color-accent);outline:none}
-.contact-form input.invalid,.contact-form textarea.invalid{border-color:#c0392b}
-.field-error{font-size:12.5px;color:#c0392b;margin:2px 0 0}
-[data-theme="dark"] .field-error{color:#ff8a75}
-.contact-form .btn{margin-top:20px}
-.form-status{font-size:14px;font-weight:600;margin:14px 0 0;min-height:1.2em}
+[data-theme="dark"] .form-header{background:linear-gradient(150deg,color-mix(in srgb,var(--color-accent) 12%,transparent),transparent 70%)}
+.form-header-title{font-family:"Lexend",inherit;font-size:19px;font-weight:700;letter-spacing:-.02em;margin-bottom:4px}
+.form-header-sub{font-size:14px;color:var(--muted);margin:0}
+.form-body{padding:26px 30px 30px}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field-full{grid-column:1 / -1}
+.field label{font-size:13.5px;font-weight:700;display:flex;align-items:center;gap:5px}
+/* Required marker is a word, not a bare asterisk (rule 59) */
+.req{font-size:11px;font-weight:700;color:var(--color-accent-800);letter-spacing:.03em}
+.optional{font-size:11.5px;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.field-hint{font-size:12.5px;color:var(--muted);margin:0}
+.contact-form input,.contact-form textarea,.contact-form select{
+  width:100%;min-height:50px;padding:13px 16px;border-radius:var(--radius-sm);
+  border:1.5px solid var(--color-line);background:var(--color-surface);color:var(--color-text);
+  font-family:inherit;font-size:15.5px;
+  transition:border-color .25s ease,box-shadow .25s ease,background .25s ease;
+}
+.contact-form textarea{min-height:118px;resize:vertical;line-height:1.55}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:color-mix(in srgb,var(--color-text) 42%,transparent)}
+.contact-form input:hover,.contact-form textarea:hover,.contact-form select:hover{border-color:color-mix(in srgb,var(--color-accent) 45%,transparent)}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{
+  border-color:var(--color-accent-700);outline:none;
+  box-shadow:0 0 0 4px color-mix(in srgb,var(--color-accent) 22%,transparent);
+}
+.contact-form input.invalid,.contact-form textarea.invalid,.contact-form select.invalid{border-color:#b3261e}
+.contact-form input.invalid:focus,.contact-form textarea.invalid:focus{box-shadow:0 0 0 4px rgba(179,38,30,.16)}
+/* Errors sit next to their field, never only at the top (rule 55) */
+.field-error{
+  display:flex;align-items:flex-start;gap:6px;
+  font-size:12.5px;font-weight:600;color:#b3261e;margin:0;
+}
+[data-theme="dark"] .field-error{color:#ff9b8f}
+.form-actions{margin-top:22px}
+.form-actions .btn{width:100%}
+.form-trust{
+  display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px;
+  padding-top:18px;border-top:1px dashed var(--color-line);
+}
+.form-trust span{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--muted)}
+.form-trust svg{flex:0 0 auto;color:var(--color-accent-800)}
+[data-theme="dark"] .form-trust svg{color:var(--color-accent-400)}
+.form-status{font-size:14.5px;font-weight:600;margin:14px 0 0;min-height:1.2em}
 .form-status.ok{color:var(--color-accent-800)}
-.form-status.err{color:#c0392b}
+.form-status.err{color:#b3261e}
+[data-theme="dark"] .form-status.err{color:#ff9b8f}
+@media (max-width:560px){
+  .form-grid{grid-template-columns:minmax(0,1fr)}
+  .form-header,.form-body{padding-left:22px;padding-right:22px}
+}
 
 /* ---------- footer ---------- */
 .site-footer{padding-bottom:24px}
@@ -525,19 +594,72 @@ p{margin:0 0 16px;text-wrap:pretty}
   .hero-float-badge,.hero-float-stat{animation:none}
 }
 
-/* ---------- service explorer cards ---------- */
-.explorer-card{padding:36px;display:block;color:var(--color-text)}
+/* ---------- service explorer cards ----------
+   Rebuilt as a two-column record: a fixed rail on the left carries the index
+   and outcome numbers, the right column carries the prose and scope. The rail
+   gives every card a hard vertical anchor, so the row reads as a comparable
+   set rather than three loose boxes of text. */
+.explorer-card{
+  padding:0;display:grid;grid-template-columns:236px minmax(0,1fr);
+  color:var(--color-text);overflow:hidden;position:relative;
+}
 .explorer-card:hover{color:var(--color-text)}
-.explorer-head{display:grid;grid-template-columns:56px 1fr auto;gap:22px;align-items:flex-start;margin-bottom:20px}
-.explorer-head .pill-num{width:56px;height:56px;font-size:19px}
-.explorer-head h3{margin:0 0 6px;font-size:23px}
-.explorer-head p{margin:0;font-size:15px;color:var(--muted);max-width:64ch}
-.explorer-arrow{font-size:22px;color:var(--color-accent-800);align-self:center}
-.explorer-groups{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px}
-.explorer-group{border-radius:var(--radius-md);background:var(--color-bg);border:1px solid var(--color-line);padding:16px 18px;font-size:13.5px;font-weight:700}
-.explorer-stats{display:flex;flex-wrap:wrap;gap:10px}
-.explorer-stat{display:inline-flex;align-items:baseline;gap:6px;padding:9px 16px;border-radius:999px;background:var(--color-accent-2-100);color:var(--color-accent-2-800);font-size:13px;font-weight:700}
-.explorer-stat b{font-size:16px}
+/* Left rail */
+.explorer-rail{
+  background:linear-gradient(160deg,var(--color-accent-100),color-mix(in srgb,var(--color-accent-200) 55%,transparent));
+  border-right:1px solid var(--color-line);
+  padding:32px 28px;display:flex;flex-direction:column;gap:18px;
+}
+[data-theme="dark"] .explorer-rail{
+  background:linear-gradient(160deg,color-mix(in srgb,var(--color-accent) 12%,transparent),transparent);
+}
+.explorer-index{
+  font-family:"Lexend",inherit;font-size:44px;font-weight:800;line-height:1;
+  letter-spacing:-.05em;color:var(--color-accent-800);
+}
+[data-theme="dark"] .explorer-index{color:var(--color-accent-300)}
+.explorer-rail-stats{display:flex;flex-direction:column;gap:14px;margin-top:auto}
+.explorer-rail-stat{display:flex;flex-direction:column;gap:1px}
+.explorer-rail-stat b{
+  font-family:"Lexend",inherit;font-size:21px;font-weight:700;letter-spacing:-.03em;
+  color:var(--color-text);line-height:1.1;
+}
+.explorer-rail-stat span{font-size:12.5px;font-weight:600;color:var(--muted)}
+/* Right body */
+.explorer-body{padding:32px 34px;display:flex;flex-direction:column;min-width:0}
+.explorer-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:14px}
+.explorer-head h3{margin:0;font-size:24px}
+.explorer-body>p{margin:0 0 20px;font-size:15.5px;line-height:1.62;color:var(--muted);max-width:62ch}
+.explorer-arrow{
+  width:40px;height:40px;flex:0 0 auto;border-radius:999px;display:grid;place-items:center;
+  background:var(--color-accent-100);color:var(--color-accent-800);
+  transition:background .35s var(--ease),transform .35s var(--ease);
+}
+.explorer-card:hover .explorer-arrow{background:var(--color-accent);color:var(--on-accent);transform:translateX(4px)}
+[data-theme="dark"] .explorer-arrow{background:color-mix(in srgb,var(--color-accent) 18%,transparent);color:var(--color-accent-300)}
+/* Scope list — a labelled set, not free-floating chips */
+.explorer-scope-label{
+  font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:10px;
+}
+.explorer-groups{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.explorer-group{
+  border-radius:999px;background:var(--color-bg);border:1px solid var(--color-line);
+  padding:9px 15px;font-size:13px;font-weight:600;
+  transition:border-color .3s ease,background .3s ease;
+}
+.explorer-card:hover .explorer-group{border-color:color-mix(in srgb,var(--color-accent) 34%,transparent)}
+@media (max-width:900px){
+  .explorer-card{grid-template-columns:minmax(0,1fr)}
+  .explorer-rail{
+    border-right:0;border-bottom:1px solid var(--color-line);
+    flex-direction:row;align-items:center;justify-content:space-between;
+    flex-wrap:wrap;padding:22px 24px;gap:20px;
+  }
+  .explorer-index{font-size:32px}
+  .explorer-rail-stats{flex-direction:row;gap:22px;margin-top:0}
+  .explorer-body{padding:24px}
+}
 
 /* ---------- CTA banner (dark, full width) ---------- */
 .cta-dark{background:linear-gradient(135deg, var(--color-ink-fixed), color-mix(in srgb, var(--color-ink-fixed) 80%, var(--color-accent-2-900)));color:#fff;padding:56px;text-align:center}
