@@ -150,9 +150,39 @@ p{margin:0 0 16px;text-wrap:pretty}
 .hero{padding:130px 24px 80px;max-width:1280px;margin:0 auto}
 .stack{display:flex;flex-direction:column;gap:18px}
 .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px;align-items:center}
+/* When a split pairs a photo with a text column, centring leaves the image
+   floating against a taller neighbour with uneven margins top and bottom.
+   Stretching makes the photo match its partner's height exactly, so both
+   columns share one top and bottom edge. */
+.split:has(> .photo){align-items:stretch}
+.split > .photo{height:100%}
+.split > .photo img{height:100%;width:100%;object-fit:cover}
 .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:36px;flex-wrap:wrap;margin-bottom:28px}
+/* Intro row: lede on the left, a summary panel on the right. Without this the
+   lede's 62ch measure left the right half of the row empty. */
+.section-intro{
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+  gap:48px;align-items:start;margin-bottom:44px;
+}
+.section-intro .lede{margin:0}
+.intro-panel{
+  background:var(--color-surface);border:1px solid var(--color-line);
+  border-radius:var(--radius-lg);padding:24px 26px;box-shadow:var(--shadow-sm);
+}
+.intro-panel-title{
+  font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:14px;
+}
+.intro-facts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.intro-facts li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.5}
+.intro-facts svg{flex:0 0 auto;margin-top:3px;color:var(--color-accent-800)}
+[data-theme="dark"] .intro-facts svg{color:var(--color-accent-400)}
+.intro-facts b{font-weight:700}
+@media (max-width:900px){
+  .section-intro{grid-template-columns:minmax(0,1fr);gap:26px}
+}
 
 /* ---------- skip link (rule 45) ----------
    Offscreen until focused, then pinned top-left above the fixed nav so
@@ -593,16 +623,52 @@ p{margin:0 0 16px;text-wrap:pretty}
 /* ---------- footer ---------- */
 .site-footer{padding-bottom:24px}
 .footer-card{background:var(--color-ink-fixed);color:#fff;border-radius:var(--radius-lg);padding:48px}
-.footer-top{display:flex;justify-content:space-between;gap:36px;flex-wrap:wrap;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.16)}
-.footer-heading{font-size:clamp(20px,2.3vw,30px);font-weight:800;letter-spacing:-.03em;margin-bottom:18px;max-width:22ch}
-.footer-form{display:flex;gap:10px;flex-wrap:wrap}
-.footer-form input{
-  height:48px;padding:0 18px;min-width:240px;border-radius:999px;border:1px solid rgba(255,255,255,.2);
-  background:rgba(255,255,255,.07);color:#fff;font-family:inherit;font-size:14px;
+/* Footer top: mission + two explicit contact routes, replacing the old
+   single email-capture strip that left most of the row empty. */
+.footer-top{
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);
+  gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.16);
 }
-.footer-form input::placeholder{color:rgba(255,255,255,.55)}
-.footer-form input:focus{outline:none;border-color:var(--color-accent)}
-.footer-contact{font-size:15px;line-height:1.8;color:rgba(255,255,255,.8)}
+.footer-brand{min-width:0}
+.footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.footer-logo img{width:44px;height:44px;border-radius:999px;object-fit:cover}
+.footer-logo span{font-family:"Lexend",inherit;font-size:19px;font-weight:700;letter-spacing:-.02em}
+.footer-mission{
+  font-size:15px;line-height:1.7;color:rgba(255,255,255,.76);
+  max-width:56ch;margin:0 0 22px;
+}
+.footer-social{display:flex;gap:10px}
+.footer-social a{
+  width:44px;height:44px;display:grid;place-items:center;border-radius:999px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+  color:rgba(255,255,255,.86);transition:background .3s ease,color .3s ease,transform .3s var(--ease);
+}
+.footer-social a:hover{background:var(--color-accent);color:var(--on-accent);transform:translateY(-2px)}
+.footer-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;min-width:0}
+.footer-action{
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--radius-md);padding:22px;display:flex;flex-direction:column;min-width:0;
+}
+.footer-action-label{
+  font-family:"Lexend",inherit;font-size:15px;font-weight:700;letter-spacing:-.015em;margin-bottom:6px;
+}
+.footer-action p{font-size:13.5px;line-height:1.55;color:rgba(255,255,255,.66);margin:0 0 14px}
+.footer-action-value{
+  display:block;font-size:15px;font-weight:700;color:var(--color-accent-400);
+  margin-bottom:16px;margin-top:auto;word-break:break-word;
+}
+.footer-action-value:hover{color:var(--color-accent-300)}
+.btn-block-sm{width:100%}
+.footer-action .btn-outline{
+  background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.28);color:#fff;box-shadow:none;
+}
+.footer-action .btn-outline:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.5);color:#fff}
+@media (max-width:900px){
+  .footer-top{grid-template-columns:minmax(0,1fr);gap:34px}
+}
+@media (max-width:560px){
+  .footer-actions{grid-template-columns:minmax(0,1fr)}
+}
 .footer-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;padding:40px 0;border-bottom:1px solid rgba(255,255,255,.16)}
 .footer-col-title{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:16px}
 .footer-cols ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
@@ -610,7 +676,23 @@ p{margin:0 0 16px;text-wrap:pretty}
    target the WCAG 2.2 AA minimum (2.5.8, 24x24) rather than the AAA 44px. */
 .footer-cols a{display:inline-flex;align-items:center;min-height:28px;font-size:14.5px;color:rgba(255,255,255,.74)}
 .footer-cols a:hover{color:var(--color-accent-400)}
-.footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding-top:22px;font-size:13px;color:rgba(255,255,255,.58)}
+/* Bottom bar carries legal links and a compliance line, so the row is not
+   a mostly-empty strip holding one copyright notice. */
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;
+  gap:14px 26px;padding-top:24px;font-size:13px;color:rgba(255,255,255,.58);
+}
+.footer-legal{display:flex;flex-wrap:wrap;gap:6px 20px}
+.footer-legal a{
+  display:inline-flex;align-items:center;min-height:28px;
+  font-size:13px;color:rgba(255,255,255,.68);
+}
+.footer-legal a:hover{color:var(--color-accent-400)}
+.footer-badge{display:inline-flex;align-items:center;gap:7px;font-weight:600;color:rgba(255,255,255,.68)}
+.footer-badge svg{color:var(--color-accent-400)}
+@media (max-width:900px){
+  .footer-bottom{justify-content:flex-start}
+}
 
 /* ---------- hero bleed (v2 homepage hero) ---------- */
 .hero-bleed{padding:20px 24px 90px;max-width:1280px;margin:0 auto}
@@ -702,7 +784,9 @@ p{margin:0 0 16px;text-wrap:pretty}
   font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
   color:var(--muted);margin-bottom:10px;
 }
-.explorer-groups{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+/* Chips follow the label directly. Pushing them to the card's bottom edge
+   (margin-top:auto) left a dead gap on cards with fewer scope items. */
+.explorer-groups{display:flex;flex-wrap:wrap;gap:8px}
 .explorer-group{
   border-radius:999px;background:var(--color-bg);border:1px solid var(--color-line);
   padding:9px 15px;font-size:13px;font-weight:600;
@@ -854,7 +938,10 @@ p{margin:0 0 16px;text-wrap:pretty}
   flex:1;display:flex;flex-direction:column;   /* equal heights across the row */
   transition:transform .55s var(--ease),box-shadow .55s var(--ease),border-color .4s ease;
 }
-.flow-card .tags{margin-top:auto}              /* tags pin to the bottom edge */
+.flow-card .tags{margin-top:auto;padding-top:18px}   /* tags pin to the bottom edge */
+/* The CTA under the rail needs its own breathing room, otherwise it reads as
+   though it belongs to the first card's tag list. */
+.flow + .btn{margin-top:34px}
 .flow-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:color-mix(in srgb,var(--color-accent) 40%,transparent)}
 .flow-card h3{margin:0 0 10px}
 .flow-card p{font-size:15px;line-height:1.6;color:var(--muted);margin:0 0 16px}
@@ -875,6 +962,176 @@ p{margin:0 0 16px;text-wrap:pretty}
   .flow::after{transition:none;width:84%}
   .flow-card:hover{transform:none}
   .flow-marker{transition:none}
+}
+
+/* ============================================================
+   Specialty index — a directory, not a card grid.
+   17 specialties do not fit a card wall without becoming a scroll of
+   identical boxes, so they are grouped by care category and listed as
+   rows. A row is denser, scans faster, and each one links to its own
+   deep-dive article.
+   ============================================================ */
+.spec-index{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.spec-group{
+  background:var(--color-surface);border:1px solid var(--color-line);
+  border-radius:var(--radius-lg);padding:26px 24px;box-shadow:var(--shadow-sm);
+  display:flex;flex-direction:column;min-width:0;
+}
+.spec-group-head{
+  display:flex;align-items:center;gap:10px;padding-bottom:14px;margin-bottom:8px;
+  border-bottom:2px solid var(--color-accent-200);
+}
+.spec-group-title{
+  font-family:"Lexend",inherit;font-size:12.5px;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--color-accent-800);
+}
+[data-theme="dark"] .spec-group-title{color:var(--color-accent-300)}
+.spec-group-count{
+  margin-left:auto;font-size:12px;font-weight:700;color:var(--muted);
+  background:var(--color-bg);border-radius:999px;padding:3px 9px;
+}
+.spec-rows{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.spec-row{
+  display:flex;align-items:center;gap:12px;min-height:48px;padding:9px 10px;
+  border-radius:var(--radius-sm);color:var(--color-text);
+  border-bottom:1px solid color-mix(in srgb,var(--color-line) 60%,transparent);
+  transition:background .25s ease,padding-left .25s var(--ease);
+}
+.spec-rows li:last-child .spec-row{border-bottom:0}
+.spec-row:hover{background:var(--color-accent-100);color:var(--color-text);padding-left:16px}
+[data-theme="dark"] .spec-row:hover{background:color-mix(in srgb,var(--color-accent) 14%,transparent)}
+.spec-row-name{font-size:15px;font-weight:700;letter-spacing:-.015em;min-width:0}
+.spec-row-note{font-size:12.5px;color:var(--muted);display:block;font-weight:400;margin-top:1px;line-height:1.4}
+.spec-row-arrow{
+  margin-left:auto;flex:0 0 auto;color:var(--color-accent-800);opacity:0;
+  transition:opacity .25s ease,transform .25s var(--ease);transform:translateX(-4px);
+}
+.spec-row:hover .spec-row-arrow{opacity:1;transform:translateX(0)}
+[data-theme="dark"] .spec-row-arrow{color:var(--color-accent-300)}
+@media (max-width:900px){
+  .spec-index{grid-template-columns:minmax(0,1fr)}
+}
+
+/* ============================================================
+   Growth & technology grid — services that bring patients in, as opposed
+   to the RCM lines that collect once they arrive. Bordered tiles rather
+   than shadowed cards, so it reads as a different family from the
+   revenue-cycle block above it.
+   ============================================================ */
+.growth-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.growth-tile{
+  display:flex;flex-direction:column;padding:28px;min-width:0;
+  border:1px solid var(--color-line);border-radius:var(--radius-lg);
+  background:var(--color-surface);color:var(--color-text);position:relative;overflow:hidden;
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .4s ease;
+}
+.growth-tile::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
+  background:var(--grad-brand);transform:scaleX(0);transform-origin:left;
+  transition:transform .5s var(--ease);
+}
+.growth-tile:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);color:var(--color-text);border-color:color-mix(in srgb,var(--color-accent) 34%,transparent)}
+.growth-tile:hover::after{transform:scaleX(1)}
+.growth-icon{
+  width:46px;height:46px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px;
+  background:var(--color-accent-100);color:var(--color-accent-800);flex:0 0 auto;
+}
+[data-theme="dark"] .growth-icon{background:color-mix(in srgb,var(--color-accent) 16%,transparent);color:var(--color-accent-300)}
+.growth-tile h3{margin:0 0 8px;font-size:19px}
+.growth-tile p{font-size:14.5px;line-height:1.6;color:var(--muted);margin:0 0 18px}
+.growth-points{list-style:none;margin:0 0 20px;padding:0;display:flex;flex-direction:column;gap:8px}
+.growth-points li{
+  display:flex;gap:9px;align-items:flex-start;font-size:13.5px;line-height:1.5;
+  color:color-mix(in srgb,var(--color-text) 80%,transparent);
+}
+.growth-points svg{flex:0 0 auto;margin-top:3px;color:var(--color-accent-700)}
+[data-theme="dark"] .growth-points svg{color:var(--color-accent-400)}
+.growth-cta{
+  margin-top:auto;display:inline-flex;align-items:center;gap:7px;min-height:32px;
+  font-size:14px;font-weight:700;color:var(--color-accent-800);
+}
+[data-theme="dark"] .growth-cta{color:var(--color-accent-300)}
+.growth-tile:hover .growth-cta svg{transform:translateX(4px)}
+.growth-cta svg{transition:transform .3s var(--ease)}
+@media (max-width:900px){.growth-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.growth-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ============================================================
+   Article furniture — pro tips, do/don't pairs and data tables used by
+   the service and specialty deep-dives. Semantic and highly scannable,
+   which also makes the pages easy for search and LLMs to parse.
+   ============================================================ */
+.protip{
+  display:flex;gap:16px;align-items:flex-start;margin:28px 0;padding:24px 26px;
+  border-radius:var(--radius-md);border:1px solid color-mix(in srgb,var(--color-accent-2) 42%,transparent);
+  background:linear-gradient(140deg,var(--color-accent-2-100),transparent 75%);
+}
+[data-theme="dark"] .protip{background:color-mix(in srgb,var(--color-accent-2) 11%,transparent)}
+.protip-icon{
+  width:38px;height:38px;flex:0 0 auto;border-radius:11px;display:grid;place-items:center;
+  background:var(--color-accent-2);color:var(--on-accent-2);
+}
+.protip-label{
+  font-family:"Lexend",inherit;font-size:11.5px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--color-accent-2-800);margin-bottom:6px;
+}
+[data-theme="dark"] .protip-label{color:var(--color-accent-2-300)}
+.protip p{margin:0;font-size:15px;line-height:1.62}
+/* Do / Don't */
+.dodont{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:28px 0}
+.dodont-col{
+  border-radius:var(--radius-md);padding:24px;border:1px solid var(--color-line);
+  background:var(--color-surface);
+}
+.dodont-col.do{border-color:color-mix(in srgb,var(--color-accent) 42%,transparent)}
+.dodont-col.dont{border-color:color-mix(in srgb,#b3261e 34%,transparent)}
+.dodont-head{
+  display:flex;align-items:center;gap:9px;font-family:"Lexend",inherit;
+  font-size:14px;font-weight:700;margin-bottom:14px;
+}
+.dodont-col.do .dodont-head{color:var(--color-accent-800)}
+.dodont-col.dont .dodont-head{color:#b3261e}
+[data-theme="dark"] .dodont-col.do .dodont-head{color:var(--color-accent-300)}
+[data-theme="dark"] .dodont-col.dont .dodont-head{color:#ff9b8f}
+.dodont-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px}
+.dodont-col li{display:flex;gap:10px;font-size:14.5px;line-height:1.55}
+.dodont-col li::before{content:"";flex:0 0 auto;width:6px;height:6px;border-radius:999px;margin-top:8px;background:currentColor;opacity:.45}
+/* Data table */
+.data-table-wrap{overflow-x:auto;margin:26px 0;border-radius:var(--radius-md);border:1px solid var(--color-line)}
+.data-table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--color-surface);min-width:560px}
+.data-table caption{text-align:left;padding:16px 20px 0;font-size:13px;color:var(--muted)}
+.data-table th,.data-table td{padding:14px 18px;text-align:left;vertical-align:top;border-bottom:1px solid var(--color-line)}
+.data-table thead th{
+  font-family:"Lexend",inherit;font-size:12px;font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--muted);background:var(--color-bg);
+}
+.data-table tbody tr:last-child td{border-bottom:0}
+.data-table tbody tr:hover{background:var(--color-accent-100)}
+[data-theme="dark"] .data-table tbody tr:hover{background:color-mix(in srgb,var(--color-accent) 10%,transparent)}
+.data-table code{font-size:13px;background:var(--color-accent-100);padding:2px 7px;border-radius:6px;font-weight:600}
+[data-theme="dark"] .data-table code{background:color-mix(in srgb,var(--color-accent) 16%,transparent)}
+/* Inline CTA band inside articles */
+.cta-band{
+  display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;
+  margin:40px 0;padding:30px 34px;border-radius:var(--radius-lg);
+  background:var(--color-ink-fixed);color:#fff;
+}
+.cta-band h3{color:#fff;margin:0 0 6px;font-size:21px}
+.cta-band p{margin:0;color:rgba(255,255,255,.76);font-size:14.5px;max-width:60ch}
+.cta-band .btn{flex:0 0 auto}
+/* Key-takeaways box */
+.takeaways{
+  margin:0 0 34px;padding:24px 26px;border-radius:var(--radius-md);
+  background:var(--color-surface);border:1px solid var(--color-line);box-shadow:var(--shadow-sm);
+}
+.takeaways h2{font-size:15px !important;margin:0 0 14px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.takeaways ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.takeaways li{display:flex;gap:11px;font-size:15px;line-height:1.55}
+.takeaways svg{flex:0 0 auto;margin-top:4px;color:var(--color-accent-700)}
+[data-theme="dark"] .takeaways svg{color:var(--color-accent-400)}
+@media (max-width:700px){
+  .dodont{grid-template-columns:minmax(0,1fr)}
+  .cta-band{padding:24px}
 }
 
 /* ---------- gradient / glass section panels ---------- */
