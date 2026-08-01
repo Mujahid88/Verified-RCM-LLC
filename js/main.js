@@ -158,6 +158,22 @@
     counters.forEach(function (c) { cio.observe(c); });
   }
 
+  /* ---------- connected flow rail ----------
+     Adds .in once the rail scrolls into view, which draws the progress fill
+     and lights each day marker in sequence. Fires once, then stops observing. */
+  var flows = document.querySelectorAll('.flow');
+  if (flows.length && 'IntersectionObserver' in window) {
+    var fio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); fio.unobserve(en.target); }
+      });
+    }, { threshold: 0.25 });
+    flows.forEach(function (f) { fio.observe(f); });
+  } else {
+    // No IntersectionObserver: show the completed state rather than a blank rail.
+    flows.forEach(function (f) { f.classList.add('in'); });
+  }
+
   /* ---------- sliders (scroll-snap carousels) ----------
      The viewport scrolls natively, so the slider is fully usable with no JS,
      via touch, trackpad, or keyboard. This only wires up the optional

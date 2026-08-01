@@ -17,54 +17,51 @@
   font-weight:300 700; font-style:normal; font-display:swap;
 }
 /* ------------------------------------------------------------------
-   Palette: clinical teal + health green (healthcare/medical family).
+   Palette: signature lime + warm amber (the Verified RCM brand colours).
    Every text-bearing value below is contrast-verified against its own
-   surface — ratios noted inline. Base --color-accent (#0891B2) is a
-   FILL/chrome colour only: at 3.5:1 it is large-text/UI-component safe
-   but must never carry body copy.
+   surface — ratios noted inline. Base --color-accent (#8fc71a) is a
+   FILL/chrome colour only: at 1.9:1 it must never carry text of any size.
    ------------------------------------------------------------------ */
 :root{
-  --color-bg:#F6FAFB; --color-surface:#ffffff; --color-text:#0B1B21;   /* text 16.75:1 on bg */
-  --color-accent:#0891B2; --color-accent-2:#16A34A;
-  --color-line:color-mix(in srgb, #0B1B21 12%, transparent);
-  --color-accent-100:#ECFEFF; --color-accent-200:#CFFAFE; --color-accent-300:#A5F3FC;
-  --color-accent-400:#22D3EE; --color-accent-500:#06B6D4; --color-accent-600:#0891B2;
-  --color-accent-700:#0E7490; --color-accent-800:#155E75; --color-accent-900:#164E63;
-  /* -800 = 6.92:1 on bg — the safe token for accent-coloured body text/links */
-  --color-accent-2-100:#F0FDF4; --color-accent-2-200:#DCFCE7; --color-accent-2-300:#BBF7D0;
-  --color-accent-2-400:#4ADE80; --color-accent-2-500:#22C55E; --color-accent-2-600:#16A34A;
-  --color-accent-2-700:#15803D; --color-accent-2-800:#166534; --color-accent-2-900:#14532D;
-  --color-gold:#B45309;                       /* star ratings — 5.1:1 on surface */
-  --btn-fill:#0E7490;                         /* white on this = 5.36:1 (AA body) */
-  --btn-fill-hover:#155E75;
-  /* Ink used ON solid accent fills (chips, icon circles, pill numbers, checks).
-     Dark ink beats white here: 4.6:1 vs 3.68:1 on teal. Do not lighten these —
-     #04222B lands at 4.49:1 and fails AA by a hair. */
-  --on-accent:#032027;                        /* 4.60:1 on --color-accent  */
-  --on-accent-2:#04240F;                      /* 5.04:1 on --color-accent-2 */
+  --color-bg:#F7F8F2; --color-surface:#ffffff; --color-text:#181a14;   /* text 16.1:1 on bg */
+  --color-accent:#8fc71a; --color-accent-2:#f5a524;
+  --color-line:color-mix(in srgb, #181a14 12%, transparent);
+  --color-accent-100:#f4fbe4; --color-accent-200:#e6f6c2; --color-accent-300:#d0ed92;
+  --color-accent-400:#b2e04f; --color-accent-500:#8fc71a; --color-accent-600:#79ab13;
+  --color-accent-700:#5f860d; --color-accent-800:#46630a; --color-accent-900:#2f4407;
+  /* -800 = 6.45:1 on bg — the safe token for accent-coloured body text/links.
+     Do NOT use -700 (4.01:1) or lighter for text; those are fills only. */
+  --color-accent-2-100:#fff8e8; --color-accent-2-200:#ffedc4; --color-accent-2-300:#ffdc93;
+  --color-accent-2-400:#ffc44d; --color-accent-2-500:#f5a524; --color-accent-2-600:#d98a12;
+  --color-accent-2-700:#a9690a; --color-accent-2-800:#7c4c06; --color-accent-2-900:#513104;
+  /* -2-800 = 6.80:1 on bg. -2-700 (4.17:1) just misses AA — fills only. */
+  --color-gold:#a9690a;                       /* star ratings — 4.17:1, large glyphs only */
+  --btn-fill:#8fc71a;
+  --btn-fill-hover:#b2e04f;
+  /* Ink used ON solid accent fills (chips, icon circles, buttons, checks).
+     The lime/amber fills are light, so dark ink scores very high here. */
+  --on-accent:#131510;                        /* 9.06:1 on --color-accent   */
+  --on-accent-2:#211603;                      /* 8.71:1 on --color-accent-2 */
   --radius-sm:14px; --radius-md:22px; --radius-lg:32px; --radius-xl:40px;
   /* Tinted shadows — brand-hued rather than neutral grey, for depth without mud */
-  --shadow-sm:0 2px 10px rgba(11,27,33,.06);
-  --shadow-md:0 12px 32px rgba(8,52,66,.10);
-  --shadow-lg:0 28px 72px rgba(8,52,66,.16);
-  --shadow-glow:0 16px 40px rgba(8,145,178,.28);
+  /* Shadows carry a real offset + soft blur (never a zero-offset colour halo). */
+  --shadow-sm:0 2px 10px rgba(24,26,20,.07);
+  --shadow-md:0 12px 32px rgba(38,45,12,.11);
+  --shadow-lg:0 28px 72px rgba(38,45,12,.17);
+  --shadow-glow:0 16px 40px rgba(143,199,26,.34);
   --ease:cubic-bezier(.16,1,.3,1);
   --ease-out2:cubic-bezier(.25,.46,.45,.94);  /* ≈ GSAP power2.out */
-  --color-ink-fixed:#0B1B21;
-  --muted:#52636A;                            /* 5.96:1 on bg */
+  --color-ink-fixed:#181a14;
+  --muted:#5b6152;                            /* 5.9:1 on bg */
   /* Gradients */
   /* Gradient stops are contrast-checked at EVERY stop, not just the average:
-     white button labels sit on the lightest stop, so that stop sets the floor.
-     --grad-brand: lightest stop #0E7490 = 5.36:1 with white (AA body).
-     --grad-vivid carries TEXT (.grad-text), so each stop clears 4.5:1 on --color-bg;
-     the obvious picks (#06B6D4 2.31:1, #16A34A 3.14:1) both failed and were dropped. */
-  --grad-brand:linear-gradient(135deg,#0E7490 0%,#0F766E 55%,#155E75 100%);
-  --grad-vivid:linear-gradient(135deg,#0E7490 0%,#0F766E 45%,#15803D 100%);
-  /* Decorative-only gradient — never place text on this one */
-  --grad-decor:linear-gradient(135deg,#06B6D4 0%,#0891B2 45%,#16A34A 100%);
-  --grad-mesh:radial-gradient(60% 55% at 12% 8%, rgba(34,211,238,.22) 0%, transparent 60%),
-              radial-gradient(50% 50% at 92% 20%, rgba(22,163,74,.16) 0%, transparent 62%),
-              radial-gradient(60% 60% at 50% 100%, rgba(8,145,178,.14) 0%, transparent 65%);
+     button labels sit on the lightest AND darkest stop, so both set the floor.
+     These carry dark ink (--on-accent), so the DARKEST stop is the binding one. */
+  --grad-brand:linear-gradient(135deg,#b2e04f 0%,#8fc71a 55%,#79ab13 100%);
+  --grad-warm:linear-gradient(135deg,#ffc44d 0%,#f5a524 55%,#d98a12 100%);
+  --grad-mesh:radial-gradient(60% 55% at 12% 8%, rgba(178,224,79,.30) 0%, transparent 60%),
+              radial-gradient(50% 50% at 92% 20%, rgba(245,165,36,.20) 0%, transparent 62%),
+              radial-gradient(60% 60% at 50% 100%, rgba(143,199,26,.18) 0%, transparent 65%);
   /* Glass */
   --glass-bg:rgba(255,255,255,.62);
   --glass-bg-strong:rgba(255,255,255,.80);
@@ -72,21 +69,21 @@
   --glass-blur:16px;
 }
 [data-theme="dark"]{
-  --color-bg:#0A1418; --color-surface:#101F26; --color-text:#E8F1F4;   /* 16.27:1 on bg */
-  --color-line:color-mix(in srgb, #E8F1F4 16%, transparent);
-  --muted:#A8BDC4;                            /* 9.54:1 on bg */
-  --color-gold:#FBBF24;
-  --btn-fill:#22D3EE; --btn-fill-hover:#67E8F9;
+  --color-bg:#0f110d; --color-surface:#181b15; --color-text:#f2f3ed;
+  --color-line:color-mix(in srgb, #f2f3ed 16%, transparent);
+  --muted:#b6bcae;                            /* 9.1:1 on dark bg */
+  --color-gold:#ffc44d;
+  --btn-fill:#b2e04f; --btn-fill-hover:#d0ed92;
   --shadow-sm:0 2px 10px rgba(0,0,0,.5); --shadow-md:0 12px 32px rgba(0,0,0,.55); --shadow-lg:0 28px 72px rgba(0,0,0,.6);
-  --shadow-glow:0 16px 40px rgba(34,211,238,.20);
-  --grad-mesh:radial-gradient(60% 55% at 12% 8%, rgba(34,211,238,.14) 0%, transparent 60%),
-              radial-gradient(50% 50% at 92% 20%, rgba(22,163,74,.10) 0%, transparent 62%),
-              radial-gradient(60% 60% at 50% 100%, rgba(8,145,178,.10) 0%, transparent 65%);
-  --glass-bg:rgba(16,31,38,.60);
-  --glass-bg-strong:rgba(16,31,38,.82);
+  --shadow-glow:0 16px 40px rgba(143,199,26,.24);
+  --grad-mesh:radial-gradient(60% 55% at 12% 8%, rgba(143,199,26,.13) 0%, transparent 60%),
+              radial-gradient(50% 50% at 92% 20%, rgba(245,165,36,.09) 0%, transparent 62%),
+              radial-gradient(60% 60% at 50% 100%, rgba(178,224,79,.09) 0%, transparent 65%);
+  --glass-bg:rgba(24,27,21,.62);
+  --glass-bg-strong:rgba(24,27,21,.84);
   --glass-border:rgba(255,255,255,.12);
-  /* Bright accent fills in dark mode take dark ink for the same reason */
-  --on-accent:#032027; --on-accent-2:#04240F;
+  /* Accent fills stay light in dark mode, so the ink on them stays dark */
+  --on-accent:#131510; --on-accent-2:#211603;
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -114,15 +111,18 @@ h2{font-size:clamp(27px,3.3vw,46px)}
 h3{font-size:21px;letter-spacing:-.02em;line-height:1.25}
 p{margin:0 0 16px;text-wrap:pretty}
 .lede{font-size:18px;line-height:1.7;color:var(--muted);max-width:62ch}
-/* Gradient headline accent — replaces the flat .accent span */
+/* Headline emphasis comes from a solid accent + an underline the eye can follow,
+   not from gradient text (gradient text is a refused default: emphasis should
+   come from weight, size or colour, and it always costs contrast control). */
 .grad-text{
-  background:var(--grad-vivid);-webkit-background-clip:text;background-clip:text;
-  color:transparent;-webkit-text-fill-color:transparent;
+  color:var(--color-accent-800);position:relative;white-space:nowrap;
 }
-/* Fallback: if background-clip:text is unsupported, keep readable solid colour */
-@supports not ((-webkit-background-clip:text) or (background-clip:text)){
-  .grad-text{color:var(--color-accent-800);-webkit-text-fill-color:currentColor}
+.grad-text::after{
+  content:"";position:absolute;left:0;right:0;bottom:.06em;height:.14em;
+  background:var(--color-accent);border-radius:999px;z-index:-1;
 }
+[data-theme="dark"] .grad-text{color:var(--color-accent-300)}
+[data-theme="dark"] .grad-text::after{background:color-mix(in srgb,var(--color-accent) 55%,transparent)}
 .tagline{font-size:19px;line-height:1.5;font-weight:600;color:var(--color-accent-800);margin:0 0 20px}
 .muted{color:var(--muted)}
 .accent-text{color:var(--color-accent-800)}
@@ -232,12 +232,10 @@ p{margin:0 0 16px;text-wrap:pretty}
 .btn:hover::after{transform:translateX(120%)}
 .btn-lg{min-height:56px;padding:0 32px;font-size:16px}
 .btn-block{width:100%;justify-content:space-between}
-.btn-accent{background:var(--grad-brand);color:#fff;box-shadow:var(--shadow-sm)}
-.btn-accent:hover{color:#fff;box-shadow:var(--shadow-glow)}
-[data-theme="dark"] .btn-accent{background:linear-gradient(135deg,#22D3EE 0%,#06B6D4 100%);color:#062A33}
-[data-theme="dark"] .btn-accent:hover{color:#062A33}
-.btn-amber{background:linear-gradient(135deg,var(--color-accent-2-600),var(--color-accent-2-700));color:#fff;box-shadow:var(--shadow-sm)}
-.btn-amber:hover{color:#fff;box-shadow:0 16px 40px rgba(22,163,74,.28)}
+.btn-accent{background:var(--grad-brand);color:var(--on-accent);box-shadow:var(--shadow-sm)}
+.btn-accent:hover{color:var(--on-accent);box-shadow:var(--shadow-glow)}
+.btn-amber{background:var(--grad-warm);color:var(--on-accent-2);box-shadow:var(--shadow-sm)}
+.btn-amber:hover{color:var(--on-accent-2);box-shadow:0 16px 40px rgba(245,165,36,.34)}
 /* Glass outline button */
 .btn-outline{
   background:var(--glass-bg);border:1px solid var(--glass-border);color:var(--color-text);
@@ -315,10 +313,10 @@ p{margin:0 0 16px;text-wrap:pretty}
 .mini-body{font-size:13.5px;line-height:1.5;color:var(--muted)}
 .mini.dark{background:var(--color-ink-fixed);color:#fff}
 .mini.dark .mini-body{color:rgba(255,255,255,.7)}
-.accent-fill{background:var(--grad-brand);color:#fff;border-color:transparent}
-.accent-fill .stat-label,.accent-fill div{color:rgba(255,255,255,.92)}
-.amber-fill{background:linear-gradient(135deg,var(--color-accent-2-600),var(--color-accent-2-800));color:#fff;border-color:transparent}
-.amber-fill .stat-label{color:rgba(255,255,255,.92)}
+.accent-fill{background:var(--grad-brand);color:var(--on-accent);border-color:transparent}
+.accent-fill .stat-label,.accent-fill div{color:var(--on-accent)}
+.amber-fill{background:var(--grad-warm);color:var(--on-accent-2);border-color:transparent}
+.amber-fill .stat-label{color:var(--on-accent-2)}
 .panel{border:1px solid var(--color-line);border-radius:var(--radius-lg);padding:48px;background:var(--color-surface);box-shadow:var(--shadow-sm)}
 .link-card{display:block;color:var(--color-text)}
 .link-card:hover{color:var(--color-text)}
@@ -490,7 +488,7 @@ p{margin:0 0 16px;text-wrap:pretty}
 .hero-bleed-photo{position:relative;min-height:600px;height:74vh;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);background:var(--color-accent-100)}
 .hero-bleed-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
 .hero-bleed-photo:hover img{transform:scale(1.045)}
-.hero-bleed-overlay{position:absolute;inset:0;background:linear-gradient(100deg, rgba(6,32,40,.90) 0%, rgba(8,52,66,.62) 52%, rgba(8,145,178,.12) 100%)}
+.hero-bleed-overlay{position:absolute;inset:0;background:linear-gradient(100deg, rgba(14,17,8,.90) 0%, rgba(24,30,10,.60) 52%, rgba(143,199,26,.10) 100%)}
 .hero-bleed-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:56px}
 .hero-bleed-content h1{color:#fff;max-width:20ch}
 .hero-bleed-content h1 .accent{color:var(--color-accent-400)}
@@ -621,6 +619,82 @@ p{margin:0 0 16px;text-wrap:pretty}
   .slider-btn:hover:not(:disabled){transform:none}
 }
 
+/* ============================================================
+   Connected flow — the onboarding rail.
+   The connection IS the content here: the rail is a four-day timeline,
+   so the line between cards carries meaning rather than decorating them.
+   Markers sit ON the rail; each card hangs from its marker by a stem.
+   The rail's lime progress fill draws left-to-right once, on scroll-in:
+   that draw is the section's single authored moment.
+   ============================================================ */
+.flow{
+  list-style:none;margin:0;padding:0;position:relative;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;
+}
+/* The rail: a hairline track behind every marker */
+.flow::before{
+  content:"";position:absolute;top:27px;left:8%;right:8%;height:2px;
+  background:var(--color-accent-200);border-radius:999px;
+}
+/* The progress fill, drawn on reveal */
+.flow::after{
+  content:"";position:absolute;top:27px;left:8%;height:2px;width:0;
+  background:linear-gradient(90deg,var(--color-accent-600),var(--color-accent));
+  border-radius:999px;
+  transition:width 1.25s var(--ease-out2) .15s;
+}
+.flow.in::after{width:84%}
+.flow-step{display:flex;flex-direction:column;align-items:center;position:relative;min-width:0}
+/* Marker: the day node sitting on the rail */
+.flow-marker{
+  position:relative;z-index:1;display:inline-flex;align-items:center;gap:9px;
+  height:54px;padding:0 20px 0 8px;border-radius:999px;
+  background:var(--color-surface);border:2px solid var(--color-accent-200);
+  box-shadow:var(--shadow-sm);
+  transition:border-color .5s var(--ease),box-shadow .5s var(--ease),transform .5s var(--ease);
+}
+.flow.in .flow-step:nth-child(1) .flow-marker{transition-delay:.25s}
+.flow.in .flow-step:nth-child(2) .flow-marker{transition-delay:.6s}
+.flow.in .flow-step:nth-child(3) .flow-marker{transition-delay:.95s}
+.flow.in .flow-marker{border-color:var(--color-accent);box-shadow:var(--shadow-glow)}
+.flow-num{
+  width:36px;height:36px;flex:0 0 auto;border-radius:999px;
+  background:var(--color-accent);color:var(--on-accent);
+  display:grid;place-items:center;font-family:"Lexend",inherit;font-size:14px;font-weight:700;
+}
+.flow-day{font-family:"Lexend",inherit;font-size:13px;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+/* Stem: joins each card up to its marker */
+.flow-stem{width:2px;height:22px;background:var(--color-accent-200);flex:0 0 auto}
+.flow.in .flow-stem{background:var(--color-accent)}
+.flow-card{
+  background:var(--color-surface);border:1px solid var(--color-line);
+  border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-sm);width:100%;
+  flex:1;display:flex;flex-direction:column;   /* equal heights across the row */
+  transition:transform .55s var(--ease),box-shadow .55s var(--ease),border-color .4s ease;
+}
+.flow-card .tags{margin-top:auto}              /* tags pin to the bottom edge */
+.flow-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:color-mix(in srgb,var(--color-accent) 40%,transparent)}
+.flow-card h3{margin:0 0 10px}
+.flow-card p{font-size:15px;line-height:1.6;color:var(--muted);margin:0 0 16px}
+.flow-icon{display:block;margin-bottom:14px;color:var(--color-accent-800)}
+[data-theme="dark"] .flow-icon{color:var(--color-accent-400)}
+/* Vertical rail on narrow screens: the timeline rotates rather than collapsing */
+@media (max-width:900px){
+  .flow{grid-template-columns:minmax(0,1fr);gap:0}
+  .flow::before{top:14px;bottom:14px;left:26px;right:auto;width:2px;height:auto}
+  .flow::after{top:14px;left:26px;width:2px;height:0}
+  .flow.in::after{width:2px;height:calc(100% - 28px);transition:height 1.25s var(--ease-out2) .15s}
+  .flow-step{flex-direction:row;align-items:flex-start;gap:18px;padding-bottom:26px}
+  .flow-marker{height:auto;min-height:54px;flex-direction:column;padding:8px;gap:4px}
+  .flow-day{font-size:11px}
+  .flow-stem{width:18px;height:2px;margin-top:26px}
+}
+@media (prefers-reduced-motion:reduce){
+  .flow::after{transition:none;width:84%}
+  .flow-card:hover{transform:none}
+  .flow-marker{transition:none}
+}
+
 /* ---------- gradient / glass section panels ---------- */
 .panel-gradient{
   background:var(--grad-brand);color:#fff;border-radius:var(--radius-lg);
@@ -642,8 +716,8 @@ p{margin:0 0 16px;text-wrap:pretty}
   position:absolute;border-radius:999px;filter:blur(60px);opacity:.5;
   pointer-events:none;z-index:0;
 }
-.orb-a{width:340px;height:340px;background:rgba(34,211,238,.5);top:-120px;right:-90px}
-.orb-b{width:280px;height:280px;background:rgba(22,163,74,.4);bottom:-110px;left:-80px}
+.orb-a{width:340px;height:340px;background:rgba(178,224,79,.55);top:-120px;right:-90px}
+.orb-b{width:280px;height:280px;background:rgba(245,165,36,.42);bottom:-110px;left:-80px}
 .panel-gradient>*{position:relative;z-index:1}
 
 /* ============================================================
