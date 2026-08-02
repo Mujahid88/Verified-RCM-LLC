@@ -35,7 +35,9 @@
   --color-accent-2-400:#ffc44d; --color-accent-2-500:#f5a524; --color-accent-2-600:#d98a12;
   --color-accent-2-700:#a9690a; --color-accent-2-800:#7c4c06; --color-accent-2-900:#513104;
   /* -2-800 = 6.80:1 on bg. -2-700 (4.17:1) just misses AA — fills only. */
-  --color-gold:#a9690a;                       /* star ratings — 4.17:1, large glyphs only */
+  --color-gold:#8a5006;                       /* star ratings — 6.5:1 on white, 6.09:1 on --color-bg. Previous
+     #a9690a measured 4.46:1 via pa11y (axe/HTML_CS), just under AA — .stars is 15px, not large text, so 4.5:1
+     is the real requirement, not the 3:1 "large glyphs" this was mistakenly filed under. */
   --btn-fill:#8fc71a;
   --btn-fill-hover:#b2e04f;
   /* Ink used ON solid accent fills (chips, icon circles, buttons, checks).
