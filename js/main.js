@@ -67,19 +67,103 @@
     });
   }
 
-  /* ---------- homepage hero A/B toggle ---------- */
-  var heroToggle = document.getElementById('heroToggle');
-  if (heroToggle) {
-    var heroPanels = document.querySelectorAll('[data-hero-panel]');
-    heroToggle.addEventListener('click', function (e) {
-      var btn = e.target.closest('[data-hero-choice]');
-      if (!btn) return;
-      heroToggle.querySelectorAll('[data-hero-choice]').forEach(function (c) { c.classList.remove('active'); });
-      btn.classList.add('active');
-      var want = btn.getAttribute('data-hero-choice');
-      heroPanels.forEach(function (p) {
-        p.hidden = p.getAttribute('data-hero-panel') !== want;
+  /* ---------- site search ----------
+     A real input box that lives in the nav (not an icon hiding a modal),
+     with results dropping down beneath it. Loads search-index.json once
+     (54 pages, ~11KB), matches on title + description, case-insensitive
+     substring. No server to query on a static site, so this is the whole
+     "backend". */
+  var navSearch = document.getElementById('navSearch');
+  var searchInput = document.getElementById('searchInput');
+  var searchResults = document.getElementById('searchResults');
+  if (navSearch && searchInput && searchResults) {
+    var searchIndex = null;
+    var searchIndexPromise = null;
+    var activeIndex = -1;
+
+    function loadIndex() {
+      if (searchIndexPromise) return searchIndexPromise;
+      searchIndexPromise = fetch('search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { searchIndex = data; return data; })
+        .catch(function () { searchIndex = []; return []; });
+      return searchIndexPromise;
+    }
+
+    function openResults() { searchResults.classList.add('open'); }
+    function closeResults() { searchResults.classList.remove('open'); activeIndex = -1; }
+
+    function renderResults(items, query) {
+      activeIndex = -1;
+      if (!query) {
+        searchResults.innerHTML = '<p class="search-hint">Search specialties, services, credentialing guides and articles.</p>';
+        return;
+      }
+      if (!items.length) {
+        searchResults.innerHTML = '<p class="search-empty">No pages match &ldquo;' + query.replace(/</g, '&lt;') + '&rdquo;.</p>';
+        return;
+      }
+      searchResults.innerHTML = items.slice(0, 8).map(function (item) {
+        return '<a class="search-result" href="' + item.url + '">' +
+          '<span class="search-result-cat">' + item.cat + '</span>' +
+          '<span class="search-result-body"><span class="search-result-title">' + item.title + '</span>' +
+          '<span class="search-result-desc">' + item.desc + '</span></span>' +
+          '</a>';
+      }).join('');
+    }
+
+    function runSearch(query) {
+      loadIndex().then(function (data) {
+        var q = query.trim().toLowerCase();
+        if (!q) { renderResults([], ''); return; }
+        var scored = data.map(function (item) {
+          var title = item.title.toLowerCase();
+          var desc = item.desc.toLowerCase();
+          var score = 0;
+          if (title.indexOf(q) === 0) score = 3;
+          else if (title.indexOf(q) !== -1) score = 2;
+          else if (desc.indexOf(q) !== -1) score = 1;
+          return { item: item, score: score };
+        }).filter(function (s) { return s.score > 0; })
+          .sort(function (a, b) { return b.score - a.score; })
+          .map(function (s) { return s.item; });
+        renderResults(scored, query);
       });
+    }
+
+    searchInput.addEventListener('focus', function () {
+      loadIndex();
+      if (!searchResults.innerHTML) renderResults([], '');
+      openResults();
+    });
+    searchInput.addEventListener('input', function () {
+      runSearch(searchInput.value);
+      openResults();
+    });
+    document.addEventListener('click', function (e) {
+      if (!navSearch.contains(e.target)) closeResults();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === '/' && document.activeElement !== searchInput) {
+        var tag = document.activeElement && document.activeElement.tagName;
+        if (tag !== 'INPUT' && tag !== 'TEXTAREA') { e.preventDefault(); searchInput.focus(); }
+      }
+      if (searchResults.classList.contains('open')) {
+        if (e.key === 'Escape') { closeResults(); searchInput.blur(); }
+        else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+          var results = searchResults.querySelectorAll('.search-result');
+          if (!results.length) return;
+          e.preventDefault();
+          activeIndex += e.key === 'ArrowDown' ? 1 : -1;
+          if (activeIndex < 0) activeIndex = results.length - 1;
+          if (activeIndex >= results.length) activeIndex = 0;
+          results.forEach(function (r, i) { r.classList.toggle('active', i === activeIndex); });
+          results[activeIndex].scrollIntoView({ block: 'nearest' });
+        } else if (e.key === 'Enter') {
+          var active = searchResults.querySelector('.search-result.active') || searchResults.querySelector('.search-result');
+          if (active && document.activeElement === searchInput) { window.location.href = active.getAttribute('href'); }
+        }
+      }
     });
   }
 
@@ -102,7 +186,7 @@
      Stagger follows the Stagger List preset: ~60ms per sibling, capped so
      long grids never feel sluggish (the preset warns against >8 staggered
      children / >0.1s per item). */
-  var targets = document.querySelectorAll('.card, .photo, h1, h2, .lede, .trust-bar');
+  var targets = document.querySelectorAll('.card, .photo, h1, h2, .lede, .glass-card, .bar-chart');
   var siblingIndex = new Map();
   targets.forEach(function (t) {
     t.classList.add('reveal');

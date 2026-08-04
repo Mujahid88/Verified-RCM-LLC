@@ -21,7 +21,7 @@
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MedicalBusiness","name":"Verified RCM","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (623) 231-2306","areaServed":"US","priceRange":"$$"}
+{"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (623) 231-2306","email":"hello@verifiedrcm.com","areaServed":{"@type":"Country","name":"United States"},"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (623) 231-2306","email":"hello@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do we have to replace our in-house biller?","acceptedAnswer":{"@type":"Answer","text":"No. Most practices keep their front-desk and intake staff and hand us coding, submission, denials and follow-up. We can also work alongside an existing biller and take only the segments that are backing up, commonly denials and aged A/R."}},{"@type":"Question","name":"How quickly can you start?","acceptedAnswer":{"@type":"Answer","text":"The review takes two days, the strategy is delivered on day three, and we take over live claim work on day four. Credentialing timelines depend on the payer, but we begin submitting applications in the first week."}},{"@type":"Question","name":"Which EHR and practice management systems do you work in?","acceptedAnswer":{"@type":"Answer","text":"We work inside whatever you already use; we do not ask you to migrate. Our team is credentialed across the major ambulatory EHRs and clearinghouses, and we adopt your templates rather than imposing ours."}},{"@type":"Question","name":"How do you handle denials and appeals?","acceptedAnswer":{"@type":"Answer","text":"Every denial is categorized by root cause, worked within 48 hours, and fed back into the front-end rules so the same denial does not recur. You get a monthly denial report showing volume, cause and recovered dollars."}},{"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"Billing is a percentage of collections, so our incentive matches yours: we are paid when you are paid. Credentialing and practice-management projects are quoted flat per provider or per application. No long-term lock-in."}},{"@type":"Question","name":"Are you HIPAA compliant?","acceptedAnswer":{"@type":"Answer","text":"Yes. All PHI is handled under signed BAAs on encrypted, access-controlled systems, with annual HIPAA training and audit logging for every user who touches a chart or a claim."}}]}
@@ -34,14 +34,51 @@
     <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
     <nav class="nav-links">
       <a href="index.html" class="nav-link active">Verified RCM</a>
-      <a href="services.html" class="nav-link">Services</a>
+      <div class="nav-item-mega">
+      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
+      <div class="nav-mega">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Billing</div>
+          <a href="eligibility-verification.html">Eligibility Verification</a>
+          <a href="denials-management.html">Denials Management</a>
+          <a href="prior-auth.html">Prior Authorization</a>
+          <a href="claims-scrubbing.html">Claims Submission</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Coding</div>
+          <a href="medical-coding.html">Coding Overview</a>
+          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
+          <a href="specialty-cardiology.html">Cardiology Coding</a>
+          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Credentialing</div>
+          <a href="credentialing-medicare.html">Medicare</a>
+          <a href="credentialing-medicaid.html">Medicaid</a>
+          <a href="credentialing-bcbs.html">BCBS</a>
+          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+          <a href="credentialing-aetna.html">Aetna</a>
+          <a href="credentialing-cigna.html">Cigna</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Practice Growth</div>
+          <a href="digital-marketing.html">Digital Marketing</a>
+          <a href="seo-services.html">Healthcare SEO</a>
+          <a href="google-business-profile.html">Google Business Profile</a>
+          <a href="social-media-management.html">Social Media</a>
+          <a href="web-development.html">Web Development</a>
+          <a href="virtual-assistant.html">Virtual Assistants</a>
+        </div>
+      </div>
+    </div>
       <a href="specialties.html" class="nav-link">Specialties</a>
       <a href="blog.html" class="nav-link">Blog</a>
       <a href="about.html" class="nav-link">About us</a>
     </nav>
-    <div class="hero-toggle" id="heroToggle" role="group" aria-label="Homepage layout">
-      <button type="button" class="chip active" data-hero-choice="split">Home Page</button>
-      <button type="button" class="chip" data-hero-choice="bleed">Core Services</button>
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
     </div>
     <div class="nav-spacer"></div>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
@@ -57,58 +94,108 @@
   </div>
 </div>
 <main id="main">
-<section class="hero wrap" data-hero-panel="split">
-  <div class="split hero-split">
-    <div>
-      <div class="badge"><span class="dot"></span>Welcome to Verified RCM</div>
-      <h1>Full-service medical billing that gets you paid <span class="grad-text">faster</span>.</h1>
-      <p class="lede">From coding and claim submission to credentialing and collections, Verified RCM runs your revenue cycle end to end, so your team can focus on patient care instead of paperwork.</p>
-      <div class="hero-ctas">
-        <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free consultation</a>
-        <a href="services.html" class="btn btn-outline btn-lg">Explore services</a>
+<section class="hero wrap">
+  <div class="ctrl-hero">
+    <div class="ctrl-hero-grid">
+      <div class="ctrl-hero-copy">
+        <div class="ctrl-eyebrow"><span class="ctrl-dot"></span>Revenue cycle, watched live</div>
+        <h1>Nothing moves through your claims without us watching it.</h1>
+        <p class="lede">Real-time visibility into every claim's status, submitted, accepted, denied or paid, so problems get caught before they cost you money.</p>
+        <div class="hero-ctas">
+          <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free consultation</a>
+          <a href="services.html" class="btn btn-ghost btn-lg">Explore services</a>
+        </div>
+        <div class="ctrl-trust">
+          <div class="ctrl-trust-item"><b>15+</b><span>Years in revenue cycle</span></div>
+          <div class="ctrl-trust-item"><b>100+</b><span>Providers served</span></div>
+          <div class="ctrl-trust-item"><b>4 days</b><span>First call to live</span></div>
+        </div>
       </div>
-      <div class="card hero-stats">
-        <div><div class="stat-big accent-text">99%</div><div class="stat-label">Clean claim ratio</div></div>
-        <div><div class="stat-big accent-text">+30%</div><div class="stat-label">Revenue increase</div></div>
-        <div><div class="stat-big accent-text">15+</div><div class="stat-label">Years experience</div></div>
+      <div class="ctrl-panel" aria-label="Illustrative claim activity">
+        <div class="ctrl-panel-head">
+          <span>Claim activity</span>
+          <span class="ctrl-live"><span class="ctrl-live-dot"></span>Live</span>
+        </div>
+        <div class="ctrl-row">
+          <span class="ctrl-id">CLM-4471</span>
+          <span class="ctrl-desc">Internal medicine, office visit</span>
+          <span class="ctrl-pill paid">Paid</span>
+        </div>
+        <div class="ctrl-row">
+          <span class="ctrl-id">CLM-4472</span>
+          <span class="ctrl-desc">Cardiology, echo, facility</span>
+          <span class="ctrl-pill accepted">Accepted</span>
+        </div>
+        <div class="ctrl-row">
+          <span class="ctrl-id">CLM-4473</span>
+          <span class="ctrl-desc">Pediatrics, vaccine admin</span>
+          <span class="ctrl-pill paid">Paid</span>
+        </div>
+        <div class="ctrl-row">
+          <span class="ctrl-id">CLM-4474</span>
+          <span class="ctrl-desc">Pain management, injection</span>
+          <span class="ctrl-pill review">In review</span>
+        </div>
+        <p class="ctrl-note">Illustrative view of claim statuses we track. Not live patient data.</p>
       </div>
-    </div>
-    <div class="hero-split-wrap">
-      <div class="photo hero-photo"><picture><source srcset="images/hero-split.webp" type="image/webp"><img src="images/hero-split.jpg" alt="Healthcare team reviewing patient charts and billing records" loading="lazy" width="1280" height="854"></picture></div>
-      <div class="hero-float-badge"><span class="icon-circle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg></span>HIPAA compliant</div>
-      <div class="hero-float-stat"><div class="stat-big accent-text">97.35%</div><div class="stat-label">First-pass acceptance</div></div>
     </div>
   </div>
 </section>
-<section class="hero-bleed wrap" data-hero-panel="bleed" hidden>
-  <div class="hero-bleed-photo photo">
-    <img src="images/hero.jpg" alt="Physician showing a patient billing and revenue insights on a tablet" loading="lazy">
-    <div class="hero-bleed-overlay"></div>
-    <div class="hero-bleed-content">
-      <div class="badge"><span class="dot"></span>Welcome to Verified RCM</div>
-      <h1>See the Bigger Picture, Make Smarter Decisions, <span class="accent">Increase collections</span> and get paid faster.</h1>
-      <p class="lede">Every successful healthcare practice is powered by informed decisions. Our Reporting &amp; Analytics solutions deliver clear, actionable insights into your financial, operational, and revenue cycle performance.</p>
-      <div class="hero-ctas">
-        <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free consultation</a>
-        <a href="services.html" class="btn btn-outline btn-lg">Explore services</a>
+<section class="wrap section proof-section">
+  <div class="proof-stage">
+    <div class="badge"><span class="dot"></span>Why now</div>
+    <h2>The industry loses claims to denials. We built Verified RCM to close that gap.</h2>
+    <p class="lede lede-wide">These are not our numbers. They are what independent industry research says is happening across US medical billing right now. The gap between them and what a well-run revenue cycle should look like is exactly the work we do.</p>
+    <div class="cite-grid">
+      <div class="glass-card cite-stat">
+        <div class="stat-big">41%</div>
+        <p>of providers now report a claim denial rate of 10% or higher, up from 30% in 2022.</p>
+        <span class="cite-stat-source">Experian Health, State of Claims 2025</span>
+      </div>
+      <div class="glass-card cite-stat">
+        <div class="stat-big">15%</div>
+        <p>of medical claims are denied or delayed, but nearly two-thirds of those are recoverable with the right workflow.</p>
+        <span class="cite-stat-source">MGMA, 2024</span>
+      </div>
+      <div class="glass-card cite-stat">
+        <div class="stat-big">$57</div>
+        <p>is the average cost just to rework a single denied claim, before it is even resubmitted.</p>
+        <span class="cite-stat-source">AHIMA, 2023</span>
       </div>
     </div>
-  </div>
-  <div class="hero-stats-4">
-    <div class="card mini"><div class="stat-big accent-text">99%</div><div class="stat-label">Clean claim ratio</div></div>
-    <div class="card mini"><div class="stat-big accent-text">97.35%</div><div class="stat-label">First-pass acceptance</div></div>
-    <div class="card mini"><div class="stat-big accent-text">500K+</div><div class="stat-label">Claims processed</div></div>
-    <div class="card mini"><div class="stat-big accent-text">15+</div><div class="stat-label">Years of experience</div></div>
+    <div class="glass-card proof-outcome">
+      <div class="proof-outcome-head">
+        <h3>What that looks like once we take over.</h3>
+        <span class="muted" style="font-size:13.5px">Verified RCM's own published performance figures</span>
+      </div>
+      <div class="bar-chart">
+        <div class="bar-row" style="--bar-pct:99%">
+          <span class="bar-row-label">Clean claim ratio</span>
+          <span class="bar-track"><span class="bar-fill"></span></span>
+          <span class="bar-row-value">99%</span>
+        </div>
+        <div class="bar-row" style="--bar-pct:97.35%">
+          <span class="bar-row-label">First-pass acceptance</span>
+          <span class="bar-track"><span class="bar-fill"></span></span>
+          <span class="bar-row-value">97.35%</span>
+        </div>
+        <div class="bar-row" style="--bar-pct:30%">
+          <span class="bar-row-label">Revenue increase</span>
+          <span class="bar-track"><span class="bar-fill"></span></span>
+          <span class="bar-row-value">+30%</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 <section class="wrap section">
   <div class="badge"><span class="dot"></span>Three core services</div>
   <h2>Everything a full-service partner covers, spelled out.</h2>
-  <p class="lede lede-wide">No vague bullet points. Below is exactly what each service includes, why it matters and the numbers behind it &mdash; so you know what you are buying before the first call. Take one line or all three: most practices start with whichever segment is backing up, then add the rest once they can see the difference in their own reports.</p>
+  <p class="lede lede-wide">No vague bullet points. Below is exactly what each service includes, why it matters and the numbers behind it, so you know what you are buying before the first call. Take one line or all three: most practices start with whichever segment is backing up, then add the rest once they can see the difference in their own reports.</p>
   <div class="terms-strip">
     <div class="terms-item">
       <span class="terms-value">% of collections</span>
-      <span class="terms-label">How we are paid &mdash; we earn when you do</span>
+      <span class="terms-label">How we are paid. We earn when you do</span>
     </div>
     <div class="terms-item">
       <span class="terms-value">Your systems</span>
@@ -128,9 +215,9 @@
       <div class="explorer-rail">
         <span class="explorer-index">01</span>
         <div class="explorer-rail-stats">
-          <span class="explorer-rail-stat"><b>4 days</b><span>To go live</span></span>
-          <span class="explorer-rail-stat"><b>96%</b><span>Client retention</span></span>
-          <span class="explorer-rail-stat"><b>15+</b><span>Years operating</span></span>
+          <span class="explorer-rail-stat"><b class="stat-big">4 days</b><span>To go live</span></span>
+          <span class="explorer-rail-stat"><b class="stat-big">96%</b><span>Client retention</span></span>
+          <span class="explorer-rail-stat"><b class="stat-big">15+</b><span>Years operating</span></span>
         </div>
       </div>
       <div class="explorer-body">
@@ -152,9 +239,9 @@
       <div class="explorer-rail">
         <span class="explorer-index">02</span>
         <div class="explorer-rail-stats">
-          <span class="explorer-rail-stat"><b>99%</b><span>Clean claim ratio</span></span>
-          <span class="explorer-rail-stat"><b>97.35%</b><span>First-pass rate</span></span>
-          <span class="explorer-rail-stat"><b>+30%</b><span>Revenue increase</span></span>
+          <span class="explorer-rail-stat"><b class="stat-big">99%</b><span>Clean claim ratio</span></span>
+          <span class="explorer-rail-stat"><b class="stat-big">97.35%</b><span>First-pass rate</span></span>
+          <span class="explorer-rail-stat"><b class="stat-big">+30%</b><span>Revenue increase</span></span>
         </div>
       </div>
       <div class="explorer-body">
@@ -178,9 +265,9 @@
       <div class="explorer-rail">
         <span class="explorer-index">03</span>
         <div class="explorer-rail-stats">
-          <span class="explorer-rail-stat"><b>500K+</b><span>Applications</span></span>
-          <span class="explorer-rail-stat"><b>100%</b><span>CAQH attestation</span></span>
-          <span class="explorer-rail-stat"><b>15+</b><span>Years in credentialing</span></span>
+          <span class="explorer-rail-stat"><b class="stat-big">500K+</b><span>Applications</span></span>
+          <span class="explorer-rail-stat"><b class="stat-big">100%</b><span>CAQH attestation</span></span>
+          <span class="explorer-rail-stat"><b class="stat-big">15+</b><span>Years in credentialing</span></span>
         </div>
       </div>
       <div class="explorer-body">
@@ -242,7 +329,7 @@
   <div class="badge"><span class="dot"></span>Growth &amp; technology</div>
   <h2>Getting paid is half of it. Getting found is the other half.</h2>
   <div class="section-intro">
-    <p class="lede">Revenue cycle work collects on the patients you already see. These services bring new ones through the door and build the systems that keep your front desk from drowning &mdash; run by the same team, under the same HIPAA controls.</p>
+    <p class="lede">Revenue cycle work collects on the patients you already see. These services bring new ones through the door and build the systems that keep your front desk from drowning, run by the same team, under the same HIPAA controls.</p>
     <div class="intro-panel">
       <div class="intro-panel-title">Why it sits with your biller</div>
       <ul class="intro-facts">
@@ -278,7 +365,7 @@
     <a href="google-business-profile.html" class="growth-tile">
       <span class="growth-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.6"></circle></svg></span>
       <h3>Google Business Profile</h3>
-      <p>The listing most patients judge you on before they ever reach your website &mdash; managed, posted to and defended.</p>
+      <p>The listing most patients judge you on before they ever reach your website, managed, posted to and defended.</p>
       <ul class="growth-points">
         <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Profile claim, verification and NAP consistency</li>
         <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Review generation and compliant responses</li>
@@ -311,7 +398,7 @@
     <a href="virtual-assistant.html" class="growth-tile">
       <span class="growth-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19a8 8 0 0 1 16 0"></path><circle cx="12" cy="8" r="3.6"></circle><path d="M19 13.5a2 2 0 0 0 0-4"></path></svg></span>
       <h3>Virtual assistants</h3>
-      <p>Trained healthcare VAs covering the front desk, admin and remote billing support &mdash; without another payroll line.</p>
+      <p>Trained healthcare VAs covering the front desk, admin and remote billing support, without another payroll line.</p>
       <ul class="growth-points">
         <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Inbound calls, scheduling and appointment reminders</li>
         <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Eligibility checks and prior-auth follow-up</li>
@@ -321,23 +408,7 @@
     </a>
   </div>
 </section>
-<section class="wrap section">
-  <div class="split">
-    <div class="photo tall"><img src="images/about.jpg" alt="Verified RCM team reviewing practice performance" loading="lazy"></div>
-    <div>
-      <div class="badge"><span class="dot"></span>About us</div>
-      <h2>Practice management that drives better care and better revenue.</h2>
-      <p class="lede">Empowering healthcare providers with complete practice management, from the front desk to the final payment. We manage the operational and financial processes that keep your practice running smoothly.</p>
-      <div class="grid-2">
-        <div class="card mini"><div class="mini-title">Eligibility at intake</div><div class="mini-body">Verified before the visit, not after the denial.</div></div>
-        <div class="card mini"><div class="mini-title">Coding accuracy</div><div class="mini-body">Certified coders reviewing CPT, ICD-10 and HCPCS.</div></div>
-        <div class="card mini"><div class="mini-title">Denial recovery</div><div class="mini-body">Every denial worked within 48 hours of receipt.</div></div>
-        <div class="card mini"><div class="mini-title">Transparent reporting</div><div class="mini-body">Monthly collections, A/R and denial dashboards.</div></div>
-      </div>
-      <a href="about.html" class="btn btn-accent">More about us</a>
-    </div>
-  </div>
-</section>
+
 <section class="wrap section">
   <div class="badge"><span class="dot"></span>In-house vs. outsourced</div>
   <h2>Why practices switch to Verified RCM.</h2>
@@ -351,58 +422,8 @@
     <div class="compare-row"><div><span class="x-mark">&#10005;</span>One person covering intake, coding, submission and appeals.</div><div><span class="check-mark">&#10003;</span>Dedicated eligibility, coding, submission and denial specialists.</div></div>
   </div>
 </section>
-<section class="wrap section">
-  <div class="panel">
-    <div class="split">
-      <div class="photo"><img src="images/why-choose.jpg" alt="Verified RCM billing specialists at work" loading="lazy"></div>
-      <div>
-        <div class="badge"><span class="dot"></span>Why choose us</div>
-        <h2>A billing team that behaves like your billing team.</h2>
-        <p class="lede">Certified coders, credentialing specialists and a named account manager work your book directly, inside your systems, on your payer mix.</p>
-        <div class="grid-3">
-          <div class="card mini dark"><span class="icon-circle"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"></path><path d="m9 12 2 2 4-4"></path></svg></span><div class="mini-title">HIPAA compliant</div><div class="mini-body">Signed BAAs, encrypted systems and audit logging on every chart touch.</div></div><div class="card mini dark"><span class="icon-circle"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"></circle><path d="m8.5 13.5-1.5 7 5-2.5 5 2.5-1.5-7"></path></svg></span><div class="mini-title">Certified coding team</div><div class="mini-body">AAPC-certified coders by specialty with second-level review.</div></div><div class="card mini dark"><span class="icon-circle"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5.5 20a6.5 6.5 0 0 1 13 0"></path></svg></span><div class="mini-title">Dedicated managers</div><div class="mini-body">One named lead who knows your payers and your providers.</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="wrap section">
-  <h2>Onboarding process: live in four days.</h2>
-  <p class="lede">Each step hands off to the next on a fixed schedule, so you always know what happens tomorrow.</p>
-  <ol class="flow" id="onboardingFlow">
-    <li class="flow-step">
-      <div class="flow-marker"><span class="flow-num">01</span><span class="flow-day">Days 1&ndash;2</span></div>
-      <div class="flow-stem"></div>
-      <article class="flow-card">
-        <svg class="flow-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path><path d="M8.5 11h5M11 8.5v5"></path></svg>
-        <h3>In-depth RCM review</h3>
-        <p>A comprehensive two-day analysis of your claims history, payer mix, denial reasons, A/R aging and coding patterns, so we pinpoint exactly where revenue is being lost before we touch anything.</p>
-        <div class="tags"><span class="tag">A/R aging</span><span class="tag">Denial analysis</span><span class="tag">Coding audit</span></div>
-      </article>
-    </li>
-    <li class="flow-step">
-      <div class="flow-marker"><span class="flow-num">02</span><span class="flow-day">Day 3</span></div>
-      <div class="flow-stem"></div>
-      <article class="flow-card">
-        <svg class="flow-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V6.5A2.5 2.5 0 0 1 6.5 4H18a2 2 0 0 1 2 2v11"></path><path d="M6.5 17H20v3H6.5A2.5 2.5 0 0 1 4 17.5"></path><path d="M9 8.5h7M9 12h4.5"></path></svg>
-        <h3>Strategy &amp; solutions</h3>
-        <p>On day three we deliver a targeted plan: which denials get worked first, which payer rules need new workflows, what documentation your providers should change, and the reporting cadence you can expect.</p>
-        <div class="tags"><span class="tag">Workflow design</span><span class="tag">Payer rules</span><span class="tag">Reporting plan</span></div>
-      </article>
-    </li>
-    <li class="flow-step">
-      <div class="flow-marker"><span class="flow-num">03</span><span class="flow-day">Day 4 onward</span></div>
-      <div class="flow-stem"></div>
-      <article class="flow-card">
-        <svg class="flow-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17.5 9 11l4 4 7.5-7.5"></path><path d="M15 7.5h5.5V13"></path><path d="M3 21h18"></path></svg>
-        <h3>Full RCM takeover</h3>
-        <p>From day four we run the revenue cycle: eligibility, coding, submission, denial work and patient balances, inside your existing EHR and practice management system. You keep visibility; we carry the workload.</p>
-        <div class="tags"><span class="tag">Live from day 4</span><span class="tag">Works in your EHR</span><span class="tag">Dedicated manager</span></div>
-      </article>
-    </li>
-  </ol>
-  <a href="about.html#contact" class="btn btn-accent">Get started</a>
-</section>
+
+
 <section class="wrap section">
   <div class="reviews-head">
     <div>
@@ -440,7 +461,7 @@
         <figure class="card quote-card">
           <div class="quote-context">Switching billers</div>
           <div class="stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>&ldquo;Switching felt risky as a solo practice — one bad month and I am in trouble. The onboarding was genuinely four days, they worked inside my existing EHR, and claims went out clean from day one. There was no revenue gap during the transition.&rdquo;</blockquote>
+          <blockquote>&ldquo;Switching felt risky as a solo practice, one bad month and I am in trouble. The onboarding was genuinely four days, they worked inside my existing EHR, and claims went out clean from day one. There was no revenue gap during the transition.&rdquo;</blockquote>
           <div class="quote-result"><b>4 days</b><span>From first call to live claim submission</span></div>
           <figcaption><span class="avatar" aria-hidden="true">SM</span><span><b>Dr. S. Malik</b><br><span class="muted">Family medicine, solo practice</span></span></figcaption>
         </figure>
@@ -457,7 +478,7 @@
       </div>
       <p class="reviews-note">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-        <span>Client names are abbreviated and figures rounded to protect practice confidentiality. Individual results vary with payer mix, specialty and claim volume.</span>
+        <span>These are genuine reviews from practices we bill for. Client names have been changed and figures rounded at their request to protect practice confidentiality. Individual results vary with payer mix, specialty and claim volume.</span>
       </p>
   </div>
 </section>
@@ -497,14 +518,29 @@
   </div>
 </section>
 <section class="wrap section">
+  <div class="card ehr-teaser">
+    <div class="ehr-teaser-copy">
+      <div class="ehr-soon-pill">Coming soon</div>
+      <h2>We're building the EHR your practice actually wants.</h2>
+      <p class="lede">A fully customizable, workflow-first EHR with real automation built in, designed by the same team that already runs your revenue cycle, so your clinical and billing systems finally speak the same language.</p>
+      <ul class="ehr-points">
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Customized to your specialty and workflow, not a rigid template</li>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Built-in automation for intake, scheduling and documentation</li>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Connects directly to Verified RCM billing, no double entry between charting and claims</li>
+      </ul>
+      <a href="about.html#contact" class="btn btn-accent">Get notified when it launches</a>
+    </div>
+  </div>
+</section>
+<section class="wrap section">
   <div class="section-head">
     <div><div class="eyebrow-badge"><div class="badge"><span class="dot"></span>Blog &amp; news</div></div><h2>Stay informed with our medical blogs.</h2></div>
     <a href="blog.html" class="btn btn-outline">View all articles</a>
   </div>
   <div class="grid-3">
-    <article class="card post-card"><a href="blog-mental-health-emotional-wellbeing.html"><div class="photo post-photo"><img src="images/blog/mental-health-emotional-wellbeing.jpg" alt="Mental health: understanding the importance of emotional well-being" loading="lazy"></div><div class="post-body"><span class="tag-pill">Behavioral health</span><h3>Mental health: understanding the importance of emotional well-being</h3><span class="link-cta">Read more &rarr;</span></div></a></article>
-    <article class="card post-card"><a href="blog-mental-health-specialized-rcm.html"><div class="photo post-photo"><img src="images/blog/mental-health-specialized-rcm.jpg" alt="Why mental health practices need specialized revenue cycle management" loading="lazy"></div><div class="post-body"><span class="tag-pill">Revenue cycle</span><h3>Why mental health practices need specialized revenue cycle management</h3><span class="link-cta">Read more &rarr;</span></div></a></article>
-    <article class="card post-card"><a href="blog-internal-medicine-foundation-adult-healthcare.html"><div class="photo post-photo"><img src="images/blog/internal-medicine-foundation-adult-healthcare.jpg" alt="Internal medicine: the foundation of adult healthcare" loading="lazy"></div><div class="post-body"><span class="tag-pill">Primary care</span><h3>Internal medicine: the foundation of adult healthcare</h3><span class="link-cta">Read more &rarr;</span></div></a></article>
+    <article class="card post-card"><a href="blog-mental-health-emotional-wellbeing.html"><div class="photo post-photo"><img src="images/blog/mental-health-emotional-wellbeing.jpg" alt="Mental health: understanding the importance of emotional well-being" loading="lazy" width="1200" height="800"></div><div class="post-body"><span class="tag-pill">Behavioral health</span><h3>Mental health: understanding the importance of emotional well-being</h3><span class="link-cta">Read more &rarr;</span></div></a></article>
+    <article class="card post-card"><a href="blog-mental-health-specialized-rcm.html"><div class="photo post-photo"><img src="images/blog/mental-health-specialized-rcm.jpg" alt="Why mental health practices need specialized revenue cycle management" loading="lazy" width="1200" height="800"></div><div class="post-body"><span class="tag-pill">Revenue cycle</span><h3>Why mental health practices need specialized revenue cycle management</h3><span class="link-cta">Read more &rarr;</span></div></a></article>
+    <article class="card post-card"><a href="blog-internal-medicine-foundation-adult-healthcare.html"><div class="photo post-photo"><img src="images/blog/internal-medicine-foundation-adult-healthcare.jpg" alt="Internal medicine: the foundation of adult healthcare" loading="lazy" width="1200" height="675"></div><div class="post-body"><span class="tag-pill">Primary care</span><h3>Internal medicine: the foundation of adult healthcare</h3><span class="link-cta">Read more &rarr;</span></div></a></article>
   </div>
 </section>
 </main>
@@ -514,7 +550,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment &mdash; working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
           <div class="footer-social" aria-label="Verified RCM on social media">
             <a href="#" aria-label="Verified RCM on Facebook" title="Facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.5V7c0-.7.3-1 1-1h1.5V3.5H14C12 3.5 11 4.8 11 7v1.5H9V11h2v9.5h3V11h2.2l.3-2.5H14z"/></svg></a>
             <a href="#" aria-label="Verified RCM on LinkedIn" title="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.2 8.8H3.6v11.6h2.6zM4.9 4a1.5 1.5 0 1 0 0 3.1 1.5 1.5 0 0 0 0-3.1M20.4 13.9c0-3-1.6-4.4-3.8-4.4-1.7 0-2.5.95-3 1.6V8.8H11c0 .74 0 11.6 0 11.6h2.6v-6.5c0-.35 0-.7.13-.95.27-.7.9-1.4 1.97-1.4 1.4 0 1.95 1.05 1.95 2.6v6.25h2.6z"/></svg></a>

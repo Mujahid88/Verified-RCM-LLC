@@ -17,40 +17,44 @@
   font-weight:300 700; font-style:normal; font-display:swap;
 }
 /* ------------------------------------------------------------------
-   Palette: signature lime + warm amber (the Verified RCM brand colours).
-   Every text-bearing value below is contrast-verified against its own
-   surface — ratios noted inline. Base --color-accent (#8fc71a) is a
-   FILL/chrome colour only: at 1.9:1 it must never carry text of any size.
+   Palette: considered blue + warm amber (the Verified RCM brand colours,
+   updated from an earlier lime/amber system — the client wanted lime
+   removed entirely, not just muted). Every text-bearing value below is
+   contrast-verified against its own surface — ratios noted inline.
+   Unlike the old lime scale, base --color-accent (#2960d6) is dark
+   enough to carry WHITE text directly (5.62:1) — that's why --on-accent
+   flips to white below instead of dark ink.
    ------------------------------------------------------------------ */
 :root{
   --color-bg:#F7F8F2; --color-surface:#ffffff; --color-text:#181a14;   /* text 16.1:1 on bg */
-  --color-accent:#8fc71a; --color-accent-2:#f5a524;
+  --color-accent:#2960d6; --color-accent-2:#f5a524;
   --color-line:color-mix(in srgb, #181a14 12%, transparent);
-  --color-accent-100:#f4fbe4; --color-accent-200:#e6f6c2; --color-accent-300:#d0ed92;
-  --color-accent-400:#b2e04f; --color-accent-500:#8fc71a; --color-accent-600:#79ab13;
-  --color-accent-700:#5f860d; --color-accent-800:#46630a; --color-accent-900:#2f4407;
-  /* -800 = 6.45:1 on bg — the safe token for accent-coloured body text/links.
-     Do NOT use -700 (4.01:1) or lighter for text; those are fills only. */
-  --color-accent-2-100:#fff8e8; --color-accent-2-200:#ffedc4; --color-accent-2-300:#ffdc93;
-  --color-accent-2-400:#ffc44d; --color-accent-2-500:#f5a524; --color-accent-2-600:#d98a12;
-  --color-accent-2-700:#a9690a; --color-accent-2-800:#7c4c06; --color-accent-2-900:#513104;
-  /* -2-800 = 6.80:1 on bg. -2-700 (4.17:1) just misses AA — fills only. */
+  /* Only the steps actually referenced are kept. Unused ramp steps (-500, -900
+     on blue; -2-200/-400/-500/-600/-700/-900 on amber) were removed in the
+     2026-08 audit — re-add from the source ramp if a future component needs one. */
+  --color-accent-100:#eef3fe; --color-accent-200:#d5e1fc; --color-accent-300:#b0c5f2;
+  --color-accent-400:#7e9fe7; --color-accent-600:#3a6ee0;
+  --color-accent-700:#2250b4; --color-accent-800:#1a4093;
+  /* base/-600 = 5.26:1 on bg, -800 = 8.94:1 — both safe for accent-coloured
+     body text/links. -400 (2.46:1) is a fill/tint only. */
+  --color-accent-2-100:#fff8e8; --color-accent-2-300:#ffdc93;
+  --color-accent-2-800:#7c4c06;
+  /* -2-800 = 6.80:1 on bg — the safe token for amber-coloured text. */
   --color-gold:#8a5006;                       /* star ratings — 6.5:1 on white, 6.09:1 on --color-bg. Previous
      #a9690a measured 4.46:1 via pa11y (axe/HTML_CS), just under AA — .stars is 15px, not large text, so 4.5:1
      is the real requirement, not the 3:1 "large glyphs" this was mistakenly filed under. */
-  --btn-fill:#8fc71a;
-  --btn-fill-hover:#b2e04f;
   /* Ink used ON solid accent fills (chips, icon circles, buttons, checks).
-     The lime/amber fills are light, so dark ink scores very high here. */
-  --on-accent:#131510;                        /* 9.06:1 on --color-accent   */
+     The blue fill is mid-toned, not light like the old lime, so it takes
+     white ink instead of dark. */
+  --on-accent:#ffffff;                        /* 5.62:1 on --color-accent (base); every --grad-brand stop ≥5.62:1 */
   --on-accent-2:#211603;                      /* 8.71:1 on --color-accent-2 */
-  --radius-sm:14px; --radius-md:22px; --radius-lg:32px; --radius-xl:40px;
+  --radius-sm:14px; --radius-md:22px; --radius-lg:32px;
   /* Tinted shadows — brand-hued rather than neutral grey, for depth without mud */
   /* Shadows carry a real offset + soft blur (never a zero-offset colour halo). */
   --shadow-sm:0 2px 10px rgba(24,26,20,.07);
   --shadow-md:0 12px 32px rgba(38,45,12,.11);
   --shadow-lg:0 28px 72px rgba(38,45,12,.17);
-  --shadow-glow:0 16px 40px rgba(143,199,26,.34);
+  --shadow-glow:0 16px 40px rgba(41,96,214,.34);
   --ease:cubic-bezier(.16,1,.3,1);
   --ease-out2:cubic-bezier(.25,.46,.45,.94);  /* ≈ GSAP power2.out */
   --color-ink-fixed:#181a14;
@@ -58,12 +62,11 @@
   /* Gradients */
   /* Gradient stops are contrast-checked at EVERY stop, not just the average:
      button labels sit on the lightest AND darkest stop, so both set the floor.
-     These carry dark ink (--on-accent), so the DARKEST stop is the binding one. */
-  --grad-brand:linear-gradient(135deg,#b2e04f 0%,#8fc71a 55%,#79ab13 100%);
+     These carry white ink (--on-accent); the LIGHTEST stop is now the binding
+     one (5.62:1) since white text gets safer as the fill darkens, the reverse
+     of the old dark-ink-on-light-lime logic. */
+  --grad-brand:linear-gradient(135deg,#2960d6 0%,#2250b4 55%,#1a4093 100%);
   --grad-warm:linear-gradient(135deg,#ffc44d 0%,#f5a524 55%,#d98a12 100%);
-  --grad-mesh:radial-gradient(60% 55% at 12% 8%, rgba(178,224,79,.30) 0%, transparent 60%),
-              radial-gradient(50% 50% at 92% 20%, rgba(245,165,36,.20) 0%, transparent 62%),
-              radial-gradient(60% 60% at 50% 100%, rgba(143,199,26,.18) 0%, transparent 65%);
   /* Glass */
   --glass-bg:rgba(255,255,255,.62);
   --glass-bg-strong:rgba(255,255,255,.80);
@@ -75,17 +78,14 @@
   --color-line:color-mix(in srgb, #f2f3ed 16%, transparent);
   --muted:#b6bcae;                            /* 9.1:1 on dark bg */
   --color-gold:#ffc44d;
-  --btn-fill:#b2e04f; --btn-fill-hover:#d0ed92;
   --shadow-sm:0 2px 10px rgba(0,0,0,.5); --shadow-md:0 12px 32px rgba(0,0,0,.55); --shadow-lg:0 28px 72px rgba(0,0,0,.6);
-  --shadow-glow:0 16px 40px rgba(143,199,26,.24);
-  --grad-mesh:radial-gradient(60% 55% at 12% 8%, rgba(143,199,26,.13) 0%, transparent 60%),
-              radial-gradient(50% 50% at 92% 20%, rgba(245,165,36,.09) 0%, transparent 62%),
-              radial-gradient(60% 60% at 50% 100%, rgba(178,224,79,.09) 0%, transparent 65%);
+  --shadow-glow:0 16px 40px rgba(41,96,214,.28);
   --glass-bg:rgba(24,27,21,.62);
   --glass-bg-strong:rgba(24,27,21,.84);
   --glass-border:rgba(255,255,255,.12);
-  /* Accent fills stay light in dark mode, so the ink on them stays dark */
-  --on-accent:#131510; --on-accent-2:#211603;
+  /* Blue fills stay the same darkness in dark mode (unlike the old lime,
+     which lightened), so the ink on them stays white in both modes. */
+  --on-accent:#ffffff; --on-accent-2:#211603;
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -94,7 +94,6 @@ body{
   margin:0;background:var(--color-bg);color:var(--color-text);
   font-family:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
   font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
-  background-image:var(--grad-mesh);background-attachment:fixed;background-repeat:no-repeat;
 }
 img{max-width:100%;display:block}
 a{color:var(--color-accent-800);text-decoration:none;transition:color .3s ease}
@@ -113,18 +112,6 @@ h2{font-size:clamp(27px,3.3vw,46px)}
 h3{font-size:21px;letter-spacing:-.02em;line-height:1.25}
 p{margin:0 0 16px;text-wrap:pretty}
 .lede{font-size:18px;line-height:1.7;color:var(--muted);max-width:62ch}
-/* Headline emphasis comes from a solid accent + an underline the eye can follow,
-   not from gradient text (gradient text is a refused default: emphasis should
-   come from weight, size or colour, and it always costs contrast control). */
-.grad-text{
-  color:var(--color-accent-800);position:relative;white-space:nowrap;
-}
-.grad-text::after{
-  content:"";position:absolute;left:0;right:0;bottom:.06em;height:.14em;
-  background:var(--color-accent);border-radius:999px;z-index:-1;
-}
-[data-theme="dark"] .grad-text{color:var(--color-accent-300)}
-[data-theme="dark"] .grad-text::after{background:color-mix(in srgb,var(--color-accent) 55%,transparent)}
 .tagline{font-size:19px;line-height:1.5;font-weight:600;color:var(--color-accent-800);margin:0 0 20px}
 .muted{color:var(--muted)}
 .accent-text{color:var(--color-accent-800)}
@@ -146,7 +133,6 @@ p{margin:0 0 16px;text-wrap:pretty}
 .section>.lede:last-child{margin-bottom:0}
 /* A heading that follows content needs more air above it than below. */
 .section>*+h2{margin-top:12px}
-.section-tight{padding-bottom:60px}
 .narrow{max-width:860px}
 .page-head{padding-top:130px}
 .hero{padding:130px 24px 80px;max-width:1280px;margin:0 auto}
@@ -163,9 +149,11 @@ p{margin:0 0 16px;text-wrap:pretty}
 .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:36px;flex-wrap:wrap;margin-bottom:28px}
 /* A lede that introduces a whole section can run wider than a lede sitting
-   beside a photo. 78ch keeps it readable while using the full column, so the
-   right half of the row is not left empty. */
-.lede-wide{max-width:82ch}
+   beside a photo — it should use close to the full column so the row
+   doesn't wrap into a narrow strip with a dead gap of empty page beside it.
+   82ch (~810px) left roughly 400px unused in the 1232px wrap; this uses
+   effectively the whole row instead. */
+.lede-wide{max-width:min(100%,1180px)}
 /* Engagement terms as an open strip with rules between items, not a boxed
    panel. Proximity does the grouping; a container would only add weight. */
 .terms-strip{
@@ -243,6 +231,39 @@ p{margin:0 0 16px;text-wrap:pretty}
 .nav-link:hover{background:color-mix(in srgb, var(--color-accent) 14%, transparent);color:var(--color-text)}
 .nav-link.active{background:color-mix(in srgb, var(--color-accent) 20%, transparent);color:var(--color-accent-800)}
 [data-theme="dark"] .nav-link.active{color:var(--color-accent-300)}
+
+/* ---------- nav mega-menu ----------
+   Hover- and focus-triggered (CSS only, no JS) so it works without
+   scripting; the mobile equivalent is the accordion inside .mobile-menu.
+   Column links point at pages that already exist today, so the menu is
+   never broken while more specialty coding articles get written. */
+.nav-item-mega{position:relative}
+.nav-mega-trigger{cursor:pointer}
+.nav-mega-trigger::after{content:"";display:inline-block;margin-left:6px;width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s ease}
+.nav-item-mega:hover .nav-mega-trigger::after,.nav-item-mega:focus-within .nav-mega-trigger::after{transform:translateY(1px) rotate(225deg)}
+.nav-mega{
+  /* Anchored to the trigger's own left edge, not centered — "Services"
+     sits near the left of the nav, so a centered 880px panel on a wide
+     viewport ran off the left edge of the screen entirely. */
+  position:absolute;top:calc(100% + 12px);left:0;
+  width:min(760px,80vw);padding:28px;display:none;grid-template-columns:repeat(4,1fr);gap:24px;
+  background:var(--color-surface);border:1px solid var(--color-line);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);z-index:75;
+}
+.nav-item-mega:hover .nav-mega,.nav-item-mega:focus-within .nav-mega{display:grid}
+.nav-mega-col-title{
+  font-family:"Lexend",inherit;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--color-accent-800);margin-bottom:12px;
+}
+[data-theme="dark"] .nav-mega-col-title{color:var(--color-accent-400)}
+.nav-mega-col a{
+  display:block;padding:8px 0;font-size:14px;font-weight:600;color:var(--color-text);
+  border-radius:8px;transition:color .2s ease;
+}
+.nav-mega-col a:hover{color:var(--color-accent-800)}
+[data-theme="dark"] .nav-mega-col a:hover{color:var(--color-accent-400)}
+.nav-mega-col a.see-all{color:var(--muted);font-weight:700;font-size:12.5px;margin-top:2px}
+@media (max-width:1100px){.nav-mega{display:none !important}}
 .nav-spacer{flex:1}
 .theme-toggle,.burger{
   appearance:none;width:44px;height:44px;flex:0 0 auto;display:grid;place-items:center;
@@ -260,6 +281,59 @@ p{margin:0 0 16px;text-wrap:pretty}
 .mobile-menu.open{display:flex}
 .mobile-menu a{display:flex;align-items:center;min-height:48px;padding:0 16px;border-radius:12px;font-size:16px;font-weight:600;color:var(--color-text)}
 .mobile-menu a:hover{background:color-mix(in srgb, var(--color-accent) 14%, transparent)}
+
+/* ---------- site search ----------
+   Sitewide (every page, not scoped to index.html): a real visible input box
+   in the nav — not an icon that hides it behind a click — with results
+   dropping down beneath it. Loads search-index.json once and filters
+   client-side; there's no server to query on a static, no-build-step site. */
+.nav-search{
+  position:relative;display:flex;align-items:center;gap:9px;flex:0 1 220px;min-width:0;
+  height:44px;padding:0 14px;border-radius:999px;
+  border:1px solid var(--color-line);background:var(--color-surface);
+  transition:border-color .25s ease,box-shadow .25s ease,flex-basis .25s ease;
+}
+.nav-search:focus-within{
+  flex-basis:280px;border-color:var(--color-accent-700);
+  box-shadow:0 0 0 4px color-mix(in srgb,var(--color-accent) 16%,transparent);
+}
+.nav-search-icon{flex:0 0 auto;color:var(--muted)}
+.nav-search-input{
+  flex:1;min-width:0;border:0;background:transparent;outline:none;color:var(--color-text);
+  font-family:inherit;font-size:14px;
+}
+.nav-search-input::placeholder{color:color-mix(in srgb,var(--color-text) 45%,transparent)}
+.nav-search-results{
+  position:absolute;top:calc(100% + 10px);right:0;width:380px;max-width:min(90vw,380px);
+  max-height:min(60vh,480px);overflow-y:auto;display:none;padding:8px;z-index:80;
+  background:var(--color-surface);border:1px solid var(--color-line);
+  border-radius:var(--radius-md);box-shadow:var(--shadow-lg);
+}
+.nav-search-results.open{display:block}
+.search-hint,.search-empty{padding:20px 14px;font-size:13px;color:var(--muted);text-align:center}
+.search-result{
+  display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:var(--radius-sm);
+  color:var(--color-text);transition:background .2s ease;
+}
+.search-result:hover,.search-result.active{background:color-mix(in srgb, var(--color-accent) 10%, transparent);color:var(--color-text)}
+.search-result-cat{
+  flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--color-accent-800);background:var(--color-accent-100);border-radius:999px;padding:4px 8px;
+}
+[data-theme="dark"] .search-result-cat{color:var(--color-accent-300);background:color-mix(in srgb,var(--color-accent) 16%,transparent)}
+.search-result-body{min-width:0}
+.search-result-title{font-size:14px;font-weight:700;line-height:1.35;margin-bottom:2px}
+.search-result-desc{font-size:12px;color:var(--muted);line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (max-width:1100px){
+  .nav-search{flex-basis:170px}
+  .nav-search:focus-within{flex-basis:200px}
+}
+@media (max-width:640px){
+  .nav-bar{gap:12px}
+  .nav-search{flex:0 1 130px;min-width:100px;padding:0 10px}
+  .nav-search:focus-within{flex-basis:160px}
+  .nav-search-results{right:-40px;width:min(94vw,340px)}
+}
 
 /* ---------- buttons ---------- */
 /* Modern buttons: gradient fill, sweeping shine on hover, lift + glow.
@@ -282,11 +356,8 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 .btn:hover::after{transform:translateX(120%)}
 .btn-lg{min-height:56px;padding:0 32px;font-size:16px}
-.btn-block{width:100%;justify-content:space-between}
 .btn-accent{background:var(--grad-brand);color:var(--on-accent);box-shadow:var(--shadow-sm)}
 .btn-accent:hover{color:var(--on-accent);box-shadow:var(--shadow-glow)}
-.btn-amber{background:var(--grad-warm);color:var(--on-accent-2);box-shadow:var(--shadow-sm)}
-.btn-amber:hover{color:var(--on-accent-2);box-shadow:0 16px 40px rgba(245,165,36,.34)}
 /* Secondary button. Deliberately NOT glass: a translucent white surface on a
    light page reads as an unfinished shape rather than a control. It needs a
    visible edge and a solid surface to look pressable. */
@@ -346,16 +417,6 @@ p{margin:0 0 16px;text-wrap:pretty}
   transition:transform .55s var(--ease),box-shadow .55s var(--ease),border-color .4s ease;
 }
 .card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:color-mix(in srgb, var(--color-accent) 32%, transparent)}
-/* Frosted-glass card variant — for use over photos/gradient areas */
-.card.glass{
-  background:var(--glass-bg-strong);
-  backdrop-filter:blur(var(--glass-blur)) saturate(180%);
-  -webkit-backdrop-filter:blur(var(--glass-blur)) saturate(180%);
-  border:1px solid var(--glass-border);
-}
-@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .card.glass{background:var(--color-surface)}
-}
 @media (prefers-reduced-motion:reduce){
   .card:hover{transform:none}
 }
@@ -393,15 +454,7 @@ p{margin:0 0 16px;text-wrap:pretty}
   width:38px;height:38px;border-radius:999px;background:var(--color-accent);color:var(--on-accent);
   display:grid;place-items:center;font-size:15px;font-weight:800;margin-bottom:14px;
 }
-.pill-num{
-  width:48px;height:48px;flex:0 0 auto;border-radius:999px;background:var(--color-accent);color:var(--on-accent);
-  display:grid;place-items:center;font-size:16px;font-weight:800;
-}
-.pillar-head{display:flex;align-items:center;gap:16px;margin-bottom:20px}
-.pillar-head h3{margin:0}
-.pillar-card{display:flex;flex-direction:column}
-.pillar-list{list-style:none;margin:0 0 22px;padding:0;display:flex;flex-direction:column;gap:11px;flex:1}
-.pillar-list li,.check-list li,.check-item{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 78%, transparent)}
+.check-list li,.check-item{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 78%, transparent)}
 .check-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px}
 .check,.warn,.x-mark,.check-mark{
   width:20px;height:20px;flex:0 0 auto;border-radius:999px;display:grid;place-items:center;
@@ -409,10 +462,6 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 .warn{background:var(--color-accent-2);color:var(--on-accent-2)}
 .x-mark{background:color-mix(in srgb, var(--color-text) 10%, transparent);color:var(--color-text)}
-.step-card{display:flex;flex-direction:column}
-.step-head{display:flex;align-items:center;gap:14px;margin-bottom:14px}
-.step-head h3{margin:0;font-size:18px}
-.step-card p{font-size:14.5px;line-height:1.6;color:var(--muted);flex:1}
 .why-panel .grid-2{gap:14px}
 .why-panel .check-item{color:rgba(255,255,255,.88);font-size:15px}
 .cta-mini{margin-top:24px;border-radius:var(--radius-lg);padding:28px}
@@ -425,42 +474,7 @@ p{margin:0 0 16px;text-wrap:pretty}
 .stat-label{font-size:13px;font-weight:600;color:var(--muted);margin-top:6px}
 .stat-card{padding:26px;border-radius:var(--radius-lg)}
 .stat-row{gap:14px}
-.stat-mini{gap:12px;margin-bottom:20px}
-/* Hero proof bar. Dividers between the figures make it read as one measured
-   set rather than three numbers sharing a white box; the accent top edge ties
-   it to the brand instead of leaving it as an undifferentiated slab. */
-.hero-stats{
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:0;padding:24px 8px;border-radius:var(--radius-lg);margin-top:34px;
-  position:relative;overflow:hidden;
-}
-.hero-stats::before{
-  content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-brand);
-}
-.hero-stats>div{
-  padding:2px 22px;position:relative;
-}
-.hero-stats>div+div::before{
-  content:"";position:absolute;left:0;top:6px;bottom:6px;width:1px;
-  background:var(--color-line);
-}
-.hero-stats .stat-big{font-size:32px}
-.hero-stats .stat-label{margin-top:4px}
-@media (max-width:560px){
-  .hero-stats>div+div::before{display:none}
-  .hero-stats>div{padding:14px 22px;border-top:1px solid var(--color-line)}
-}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
-.hero-split{align-items:center}
-.trust-bar{
-  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;
-  padding:26px 34px;border-radius:var(--radius-lg);background:var(--color-surface);
-  border:1px solid var(--color-line);box-shadow:var(--shadow-sm);
-}
-.trust-item{display:flex;align-items:center;gap:12px}
-.trust-val{font-size:22px;font-weight:800;letter-spacing:-.03em;color:var(--color-accent-800)}
-.trust-label{font-size:12.5px;font-weight:600;color:var(--muted)}
-.divider{width:1px;height:28px;background:var(--color-line)}
 
 /* ---------- comparison ----------
    Follows the comparison-table pattern: the winning column is visually
@@ -509,7 +523,6 @@ p{margin:0 0 16px;text-wrap:pretty}
 .photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
 .photo:hover img{transform:scale(1.045)}
 .photo.tall{min-height:420px}
-.hero-photo{min-height:440px}
 .article-photo{height:360px;margin-bottom:36px}
 
 /* ---------- posts + specialties ----------
@@ -540,11 +553,23 @@ p{margin:0 0 16px;text-wrap:pretty}
 .article h2{font-size:24px;margin:32px 0 12px}
 .article p{font-size:16.5px;line-height:1.75;color:color-mix(in srgb, var(--color-text) 80%, transparent)}
 .article .check-list{margin-bottom:20px}
+/* Related-resources list — was a run-on paragraph with inline links */
+.related-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.related-list a{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:13px 2px;border-bottom:1px solid var(--color-line);
+  font-size:15px;font-weight:700;color:var(--color-text);transition:color .2s ease;
+}
+.related-list li:last-child a{border-bottom:0}
+.related-list a:hover{color:var(--color-accent-800)}
+[data-theme="dark"] .related-list a:hover{color:var(--color-accent-400)}
+.related-list a svg{flex:0 0 auto;color:var(--color-accent-800);opacity:.55;transition:opacity .2s ease,transform .2s ease}
+[data-theme="dark"] .related-list a svg{color:var(--color-accent-400)}
+.related-list a:hover svg{opacity:1;transform:translateX(3px)}
 
 /* ---------- quotes ----------
    Each card carries the outcome it is evidence for, so the section argues
    with numbers instead of adjectives: situation -> what changed -> result. */
-.quote-list{display:flex;flex-direction:column;gap:14px}
 .quote-card{display:flex;flex-direction:column;margin:0}
 .stars{font-size:15px;color:var(--color-gold);letter-spacing:.1em;margin-bottom:12px}
 .quote-card blockquote{margin:0 0 18px;font-size:18px;line-height:1.55;font-weight:600;letter-spacing:-.02em;flex:1}
@@ -763,47 +788,6 @@ p{margin:0 0 16px;text-wrap:pretty}
   .footer-bottom{justify-content:flex-start}
 }
 
-/* ---------- hero bleed (v2 homepage hero) ---------- */
-.hero-bleed{padding:20px 24px 90px;max-width:1280px;margin:0 auto}
-.hero-bleed-photo{position:relative;min-height:600px;height:74vh;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);background:var(--color-accent-100)}
-.hero-bleed-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
-.hero-bleed-photo:hover img{transform:scale(1.045)}
-.hero-bleed-overlay{position:absolute;inset:0;background:linear-gradient(100deg, rgba(14,17,8,.90) 0%, rgba(24,30,10,.60) 52%, rgba(143,199,26,.10) 100%)}
-.hero-bleed-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:56px}
-.hero-bleed-content h1{color:#fff;max-width:20ch}
-.hero-bleed-content h1 .accent{color:var(--color-accent-400)}
-.hero-bleed-content .lede{color:rgba(255,255,255,.85);max-width:52ch}
-.hero-bleed-content .badge{background:rgba(255,255,255,.14);color:#fff}
-.hero-bleed-content .btn-outline{border-color:rgba(255,255,255,.45);background:rgba(255,255,255,.08);color:#fff}
-.hero-stats-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:20px}
-.hero-toggle{display:flex;align-items:center;gap:4px;padding:4px;border:1px solid var(--color-line);border-radius:999px;background:var(--color-surface);flex:0 0 auto}
-.hero-toggle .chip{padding:0 16px;min-height:40px;font-size:12.5px}
-.hero-split-wrap{position:relative}
-.hero-float-badge{
-  position:absolute;top:22px;right:22px;z-index:2;display:inline-flex;align-items:center;gap:8px;
-  padding:9px 16px 9px 10px;border-radius:999px;
-  background:var(--glass-bg-strong);border:1px solid var(--glass-border);
-  backdrop-filter:blur(var(--glass-blur)) saturate(180%);
-  -webkit-backdrop-filter:blur(var(--glass-blur)) saturate(180%);
-  box-shadow:var(--shadow-md);font-size:12.5px;font-weight:700;color:var(--color-text);
-  animation:vr-float 6s ease-in-out infinite;
-}
-.hero-float-badge .icon-circle{width:24px;height:24px;font-size:11px;margin:0}
-.hero-float-stat{
-  position:absolute;left:-28px;bottom:28px;z-index:2;padding:22px 26px;border-radius:var(--radius-md);
-  background:var(--glass-bg-strong);border:1px solid var(--glass-border);
-  backdrop-filter:blur(var(--glass-blur)) saturate(180%);
-  -webkit-backdrop-filter:blur(var(--glass-blur)) saturate(180%);
-  box-shadow:var(--shadow-lg);
-  animation:vr-float 6s ease-in-out infinite .8s;
-}
-@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .hero-float-badge,.hero-float-stat{background:var(--color-surface)}
-}
-@keyframes vr-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-@media (prefers-reduced-motion:reduce){
-  .hero-float-badge,.hero-float-stat{animation:none}
-}
 
 /* ---------- service explorer cards ----------
    Rebuilt as a two-column record: a fixed rail on the left carries the index
@@ -884,7 +868,7 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 .cta-dark::before{
   content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(60% 70% at 12% 0%, rgba(143,199,26,.20) 0%, transparent 62%),
+  background:radial-gradient(60% 70% at 12% 0%, rgba(41,96,214,.20) 0%, transparent 62%),
              radial-gradient(50% 60% at 92% 100%, rgba(245,165,36,.14) 0%, transparent 60%);
 }
 .cta-dark>*{position:relative;z-index:1}
@@ -1197,7 +1181,7 @@ p{margin:0 0 16px;text-wrap:pretty}
 .dodont-col li::before{content:"";flex:0 0 auto;width:6px;height:6px;border-radius:999px;margin-top:8px;background:currentColor;opacity:.45}
 /* Data table */
 .data-table-wrap{overflow-x:auto;margin:26px 0;border-radius:var(--radius-md);border:1px solid var(--color-line)}
-.data-table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--color-surface);min-width:560px}
+.data-table{width:100%;border-collapse:collapse;font-size:14.5px;background:transparent;min-width:560px}
 .data-table caption{text-align:left;padding:16px 20px 0;font-size:13px;color:var(--muted)}
 .data-table th,.data-table td{padding:14px 18px;text-align:left;vertical-align:top;border-bottom:1px solid var(--color-line)}
 .data-table thead th{
@@ -1255,30 +1239,6 @@ p{margin:0 0 16px;text-wrap:pretty}
   .cta-band{padding:24px}
 }
 
-/* ---------- gradient / glass section panels ---------- */
-.panel-gradient{
-  background:var(--grad-brand);color:#fff;border-radius:var(--radius-lg);
-  padding:56px;position:relative;overflow:hidden;
-}
-.panel-gradient h2,.panel-gradient h3{color:#fff}
-.panel-gradient p{color:rgba(255,255,255,.86)}
-.panel-glass{
-  background:var(--glass-bg);border:1px solid var(--glass-border);
-  backdrop-filter:blur(var(--glass-blur)) saturate(180%);
-  -webkit-backdrop-filter:blur(var(--glass-blur)) saturate(180%);
-  border-radius:var(--radius-lg);padding:48px;box-shadow:var(--shadow-sm);
-}
-@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .panel-glass{background:var(--color-surface)}
-}
-/* Decorative gradient orb for section backgrounds */
-.orb{
-  position:absolute;border-radius:999px;filter:blur(60px);opacity:.5;
-  pointer-events:none;z-index:0;
-}
-.orb-a{width:340px;height:340px;background:rgba(178,224,79,.55);top:-120px;right:-90px}
-.orb-b{width:280px;height:280px;background:rgba(245,165,36,.42);bottom:-110px;left:-80px}
-.panel-gradient>*{position:relative;z-index:1}
 
 /* ============================================================
    Responsive: verified at 1440px, 768px and 375px
@@ -1286,17 +1246,12 @@ p{margin:0 0 16px;text-wrap:pretty}
 @media (max-width:1100px){
   .nav-links{display:none}
   .burger{display:grid}
-  .hero-toggle{display:none}
   .footer-cols{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
 }
 @media (max-width:900px){
   .split,.grid-3,.grid-2{grid-template-columns:minmax(0,1fr)}
   .split{gap:32px}
-  .hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:20px}
-  .hero-stats-4{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .photo.tall,.hero-photo{min-height:300px}
-  .hero-float-stat{left:16px}
-  .hero-bleed-photo{min-height:560px;height:auto}
+  .photo.tall{min-height:300px}
   .explorer-head{grid-template-columns:48px 1fr}
   .explorer-arrow{display:none}
   .svc-split{grid-template-columns:minmax(0,1fr);gap:36px}
@@ -1314,24 +1269,165 @@ p{margin:0 0 16px;text-wrap:pretty}
   .page-head,.hero,.article{padding-top:110px}
   .section{padding-bottom:64px}
   .nav-cta{display:none}
-  .hero-stats{grid-template-columns:minmax(0,1fr);text-align:left}
-  .hero-stats-4{grid-template-columns:minmax(0,1fr)}
-  .hero-float-badge{position:static;display:inline-flex;margin:14px 0 0}
-  .hero-float-stat{position:static;display:block;margin:14px 0 0}
-  .hero-bleed-photo{min-height:660px}
-  .hero-bleed-content{padding:28px}
   .explorer-card,.svc-item{padding:22px}
   .svc-items,.svc-stat-grid{grid-template-columns:minmax(0,1fr)}
   .cta-dark{padding:32px 24px}
-  .trust-bar{padding:22px;gap:16px;flex-direction:column;align-items:flex-start}
-  .trust-bar .divider{display:none}
   .card{padding:22px}
   .article-photo{height:220px}
-  .footer-form input{min-width:100%}
   .footer-cols{grid-template-columns:minmax(0,1fr);gap:26px;padding:28px 0}
   .btn{width:100%;justify-content:center}
-  .btn-block{justify-content:space-between}
   .crumb-back,.chip,.tag-pill,.tag{width:auto}
   .hero-ctas .btn{width:100%}
   .svc-tab{width:auto}
 }
+
+/* ============================================================
+   "Control Room" hero — dark monitoring-console treatment.
+   Uses FIXED dark tokens (not --color-bg) so the panel stays dark
+   in both light and dark theme, exactly like .cta-dark and the
+   footer already do. Every value below is contrast-checked against
+   the dark surface, ratios noted inline.
+   ============================================================ */
+:root{
+  --ink-900:#0b1020;                 /* main dark surface  */
+  --ink-800:#131a2e;                 /* raised panel       */
+  --ink-line:rgba(255,255,255,.10);  /* hairline on dark   */
+  --on-ink:#eef2fb;                  /* 16.89:1 on ink-900 */
+  --on-ink-muted:#97a3bd;            /* 7.47:1  on ink-900 */
+}
+.ctrl-hero{
+  background:var(--ink-900);color:var(--on-ink);
+  border-radius:var(--radius-lg);padding:64px 56px;
+  position:relative;overflow:hidden;
+}
+.ctrl-hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(48% 60% at 100% 0%, rgba(41,96,214,.28) 0%, transparent 62%);
+}
+.ctrl-hero-grid{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  gap:52px;align-items:center;
+}
+.ctrl-eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:"Lexend",inherit;font-size:11.5px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--color-accent-400);margin-bottom:18px;   /* 7.21:1 */
+}
+.ctrl-dot{
+  width:7px;height:7px;border-radius:999px;background:var(--color-accent-400);flex:0 0 auto;
+  box-shadow:0 0 0 4px rgba(126,159,231,.18);
+}
+.ctrl-hero h1{color:var(--on-ink);letter-spacing:-.03em;margin-bottom:18px}
+.ctrl-hero .lede{color:var(--on-ink-muted);max-width:46ch;margin-bottom:30px}
+.ctrl-trust{display:flex;gap:34px;flex-wrap:wrap;margin-top:34px;padding-top:26px;border-top:1px solid var(--ink-line)}
+.ctrl-trust-item b{
+  display:block;font-family:"Lexend",inherit;font-weight:700;font-size:23px;
+  letter-spacing:-.02em;color:var(--on-ink);
+}
+.ctrl-trust-item span{display:block;font-size:12.5px;color:var(--on-ink-muted);font-weight:600;margin-top:2px}
+/* Ghost button: outline style that works on the dark surface */
+.btn-ghost{
+  background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.24);
+  color:#fff;box-shadow:none;
+}
+.btn-ghost:hover{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.45);color:#fff}
+/* Claim activity panel */
+.ctrl-panel{
+  background:var(--ink-800);border:1px solid var(--ink-line);
+  border-radius:var(--radius-md);overflow:hidden;font-family:"Lexend",inherit;
+}
+.ctrl-panel-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 18px;border-bottom:1px solid var(--ink-line);
+  font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--on-ink-muted);
+}
+.ctrl-live{display:inline-flex;align-items:center;gap:7px;color:var(--color-accent-400)}
+.ctrl-live-dot{
+  width:6px;height:6px;border-radius:999px;background:var(--color-accent-400);
+  animation:ctrl-pulse 2.2s ease-in-out infinite;
+}
+@keyframes ctrl-pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.ctrl-row{
+  display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:center;
+  padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.06);font-size:13px;
+}
+.ctrl-row:last-of-type{border-bottom:0}
+.ctrl-id{color:var(--on-ink-muted);font-variant-numeric:tabular-nums;font-size:12px}
+.ctrl-desc{color:var(--on-ink);min-width:0}
+.ctrl-pill{
+  font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:4px 10px;border-radius:999px;
+  justify-self:end;white-space:nowrap;
+}
+.ctrl-pill.paid{background:#16301f;color:#7ee08a}       /* 8.75:1 */
+.ctrl-pill.accepted{background:#332512;color:#ffc44d}   /* 9.37:1 */
+.ctrl-pill.review{background:#232a3d;color:#aab6cc}     /* 6.99:1 */
+.ctrl-note{
+  margin:0;padding:12px 18px;font-size:11.5px;line-height:1.45;
+  color:var(--on-ink-muted);border-top:1px solid var(--ink-line);
+}
+@media (prefers-reduced-motion:reduce){.ctrl-live-dot{animation:none}}
+@media (max-width:900px){
+  .ctrl-hero{padding:40px 24px}
+  .ctrl-hero-grid{grid-template-columns:minmax(0,1fr);gap:34px}
+  .ctrl-trust{gap:24px}
+}
+
+/* ---------- proof section: cited stats + our own numbers ---------- */
+.proof-section{padding-bottom:56px}
+.glass-card{
+  position:relative;background:var(--color-surface);border:1px solid var(--color-line);
+  border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+}
+.glass-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.cite-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:20px;position:relative;z-index:1}
+.cite-stat{padding:28px}
+.cite-stat .stat-big{font-weight:800;font-size:36px;color:var(--color-accent-800)}
+[data-theme="dark"] .cite-stat .stat-big{color:var(--color-accent-400)}
+.cite-stat p{font-size:14.5px;line-height:1.55;color:var(--muted);margin:8px 0 0}
+.cite-stat-source{display:block;font-size:11.5px;font-weight:700;letter-spacing:.03em;color:var(--muted);margin-top:14px}
+.proof-outcome{padding:36px;position:relative;z-index:1}
+.proof-outcome-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.proof-outcome-head h3{margin:0}
+.bar-chart{display:flex;flex-direction:column;gap:20px}
+.bar-row{display:grid;grid-template-columns:minmax(150px,220px) 1fr 64px;align-items:center;gap:16px}
+.bar-row-label{font-size:14.5px;font-weight:700}
+.bar-track{height:12px;border-radius:999px;background:var(--color-line);position:relative;overflow:hidden}
+.bar-fill{position:absolute;inset:0 auto 0 0;width:0;border-radius:999px;background:var(--grad-brand);transition:width 1.3s var(--ease-out2) .1s}
+.bar-chart.in .bar-row:nth-child(1) .bar-fill{width:var(--bar-pct)}
+.bar-chart.in .bar-row:nth-child(2) .bar-fill{width:var(--bar-pct);transition-delay:.22s}
+.bar-chart.in .bar-row:nth-child(3) .bar-fill{width:var(--bar-pct);transition-delay:.34s}
+.bar-row-value{font-family:"Lexend",inherit;font-weight:800;font-size:17px;color:var(--color-accent-800);text-align:right}
+[data-theme="dark"] .bar-row-value{color:var(--color-accent-400)}
+@media (max-width:900px){
+  .cite-grid{grid-template-columns:minmax(0,1fr)}
+  .bar-row{grid-template-columns:minmax(0,1fr);gap:8px}
+  .bar-row-value{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){
+  .bar-fill{transition:none}
+  .glass-card:hover{transform:none}
+}
+
+/* ---------- EHR coming-soon teaser (homepage only) ---------- */
+.ehr-teaser{padding:56px;text-align:center}
+.ehr-teaser-copy{max-width:640px;margin:0 auto}
+.ehr-soon-pill{
+  display:inline-flex;align-items:center;padding:7px 16px;border-radius:999px;
+  background:var(--color-accent-100);color:var(--color-accent-800);
+  font-family:"Lexend",inherit;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  margin-bottom:18px;
+}
+[data-theme="dark"] .ehr-soon-pill{background:color-mix(in srgb,var(--color-accent) 18%,transparent);color:var(--color-accent-300)}
+.ehr-teaser h2{margin-bottom:14px}
+.ehr-teaser .lede{margin:0 auto 28px}
+.ehr-points{
+  list-style:none;margin:0 0 32px;padding:0;display:flex;flex-direction:column;gap:12px;
+  text-align:left;max-width:480px;margin-left:auto;margin-right:auto;
+}
+.ehr-points li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.5;color:color-mix(in srgb,var(--color-text) 82%,transparent)}
+.ehr-points svg{flex:0 0 auto;margin-top:3px;color:var(--color-accent-700)}
+[data-theme="dark"] .ehr-points svg{color:var(--color-accent-400)}
+@media (max-width:560px){.ehr-teaser{padding:32px 22px}}
