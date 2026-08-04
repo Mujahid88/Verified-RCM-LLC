@@ -147,6 +147,7 @@ p{margin:0 0 16px;text-wrap:pretty}
 .split > .photo img{height:100%;width:100%;object-fit:cover}
 .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.article .grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:36px;flex-wrap:wrap;margin-bottom:28px}
 /* A lede that introduces a whole section can run wider than a lede sitting
    beside a photo — it should use close to the full column so the row
