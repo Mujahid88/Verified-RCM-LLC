@@ -1186,6 +1186,14 @@ p{margin:0 0 16px;text-wrap:pretty}
 [data-theme="dark"] .data-table tbody tr:hover{background:color-mix(in srgb,var(--color-accent) 10%,transparent)}
 .data-table code{font-size:13px;background:var(--color-accent-100);padding:2px 7px;border-radius:6px;font-weight:600}
 [data-theme="dark"] .data-table code{background:color-mix(in srgb,var(--color-accent) 16%,transparent)}
+.glossary-group{margin:0 0 30px}
+.glossary-group-title{font-family:"Lexend",inherit;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 12px}
+[data-theme="dark"] .glossary-group-title{color:var(--color-accent-300)}
+.glossary-list{margin:0;padding:0;border:1px solid var(--color-line);border-radius:var(--radius-md);overflow:hidden}
+.glossary-item{padding:16px 20px;border-bottom:1px solid var(--color-line)}
+.glossary-list .glossary-item:last-child{border-bottom:0}
+.glossary-term{font-weight:700;font-size:15px;letter-spacing:-.01em;margin:0 0 4px}
+.glossary-def{margin:0;font-size:14.5px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 78%, transparent)}
 /* Inline CTA band inside articles */
 .cta-band{
   display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;
