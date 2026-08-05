@@ -258,55 +258,55 @@
     flows.forEach(function (f) { f.classList.add('in'); });
   }
 
-  /* ---------- sliders (scroll-snap carousels) ----------
-     The viewport scrolls natively, so the slider is fully usable with no JS,
-     via touch, trackpad, or keyboard. This only wires up the optional
-     prev/next buttons and keeps the dots in sync with scroll position. */
-  document.querySelectorAll('.slider').forEach(function (slider) {
-    var vp = slider.querySelector('.slider-viewport');
-    if (!vp) return;
-    var prev = slider.querySelector('[data-slider-prev]');
-    var next = slider.querySelector('[data-slider-next]');
-    var dots = Array.prototype.slice.call(slider.querySelectorAll('.slider-dot'));
-    var slides = Array.prototype.slice.call(vp.children);
-
-    function step() {
-      // Advance by one slide width (incl. gap) rather than a magic number.
-      if (slides.length < 2) return vp.clientWidth;
-      return Math.round(slides[1].getBoundingClientRect().left - slides[0].getBoundingClientRect().left) || vp.clientWidth;
+  /* ---------- client reviews grid (dynamic render) ---------- */
+  var reviewsGrid = document.getElementById('reviewsGrid');
+  if (reviewsGrid) {
+    var REVIEWS = [
+      {
+        context: 'Aged A/R recovery', rating: 5,
+        quote: 'We were carrying four months of unworked denials and no one owned them. Verified RCM triaged the backlog by root cause instead of by date, so the recoverable claims got worked first. Our aged A/R dropped by two thirds in the first quarter, and I stopped chasing denials at nine at night.',
+        resultValue: '−67%', resultLabel: 'Aged A/R over 120 days, first quarter',
+        initials: 'AR', name: 'Dr. A. Rehman', role: 'Internal medicine, 2 providers'
+      },
+      {
+        context: 'Prior authorization', rating: 5,
+        quote: 'What surprised me was the sequencing. They rebuilt our prior-auth workflow before touching billing, because that was where the revenue was actually leaking. Auth-related write-offs stopped almost immediately. That alone paid for the engagement.',
+        resultValue: '−41%', resultLabel: 'Auth-related write-offs within 60 days',
+        initials: 'MO', name: 'M. Okafor', role: 'Practice administrator'
+      },
+      {
+        context: 'Credentialing turnaround', rating: 5,
+        quote: 'Credentialing used to stall for months because nobody tracked the payer follow-ups. They kept CAQH attested and chased every application on a schedule. New hires are billable weeks earlier, which changes how confidently we hire.',
+        resultValue: '6 weeks', resultLabel: 'Faster to first billable date per new provider',
+        initials: 'JA', name: 'J. Alvarez', role: 'Operations lead, behavioral health'
+      },
+      {
+        context: 'Switching billers', rating: 5,
+        quote: 'Switching felt risky as a solo practice, one bad month and I am in trouble. The onboarding was genuinely four days, they worked inside my existing EHR, and claims went out clean from day one. There was no revenue gap during the transition.',
+        resultValue: '4 days', resultLabel: 'From first call to live claim submission',
+        initials: 'SM', name: 'Dr. S. Malik', role: 'Family medicine, solo practice'
+      }
+    ];
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
     }
-    function sync() {
-      var s = step();
-      // scrollWidth-clientWidth can be off by a sub-pixel; allow 2px slack.
-      var maxScroll = vp.scrollWidth - vp.clientWidth;
-      var atStart = vp.scrollLeft <= 2;
-      var atEnd = vp.scrollLeft >= maxScroll - 2;
-      // When several slides are visible at once the scroller runs out of room
-      // before the final slide reaches the left edge, so the last dot would
-      // never light up. Pin it to the last dot once we're scrolled to the end.
-      var i = atEnd ? dots.length - 1 : (s ? Math.round(vp.scrollLeft / s) : 0);
-      if (prev) prev.disabled = atStart;
-      if (next) next.disabled = atEnd;
-      dots.forEach(function (d, di) { d.setAttribute('aria-selected', di === i ? 'true' : 'false'); });
+    function starGlyphs(rating) {
+      return '★'.repeat(rating) + '☆'.repeat(5 - rating);
     }
-    if (prev) prev.addEventListener('click', function () { vp.scrollLeft -= step(); });
-    if (next) next.addEventListener('click', function () { vp.scrollLeft += step(); });
-    dots.forEach(function (d, di) {
-      d.addEventListener('click', function () { vp.scrollLeft = di * step(); });
-    });
-    // Keyboard support on the scroller itself (it is focusable via tabindex).
-    vp.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowRight') { e.preventDefault(); vp.scrollLeft += step(); }
-      else if (e.key === 'ArrowLeft') { e.preventDefault(); vp.scrollLeft -= step(); }
-    });
-    var raf = null;
-    vp.addEventListener('scroll', function () {
-      if (raf) return;
-      raf = requestAnimationFrame(function () { raf = null; sync(); });
-    }, { passive: true });
-    window.addEventListener('resize', sync, { passive: true });
-    sync();
-  });
+    reviewsGrid.innerHTML = REVIEWS.map(function (r) {
+      return (
+        '<figure class="card quote-card" role="listitem">' +
+          '<div class="quote-context">' + escapeHtml(r.context) + '</div>' +
+          '<div class="stars" aria-label="Rated ' + r.rating + ' out of 5">' + starGlyphs(r.rating) + '</div>' +
+          '<blockquote>“' + escapeHtml(r.quote) + '”</blockquote>' +
+          '<div class="quote-result"><b>' + escapeHtml(r.resultValue) + '</b><span>' + escapeHtml(r.resultLabel) + '</span></div>' +
+          '<figcaption><span class="avatar" aria-hidden="true">' + escapeHtml(r.initials) + '</span><span><b>' + escapeHtml(r.name) + '</b><br><span class="muted">' + escapeHtml(r.role) + '</span></span></figcaption>' +
+        '</figure>'
+      );
+    }).join('');
+  }
 
   /* ---------- contact form validation + Formspree submit ---------- */
   var form = document.getElementById('contactForm');
