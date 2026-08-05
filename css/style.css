@@ -1444,6 +1444,7 @@ p{margin:0 0 16px;text-wrap:pretty}
   display:flex;flex-direction:column;gap:14px;
   animation:consent-rise .5s var(--ease);
 }
+.consent-banner[hidden]{display:none}
 @keyframes consent-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @media (prefers-reduced-motion:reduce){.consent-banner{animation:none}}
 .consent-banner p{margin:0;padding-right:26px;font-size:14px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 82%, transparent)}
