@@ -445,4 +445,39 @@
     if (!link) return;
     trackLead(link.href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click');
   });
+
+  /* ---------- cookie consent ---------- */
+  var CONSENT_KEY = 'vrcm-consent';
+  var banner = document.getElementById('consentBanner');
+  if (banner) {
+    var acceptBtn = document.getElementById('consentAccept');
+    var declineBtn = document.getElementById('consentDecline');
+    var prefsLink = document.getElementById('cookiePrefsLink');
+
+    function applyConsent(value) {
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', { analytics_storage: value === 'granted' ? 'granted' : 'denied' });
+      }
+    }
+
+    var savedConsent = null;
+    try { savedConsent = localStorage.getItem(CONSENT_KEY); } catch (e) {}
+    if (savedConsent === 'granted') {
+      applyConsent('granted');
+    } else if (!savedConsent) {
+      banner.hidden = false;
+    }
+
+    function chooseConsent(value) {
+      try { localStorage.setItem(CONSENT_KEY, value); } catch (e) {}
+      applyConsent(value);
+      banner.hidden = true;
+    }
+    if (acceptBtn) acceptBtn.addEventListener('click', function () { chooseConsent('granted'); });
+    if (declineBtn) declineBtn.addEventListener('click', function () { chooseConsent('denied'); });
+    if (prefsLink) prefsLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      banner.hidden = false;
+    });
+  }
 })();

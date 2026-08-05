@@ -27,12 +27,19 @@
 {"@context":"https://schema.org","@type":"BlogPosting","headline":"Pain management: improving quality of life through comprehensive care | Verified RCM","description":"Helping individuals manage chronic pain, restore function and live healthier lives.","image":"https://www.verifiedrcm.com/images/blog/pain-management-quality-of-life.jpg","datePublished":"2026-06-21T08:00:00-07:00","dateModified":"2026-06-21T08:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.verifiedrcm.com/blog-pain-management-quality-of-life.html"},"articleSection":"Specialty care","author":{"@type":"Person","name":"Phares A., MD","honorificSuffix":"MD","jobTitle":"Physiotherapist","hasCredential":[{"@type":"EducationalOccupationalCredential","credentialCategory":"degree","name":"Doctor of Medicine (MD)"},{"@type":"EducationalOccupationalCredential","credentialCategory":"certification","name":"Certified Professional Coder (CPC)","recognizedBy":{"@type":"Organization","name":"AAPC"}}]},"publisher":{"@type":"Organization","name":"Verified RCM","logo":{"@type":"ImageObject","url":"https://www.verifiedrcm.com/images/logo.jpg"}}}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -171,12 +178,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -30,12 +30,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between CPT, ICD-10 and HCPCS?","acceptedAnswer":{"@type":"Answer","text":"CPT codes describe the service or procedure performed. ICD-10-CM codes describe the diagnosis or condition that makes the service medically necessary. HCPCS Level II covers supplies, durable medical equipment, drugs and services that CPT does not, such as J-codes for injectable and infused drugs. A clean claim needs the right combination of all three, not just one coded correctly."}},{"@type":"Question","name":"What is an NCCI edit?","acceptedAnswer":{"@type":"Answer","text":"A National Correct Coding Initiative edit is a CMS-published rule pairing two codes that should not normally be billed together for the same patient on the same day because one is considered part of the other. Each pair carries a modifier indicator that determines whether a modifier can ever unbundle it, and the edit file updates quarterly."}},{"@type":"Question","name":"What is a Medically Unlikely Edit (MUE)?","acceptedAnswer":{"@type":"Answer","text":"An MUE caps the units of a single code payable for one patient, from one provider, on one date of service. It is a claim-line check on quantity, distinct from NCCI edits, which compare two different codes to each other."}},{"@type":"Question","name":"Do you have coding guides for specific specialties?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every specialty we bill for has its own coding guide covering the codes, modifiers, NCCI edits, MUEs and fee schedule considerations specific to that specialty, linked below by category."}},{"@type":"Question","name":"Do your coders hold certifications?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our coding team holds recognized coding certifications and works by specialty, with a second-level review built into the workflow rather than relying on a single coder's judgment alone."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -274,12 +281,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -27,12 +27,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do we have to replace our in-house biller?","acceptedAnswer":{"@type":"Answer","text":"No. Most practices keep their front-desk and intake staff and hand us coding, submission, denials and follow-up. We can also work alongside an existing biller and take only the segments that are backing up, commonly denials and aged A/R."}},{"@type":"Question","name":"How quickly can you start?","acceptedAnswer":{"@type":"Answer","text":"The review takes two days, the strategy is delivered on day three, and we take over live claim work on day four. Credentialing timelines depend on the payer, but we begin submitting applications in the first week."}},{"@type":"Question","name":"Which EHR and practice management systems do you work in?","acceptedAnswer":{"@type":"Answer","text":"We work inside whatever you already use; we do not ask you to migrate. Our team is credentialed across the major ambulatory EHRs and clearinghouses, and we adopt your templates rather than imposing ours."}},{"@type":"Question","name":"How do you handle denials and appeals?","acceptedAnswer":{"@type":"Answer","text":"Every denial is categorized by root cause, worked within 48 hours, and fed back into the front-end rules so the same denial does not recur. You get a monthly denial report showing volume, cause and recovered dollars."}},{"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"Billing is a percentage of collections, so our incentive matches yours: we are paid when you are paid. Credentialing and practice-management projects are quoted flat per provider or per application. No long-term lock-in."}},{"@type":"Question","name":"Are you HIPAA compliant?","acceptedAnswer":{"@type":"Answer","text":"Yes. All PHI is handled under signed BAAs on encrypted, access-controlled systems, with annual HIPAA training and audit logging for every user who touches a chart or a claim."}},{"@type":"Question","name":"Where is Verified RCM registered, and which states do you serve?","acceptedAnswer":{"@type":"Answer","text":"Verified RCM LLC is registered in Missouri, Texas and California, all in 2025. We bill for practices in all 50 states - medical billing, coding and credentialing are not restricted by where our entity is registered, and our payer enrollment work covers every state Medicaid programme and commercial network our clients participate in."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -281,12 +288,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

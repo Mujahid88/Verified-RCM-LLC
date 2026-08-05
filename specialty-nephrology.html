@@ -33,12 +33,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do the monthly capitation tiers work?","acceptedAnswer":{"@type":"Answer","text":"The ESRD monthly capitation payment covers a calendar month of dialysis-related physician services, and the code selected depends on the patient's age band and the number of documented face-to-face visits in that month. More documented visits move the claim into a higher-paying tier. Because the tier is set by documentation rather than by delivery, a visit that occurred but was not recorded reduces the payment for the entire month."}},{"@type":"Question","name":"When do we bill per-day instead of monthly?","acceptedAnswer":{"@type":"Answer","text":"Whenever the month is not complete under one arrangement: the patient was hospitalised, received a transplant, started or stopped dialysis, or transferred modality mid-month. In those cases the per-day ESRD codes apply for the relevant days. Billing the monthly code through a partial month is a common denial and, where it slips through, a common recoupment."}},{"@type":"Question","name":"What is the most frequent nephrology billing error?","acceptedAnswer":{"@type":"Answer","text":"Under-tiering the monthly capitation because visits were delivered but not documented in a way billing could count. It is difficult to spot because it produces a lower payment rather than a denial, so nothing lands in a work queue. A month-end reconciliation between documented visits and the billed tier is the standard control, and it usually finds money in the first cycle."}},{"@type":"Question","name":"How should CKD staging be coded?","acceptedAnswer":{"@type":"Answer","text":"To the specific stage documented, consistently across encounters, with the underlying cause linked where applicable. Stage drives coverage for laboratory monitoring, dietary counselling and referral services, so unspecified CKD weakens support for everything ordered alongside. Where a patient progresses to ESRD and begins dialysis, the status coding must move with them and remain consistent with the services billed."}},{"@type":"Question","name":"Do you handle dialysis facility billing as well as physician services?","acceptedAnswer":{"@type":"Answer","text":"Our focus is physician and practice-side billing, including monthly capitation, per-diem services, vascular access procedures and the office-based CKD work. Where a practice also has facility interests, we coordinate so that physician and facility claims do not overlap or duplicate for the same periods, which is a frequent source of denials when the two are billed independently."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -256,12 +263,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

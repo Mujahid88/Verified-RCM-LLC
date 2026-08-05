@@ -30,12 +30,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What counts as a good clean claim rate?","acceptedAnswer":{"@type":"Answer","text":"High nineties on first submission is a reasonable target for most specialties, though the achievable number depends on payer mix and how procedural the specialty is. What matters more than the headline number is the trend: a clean claim rate that is flat or falling points at a front-end problem, usually eligibility or coding, that is cheaper to fix before submission than after a denial."}},{"@type":"Question","name":"How do you actually get paid faster, not just more accurately?","acceptedAnswer":{"@type":"Answer","text":"Speed and accuracy come from the same fixes. Eligibility checked before the visit avoids the wait for a denial to discover coverage lapsed. Same-day charge entry and daily claim batches remove the lag between the encounter and the payer receiving it. Denials worked within 48 hours instead of sitting in a queue prevent the appeal window from closing. None of this is one big change, it is removing the small delays that compound across every claim."}},{"@type":"Question","name":"Do you take over billing mid-cycle, or only from a clean start?","acceptedAnswer":{"@type":"Answer","text":"Most engagements start mid-cycle. We inventory the existing accounts receivable, separate what is realistically collectible from what should be written off, and take over new claims immediately while working the backlog in parallel. A full changeover after go-live, not a delayed one."}},{"@type":"Question","name":"What is the difference between RCM and just billing?","acceptedAnswer":{"@type":"Answer","text":"Billing is submitting the claim. Revenue cycle management is everything from eligibility verification before the visit through coding, submission, denial resolution and patient collections until the balance is zero. A biller who only submits claims has no accountability for what happens after a payer rejects one, which is where most lost revenue actually occurs."}},{"@type":"Question","name":"How is pricing structured?","acceptedAnswer":{"@type":"Answer","text":"A percentage of collections, so our incentive is aligned with yours from day one. No flat monthly fee regardless of performance, and no long-term contract lock-in."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -217,12 +224,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

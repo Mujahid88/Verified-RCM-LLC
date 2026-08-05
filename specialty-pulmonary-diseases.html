@@ -33,12 +33,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is critical care time calculated?","acceptedAnswer":{"@type":"Answer","text":"Cumulatively across the calendar date, not per visit. Add all time the physician spent devoted to that patient's critical care, including time on the unit reviewing data and discussing care, but exclude time for procedures billed separately. The first 30 to 74 minutes bill as 99291, with 99292 for each additional 30 minutes. The most common error is recording time per encounter, which loses the aggregation and frequently drops the claim below the billable threshold."}},{"@type":"Question","name":"Why do sleep studies deny so often?","acceptedAnswer":{"@type":"Answer","text":"Because coverage policy usually specifies the setting. Many payers require home sleep apnea testing first for uncomplicated suspected obstructive sleep apnea, and will deny an attended in-lab study unless documented comorbidities or a failed home test justify it. Checking the policy before scheduling, and documenting the clinical reason attended testing is required, prevents the majority of these denials."}},{"@type":"Question","name":"When do we bill PFTs globally versus with modifier 26?","acceptedAnswer":{"@type":"Answer","text":"By equipment ownership and location. If the practice owns the equipment, employs the technician and interprets the study, bill globally. If your physician interprets a study performed on a facility's equipment, bill the professional component with modifier 26. Billing globally where a facility also bills the technical component produces a duplicate denial and potential recoupment."}},{"@type":"Question","name":"What documentation supports home oxygen?","acceptedAnswer":{"@type":"Answer","text":"Current qualifying test values, typically arterial blood gas or oximetry meeting the payer threshold, documented alongside the clinical condition and the reason oxygen is required. The values must be current per the payer's definition, and repeat testing is often required at intervals to continue supply. Orders released without documented qualifying values are the most common source of DME recoupment in pulmonology."}},{"@type":"Question","name":"Do you handle both inpatient and office pulmonary billing?","acceptedAnswer":{"@type":"Answer","text":"Yes, and combining them prevents the component and time errors that occur when the two settings are billed separately. We configure critical care time capture, map office diagnostics to their correct component split by location, and reconcile hospital interpretations against billed professional components monthly."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -261,12 +268,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

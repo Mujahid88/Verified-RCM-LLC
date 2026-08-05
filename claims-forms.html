@@ -33,12 +33,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I know whether to use CMS-1500 or UB-04?","acceptedAnswer":{"@type":"Answer","text":"It follows the provider type, not the service. A physician office, individual practitioner or most outpatient clinics bill professional services on the CMS-1500 regardless of where the service happens. A hospital, skilled nursing facility, home health agency or other institutional provider bills on the UB-04, including for outpatient hospital services. A single patient visit to a hospital-owned clinic can generate both: a UB-04 for the facility fee and a CMS-1500 for the physician's professional fee."}},{"@type":"Question","name":"Does anyone still submit paper claim forms?","acceptedAnswer":{"@type":"Answer","text":"Rarely, and mostly for small-volume or non-standard submitters who qualify for an exception under HIPAA's electronic filing requirement. The overwhelming majority of claims move as the 837P or 837I electronic transaction through a clearinghouse. The paper form layout still matters because it defines the fields, and because some payer correspondence and remittance advice references box numbers by their paper-form names even for electronic submissions."}},{"@type":"Question","name":"What is a Type of Bill code and why does it matter so much on UB-04?","acceptedAnswer":{"@type":"Answer","text":"The Type of Bill is a three-digit code in form locator 4 that tells the payer the facility type, the bill classification, and the sequence of the claim, such as an original claim, a correction, or a void. Getting any of the three digits wrong is one of the most common reasons a UB-04 claim rejects outright, because the payer's system routes and processes the claim differently based on this single code before it looks at anything else on the form."}},{"@type":"Question","name":"Why do CMS-1500 claims get rejected for the diagnosis pointer?","acceptedAnswer":{"@type":"Answer","text":"Box 24E on the CMS-1500 links each billed service line back to a specific diagnosis letter from box 21, rather than repeating the diagnosis code itself. A pointer to a letter that does not exist in box 21, or a service line pointing to a diagnosis that does not support medical necessity for that procedure, is a common and entirely avoidable rejection. It is a linking error, not a coding error, which is why it is easy to miss in a coding review that only checks the codes themselves."}},{"@type":"Question","name":"Do you handle both professional and institutional claims?","acceptedAnswer":{"@type":"Answer","text":"Yes. We submit both the 837P and 837I as appropriate for the client, scrub each against form-specific edit rules before submission, and reconcile remittances back against what was billed on each claim type. Practices with both a physician group and a facility component get both handled under the same engagement."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -270,12 +277,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -33,12 +33,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do our preventive visits deny so often?","acceptedAnswer":{"@type":"Answer","text":"Almost always frequency or code family. Commercial plans want the CPT preventive series by age band, Medicare wants G0438 or G0439 for the Annual Wellness Visit. Check the last-billed date in the payer portal before the visit and route the code family by payer."}},{"@type":"Question","name":"Can we bill a problem visit at a well-child check?","acceptedAnswer":{"@type":"Answer","text":"Yes, when a distinct problem is evaluated and documented separately. Bill the preventive code plus the office visit with modifier 25 on the E/M, and ensure the note carries a separate assessment and plan."}},{"@type":"Question","name":"How do we stop losing vaccine administration fees?","acceptedAnswer":{"@type":"Answer","text":"Build the product and administration codes as a linked pair in the charge master so one cannot be selected without the other. Compare doses administered against administration codes billed monthly."}},{"@type":"Question","name":"What is a realistic clean claim rate for family medicine?","acceptedAnswer":{"@type":"Answer","text":"High nineties is achievable and worth targeting, because thin per-encounter margins make rework disproportionately expensive. Getting there is mostly front-end work: eligibility, benefits, correct modifiers and a well-configured scrubber."}},{"@type":"Question","name":"Do you handle paediatric and Medicare patients in the same engagement?","acceptedAnswer":{"@type":"Answer","text":"Yes. The same coder handles the well-child schedule, adult preventive intervals and Medicare wellness rules, which prevents handoff errors. We configure payer-specific routing so the correct code family is applied automatically."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -279,12 +286,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

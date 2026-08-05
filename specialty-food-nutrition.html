@@ -33,12 +33,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which patients qualify for medical nutrition therapy coverage?","acceptedAnswer":{"@type":"Answer","text":"Under Medicare, principally patients with diabetes or renal disease within defined stages, and post-transplant patients within a period. Commercial plans vary widely: some mirror Medicare, others extend coverage to obesity, cardiovascular risk or gastrointestinal conditions under preventive or therapeutic benefits. Because the variation is so wide, coverage has to be verified per patient per plan rather than assumed from the diagnosis alone."}},{"@type":"Question","name":"Do we always need a physician referral?","acceptedAnswer":{"@type":"Answer","text":"For therapeutic MNT, almost always, and the referral needs to be dated before services begin. Self-referred nutrition counselling is generally not covered, and obtaining a referral retrospectively rarely rescues an episode that has already been delivered. Making the referral a booking prerequisite rather than a documentation task is the reliable control."}},{"@type":"Question","name":"How are MNT hours counted?","acceptedAnswer":{"@type":"Answer","text":"In 15-minute units for individual therapy and 30-minute units for group, against an annual allowance that typically differs between the first year of treatment and subsequent years. Additional hours beyond the allowance may be available where the treating physician documents a change in condition or diagnosis and issues a second referral. Tracking consumed and remaining units per benefit year is essential, since the allowance is small enough to exhaust mid-course."}},{"@type":"Question","name":"Can dietitians bill independently?","acceptedAnswer":{"@type":"Answer","text":"It depends on payer enrolment and state scope of practice. Registered dietitians can enrol with Medicare and bill MNT codes directly, while commercial plan policies vary on whether they recognise dietitians as billing providers or require services to be billed incident to a physician. Verify enrolment status per payer during credentialing rather than discovering at the first denial that the provider is not recognised."}},{"@type":"Question","name":"Do you handle credentialing for dietitians?","acceptedAnswer":{"@type":"Answer","text":"Yes. Dietitian enrolment is a frequent gap, because practices add nutrition services without enrolling the provider with each payer, then find the claims denying as provider-not-covered. We handle the enrolment alongside billing and verify which payers recognise the dietitian for which code families before services begin."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -259,12 +266,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

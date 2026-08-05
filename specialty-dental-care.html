@@ -33,12 +33,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which dental procedures can be billed to medical insurance?","acceptedAnswer":{"@type":"Answer","text":"Commonly surgical extractions, particularly impacted teeth, treatment following facial or dental trauma, biopsies and certain diagnostic procedures, oral appliances for obstructive sleep apnoea, and some temporomandibular joint treatment. The determining factor is medical necessity rather than the tooth itself. Each requires CPT coding, ICD-10 diagnosis support and documentation meeting the medical plan's standard, which is more demanding than a typical dental claim."}},{"@type":"Question","name":"Why do our medical cross-over claims deny?","acceptedAnswer":{"@type":"Answer","text":"Almost always the translation. Dental practices are fluent in CDT and unfamiliar with CPT and ICD-10 conventions, so claims arrive with codes that do not match how the medical plan expects the procedure described, or without the diagnosis support the policy requires. A sleep appliance claim without the sleep study attached, or an extraction without the impaction classification coded, will deny however sound the clinical case."}},{"@type":"Question","name":"How should we handle annual maximums with patients?","acceptedAnswer":{"@type":"Answer","text":"Verify the remaining benefit before presenting the treatment plan, and show the patient what the plan will cover and what they will owe, in writing, before treatment begins. Where the plan year is ending, sequencing treatment across two benefit years can materially reduce the patient's cost. Practices that verify after treatment convert a routine financial conversation into a collections problem."}},{"@type":"Question","name":"What is the alternate benefit clause?","acceptedAnswer":{"@type":"Answer","text":"A provision allowing the plan to reimburse for a less expensive procedure than the one performed, paying the amount for the alternative and leaving the difference to the patient. It commonly applies to crown materials and to bridges versus implants. It is not a denial and generally cannot be appealed, so the correct handling is disclosure at treatment planning so the patient knows their share before consenting."}},{"@type":"Question","name":"Do you handle both dental and medical claims for a practice?","acceptedAnswer":{"@type":"Answer","text":"Yes, and that combination is the point. Practices working with a dental-only biller rarely pursue medical cross-over because the workflow and code fluency are not there. We handle CDT claims routinely and run a cross-coding workflow for the procedures that qualify medically, which typically surfaces revenue the practice was not previously claiming at all."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -256,12 +263,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

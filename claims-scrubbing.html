@@ -30,12 +30,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between a rejection and a denial?","acceptedAnswer":{"@type":"Answer","text":"A rejection happens before adjudication on structural grounds and can be corrected freely. A denial is an adjudication decision that must be appealed within a window. Scrubbing converts what would have been denials into rejections you fix yourself."}},{"@type":"Question","name":"Is a 99% clean claim rate good?","acceptedAnswer":{"@type":"Answer","text":"Only paired with a strong first-pass payment rate. A permissive scrubber reports an excellent clean claim rate while claims deny after adjudication, because the metric only measures claims accepted for processing."}},{"@type":"Question","name":"How do we build payer-specific edits?","acceptedAnswer":{"@type":"Answer","text":"From your own remittance data. Group denials by payer and reason, identify those a pre-submission check could prevent, and write a rule for each, starting with the highest-volume causes."}},{"@type":"Question","name":"Should staff be able to override edits?","acceptedAnswer":{"@type":"Answer","text":"Yes, with a recorded reason and periodic review. If one edit is overridden constantly, either the rule is wrong or staff are bypassing a genuine problem. Reviewing override patterns quarterly reveals which."}},{"@type":"Question","name":"Do you configure scrubbing in our existing system?","acceptedAnswer":{"@type":"Answer","text":"Yes. We work with your existing clearinghouse and PM system, analyse remittance history to identify preventable denial patterns, and build payer-specific edits into your existing scrubber."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -234,12 +241,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

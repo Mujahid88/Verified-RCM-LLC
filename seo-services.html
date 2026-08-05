@@ -30,12 +30,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does healthcare SEO take to work?","acceptedAnswer":{"@type":"Answer","text":"Expect meaningful movement over three to six months and compounding gains after that. Technical fixes and Google Business Profile work can shift local visibility within weeks, but content authority in a competitive medical market builds slowly."}},{"@type":"Question","name":"Do we need a blog?","acceptedAnswer":{"@type":"Answer","text":"Only if you will sustain it with clinically reviewed content. A focused set of well-maintained condition and procedure pages outperforms a large volume of thin blog posts in almost every practice we work with."}},{"@type":"Question","name":"What is E-E-A-T and does it really matter for a small practice?","acceptedAnswer":{"@type":"Answer","text":"Experience, Expertise, Authoritativeness and Trustworthiness are the qualities Google raters assess, and health content is held to the strictest version. Name the provider who reviewed each clinical page, show credentials, cite authoritative sources, and make your physical presence verifiable."}},{"@type":"Question","name":"How does SEO relate to our Google Business Profile?","acceptedAnswer":{"@type":"Answer","text":"They reinforce each other. Local map results are driven by profile completeness, category accuracy, review volume and proximity, while your website supplies the topical depth that supports those rankings and converts the click."}},{"@type":"Question","name":"Can you work with our existing website?","acceptedAnswer":{"@type":"Answer","text":"Usually yes. We start with a technical and content audit and fix what exists before recommending a rebuild. A rebuild becomes worthwhile when the platform blocks basic requirements such as control over page titles, markup or location pages."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -239,12 +246,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

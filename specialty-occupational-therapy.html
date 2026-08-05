@@ -33,12 +33,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the GO modifier and when is it required?","acceptedAnswer":{"@type":"Answer","text":"GO identifies that a service was delivered under an occupational therapy plan of care. Because OT and PT share many codes, payers rely on the discipline modifier to attribute the service correctly, and claims without it are frequently denied or misapplied against the wrong discipline benefit. It should be applied automatically in the charge master for all OT services rather than selected manually."}},{"@type":"Question","name":"Can PT and OT treat the same patient on the same day?","acceptedAnswer":{"@type":"Answer","text":"Yes, provided each discipline delivers distinct skilled services, documents independently, maintains its own plan of care and bills only its own treatment minutes. The failure mode is the same minutes appearing under both disciplines, or two interventions that are substantively identical billed separately. Separate goals and separate minute logs are what make the claims defensible."}},{"@type":"Question","name":"Why do our OT claims deny when PT claims for the same patient pay?","acceptedAnswer":{"@type":"Answer","text":"Usually because the OT documentation looks like PT documentation. Where both disciplines describe strengthening and range of motion without distinguishing purpose, the payer treats one as duplicative. OT notes need to name the functional activity being restored, which is the clinical distinction that also happens to be the billing distinction."}},{"@type":"Question","name":"How should we document self-care training?","acceptedAnswer":{"@type":"Answer","text":"Name the specific activity, describe the skilled intervention rather than the practice itself, record the patient response and note the time spent. 'Dressing training' alone is thin; documenting the technique taught, the adaptation trialled, the cueing required and the measured outcome makes the skilled nature evident. This is the code most often denied for insufficient documentation, and the fix is descriptive rather than administrative."}},{"@type":"Question","name":"Do you handle both PT and OT billing for combined clinics?","acceptedAnswer":{"@type":"Answer","text":"Yes, and keeping them in one engagement prevents the duplicate-discipline denials that arise when they are billed separately. We configure discipline modifiers automatically, keep separate minute logs and plans of care per discipline, and reconcile same-day treatment so no minutes are counted twice."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -261,12 +268,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>
