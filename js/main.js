@@ -189,6 +189,13 @@
   var targets = document.querySelectorAll('.card, .photo, h1, h2, .lede, .glass-card, .bar-chart');
   var siblingIndex = new Map();
   targets.forEach(function (t) {
+    // Anything already in the viewport at load was never "scrolled into
+    // view", so fading it in from opacity:0 just flashes the page's most
+    // important content (h1/.lede especially) invisible for no reason.
+    // Only elements genuinely below the fold get the reveal treatment.
+    var r = t.getBoundingClientRect();
+    var alreadyVisible = r.top < window.innerHeight && r.bottom > 0;
+    if (alreadyVisible) return;
     t.classList.add('reveal');
     if (t.matches('.card, .photo')) {
       var parent = t.parentElement;
@@ -203,7 +210,7 @@
         if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
-    targets.forEach(function (t) { io.observe(t); });
+    document.querySelectorAll('.reveal').forEach(function (t) { io.observe(t); });
   }
 
   /* ---------- animated number counters ---------- */
