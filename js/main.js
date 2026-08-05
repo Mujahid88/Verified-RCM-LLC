@@ -427,6 +427,7 @@
         if (!res.ok) throw new Error('bad response');
         form.reset();
         if (status) { status.className = 'form-status ok'; status.textContent = 'Thank you. We will reply within one business day.'; }
+        trackLead('contact_form');
       }).catch(function () {
         if (status) { status.className = 'form-status err'; status.textContent = 'Something went wrong. Please email hello@verifiedrcm.com instead.'; }
       }).finally(function () {
@@ -434,4 +435,14 @@
       });
     });
   }
+
+  /* ---------- lead events (GA4) ---------- */
+  function trackLead(method) {
+    if (typeof gtag === 'function') gtag('event', 'generate_lead', { method: method });
+  }
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if (!link) return;
+    trackLead(link.href.indexOf('tel:') === 0 ? 'phone_click' : 'email_click');
+  });
 })();
