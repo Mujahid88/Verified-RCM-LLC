@@ -251,6 +251,11 @@ p{margin:0 0 16px;text-wrap:pretty}
   background:var(--color-surface);border:1px solid var(--color-line);border-radius:var(--radius-lg);
   box-shadow:var(--shadow-lg);z-index:75;
 }
+/* The 12px gap above sits between the trigger and the panel with nothing
+   painted in it, so a cursor moving diagonally toward a menu item drops
+   out of :hover mid-transit and the panel closes before it's reached.
+   This pseudo-element bridges that dead zone without affecting layout. */
+.nav-mega::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}
 .nav-item-mega:hover .nav-mega,.nav-item-mega:focus-within .nav-mega{display:grid}
 .nav-mega-col-title{
   font-family:"Lexend",inherit;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
