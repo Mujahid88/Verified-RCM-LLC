@@ -33,12 +33,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why are J-code units the most common rheumatology error?","acceptedAnswer":{"@type":"Answer","text":"Because the billable unit is defined by the code descriptor, not by the vial or the dose in milligrams as clinicians think of it. A descriptor reading 'per 10 mg' means a 200 mg dose is 20 units, and a practice billing one unit per vial will under-bill dramatically or, in the opposite direction, over-bill and face recoupment. The reliable fix is encoding the conversion per J-code in the charge master so nobody calculates it by hand."}},{"@type":"Question","name":"How do we protect the practice on biologic authorisations?","acceptedAnswer":{"@type":"Answer","text":"Treat authorisation as a hard gate before the drug leaves the fridge, and confirm that the authorisation covers the specific product, dose and number of administrations rather than the therapy generally. Because the practice has already purchased the agent, an unauthorised infusion is a realised loss with only discretionary retro-authorisation as a remedy. This one control protects more revenue than any coding change in the specialty."}},{"@type":"Question","name":"Can we bill for wasted drug?","acceptedAnswer":{"@type":"Answer","text":"Often yes, from single-dose vials, using the JW modifier with the discarded amount documented. The administered and discarded amounts are billed on separate lines, and the record should show the vial size, the dose given and the remainder discarded. Practices that skip wastage billing absorb the cost of the discarded portion, which on high-cost biologics is material over a year."}},{"@type":"Question","name":"What does step therapy require us to document?","acceptedAnswer":{"@type":"Answer","text":"The conventional agents the patient tried, the duration of each trial, and the specific reason each was stopped, whether inadequate response or intolerance. Payer policies typically require documented failure of one or more conventional therapies before approving a biologic, and an authorisation request without that history will be denied even where the diagnosis clearly qualifies. Capturing it at prescribing is far easier than reconstructing it during an appeal."}},{"@type":"Question","name":"Do you manage the infusion suite economics as well as claims?","acceptedAnswer":{"@type":"Answer","text":"Yes. For rheumatology that is the substance of the engagement: authorisation gating, J-code and unit accuracy, administration hierarchy, wastage capture and monthly reconciliation of drug purchased against drug billed. Office billing matters, but the infusion suite is where the money is won or lost, and it needs controls rather than just accurate coding."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -261,12 +268,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

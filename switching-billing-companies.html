@@ -33,12 +33,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Will switching billing companies interrupt our cash flow?","acceptedAnswer":{"@type":"Answer","text":"It does not have to, if the handoff is sequenced correctly. The main risk is a gap where new claims are not being submitted because the new team is still getting set up, and the old team has stopped working the account. Avoiding this comes down to setting an explicit go-live date and confirming in writing that the outgoing company will keep working existing claims until that date, not until the contract notice period technically ends."}},{"@type":"Question","name":"Do we need to re-credential with every payer when we switch billing companies?","acceptedAnswer":{"@type":"Answer","text":"No, credentialing is tied to the provider and the practice, not to the billing company. What can be affected is CAQH access and any payer portal logins that were set up under the old company's staff; those need to be transferred or reset, not recredentialed from scratch. Confirm this distinction with your new billing company early, since it is a common source of unnecessary panic during a switch."}},{"@type":"Question","name":"What happens to claims that are still pending when we switch?","acceptedAnswer":{"@type":"Answer","text":"They need an explicit owner. The best practice is a written handoff document listing every claim in process at the switch date, who is responsible for following up on each, and a deadline for the outgoing company to hand over final status. Claims left in limbo between two billing companies are the single most common way money gets lost during a switch."}},{"@type":"Question","name":"How long does a full transition usually take?","acceptedAnswer":{"@type":"Answer","text":"A clean transition with good data access from the outgoing company can be running new claims within one to two weeks, with the full backlog audit and historical A/R reconciliation completing over the following month. A transition complicated by a slow or uncooperative outgoing vendor can take considerably longer, which is one reason to review your current contract's data-access and termination terms before giving notice."}},{"@type":"Question","name":"What should we ask a new billing company before switching?","acceptedAnswer":{"@type":"Answer","text":"Ask specifically how they handle the transition period: who audits the existing A/R, how quickly they can start submitting new claims, whether they take over the current backlog or only claims going forward, and what reporting you will see in the first 30 days. A vendor who cannot answer these concretely has probably not run many transitions."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -224,12 +231,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

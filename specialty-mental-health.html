@@ -33,12 +33,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How precisely do we need to document therapy time?","acceptedAnswer":{"@type":"Answer","text":"Precisely enough that the billed code is defensible without interpretation. The cleanest practice is recording start and end times, which produces an unarguable duration. Stating a session type, or a round number that appears identically on every note, is the pattern that leads payers to down-code from 90837 to 90834 across a whole population of claims. Since the revenue difference is meaningful and applies to every session, this is the highest-value documentation habit in the specialty."}},{"@type":"Question","name":"What does mental health parity actually give us?","acceptedAnswer":{"@type":"Answer","text":"Federal parity law prevents most plans from applying stricter treatment limits to behavioral health than they apply to comparable medical and surgical benefits. In practice that covers visit limits, day limits, and the aggressiveness of authorisation and concurrent review requirements. It does not force a plan to cover a service it excludes entirely for everyone. Where a plan imposes a behavioral limit with no medical equivalent, that is worth challenging rather than absorbing, and documenting the comparison strengthens the appeal."}},{"@type":"Question","name":"Why do our intensive outpatient claims deny after treatment has started?","acceptedAnswer":{"@type":"Answer","text":"Almost always a concurrent review that was missed. Initial authorisation covers a defined number of days, after which continued stay must be re-reviewed and re-approved. If that review lapses, the payer denies from the lapse date forward, and the days already delivered are usually unrecoverable. The fix is operational rather than clinical: a tracked calendar with review dates and an owner, so the review happens before the authorisation expires."}},{"@type":"Question","name":"Can therapists and prescribers bill on the same day?","acceptedAnswer":{"@type":"Answer","text":"Yes, where each service is separately documented and the provider types are both covered for what they billed. A prescriber may bill an E/M with a psychotherapy add-on when both the medical work and the timed therapy are documented independently. A therapist and a prescriber seeing the patient the same day each bill their own service. What fails on review is an add-on billed where the underlying E/M work is thin, because the add-on cannot carry a claim by itself."}},{"@type":"Question","name":"Do you handle authorisation tracking as part of billing?","acceptedAnswer":{"@type":"Answer","text":"Yes. For behavioral health it is the highest-value part of the engagement, because authorisation lapses cause the largest single write-offs in the specialty. We track initial authorisations, concurrent review dates and unit balances centrally, and flag upcoming reviews before they expire rather than discovering the problem when the denial arrives."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -265,12 +272,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

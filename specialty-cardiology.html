@@ -33,12 +33,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When do we bill modifier 26 versus a global claim?","acceptedAnswer":{"@type":"Answer","text":"Bill modifier 26 when your physician interprets a study performed on equipment your practice does not own, which is typically the case for hospital-based work. Bill globally only when the practice owns the equipment, employs the technician and performs the interpretation. If the facility bills the technical component and you also bill globally, one claim will deny as duplicate and the other may trigger a recoupment, so the split has to be decided by site of service rather than by habit."}},{"@type":"Question","name":"Why do our echocardiograms deny as not medically necessary?","acceptedAnswer":{"@type":"Answer","text":"Usually the diagnosis on the claim is not on the payer's coverage list for that study, even though the clinical reason was sound. Payers publish coverage policies listing the conditions that support each imaging study, and an unspecified or symptom-only code frequently fails that test where an established diagnosis would pass. The fix is upstream: surface the coverage requirement at order entry so the ordering physician documents the supporting condition before the study is performed."}},{"@type":"Question","name":"How should we handle remote device monitoring billing?","acceptedAnswer":{"@type":"Answer","text":"Remote monitoring codes cover defined periods, commonly 30 or 90 days, and the claim cannot be submitted until the period has fully elapsed and the data has been reviewed and documented. The most common error is billing at the point of interrogation rather than at period end, which denies as frequency. Track the period start and end dates in the system so claims release automatically on the correct date rather than depending on someone remembering."}},{"@type":"Question","name":"Is modifier 59 safe to use?","acceptedAnswer":{"@type":"Answer","text":"It is legitimate but heavily scrutinised, and the more specific X-modifiers are preferred where they apply because they state exactly why the services were distinct. The rule is that the record must show separate encounters, separate sites, separate practitioners or distinct non-overlapping services. Using 59 as a routine way to clear an edit is one of the clearest audit triggers in the specialty, so every use should be traceable to documentation."}},{"@type":"Question","name":"Do you handle both office and hospital-based cardiology billing?","acceptedAnswer":{"@type":"Answer","text":"Yes, and keeping both in one engagement is what prevents the component-split errors. When office and facility billing are handled separately, the same study is frequently billed twice or not at all. We configure the component logic by site of service and reconcile hospital reads against billed professional components each month so nothing is dropped between the two settings."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -277,12 +284,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -33,12 +33,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should we use eye codes or E/M codes?","acceptedAnswer":{"@type":"Answer","text":"Whichever the visit supports and the payer reimburses better, decided per visit type rather than as a blanket policy. Eye codes have their own component requirements that must be met in full, while E/M codes are selected on medical decision making or time. Some payers reimburse one materially better than the other, and some restrict eye codes to certain diagnoses. The practical approach is a per-payer comparison for your common visit types, configured once, rather than a per-claim judgement."}},{"@type":"Question","name":"How do we handle the medical versus vision plan question?","acceptedAnswer":{"@type":"Answer","text":"Route on the reason the patient booked. A patient coming for a routine examination or new spectacles is a vision claim; a patient coming for a diabetic eye evaluation, glaucoma monitoring or a symptom is a medical claim. Capture the stated reason at scheduling because that is what determines routing and what defends it later. Where routine screening uncovers disease, the follow-up becomes medical even though the original visit was not."}},{"@type":"Question","name":"What happens with visits during a surgical global period?","acceptedAnswer":{"@type":"Answer","text":"Routine post-operative care is included in the surgical fee and is not separately billable. Care unrelated to the surgery, or a return to the operating room, can be billed with the appropriate modifier to indicate it falls outside the global package. Tracking the global period end date per patient per procedure is essential, because staff otherwise bill follow-up visits normally and generate a run of denials."}},{"@type":"Question","name":"Is refraction ever covered by medical plans?","acceptedAnswer":{"@type":"Answer","text":"Rarely. Most medical plans exclude refraction as a vision service, so it should be billed to the vision plan or to the patient. The practical issue is expectation: patients who are billed unexpectedly for refraction after a medical visit complain, and the balance often goes uncollected. Setting the responsibility at check-in, in writing, resolves nearly all of that friction."}},{"@type":"Question","name":"Do you handle both medical and vision plan billing?","acceptedAnswer":{"@type":"Answer","text":"Yes, and keeping them together is what makes the routing reliable. Practices that split medical and vision billing between different teams or vendors accumulate misrouted claims because nobody owns the decision. We configure routing rules by presenting complaint and reconcile across both payer types so a claim denied by one is checked against the other before it is written off."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -264,12 +271,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

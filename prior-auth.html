@@ -30,12 +30,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does prior authorization actually take?","acceptedAnswer":{"@type":"Answer","text":"It varies by payer and by whether the request is standard or expedited. Commercial plans commonly decide standard requests within a few business days and expedited (urgent) requests within 24 to 72 hours, but the only reliable number is the one published in that specific payer's current policy, since these timeframes are revised periodically and sometimes governed by state prompt-authorization laws on top of the payer's own standard."}},{"@type":"Question","name":"What is a peer-to-peer review and when do we ask for one?","acceptedAnswer":{"@type":"Answer","text":"A peer-to-peer is a direct conversation between the ordering physician and the payer's reviewing physician after an initial denial, usually the fastest path to reversing a medical-necessity denial without a full written appeal. Request it as soon as the denial letter arrives rather than waiting to exhaust other options, since most payers set a deadline for requesting it."}},{"@type":"Question","name":"What is gold-carding and does it apply to us?","acceptedAnswer":{"@type":"Answer","text":"Gold-carding programs exempt a provider from prior authorization for specific services once that provider has demonstrated a consistently high approval rate over a defined period, and a growing number of states and payers have adopted some version of it. Eligibility criteria, the services covered, and the renewal process are entirely payer- and state-specific, so a practice has to check its own payer mix rather than assume the exemption applies broadly."}},{"@type":"Question","name":"Can a patient be billed if we deliver care without authorization?","acceptedAnswer":{"@type":"Answer","text":"Usually not. Most payer contracts treat a missing authorization as the practice's administrative failure rather than the patient's responsibility, which makes it a full write-off rather than a collectible balance. An Advance Beneficiary Notice, where applicable and signed in advance, is one of the few ways to shift that risk to the patient for Medicare-related denials."}},{"@type":"Question","name":"Do you handle prior authorization as part of your service?","acceptedAnswer":{"@type":"Answer","text":"Yes. We run eligibility and authorization requirements before scheduling, submit and track every request to its expiration date, and prepare providers for peer-to-peer review when a request is denied, so authorization delays stop showing up as denied claims weeks later."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -259,12 +266,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

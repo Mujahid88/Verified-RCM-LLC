@@ -30,12 +30,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What denial rate should we be aiming for?","acceptedAnswer":{"@type":"Answer","text":"Low single digits at first submission is reasonable for most outpatient practices. More useful than the headline number is the category breakdown, since a single preventable category dominating is a different problem from denials spread evenly."}},{"@type":"Question","name":"How quickly must denials be worked?","acceptedAnswer":{"@type":"Answer","text":"Inside the payer appeal window, which is often shorter than the filing deadline and runs from the remittance date. Working every denial within a couple of days keeps you inside even short windows."}},{"@type":"Question","name":"Is it worth appealing small-balance denials?","acceptedAnswer":{"@type":"Answer","text":"Not always. Compare expected recovery against rework cost. Low-value denials with poor appeal odds are often better written off deliberately, with effort redirected to preventing that category."}},{"@type":"Question","name":"How do we stop the same denials recurring?","acceptedAnswer":{"@type":"Answer","text":"Route the finding to where the cause lives: eligibility denials to the front desk process, authorisation denials to scheduling, coding denials to the scrubber, medical necessity denials to order entry."}},{"@type":"Question","name":"Do you work denials as part of your service?","acceptedAnswer":{"@type":"Answer","text":"Yes, categorised by root cause before working anything, so the monthly report shows which categories are shrinking. Recurring causes are raised as process changes rather than simply reworked each month."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -235,12 +242,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

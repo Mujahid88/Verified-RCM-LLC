@@ -33,12 +33,19 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do so many pain procedures need prior authorisation?","acceptedAnswer":{"@type":"Answer","text":"Because interventional pain has high per-procedure cost and wide variation in utilisation, so payers manage it tightly. Most epidural injections, facet procedures and ablations require authorisation, and many require evidence of failed conservative treatment first. A procedure performed without authorisation is generally unbillable to both plan and patient, which makes verification before scheduling the single highest-value control in the practice."}},{"@type":"Question","name":"When is imaging guidance separately billable?","acceptedAnswer":{"@type":"Answer","text":"Only when the procedure code does not already include it. Several injection codes were revised specifically to bundle fluoroscopic or ultrasound guidance into the base code, and billing guidance alongside them produces a bundling denial. Where guidance is separately billable, a permanent image must generally be recorded and retained. Keep a current reference mapping each procedure to whether guidance is included."}},{"@type":"Question","name":"How do we track injection frequency limits?","acceptedAnswer":{"@type":"Answer","text":"Per patient, per anatomic region, per policy period, in the practice management system rather than in the chart. Policies commonly limit the number of injections per region per year, and the count includes procedures performed elsewhere where you can determine them. Discovering the limit at the denial stage means the procedure has already been delivered and is usually unrecoverable."}},{"@type":"Question","name":"Can we bill an evaluation on the same day as a procedure?","acceptedAnswer":{"@type":"Answer","text":"Only when a separately identifiable evaluation occurred beyond the usual pre-procedure assessment. Deciding to proceed with a planned injection is not separate work. Where a new problem was evaluated, or the decision for surgery was made that day, modifier 25 is appropriate and the note must show it. Routine application on every procedure day is a recognised audit pattern."}},{"@type":"Question","name":"Do you handle the authorisation work as well as billing?","acceptedAnswer":{"@type":"Answer","text":"Yes. For pain management the authorisation and policy-checking work is where most of the recoverable value sits, because denials in this specialty are predominantly front-end failures rather than coding errors. We verify authorisation before scheduling, run the coverage checklist pre-procedure, and track frequency counts so procedures are not delivered into a denial."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
   gtag('js', new Date());
-
   gtag('config', 'G-M6QSPSLHV2');
 </script>
 </head>
@@ -265,12 +272,20 @@
           <a href="terms.html">Terms of service</a>
           <a href="hipaa-notice.html">HIPAA notice</a>
           <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
         </nav>
         <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>HIPAA compliant &middot; BAA on request</span>
       </div>
     </div>
   </div>
 </footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>
