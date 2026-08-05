@@ -40,7 +40,7 @@
     'ad_storage': 'denied',
     'ad_user_data': 'denied',
     'ad_personalization': 'denied',
-    'analytics_storage': 'denied'
+    'analytics_storage': 'granted'
   });
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
@@ -239,7 +239,8 @@
   </div>
 </footer>
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
-  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
     <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
     <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>

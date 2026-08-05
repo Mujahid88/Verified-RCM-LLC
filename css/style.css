@@ -1446,9 +1446,17 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 @keyframes consent-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @media (prefers-reduced-motion:reduce){.consent-banner{animation:none}}
-.consent-banner p{margin:0;font-size:14px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 82%, transparent)}
+.consent-banner p{margin:0;padding-right:26px;font-size:14px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 82%, transparent)}
 .consent-banner a{color:var(--color-accent-700);text-decoration:underline}
 [data-theme="dark"] .consent-banner a{color:var(--color-accent-300)}
+.consent-close{
+  position:absolute;top:14px;right:16px;width:28px;height:28px;
+  display:grid;place-items:center;border:0;background:transparent;border-radius:999px;
+  font-size:20px;line-height:1;color:var(--muted);cursor:pointer;
+  transition:background .2s ease,color .2s ease;
+}
+.consent-close:hover{background:var(--color-accent-100);color:var(--color-text)}
+[data-theme="dark"] .consent-close:hover{background:color-mix(in srgb,var(--color-accent) 14%,transparent)}
 .consent-actions{display:flex;gap:10px;flex-wrap:wrap}
 .consent-actions .btn{flex:1;min-width:120px;justify-content:center}
 @media (max-width:480px){.consent-banner{left:10px;right:10px;bottom:10px;padding:18px}}
