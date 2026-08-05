@@ -447,23 +447,28 @@
   });
 
   /* ---------- cookie consent ---------- */
+  // Analytics is granted by default (set in the head snippet); this banner is
+  // a notice with an opt-out, not a gate. Only an explicit Decline stops
+  // tracking. Accept and the close button both just confirm the default and
+  // stop the banner from asking again.
   var CONSENT_KEY = 'vrcm-consent';
   var banner = document.getElementById('consentBanner');
   if (banner) {
     var acceptBtn = document.getElementById('consentAccept');
     var declineBtn = document.getElementById('consentDecline');
+    var closeBtn = document.getElementById('consentClose');
     var prefsLink = document.getElementById('cookiePrefsLink');
 
     function applyConsent(value) {
       if (typeof gtag === 'function') {
-        gtag('consent', 'update', { analytics_storage: value === 'granted' ? 'granted' : 'denied' });
+        gtag('consent', 'update', { analytics_storage: value === 'denied' ? 'denied' : 'granted' });
       }
     }
 
     var savedConsent = null;
     try { savedConsent = localStorage.getItem(CONSENT_KEY); } catch (e) {}
-    if (savedConsent === 'granted') {
-      applyConsent('granted');
+    if (savedConsent === 'denied') {
+      applyConsent('denied');
     } else if (!savedConsent) {
       banner.hidden = false;
     }
@@ -475,6 +480,7 @@
     }
     if (acceptBtn) acceptBtn.addEventListener('click', function () { chooseConsent('granted'); });
     if (declineBtn) declineBtn.addEventListener('click', function () { chooseConsent('denied'); });
+    if (closeBtn) closeBtn.addEventListener('click', function () { chooseConsent('granted'); });
     if (prefsLink) prefsLink.addEventListener('click', function (e) {
       e.preventDefault();
       banner.hidden = false;

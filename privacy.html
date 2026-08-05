@@ -31,7 +31,7 @@
     'ad_storage': 'denied',
     'ad_user_data': 'denied',
     'ad_personalization': 'denied',
-    'analytics_storage': 'denied'
+    'analytics_storage': 'granted'
   });
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
@@ -128,7 +128,7 @@
     </div>
     <div class="card">
       <h2 class="group-heading">Cookies and analytics</h2>
-      <p>This site uses Google Analytics to understand how visitors use it, which pages get read and which do not, so we can keep improving the content. Analytics cookies are not set until you accept them in the cookie banner shown on your first visit; declining, or taking no action, means no analytics cookies are placed and no browsing data is sent to Google. We do not use advertising or remarketing cookies, and analytics data is never sold or shared with advertisers. You can change your choice at any time using the "Cookie preferences" link in the footer of any page.</p>
+      <p>This site uses Google Analytics to understand how visitors use it, which pages get read and which do not, so we can keep improving the content. Analytics cookies are enabled by default; a notice on your first visit lets you decline them if you would rather not be tracked, and declining stops analytics tracking immediately. We do not use advertising or remarketing cookies, and analytics data is never sold or shared with advertisers. You can change your choice at any time using the "Cookie preferences" link in the footer of any page.</p>
     </div>
     <div class="card">
       <h2 class="group-heading">Data security</h2>
@@ -188,7 +188,8 @@
   </div>
 </footer>
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
-  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
     <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
     <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
