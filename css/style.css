@@ -9,6 +9,20 @@
    display face is a large part of why the marketing site and the product
    looked like two companies. Self-hosted, three static weights, latin only —
    50KB total against 68KB for the two variable fonts it replaces. */
+/* Display face: Fraunces, a contemporary variable serif. It was already in
+   the fonts folder, unused and unreferenced, and it is SIL OFL — so real
+   display character costs nothing here.
+   A serif headline over a geometric sans body is the one move that separates
+   this from every other RCM site, which are uniformly all-sans. The variation
+   axes are pinned conservatively: WONK 0 and low SOFT keep Fraunces from
+   showing the quirk it is capable of, which would read novelty rather than
+   authority for a company handling physicians' revenue. */
+@font-face{
+  font-family:"Fraunces";
+  src:url("../fonts/Fraunces-Variable.woff2") format("woff2-variations"),
+      url("../fonts/Fraunces-Variable.woff2") format("woff2");
+  font-weight:400 700; font-style:normal; font-display:swap;
+}
 @font-face{
   font-family:"Instrument Sans";
   src:url("../fonts/instrument-sans-400-normal.woff2") format("woff2");
@@ -135,6 +149,7 @@
   --accent-ink:#a3ecd7;                       /* 14.32:1 on bg — the dark-mode flip */
   --accent-ink-hover:#d0f7ea;                 /* 16.75:1 on bg */
   --coral-ink:#fda58a;                        /* 10.07:1 on bg, 8.35:1 on surface */
+  color-scheme:dark;                          /* native form popups follow the theme */
   --color-gold:#ffc44d;                       /* 12.41:1 on bg */
   /* Depth on a dark ground cannot be a drop shadow. The light theme lifts a
      white card off cream with rgba(...,.08) — that reads because the shadow
@@ -179,7 +194,9 @@ a:hover{color:var(--color-accent)}
 ::selection{background:var(--color-accent-200);color:var(--color-ink-fixed)}
 
 h1,h2,h3{
-  font-family:"Instrument Sans",system-ui,sans-serif;
+  font-family:"Fraunces","Instrument Sans",Georgia,serif;
+  font-variation-settings:"SOFT" 12,"WONK" 0,"opsz" 96;
+  font-synthesis-weight:none;
   letter-spacing:-.035em;font-weight:600;line-height:1.1;margin:0 0 16px;
 }
 h1{font-size:clamp(34px,4.8vw,64px);letter-spacing:-.04em;font-weight:600}
@@ -600,8 +617,12 @@ p{margin:0 0 16px;text-wrap:pretty}
 .mini.dark .mini-body{color:rgba(255,255,255,.7)}
 .accent-fill{background:var(--color-accent);color:var(--on-accent);border-color:transparent}
 .accent-fill .stat-label,.accent-fill div{color:var(--on-accent)}
-.amber-fill{background:var(--grad-warm);color:var(--on-accent-2);border-color:transparent}
-.amber-fill .stat-label{color:var(--on-accent-2)}
+/* Coral, not amber. This filled stat card was the last thing on the site
+   wearing a third colour — amber is now reserved for the semantic "needs
+   attention" state on claim pills, so a decorative amber block read as a
+   warning about nothing. Coral takes dark ink (5.48:1), same as everywhere. */
+.amber-fill{background:var(--color-accent-3);color:var(--on-accent-3);border-color:transparent}
+.amber-fill .stat-label,.amber-fill div{color:var(--on-accent-3)}
 .panel{border:1px solid var(--color-line);border-radius:var(--radius-lg);padding:48px;background:var(--color-surface);box-shadow:var(--shadow-sm)}
 /* Inside a panel the photo was inheriting the base .photo min-height and
    sitting shorter than its text column, which is the height/width mismatch
@@ -937,7 +958,13 @@ p{margin:0 0 16px;text-wrap:pretty}
 .req{font-size:11px;font-weight:600;color:var(--accent-ink);letter-spacing:.03em}
 .optional{font-size:11.5px;font-weight:600;color:var(--muted);letter-spacing:.02em}
 .field-hint{font-size:12.5px;color:var(--muted);margin:0}
+/* accent-color + color-scheme recolour the parts of a form control the
+   BROWSER paints and CSS cannot reach — the option list in a <select> popup,
+   checkbox and radio fills, the focus ring on some platforms. Without these
+   the dropdown renders in the OS accent, which on Windows is blue, so the
+   form kept showing blue long after the last blue left the stylesheet. */
 .contact-form input,.contact-form textarea,.contact-form select{
+  accent-color:var(--color-accent);
   width:100%;min-height:50px;padding:13px 16px;border-radius:var(--radius-sm);
   border:1.5px solid var(--color-line);background:var(--color-surface);color:var(--color-text);
   font-family:inherit;font-size:15.5px;
