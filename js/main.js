@@ -302,17 +302,120 @@
     function starGlyphs(rating) {
       return '★'.repeat(rating) + '☆'.repeat(5 - rating);
     }
-    reviewsGrid.innerHTML = REVIEWS.map(function (r) {
+    // One review per view, the next deliberately half-shown so the track
+    // reads as scrollable without needing an affordance to say so. Built on
+    // native scroll-snap rather than a transform carousel: touch swipe,
+    // trackpad, keyboard and the scrollbar all work for free, and it degrades
+    // to a plain scroller if the control-wiring below ever throws.
+    function card(r, i) {
+      // No avatar image: every client here is anonymised at their own request
+      // (see the note under the slider), so a face would have to be a stock
+      // photo standing in for a real practice. The index and the outcome do
+      // the work a portrait would have done.
       return (
-        '<figure class="card quote-card" role="listitem">' +
-          '<div class="quote-context">' + escapeHtml(r.context) + '</div>' +
-          '<div class="stars" aria-label="Rated ' + r.rating + ' out of 5">' + starGlyphs(r.rating) + '</div>' +
-          '<blockquote>“' + escapeHtml(r.quote) + '”</blockquote>' +
-          '<div class="quote-result"><b>' + escapeHtml(r.resultValue) + '</b><span>' + escapeHtml(r.resultLabel) + '</span></div>' +
-          '<figcaption><span class="avatar" aria-hidden="true">' + escapeHtml(r.initials) + '</span><span><b>' + escapeHtml(r.name) + '</b><br><span class="muted">' + escapeHtml(r.role) + '</span></span></figcaption>' +
+        '<figure class="quote-card" role="listitem">' +
+          '<div class="quote-body">' +
+            '<div class="quote-top">' +
+              '<span class="quote-index">(' + ('0' + (i + 1)).slice(-2) + ')</span>' +
+              '<span class="quote-context">' + escapeHtml(r.context) + '</span>' +
+            '</div>' +
+            '<div class="stars" aria-label="Rated ' + r.rating + ' out of 5">' + starGlyphs(r.rating) + '</div>' +
+            '<blockquote>“' + escapeHtml(r.quote) + '”</blockquote>' +
+          '</div>' +
+          '<div class="quote-meta">' +
+            '<div class="quote-result"><b>' + escapeHtml(r.resultValue) + '</b><span>' + escapeHtml(r.resultLabel) + '</span></div>' +
+            '<figcaption>&mdash; ' + escapeHtml(r.name) + '<span>' + escapeHtml(r.role) + '</span></figcaption>' +
+          '</div>' +
         '</figure>'
       );
-    }).join('');
+    }
+
+    var arrow = function (dir) {
+      // Drawn chevron, not a unicode glyph — glyph arrows inherit the body
+      // face and sit off-centre in a round button.
+      var d = dir === 'prev' ? 'M15 18l-6-6 6-6' : 'M9 18l6-6-6-6';
+      return '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+        'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + d + '"/></svg>';
+    };
+
+    reviewsGrid.innerHTML =
+      '<div class="reviews-track" id="reviewsTrack" role="list" tabindex="0" aria-label="Client reviews, scrollable">' +
+        REVIEWS.map(card).join("") +
+      '</div>' +
+      '<div class="reviews-nav">' +
+        '<p class="reviews-count"><span id="reviewsCount">1</span> of ' + REVIEWS.length + '</p>' +
+        // Plain buttons with aria-current, not role="tab". The tab pattern
+        // promises tabpanels that do not exist here, and screen readers
+        // announce the missing relationship as a broken widget.
+        '<div class="reviews-dots">' +
+          REVIEWS.map(function (r, i) {
+            return '<button type="button" class="reviews-dot" data-i="' + i + '"' +
+              ' aria-label="Review ' + (i + 1) + ': ' + escapeHtml(r.context) + '"' +
+              (i === 0 ? ' aria-current="true"' : '') + '></button>';
+          }).join('') +
+        '</div>' +
+        '<div class="reviews-arrows">' +
+          '<button type="button" class="reviews-arrow" data-dir="prev" aria-label="Previous review">' + arrow('prev') + '</button>' +
+          '<button type="button" class="reviews-arrow" data-dir="next" aria-label="Next review">' + arrow('next') + '</button>' +
+        '</div>' +
+      '</div>';
+
+    var track = document.getElementById('reviewsTrack');
+    var slides = [].slice.call(track.children);
+    var dots = [].slice.call(reviewsGrid.querySelectorAll('.reviews-dot'));
+    var arrows = [].slice.call(reviewsGrid.querySelectorAll('.reviews-arrow'));
+    var countEl = document.getElementById('reviewsCount');
+    var index = 0;
+
+    function reduced() {
+      return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+    function goTo(i) {
+      i = Math.max(0, Math.min(slides.length - 1, i));
+      track.scrollTo({ left: slides[i].offsetLeft, behavior: reduced() ? 'auto' : 'smooth' });
+    }
+    function nearestIndex() {
+      var best = 0, bestDist = Infinity;
+      for (var i = 0; i < slides.length; i++) {
+        var d = Math.abs(slides[i].offsetLeft - track.scrollLeft);
+        if (d < bestDist) { bestDist = d; best = i; }
+      }
+      return best;
+    }
+    function sync() {
+      index = nearestIndex();
+      countEl.textContent = String(index + 1);
+      dots.forEach(function (d, i) {
+        if (i === index) { d.setAttribute('aria-current', 'true'); } else { d.removeAttribute('aria-current'); }
+      });
+      // The track can sit a pixel or two off its snap point after a smooth
+      // scroll, so compare with a tolerance rather than an exact match.
+      arrows.forEach(function (b) {
+        var atEnd = b.dataset.dir === 'next'
+          ? track.scrollLeft >= track.scrollWidth - track.clientWidth - 2
+          : track.scrollLeft <= 2;
+        b.disabled = atEnd;
+      });
+    }
+
+    arrows.forEach(function (b) {
+      b.addEventListener('click', function () { goTo(index + (b.dataset.dir === 'next' ? 1 : -1)); });
+    });
+    dots.forEach(function (d) {
+      d.addEventListener('click', function () { goTo(parseInt(d.dataset.i, 10)); });
+    });
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); goTo(index + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(index - 1); }
+    });
+
+    var raf = null;
+    track.addEventListener('scroll', function () {
+      if (raf) return;
+      raf = requestAnimationFrame(function () { raf = null; sync(); });
+    }, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
   }
 
   /* ---------- contact form validation + Formspree submit ---------- */
