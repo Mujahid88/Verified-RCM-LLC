@@ -233,6 +233,12 @@ p{margin:0 0 16px;text-wrap:pretty}
 .nav-link.active{background:color-mix(in srgb, var(--color-accent) 20%, transparent);color:var(--color-accent-800)}
 [data-theme="dark"] .nav-link.active{color:var(--color-accent-300)}
 
+/* SAMS is a separate application (staff attendance/payroll), not a page on
+   this site — a light border marks it as a distinct product without
+   competing visually with the main nav items. */
+.nav-link-sams{border:1.5px solid color-mix(in srgb, var(--color-accent) 45%, transparent)}
+.nav-link-sams:hover{border-color:var(--color-accent)}
+
 /* ---------- nav mega-menu ----------
    Hover- and focus-triggered (CSS only, no JS) so it works without
    scripting; the mobile equivalent is the accordion inside .mobile-menu.
