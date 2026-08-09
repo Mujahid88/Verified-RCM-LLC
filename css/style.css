@@ -1019,12 +1019,22 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 
 /* ---------- footer ---------- */
-.site-footer{padding-bottom:24px}
+/* Flat, full-width band. The footer was an inset rounded card floating on
+   the page background with a gap under it, which reads as one more section
+   rather than the end of the document. A footer should meet the viewport
+   edges and the bottom of the window. */
+.site-footer{padding-bottom:0}
+.site-footer > .wrap{max-width:none;padding:0}
 /* Deep teal, not near-black. The page opens on a saturated brand field and
    should close on one — a black slab at the foot reads as a different site's
    footer bolted on. #10403b carries white at 11.55:1, so nothing here is
    fighting for legibility. */
-.footer-card{background:#10403b;color:#fff;border-radius:var(--radius-md);padding:48px}
+.footer-card{
+  background:#10403b;color:#fff;border-radius:0;
+  padding:64px 24px 40px;
+}
+/* Content still sits on the 1280 grid; only the colour goes edge to edge. */
+.footer-card > *{max-width:1280px;margin-inline:auto}
 /* Footer top: mission + two explicit contact routes, replacing the old
    single email-capture strip that left most of the row empty. */
 .footer-top{
