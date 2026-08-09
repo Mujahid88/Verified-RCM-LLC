@@ -388,6 +388,14 @@ p{margin:0 0 16px;text-wrap:pretty}
 .nav-link-sams{border:1.5px solid color-mix(in srgb, var(--color-accent) 45%, transparent)}
 .nav-link-sams:hover{border-color:var(--color-accent)}
 
+/* Sign-up entry point for SAMS. Deliberately quieter than .nav-cta ("Book a
+   consultation") — that remains the site's primary action; this is the
+   self-serve path for someone who already knows what SAMS is. It drops out
+   first as the nav tightens, since the mobile menu carries the same link. */
+.nav-link-register{white-space:nowrap;font-weight:600;color:var(--color-accent-800)}
+[data-theme="dark"] .nav-link-register{color:var(--color-accent-300)}
+@media (max-width:1150px){.nav-link-register{display:none}}
+
 /* ---------- nav mega-menu ----------
    Hover- and focus-triggered (CSS only, no JS) so it works without
    scripting; the mobile equivalent is the accordion inside .mobile-menu.
