@@ -3,69 +3,114 @@
    Design tokens first, then base, layout, components.
    Dark mode is driven by [data-theme="dark"] on <html>.
    ============================================================ */
-/* Type pairing: "Corporate Trust" — Lexend (headings) + Source Sans 3 (body).
-   Chosen for enterprise/healthcare/finance + accessibility; Lexend is designed
-   for reading proficiency. Both self-hosted (latin subset) = zero 3rd-party requests. */
+/* One typeface: Instrument Sans, the same face and the same files SAMS uses.
+   This replaces a Lexend + Source Sans 3 pairing. Two faces asked the reader
+   to register a personality before they registered the argument, and the
+   display face is a large part of why the marketing site and the product
+   looked like two companies. Self-hosted, three static weights, latin only —
+   50KB total against 68KB for the two variable fonts it replaces. */
 @font-face{
-  font-family:"Lexend";
-  src:url("../fonts/Lexend-Variable.woff2") format("woff2-variations"), url("../fonts/Lexend-Variable.woff2") format("woff2");
-  font-weight:300 800; font-style:normal; font-display:swap;
+  font-family:"Instrument Sans";
+  src:url("../fonts/instrument-sans-400-normal.woff2") format("woff2");
+  font-weight:400; font-style:normal; font-display:swap;
 }
 @font-face{
-  font-family:"Source Sans 3";
-  src:url("../fonts/SourceSans3-Variable.woff2") format("woff2-variations"), url("../fonts/SourceSans3-Variable.woff2") format("woff2");
-  font-weight:300 700; font-style:normal; font-display:swap;
+  font-family:"Instrument Sans";
+  src:url("../fonts/instrument-sans-500-normal.woff2") format("woff2");
+  font-weight:500; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Instrument Sans";
+  src:url("../fonts/instrument-sans-600-normal.woff2") format("woff2");
+  font-weight:600; font-style:normal; font-display:swap;
 }
 /* ------------------------------------------------------------------
    Palette: considered blue + warm amber (the Verified RCM brand colours,
    updated from an earlier lime/amber system — the client wanted lime
    removed entirely, not just muted). Every text-bearing value below is
    contrast-verified against its own surface — ratios noted inline.
-   Unlike the old lime scale, base --color-accent (#2960d6) is dark
-   enough to carry WHITE text directly (5.62:1) — that's why --on-accent
-   flips to white below instead of dark ink.
+   Base --color-accent (#0b806a) is dark enough to carry WHITE text
+   directly (4.87:1) — that's why --on-accent is white, not dark ink.
    ------------------------------------------------------------------ */
 :root{
-  --color-bg:#F7F8F2; --color-surface:#ffffff; --color-text:#181a14;   /* text 16.1:1 on bg */
-  --color-accent:#2960d6; --color-accent-2:#f5a524;
-  --color-line:color-mix(in srgb, #181a14 12%, transparent);
-  /* Only the steps actually referenced are kept. Unused ramp steps (-500, -900
-     on blue; -2-200/-400/-500/-600/-700/-900 on amber) were removed in the
-     2026-08 audit — re-add from the source ramp if a future component needs one. */
-  --color-accent-100:#eef3fe; --color-accent-200:#d5e1fc; --color-accent-300:#b0c5f2;
-  --color-accent-400:#7e9fe7; --color-accent-600:#3a6ee0;
-  --color-accent-700:#2250b4; --color-accent-800:#1a4093;
-  /* base/-600 = 5.26:1 on bg, -800 = 8.94:1 — both safe for accent-coloured
-     body text/links. -400 (2.46:1) is a fill/tint only. */
+  /* Teal brand. The category defaults to blue and so did we; this is the
+     single cheapest way to stop looking like every other RCM company, and
+     teal still reads healthcare and money at the same time.
+     Surfaces are near-white only — #ffffff and #f9f9f9, nothing else — which
+     is what lets the one saturated moment in the hero do all the work. */
+  --color-bg:#f9f9f9; --color-surface:#ffffff; --color-text:#141d1b;   /* text 16.3:1 on bg */
+  --color-accent:#0b806a; --color-accent-2:#f5a524;
+  --color-line:color-mix(in srgb, #141d1b 11%, transparent);
+  /* Ramp keeps the existing token NAMES and their existing light/dark
+     relationships, so every rule downstream follows without edits: -600 is
+     LIGHTER than base here (as it was on the blue), -700/-800 are darker. */
+  --color-accent-100:#ecfdf7; --color-accent-200:#d0f7ea; --color-accent-300:#a3ecd7;
+  --color-accent-400:#25bb99; --color-accent-600:#0d9e80;
+  --color-accent-700:#0d6659; --color-accent-800:#0f5049;
+  /* Measured: base 4.87:1 on white / 4.63:1 on #f9f9f9 — the lightest teal
+     that carries white text AND works as text itself, which is why it is the
+     workhorse. -700 6.86:1, -800 9.28:1. -600 is 3.38:1 and -400 is 2.43:1:
+     fills and tints only, never text. */
   --color-accent-2-100:#fff8e8; --color-accent-2-300:#ffdc93;
   --color-accent-2-800:#7c4c06;
+  /* Coral — the contrasting accent, teal's complement.
+     Kept SEPARATE from --color-accent-2 (amber), which is the semantic
+     warning colour on claim pills. Promoting amber to brand accent would
+     blur "this is our brand" and "this claim needs attention".
+     The fill takes DARK ink, not white: white on -400 is 3.14:1 and fails,
+     ink is 5.48:1. That inversion is deliberate — it is also what stops
+     coral competing with the teal, which is a white-text colour. */
+  --color-accent-3:#f4633a;                   /* fill — ink on it 5.48:1     */
+  --color-accent-3-100:#ffe9e1;               /* chip — ink on it 14.73:1    */
+  --color-accent-3-300:#fda58a;               /* dark-mode text 10.07:1      */
+  --color-accent-3-700:#b03a17;               /* text 6.06:1 white / 5.76 f9 */
+  --on-accent-3:#141d1b;
+  /* Accent-coloured coral TEXT, flipping with the theme like --accent-ink. */
+  --coral-ink:#b03a17;
   /* -2-800 = 6.80:1 on bg — the safe token for amber-coloured text. */
+  /* Accent-coloured TEXT sitting on the page background. --color-accent-800
+     is a dark blue: correct on light paper, invisible on a dark one, and it
+     was being used directly for taglines, "Required" markers, link CTAs and
+     small labels with no dark override — every one of them failed AA in dark
+     mode at ~1.9:1. Use this token for accent text, and -800 only where the
+     background is known to stay light (chips on --color-accent-100). */
+  --accent-ink:#0f5049;                       /* 9.28:1 white / 8.81:1 on #f9f9f9 */
+  --accent-ink-hover:#0b806a;                 /* 4.87:1 white / 4.63:1 on #f9f9f9 */
   --color-gold:#8a5006;                       /* star ratings — 6.5:1 on white, 6.09:1 on --color-bg. Previous
      #a9690a measured 4.46:1 via pa11y (axe/HTML_CS), just under AA — .stars is 15px, not large text, so 4.5:1
      is the real requirement, not the 3:1 "large glyphs" this was mistakenly filed under. */
   /* Ink used ON solid accent fills (chips, icon circles, buttons, checks).
      The blue fill is mid-toned, not light like the old lime, so it takes
      white ink instead of dark. */
-  --on-accent:#ffffff;                        /* 5.62:1 on --color-accent (base); every --grad-brand stop ≥5.62:1 */
+  --on-accent:#ffffff;                        /* 4.87:1 on base; every --grad-brand stop is darker, so safer */
   --on-accent-2:#211603;                      /* 8.71:1 on --color-accent-2 */
-  --radius-sm:14px; --radius-md:22px; --radius-lg:32px;
+  /* SAMS's radii: rounded-md 6px on controls, rounded-lg 8px on cards, with
+     12px reserved for the few large panels. These were 14/22/32 — a 32px
+     corner on a content card is the single loudest "consumer app" signal on
+     the page, and it is most of why the two products did not look related. */
+  --radius-sm:10px; --radius-md:16px; --radius-lg:20px;
   /* Tinted shadows — brand-hued rather than neutral grey, for depth without mud */
   /* Shadows carry a real offset + soft blur (never a zero-offset colour halo). */
-  --shadow-sm:0 2px 10px rgba(24,26,20,.07);
-  --shadow-md:0 12px 32px rgba(38,45,12,.11);
-  --shadow-lg:0 28px 72px rgba(38,45,12,.17);
-  --shadow-glow:0 16px 40px rgba(41,96,214,.34);
+  /* Tinted to the blue brand. These were rgba(38,45,12) — an olive-green
+     cast left over from the lime palette, still describing itself as
+     "brand-hued" for a brand that no longer exists. */
+  --shadow-sm:0 1px 2px rgba(16,32,28,.05), 0 2px 8px rgba(16,32,28,.04);
+  --shadow-md:0 6px 22px rgba(16,32,28,.07);
+  --shadow-lg:0 20px 56px rgba(16,32,28,.10);
+  --shadow-glow:0 16px 40px rgba(11,128,106,.26);
   --ease:cubic-bezier(.16,1,.3,1);
   --ease-out2:cubic-bezier(.25,.46,.45,.94);  /* ≈ GSAP power2.out */
-  --color-ink-fixed:#181a14;
-  --muted:#5b6152;                            /* 5.9:1 on bg */
+  --color-ink-fixed:#141d1b;
+  --muted:#5b6660;                            /* 5.88:1 on bg, 6.28:1 on white.
+     Was #5b6152, a distinctly olive grey (green 15 points above blue) — the
+     last of the lime showing through in the light theme's secondary text. */
   /* Gradients */
   /* Gradient stops are contrast-checked at EVERY stop, not just the average:
      button labels sit on the lightest AND darkest stop, so both set the floor.
      These carry white ink (--on-accent); the LIGHTEST stop is now the binding
      one (5.62:1) since white text gets safer as the fill darkens, the reverse
      of the old dark-ink-on-light-lime logic. */
-  --grad-brand:linear-gradient(135deg,#2960d6 0%,#2250b4 55%,#1a4093 100%);
+  --grad-brand:linear-gradient(135deg,#0b806a 0%,#0d6659 55%,#0f5049 100%);
   --grad-warm:linear-gradient(135deg,#ffc44d 0%,#f5a524 55%,#d98a12 100%);
   /* Glass */
   --glass-bg:rgba(255,255,255,.62);
@@ -73,16 +118,42 @@
   --glass-border:rgba(255,255,255,.65);
   --glass-blur:16px;
 }
+/* Dark theme neutrals sit on ONE cool ramp, hue-matched to the blue brand.
+   They used to be olive (#0f110d / #181b15 / #b6bcae) — desaturated residue
+   of the removed lime palette — while the ink panels below were navy. That
+   put a navy hero card on an olive-black page at 1.00:1, identical lightness
+   with opposing hue, which is the single most reliable way to make two
+   surfaces look like a mistake rather than like depth. Ratios measured, not
+   estimated; every value below clears 4.5:1 on the surface it sits on. */
 [data-theme="dark"]{
-  --color-bg:#0f110d; --color-surface:#181b15; --color-text:#f2f3ed;
-  --color-line:color-mix(in srgb, #f2f3ed 16%, transparent);
-  --muted:#b6bcae;                            /* 9.1:1 on dark bg */
-  --color-gold:#ffc44d;
-  --shadow-sm:0 2px 10px rgba(0,0,0,.5); --shadow-md:0 12px 32px rgba(0,0,0,.55); --shadow-lg:0 28px 72px rgba(0,0,0,.6);
-  --shadow-glow:0 16px 40px rgba(41,96,214,.28);
-  --glass-bg:rgba(24,27,21,.62);
-  --glass-bg-strong:rgba(24,27,21,.84);
+  /* Surface is raised well clear of the page (1.35:1, was 1.11:1). On a dark
+     ground, elevation has to come from LIGHTNESS — see the shadow note below
+     for why the light theme's approach does not survive the flip. */
+  --color-bg:#080f0e; --color-surface:#17241f; --color-text:#eaf3ef;
+  --color-line:color-mix(in srgb, #eaf3ef 15%, transparent);
+  --muted:#a2b3ac;                            /* 8.83:1 on bg, 7.32:1 on surface */
+  --accent-ink:#a3ecd7;                       /* 14.32:1 on bg — the dark-mode flip */
+  --accent-ink-hover:#d0f7ea;                 /* 16.75:1 on bg */
+  --coral-ink:#fda58a;                        /* 10.07:1 on bg, 8.35:1 on surface */
+  --color-gold:#ffc44d;                       /* 12.41:1 on bg */
+  /* Depth on a dark ground cannot be a drop shadow. The light theme lifts a
+     white card off cream with rgba(...,.08) — that reads because the shadow
+     is darker than the paper. Flipped, the same idea becomes black at 50% on
+     a near-black page: mathematically present, visually nothing. Dark mode
+     had inherited exactly that and so had no depth system at all.
+     Elevation here is a lit top edge plus the raised surface above, with the
+     black drop kept only to seat the card against lighter neighbours. */
+  --shadow-sm:inset 0 1px 0 rgba(255,255,255,.06), 0 2px 8px rgba(0,0,0,.55);
+  --shadow-md:inset 0 1px 0 rgba(255,255,255,.07), 0 14px 34px rgba(0,0,0,.5);
+  --shadow-lg:inset 0 1px 0 rgba(255,255,255,.08), 0 30px 70px rgba(0,0,0,.55);
+  --shadow-glow:0 16px 40px rgba(11,128,106,.24);
+  --glass-bg:rgba(23,36,31,.62);
+  --glass-bg-strong:rgba(23,36,31,.84);
   --glass-border:rgba(255,255,255,.12);
+  /* The dark-mode override of the --ink-* ramp is NOT here: that ramp is
+     declared in a second :root block further down, and :root and
+     [data-theme="dark"] have equal specificity, so source order decides.
+     The override lives immediately after it instead. */
   /* Blue fills stay the same darkness in dark mode (unlike the old lime,
      which lightened), so the ink on them stays white in both modes. */
   --on-accent:#ffffff; --on-accent-2:#211603;
@@ -92,33 +163,46 @@
 html{scroll-behavior:smooth}
 body{
   margin:0;background:var(--color-bg);color:var(--color-text);
-  font-family:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
 img{max-width:100%;display:block}
 a{color:var(--color-accent-800);text-decoration:none;transition:color .3s ease}
-a:hover{color:var(--color-accent-600)}
-[data-theme="dark"] a{color:var(--color-accent-400)}
+/* Hover brightens from -800 (8.94:1) to base (5.26:1). It used to go to
+   -600, which measures 4.38:1 on the paper — under AA for normal text. The
+   token comment above claimed "base/-600 = 5.26:1", but that ratio belongs
+   to base alone; -600 is a lighter step and was never measured separately. */
+a:hover{color:var(--color-accent)}
+[data-theme="dark"] a{color:var(--color-accent-400)}   /* teal-400, 7.97:1 */
 [data-theme="dark"] a:hover{color:var(--color-accent-300)}
 :focus-visible{outline:2px solid var(--color-accent-700);outline-offset:2px}
 ::selection{background:var(--color-accent-200);color:var(--color-ink-fixed)}
 
 h1,h2,h3{
-  font-family:"Lexend","Source Sans 3",system-ui,sans-serif;
-  letter-spacing:-.035em;font-weight:700;line-height:1.1;margin:0 0 16px;
+  font-family:"Instrument Sans",system-ui,sans-serif;
+  letter-spacing:-.035em;font-weight:600;line-height:1.1;margin:0 0 16px;
 }
-h1{font-size:clamp(34px,4.8vw,64px);letter-spacing:-.04em;font-weight:800}
+h1{font-size:clamp(34px,4.8vw,64px);letter-spacing:-.04em;font-weight:600}
 h2{font-size:clamp(27px,3.3vw,46px)}
 h3{font-size:21px;letter-spacing:-.02em;line-height:1.25}
+/* Three h2 weights, not one.
+   Every section heading on the homepage was the same 46px, which makes a
+   long page read as a flat list of equal claims — the reader gets no signal
+   about which sections carry the argument and which are supporting shelves.
+   --lead is for the pillars (the problem, the offer, the reason to switch);
+   the default carries the body of the page; --minor is for the utility
+   sections at the foot, which currently shout as loudly as the pitch. */
+h2.h2-lead{font-size:clamp(31px,4.1vw,58px);letter-spacing:-.042em;line-height:1.03}
+h2.h2-minor{font-size:clamp(23px,2.3vw,32px);letter-spacing:-.03em}
 p{margin:0 0 16px;text-wrap:pretty}
 .lede{font-size:18px;line-height:1.7;color:var(--muted);max-width:62ch}
-.tagline{font-size:19px;line-height:1.5;font-weight:600;color:var(--color-accent-800);margin:0 0 20px}
+.tagline{font-size:19px;line-height:1.5;font-weight:600;color:var(--accent-ink);margin:0 0 20px}
 .muted{color:var(--muted)}
 .accent-text{color:var(--color-accent-800)}
 [data-theme="dark"] .accent-text{color:var(--color-accent-400)}
-.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.7;margin-bottom:14px}
-.eyebrow-sm{font-size:11.5px;font-weight:700;color:var(--color-accent-800);margin-bottom:6px}
-.section-sub{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
+.eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;opacity:.7;margin-bottom:14px}
+.eyebrow-sm{font-size:11.5px;font-weight:600;color:var(--accent-ink);margin-bottom:6px}
+.section-sub{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
 
 /* ---------- layout ---------- */
 .wrap{max-width:1280px;margin:0 auto;padding:0 24px}
@@ -127,15 +211,69 @@ p{margin:0 0 16px;text-wrap:pretty}
    then a generous gap before the content it introduces. Previously the lede
    sat 16px from the content — the same gap as between two paragraphs — so the
    intro read as part of the content instead of as a header for it. */
-.section>.badge{margin-bottom:14px}
-.section>.badge+h2,.section>h2{margin-bottom:14px}
+.section>h2{margin-bottom:14px}
+
+/* ---------- vertical rhythm ----------
+   Every section used to sit 96px from the next — the same interval eleven
+   times running. Uniform spacing carries no information: it cannot tell you
+   that three sections belong to one argument and the fourth starts a new one.
+   These modifiers group the page instead of listing it. */
+.section--tight{padding-bottom:52px}    /* continues the thought above it   */
+.section--break{padding-bottom:150px}   /* closes an argument, opens another */
+@media (max-width:700px){
+  .section--break{padding-bottom:96px}
+  .section--tight{padding-bottom:40px}
+}
+
+/* ---------- lead + image split ----------
+   A section heading and two lines of lede across the full 1280px leaves most
+   of the row empty. Pairing them with a photograph uses the space, and gives
+   the page a second point where something other than a text box carries the
+   width. */
+.lead-split{
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  gap:56px;align-items:center;margin-bottom:40px;
+}
+.lead-split h2{margin-bottom:16px}
+.lead-split .lede{margin:0}
+/* Photograph on a coral block, offset — the reference's device for imagery.
+   The block is what makes a stock photo read as art-directed rather than
+   dropped in: the colour is the composition, the photo just sits in it. */
+.lead-split-figure{
+  position:relative;margin:0;padding:18px 0 0 18px;
+}
+.lead-split-figure::before{
+  content:"";position:absolute;inset:0 18px 18px 0;
+  background:var(--color-accent-3);border-radius:var(--radius-md);
+}
+.lead-split-img{
+  position:relative;display:block;
+  width:100%;height:100%;max-height:340px;object-fit:cover;object-position:50% 40%;
+  border-radius:var(--radius-md);
+}
+@media (max-width:900px){
+  .lead-split-figure{padding:14px 0 0 14px}
+  .lead-split-figure::before{inset:0 14px 14px 0}
+  .lead-split-img{max-height:240px}
+}
+@media (max-width:900px){
+  .lead-split{grid-template-columns:1fr;gap:28px;margin-bottom:30px}
+  .lead-split-img{max-height:240px}
+}
+
 .section>h2+.lede,.section>.lede{margin-bottom:44px}
 .section>.lede:last-child{margin-bottom:0}
 /* A heading that follows content needs more air above it than below. */
 .section>*+h2{margin-top:12px}
 .narrow{max-width:860px}
-.page-head{padding-top:130px}
-.hero{padding:130px 24px 80px;max-width:1280px;margin:0 auto}
+/* The fixed nav occupies the first 86px, so this padding is not the gap the
+   reader sees — it left only 44px of clearance once the badge that used to
+   sit in that space was removed, and the h1 crowded the nav. */
+.page-head{padding-top:176px}
+/* No top padding and no side padding: the hero's own full-bleed field owns
+   its spacing now, and any padding here shows as a white strip between the
+   nav and the colour, which breaks the one effect the hero exists for. */
+.hero{padding:0 0 80px;max-width:1280px;margin:0 auto}
 .stack{display:flex;flex-direction:column;gap:18px}
 .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px;align-items:center}
 /* When a split pairs a photo with a text column, centring leaves the image
@@ -168,7 +306,7 @@ p{margin:0 0 16px;text-wrap:pretty}
   content:"";position:absolute;left:0;top:2px;bottom:2px;width:1px;background:var(--color-line);
 }
 .terms-value{
-  display:block;font-family:"Lexend",inherit;font-size:17px;font-weight:700;
+  display:block;font-size:17px;font-weight:600;
   letter-spacing:-.02em;color:var(--color-accent-800);margin-bottom:4px;
 }
 [data-theme="dark"] .terms-value{color:var(--color-accent-300)}
@@ -190,34 +328,30 @@ p{margin:0 0 16px;text-wrap:pretty}
 .skip-link{
   position:absolute;left:-9999px;top:0;z-index:100;
   display:inline-flex;align-items:center;min-height:44px;padding:0 20px;
-  background:var(--color-accent-800);color:#fff;font-weight:700;font-size:14px;
+  background:var(--color-accent-800);color:#fff;font-weight:600;font-size:14px;
   border-radius:0 0 var(--radius-sm) 0;
 }
 .skip-link:focus{left:0;color:#fff}
 
 /* ---------- nav ---------- */
-.nav-wrap{position:fixed;top:0;left:0;right:0;z-index:70;padding:14px 24px 6px}
-/* Glass nav — backdrop blur 16px, translucent surface, hairline light border.
-   Text sits on --color-text (16.75:1) so the frosted layer never carries
-   low-contrast copy, per the glassmorphism accessibility caveat. */
+.nav-wrap{position:fixed;top:0;left:0;right:0;z-index:70}
+/* A plain, solid, full-width bar with a hairline under it — the same header
+   treatment SAMS uses. This was a floating translucent pill with a 16px
+   backdrop blur, a 999px radius and a drop shadow, hovering over the page.
+   Glass is a specific effect for showing that something sits above content;
+   as permanent chrome it is just cost, and on a marketing site it was the
+   first thing that said "template". */
+.nav-wrap{
+  background:var(--color-surface);
+  border-bottom:1px solid var(--color-line);
+  transition:box-shadow .2s ease;
+}
 .nav-bar{
-  max-width:1232px;margin:0 auto;display:flex;align-items:center;gap:22px;padding:8px 12px;
-  background:var(--glass-bg);
-  backdrop-filter:blur(var(--glass-blur)) saturate(180%);
-  -webkit-backdrop-filter:blur(var(--glass-blur)) saturate(180%);
-  border:1px solid var(--glass-border);
-  border-radius:999px;box-shadow:var(--shadow-md);
-  transition:box-shadow .3s ease,padding .3s var(--ease),background .3s ease,transform .3s var(--ease);
+  display:flex;align-items:center;gap:22px;
+  max-width:1280px;margin:0 auto;padding:10px 24px;
+  transition:padding .2s ease;
 }
-/* No backdrop-filter (older Firefox/Safari): fall back to an opaque bar */
-@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .nav-bar{background:var(--color-surface)}
-}
-.nav-bar:hover{box-shadow:var(--shadow-glow)}
-.nav-bar.scrolled{
-  padding:6px 10px;box-shadow:var(--shadow-lg);
-  background:var(--glass-bg-strong);
-}
+.nav-bar.scrolled{padding:6px 24px}
 .nav-bar.scrolled .nav-logo img{width:36px;height:36px}
 .nav-logo{flex:0 0 auto;display:block}
 .nav-logo img{width:44px;height:44px;border-radius:999px;object-fit:cover;transition:width .3s var(--ease),height .3s var(--ease)}
@@ -264,7 +398,7 @@ p{margin:0 0 16px;text-wrap:pretty}
 .nav-mega::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}
 .nav-item-mega:hover .nav-mega,.nav-item-mega:focus-within .nav-mega{display:grid}
 .nav-mega-col-title{
-  font-family:"Lexend",inherit;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
   color:var(--color-accent-800);margin-bottom:12px;
 }
 [data-theme="dark"] .nav-mega-col-title{color:var(--color-accent-400)}
@@ -274,7 +408,7 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 .nav-mega-col a:hover{color:var(--color-accent-800)}
 [data-theme="dark"] .nav-mega-col a:hover{color:var(--color-accent-400)}
-.nav-mega-col a.see-all{color:var(--muted);font-weight:700;font-size:12.5px;margin-top:2px}
+.nav-mega-col a.see-all{color:var(--muted);font-weight:600;font-size:12.5px;margin-top:2px}
 @media (max-width:1100px){.nav-mega{display:none !important}}
 .nav-spacer{flex:1}
 .theme-toggle,.burger{
@@ -329,12 +463,12 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 .search-result:hover,.search-result.active{background:color-mix(in srgb, var(--color-accent) 10%, transparent);color:var(--color-text)}
 .search-result-cat{
-  flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  flex:0 0 auto;font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
   color:var(--color-accent-800);background:var(--color-accent-100);border-radius:999px;padding:4px 8px;
 }
 [data-theme="dark"] .search-result-cat{color:var(--color-accent-300);background:color-mix(in srgb,var(--color-accent) 16%,transparent)}
 .search-result-body{min-width:0}
-.search-result-title{font-size:14px;font-weight:700;line-height:1.35;margin-bottom:2px}
+.search-result-title{font-size:14px;font-weight:600;line-height:1.35;margin-bottom:2px}
 .search-result-desc{font-size:12px;color:var(--muted);line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 @media (max-width:1100px){
   .nav-search{flex-basis:170px}
@@ -350,37 +484,56 @@ p{margin:0 0 16px;text-wrap:pretty}
 /* ---------- buttons ---------- */
 /* Modern buttons: gradient fill, sweeping shine on hover, lift + glow.
    Min height 48px ≥ the 44×44px touch-target rule. */
+/* Buttons follow SAMS's Button.vue exactly: a 6px radius, a flat brand fill,
+   a small shadow, and a 0.98 press. Gone are the pill shape, the gradient
+   fill, the lift on hover and the shine sweep that ran across the face of
+   every button — four separate effects on a control whose whole job is to
+   look pressable and say what it does. The press feedback is the one that
+   earns its place, because it answers the click. */
 .btn{
-  position:relative;overflow:hidden;isolation:isolate;
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  min-height:48px;padding:0 26px;border:0;border-radius:999px;
-  font-family:"Lexend",inherit;font-size:14.5px;font-weight:600;letter-spacing:-.01em;
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  min-height:40px;padding:0 16px;border:0;border-radius:var(--radius-sm);
+  font-size:14px;font-weight:500;letter-spacing:0;
   cursor:pointer;white-space:nowrap;
-  transition:transform .35s var(--ease),background .3s ease,color .3s ease,box-shadow .35s var(--ease);
+  transition:background .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease,border-color .15s ease;
 }
-.btn:hover{transform:translateY(-2px)}
-.btn:active{transform:translateY(0) scale(.985)}
-/* Shine sweep */
-.btn::after{
-  content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(120deg,transparent 20%,rgba(255,255,255,.38) 50%,transparent 80%);
-  transform:translateX(-120%);transition:transform .7s var(--ease);
-}
-.btn:hover::after{transform:translateX(120%)}
-.btn-lg{min-height:56px;padding:0 32px;font-size:16px}
-.btn-accent{background:var(--grad-brand);color:var(--on-accent);box-shadow:var(--shadow-sm)}
-.btn-accent:hover{color:var(--on-accent);box-shadow:var(--shadow-glow)}
+.btn:active{transform:scale(.98)}
+@media (prefers-reduced-motion:reduce){.btn:active{transform:none}}
+.btn-lg{min-height:46px;padding:0 22px;font-size:15px}
+.btn-accent{background:var(--color-accent);color:var(--on-accent);box-shadow:var(--shadow-sm)}
+.btn-accent:hover{background:var(--color-accent-700);color:var(--on-accent)}
+/* Buttons are anchors here, and `[data-theme="dark"] a` is (0,1,1) against
+   `.btn-accent`'s (0,1,0) — so in dark mode every primary button silently
+   took the link colour: accent-400 text on an accent fill, 2.14:1. It has
+   been wrong for as long as the dark theme has existed. It never surfaced
+   because the fill used to be a gradient, and a contrast checker cannot
+   evaluate a gradient, so it skipped these elements entirely. Flattening the
+   fill to match SAMS is what made the bug visible.
+   The other two variants have the identical flaw; they only escaped the
+   checker because their colours happen to land above 4.5:1 by luck. A button
+   should never inherit the link colour, so all three are pinned here. */
+[data-theme="dark"] .btn-accent,
+[data-theme="dark"] .btn-accent:hover{color:var(--on-accent)}
+[data-theme="dark"] .btn-outline,
+[data-theme="dark"] .btn-outline:hover{color:var(--color-text)}
+[data-theme="dark"] .btn-ghost,
+[data-theme="dark"] .btn-ghost:hover{color:#fff}
 /* Secondary button. Deliberately NOT glass: a translucent white surface on a
    light page reads as an unfinished shape rather than a control. It needs a
    visible edge and a solid surface to look pressable. */
+/* Matches SAMS's secondary: 1px neutral border, white surface, small shadow,
+   and a hover that darkens the edge and tints the fill rather than growing
+   the shadow. The 1.5px border and shadow-md hover read as a heavier control
+   than the primary next to it, which inverted the hierarchy. */
 .btn-outline{
   background:var(--color-surface);
-  border:1.5px solid color-mix(in srgb,var(--color-text) 22%, transparent);
+  border:1px solid color-mix(in srgb,var(--color-text) 22%, transparent);
   color:var(--color-text);box-shadow:var(--shadow-sm);
 }
 .btn-outline:hover{
-  background:var(--color-surface);color:var(--color-text);
-  border-color:var(--color-accent-700);box-shadow:var(--shadow-md);
+  background:color-mix(in srgb,var(--color-text) 4%, var(--color-surface));
+  color:var(--color-text);
+  border-color:color-mix(in srgb,var(--color-text) 36%, transparent);
 }
 /* Reduced motion: kill the sweep + lift, keep colour feedback */
 @media (prefers-reduced-motion:reduce){
@@ -390,24 +543,20 @@ p{margin:0 0 16px;text-wrap:pretty}
 .crumb-back{
   display:inline-flex;align-items:center;gap:8px;margin-bottom:28px;padding:9px 16px;
   border-radius:999px;border:1px solid var(--color-line);background:var(--color-surface);
-  color:var(--color-text);font-size:13.5px;font-weight:700;transition:background .3s ease;
+  color:var(--color-text);font-size:13.5px;font-weight:600;transition:background .3s ease;
 }
 .crumb-back:hover{background:color-mix(in srgb, var(--color-accent) 14%, transparent);color:var(--color-text)}
 
-/* ---------- badges, tags, chips ---------- */
-.badge{
-  display:inline-flex;align-items:center;gap:9px;margin-bottom:18px;padding:8px 16px 8px 12px;
-  border-radius:999px;background:var(--color-accent-100);color:var(--color-accent-800);
-  font-size:12.5px;font-weight:700;
-}
-.badge .dot{width:8px;height:8px;border-radius:999px;background:var(--color-accent);flex:0 0 auto;animation:vr-pulse 2.4s ease-in-out infinite}
-@keyframes vr-pulse{
-  0%,100%{box-shadow:0 0 0 0 color-mix(in srgb, var(--color-accent) 45%, transparent)}
-  50%{box-shadow:0 0 0 6px color-mix(in srgb, var(--color-accent) 0%, transparent)}
-}
+/* ---------- tags, chips ----------
+   The .badge pill that sat above almost every heading on the site is gone.
+   Nineteen of them, one per section, each restating its own heading in
+   smaller, weaker words: "FAQ" over "Questions we get on the first call",
+   "Specialties we bill for" over "Billing built around how your specialty
+   actually works". A label that repeats the thing it labels is not
+   wayfinding, it is a second, worse headline competing with the first. */
 .tag,.tag-pill{
   display:inline-block;padding:6px 13px;border-radius:999px;
-  background:var(--color-accent-100);color:var(--color-accent-800);font-size:12px;font-weight:700;
+  background:var(--color-accent-100);color:var(--color-accent-800);font-size:12px;font-weight:600;
 }
 .tag{background:var(--color-accent-2-100);color:var(--color-accent-2-800);padding:6px 12px}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
@@ -415,20 +564,26 @@ p{margin:0 0 16px;text-wrap:pretty}
 .chip{
   appearance:none;display:inline-flex;align-items:center;min-height:44px;
   padding:0 18px;border-radius:999px;border:1px solid var(--color-line);
-  background:transparent;color:var(--color-text);font-family:inherit;font-size:13px;font-weight:700;
+  background:transparent;color:var(--color-text);font-family:inherit;font-size:13px;font-weight:600;
   cursor:pointer;transition:background .3s ease,border-color .3s ease,color .3s ease;
 }
 .chip:hover{background:color-mix(in srgb, var(--color-accent) 14%, transparent)}
 .chip.active{background:var(--color-accent);border-color:var(--color-accent);color:var(--on-accent)}
 
 /* ---------- cards ---------- */
+/* Soft fill, no border, no shadow — the reference's core surface.
+   A card used to be white + 1px border + shadow, three separate devices all
+   saying "this is a distinct block" on a page where almost everything is a
+   distinct block. On near-white paper a single #f9f9f9 fill separates a card
+   perfectly well, and with the borders gone the page stops looking like a
+   wireframe. Shadow is reserved for things that genuinely float. */
 .card{
   position:relative;
-  background:var(--color-surface);border:1px solid var(--color-line);
-  border-radius:var(--radius-lg);padding:30px;box-shadow:var(--shadow-sm);
-  transition:transform .55s var(--ease),box-shadow .55s var(--ease),border-color .4s ease;
+  background:var(--color-surface);border:0;
+  border-radius:var(--radius-md);padding:28px;
+  transition:background .3s var(--ease),box-shadow .3s var(--ease);
 }
-.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:color-mix(in srgb, var(--color-accent) 32%, transparent)}
+.card:hover{box-shadow:var(--shadow-md)}
 @media (prefers-reduced-motion:reduce){
   .card:hover{transform:none}
 }
@@ -436,14 +591,14 @@ p{margin:0 0 16px;text-wrap:pretty}
 .card.dark .group-heading,.card.dark h2,.card.dark h3{color:#fff}
 .card.dark .check-list li{color:rgba(255,255,255,.85)}
 .card.dark p{color:rgba(255,255,255,.78)}
-.card-title-sm{font-size:18px;font-weight:800;letter-spacing:-.02em;line-height:1.28;margin:0 0 10px}
-.group-heading{font-size:17px;font-weight:800;letter-spacing:-.02em;margin:0 0 16px}
+.card-title-sm{font-size:18px;font-weight:600;letter-spacing:-.02em;line-height:1.28;margin:0 0 10px}
+.group-heading{font-size:17px;font-weight:600;letter-spacing:-.02em;margin:0 0 16px}
 .mini{padding:20px;border-radius:var(--radius-md);box-shadow:none}
-.mini-title{font-size:15px;font-weight:800;letter-spacing:-.015em;margin-bottom:5px}
+.mini-title{font-size:15px;font-weight:600;letter-spacing:-.015em;margin-bottom:5px}
 .mini-body{font-size:13.5px;line-height:1.5;color:var(--muted)}
 .mini.dark{background:var(--color-ink-fixed);color:#fff}
 .mini.dark .mini-body{color:rgba(255,255,255,.7)}
-.accent-fill{background:var(--grad-brand);color:var(--on-accent);border-color:transparent}
+.accent-fill{background:var(--color-accent);color:var(--on-accent);border-color:transparent}
 .accent-fill .stat-label,.accent-fill div{color:var(--on-accent)}
 .amber-fill{background:var(--grad-warm);color:var(--on-accent-2);border-color:transparent}
 .amber-fill .stat-label{color:var(--on-accent-2)}
@@ -459,18 +614,14 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 .link-card{display:block;color:var(--color-text)}
 .link-card:hover{color:var(--color-text)}
-.link-card-title{font-size:17px;font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
+.link-card-title{font-size:17px;font-weight:600;letter-spacing:-.02em;margin-bottom:6px}
 .link-card p{font-size:13.5px;line-height:1.5;color:var(--muted);margin:0}
-.link-cta{font-size:13.5px;font-weight:700;color:var(--color-accent-800)}
-.icon-circle{
-  width:38px;height:38px;border-radius:999px;background:var(--color-accent);color:var(--on-accent);
-  display:grid;place-items:center;font-size:15px;font-weight:800;margin-bottom:14px;
-}
+.link-cta{font-size:13.5px;font-weight:600;color:var(--accent-ink)}
 .check-list li,.check-item{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 78%, transparent)}
 .check-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px}
 .check,.warn,.x-mark,.check-mark{
   width:20px;height:20px;flex:0 0 auto;border-radius:999px;display:grid;place-items:center;
-  font-size:11px;font-weight:800;margin-top:2px;background:var(--color-accent);color:var(--on-accent);
+  font-size:11px;font-weight:600;margin-top:2px;background:var(--color-accent);color:var(--on-accent);
 }
 .warn{background:var(--color-accent-2);color:var(--on-accent-2)}
 .x-mark{background:color-mix(in srgb, var(--color-text) 10%, transparent);color:var(--color-text)}
@@ -479,13 +630,53 @@ p{margin:0 0 16px;text-wrap:pretty}
 .cta-mini{margin-top:24px;border-radius:var(--radius-lg);padding:28px}
 .cta-mini p{font-size:14.5px;margin-bottom:18px}
 .cta-banner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin:40px 0}
-.cta-banner-title{font-size:20px;font-weight:800;letter-spacing:-.02em}
+.cta-banner-title{font-size:20px;font-weight:600;letter-spacing:-.02em}
 
 /* ---------- stats ---------- */
-.stat-big{font-size:34px;font-weight:800;letter-spacing:-.04em;line-height:1}
+/* Big and light, in brand colour — the reference sets its 200+ / 97% at 48px
+   weight 500, not bold. A bolded stat shouts the number; a large light one
+   states it. The restraint is the point, and it is free. */
+.stat-big{
+  font-size:clamp(34px,3.4vw,46px);font-weight:500;letter-spacing:-.03em;
+  line-height:1;color:var(--accent-ink);
+}
+/* Fills already carry their own ink (white on teal, dark on amber). */
+.accent-fill .stat-big,.amber-fill .stat-big,.svc-stat .stat-big{color:inherit}
 .stat-label{font-size:13px;font-weight:600;color:var(--muted);margin-top:6px}
 .stat-card{padding:26px;border-radius:var(--radius-lg)}
 .stat-row{gap:14px}
+
+/* ---------- service page hero ----------
+   The intro copy used to run down the left of a full-width section with the
+   entire right half empty, and the three proof figures sat in their own
+   section underneath it. Pairing them fills the column with the numbers a
+   reader wants next to the pitch, and shortens the page by a section. */
+.service-head{
+  display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);
+  gap:64px;align-items:start;
+}
+.service-head-copy>*:last-child{margin-bottom:0}
+.service-head-copy .lede{max-width:60ch}
+/* One panel with ruled rows, not three stacked cards — same reasoning as the
+   capability list: three bordered boxes to show three numbers is two borders
+   too many. */
+.service-head-stats{
+  background:var(--color-surface);border:1px solid var(--color-line);
+  border-radius:var(--radius-md);padding:4px 28px;box-shadow:var(--shadow-sm);
+}
+.service-head-stats .stat-card{
+  background:none;border:0;box-shadow:none;border-radius:0;padding:24px 0;
+}
+.service-head-stats .stat-card+.stat-card{border-top:1px solid var(--color-line)}
+@media (max-width:900px){
+  .service-head{grid-template-columns:minmax(0,1fr);gap:34px}
+  .service-head-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 26px;padding:4px 24px}
+  .service-head-stats .stat-card+.stat-card{border-top:0;border-left:1px solid var(--color-line);padding-left:26px}
+}
+@media (max-width:560px){
+  .service-head-stats{grid-template-columns:minmax(0,1fr)}
+  .service-head-stats .stat-card+.stat-card{border-left:0;padding-left:0;border-top:1px solid var(--color-line)}
+}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
 
 /* ---------- comparison ----------
@@ -495,12 +686,20 @@ p{margin:0 0 16px;text-wrap:pretty}
    identically, so the table stated a preference it never showed. */
 .compare-card{padding:0;overflow:hidden;position:relative}
 .compare-card:hover{transform:none;box-shadow:var(--shadow-sm)}
+/* No divider rules. The two columns are already told apart by the tinted
+   "with us" band running down the right; a grid of hairlines on top of that
+   was drawing the table twice. */
 .compare-head{
   display:grid;grid-template-columns:1fr 1fr;gap:0;
-  border-bottom:1px solid var(--color-line);
-  font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  border-bottom:0;
+  font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
 }
 .compare-head span{padding:20px 30px;color:var(--muted)}
+.compare-head span:first-child{display:flex;align-items:center;gap:9px}
+.compare-head span:first-child::before{
+  content:"";width:8px;height:8px;border-radius:999px;
+  background:var(--color-accent-3);flex:0 0 auto;
+}
 .compare-head span:last-child{
   background:var(--color-accent-100);color:var(--color-accent-800);
   display:flex;align-items:center;gap:9px;
@@ -513,9 +712,8 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 .compare-row{
   display:grid;grid-template-columns:1fr 1fr;gap:0;
-  border-bottom:1px solid var(--color-line);transition:background .3s ease;
+  border-bottom:0;transition:background .3s ease;
 }
-.compare-row:last-child{border-bottom:0}
 .compare-row:nth-child(even){background:color-mix(in srgb,var(--color-text) 2.5%,transparent)}
 .compare-row:hover{background:color-mix(in srgb, var(--color-accent) 9%, transparent)}
 .compare-row>div{
@@ -551,7 +749,7 @@ p{margin:0 0 16px;text-wrap:pretty}
 .post-body .link-cta{
   margin-top:auto;padding-top:14px;display:inline-flex;align-items:center;gap:7px;min-height:28px;
 }
-.post-card:hover .link-cta{color:var(--color-accent-600)}
+.post-card:hover .link-cta{color:var(--accent-ink-hover)}
 /* Image height is fixed so every card in the row starts its text at the same
    point regardless of the source photo's aspect ratio. */
 .post-photo{height:210px;border-radius:0;box-shadow:none;min-height:0}
@@ -570,7 +768,7 @@ p{margin:0 0 16px;text-wrap:pretty}
 .related-list a{
   display:flex;align-items:center;justify-content:space-between;gap:14px;
   padding:13px 2px;border-bottom:1px solid var(--color-line);
-  font-size:15px;font-weight:700;color:var(--color-text);transition:color .2s ease;
+  font-size:15px;font-weight:600;color:var(--color-text);transition:color .2s ease;
 }
 .related-list li:last-child a{border-bottom:0}
 .related-list a:hover{color:var(--color-accent-800)}
@@ -581,53 +779,110 @@ p{margin:0 0 16px;text-wrap:pretty}
 
 /* ---------- quotes ----------
    Each card carries the outcome it is evidence for, so the section argues
-   with numbers instead of adjectives: situation -> what changed -> result. */
+   with numbers instead of adjectives: situation -> what changed -> result.
+
+   The whole section sits on an ink panel in BOTH themes, the same treatment
+   the hero uses, so the page has two deliberate dark anchors. Everything
+   inside therefore reads from --on-ink / --on-ink-muted, never --color-text,
+   which would invert to near-black against the panel in light mode. */
+/* Near-white, following the reference: after the saturated hero the page
+   stays light the whole way down. A second dark slab here competed with the
+   hero for "the bold moment" and there can only be one. */
+.reviews-stage{
+  position:relative;isolation:isolate;overflow:hidden;
+  background:var(--color-bg);color:var(--color-text);
+  border-radius:var(--radius-md);padding:64px 56px 52px;
+}
+/* One soft brand wash off the top-right, not a decorative gradient mesh:
+   it lifts the corner the figures sit in and stops the panel reading flat. */
+.reviews-stage::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(120% 90% at 88% -10%, color-mix(in srgb,var(--color-accent) 9%,transparent), transparent 62%);
+}
+/* Width in % / px, not ch: a ch max-width here resolves against this
+   element's own font-size (body scale), not the display heading inside it,
+   which clamped the whole block to ~200px and broke the title onto six
+   lines. It also has to clear the figures pinned top-right. */
+.reviews-lead{max-width:min(660px,58%)}
+.reviews-title{
+  font-size:clamp(34px,5.2vw,60px);line-height:1.02;letter-spacing:-.04em;
+  color:var(--color-text);margin:0 0 16px;text-wrap:balance;
+}
+.reviews-stage .lede{color:var(--muted);margin:0;max-width:46ch}
+
+/* Aggregate figures, top-right, at display scale — the section's headline
+   numbers, kept out of the slider so they do not scroll away with a card. */
+.reviews-figures{
+  position:absolute;top:72px;right:64px;display:flex;gap:44px;text-align:right;
+}
+.reviews-figure b{
+  display:block;font-size:44px;font-weight:500;
+  letter-spacing:-.04em;line-height:1;color:var(--accent-ink);
+}
+.reviews-figure span{display:block;font-size:13px;font-weight:500;color:var(--muted);margin-top:6px}
+
 .quote-card{display:flex;flex-direction:column;margin:0}
-.stars{font-size:15px;color:var(--color-gold);letter-spacing:.1em;margin-bottom:12px}
-.quote-card blockquote{margin:0 0 18px;font-size:18px;line-height:1.55;font-weight:600;letter-spacing:-.02em;flex:1}
-.quote-card figcaption{display:flex;align-items:center;gap:12px;font-size:13.5px}
-.avatar{
-  width:36px;height:36px;flex:0 0 auto;border-radius:999px;background:var(--color-accent-200);
-  color:var(--color-accent-800);display:grid;place-items:center;font-weight:800;font-size:13px;
+.quote-card .quote-body{display:flex;flex-direction:column;flex:1;min-width:0}
+.quote-top{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+.quote-index{
+  font-size:13px;font-weight:600;
+  font-variant-numeric:tabular-nums;color:var(--coral-ink);
 }
-/* Outcome strip pinned above the attribution */
-.quote-result{
-  display:flex;align-items:center;gap:12px;margin:0 0 16px;padding:14px 16px;
-  border-radius:var(--radius-sm);background:var(--color-accent-100);
-  border:1px solid color-mix(in srgb,var(--color-accent) 26%,transparent);
-}
-[data-theme="dark"] .quote-result{background:color-mix(in srgb,var(--color-accent) 12%,transparent)}
-.quote-result b{
-  font-family:"Lexend",inherit;font-size:22px;font-weight:800;letter-spacing:-.035em;
-  color:var(--color-accent-800);line-height:1;flex:0 0 auto;
-}
-[data-theme="dark"] .quote-result b{color:var(--color-accent-300)}
-.quote-result span{font-size:13px;font-weight:600;color:var(--muted);line-height:1.35}
 .quote-context{
-  font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
-  color:var(--muted);margin-bottom:10px;
+  font-size:12.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--muted);
 }
-/* Reviews section header — heading left, headline metrics right, so the
-   testimonials below get the full content width instead of half of it. */
-.reviews-head{
-  display:flex;align-items:flex-end;justify-content:space-between;
-  gap:36px;flex-wrap:wrap;margin-bottom:34px;
+.stars{font-size:15px;color:var(--color-gold);letter-spacing:.1em;margin-bottom:14px}
+.quote-card blockquote{
+  margin:0 0 22px;font-size:17.5px;line-height:1.55;font-weight:500;
+  letter-spacing:-.015em;color:var(--color-text);flex:1;
 }
-.reviews-head>div:first-child{flex:1 1 460px;min-width:0}
-.reviews-head h2{margin-bottom:12px}
-.reviews-head .lede{margin:0}
-.reviews-metrics{display:flex;gap:12px;flex:0 0 auto}
-.reviews-metrics .card{min-width:148px;padding:18px 22px}
-.reviews-metrics .stat-big{font-size:30px}
-@media (max-width:900px){
-  .reviews-head{align-items:flex-start;gap:22px}
-  .reviews-metrics{width:100%}
-  .reviews-metrics .card{flex:1}
+/* Outcome, then attribution. The outcome used to sit in its own filled,
+   bordered, rounded box inside the card — a card within a card. The number
+   is already the loudest thing here through size and weight; wrapping it in
+   a second container added an edge without adding meaning. */
+.quote-meta{border-top:1px solid var(--color-line);padding-top:20px;margin-top:auto}
+.quote-result{display:flex;align-items:baseline;gap:12px;margin:0 0 18px}
+.quote-result b{
+  font-size:30px;font-weight:600;letter-spacing:-.035em;
+  color:var(--accent-ink);line-height:1;flex:0 0 auto;
+}
+.quote-result span{font-size:13px;font-weight:500;color:var(--muted);line-height:1.35}
+.quote-card figcaption{font-size:14px;font-weight:600;color:var(--color-text)}
+.quote-card figcaption span{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
+
+@media (max-width:820px){
+  .reviews-stage{padding:44px 24px 40px;border-radius:var(--radius-md)}
+  .reviews-figures{position:static;margin:26px 0 0;text-align:left;gap:32px}
+  .reviews-figure b{font-size:34px}
+  .reviews-lead{max-width:none}
+}
+
+/* ---------- contact: direct routes ----------
+   The phone number was a <b> and the address plain text, so on a phone the
+   one thing this page exists to make easy — calling — could not be tapped.
+   They are real tel:/mailto: links now, given the room the empty left column
+   already had. */
+.contact-direct{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:0}
+.contact-direct li{padding:20px 0;border-top:1px solid var(--color-line)}
+.contact-direct li:last-child{border-bottom:1px solid var(--color-line)}
+.contact-direct span{
+  display:block;font-size:12.5px;font-weight:600;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:6px;
+}
+.contact-direct a{
+  font-size:22px;font-weight:600;letter-spacing:-.02em;
+  color:var(--accent-ink);
+}
+.contact-direct a:hover{color:var(--accent-ink-hover)}
+.contact-direct p{margin:0;font-size:14.5px;line-height:1.55;color:var(--muted)}
+@media (max-width:560px){
+  .contact-direct a{font-size:19px}
 }
 
 /* Provenance note — states plainly what these quotes are */
 .reviews-note{
-  display:flex;gap:10px;align-items:flex-start;margin-top:18px;padding:14px 16px;
+  display:flex;gap:10px;align-items:flex-start;margin-top:22px;padding:14px 16px;
   border-radius:var(--radius-sm);border:1px dashed var(--color-line);
   font-size:12.5px;line-height:1.5;color:var(--muted);
 }
@@ -637,28 +892,26 @@ p{margin:0 0 16px;text-wrap:pretty}
    Rows share one bordered container rather than floating as separate cards,
    so the list reads as a single document. The open row lifts and takes an
    accent edge, which is the only state that needs emphasis. */
-.faq-list{
-  display:flex;flex-direction:column;gap:0;
-  border:1px solid var(--color-line);border-radius:var(--radius-lg);
-  overflow:hidden;background:var(--color-surface);
-}
+/* Separate soft rows with real gaps, not one bordered box subdivided by
+   hairlines. Each question is its own object, so it should look like one —
+   and the borders were the last wireframe lines on the page. */
+.faq-list{display:flex;flex-direction:column;gap:8px;border:0;background:none}
 .faq-item{
-  background:transparent;border:0;border-bottom:1px solid var(--color-line);
-  border-radius:0;padding:4px 26px;position:relative;
+  background:var(--color-surface);border:0;
+  border-radius:var(--radius-md);padding:6px 24px;position:relative;
   transition:background .3s ease;
 }
-.faq-item:last-child{border-bottom:0}
-.faq-item:hover{background:color-mix(in srgb,var(--color-accent) 6%,transparent);box-shadow:none}
-.faq-item[open]{background:color-mix(in srgb,var(--color-accent) 8%,transparent)}
-.faq-item[open]::before{
-  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--color-accent);
-}
+.faq-item:hover{background:color-mix(in srgb,var(--color-accent) 5%, var(--color-surface))}
+.faq-item[open]{background:var(--color-accent-100)}
 .faq-item summary{
-  font-size:16.5px;font-weight:800;letter-spacing:-.015em;cursor:pointer;list-style:none;
+  font-size:16.5px;font-weight:600;letter-spacing:-.015em;cursor:pointer;list-style:none;
   display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px;
 }
 .faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary::after{content:"+";font-size:22px;font-weight:700;color:var(--color-accent-800);flex:0 0 auto}
+/* Coral marker: the one moving part in this list, and the second place the
+   contrast accent earns its keep. Teal here would disappear into the open
+   row's teal tint. */
+.faq-item summary::after{content:"+";font-size:22px;font-weight:600;color:var(--coral-ink);flex:0 0 auto}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin:14px 0 0;font-size:14.5px;line-height:1.65;color:var(--muted)}
 
@@ -673,15 +926,15 @@ p{margin:0 0 16px;text-wrap:pretty}
   background:linear-gradient(150deg,var(--color-accent-100),transparent 70%);
 }
 [data-theme="dark"] .form-header{background:linear-gradient(150deg,color-mix(in srgb,var(--color-accent) 12%,transparent),transparent 70%)}
-.form-header-title{font-family:"Lexend",inherit;font-size:19px;font-weight:700;letter-spacing:-.02em;margin-bottom:4px}
+.form-header-title{font-size:19px;font-weight:600;letter-spacing:-.02em;margin-bottom:4px}
 .form-header-sub{font-size:14px;color:var(--muted);margin:0}
 .form-body{padding:26px 30px 30px}
 .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
 .field{display:flex;flex-direction:column;gap:6px;min-width:0}
 .field-full{grid-column:1 / -1}
-.field label{font-size:13.5px;font-weight:700;display:flex;align-items:center;gap:5px}
+.field label{font-size:13.5px;font-weight:600;display:flex;align-items:center;gap:5px}
 /* Required marker is a word, not a bare asterisk (rule 59) */
-.req{font-size:11px;font-weight:700;color:var(--color-accent-800);letter-spacing:.03em}
+.req{font-size:11px;font-weight:600;color:var(--accent-ink);letter-spacing:.03em}
 .optional{font-size:11.5px;font-weight:600;color:var(--muted);letter-spacing:.02em}
 .field-hint{font-size:12.5px;color:var(--muted);margin:0}
 .contact-form input,.contact-form textarea,.contact-form select{
@@ -725,7 +978,11 @@ p{margin:0 0 16px;text-wrap:pretty}
 
 /* ---------- footer ---------- */
 .site-footer{padding-bottom:24px}
-.footer-card{background:var(--color-ink-fixed);color:#fff;border-radius:var(--radius-lg);padding:48px}
+/* Deep teal, not near-black. The page opens on a saturated brand field and
+   should close on one — a black slab at the foot reads as a different site's
+   footer bolted on. #10403b carries white at 11.55:1, so nothing here is
+   fighting for legibility. */
+.footer-card{background:#10403b;color:#fff;border-radius:var(--radius-md);padding:48px}
 /* Footer top: mission + two explicit contact routes, replacing the old
    single email-capture strip that left most of the row empty. */
 .footer-top{
@@ -735,25 +992,29 @@ p{margin:0 0 16px;text-wrap:pretty}
 .footer-brand{min-width:0}
 .footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:18px}
 .footer-logo img{width:44px;height:44px;border-radius:999px;object-fit:cover}
-.footer-logo span{font-family:"Lexend",inherit;font-size:19px;font-weight:700;letter-spacing:-.02em}
+.footer-logo span{font-size:19px;font-weight:600;letter-spacing:-.02em}
 .footer-mission{
   font-size:15px;line-height:1.7;color:rgba(255,255,255,.76);
   max-width:56ch;margin:0 0 22px;
 }
-.footer-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;min-width:0}
+/* Ruled rows, not two boxes inside a box. These were bordered cards nested
+   in the footer panel — a card within a card, which is never right, and the
+   last one left on the site. A hairline does the same separating job without
+   drawing a second container. */
+.footer-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;min-width:0}
 .footer-action{
-  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.13);
-  border-radius:var(--radius-md);padding:22px;display:flex;flex-direction:column;min-width:0;
+  background:none;border:0;border-top:1px solid rgba(255,255,255,.20);
+  border-radius:0;padding:22px 0 0;display:flex;flex-direction:column;min-width:0;
 }
 .footer-action-label{
-  font-family:"Lexend",inherit;font-size:15px;font-weight:700;letter-spacing:-.015em;margin-bottom:6px;
+  font-size:15px;font-weight:600;letter-spacing:-.015em;margin-bottom:6px;
 }
 .footer-action p{font-size:13.5px;line-height:1.55;color:rgba(255,255,255,.66);margin:0 0 14px}
 .footer-action-value{
-  display:block;font-size:15px;font-weight:700;color:var(--color-accent-400);
+  display:block;font-size:17px;font-weight:600;color:var(--color-accent-300);   /* 8.54:1 */
   margin-bottom:16px;margin-top:auto;word-break:break-word;
 }
-.footer-action-value:hover{color:var(--color-accent-300)}
+.footer-action-value:hover{color:#fff}
 .btn-block-sm{width:100%}
 .footer-action .btn-outline{
   background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.28);color:#fff;box-shadow:none;
@@ -766,7 +1027,7 @@ p{margin:0 0 16px;text-wrap:pretty}
   .footer-actions{grid-template-columns:minmax(0,1fr)}
 }
 .footer-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;padding:40px 0;border-bottom:1px solid rgba(255,255,255,.16)}
-.footer-col-title{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:16px}
+.footer-col-title{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-300);margin-bottom:16px}   /* 8.54:1 */
 .footer-cols ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
 /* Dense link lists: a full 44px per row would balloon the footer, so these
    target the WCAG 2.2 AA minimum (2.5.8, 24x24) rather than the AAA 44px. */
@@ -810,15 +1071,15 @@ p{margin:0 0 16px;text-wrap:pretty}
 [data-theme="dark"] .explorer-rail{
   background:linear-gradient(160deg,color-mix(in srgb,var(--color-accent) 12%,transparent),transparent);
 }
-.explorer-index{
-  font-family:"Lexend",inherit;font-size:44px;font-weight:800;line-height:1;
-  letter-spacing:-.05em;color:var(--color-accent-800);
-}
-[data-theme="dark"] .explorer-index{color:var(--color-accent-300)}
-.explorer-rail-stats{display:flex;flex-direction:column;gap:14px;margin-top:auto}
+/* The 01 / 02 / 03 counters that used to head this rail are gone. Numbering
+   promises a sequence, and these three services are parallel — a practice can
+   take any one of them without the others — so the count was ordering
+   something that has no order. The rail now carries only the proof metrics,
+   which is what a reader scanning it actually wants. */
+.explorer-rail-stats{display:flex;flex-direction:column;gap:14px}
 .explorer-rail-stat{display:flex;flex-direction:column;gap:1px}
 .explorer-rail-stat b{
-  font-family:"Lexend",inherit;font-size:21px;font-weight:700;letter-spacing:-.03em;
+  font-size:21px;font-weight:600;letter-spacing:-.03em;
   color:var(--color-text);line-height:1.1;
 }
 .explorer-rail-stat span{font-size:12.5px;font-weight:600;color:var(--muted)}
@@ -836,7 +1097,7 @@ p{margin:0 0 16px;text-wrap:pretty}
 [data-theme="dark"] .explorer-arrow{background:color-mix(in srgb,var(--color-accent) 18%,transparent);color:var(--color-accent-300)}
 /* Scope list — a labelled set, not free-floating chips */
 .explorer-scope-label{
-  font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  font-size:11.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
   color:var(--muted);margin-bottom:10px;
 }
 /* Chips follow the label directly. Pushing them to the card's bottom edge
@@ -855,8 +1116,7 @@ p{margin:0 0 16px;text-wrap:pretty}
     flex-direction:row;align-items:center;justify-content:space-between;
     flex-wrap:wrap;padding:22px 24px;gap:20px;
   }
-  .explorer-index{font-size:32px}
-  .explorer-rail-stats{flex-direction:row;gap:22px;margin-top:0}
+  .explorer-rail-stats{flex-direction:row;flex-wrap:wrap;gap:22px}
   .explorer-body{padding:24px}
 }
 
@@ -864,13 +1124,15 @@ p{margin:0 0 16px;text-wrap:pretty}
    The four inclusions were a centred run-on line of check marks that read as
    decoration. They are now a bordered grid of real deliverables, which is
    what makes the offer concrete enough to act on. */
+/* Deep teal, matching the footer field. Near-black shelves read as a
+   different site's components dropped into a teal page. */
 .cta-dark{
-  background:var(--color-ink-fixed);color:#fff;padding:56px;text-align:center;
+  background:#10403b;color:#fff;padding:56px;text-align:center;
   position:relative;overflow:hidden;
 }
 .cta-dark::before{
   content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(60% 70% at 12% 0%, rgba(41,96,214,.20) 0%, transparent 62%),
+  background:radial-gradient(60% 70% at 12% 0%, rgba(11,128,106,.22) 0%, transparent 62%),
              radial-gradient(50% 60% at 92% 100%, rgba(245,165,36,.14) 0%, transparent 60%);
 }
 .cta-dark>*{position:relative;z-index:1}
@@ -881,11 +1143,14 @@ p{margin:0 0 16px;text-wrap:pretty}
   display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;
   margin:0 auto 34px;max-width:1000px;text-align:left;
 }
+/* Ruled columns, not four bordered boxes inside a panel. Same card-in-card
+   as the footer contact blocks — a hairline separates them without drawing a
+   second container around each one. */
 .audit-includes span{
   display:flex;gap:10px;align-items:flex-start;
-  padding:16px 18px;border-radius:var(--radius-sm);
-  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
-  font-size:13.5px;font-weight:600;line-height:1.45;color:rgba(255,255,255,.9);
+  padding:4px 0 4px 18px;border-radius:0;
+  background:none;border:0;border-left:1px solid rgba(255,255,255,.22);
+  font-size:13.5px;font-weight:500;line-height:1.45;color:#dbe9e4;
 }
 .audit-includes span::before{
   content:"";flex:0 0 auto;width:18px;height:18px;border-radius:999px;margin-top:1px;
@@ -900,20 +1165,26 @@ p{margin:0 0 16px;text-wrap:pretty}
 
 /* ---------- core services tabbed page ---------- */
 .svc-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
-.svc-tab{appearance:none;font-family:inherit;background:var(--color-surface);border:1px solid var(--color-line);border-radius:999px;color:inherit;padding:14px 24px;font-size:14.5px;font-weight:700;cursor:pointer;transition:background .3s ease,color .3s ease,border-color .3s ease}
+.svc-tab{appearance:none;font-family:inherit;background:var(--color-surface);border:1px solid var(--color-line);border-radius:999px;color:inherit;padding:14px 24px;font-size:14.5px;font-weight:600;cursor:pointer;transition:background .3s ease,color .3s ease,border-color .3s ease}
 .svc-tab:hover{background:color-mix(in srgb, var(--color-accent) 14%, transparent)}
 .svc-tab.active{background:var(--color-text);color:var(--color-bg);border-color:var(--color-text)}
 .svc-split{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:44px;align-items:start}
 .svc-photo{height:270px;margin-bottom:24px}
-.svc-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.svc-item{padding:26px}
-.svc-item .icon-circle{width:36px;height:36px;font-size:12.5px}
-.svc-item-title{font-size:17px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px;line-height:1.25}
+/* Capability list, not six identical cards.
+   Each item was a card carrying a numbered blue disc, a title and a line of
+   body — the stock icon/heading/text tile, six times, twice over, on three
+   panels. The numbers implied a sequence that only panel 2 even loosely has
+   (and it breaks by item 5), and eighteen bordered boxes made a scan of six
+   short capabilities feel like work. Ruled rows read faster and stop the
+   page being built out of one repeated container. */
+.svc-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 44px}
+.svc-item{padding:20px 0;border-top:1px solid var(--color-line)}
+.svc-item-title{font-size:16.5px;font-weight:600;letter-spacing:-.02em;margin-bottom:5px;line-height:1.3}
 .svc-item-body{font-size:14.5px;line-height:1.58;color:var(--muted)}
 .svc-stat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
-.svc-stat{background:var(--grad-brand);color:#fff;padding:24px;border-radius:var(--radius-lg)}
+.svc-stat{background:var(--color-accent);color:#fff;padding:24px;border-radius:var(--radius-md)}
 .svc-stat-label{font-size:13px;font-weight:600;margin-top:6px;color:rgba(255,255,255,.92)}
-.svc-stat-value{font-size:28px;font-weight:800;letter-spacing:-.04em;line-height:1}
+.svc-stat-value{font-size:28px;font-weight:600;letter-spacing:-.04em;line-height:1}
 
 /* ---------- reveal animation ----------
    Timing follows the Scroll Reveal / Stagger List presets: 400-600ms,
@@ -926,13 +1197,114 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 
 /* ============================================================
-   Client reviews grid — flat cards (.card/.quote-card), rendered
-   dynamically from a JS data array. 3 columns desktop, 2 tablet,
-   1 mobile.
+   Client reviews — a one-per-view slider.
+   Rendered from a JS data array (see main.js).
+
+   This was a 3-column grid of 4 equal cards, so the fourth sat alone on
+   row two, and the 2-column tablet step stranded the third the same way.
+   A grid whose column count has to divide the number of real testimonials
+   is a grid fighting its content, and padding the list with invented
+   reviews to make it divide evenly is not an option.
+
+   One slide per view instead. Each review gets the full width to read
+   across — quote at display size on the left, the number it moved and who
+   said it on the right — and the next slide stays deliberately half-shown
+   so the track advertises itself as scrollable without an overlay hint.
+
+   Built on native scroll-snap rather than transforms: swipe, trackpad,
+   scrollbar and keyboard all work without JS re-implementing them, and if
+   the control wiring fails it degrades to an ordinary scroller.
    ============================================================ */
-.reviews-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-@media (max-width:900px){.reviews-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:640px){.reviews-grid{grid-template-columns:1fr}}
+.reviews-slider{display:grid;gap:24px;margin-top:44px}
+.reviews-track{
+  position:relative;              /* slides measure offsetLeft against this */
+  display:grid;grid-auto-flow:column;grid-auto-columns:86%;gap:22px;
+  overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;-ms-overflow-style:none;
+  padding-block:4px;
+}
+.reviews-track::-webkit-scrollbar{display:none}
+.reviews-track:focus-visible{
+  outline:3px solid var(--color-accent);outline-offset:5px;border-radius:var(--radius-md);
+}
+.reviews-track > .quote-card{scroll-snap-align:start}
+
+/* Glass slides on the ink panel. The depth comes from the surface itself —
+   a lifted translucent plane over a tinted ground — rather than from a drop
+   shadow, which a dark panel swallows anyway. */
+.reviews-track > .quote-card{
+  display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.8fr);
+  /* stretch, not start: the divider should run the height of the card. Top-
+     aligning a short proof column against a long quote left a hole under it
+     and cut the hairline off halfway down. */
+  gap:44px;align-items:stretch;padding:40px 44px;
+  background:var(--color-surface);
+  border:0;
+  border-radius:var(--radius-md);
+  transition:box-shadow .3s var(--ease);
+}
+.reviews-track > .quote-card:hover{box-shadow:var(--shadow-md)}
+.reviews-track blockquote{font-size:22px;line-height:1.5;letter-spacing:-.02em;font-weight:500;color:var(--color-text)}
+.reviews-track .quote-meta{
+  /* margin-top:auto pins the meta to the card floor when the card is a
+     column; here it is a full-height side panel with its content centred. */
+  margin-top:0;border-top:0;padding-top:0;
+  border-left:1px solid var(--color-line);padding-left:36px;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.reviews-track .quote-result b{font-size:40px}
+
+@media (max-width:1000px){
+  .reviews-track{grid-auto-columns:90%}
+  .reviews-track > .quote-card{grid-template-columns:1fr;gap:24px;padding:30px}
+  .reviews-track blockquote{font-size:19px}
+  .reviews-track .quote-meta{
+    border-left:0;padding-left:0;
+    border-top:1px solid var(--ink-line);padding-top:20px;
+    display:block;                 /* back to stacked flow below the quote */
+  }
+  .reviews-track .quote-result b{font-size:32px}
+}
+@media (max-width:640px){
+  .reviews-track{gap:14px;grid-auto-columns:92%}
+  .reviews-track > .quote-card{padding:24px}
+  .reviews-track blockquote{font-size:17.5px}
+}
+
+/* ---------- slider controls ---------- */
+.reviews-nav{display:flex;align-items:center;gap:16px}
+.reviews-dots{display:flex;align-items:center;gap:4px;margin-right:auto}
+/* 24px hit area around a 9px dot: the visible mark stays small without
+   dropping the touch target below the 24px minimum. */
+.reviews-dot{
+  min-width:24px;height:24px;padding:0 2px;border:0;background:none;
+  display:grid;place-items:center;cursor:pointer;
+}
+.reviews-dot::before{
+  content:"";display:block;width:9px;height:9px;border-radius:999px;
+  background:color-mix(in srgb,var(--color-text) 22%,transparent);
+  transition:width .35s var(--ease),background .35s var(--ease);
+}
+.reviews-dot:hover::before{background:color-mix(in srgb,var(--color-text) 42%,transparent)}
+.reviews-dot[aria-current="true"]::before{width:26px;background:var(--color-accent)}
+.reviews-dot:focus-visible{outline:2px solid var(--color-accent);outline-offset:1px;border-radius:999px}
+.reviews-count{
+  margin:0;font-size:13.5px;font-weight:600;color:var(--muted);
+  font-variant-numeric:tabular-nums;
+}
+.reviews-arrows{display:flex;gap:8px}
+.reviews-arrow{
+  width:44px;height:44px;display:grid;place-items:center;cursor:pointer;
+  border-radius:999px;border:0;
+  background:var(--color-surface);color:var(--color-text);
+  transition:background .3s ease,color .3s ease,opacity .3s ease;
+}
+.reviews-arrow:hover:not(:disabled){background:var(--color-accent-100);color:var(--accent-ink)}
+.reviews-arrow:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.reviews-arrow:disabled{opacity:.3;cursor:default}
+@media (prefers-reduced-motion:reduce){
+  .reviews-dot::before{transition:none}
+}
 
 /* ============================================================
    Connected flow — the onboarding rail.
@@ -971,13 +1343,13 @@ p{margin:0 0 16px;text-wrap:pretty}
 .flow.in .flow-step:nth-child(1) .flow-marker{transition-delay:.25s}
 .flow.in .flow-step:nth-child(2) .flow-marker{transition-delay:.6s}
 .flow.in .flow-step:nth-child(3) .flow-marker{transition-delay:.95s}
-.flow.in .flow-marker{border-color:var(--color-accent);box-shadow:var(--shadow-glow)}
+.flow.in .flow-marker{border-color:var(--color-accent)}
 .flow-num{
   width:36px;height:36px;flex:0 0 auto;border-radius:999px;
   background:var(--color-accent);color:var(--on-accent);
-  display:grid;place-items:center;font-family:"Lexend",inherit;font-size:14px;font-weight:700;
+  display:grid;place-items:center;font-size:14px;font-weight:600;
 }
-.flow-day{font-family:"Lexend",inherit;font-size:13px;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+.flow-day{font-size:13px;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
 /* Stem: joins each card up to its marker */
 .flow-stem{width:2px;height:22px;background:var(--color-accent-200);flex:0 0 auto}
 .flow.in .flow-stem{background:var(--color-accent)}
@@ -1022,34 +1394,36 @@ p{margin:0 0 16px;text-wrap:pretty}
    ============================================================ */
 .spec-index{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .spec-group{
-  background:var(--color-surface);border:1px solid var(--color-line);
-  border-radius:var(--radius-lg);padding:26px 24px;box-shadow:var(--shadow-sm);
+  background:var(--color-surface);border:0;
+  border-radius:var(--radius-md);padding:24px 22px;
   display:flex;flex-direction:column;min-width:0;
 }
+/* Hairline, not a 2px accent rule: a coloured underline under every group
+   heading made three loud horizontal bars across the section. */
 .spec-group-head{
   display:flex;align-items:center;gap:10px;padding-bottom:14px;margin-bottom:8px;
-  border-bottom:2px solid var(--color-accent-200);
+  border-bottom:1px solid var(--color-line);
 }
 .spec-group-title{
-  font-family:"Lexend",inherit;font-size:12.5px;font-weight:700;
+  font-size:12.5px;font-weight:600;
   letter-spacing:.07em;text-transform:uppercase;color:var(--color-accent-800);
 }
 [data-theme="dark"] .spec-group-title{color:var(--color-accent-300)}
 .spec-group-count{
-  margin-left:auto;font-size:12px;font-weight:700;color:var(--muted);
+  margin-left:auto;font-size:12px;font-weight:600;color:var(--muted);
   background:var(--color-bg);border-radius:999px;padding:3px 9px;
 }
 .spec-rows{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
 .spec-row{
   display:flex;align-items:center;gap:12px;min-height:48px;padding:9px 10px;
   border-radius:var(--radius-sm);color:var(--color-text);
-  border-bottom:1px solid color-mix(in srgb,var(--color-line) 60%,transparent);
+  border-bottom:0;
   transition:background .25s ease,padding-left .25s var(--ease);
 }
 .spec-rows li:last-child .spec-row{border-bottom:0}
 .spec-row:hover{background:var(--color-accent-100);color:var(--color-text);padding-left:16px}
 [data-theme="dark"] .spec-row:hover{background:color-mix(in srgb,var(--color-accent) 14%,transparent)}
-.spec-row-name{font-size:15px;font-weight:700;letter-spacing:-.015em;min-width:0}
+.spec-row-name{font-size:15px;font-weight:600;letter-spacing:-.015em;min-width:0}
 .spec-row-note{font-size:12.5px;color:var(--muted);display:block;font-weight:400;margin-top:1px;line-height:1.4}
 .spec-row-arrow{
   margin-left:auto;flex:0 0 auto;color:var(--color-accent-800);opacity:0;
@@ -1068,19 +1442,28 @@ p{margin:0 0 16px;text-wrap:pretty}
    revenue-cycle block above it.
    ============================================================ */
 .growth-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+/* Soft-filled row, not a bordered tile. The reference's service lists are
+   #f9f9f9 fills at 16px radius with no border and a circular arrow at the
+   right edge — the affordance lives in the arrow, so the container does not
+   need an outline to say "clickable". Dropping the border, the lift and the
+   sliding underline removes three effects and reads faster than all of them. */
 .growth-tile{
-  display:flex;flex-direction:column;padding:28px;min-width:0;
-  border:1px solid var(--color-line);border-radius:var(--radius-lg);
-  background:var(--color-surface);color:var(--color-text);position:relative;overflow:hidden;
-  transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .4s ease;
+  display:flex;flex-direction:column;padding:26px;min-width:0;
+  border:0;border-radius:var(--radius-md);
+  background:var(--color-bg);color:var(--color-text);position:relative;
+  transition:background .3s var(--ease);
 }
+.growth-tile:hover{background:color-mix(in srgb,var(--color-accent) 7%, var(--color-bg));color:var(--color-text)}
+/* Circular arrow, top-right, the reference's affordance. */
 .growth-tile::after{
-  content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
-  background:var(--grad-brand);transform:scaleX(0);transform-origin:left;
-  transition:transform .5s var(--ease);
+  content:"";position:absolute;top:22px;right:22px;width:34px;height:34px;
+  border-radius:999px;background:var(--color-surface);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='%230f5049' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7'/%3E%3Cpath d='M8 7h9v9'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:center;
+  transition:background-color .3s var(--ease),transform .3s var(--ease);
 }
-.growth-tile:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);color:var(--color-text);border-color:color-mix(in srgb,var(--color-accent) 34%,transparent)}
-.growth-tile:hover::after{transform:scaleX(1)}
+.growth-tile:hover::after{background-color:var(--color-accent-100);transform:translate(2px,-2px)}
+@media (prefers-reduced-motion:reduce){.growth-tile:hover::after{transform:none}}
 .growth-icon{
   width:46px;height:46px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px;
   background:var(--color-accent-100);color:var(--color-accent-800);flex:0 0 auto;
@@ -1097,7 +1480,7 @@ p{margin:0 0 16px;text-wrap:pretty}
 [data-theme="dark"] .growth-points svg{color:var(--color-accent-400)}
 .growth-cta{
   margin-top:auto;display:inline-flex;align-items:center;gap:7px;min-height:32px;
-  font-size:14px;font-weight:700;color:var(--color-accent-800);
+  font-size:14px;font-weight:600;color:var(--color-accent-800);
 }
 [data-theme="dark"] .growth-cta{color:var(--color-accent-300)}
 .growth-tile:hover .growth-cta svg{transform:translateX(4px)}
@@ -1121,7 +1504,7 @@ p{margin:0 0 16px;text-wrap:pretty}
   background:var(--color-accent-2);color:var(--on-accent-2);
 }
 .protip-label{
-  font-family:"Lexend",inherit;font-size:11.5px;font-weight:700;letter-spacing:.08em;
+  font-size:11.5px;font-weight:600;letter-spacing:.08em;
   text-transform:uppercase;color:var(--color-accent-2-800);margin-bottom:6px;
 }
 [data-theme="dark"] .protip-label{color:var(--color-accent-2-300)}
@@ -1135,8 +1518,8 @@ p{margin:0 0 16px;text-wrap:pretty}
 .dodont-col.do{border-color:color-mix(in srgb,var(--color-accent) 42%,transparent)}
 .dodont-col.dont{border-color:color-mix(in srgb,#b3261e 34%,transparent)}
 .dodont-head{
-  display:flex;align-items:center;gap:9px;font-family:"Lexend",inherit;
-  font-size:14px;font-weight:700;margin-bottom:14px;
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;font-weight:600;margin-bottom:14px;
 }
 .dodont-col.do .dodont-head{color:var(--color-accent-800)}
 .dodont-col.dont .dodont-head{color:#b3261e}
@@ -1151,7 +1534,7 @@ p{margin:0 0 16px;text-wrap:pretty}
 .data-table caption{text-align:left;padding:16px 20px 0;font-size:13px;color:var(--muted)}
 .data-table th,.data-table td{padding:14px 18px;text-align:left;vertical-align:top;border-bottom:1px solid var(--color-line)}
 .data-table thead th{
-  font-family:"Lexend",inherit;font-size:12px;font-weight:700;letter-spacing:.05em;
+  font-size:12px;font-weight:600;letter-spacing:.05em;
   text-transform:uppercase;color:var(--muted);background:var(--color-bg);
 }
 .data-table tbody tr:last-child td{border-bottom:0}
@@ -1160,12 +1543,12 @@ p{margin:0 0 16px;text-wrap:pretty}
 .data-table code{font-size:13px;background:var(--color-accent-100);padding:2px 7px;border-radius:6px;font-weight:600}
 [data-theme="dark"] .data-table code{background:color-mix(in srgb,var(--color-accent) 16%,transparent)}
 .glossary-group{margin:0 0 30px}
-.glossary-group-title{font-family:"Lexend",inherit;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 12px}
+.glossary-group-title{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 12px}
 [data-theme="dark"] .glossary-group-title{color:var(--color-accent-300)}
 .glossary-list{margin:0;padding:0;border:1px solid var(--color-line);border-radius:var(--radius-md);overflow:hidden}
 .glossary-item{padding:16px 20px;border-bottom:1px solid var(--color-line)}
 .glossary-list .glossary-item:last-child{border-bottom:0}
-.glossary-term{font-weight:700;font-size:15px;letter-spacing:-.01em;margin:0 0 4px}
+.glossary-term{font-weight:600;font-size:15px;letter-spacing:-.01em;margin:0 0 4px}
 .glossary-def{margin:0;font-size:14.5px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 78%, transparent)}
 /* Inline CTA band inside articles */
 .cta-band{
@@ -1189,9 +1572,9 @@ p{margin:0 0 16px;text-wrap:pretty}
   content:counter(cs);grid-row:1 / span 2;
   width:34px;height:34px;border-radius:999px;display:grid;place-items:center;
   background:var(--color-accent);color:var(--on-accent);
-  font-family:"Lexend",inherit;font-size:14px;font-weight:700;
+  font-size:14px;font-weight:600;
 }
-.cred-steps b{font-family:"Lexend",inherit;font-size:16px;font-weight:700;letter-spacing:-.015em;align-self:center}
+.cred-steps b{font-size:16px;font-weight:600;letter-spacing:-.015em;align-self:center}
 .cred-steps span{font-size:14.5px;line-height:1.6;color:var(--muted)}
 @media (max-width:560px){
   .cred-steps li{padding:16px}
@@ -1240,7 +1623,7 @@ p{margin:0 0 16px;text-wrap:pretty}
 @media (max-width:560px){
   h1{font-size:32px}
   h2{font-size:26px}
-  .page-head,.hero,.article{padding-top:110px}
+  .page-head,.hero,.article{padding-top:132px}
   .section{padding-bottom:64px}
   .nav-cta{display:none}
   .explorer-card,.svc-item{padding:22px}
@@ -1263,43 +1646,103 @@ p{margin:0 0 16px;text-wrap:pretty}
    the dark surface, ratios noted inline.
    ============================================================ */
 :root{
-  --ink-900:#0b1020;                 /* main dark surface  */
-  --ink-800:#131a2e;                 /* raised panel       */
+  --ink-900:#0a1a16;                 /* main dark surface  */
+  --ink-800:#12271f;                 /* raised panel       */
   --ink-line:rgba(255,255,255,.10);  /* hairline on dark   */
-  --on-ink:#eef2fb;                  /* 16.89:1 on ink-900 */
-  --on-ink-muted:#97a3bd;            /* 7.47:1  on ink-900 */
+  --on-ink:#eaf3ef;                  /* 16.2:1 on ink-900  */
+  --on-ink-muted:#9db0a8;            /* 7.3:1   on ink-900 */
 }
+/* An ink panel means "dark feature surface". Against light-mode paper it is
+   the darkest thing on the page. In dark mode that logic inverts: a panel
+   darker than an already-dark page reads as a hole, not as elevation, so the
+   ramp lightens to sit ABOVE the background instead.
+   This block must stay immediately after the :root above — they have equal
+   specificity, so whichever comes last wins. */
+[data-theme="dark"]{
+  --ink-900:#132a23;                 /* hero card — above the page         */
+  --ink-800:#1b382e;                 /* raised panel — above that          */
+  --on-ink-muted:#a5b8b0;            /* raised for the lighter teal panels */
+}
+/* The hero is the page's one saturated moment: a full-bleed brand field with
+   centred type, and everything after it near-white. That contrast is the
+   whole device — the colour is not the site's palette, it is its entrance.
+   It was a dark card in a container; the field has to reach the viewport
+   edge or it reads as another panel. */
 .ctrl-hero{
-  background:var(--ink-900);color:var(--on-ink);
-  border-radius:var(--radius-lg);padding:64px 56px;
+  background:var(--grad-brand);color:#fff;
+  border-radius:0;padding:104px 24px 84px;
   position:relative;overflow:hidden;
+  width:100vw;margin-inline:calc(50% - 50vw);
 }
+/* Lighter wash off the top-left, matching the reference. Kept subtle: the
+   gradient's lightest stop already sits at 4.87:1 for white, which is the
+   floor for the lede, so the wash must not lift it further. */
 .ctrl-hero::before{
   content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(48% 60% at 100% 0%, rgba(41,96,214,.28) 0%, transparent 62%);
+  background:radial-gradient(70% 90% at 8% 0%, rgba(255,255,255,.10) 0%, transparent 60%);
 }
 .ctrl-hero-grid{
   position:relative;z-index:1;
-  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
-  gap:52px;align-items:center;
+  max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:minmax(0,1fr);
+  gap:52px;justify-items:center;text-align:center;
 }
-.ctrl-eyebrow{
-  display:inline-flex;align-items:center;gap:9px;
-  font-family:"Lexend",inherit;font-size:11.5px;font-weight:700;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--color-accent-400);margin-bottom:18px;   /* 7.21:1 */
+@media (max-width:700px){
+  .ctrl-hero{padding:84px 20px 64px}
 }
-.ctrl-dot{
-  width:7px;height:7px;border-radius:999px;background:var(--color-accent-400);flex:0 0 auto;
-  box-shadow:0 0 0 4px rgba(126,159,231,.18);
+/* The eyebrow that sat above the h1 is gone. A kicker exists to tell the
+   reader what the heading is about before they read it — but this heading
+   already says it, in better words, at ten times the size. */
+.ctrl-hero h1{
+  color:#fff;letter-spacing:-.03em;margin-bottom:18px;
+  max-width:18ch;text-wrap:balance;
 }
-.ctrl-hero h1{color:var(--on-ink);letter-spacing:-.03em;margin-bottom:18px}
-.ctrl-hero .lede{color:var(--on-ink-muted);max-width:46ch;margin-bottom:30px}
-.ctrl-trust{display:flex;gap:34px;flex-wrap:wrap;margin-top:34px;padding-top:26px;border-top:1px solid var(--ink-line)}
-.ctrl-trust-item b{
-  display:block;font-family:"Lexend",inherit;font-weight:700;font-size:23px;
-  letter-spacing:-.02em;color:var(--on-ink);
+/* accent-100, not a dimmed white: on the gradient's lightest stop it measures
+   4.63:1 where a mid tint like accent-200 drops to 4.22 and fails. It reads
+   as secondary without going under AA. */
+.ctrl-hero .lede{color:var(--color-accent-100);max-width:52ch;margin-bottom:30px}
+.ctrl-hero .hero-ctas{justify-content:center}
+/* White pill against the field, the reference's primary. Ink on white is
+   17.19:1, and it is the highest-contrast thing on the page — which is what
+   a single primary action should be. */
+/* --color-ink-fixed, NOT --color-text: this pill's background is hard-coded
+   white, so its ink must not follow the theme. --color-text flips to near-
+   white in dark mode and the label vanished at 1.13:1. */
+.ctrl-hero .btn-accent{
+  background:#fff;color:var(--color-ink-fixed);border-radius:90px;
+  min-height:46px;padding:0 26px;font-size:15px;font-weight:500;
 }
-.ctrl-trust-item span{display:block;font-size:12.5px;color:var(--on-ink-muted);font-weight:600;margin-top:2px}
+.ctrl-hero .btn-accent:hover{background:var(--color-accent-100);color:var(--color-ink-fixed)}
+[data-theme="dark"] .ctrl-hero .btn-accent,
+[data-theme="dark"] .ctrl-hero .btn-accent:hover{color:var(--color-ink-fixed)}
+.ctrl-hero .btn-ghost{
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.42);
+  color:#fff;border-radius:90px;min-height:46px;padding:0 26px;font-size:15px;font-weight:500;
+}
+.ctrl-hero .btn-ghost:hover{background:rgba(255,255,255,.18);border-color:#fff;color:#fff}
+
+/* Credibility line, not a metric dashboard. This was three big-number /
+   small-label stacks — the stock hero-stat block every SaaS page opens with.
+   The facts are worth keeping; the template was doing the talking. Set inline
+   at body scale, it reads as a quiet aside under the CTAs and lets the
+   headline and the live claim panel carry the hero. */
+.ctrl-trust{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;
+  margin:34px 0 0;padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.22);
+  font-size:14px;font-weight:500;color:var(--color-accent-100);   /* 4.63:1 on the lightest stop */
+}
+.ctrl-trust > span{display:inline-flex;align-items:baseline;gap:6px}
+/* Hairline between items rather than a bullet glyph. */
+.ctrl-trust > span + span{
+  padding-left:22px;border-left:1px solid rgba(255,255,255,.22);
+}
+.ctrl-trust b{font-weight:600;font-size:15.5px;color:#fff}
+@media (max-width:520px){
+  /* Wrapped items would carry a divider to the start of a new line. */
+  .ctrl-trust > span + span{padding-left:0;border-left:0}
+  .ctrl-trust{gap:6px 18px}
+}
 /* Ghost button: outline style that works on the dark surface */
 .btn-ghost{
   background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.24);
@@ -1309,12 +1752,12 @@ p{margin:0 0 16px;text-wrap:pretty}
 /* Claim activity panel */
 .ctrl-panel{
   background:var(--ink-800);border:1px solid var(--ink-line);
-  border-radius:var(--radius-md);overflow:hidden;font-family:"Lexend",inherit;
+  border-radius:var(--radius-md);overflow:hidden;
 }
 .ctrl-panel-head{
   display:flex;align-items:center;justify-content:space-between;
   padding:14px 18px;border-bottom:1px solid var(--ink-line);
-  font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
   color:var(--on-ink-muted);
 }
 .ctrl-live{display:inline-flex;align-items:center;gap:7px;color:var(--color-accent-400)}
@@ -1331,7 +1774,7 @@ p{margin:0 0 16px;text-wrap:pretty}
 .ctrl-id{color:var(--on-ink-muted);font-variant-numeric:tabular-nums;font-size:12px}
 .ctrl-desc{color:var(--on-ink);min-width:0}
 .ctrl-pill{
-  font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:4px 10px;border-radius:999px;
+  font-size:10.5px;font-weight:600;letter-spacing:.04em;padding:4px 10px;border-radius:999px;
   justify-self:end;white-space:nowrap;
 }
 .ctrl-pill.paid{background:#16301f;color:#7ee08a}       /* 8.75:1 */
@@ -1358,22 +1801,22 @@ p{margin:0 0 16px;text-wrap:pretty}
 .glass-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
 .cite-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:20px;position:relative;z-index:1}
 .cite-stat{padding:28px}
-.cite-stat .stat-big{font-weight:800;font-size:36px;color:var(--color-accent-800)}
+.cite-stat .stat-big{font-weight:600;font-size:36px;color:var(--color-accent-800)}
 [data-theme="dark"] .cite-stat .stat-big{color:var(--color-accent-400)}
 .cite-stat p{font-size:14.5px;line-height:1.55;color:var(--muted);margin:8px 0 0}
-.cite-stat-source{display:block;font-size:11.5px;font-weight:700;letter-spacing:.03em;color:var(--muted);margin-top:14px}
+.cite-stat-source{display:block;font-size:11.5px;font-weight:600;letter-spacing:.03em;color:var(--muted);margin-top:14px}
 .proof-outcome{padding:36px;position:relative;z-index:1}
 .proof-outcome-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:26px}
 .proof-outcome-head h3{margin:0}
 .bar-chart{display:flex;flex-direction:column;gap:20px}
 .bar-row{display:grid;grid-template-columns:minmax(150px,220px) 1fr 64px;align-items:center;gap:16px}
-.bar-row-label{font-size:14.5px;font-weight:700}
+.bar-row-label{font-size:14.5px;font-weight:600}
 .bar-track{height:12px;border-radius:999px;background:var(--color-line);position:relative;overflow:hidden}
-.bar-fill{position:absolute;inset:0 auto 0 0;width:0;border-radius:999px;background:var(--grad-brand);transition:width 1.3s var(--ease-out2) .1s}
+.bar-fill{position:absolute;inset:0 auto 0 0;width:0;border-radius:999px;background:var(--color-accent);transition:width 1.3s var(--ease-out2) .1s}
 .bar-chart.in .bar-row:nth-child(1) .bar-fill{width:var(--bar-pct)}
 .bar-chart.in .bar-row:nth-child(2) .bar-fill{width:var(--bar-pct);transition-delay:.22s}
 .bar-chart.in .bar-row:nth-child(3) .bar-fill{width:var(--bar-pct);transition-delay:.34s}
-.bar-row-value{font-family:"Lexend",inherit;font-weight:800;font-size:17px;color:var(--color-accent-800);text-align:right}
+.bar-row-value{font-weight:600;font-size:17px;color:var(--color-accent-800);text-align:right}
 [data-theme="dark"] .bar-row-value{color:var(--color-accent-400)}
 @media (max-width:900px){
   .cite-grid{grid-template-columns:minmax(0,1fr)}
@@ -1390,8 +1833,10 @@ p{margin:0 0 16px;text-wrap:pretty}
 .ehr-teaser-copy{max-width:640px;margin:0 auto}
 .ehr-soon-pill{
   display:inline-flex;align-items:center;padding:7px 16px;border-radius:999px;
-  background:var(--color-accent-100);color:var(--color-accent-800);
-  font-family:"Lexend",inherit;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  /* Coral, not teal: teal means "available action" everywhere else on this
+     page, and this pill marks something that does not exist yet. */
+  background:var(--color-accent-3-100);color:var(--coral-ink);
+  font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
   margin-bottom:18px;
 }
 [data-theme="dark"] .ehr-soon-pill{background:color-mix(in srgb,var(--color-accent) 18%,transparent);color:var(--color-accent-300)}
