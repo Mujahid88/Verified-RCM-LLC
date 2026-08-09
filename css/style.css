@@ -9,19 +9,18 @@
    display face is a large part of why the marketing site and the product
    looked like two companies. Self-hosted, three static weights, latin only —
    50KB total against 68KB for the two variable fonts it replaces. */
-/* Display face: Fraunces, a contemporary variable serif. It was already in
-   the fonts folder, unused and unreferenced, and it is SIL OFL — so real
-   display character costs nothing here.
-   A serif headline over a geometric sans body is the one move that separates
-   this from every other RCM site, which are uniformly all-sans. The variation
-   axes are pinned conservatively: WONK 0 and low SOFT keep Fraunces from
-   showing the quirk it is capable of, which would read novelty rather than
-   authority for a company handling physicians' revenue. */
+/* Display face: Lexend — a rounded geometric sans with soft, open terminals.
+   Also already in fonts/ and SIL OFL, so no licensing decision needed.
+   Replaced Fraunces: the serif gave the page authority but read formal and
+   sharp, and a rounded face suits a service whose whole pitch is taking a
+   painful admin burden off a practice. Kept for headings only — Instrument
+   Sans still carries body copy, where Lexend's wide, generous letterforms
+   would cost reading speed at 15px. */
 @font-face{
-  font-family:"Fraunces";
-  src:url("../fonts/Fraunces-Variable.woff2") format("woff2-variations"),
-      url("../fonts/Fraunces-Variable.woff2") format("woff2");
-  font-weight:400 700; font-style:normal; font-display:swap;
+  font-family:"Lexend";
+  src:url("../fonts/Lexend-Variable.woff2") format("woff2-variations"),
+      url("../fonts/Lexend-Variable.woff2") format("woff2");
+  font-weight:300 700; font-style:normal; font-display:swap;
 }
 @font-face{
   font-family:"Instrument Sans";
@@ -194,8 +193,7 @@ a:hover{color:var(--color-accent)}
 ::selection{background:var(--color-accent-200);color:var(--color-ink-fixed)}
 
 h1,h2,h3{
-  font-family:"Fraunces","Instrument Sans",Georgia,serif;
-  font-variation-settings:"SOFT" 12,"WONK" 0,"opsz" 96;
+  font-family:"Lexend","Instrument Sans",system-ui,sans-serif;
   font-synthesis-weight:none;
   letter-spacing:-.035em;font-weight:600;line-height:1.1;margin:0 0 16px;
 }
@@ -916,25 +914,42 @@ p{margin:0 0 16px;text-wrap:pretty}
 /* Separate soft rows with real gaps, not one bordered box subdivided by
    hairlines. Each question is its own object, so it should look like one —
    and the borders were the last wireframe lines on the page. */
-.faq-list{display:flex;flex-direction:column;gap:8px;border:0;background:none}
+/* Two columns and bigger type. Ten questions in one stack is a long scroll
+   that buries the last five; splitting them halves the height and lets a
+   reader scan both halves at once. CSS columns rather than a grid so the
+   items flow naturally and a longer answer does not leave a hole opposite. */
+.faq-list{
+  columns:2;column-gap:20px;border:0;background:none;
+}
+.faq-list > .faq-item{break-inside:avoid;margin-bottom:12px}
+@media (max-width:900px){.faq-list{columns:1}}
 .faq-item{
   background:var(--color-surface);border:0;
-  border-radius:var(--radius-md);padding:6px 24px;position:relative;
+  border-radius:var(--radius-md);padding:10px 26px;position:relative;
   transition:background .3s ease;
 }
 .faq-item:hover{background:color-mix(in srgb,var(--color-accent) 5%, var(--color-surface))}
 .faq-item[open]{background:var(--color-accent-100)}
 .faq-item summary{
-  font-size:16.5px;font-weight:600;letter-spacing:-.015em;cursor:pointer;list-style:none;
-  display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px;
+  font-size:17.5px;font-weight:600;letter-spacing:-.015em;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:54px;
 }
 .faq-item summary::-webkit-details-marker{display:none}
 /* Coral marker: the one moving part in this list, and the second place the
    contrast accent earns its keep. Teal here would disappear into the open
    row's teal tint. */
-.faq-item summary::after{content:"+";font-size:22px;font-weight:600;color:var(--coral-ink);flex:0 0 auto}
+/* Round marker, matching the display face's geometry. */
+.faq-item summary::after{
+  content:"+";flex:0 0 auto;
+  width:30px;height:30px;border-radius:999px;
+  display:grid;place-items:center;
+  font-size:19px;font-weight:600;line-height:1;
+  background:var(--color-accent-3-100);color:var(--coral-ink);
+  transition:background .25s ease,transform .25s var(--ease);
+}
+.faq-item[open] summary::after{transform:rotate(180deg)}
 .faq-item[open] summary::after{content:"\2013"}
-.faq-item p{margin:14px 0 0;font-size:14.5px;line-height:1.65;color:var(--muted)}
+.faq-item p{margin:6px 0 16px;font-size:15px;line-height:1.7;color:var(--muted);max-width:60ch}
 
 /* ---------- lead capture form ----------
    Two-column field grid so the form reads as short; a labelled header and a
