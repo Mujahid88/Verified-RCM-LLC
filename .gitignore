@@ -1,3 +1,9 @@
 .DS_Store
 Thumbs.db
 *.bak
+
+# Wrangler's local state. wrangler-account.json holds the Cloudflare account
+# id and name — not a credential, but account metadata that has no reason to
+# be in a public repository serving a marketing site.
+worker/.wrangler/
+node_modules/
