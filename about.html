@@ -208,7 +208,7 @@
         </li>
       </ul>
     </div>
-    <form class="card contact-form" id="contactForm" action="https://formspree.io/f/xzdnqnly" method="POST" novalidate>
+    <form class="card contact-form" id="contactForm" action="/api/contact" method="POST" novalidate>
       <div class="form-header">
         <div class="form-header-title">Request your free practice review</div>
         <p class="form-header-sub">Takes about a minute. We reply within one business day with a concrete read on where revenue is leaking.</p>
@@ -252,6 +252,15 @@
             <p class="field-hint">A sentence or two is plenty. We will ask the detailed questions on the call.</p>
           </div>
         </div>
+        <!-- Honeypot. Hidden from people and from screen readers; bots fill
+             every field they find, so anything arriving here is discarded. -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="cf-company-website">Company website</label>
+          <input id="cf-company-website" name="company_website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAEWHeB3RHXWkInvP" data-theme="light"></div>
+
         <div class="form-actions">
           <button type="submit" class="btn btn-accent btn-lg">Request my free review</button>
           <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
@@ -317,6 +326,7 @@
     <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
   </div>
 </div>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script src="js/main.js"></script>
 </body>
 </html>

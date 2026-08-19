@@ -418,7 +418,7 @@
     sync();
   }
 
-  /* ---------- contact form validation + Formspree submit ---------- */
+  /* ---------- contact form validation + submit ---------- */
   var form = document.getElementById('contactForm');
   if (form) {
     var status = document.getElementById('formStatus');
@@ -521,10 +521,6 @@
         if (bad) bad.focus();
         return;
       }
-      if (form.action.indexOf('YOUR_FORM_ID') !== -1) {
-        if (status) { status.className = 'form-status err'; status.textContent = 'Form not configured yet: add your Formspree endpoint ID (see README).'; }
-        return;
-      }
       var btn = form.querySelector('button[type="submit"]');
       // Capture the real label so it restores correctly whatever the copy says.
       var btnLabel = btn ? btn.textContent : '';
@@ -534,14 +530,29 @@
         body: new FormData(form),
         headers: { Accept: 'application/json' }
       }).then(function (res) {
-        if (!res.ok) throw new Error('bad response');
-        form.reset();
-        if (status) { status.className = 'form-status ok'; status.textContent = 'Thank you. We will reply within one business day.'; }
-        trackLead('contact_form');
-      }).catch(function () {
-        if (status) { status.className = 'form-status err'; status.textContent = 'Something went wrong. Please email hello@verifiedrcm.com instead.'; }
+        return res.json().catch(function () { return {}; }).then(function (body) {
+          if (!res.ok || body.ok !== true) {
+            // The endpoint says what went wrong and how to recover; prefer its
+            // wording over a generic failure so the visitor is not left guessing.
+            throw new Error(body.error || 'Something went wrong. Please email info@verifiedrcm.com instead.');
+          }
+          form.reset();
+          if (status) { status.className = 'form-status ok'; status.textContent = 'Thank you. We will reply within one business day.'; }
+          trackLead('contact_form');
+        });
+      }).catch(function (err) {
+        if (status) {
+          status.className = 'form-status err';
+          status.textContent = err && err.message
+            ? err.message
+            : 'Something went wrong. Please email info@verifiedrcm.com instead.';
+        }
       }).finally(function () {
         if (btn) { btn.disabled = false; btn.textContent = btnLabel; }
+        // A Turnstile token is single-use. Without this reset a visitor who
+        // hits a validation error can never successfully submit — the retry
+        // sends a spent token and is refused, which looks like a broken form.
+        if (window.turnstile) { try { window.turnstile.reset(); } catch (e) {} }
       });
     });
   }

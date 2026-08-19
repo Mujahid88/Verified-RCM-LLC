@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "verifiedrcm-contact-form",
+  "main": "contact-form.js",
+  "compatibility_date": "2026-08-19",
+
+  // Both hostnames, because the site answers on the apex and on www, and a
+  // form posted from whichever one the visitor happened to land on has to
+  // reach the same endpoint. Same-origin either way, so no CORS preflight.
+  "routes": [
+    { "pattern": "www.verifiedrcm.com/api/contact", "zone_name": "verifiedrcm.com" },
+    { "pattern": "verifiedrcm.com/api/contact", "zone_name": "verifiedrcm.com" }
+  ],
+
+  // Non-secret configuration. RESEND_API_KEY and TURNSTILE_SECRET are
+  // deliberately NOT here — they are set as encrypted secrets so they never
+  // enter the repository.
+  "vars": {
+    "TO_EMAIL": "info@verifiedrcm.com",
+    "FROM_EMAIL": "Verified RCM Website <noreply@stanzas.tech>",
+    "ALLOWED_ORIGINS": "https://www.verifiedrcm.com,https://verifiedrcm.com"
+  },
+
+  "observability": {
+    "enabled": true
+  }
+}

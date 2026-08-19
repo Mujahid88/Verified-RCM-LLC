@@ -1000,6 +1000,11 @@ p{margin:0 0 16px;text-wrap:pretty}
   font-size:12.5px;font-weight:600;color:#b3261e;margin:0;
 }
 [data-theme="dark"] .field-error{color:#ff9b8f}
+/* Honeypot: off-screen rather than display:none, because a bot that skips
+   hidden inputs would sail past a display:none trap. Real people never see or
+   tab into it (tabindex=-1, aria-hidden on the wrapper); bots fill it. */
+.hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cf-turnstile{margin-top:20px}
 .form-actions{margin-top:22px}
 .form-actions .btn{width:100%}
 .form-trust{
