@@ -8,12 +8,19 @@
  * back, which is exactly the shape js/main.js already used for Formspree — so
  * the front end changed by one attribute rather than being rewritten.
  *
- * Mail goes out through Resend, which is already verified for stanzas.tech.
- * The From address is deliberately noreply@stanzas.tech rather than
- * verifiedrcm.com: this is a notification to ourselves, the sending domain is
- * invisible to the prospect, and using the already-verified domain means no
- * new DNS records and nothing else to keep working. Reply-To carries the
- * prospect's address, so hitting Reply in Gmail answers THEM, not the robot.
+ * Mail goes out through Resend, sending From noreply@verifiedrcm.com to
+ * info@verifiedrcm.com — the same domain at both ends, on purpose.
+ *
+ * It sent from stanzas.tech at first, reasoning that the prospect never sees
+ * the envelope so the domain did not matter. That was wrong: Gmail put every
+ * notification straight in spam. A message from a domain with no DMARC policy
+ * arriving at a mailbox on an unrelated domain, with no history between them,
+ * is close to a textbook spam profile. Sending from verifiedrcm.com makes it
+ * same-domain and DKIM-aligned under a domain that already publishes SPF and
+ * DMARC, which is what actually gets it into the inbox.
+ *
+ * Reply-To still carries the prospect's address, so hitting Reply in Gmail
+ * answers THEM, not the robot.
  *
  * Required secrets (Workers dashboard -> Settings -> Variables):
  *   RESEND_API_KEY    — a send-only key, separate from the one SAMS uses, so
@@ -26,7 +33,7 @@
  */
 
 const DEFAULT_TO = 'info@verifiedrcm.com';
-const DEFAULT_FROM = 'Verified RCM Website <noreply@stanzas.tech>';
+const DEFAULT_FROM = 'Verified RCM Website <noreply@verifiedrcm.com>';
 
 /** Fields we accept. Anything else in the payload is ignored rather than forwarded. */
 const FIELDS = ['name', 'email', 'phone', 'practice', 'specialty', 'message'];
@@ -129,6 +136,15 @@ async function verifyTurnstile(token, request, env) {
       body,
     });
     const out = await res.json();
+
+    if (out.success !== true) {
+      // siteverify says WHY it refused — invalid-input-secret means the wrong
+      // key is in TURNSTILE_SECRET, timeout-or-duplicate means the token was
+      // already spent or is stale. Without logging this the Worker just
+      // returns 403 and every cause looks identical from the outside.
+      console.error('Turnstile refused the token:', JSON.stringify(out['error-codes'] || out));
+    }
+
     return { ok: out.success === true };
   } catch (e) {
     console.error('Turnstile verification failed to complete:', e);

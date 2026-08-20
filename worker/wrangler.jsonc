@@ -17,7 +17,7 @@
   // enter the repository.
   "vars": {
     "TO_EMAIL": "info@verifiedrcm.com",
-    "FROM_EMAIL": "Verified RCM Website <noreply@stanzas.tech>",
+    "FROM_EMAIL": "Verified RCM Website <noreply@verifiedrcm.com>",
     "ALLOWED_ORIGINS": "https://www.verifiedrcm.com,https://verifiedrcm.com"
   },
 
