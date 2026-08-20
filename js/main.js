@@ -479,7 +479,7 @@
           fail('Add a little more detail (at least ' + field.minLength + ' characters).'); return;
         }
         if (field.pattern && !new RegExp('^(?:' + field.pattern + ')$').test(val)) {
-          fail('Use digits only, e.g. (623) 231-2306.');
+          fail('Use digits only, e.g. (626) 646-1230.');
         }
       });
       return ok;
@@ -508,7 +508,7 @@
         showError(field, 'Add a little more detail (at least ' + field.minLength + ' characters).'); return;
       }
       if (field.pattern && !new RegExp('^(?:' + field.pattern + ')$').test(val)) {
-        showError(field, 'Use digits only, e.g. (623) 231-2306.');
+        showError(field, 'Use digits only, e.g. (626) 646-1230.');
       }
     }
 

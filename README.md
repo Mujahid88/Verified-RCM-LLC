@@ -59,7 +59,7 @@ per-article blog images, the homepage/about/testimonial photos, and the social-s
 Old placeholder graphics are kept out of the deploy in `_backups/` for reference only.
 
 ### d) Contact details — confirmed
-`+1 (623) 231-2306` and `hello@verifiedrcm.com` (footer of every page + `about.html`) are the
+`+1 (626) 646-1230` and `info@verifiedrcm.com` (footer of every page + `about.html`) are the
 real business contact details.
 
 ---
