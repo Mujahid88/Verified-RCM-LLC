@@ -1638,6 +1638,21 @@ p{margin:0 0 16px;text-wrap:pretty}
   .cred-steps b{align-self:start}
 }
 
+/* Content-accuracy disclaimer — deliberately NOT accent-coloured like .protip.
+   This is a compliance notice, not a helpful tip, and shouldn't compete for
+   attention with the amber "pro tip" pattern or read as an alarm (no red/warn
+   colour either). Neutral surface + line border, same visual weight as a
+   caption, placed once per article right before "Related resources". */
+.content-disclaimer{
+  display:flex;gap:14px;align-items:flex-start;margin:34px 0;padding:20px 22px;
+  border-radius:var(--radius-md);border:1px solid var(--color-line);
+  background:var(--color-bg);
+}
+[data-theme="dark"] .content-disclaimer{background:color-mix(in srgb,var(--color-text) 4%,transparent)}
+.content-disclaimer svg{flex:0 0 auto;margin-top:2px;color:var(--muted)}
+.content-disclaimer p{margin:0;font-size:13.5px;line-height:1.6;color:var(--muted)}
+.content-disclaimer b{color:var(--color-text);font-weight:600}
+
 /* Key-takeaways box */
 .takeaways{
   margin:0 0 34px;padding:24px 26px;border-radius:var(--radius-md);

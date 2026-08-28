@@ -1,172 +1,164 @@
-# Verified RCM — static website
+# Verified RCM — website
 
-A complete, dependency-free static site. No build step, no framework, no CDN calls.
-Open `index.html` in a browser and it works; upload the folder to any host and it works.
+The marketing site for Verified RCM LLC, a US medical billing / revenue cycle management
+company. 59 HTML pages, one stylesheet, one script file, plus a small Cloudflare Worker
+for the contact form. No frontend build step — every page can still be opened directly
+or served as plain static files.
 
 ---
 
-## 1. What's in here
+## 1. Structure
 
 ```
 /
-├── index.html              Homepage
-├── services.html           Services overview
-├── service-*.html          3 core service detail pages
-├── specialties.html        Specialty directory (filterable)
-├── specialty-*.html        17 specialty detail pages
-├── blog.html               Blog index (filterable)
-├── blog-*.html             9 full articles
-├── about.html              About + FAQ + contact form (#contact)
-├── medical-coding.html     Coding types / modifiers / CPTs by specialty
-├── prior-auth.html         Prior authorization workflow
-├── privacy.html            Privacy policy
-├── terms.html              Terms of service
-├── hipaa-notice.html       HIPAA / Business Associate notice
-├── 404.html                Error page (matches site design)
-├── sitemap.xml             All 39 URLs
-├── robots.txt              Crawl rules + sitemap pointer
-├── favicon.ico
-├── css/
-│   └── style.css           The only stylesheet (design tokens + components + responsive)
-├── js/
-│   └── main.js             Theme toggle, mobile nav, filters, scroll reveal, form validation
-├── images/
-│   ├── hero / about / why-choose / testimonial / og-cover  (.jpg + .webp)
-│   ├── logo.jpg, favicon.png, apple-touch-icon.png
-│   └── blog/               One image per article (.jpg + .webp)
-└── fonts/                  Empty — see "Fonts" below
+├── index.html                       Homepage
+├── about.html                       About + FAQ + contact form (#contact)
+├── services.html                    Services overview
+├── service-*.html                   3 core service detail pages
+├── specialties.html                 Specialty directory (filterable)
+├── specialty-*.html                 17 specialty billing/coding guides
+├── credentialing-*.html             6 payer credentialing guides
+│                                     (Medicare, Medicaid, BCBS, UnitedHealthcare,
+│                                     Aetna, Cigna)
+├── eligibility-verification.html    Core RCM process pages
+├── prior-auth.html
+├── claims-scrubbing.html
+├── denials-management.html
+├── medical-coding.html
+├── claims-forms.html
+├── accounts-receivable-recovery.html
+├── in-house-vs-outsourced-billing.html
+├── switching-billing-companies.html
+├── rcm-glossary.html
+├── digital-marketing.html           "Growth & technology" service pages
+├── seo-services.html                (marketing services offered alongside RCM)
+├── google-business-profile.html
+├── social-media-management.html
+├── web-development.html
+├── virtual-assistant.html
+├── blog.html                        Blog index (filterable)
+├── blog-*.html                      9 full articles
+├── privacy.html / terms.html / hipaa-notice.html
+├── 404.html
+├── sitemap.xml                      59 URLs, kept in sync with the page count
+├── robots.txt
+├── css/style.css                    The only stylesheet — design tokens + components
+├── js/main.js                       Nav, filters, reveal/counter animation, form handling
+├── fonts/                           Self-hosted woff2 (see Fonts below)
+├── images/                          Licensed photography, .jpg + .webp per image
+└── worker/                          Cloudflare Worker: the contact form backend
+    ├── contact-form.js
+    └── wrangler.jsonc
 ```
 
-All paths in the HTML are **relative** (`css/style.css`, not `/css/style.css`), so the site
-works at a domain root, in a subfolder, or straight off your local disk.
+All in-page paths are relative, so the site still works opened from disk or served from
+a subfolder — the Worker is the only piece that needs an actual domain (see §4).
 
 ---
 
-## 2. Before you go live
+## 2. Design system
 
-### a) Formspree (contact form) — done
-Both forms (the About page contact form and the footer email capture on every page) point to
-`https://formspree.io/f/xzdnqnly`. Client-side validation runs before submit (required fields,
-email format, min lengths, phone pattern) and shows inline errors plus a status message.
+Teal + coral, rebuilt from an earlier lime/amber palette (which itself replaced an
+original blue). Every colour token in `css/style.css` is a **measured** contrast value,
+not an eyeballed one — the file's own comments carry the ratios and the reasoning
+(e.g. why teal and coral take opposite ink colours on purpose). Don't change a token
+without reading those comments first; several of them exist specifically because an
+earlier change silently broke AA contrast.
 
-### b) Your real domain — done
-Every page's `<link rel="canonical">`, Open Graph `og:url`, JSON-LD, `robots.txt`, and
-`sitemap.xml` point at `https://www.verifiedrcm.com` (confirmed as the real domain).
+Radii are intentionally small (10/16/20px) to match **SAMS**, the same company's
+practice-management product at `sams.verifiedrcm.com` — the two products cross-link
+(nav, footer, and a homepage section) and were deliberately brought into the same
+visual family.
 
-### c) Photography — done
-`images/` holds licensed photography (Unsplash, free license) at every filename, including
-per-article blog images, the homepage/about/testimonial photos, and the social-share cover image.
-Old placeholder graphics are kept out of the deploy in `_backups/` for reference only.
+**Fonts** — self-hosted woff2, zero third-party font requests:
+- `Lexend-Variable.woff2` — headings
+- `instrument-sans-{400,500,600}-normal.woff2` — body/UI
 
-### d) Contact details — confirmed
-`+1 (626) 646-1230` and `info@verifiedrcm.com` (footer of every page + `about.html`) are the
-real business contact details.
-
----
-
-## 3. Optional
-
-- **Analytics** — paste your GA4 / Plausible / Fathom snippet just before `</body>` in each
-  page, or before `<script src="js/main.js">`.
-- **WebP delivery** — both `.jpg` and `.webp` versions of every photo ship here. The HTML
-  currently references `.jpg` for maximum compatibility. To serve WebP with a JPG fallback,
-  wrap any `<img>` like this:
-  ```html
-  <picture>
-    <source srcset="images/hero.webp" type="image/webp">
-    <img src="images/hero.jpg" alt="...">
-  </picture>
-  ```
-  (Or let Netlify/Cloudflare do format negotiation for you — usually easier.)
-- **Fonts** — the "Corporate Trust" pairing, both self-hosted (latin subset, variable weight,
-  ~72KB total) with a `system-ui` fallback, so there are zero third-party font requests:
-  - `fonts/Lexend-Variable.woff2` (~39KB) — headings. Designed for reading proficiency.
-  - `fonts/SourceSans3-Variable.woff2` (~29KB) — body copy.
-- **Dark mode** — already built in via the moon/sun button in the nav; the choice persists
-  in `localStorage`. Delete `#themeToggle` from each page's header if you don't want it.
+`fonts/Fraunces-Variable.woff2` and `fonts/SourceSans3-Variable.woff2` are **orphaned** —
+both were tried as the display/body face at an earlier point and later replaced; nothing
+in the CSS references them anymore, so browsers never fetch them, but the files are still
+sitting in the repo. Safe to delete as housekeeping; left in place for now.
 
 ---
 
-## 4. Deploying
+## 3. Contact form (Cloudflare Worker, not Formspree)
 
-### Netlify (drag and drop)
-1. Go to <https://app.netlify.com/drop>.
-2. Drag this whole folder onto the page. Done — you get a live URL immediately.
-3. Add your domain under **Site settings → Domain management**.
+The form used to post to Formspree. It now posts same-origin to
+`/api/contact`, handled by `worker/contact-form.js` deployed as a Cloudflare Worker,
+sending through **Resend**. Rationale for the rebuild, and why mail is sent from
+`noreply@verifiedrcm.com` rather than a different domain, is documented in the comment
+block at the top of `contact-form.js` — worth reading before touching it, it explains a
+real deliverability problem the original setup had.
 
-### Netlify (from GitHub — recommended)
-1. Push this folder to a GitHub repo (the folder contents should be at the repo root, so
-   `index.html` sits at the top level).
-2. In Netlify: **Add new site → Import an existing project → GitHub**, pick the repo.
-3. Build command: **leave empty**. Publish directory: **`.`** (or the folder name if nested).
-4. Deploy. `404.html` is picked up automatically as the error page.
+**Required secrets** (Cloudflare dashboard → Workers → this worker → Settings →
+Variables, never in this repo):
+- `RESEND_API_KEY` — send-only key, kept separate from any key SAMS uses
+- `TURNSTILE_SECRET` — pairs with the Turnstile widget on the form
 
-### cPanel / shared hosting (FTP)
-1. Log into cPanel → **File Manager**, open `public_html`.
-2. Upload the contents of this folder (not the folder itself) into `public_html`, so the
-   final path is `public_html/index.html`.
-3. If you prefer FTP, connect with FileZilla and drag the contents into `public_html`.
-4. `.htaccess` isn't required — Apache serves `index.html` and `404.html` by default. If your
-   host doesn't pick up the 404, add a file named `.htaccess` containing:
-   ```
-   ErrorDocument 404 /404.html
-   ```
-5. Force HTTPS in cPanel under **Domains → force HTTPS redirect**, or enable **AutoSSL**.
-
-### GitHub Pages
-Push to a repo, then **Settings → Pages → Deploy from a branch → `main` / root**. Works as-is
-because all paths are relative.
+Confirmed working end-to-end via a real test submission (2026-08).
 
 ---
 
-## 5. What's already handled
+## 4. Hosting and deployment
 
-- Unique `<title>` and `<meta name="description">` per page, written for a US medical
-  billing / RCM audience
-- `<meta name="robots" content="index, follow">` on all 39 pages
-- Open Graph + Twitter card tags on all 39 pages; blog posts use `og:type=article` and their
-  own photo (not the generic cover) for social-share previews
-- `<link rel="canonical">` per page
-- `MedicalBusiness` JSON-LD schema on every page (name, URL, logo, phone, area served)
-- `BlogPosting` JSON-LD schema on all 9 articles (headline, image, dates, author, publisher)
-- `FAQPage` JSON-LD schema on the homepage and About page (enables FAQ rich snippets in search)
-- `sitemap.xml` (39 URLs, prioritised) and `robots.txt`
-- Viewport meta on every page
-- One `<h1>` per page, semantic `<main>` / `<section>` / `<article>` / `<nav>` / `<footer>`,
-  ordered heading hierarchy
-- Alt text on every image
-- Responsive and verified at **375px**, **768px** and **1440px** (collapsing nav with a
-  hamburger menu, single-column stacks, full-width buttons on small screens)
-- WCAG AA contrast, verified by computing every pairing rather than eyeballing it:
-  body text `#0B1B21` on `#F6FAFB` (16.75:1); muted text `#52636A` (5.96:1); accent body
-  copy and links use `--color-accent-800` (6.92:1). The base teal `--color-accent`
-  (`#0891B2`, 3.5:1) is a **fill/chrome colour only** and never carries body copy.
-  Gradients are checked at *every stop*, since white button labels sit on the lightest
-  one — `--grad-brand` bottoms out at 5.36:1 and `--grad-vivid` (which carries the
-  headline text) at 4.77:1.
-- Ink on solid accent fills is dark, not white (4.60:1 vs 3.68:1 on teal). Do not lighten
-  `--on-accent`: `#04222B` lands at 4.49:1 and misses AA by a hair.
-- Skip-to-content link on all 40 pages, `<main id="main">` landmark
-- Touch targets: 44×44px on nav links, chips, toggles, slider controls and FAQ rows
-  (AAA 2.5.5). Dense footer link lists target the AA 2.5.8 minimum (24×24) instead, since
-  44px rows would balloon the footer
-- Animated number counters, staggered card/grid reveal (~60ms per sibling, capped at 360ms),
-  nav shrink-on-scroll, floating hero cards, badge pulse, button shine sweep — all respect
-  `prefers-reduced-motion`
-- Testimonial slider built on native scroll-snap: fully usable with no JS, keyboard
-  arrow-key support, ARIA labels, and dots that stay in sync with scroll position
-- Keyboard focus rings (`:focus-visible`)
-- No console errors, no external requests (fonts and images are all self-hosted)
+- **Domain**: `verifiedrcm.com` / `www.verifiedrcm.com`, registered at Namecheap.
+- **DNS/CDN**: proxied through **Cloudflare** (both apex and `www`) — this is what makes
+  the `/api/contact` Worker route possible. TLS is Cloudflare's own certificate.
+- **Origin**: the static site is still deployed via **GitHub Pages** from this repo's
+  `main` branch (confirm current state in this repo's Settings → Pages if it matters —
+  not re-verified every session).
+- **Deploying**: push to `main`. There's no build step for the HTML/CSS/JS — GitHub
+  Pages serves the repo as-is. The Worker is deployed **separately** via
+  `wrangler deploy` from inside `worker/` — pushing this repo does **not** redeploy the
+  Worker; that's a manual/separate step.
 
 ---
 
-## 6. Quick checklist
+## 5. Analytics and consent
 
-- [x] Formspree endpoint wired in (about + every footer)
-- [x] Real domain confirmed everywhere (HTML + sitemap + robots)
-- [x] Licensed images in place in `images/` and `images/blog/`
-- [x] Phone number and email confirmed
-- [ ] Add your analytics snippet (optional, see section 3)
-- [ ] Decide on final deploy target (GitHub Pages / Netlify / Vercel / Namecheap hosting)
-- [ ] Submit `sitemap.xml` in Google Search Console
-- [ ] Test the contact form end to end after adding the Formspree ID
+GA4 (`G-M6QSPSLHV2`) is live sitewide, gated behind a cookie-consent banner using GA4
+Consent Mode (default-accept with an explicit opt-out), disclosed in `privacy.html`.
+Tracked events include the contact form, phone clicks, and email clicks.
+
+---
+
+## 6. SEO, schema, accessibility
+
+- Unique `<title>`/`<meta description>` per page, `<link rel="canonical">`,
+  Open Graph + Twitter cards throughout.
+- `MedicalBusiness` JSON-LD on every page, including the real registered business
+  address, phone, `sameAs` (LinkedIn, Facebook, Trustpilot). `BlogPosting`, `FAQPage`,
+  `BreadcrumbList`, and `HowTo` schema where relevant.
+- Every specialty/credentialing/coding/process page (33 of them) carries a
+  **content-accuracy disclaimer** (`.content-disclaimer`, just above "Related resources")
+  — codes and payer policy go stale, and this makes that explicit rather than implying
+  the site is a substitute for current payer verification.
+- WCAG AA target: `pa11y --standard WCAG2AA` should return 0 on both light and dark theme.
+  Dark-theme pa11y runs need a ~2s wait after the theme toggle click, or most findings
+  are phantom (mid-transition colour values, not real failures).
+- `sitemap.xml` is kept at exactly the live page count (59) — if you add or remove a
+  page, update it in the same commit.
+
+---
+
+## 7. Local preview
+
+```bash
+python -m http.server 8891 --directory .
+```
+or, from the Claude Code session, `preview_start` with the launch.json entry
+`verified-rcm-static-site` (defined in `D:\Claude\.claude\launch.json`, one level up from
+this repo). The previous setup used a custom PowerShell script (`serve.ps1`) that no
+longer exists — this repo doesn't need one now that Python's built-in server covers it.
+
+---
+
+## 8. Known gaps
+
+- [ ] Delete the two orphaned font files (§2) — cosmetic, no functional impact.
+- [ ] Confirm whether GitHub Pages is still the actual origin behind Cloudflare, or
+      whether hosting moved somewhere else at some point (§4) — inferred from response
+      headers, not confirmed directly.
+- [ ] Clinical/payer content (CPT codes, denial reasons, credentialing steps) reflects
+      standard practice as documented, not a real payer-mix-specific review — the
+      disclaimer in §6 covers this in the meantime.
