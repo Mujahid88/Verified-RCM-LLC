@@ -1,7 +1,7 @@
 # Verified RCM — website
 
 The marketing site for Verified RCM LLC, a US medical billing / revenue cycle management
-company. 59 HTML pages, one stylesheet, one script file, plus a small Cloudflare Worker
+company. 71 HTML pages, one stylesheet, one script file, plus a small Cloudflare Worker
 for the contact form. No frontend build step — every page can still be opened directly
 or served as plain static files.
 
@@ -17,6 +17,11 @@ or served as plain static files.
 ├── service-*.html                   3 core service detail pages
 ├── specialties.html                 Specialty directory (filterable)
 ├── specialty-*.html                 17 specialty billing/coding guides
+├── specialty-cardiology-*.html      12 cluster articles supporting the cardiology
+│                                     pillar (modifiers, denials, NCCI/MUE, E/M,
+│                                     echo/cath/stress/device billing, ICD-10,
+│                                     Medicare LCD coverage, prior auth, IDTF
+│                                     credentialing) — pilot for the other 16
 ├── credentialing-*.html             6 payer credentialing guides
 │                                     (Medicare, Medicaid, BCBS, UnitedHealthcare,
 │                                     Aetna, Cigna)
@@ -37,7 +42,12 @@ or served as plain static files.
 ├── web-development.html
 ├── virtual-assistant.html
 ├── blog.html                        Blog index (filterable)
-├── blog-*.html                      9 full articles
+├── blog-*.html                      2 full articles + 7 redirect stubs (2026-08-28: retired
+│                                     patient-facing posts that duplicated the matching
+│                                     specialty-*.html guide — meta-refresh + canonical to
+│                                     the specialty page, since GitHub Pages can't serve a
+│                                     true server-side 301; internal links now point straight
+│                                     at the specialty page, skipping the redirect hop)
 ├── privacy.html / terms.html / hipaa-notice.html
 ├── 404.html
 ├── sitemap.xml                      59 URLs, kept in sync with the page count
