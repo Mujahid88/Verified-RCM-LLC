@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Cardiology NCCI Edits and MUE Limits Explained | Verified RCM</title>
+<meta name="description" content="Cardiology NCCI bundling edits and MUE unit limits explained by procedure family, with the modifier indicator and MAI values that decide whether an edit or a denial can be appealed.">
+<link rel="canonical" href="https://www.verifiedrcm.com/specialty-cardiology-ncci-mue.html">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cardiology NCCI Edits and MUE Limits Explained | Verified RCM">
+<meta property="og:description" content="Cardiology NCCI bundling edits and MUE unit limits explained by procedure family, with the modifier indicator and MAI values that decide whether an edit or a denial can be appealed.">
+<meta property="og:url" content="https://www.verifiedrcm.com/specialty-cardiology-ncci-mue.html">
+<meta property="og:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<meta property="og:site_name" content="Verified RCM">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cardiology NCCI Edits and MUE Limits Explained | Verified RCM">
+<meta name="twitter:description" content="Cardiology NCCI bundling edits and MUE unit limits explained by procedure family, with the modifier indicator and MAI values that decide whether an edit or a denial can be appealed.">
+<meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Cardiology NCCI Edits and MUE Limits: The Bundling Rules That Cause Denials","description":"Cardiology NCCI bundling edits and MUE unit limits explained by procedure family, with the modifier indicator and MAI values that decide whether an edit or a denial can be appealed.","image":"https://www.verifiedrcm.com/images/og-cover.jpg","author":{"@type":"Person","name":"Phares A., MD","honorificSuffix":"MD","jobTitle":"Physiotherapist","hasCredential":[{"@type":"EducationalOccupationalCredential","credentialCategory":"degree","name":"Doctor of Medicine (MD)"},{"@type":"EducationalOccupationalCredential","credentialCategory":"certification","name":"Certified Professional Coder (CPC)","recognizedBy":{"@type":"Organization","name":"AAPC"}}]},"publisher":{"@type":"Organization","name":"Verified RCM","logo":{"@type":"ImageObject","url":"https://www.verifiedrcm.com/images/logo.jpg"}},"datePublished":"2026-08-28","dateModified":"2026-08-28","about":{"@type":"MedicalSpecialty","name":"Cardiology"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.verifiedrcm.com/specialty-cardiology-ncci-mue.html"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Cardiology","item":"https://www.verifiedrcm.com/specialty-cardiology.html"},{"@type":"ListItem","position":4,"name":"NCCI edits and MUE limits","item":"https://www.verifiedrcm.com/specialty-cardiology-ncci-mue.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where do I look up the current NCCI indicator for a specific cardiology code pair?","acceptedAnswer":{"@type":"Answer","text":"The CMS NCCI Procedure-to-Procedure Edits Lookup Tool is the authoritative, always-current source — indicator values change quarterly, so anything published in an article, including this one, should be treated as a starting point to verify there, not a final answer to build a permanent scrubber rule on."}},{"@type":"Question","name":"Can a modifier ever override an MUE unit cap the way it can override an NCCI edit?","acceptedAnswer":{"@type":"Answer","text":"No — MUEs and NCCI PTP edits are different mechanisms. A modifier can bypass an NCCI edit when the indicator allows it. An MUE is a per-code, per-day unit ceiling; the only way past it is billing on separate lines with documentation showing genuinely distinct services, and only where the MAI value permits an appeal at all."}},{"@type":"Question","name":"Why did a code pair that used to bundle suddenly start paying separately?","acceptedAnswer":{"@type":"Answer","text":"NCCI PTP edits are revised quarterly — pairs are added, changed, or deleted (modifier indicator 9) on a rolling basis. A scrubber rule tuned to one quarter's file can start passing claims it should be catching, or blocking claims that should now pay, by the next quarter if nobody updates it against the current file."}}]}
+</script>
+<!-- Google tag (gtag.js) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'granted'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-M6QSPSLHV2');
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="nav-wrap">
+  <div class="nav-bar" id="navBar">
+    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Verified RCM</a>
+      <div class="nav-item-mega">
+      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
+      <div class="nav-mega">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Billing</div>
+          <a href="eligibility-verification.html">Eligibility Verification</a>
+          <a href="denials-management.html">Denials Management</a>
+          <a href="prior-auth.html">Prior Authorization</a>
+          <a href="claims-scrubbing.html">Claims Submission</a>
+          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Coding</div>
+          <a href="medical-coding.html">Coding Overview</a>
+          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
+          <a href="specialty-cardiology.html">Cardiology Coding</a>
+          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Credentialing</div>
+          <a href="credentialing-medicare.html">Medicare</a>
+          <a href="credentialing-medicaid.html">Medicaid</a>
+          <a href="credentialing-bcbs.html">BCBS</a>
+          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+          <a href="credentialing-aetna.html">Aetna</a>
+          <a href="credentialing-cigna.html">Cigna</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Practice Growth</div>
+          <a href="digital-marketing.html">Digital Marketing</a>
+          <a href="seo-services.html">Healthcare SEO</a>
+          <a href="google-business-profile.html">Google Business Profile</a>
+          <a href="social-media-management.html">Social Media</a>
+          <a href="web-development.html">Web Development</a>
+          <a href="virtual-assistant.html">Virtual Assistants</a>
+        </div>
+      </div>
+    </div>
+      <a href="specialties.html" class="nav-link">Specialties</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="about.html" class="nav-link active">About us</a>
+    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
+    </nav>
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+    <div class="nav-spacer"></div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
+    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Verified RCM</a>
+    <a href="services.html">Services</a>
+    <a href="specialties.html">Specialties</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About us</a>
+  <a href="https://sams.verifiedrcm.com">SAMS</a>
+  </div>
+</div>
+<main id="main">
+<article class="wrap article">
+  <a href="specialty-cardiology.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Cardiology billing and coding guide</a>
+  <h1>Cardiology NCCI edits and MUE limits: the bundling rules that cause denials.</h1>
+  <p class="lede">Two CMS values decide whether a bundled or capped cardiology code is billable at all &mdash; the NCCI modifier indicator and the MUE Adjudication Indicator &mdash; and almost nobody publishing cardiology billing content states either one. This guide explains what they mean, where they hit hardest in cardiology, and, critically, how to tell whether a denial built on either one is worth appealing before you spend staff time on it.</p>
+  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-cardiology.html">cardiology billing and coding guide</a></span></div>
+
+  <section class="takeaways" aria-label="Key takeaways">
+    <h2>Key takeaways</h2>
+    <ul>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The modifier indicator, not the modifier, decides whether an edit can be bypassed.</b> Appending 59 to a 0-indicator pair changes nothing.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The MAI, not the MUE value itself, decides whether an appeal is possible.</b> MAI 2 is a dead end regardless of documentation quality.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Stress-test-plus-echo, same visit, is cardiology's single most common bundling trip point.</b></span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>These values change quarterly.</b> A scrubber rule that was right in January can be wrong by autumn if nobody re-checks it against the current file.</span></li>
+    </ul>
+  </section>
+
+  <h2>Two systems, two questions</h2>
+  <p>NCCI Procedure-to-Procedure (PTP) edits and Medically Unlikely Edits (MUEs) answer different questions, and cardiology billers routinely conflate them because both show up as a denial that looks like "too much billed at once." A PTP edit asks: <i>can these two different codes be billed together on the same claim?</i> An MUE asks: <i>how many units of this one code are plausible for one patient on one date of service?</i> The mechanism for overriding each is different, and mixing them up is why appeals fail.</p>
+
+  <h2>NCCI modifier indicators</h2>
+  <p>Every Column 1/Column 2 code pair in the NCCI PTP edit file carries a modifier indicator that decides, absolutely, whether an override is even possible:</p>
+  <ul class="check-list">
+    <li><span class="warn">0</span><span><b>Never bypassable.</b> The edit stands regardless of any modifier appended to either code. If the pair you're billing carries a 0, the second code is not separately payable under any documentation.</span></li>
+    <li><span class="check">1</span><span><b>Bypassable with an NCCI-associated modifier</b> (59 or the specific X-modifier &mdash; XE, XS, XP, XU) <b>and</b> supporting documentation. The modifier alone doesn't win the claim; the record has to actually show the second service was distinct.</span></li>
+    <li><span class="check">9</span><span><b>Edit deleted.</b> The pair no longer applies going forward; treat any historical denial under it as void for current dates of service.</span></li>
+  </ul>
+  <p>Where this hits cardiology hardest: an echocardiogram and a stress test performed at the same visit routinely trigger a Column 1/Column 2 pair, because when the echo is a component of the stress protocol itself &mdash; not a separately ordered, separately interpreted study &mdash; it isn't separately payable. The professional/technical pair is the second recurring case: if a facility has already billed the technical component for a study, billing the global fee for the same study on your side creates an internal duplicate that both claims eventually get audited against, even when submitted weeks apart.</p>
+  <p>⚠️ Billing-industry sources consistently describe the Doppler add-on codes <code>93320</code> and <code>93325</code> as bundled into <code>93306</code> under a modifier indicator of 0. This build attempted to confirm that value directly against CMS's own NCCI PTP edit file and Policy Manual and could not &mdash; every automated retrieval attempt against cms.gov returned an access error during this build. Treat it as reported-but-unconfirmed, and check the current pair in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before building a scrubber rule on it.</p>
+
+  <h2>MUE Adjudication Indicators (MAI)</h2>
+  <p>The MUE itself is just a number &mdash; the maximum units of a code payable for one patient on one date of service. The MAI attached to that number is what actually decides what happens when a claim exceeds it:</p>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <caption>MAI values and what each one means for a cardiology unit-cap denial.</caption>
+      <thead><tr><th scope="col">MAI</th><th scope="col">Type</th><th scope="col">What it means</th></tr></thead>
+      <tbody>
+        <tr><td><code>1</code></td><td>Claim-line edit</td><td>Units above the cap deny that line; a genuinely repeated, medically necessary study can often be split across separate lines with the correct modifier and documentation.</td></tr>
+        <tr><td><code>2</code></td><td>Absolute, date-of-service edit</td><td>CMS treats exceeding this as clinically implausible for that code, full stop. No override, no appeal, regardless of documentation quality.</td></tr>
+        <tr><td><code>3</code></td><td>Date-of-service edit, appealable</td><td>Rare in cardiology outside multi-vessel interventional work, but a real path exists with documentation that the excess units reflect genuinely distinct sessions.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Duplex vascular scans and echocardiography add-on codes are where MUE ceilings show up most often in general cardiology billing. The most common pattern is billing a complete study and a limited follow-up study of the same vessel territory on the same day &mdash; usually a workflow problem (two separate orders placed for what should have been a single study) rather than a genuine coding decision, which is exactly why it's preventable further upstream than the claim.</p>
+
+  <div class="protip">
+    <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
+    <div><div class="protip-label">Pro tip</div><p>Build a two-question checklist into your denial workflow before any bundling or unit-cap appeal gets written: (1) what's the modifier indicator or MAI for this specific pair or code, checked in the current CMS lookup tool, not memory; (2) does the chart actually document the distinction the override would claim. If either answer is "no," don't write the appeal &mdash; correct the claim or write it off, and spend the staff time on the ones that can actually be won.</p></div>
+  </div>
+
+  <h2>Why these values can't be memorized</h2>
+  <p>NCCI PTP edits and MUE values are both revised quarterly &mdash; additions, deletions, and revisions publish four times a year. A scrubber rule or a coder's mental model tuned to one quarter's file can silently start passing claims it should be catching, or blocking claims that should now be payable, by the next quarter. This is precisely why every specific indicator or MAI value in this guide carries a verification note rather than being stated as permanent fact: the correct habit is to check the current file for the specific pair or code every time it matters, not to memorize a table from an article, including this one.</p>
+
+  <div class="cta-band">
+    <div>
+      <h3>Not sure which of your bundling denials are actually winnable?</h3>
+      <p>We'll check the current NCCI and MUE values against your denial log and tell you which appeals are worth filing and which claims to write off.</p>
+    </div>
+    <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>Where do I look up the current NCCI indicator for a specific cardiology code pair?</summary><p>The CMS NCCI Procedure-to-Procedure Edits Lookup Tool is the authoritative, always-current source &mdash; indicator values change quarterly, so anything published in an article, including this one, should be treated as a starting point to verify there, not a final answer to build a permanent scrubber rule on.</p></details>
+    <details class="faq-item"><summary>Can a modifier ever override an MUE unit cap the way it can override an NCCI edit?</summary><p>No &mdash; MUEs and NCCI PTP edits are different mechanisms. A modifier can bypass an NCCI edit when the indicator allows it. An MUE is a per-code, per-day unit ceiling; the only way past it is billing on separate lines with documentation showing genuinely distinct services, and only where the MAI value permits an appeal at all.</p></details>
+    <details class="faq-item"><summary>Why did a code pair that used to bundle suddenly start paying separately?</summary><p>NCCI PTP edits are revised quarterly &mdash; pairs are added, changed, or deleted (modifier indicator 9) on a rolling basis. A scrubber rule tuned to one quarter's file can start passing claims it should be catching, or blocking claims that should now pay, by the next quarter if nobody updates it against the current file.</p></details>
+  </div>
+
+  <div class="content-disclaimer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
+    <p><b>Verify before billing.</b> NCCI modifier indicators and MUE/MAI values are published by CMS and revised quarterly. This page states the indicator and MAI category system with confidence but flags specific pair-level values that could not be confirmed against CMS's primary files during this build &mdash; check the current value for any code or pair in the CMS NCCI and MUE lookup tools before relying on it operationally.</p>
+  </div>
+
+  <h2>Related resources</h2>
+  <ul class="related-list">
+    <li><a href="specialty-cardiology.html">Cardiology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="specialty-cardiology-denials-appeals.html">Cardiology denials and appeals <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="specialty-cardiology-echocardiogram-billing.html">Echocardiogram billing guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+  </ul>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-card">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
+          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        </div>
+        <div class="footer-actions">
+          <div class="footer-action">
+            <div class="footer-action-label">Book a consultation</div>
+            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
+            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
+            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
+          </div>
+          <div class="footer-action">
+            <div class="footer-action-label">Rate your experience</div>
+            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
+            <!-- TrustBox widget - Review Collector -->
+            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
+            <!-- End TrustBox widget -->
+          </div>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 17 specialties</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+        <nav class="footer-legal" aria-label="Legal">
+          <a href="privacy.html">Privacy policy</a>
+          <a href="terms.html">Terms of service</a>
+          <a href="hipaa-notice.html">HIPAA notice</a>
+          <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+        </nav>
+        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
+<!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<!-- End TrustBox script -->
+<script src="js/main.js"></script>
+</body>
+</html>
