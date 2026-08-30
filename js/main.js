@@ -70,7 +70,7 @@
   /* ---------- site search ----------
      A real input box that lives in the nav (not an icon hiding a modal),
      with results dropping down beneath it. Loads search-index.json once
-     (54 pages, ~11KB), matches on title + description, case-insensitive
+     (266 pages, ~86KB), matches on title + description, case-insensitive
      substring. No server to query on a static site, so this is the whole
      "backend". */
   var navSearch = document.getElementById('navSearch');
