@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>NCCI Edits and Bundling Traps in Behavioral Health Billing | Verified RCM</title>
+<meta name="description" content="NCCI edits behavioral health bundling: 90791/90792 same-day stacking, E/M-plus-add-on bundling logic, testing code column1/column2 pairs, and where MUE values need direct confirmation.">
+<link rel="canonical" href="https://www.verifiedrcm.com/specialty-mental-health-ncci-bundling-behavioral-health.html">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NCCI Edits and Bundling Traps in Behavioral Health Billing | Verified RCM">
+<meta property="og:description" content="NCCI edits behavioral health bundling: 90791/90792 same-day stacking, E/M-plus-add-on bundling logic, testing code column1/column2 pairs, and where MUE values need direct confirmation.">
+<meta property="og:url" content="https://www.verifiedrcm.com/specialty-mental-health-ncci-bundling-behavioral-health.html">
+<meta property="og:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<meta property="og:site_name" content="Verified RCM">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NCCI Edits and Bundling Traps in Behavioral Health Billing | Verified RCM">
+<meta name="twitter:description" content="NCCI edits behavioral health bundling: 90791/90792 same-day stacking, E/M-plus-add-on bundling logic, testing code column1/column2 pairs, and where MUE values need direct confirmation.">
+<meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"NCCI Edits and Bundling Traps in Behavioral Health Billing","description":"NCCI edits behavioral health bundling: 90791/90792 same-day stacking, E/M-plus-add-on bundling logic, testing code column1/column2 pairs, and where MUE values need direct confirmation.","image":"https://www.verifiedrcm.com/images/og-cover.jpg","author":{"@type":"Person","name":"Phares A., MD","honorificSuffix":"MD","jobTitle":"Physiotherapist","hasCredential":[{"@type":"EducationalOccupationalCredential","credentialCategory":"degree","name":"Doctor of Medicine (MD)"},{"@type":"EducationalOccupationalCredential","credentialCategory":"certification","name":"Certified Professional Coder (CPC)","recognizedBy":{"@type":"Organization","name":"AAPC"}}]},"publisher":{"@type":"Organization","name":"Verified RCM","logo":{"@type":"ImageObject","url":"https://www.verifiedrcm.com/images/logo.jpg"}},"datePublished":"2026-08-28","dateModified":"2026-08-28","about":{"@type":"MedicalSpecialty","name":"Mental Health / Behavioral Health"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.verifiedrcm.com/specialty-mental-health-ncci-bundling-behavioral-health.html"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Mental Health","item":"https://www.verifiedrcm.com/specialty-mental-health.html"},{"@type":"ListItem","position":4,"name":"NCCI Edits and Bundling Traps in Behavioral Health Billing","item":"https://www.verifiedrcm.com/specialty-mental-health-ncci-bundling-behavioral-health.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can we bill 90791 and 90792 for the same patient in the same intake window?","acceptedAnswer":{"@type":"Answer","text":"Not for the same episode of care. Both codes report the same underlying service, a psychiatric diagnostic evaluation, with 90792 adding a prescriber's medical assessment on top. Billing both routinely denies the second claim, whether the edit fires as a formal NCCI Column 1/Column 2 pair or as a payer-specific duplicate/frequency edit — confirm which mechanism your clearinghouse and top payers actually use before assuming an X-modifier clears it, because if the pair carries a modifier indicator of 0, no modifier changes the outcome."}},{"@type":"Question","name":"Is billing a standalone psychotherapy code plus a separate E/M code on the same day an NCCI edit?","acceptedAnswer":{"@type":"Answer","text":"It behaves like one operationally even where it isn't a formally published Column 1/Column 2 pair. CPT structure requires the psychotherapy time be reported as an add-on to the E/M code (90833, 90836, or 90838) when the same clinician performs both services the same day — billing 90834 next to 99214 as two independent lines reports the same clinical encounter twice and is treated as a bundling violation by scrubbers and payers regardless of the specific edit mechanism behind the denial."}},{"@type":"Question","name":"How do we know if an MUE denial on a testing or psychotherapy code can be appealed?","acceptedAnswer":{"@type":"Answer","text":"Check the MUE Adjudication Indicator (MAI) before writing anything. MAI 1 is a claim-line edit that can often be split across lines with correct documentation. MAI 2 is an absolute, date-of-service edit CMS treats as clinically implausible — there is no appeal path at all. MAI 3 is a date-of-service edit that can be appealed with documentation showing the excess units were real and medically necessary. The specific MUE value and its MAI for any given code changes quarterly and has to be looked up directly in the CMS PFS Look-Up Tool or MUE files — never guessed from memory or an old denial pattern."}}]}
+</script>
+<!-- Google tag (gtag.js) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'granted'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-M6QSPSLHV2');
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="nav-wrap">
+  <div class="nav-bar" id="navBar">
+    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Verified RCM</a>
+      <div class="nav-item-mega">
+      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
+      <div class="nav-mega">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Billing</div>
+          <a href="eligibility-verification.html">Eligibility Verification</a>
+          <a href="denials-management.html">Denials Management</a>
+          <a href="prior-auth.html">Prior Authorization</a>
+          <a href="claims-scrubbing.html">Claims Submission</a>
+          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Coding</div>
+          <a href="medical-coding.html">Coding Overview</a>
+          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
+          <a href="specialty-cardiology.html">Cardiology Coding</a>
+          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Credentialing</div>
+          <a href="credentialing-medicare.html">Medicare</a>
+          <a href="credentialing-medicaid.html">Medicaid</a>
+          <a href="credentialing-bcbs.html">BCBS</a>
+          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+          <a href="credentialing-aetna.html">Aetna</a>
+          <a href="credentialing-cigna.html">Cigna</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Practice Growth</div>
+          <a href="digital-marketing.html">Digital Marketing</a>
+          <a href="seo-services.html">Healthcare SEO</a>
+          <a href="google-business-profile.html">Google Business Profile</a>
+          <a href="social-media-management.html">Social Media</a>
+          <a href="web-development.html">Web Development</a>
+          <a href="virtual-assistant.html">Virtual Assistants</a>
+        </div>
+      </div>
+    </div>
+      <a href="specialties.html" class="nav-link">Specialties</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="about.html" class="nav-link active">About us</a>
+    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
+    </nav>
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+    <div class="nav-spacer"></div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
+    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Verified RCM</a>
+    <a href="services.html">Services</a>
+    <a href="specialties.html">Specialties</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About us</a>
+  <a href="https://sams.verifiedrcm.com">SAMS</a>
+  </div>
+</div>
+<main id="main">
+<article class="wrap article">
+  <a href="specialty-mental-health.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>The pillar guide to mental health billing</a>
+  <h1>NCCI edits and bundling traps in behavioral health billing.</h1>
+  <p class="lede">Behavioral health has fewer procedure-heavy bundling pairs than a surgical specialty, but the ones it has are high-volume and easy to miss, because most of the bundling logic here isn't a classic Column 1/Column 2 edit at all &mdash; it's a structural rule baked into how the code set itself is built. Stack a diagnostic evaluation code twice, or bill a standalone psychotherapy code next to a same-day E/M instead of the add-on pairing, and the claim behaves like a bundling violation whether or not a formally published NCCI pair is behind it. This guide covers every pattern that actually costs money, and names exactly where the specific indicator values still need a live lookup before you build them into a scrubber rule.</p>
+  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-mental-health.html">mental health billing and coding guide</a></span></div>
+
+  <section class="takeaways" aria-label="Key takeaways">
+    <h2>Key takeaways</h2>
+    <ul>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>90791 and 90792 stacked same-day, same episode is the highest-volume bundling error in the specialty.</b> Both report the same diagnostic evaluation service; billing both denies the second claim regardless of whether the edit fires as a formal NCCI pair or a payer-specific duplicate rule.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Treating the E/M-plus-add-on structure as a documentation nicety, not a bundling rule, is the second-highest-volume error.</b> A standalone psychotherapy code billed alongside a separate same-day E/M reports one encounter as two services.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A modifier indicator of 0 cannot be overridden by any modifier, ever.</b> Check the pair's indicator before appending 59 or an X-modifier to force a claim through &mdash; if it's 0, the append does nothing but flag the claim for review.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Specific MUE values for behavioral health codes need a live lookup, not a guess.</b> CMS updates them quarterly, and this guide names exactly which values it could and couldn't confirm.</span></li>
+    </ul>
+  </section>
+
+  <h2>Why behavioral health's bundling logic looks different</h2>
+  <p>A procedure-heavy specialty gets most of its bundling denials from formally published NCCI Procedure-to-Procedure (PTP) edits &mdash; two codes that describe overlapping work, paired in a CMS file with a modifier indicator that says whether an override is possible. Behavioral health has some of that, but a larger share of its bundling risk comes from something CMS doesn't publish as a PTP pair at all: CPT's own add-on code structure, which forces certain combinations to be reported one way and makes the alternative combination look like double-billing even when no formal edit exists between the two specific codes.</p>
+  <p>That distinction matters operationally. A formal PTP pair has a modifier indicator you can look up and an override mechanism (59 or an X-modifier) that either works or doesn't. A structural bundling rule &mdash; like the E/M-plus-add-on requirement below &mdash; has no indicator to look up and no modifier that fixes it, because the problem isn't a missing override, it's the wrong code selected in the first place. Sort every bundling denial into one of these two buckets before deciding how to fix it.</p>
+
+  <h2>90791 and 90792: the same-day, same-episode stack</h2>
+  <p>90791 (psychiatric diagnostic evaluation, no medical services) and 90792 (the same evaluation with medical services added, typically a prescriber's assessment) report the same underlying service at two different levels of clinical scope. Billing both for the same patient in the same intake episode &mdash; even by two different clinicians at the same practice &mdash; is the single most common bundling denial pattern in behavioral health billing.</p>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <caption>90791/90792 same-day stacking: what actually happens and why.</caption>
+      <thead><tr><th scope="col">Scenario</th><th scope="col">Outcome</th></tr></thead>
+      <tbody>
+        <tr><td>Therapist bills 90791, psychiatrist bills 90792, same intake window</td><td>Second claim typically denies as duplicate/bundled &mdash; both codes report the same evaluation service</td></tr>
+        <tr><td>90791 billed twice for the same patient at two different visits, no new episode</td><td>Second claim denies as frequency/duplicate under most payer policy, not typically a formal NCCI pair</td></tr>
+        <tr><td>90792 billed once, genuinely separate psychosocial evaluation billed later as 90791 for a documented new episode of care</td><td>Payable in principle, but expect scrutiny &mdash; document why this is a genuinely new episode, not a continuation</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The mechanism behind the denial varies by payer, and that distinction is worth confirming rather than assuming. Some payers enforce this as a formal Column 1/Column 2 NCCI pair; others enforce it as a payer-specific duplicate or frequency edit that never touches the federal NCCI file at all. Either way, the practical result is the same: don't plan around appending an X-modifier to force both through unless you've confirmed the specific payer's edit actually has an override path, and if it's a true NCCI pair carrying a modifier indicator of 0, no modifier changes the outcome regardless of how well-documented the clinical distinction is.</p>
+
+  <h2>Treating E/M-plus-add-on as a bundling issue, not a documentation nicety</h2>
+  <p>This is the pattern billing staff most often miss, because it doesn't look like a bundling edit &mdash; it looks like a code selection choice. It isn't optional. When the same clinician performs a significant, separately identifiable E/M service and psychotherapy in one encounter, CPT requires the psychotherapy time be reported as an add-on code (90833, 90836, or 90838) attached to the E/M code, never as the standalone psychotherapy code (90832, 90834, 90837) billed as its own independent line.</p>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <caption>The bundling logic behind E/M-plus-psychotherapy, stated as a rule rather than a suggestion.</caption>
+      <thead><tr><th scope="col">What was billed</th><th scope="col">What CPT structure requires</th><th scope="col">Result if billed wrong</th></tr></thead>
+      <tbody>
+        <tr><td>99214 + 90834 as two independent lines, same clinician, same encounter</td><td>99214 + 90836 (the add-on for the ~45-minute band)</td><td>Reports overlapping time and clinical work as two separate services &mdash; functions as a bundling violation even without a formal PTP pair naming 99214 and 90834 directly</td></tr>
+        <tr><td>99213 + 90837 (60-minute standalone) same encounter</td><td>99213 + 90838</td><td>Same problem, worse mismatch &mdash; the standalone code's time band doesn't correspond to any add-on and the claim reads as an attempt to bill the longer psychotherapy code without giving up the E/M</td></tr>
+        <tr><td>90832/90834/90837 alone, no E/M performed that day</td><td>Correct as billed &mdash; standalone codes are for exactly this scenario</td><td>N/A, no error</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Why this behaves like a bundling edit rather than a simple wrong-code error: a scrubber or a payer reviewing the claim sees an E/M code and a psychotherapy code on the same date, same rendering provider, and applies the same logical test an NCCI edit applies &mdash; does this pair represent one bundled clinical encounter or two genuinely separate services? The standalone-plus-E/M combination fails that test structurally, because CPT itself defines the add-on codes as the only correct mechanism for reporting combined time. There is no modifier that fixes this combination; the fix is rebilling with the correct add-on code, not appending 59.</p>
+
+  <h2>Testing code column 1/column 2 pairs: administration versus evaluation</h2>
+  <p>Psychological and neuropsychological testing splits into evaluation/interpretation work (96130, +96131, 96132, +96133 &mdash; QHP only) and administration/scoring work (96136, +96137 for QHP-administered; 96138, +96139 for technician-administered under QHP supervision). The bundling risk here is genuine double-counting of the same block of testing time across both code families, not a formal edit most billing staff can name.</p>
+  <ul class="check-list">
+    <li><span class="warn">1</span><span><b>96138/96139 billed alongside 96130&ndash;96133 for what's actually the same testing session's total time,</b> rather than genuinely separate administration and interpretation blocks &mdash; a common review trigger for the testing family, whether or not a specific pair carries a published PTP indicator.</span></li>
+    <li><span class="warn">2</span><span><b>96130 and 96132 billed same day for what a payer's reviewer reads as duplicate testing,</b> because psychological and neuropsychological testing aren't always recognized as clinically distinct by a non-specialist reviewer &mdash; document the specific clinical indication for each separately, and cite it directly if this denies and needs appeal.</span></li>
+    <li><span class="check">3</span><span><b>Add-on units (+96131, +96133, +96137, +96139) without a start/stop time or clearly stated total minutes tied to the specific test administered</b> &mdash; not itself a bundling edit, but the documentation gap that turns a legitimate multi-hour testing day into an MUE unit-cap denial (below).</span></li>
+  </ul>
+  <p>Time-block documentation is the actual fix for most of this category: a single bulk time entry covering the whole testing day, without a breakdown between evaluation time and administration time, is what makes a legitimate two-activity testing session look like a single service billed twice.</p>
+
+  <h2>What modifier indicator 0 versus 1 means for a psych code pair</h2>
+  <p>Every NCCI PTP edit pairs a Column 1 code with a Column 2 code and attaches a modifier indicator that decides whether an override is even possible. This applies the same way in behavioral health as anywhere else CMS publishes an edit &mdash; the indicator, not the clinical reasoning, decides whether a modifier can do anything at all.</p>
+  <ul class="check-list">
+    <li><span class="warn">0</span><span><b>Never bypassable.</b> No modifier, however well-documented the clinical distinction, overrides it. If a behavioral health pair carries a 0, the second code is not separately payable under any circumstance &mdash; appending 59 or an X-modifier anyway is a pattern payers flag as a potential audit trigger, not a workaround.</span></li>
+    <li><span class="check">1</span><span><b>Bypassable with documentation.</b> An NCCI-associated modifier (59, or the more specific XE/XS/XP/XU) can override the edit, but only where the record independently shows the second service was genuinely distinct &mdash; separate encounter, separate practitioner, or a non-overlapping service. In behavioral health, XP (separate practitioner) and XE (separate encounter) do most of the real work; XS (separate anatomic structure) rarely applies cleanly to psychiatric services.</span></li>
+    <li><span class="check">9</span><span><b>Edit deleted.</b> The pair no longer applies going forward; don't build a scrubber rule around a historical 0 or 1 value without confirming the edit is still active.</span></li>
+  </ul>
+  <p>⚠️ <b>Unverified:</b> this build could not open CMS's primary NCCI PTP Edits file or the NCCI Policy Manual PDF directly to confirm the specific modifier indicator value attached to any individual behavioral health code pair &mdash; CMS's site returned an access error to every automated retrieval attempt made while researching this page, consistent with the access pattern this site has documented elsewhere. Treat every pattern named in this guide (90791/90792 stacking, testing administration-versus-evaluation pairs) as a bundling risk pattern based on standard industry billing guidance, not a confirmed 0-or-1 indicator value. Look up the specific pair in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before building any of this into a scrubber rule, because indicator values are pair-specific and revised quarterly.</p>
+
+  <h2>MUE limits and where the value genuinely needs a live lookup</h2>
+  <p>The Medically Unlikely Edit caps units of a single code billable for one patient on one date of service, and it's paired with an MUE Adjudication Indicator (MAI) that decides whether a denial exceeding the cap can be appealed at all.</p>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <caption>MAI values and what they mean for an appeal decision &mdash; the framework is fixed CMS policy; the specific MUE unit value per code is not.</caption>
+      <thead><tr><th scope="col">MAI</th><th scope="col">What it means</th><th scope="col">Appeal path</th></tr></thead>
+      <tbody>
+        <tr><td><code>1</code></td><td>Claim-line edit</td><td>Units above the cap deny that line; a genuinely repeated service on a separate line, correctly modified and documented, can often still be billed</td></tr>
+        <tr><td><code>2</code></td><td>Absolute, date-of-service edit</td><td>CMS treats exceeding it as clinically implausible &mdash; no appeal path exists, regardless of documentation</td></tr>
+        <tr><td><code>3</code></td><td>Appealable, date-of-service edit</td><td>Can be appealed with documentation showing the excess units were real, distinct, and medically necessary</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Where this shows up most in behavioral health: a long testing day billing multiple units of +96131 or +96133, or a psychotherapy-for-crisis claim stacking several units of +90840 (each additional 30 minutes) on top of 90839. Both patterns are legitimate when the clinical time genuinely supports it, and both are exactly the kind of claim that trips a unit cap if the documentation doesn't break the time down unit by unit.</p>
+  <p>⚠️ <b>Unverified:</b> this build could not confirm the specific MUE unit value or MAI designation for individual behavioral health codes (90837, 90839/+90840, 96130&ndash;96139, the CoCM family) against CMS's primary MUE files &mdash; the same CMS access error applied here as with the PTP file above. Do not build a specific unit-cap threshold into a scrubber or a staff workflow from this guide or any other secondary source. Confirm the current MUE value and MAI for the specific code directly in the CMS PFS Look-Up Tool (search the code, then check the MUE tab) before relying on it operationally, because both change quarterly and a stale value either blocks a payable claim or lets an unbillable one go out.</p>
+
+  <div class="protip">
+    <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
+    <div><div class="protip-label">Pro tip</div><p>Before appending any modifier to clear a bundling denial, ask which bucket it's in. If it's a formal NCCI pair, look up the modifier indicator first &mdash; a 0 means stop, don't append anything. If it's a structural mismatch like standalone-plus-E/M, no modifier fixes it; the correct move is rebilling with the right add-on code. Confusing the two wastes staff time on an appeal that was never going to work.</p></div>
+  </div>
+
+  <h2>Do and don't</h2>
+  <div class="dodont">
+    <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
+      <li>Confirm the modifier indicator before appending 59 or an X-modifier to any bundling denial.</li>
+      <li>Route a standalone-plus-same-day-E/M denial to a rebill with the correct add-on code, not an appeal.</li>
+      <li>Break testing time into evaluation versus administration blocks with start/stop times, not one bulk entry.</li>
+      <li>Check the MAI before spending staff time writing any MUE unit-cap appeal.</li>
+    </ul></div>
+    <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Don't</div><ul>
+      <li>Don't bill 90791 and 90792 for the same episode expecting an X-modifier to clear the second claim.</li>
+      <li>Don't bill a standalone psychotherapy code next to a same-day E/M by the same clinician &mdash; use the add-on.</li>
+      <li>Don't guess an MUE unit value or MAI from memory or a competitor's guide &mdash; both change quarterly.</li>
+      <li>Don't write an appeal against an MAI 2 denial; there is no path, confirmed or not.</li>
+    </ul></div>
+  </div>
+
+  <div class="cta-band">
+    <div>
+      <h3>Not sure which of your bundling denials are actually appealable?</h3>
+      <p>We'll audit a sample of your recent behavioral health denials, sort them between formal NCCI edits and structural coding errors, and show what's recoverable.</p>
+    </div>
+    <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>Can we bill 90791 and 90792 for the same patient in the same intake window?</summary><p>Not for the same episode of care. Both codes report the same underlying service, a psychiatric diagnostic evaluation, with 90792 adding a prescriber's medical assessment on top. Billing both routinely denies the second claim, whether the edit fires as a formal NCCI Column 1/Column 2 pair or as a payer-specific duplicate/frequency edit &mdash; confirm which mechanism your clearinghouse and top payers actually use before assuming an X-modifier clears it, because if the pair carries a modifier indicator of 0, no modifier changes the outcome.</p></details>
+    <details class="faq-item"><summary>Is billing a standalone psychotherapy code plus a separate E/M code on the same day an NCCI edit?</summary><p>It behaves like one operationally even where it isn't a formally published Column 1/Column 2 pair. CPT structure requires the psychotherapy time be reported as an add-on to the E/M code (90833, 90836, or 90838) when the same clinician performs both services the same day &mdash; billing 90834 next to 99214 as two independent lines reports the same clinical encounter twice and is treated as a bundling violation by scrubbers and payers regardless of the specific edit mechanism behind the denial.</p></details>
+    <details class="faq-item"><summary>How do we know if an MUE denial on a testing or psychotherapy code can be appealed?</summary><p>Check the MUE Adjudication Indicator (MAI) before writing anything. MAI 1 is a claim-line edit that can often be split across lines with correct documentation. MAI 2 is an absolute, date-of-service edit CMS treats as clinically implausible &mdash; there is no appeal path at all. MAI 3 is a date-of-service edit that can be appealed with documentation showing the excess units were real and medically necessary. The specific MUE value and its MAI for any given code changes quarterly and has to be looked up directly in the CMS PFS Look-Up Tool or MUE files &mdash; never guessed from memory or an old denial pattern.</p></details>
+  </div>
+
+  <div class="content-disclaimer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+  </div>
+
+  <h2>Related resources</h2>
+  <ul class="related-list">
+    <li><a href="specialty-mental-health.html">Mental health billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="specialty-mental-health-psychological-testing-billing.html">Psychological Testing Billing: CPT 96130-96146 and Prior Authorization <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="specialty-mental-health-denials-appeals-behavioral-health.html">Mental Health Claim Denials and Appeals: CARC Codes and Sample Language <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+  </ul>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-card">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
+          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        </div>
+        <div class="footer-actions">
+          <div class="footer-action">
+            <div class="footer-action-label">Book a consultation</div>
+            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
+            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
+            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
+          </div>
+          <div class="footer-action">
+            <div class="footer-action-label">Rate your experience</div>
+            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
+            <!-- TrustBox widget - Review Collector -->
+            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
+            <!-- End TrustBox widget -->
+          </div>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 17 specialties</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+        <nav class="footer-legal" aria-label="Legal">
+          <a href="privacy.html">Privacy policy</a>
+          <a href="terms.html">Terms of service</a>
+          <a href="hipaa-notice.html">HIPAA notice</a>
+          <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+        </nav>
+        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
+<!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<!-- End TrustBox script -->
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -249,6 +249,41 @@
     counters.forEach(function (c) { cio.observe(c); });
   }
 
+  /* ---------- card pointer spotlight tracking ---------- */
+  function setupCardSpotlights() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var cards = document.querySelectorAll(
+      '.card, .glass-card, .growth-tile, .explorer-card, .flow-card, .post-card, .spec-group, .quote-card, .ehr-teaser, .cta-dark'
+    );
+    cards.forEach(function (card) {
+      card.addEventListener('pointermove', function (e) {
+        var rect = card.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', x + 'px');
+        card.style.setProperty('--mouse-y', y + 'px');
+      }, { passive: true });
+    });
+  }
+  setupCardSpotlights();
+
+  /* ---------- hero claim console live pulse simulation ---------- */
+  function setupClaimConsolePulse() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var panel = document.querySelector('.ctrl-panel');
+    if (!panel) return;
+    var rows = panel.querySelectorAll('.ctrl-row');
+    if (!rows.length) return;
+    var activeIdx = 0;
+    setInterval(function () {
+      rows.forEach(function (r, i) {
+        r.classList.toggle('active-simulated', i === activeIdx);
+      });
+      activeIdx = (activeIdx + 1) % rows.length;
+    }, 3800);
+  }
+  setupClaimConsolePulse();
+
   /* ---------- connected flow rail ----------
      Adds .in once the rail scrolls into view, which draws the progress fill
      and lights each day marker in sequence. Fires once, then stops observing. */
