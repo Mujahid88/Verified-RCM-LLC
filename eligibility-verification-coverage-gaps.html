@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Coverage Gap Scenarios Eligibility Checks Must Catch | Verified RCM</title>
+<meta name="description" content="Real coverage gap scenarios that create false confidence in eligibility checks: coordination of benefits, stale terminations, mid-year plan changes, and newborn coverage not yet loaded.">
+<link rel="canonical" href="https://www.verifiedrcm.com/eligibility-verification-coverage-gaps.html">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Coverage Gap Scenarios Eligibility Checks Must Catch | Verified RCM">
+<meta property="og:description" content="Real coverage gap scenarios that create false confidence in eligibility checks: coordination of benefits, stale terminations, mid-year plan changes, and newborn coverage not yet loaded.">
+<meta property="og:url" content="https://www.verifiedrcm.com/eligibility-verification-coverage-gaps.html">
+<meta property="og:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<meta property="og:site_name" content="Verified RCM">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coverage Gap Scenarios Eligibility Checks Must Catch | Verified RCM">
+<meta name="twitter:description" content="Real coverage gap scenarios that create false confidence in eligibility checks: coordination of benefits, stale terminations, mid-year plan changes, and newborn coverage not yet loaded.">
+<meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Coverage Gap Scenarios Eligibility Checks Must Catch | Verified RCM","description":"Real coverage gap scenarios that create false confidence in eligibility checks: coordination of benefits, stale terminations, mid-year plan changes, and newborn coverage not yet loaded.","image":"https://www.verifiedrcm.com/images/og-cover.jpg","author":{"@type":"Person","name":"Sarah Ochieng"},"publisher":{"@type":"Organization","name":"Verified RCM","logo":{"@type":"ImageObject","url":"https://www.verifiedrcm.com/images/logo.jpg"}},"datePublished":"2026-08-30","dateModified":"2026-08-30","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.verifiedrcm.com/eligibility-verification-coverage-gaps.html"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Revenue Cycle Management","item":"https://www.verifiedrcm.com/service-revenue-cycle-management.html"},{"@type":"ListItem","position":3,"name":"Eligibility Verification","item":"https://www.verifiedrcm.com/eligibility-verification.html"},{"@type":"ListItem","position":4,"name":"Coverage Gap Scenarios","item":"https://www.verifiedrcm.com/eligibility-verification-coverage-gaps.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does a policy show active when it's actually been terminated?","acceptedAnswer":{"@type":"Answer","text":"Eligibility systems reflect whatever data the payer's system had at the time it was last synchronized, not necessarily this instant. A termination processed very recently, or one still working through a payer's internal systems, may not have propagated to the eligibility-check database yet. The check isn't wrong about what it found; the underlying data simply hasn't caught up."}},{"@type":"Question","name":"How do we catch a coordination of benefits problem before the claim denies?","acceptedAnswer":{"@type":"Answer","text":"By asking directly at every visit, not only the first one, whether the patient's coverage has changed — a new job, a spouse's new plan, a child added to another policy, aging onto Medicare. An eligibility check alone won't reveal which of two active policies is actually primary; that information comes from the patient and from confirming primacy rules like the birthday rule for dependent children."}},{"@type":"Question","name":"What should we do when a newborn's coverage isn't showing up yet?","acceptedAnswer":{"@type":"Answer","text":"Ask the parent directly whether the newborn has been formally added to the policy, since payers typically require notification before the dependent appears in their eligibility system even though coverage is often effective from birth. Document the parent's confirmation, and plan to re-check eligibility closer to any non-urgent visit rather than relying on a single check performed too soon after birth."}}]}
+</script>
+<!-- Google tag (gtag.js) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'granted'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-M6QSPSLHV2');
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="nav-wrap">
+  <div class="nav-bar" id="navBar">
+    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Verified RCM</a>
+      <div class="nav-item-mega">
+      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
+      <div class="nav-mega">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Billing</div>
+          <a href="eligibility-verification.html">Eligibility Verification</a>
+          <a href="prior-auth.html">Prior Authorization</a>
+          <a href="claims-scrubbing.html">Claims Submission</a>
+          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
+          <a href="denials-management.html">Denials Management</a>
+          <a href="accounts-receivable-recovery.html">AR Recovery</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Coding</div>
+          <a href="medical-coding.html">Coding Overview</a>
+          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
+          <a href="specialty-cardiology.html">Cardiology Coding</a>
+          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Credentialing</div>
+          <a href="credentialing-medicare.html">Medicare</a>
+          <a href="credentialing-medicaid.html">Medicaid</a>
+          <a href="credentialing-bcbs.html">BCBS</a>
+          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+          <a href="credentialing-aetna.html">Aetna</a>
+          <a href="credentialing-cigna.html">Cigna</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Practice Growth</div>
+          <a href="digital-marketing.html">Digital Marketing</a>
+          <a href="seo-services.html">Healthcare SEO</a>
+          <a href="google-business-profile.html">Google Business Profile</a>
+          <a href="social-media-management.html">Social Media</a>
+          <a href="web-development.html">Web Development</a>
+          <a href="virtual-assistant.html">Virtual Assistants</a>
+        </div>
+      </div>
+    </div>
+      <div class="nav-item-mega">
+      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
+      <div class="nav-mega">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Primary care</div>
+          <a href="specialty-internal-medicine.html">Internal Medicine</a>
+          <a href="specialty-family-medicine.html">Family Medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-urgent-care.html">Urgent Care</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical</div>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-neurology.html">Neurology</a>
+          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
+          <a href="specialty-nephrology.html">Nephrology</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Surgical</div>
+          <a href="specialty-orthopedics.html">Orthopedics</a>
+          <a href="specialty-general-surgery.html">General Surgery</a>
+          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Therapy &amp; more</div>
+          <a href="specialty-physical-therapy.html">Physical Therapy</a>
+          <a href="specialty-mental-health.html">Mental Health</a>
+          <a href="specialty-dental-care.html">Dental Care</a>
+          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
+        </div>
+      </div>
+    </div>
+      <div class="nav-item-mega">
+      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
+      <div class="nav-mega nav-mega-2col">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Practice resources</div>
+          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
+          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
+          <a href="switching-billing-companies.html">Switching Billing Companies</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Latest articles</div>
+          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
+          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
+          <a href="blog.html" class="see-all">See all articles &rarr;</a>
+        </div>
+      </div>
+    </div>
+      <a href="about.html" class="nav-link active">About us</a>
+    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
+    </nav>
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+    <div class="nav-spacer"></div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
+    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Verified RCM</a>
+    <a href="services.html">Services</a>
+    <a href="specialties.html">Specialties</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About us</a>
+  <a href="https://sams.verifiedrcm.com">SAMS</a>
+  </div>
+</div>
+<main id="main">
+<article class="wrap article">
+  <a href="eligibility-verification.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete eligibility verification guide</a>
+  <h1>Coverage gap scenarios eligibility checks have to catch.</h1>
+  <p class="lede">An eligibility check can return a completely clean, active-coverage response and the claim can still deny for a coverage reason. That isn't a broken transaction &mdash; it's the check telling you the truth as of whenever the payer's data last synchronized, which isn't always the truth as of today. These are the specific scenarios that produce that gap, what each one looks like in practice, and the operational step that catches it before the visit rather than after the denial.</p>
+  <div class="post-meta"><span class="muted">Reviewed by Sarah Ochieng, CPB &middot; Certified Professional Biller (AAPC) &middot; Part of our <a href="eligibility-verification.html">eligibility verification guide</a></span></div>
+
+  <section class="takeaways" aria-label="Key takeaways">
+    <h2>Key takeaways</h2>
+    <ul>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A clean eligibility response is a snapshot, not a guarantee.</b> It reflects the payer's data as of its last sync, not necessarily this moment.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Coordination of benefits is invisible to the check itself.</b> A 271 confirms a policy is active; it doesn't tell you it's still the primary one.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Newborn and dependent coverage lags real coverage.</b> The policy may be effective from birth even though the eligibility system hasn't caught up.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Every one of these is caught by asking, not by re-running the same check.</b> A scripted question at registration outperforms a second automated inquiry.</span></li>
+    </ul>
+  </section>
+
+  <h2>Why a clean check can still be wrong</h2>
+  <p>An eligibility response is only as current as the data behind it. Payers update their eligibility systems from enrollment feeds, employer files, and internal processing queues, and none of those update in real time relative to the actual life event that changed a patient's coverage. A policy terminated yesterday may still show active today if the termination hasn't finished propagating through the payer's systems. A new plan added this week may not be queryable yet. None of this means the eligibility check is malfunctioning; it means the check is answering accurately based on data that hasn't caught up to reality yet, and the practices that get burned by it are the ones that treat "active" as a permanent fact rather than a snapshot with an expiration date measured in days, not months.</p>
+  <p>The scenarios below aren't edge cases. Each one recurs often enough in a normal patient population that building a specific habit around it, rather than hoping a generic eligibility check will surface it, is the only reliable defense.</p>
+
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <caption>Common coverage gap scenarios: what they look like, and how to catch them.</caption>
+      <thead><tr><th scope="col">Scenario</th><th scope="col">What it looks like</th><th scope="col">How to catch it</th></tr></thead>
+      <tbody>
+        <tr><td><b>Coordination of benefits shift</b></td><td>Two active policies; the one on file as primary is no longer actually primary</td><td>Ask about coverage changes at every visit, confirm primacy rules directly with the patient</td></tr>
+        <tr><td><b>Stale termination</b></td><td>271 shows active; policy was actually termed days or weeks ago</td><td>Re-verify close to the date of service, not only when the appointment was booked</td></tr>
+        <tr><td><b>Mid-year plan change</b></td><td>Patient switched plans within the same employer or exchange; old plan ID still on file</td><td>Ask patients to bring a current card to every visit, not just the first</td></tr>
+        <tr><td><b>Newborn or new dependent not yet loaded</b></td><td>Eligibility check returns inactive or not-found for a recently added dependent</td><td>Ask the subscriber directly whether the dependent has been formally added to the policy</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Coordination of benefits: the primary that quietly changed</h2>
+  <p>A patient can have two genuinely active policies at once and still generate a denial, because the claim went to the payer your system had on file as primary, and that payer is no longer the primary one. This happens constantly and quietly: a patient gains coverage through a new spouse, ages onto Medicare while keeping an employer plan, or has a child who's now covered under both parents. Industry practice generally treats employer coverage as primary over dependent coverage held under someone else's plan, and for dependent children covered under both parents, the widely followed "birthday rule" makes the parent whose birthday falls earlier in the calendar year the primary policyholder for that child, regardless of either parent's age. Medicare has its own coordination rules relative to employer coverage, which depend on factors like employer size and the reason for Medicare eligibility.</p>
+  <p>None of this is visible from a standard eligibility check. The 271 response confirms a policy is active; it says nothing about where that policy ranks against a patient's other coverage. The only reliable way to catch a coordination shift is to ask directly, at every visit rather than only the first one, and to update the record immediately when the answer changes. A claim billed to the wrong primary doesn't just deny &mdash; it also burns time against timely filing deadlines while the correct primary claim gets refiled, which is the part of this scenario that costs the most if it isn't caught early.</p>
+
+  <h2>Stale terminations: the gap between "ended" and "shows ended"</h2>
+  <p>Payers don't always update their eligibility systems the instant a policy terminates. There can be a lag between when coverage actually ends &mdash; a job loss, a COBRA period expiring, a plan cancellation for non-payment &mdash; and when that termination is reflected in the data an eligibility check queries against. During that lag, a 271 response can show active coverage for a policy that, in reality, no longer exists. This is precisely why checking eligibility once, at the time an appointment was originally booked, isn't sufficient for anything scheduled more than a few days out: the check was accurate when it ran, but the underlying coverage status has since changed. Re-verifying close to the actual date of service, not only at the point of scheduling, is what catches a termination that happened in the interim.</p>
+
+  <h2>Mid-year plan changes and newborn coverage</h2>
+  <p>A patient switching plans mid-year &mdash; a new job, a qualifying life event, an employer changing carriers at open enrollment &mdash; can leave a practice's records pointing at the old plan ID long after the new one took effect. The old plan may still show the patient as covered if they haven't formally been removed, producing a technically "active" response against a policy the patient no longer relies on for this service, while the actual current plan goes unchecked entirely. Asking for a current insurance card at every visit, not only the first, is the simplest defense, because patients rarely think to proactively report a plan change even when they've reported an insurer change.</p>
+  <p>Newborn coverage behaves similarly but for a different reason. Coverage for a newborn is typically effective from the date of birth under a parent's policy, but most payers require the family to actually notify them and formally add the dependent before that coverage becomes visible in the eligibility system &mdash; a process that can take weeks. A standard eligibility check run for that infant's first visit can come back inactive or not-found even though coverage is, in every real sense, already in force. The fix isn't a different or repeated eligibility transaction; it's asking the parent directly whether the newborn has been added to the policy yet, documenting the answer, and planning a re-check closer to any non-urgent visit rather than relying on a single early check that may simply have run too soon.</p>
+
+  <h2>Building the habit, not just the check</h2>
+  <p>Every scenario above shares the same underlying fix: a scripted question at registration, asked consistently, rather than a technical solution layered onto the eligibility transaction itself. No eligibility check, however frequently it's run, replaces asking a patient directly whether anything about their coverage has changed. That single habit, applied at every visit rather than only intake, is what actually closes these gaps &mdash; and it's the same habit this guide's pillar page recommends pairing with batch verification, because the two catch different classes of problem. What happens when one of these gaps does make it all the way through to a denied claim, and the specific CARC codes that result, is covered in <a href="eligibility-verification-denials.html">our guide to eligibility-driven denials</a>.</p>
+
+  <div class="cta-band">
+    <div>
+      <h3>Tired of coverage gaps showing up as denials weeks later?</h3>
+      <p>We build the re-verification and COB questioning habits directly into your intake workflow, so these gaps get caught before the claim, not after.</p>
+    </div>
+    <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free workflow review</a>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>Why does a policy show active when it's actually been terminated?</summary><p>Eligibility systems reflect whatever data the payer's system had at the time it was last synchronized, not necessarily this instant. A termination processed very recently, or one still working through a payer's internal systems, may not have propagated to the eligibility-check database yet. The check isn't wrong about what it found; the underlying data simply hasn't caught up.</p></details>
+    <details class="faq-item"><summary>How do we catch a coordination of benefits problem before the claim denies?</summary><p>By asking directly at every visit, not only the first one, whether the patient's coverage has changed &mdash; a new job, a spouse's new plan, a child added to another policy, aging onto Medicare. An eligibility check alone won't reveal which of two active policies is actually primary; that information comes from the patient and from confirming primacy rules like the birthday rule for dependent children.</p></details>
+    <details class="faq-item"><summary>What should we do when a newborn's coverage isn't showing up yet?</summary><p>Ask the parent directly whether the newborn has been formally added to the policy, since payers typically require notification before the dependent appears in their eligibility system even though coverage is often effective from birth. Document the parent's confirmation, and plan to re-check eligibility closer to any non-urgent visit rather than relying on a single check performed too soon after birth.</p></details>
+  </div>
+
+  <div class="content-disclaimer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
+    <p><b>Confirm before you rely on this.</b> Payer eligibility systems, transaction formats and turnaround times change. The process information on this page reflects standard industry practice as of August 2026 and is provided for general education &mdash; verify current requirements directly with the specific payer before relying on it.</p>
+  </div>
+
+  <h2>Related resources</h2>
+  <ul class="related-list">
+    <li><a href="eligibility-verification.html">Our complete eligibility verification guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="eligibility-verification-payer-portals.html">Payer portals, clearinghouses &amp; the 270/271 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="eligibility-verification-denials.html">Eligibility-driven denials &amp; CARC codes <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="eligibility-verification-workflow-automation.html">Building the verification workflow <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="service-revenue-cycle-management.html">Revenue cycle management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+  </ul>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-card">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
+          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        </div>
+        <div class="footer-actions">
+          <div class="footer-action">
+            <div class="footer-action-label">Book a consultation</div>
+            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
+            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
+            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
+          </div>
+          <div class="footer-action">
+            <div class="footer-action-label">Rate your experience</div>
+            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
+            <!-- TrustBox widget - Review Collector -->
+            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
+            <!-- End TrustBox widget -->
+          </div>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+        <nav class="footer-legal" aria-label="Legal">
+          <a href="privacy.html">Privacy policy</a>
+          <a href="terms.html">Terms of service</a>
+          <a href="hipaa-notice.html">HIPAA notice</a>
+          <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+        </nav>
+        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
+<!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<!-- End TrustBox script -->
+<script src="js/main.js"></script>
+</body>
+</html>

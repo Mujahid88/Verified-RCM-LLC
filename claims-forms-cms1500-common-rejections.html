@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>CMS-1500 Rejections: NPI, Diagnosis Pointer, Provider Fields | Verified RCM</title>
+<meta name="description" content="Why CMS-1500 claims reject: provider identifier and NPI mismatches, a broken diagnosis pointer between box 24E and box 21, and the billing-versus-rendering provider distinction.">
+<link rel="canonical" href="https://www.verifiedrcm.com/claims-forms-cms1500-common-rejections.html">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CMS-1500 Rejections: NPI, Diagnosis Pointer, Provider Fields | Verified RCM">
+<meta property="og:description" content="Why CMS-1500 claims reject: provider identifier and NPI mismatches, a broken diagnosis pointer between box 24E and box 21, and the billing-versus-rendering provider distinction.">
+<meta property="og:url" content="https://www.verifiedrcm.com/claims-forms-cms1500-common-rejections.html">
+<meta property="og:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<meta property="og:site_name" content="Verified RCM">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CMS-1500 Rejections: NPI, Diagnosis Pointer, Provider Fields | Verified RCM">
+<meta name="twitter:description" content="Why CMS-1500 claims reject: provider identifier and NPI mismatches, a broken diagnosis pointer between box 24E and box 21, and the billing-versus-rendering provider distinction.">
+<meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"CMS-1500 rejections: the fields that cause the most trouble","description":"Why CMS-1500 claims reject: provider identifier and NPI mismatches, a broken diagnosis pointer between box 24E and box 21, and the billing-versus-rendering provider distinction.","image":"https://www.verifiedrcm.com/images/og-cover.jpg","author":{"@type":"Person","name":"Tom Bridger"},"publisher":{"@type":"Organization","name":"Verified RCM","logo":{"@type":"ImageObject","url":"https://www.verifiedrcm.com/images/logo.jpg"}},"datePublished":"2026-08-30","dateModified":"2026-08-30","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.verifiedrcm.com/claims-forms-cms1500-common-rejections.html"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Revenue Cycle Management","item":"https://www.verifiedrcm.com/service-revenue-cycle-management.html"},{"@type":"ListItem","position":3,"name":"Claim Forms","item":"https://www.verifiedrcm.com/claims-forms.html"},{"@type":"ListItem","position":4,"name":"CMS-1500 Rejections","item":"https://www.verifiedrcm.com/claims-forms-cms1500-common-rejections.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does a CMS-1500 claim reject when every code on it is correct?","acceptedAnswer":{"@type":"Answer","text":"Because a coding review only checks whether the codes are valid and supported by documentation, while a rejection can come from a field that has nothing to do with the codes themselves — a provider identifier that doesn't match an enrollment record, a diagnosis pointer that references a letter unused elsewhere on the claim, or a rendering provider who isn't reassigned to the billing group. All three are linking and identity checks, not clinical checks, which is exactly why a claim can be coded perfectly and still bounce."}},{"@type":"Question","name":"What's the difference between the billing provider and the rendering provider on a CMS-1500?","acceptedAnswer":{"@type":"Answer","text":"The rendering provider, reported in box 24J, is the individual practitioner who actually performed the service. The billing provider, reported in box 33, is the entity submitting the claim and receiving payment — often a group practice. The payer checks each against a different enrollment record, and if the rendering individual isn't reassigned to the billing group on file, the claim denies even though the same physician bills successfully at a different location under a different group NPI."}},{"@type":"Question","name":"How do I fix a diagnosis pointer rejection on a CMS-1500?","acceptedAnswer":{"@type":"Answer","text":"Confirm that every letter entered in box 24E for a service line actually appears in box 21, and that the diagnosis it points to genuinely supports the medical necessity of that specific procedure. It's a linking error, not a coding error — the diagnosis code itself can be entirely correct and the claim will still reject if the pointer references a letter that was never used, or points at a diagnosis that doesn't justify the billed service."}}]}
+</script>
+<!-- Google tag (gtag.js) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'granted'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-M6QSPSLHV2');
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="nav-wrap">
+  <div class="nav-bar" id="navBar">
+    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Verified RCM</a>
+      <div class="nav-item-mega">
+      <a href="services.html" class="nav-link nav-mega-trigger active">Services</a>
+      <div class="nav-mega">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Billing</div>
+          <a href="eligibility-verification.html">Eligibility Verification</a>
+          <a href="prior-auth.html">Prior Authorization</a>
+          <a href="claims-scrubbing.html">Claims Submission</a>
+          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
+          <a href="denials-management.html">Denials Management</a>
+          <a href="accounts-receivable-recovery.html">AR Recovery</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Coding</div>
+          <a href="medical-coding.html">Coding Overview</a>
+          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
+          <a href="specialty-cardiology.html">Cardiology Coding</a>
+          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Credentialing</div>
+          <a href="credentialing-medicare.html">Medicare</a>
+          <a href="credentialing-medicaid.html">Medicaid</a>
+          <a href="credentialing-bcbs.html">BCBS</a>
+          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+          <a href="credentialing-aetna.html">Aetna</a>
+          <a href="credentialing-cigna.html">Cigna</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Practice Growth</div>
+          <a href="digital-marketing.html">Digital Marketing</a>
+          <a href="seo-services.html">Healthcare SEO</a>
+          <a href="google-business-profile.html">Google Business Profile</a>
+          <a href="social-media-management.html">Social Media</a>
+          <a href="web-development.html">Web Development</a>
+          <a href="virtual-assistant.html">Virtual Assistants</a>
+        </div>
+      </div>
+    </div>
+      <div class="nav-item-mega">
+      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
+      <div class="nav-mega">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Primary care</div>
+          <a href="specialty-internal-medicine.html">Internal Medicine</a>
+          <a href="specialty-family-medicine.html">Family Medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-urgent-care.html">Urgent Care</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical</div>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-neurology.html">Neurology</a>
+          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
+          <a href="specialty-nephrology.html">Nephrology</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Surgical</div>
+          <a href="specialty-orthopedics.html">Orthopedics</a>
+          <a href="specialty-general-surgery.html">General Surgery</a>
+          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Therapy &amp; more</div>
+          <a href="specialty-physical-therapy.html">Physical Therapy</a>
+          <a href="specialty-mental-health.html">Mental Health</a>
+          <a href="specialty-dental-care.html">Dental Care</a>
+          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
+        </div>
+      </div>
+    </div>
+      <div class="nav-item-mega">
+      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
+      <div class="nav-mega nav-mega-2col">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Practice resources</div>
+          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
+          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
+          <a href="switching-billing-companies.html">Switching Billing Companies</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Latest articles</div>
+          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
+          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
+          <a href="blog.html" class="see-all">See all articles &rarr;</a>
+        </div>
+      </div>
+    </div>
+      <a href="about.html" class="nav-link">About us</a>
+    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
+    </nav>
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+    <div class="nav-spacer"></div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
+    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Verified RCM</a>
+    <a href="services.html">Services</a>
+    <a href="specialties.html">Specialties</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About us</a>
+  <a href="https://sams.verifiedrcm.com">SAMS</a>
+  </div>
+</div>
+<main id="main">
+<article class="wrap article">
+  <a href="claims-forms.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete claim forms guide</a>
+  <h1>CMS-1500 rejections: the fields that cause the most trouble.</h1>
+  <p class="lede">Most CMS-1500 rejections have nothing to do with whether the codes are right. They come from three categories of field that sit around the codes: provider identifiers that don't match an enrollment record, a diagnosis pointer that doesn't resolve to anything, and a billing-versus-rendering provider distinction that's easy to overlook until a claim denies for reasons that seem to make no sense. This guide walks through all three, category by category.</p>
+  <div class="post-meta"><span class="muted">Reviewed by Tom Bridger, CPC &middot; Certified Professional Coder (AAPC) &middot; Part of our <a href="claims-forms.html">claim forms guide</a></span></div>
+
+  <section class="takeaways" aria-label="Key takeaways">
+    <h2>Key takeaways</h2>
+    <ul>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Three categories cause most preventable rejections:</b> provider identifiers, the diagnosis pointer, and the billing-versus-rendering distinction.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>These are linking and identity errors, not coding errors.</b> The CPT, HCPCS or ICD-10 codes can be entirely correct and the claim will still reject.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A coding review won't catch them.</b> Reviewing whether the codes are supported by documentation is a different question from whether the fields around the codes are internally consistent.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Multi-location and locum tenens billing is where the rendering/billing distinction breaks most often.</b> A location or a covering provider left off a reassignment is a location or provider whose claims will reject.</span></li>
+    </ul>
+  </section>
+
+  <h2>Provider identifier fields: where NPI mismatches live</h2>
+  <p>Three boxes on the CMS-1500 carry provider identifiers, and each one is checked against a different record when the payer adjudicates the claim: box 24J for the rendering provider's individual NPI, box 32 for the service facility location, and box 33 for the billing provider's name, address and NPI. A payer's system doesn't read these as one combined "who did this and who's getting paid" statement &mdash; it validates each field separately, against separate enrollment and location data, and any one mismatch is enough to reject the whole claim regardless of whether the other two are perfect.</p>
+  <p>The most common failure in this category is a rendering NPI that isn't reassigned to the billing group on the claim. This happens constantly in practices that are growing: a physician credentialed and enrolled as an individual starts seeing patients before the paperwork reassigning their billing rights to the group has been filed or processed, and every claim naming that physician as the rendering provider under the group's billing NPI rejects until the reassignment is active. It also happens in multi-location groups where a physician splits time across sites tied to different billing NPIs or different tax IDs &mdash; the same physician can be billable at one location and rejected at another on the same day, because the reassignment only covers the locations it explicitly names.</p>
+  <p>Box 32, the service facility location, causes a quieter version of the same problem. It has to agree with the place-of-service code entered in box 24B for the same line. A service billed as performed in an office (place of service 11) but with a service facility address that's actually a hospital outpatient department contradicts itself on the claim's face, and payers increasingly flag that contradiction automatically rather than waiting for a manual review to catch it. Telehealth billing has made this category harder to get right, not easier &mdash; the service facility location and the place-of-service code both have to reflect current payer policy for where a telehealth encounter is considered to have occurred, and that policy has shifted more than once since the pandemic-era flexibilities were introduced.</p>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <caption>Provider identifier fields and what each is checked against.</caption>
+      <thead><tr><th scope="col">Box</th><th scope="col">Identifies</th><th scope="col">Checked against</th></tr></thead>
+      <tbody>
+        <tr><td><b>24J</b></td><td>Rendering provider individual NPI</td><td>Individual enrollment and reassignment record</td></tr>
+        <tr><td><b>32</b></td><td>Service facility location</td><td>Place of service code in box 24B for the same line</td></tr>
+        <tr><td><b>33</b></td><td>Billing provider name, address, NPI</td><td>Group enrollment record and taxonomy for the specialty billed</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>The diagnosis pointer: a linking field, not a coding field</h2>
+  <p>Box 24E doesn't carry a diagnosis code. It carries a letter &mdash; A through L &mdash; that points back to one of the diagnosis codes listed in box 21, telling the payer which specific diagnosis supports the medical necessity of that particular service line. A claim can list every diagnosis correctly in box 21 and still reject on a service line where 24E points to a letter that was never used, or where the pointer technically resolves but the diagnosis it lands on doesn't actually justify the procedure billed on that line.</p>
+  <p>This is precisely why diagnosis pointer errors survive coding review so often: a reviewer checking whether the codes in boxes 21 and 24D are individually correct and well-documented has no reason to also trace whether 24E's pointer connects them correctly, because that's a different question entirely. It's a wiring check, not a code check, and it's easy to treat the two as the same review when they're not. Multi-line claims make this worse. A claim with six service lines and four diagnoses has twenty-four possible pointer combinations, and a single line where the pointer wasn't updated after a diagnosis was reordered or removed from box 21 is enough to reject that one line while the rest of the claim processes normally &mdash; which can make the rejection look like it's about the specific service rather than about a stale reference.</p>
+  <p>The fix is almost always mechanical rather than clinical: confirm the letter in 24E exists in box 21, and confirm the diagnosis it points to is one that a payer's medical necessity edits would recognize as supporting that CPT or HCPCS code. Where it doesn't, the question becomes whether a different diagnosis already on the claim supports the service instead, or whether a diagnosis is missing from box 21 entirely and needs to be added before the line will pay.</p>
+
+  <h2>Billing vs. rendering provider: the distinction that trips up growth</h2>
+  <p>The billing provider is the entity submitting the claim and receiving payment &mdash; almost always the group, reported in box 33. The rendering provider is the individual practitioner who actually performed the service, reported in box 24J. Solo practices rarely see this distinction cause problems, because the same person usually occupies both roles. It becomes a live issue the moment a practice has more than one billing scenario running at once: a group with several physicians, a physician who splits time across locations, or any arrangement involving locum tenens or incident-to billing where the person who rendered the service and the person or entity the payer is being asked to pay are deliberately not the same.</p>
+  <p>Locum tenens coverage is a common failure point. A covering physician seeing patients during a partner's leave has to be correctly identified as the rendering provider, billed under the regular physician's or the group's billing arrangement according to the payer's specific locum tenens policy, which varies by payer and isn't always the same modifier-based approach Medicare uses. Getting the rendering/billing pairing wrong here doesn't just risk a rejection &mdash; some payers treat an incorrectly represented locum arrangement as a billing integrity issue, which is a heavier consequence than a routine denial.</p>
+  <p>Incident-to billing raises the same question from a different angle: a non-physician practitioner renders the service, but under Medicare's incident-to rules the claim may be billed as if the supervising physician performed it, provided the supervision and other requirements are met. Whether the rendering provider box should name the NP or PA who actually saw the patient, or the supervising physician under whose incident-to authority the visit is billed, depends on which billing approach the practice is using for that specific encounter &mdash; and inconsistent practice on this point across a group is one of the more common documentation gaps a payer audit surfaces.</p>
+
+  <div class="cta-band">
+    <div>
+      <h3>Tired of rejections that don't explain themselves?</h3>
+      <p>We scrub every CMS-1500 for identifier mismatches, broken diagnosis pointers and billing/rendering errors before it ever reaches the payer.</p>
+    </div>
+    <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>Why does a CMS-1500 claim reject when every code on it is correct?</summary><p>Because a coding review only checks whether the codes are valid and supported by documentation, while a rejection can come from a field that has nothing to do with the codes themselves &mdash; a provider identifier that doesn't match an enrollment record, a diagnosis pointer that references a letter unused elsewhere on the claim, or a rendering provider who isn't reassigned to the billing group. All three are linking and identity checks, not clinical checks, which is exactly why a claim can be coded perfectly and still bounce.</p></details>
+    <details class="faq-item"><summary>What's the difference between the billing provider and the rendering provider on a CMS-1500?</summary><p>The rendering provider, reported in box 24J, is the individual practitioner who actually performed the service. The billing provider, reported in box 33, is the entity submitting the claim and receiving payment &mdash; often a group practice. The payer checks each against a different enrollment record, and if the rendering individual isn't reassigned to the billing group on file, the claim denies even though the same physician bills successfully at a different location under a different group NPI.</p></details>
+    <details class="faq-item"><summary>How do I fix a diagnosis pointer rejection on a CMS-1500?</summary><p>Confirm that every letter entered in box 24E for a service line actually appears in box 21, and that the diagnosis it points to genuinely supports the medical necessity of that specific procedure. It's a linking error, not a coding error &mdash; the diagnosis code itself can be entirely correct and the claim will still reject if the pointer references a letter that was never used, or points at a diagnosis that doesn't justify the billed service.</p></details>
+  </div>
+
+  <div class="content-disclaimer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
+    <p><b>Confirm before you rely on this.</b> Claim form requirements and payer-specific field rules change. The process information on this page reflects standard industry practice as of August 2026 and is provided for general education &mdash; verify current requirements against the current NUCC CMS-1500 and NUBC UB-04 instructions before relying on it.</p>
+  </div>
+
+  <h2>Related resources</h2>
+  <ul class="related-list">
+    <li><a href="claims-forms.html">Our complete claim forms guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="claims-forms-ub04-field-locators.html">UB-04 field locators: what an institutional claim actually captures <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="claims-forms-electronic-vs-paper.html">837P and 837I: why almost nobody actually mails a paper claim anymore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="claims-forms-professional-vs-institutional.html">CMS-1500 vs. UB-04: which form applies to which claim <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="service-revenue-cycle-management.html">Revenue cycle management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+  </ul>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-card">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
+          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        </div>
+        <div class="footer-actions">
+          <div class="footer-action">
+            <div class="footer-action-label">Book a consultation</div>
+            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
+            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
+            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
+          </div>
+          <div class="footer-action">
+            <div class="footer-action-label">Rate your experience</div>
+            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
+            <!-- TrustBox widget - Review Collector -->
+            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
+            <!-- End TrustBox widget -->
+          </div>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+        <nav class="footer-legal" aria-label="Legal">
+          <a href="privacy.html">Privacy policy</a>
+          <a href="terms.html">Terms of service</a>
+          <a href="hipaa-notice.html">HIPAA notice</a>
+          <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+        </nav>
+        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
+<!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<!-- End TrustBox script -->
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>UB-04 Field Locators: FL 1&ndash;81 Explained | Verified RCM</title>
+<meta name="description" content="What the UB-04's 81 form locators actually capture: revenue codes, Type of Bill, condition, occurrence and value codes, and why institutional claims are structurally more complex.">
+<link rel="canonical" href="https://www.verifiedrcm.com/claims-forms-ub04-field-locators.html">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UB-04 Field Locators: FL 1&ndash;81 Explained | Verified RCM">
+<meta property="og:description" content="What the UB-04's 81 form locators actually capture: revenue codes, Type of Bill, condition, occurrence and value codes, and why institutional claims are structurally more complex.">
+<meta property="og:url" content="https://www.verifiedrcm.com/claims-forms-ub04-field-locators.html">
+<meta property="og:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<meta property="og:site_name" content="Verified RCM">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="UB-04 Field Locators: FL 1&ndash;81 Explained | Verified RCM">
+<meta name="twitter:description" content="What the UB-04's 81 form locators actually capture: revenue codes, Type of Bill, condition, occurrence and value codes, and why institutional claims are structurally more complex.">
+<meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"UB-04 field locators: what an institutional claim actually captures","description":"What the UB-04's 81 form locators actually capture: revenue codes, Type of Bill, condition, occurrence and value codes, and why institutional claims are structurally more complex.","image":"https://www.verifiedrcm.com/images/og-cover.jpg","author":{"@type":"Person","name":"Tom Bridger"},"publisher":{"@type":"Organization","name":"Verified RCM","logo":{"@type":"ImageObject","url":"https://www.verifiedrcm.com/images/logo.jpg"}},"datePublished":"2026-08-30","dateModified":"2026-08-30","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.verifiedrcm.com/claims-forms-ub04-field-locators.html"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Revenue Cycle Management","item":"https://www.verifiedrcm.com/service-revenue-cycle-management.html"},{"@type":"ListItem","position":3,"name":"Claim Forms","item":"https://www.verifiedrcm.com/claims-forms.html"},{"@type":"ListItem","position":4,"name":"UB-04 Field Locators","item":"https://www.verifiedrcm.com/claims-forms-ub04-field-locators.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between a UB-04 form locator and a CMS-1500 box?","acceptedAnswer":{"@type":"Answer","text":"They're the same idea under different names, but the UB-04 has 81 form locators against the CMS-1500's 33 boxes because it's describing an entire institutional episode of care rather than a single office encounter. Blocks like condition codes, occurrence codes and value codes have no CMS-1500 equivalent at all, because a professional claim for one visit never needs to capture that kind of episode-level detail."}},{"@type":"Question","name":"Why does the UB-04 need condition, occurrence and value codes if the diagnosis and procedure are already on the claim?","acceptedAnswer":{"@type":"Answer","text":"Diagnosis and procedure codes describe what was clinically wrong and what was clinically done. Condition, occurrence and value codes describe the administrative circumstances around the claim itself — a status change mid-stay, a dated event like an accident or admission, a dollar amount the payer needs for coordination of benefits. A payer can't correctly adjudicate an institutional claim from clinical codes alone; it needs this administrative layer too, which is exactly what a professional claim for a single encounter doesn't carry."}},{"@type":"Question","name":"What are FL 1 and FL 81 used for?","acceptedAnswer":{"@type":"Answer","text":"FL 1 carries the billing provider's name and address, sitting at the very top of the form because every other field is read in reference to who is billing. FL 81 sits at the opposite end and carries the taxonomy code and qualifier that further identifies the billing provider's specialty designation to the payer. Between those two bookends sits the entire structure of the claim — identification, bill classification, dated occurrences, condition flags, dollar values, and clinical detail."}}]}
+</script>
+<!-- Google tag (gtag.js) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'granted'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-M6QSPSLHV2');
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="nav-wrap">
+  <div class="nav-bar" id="navBar">
+    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Verified RCM</a>
+      <div class="nav-item-mega">
+      <a href="services.html" class="nav-link nav-mega-trigger active">Services</a>
+      <div class="nav-mega">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Billing</div>
+          <a href="eligibility-verification.html">Eligibility Verification</a>
+          <a href="prior-auth.html">Prior Authorization</a>
+          <a href="claims-scrubbing.html">Claims Submission</a>
+          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
+          <a href="denials-management.html">Denials Management</a>
+          <a href="accounts-receivable-recovery.html">AR Recovery</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Coding</div>
+          <a href="medical-coding.html">Coding Overview</a>
+          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
+          <a href="specialty-cardiology.html">Cardiology Coding</a>
+          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Credentialing</div>
+          <a href="credentialing-medicare.html">Medicare</a>
+          <a href="credentialing-medicaid.html">Medicaid</a>
+          <a href="credentialing-bcbs.html">BCBS</a>
+          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+          <a href="credentialing-aetna.html">Aetna</a>
+          <a href="credentialing-cigna.html">Cigna</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Practice Growth</div>
+          <a href="digital-marketing.html">Digital Marketing</a>
+          <a href="seo-services.html">Healthcare SEO</a>
+          <a href="google-business-profile.html">Google Business Profile</a>
+          <a href="social-media-management.html">Social Media</a>
+          <a href="web-development.html">Web Development</a>
+          <a href="virtual-assistant.html">Virtual Assistants</a>
+        </div>
+      </div>
+    </div>
+      <div class="nav-item-mega">
+      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
+      <div class="nav-mega">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Primary care</div>
+          <a href="specialty-internal-medicine.html">Internal Medicine</a>
+          <a href="specialty-family-medicine.html">Family Medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-urgent-care.html">Urgent Care</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical</div>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-neurology.html">Neurology</a>
+          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
+          <a href="specialty-nephrology.html">Nephrology</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Surgical</div>
+          <a href="specialty-orthopedics.html">Orthopedics</a>
+          <a href="specialty-general-surgery.html">General Surgery</a>
+          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Therapy &amp; more</div>
+          <a href="specialty-physical-therapy.html">Physical Therapy</a>
+          <a href="specialty-mental-health.html">Mental Health</a>
+          <a href="specialty-dental-care.html">Dental Care</a>
+          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
+        </div>
+      </div>
+    </div>
+      <div class="nav-item-mega">
+      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
+      <div class="nav-mega nav-mega-2col">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Practice resources</div>
+          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
+          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
+          <a href="switching-billing-companies.html">Switching Billing Companies</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Latest articles</div>
+          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
+          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
+          <a href="blog.html" class="see-all">See all articles &rarr;</a>
+        </div>
+      </div>
+    </div>
+      <a href="about.html" class="nav-link">About us</a>
+    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
+    </nav>
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+    <div class="nav-spacer"></div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
+    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Verified RCM</a>
+    <a href="services.html">Services</a>
+    <a href="specialties.html">Specialties</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About us</a>
+  <a href="https://sams.verifiedrcm.com">SAMS</a>
+  </div>
+</div>
+<main id="main">
+<article class="wrap article">
+  <a href="claims-forms.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete claim forms guide</a>
+  <h1>UB-04 field locators: what an institutional claim actually captures.</h1>
+  <p class="lede">The UB-04 has 81 form locators to the CMS-1500's 33 boxes, and the gap isn't padding. It exists because an institutional claim is describing an entire episode of care &mdash; who's billing, what kind of bill it is, what happened and when, what it's worth &mdash; not a single office visit. This guide walks through the blocks of form locators that have no CMS-1500 equivalent at all, anchored by the two form locators every institutional biller learns first: FL 1 and FL 81.</p>
+  <div class="post-meta"><span class="muted">Reviewed by Tom Bridger, CPC &middot; Certified Professional Coder (AAPC) &middot; Part of our <a href="claims-forms.html">claim forms guide</a></span></div>
+
+  <section class="takeaways" aria-label="Key takeaways">
+    <h2>Key takeaways</h2>
+    <ul>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>81 form locators, not 33 boxes.</b> The UB-04 describes an institutional episode, not a single encounter, and its extra field count reflects that directly.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Condition, occurrence and value codes have no CMS-1500 equivalent.</b> A professional claim for one visit never needs to describe an episode's circumstances, dated events or dollar values.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>FL 1 and FL 81 bookend the form.</b> Billing provider identification opens it, taxonomy and qualifier close it, and everything in between builds out the episode.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>More fields means more places for one wrong entry to cascade.</b> Structural complexity is the trade-off for the richer administrative detail an institutional claim requires.</span></li>
+    </ul>
+  </section>
+
+  <h2>Why 81 fields for one claim</h2>
+  <p>A CMS-1500 has to answer a relatively contained question: who's billing, who was treated, what was done, and why. A UB-04 has to answer that same question plus a second one layered on top of it: what kind of institutional stay or encounter is this, what administrative circumstances surround it, and what dated events and dollar values does the payer need to adjudicate it correctly. That second layer is what the extra fields exist for, and it's the reason the UB-04's field count isn't just "more of the same kind of information" &mdash; it's genuinely a different, wider category of information than a professional claim ever has to carry.</p>
+  <p>The two form locators worth learning first as orientation points are FL 1 and FL 81, because they bookend the form conceptually even though they sit far apart on the page. FL 1 carries the billing provider's name and address &mdash; the institutional equivalent of what box 33 does on a CMS-1500 &mdash; and it sits at the top of the form because every other field on the claim is ultimately read in reference to who is billing. FL 81 sits at the far end of the form and carries the taxonomy code and qualifier that further identifies the billing provider's specialty designation to the payer, refining the same "who is billing" question FL 1 opened with additional specificity. Between those two bookends sits everything else: bill classification, dated occurrences, condition flags, dollar values, revenue and procedure detail, and diagnosis coding for the episode.</p>
+
+  <h2>Type of Bill and revenue codes: classifying the claim itself</h2>
+  <p>Before a payer even looks at what was billed, it needs to know what kind of claim this is, and that's what the Type of Bill code (a three-digit code) does &mdash; identifying the facility type, the bill classification, and whether this is an original claim, a correction, or a void. It functions as a routing instruction as much as a data field: get any one of the three digits wrong, particularly the frequency digit that says whether this is new or a correction, and the payer's system can misroute or reject the claim before it ever evaluates the clinical content.</p>
+  <p>Revenue codes do a related but distinct job further down the form: they identify which department or service category each charge line belongs to &mdash; pharmacy, laboratory, a specific type of room and board, operating room time, and so on. A professional claim doesn't need this because a physician's service line is already fully described by its CPT or HCPCS code; an institutional claim needs it because a single stay can generate dozens of charge lines across entirely different departments, and the payer needs each one categorized correctly to price and audit the claim as a whole, not line by line in isolation.</p>
+
+  <h2>Condition, occurrence and value codes: the episode-level detail</h2>
+  <p>This is the block of the UB-04 with the cleanest "no CMS-1500 equivalent" story, because these three code sets describe things a single office visit simply doesn't have. Condition codes flag circumstances that affect how the claim should be processed &mdash; a beneficiary-requested billing situation, a mid-stay change from inpatient to outpatient status, and similar administrative circumstances that change how a payer needs to handle the claim. Occurrence codes record specific dated events tied to the claim &mdash; an accident date, the admission date itself &mdash; giving the payer a timeline of events relevant to the episode rather than just the diagnosis and procedure codes describing what happened clinically. Value codes carry dollar amounts or quantities the payer needs for adjudication, separate from the itemized charge lines, covering things like coordination-of-benefits amounts between payers.</p>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <caption>The three code blocks with no CMS-1500 equivalent, and why an institutional claim needs each one.</caption>
+      <thead><tr><th scope="col">Code set</th><th scope="col">Describes</th><th scope="col">Why a professional claim doesn't need it</th></tr></thead>
+      <tbody>
+        <tr><td>Condition codes</td><td>Circumstances affecting how the claim should be processed</td><td>A single office visit has no mid-episode status changes to flag</td></tr>
+        <tr><td>Occurrence codes</td><td>Specific dated events tied to the claim</td><td>The date of service already fully describes when a professional service happened</td></tr>
+        <tr><td>Value codes</td><td>Coded dollar amounts or quantities for adjudication</td><td>A professional claim's charge amount is already a single line item, not an episode-level total</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>None of these three code sets exist because someone wanted the UB-04 to be more complicated than it needs to be &mdash; they exist because an institutional stay genuinely has more moving administrative parts than an office visit does, and the payer has no other structured place on the claim to capture them.</p>
+
+  <h2>Why this makes institutional claims structurally more complex</h2>
+  <p>Put the pieces together and the structural difference between the two forms comes into focus: a CMS-1500 describes one service, rendered by one identifiable provider, on one date, supported by one or a small handful of diagnoses. A UB-04 describes an episode &mdash; potentially spanning days, multiple departments, multiple charge lines, administrative status changes partway through, and dated events that happened before or during the stay &mdash; and it has to hold all of that together on a single claim that adjudicates as one unit. Every additional category of information is also an additional place where a single wrong entry can cascade into a rejection, which is exactly why UB-04 rejection patterns tend to cluster differently than CMS-1500 rejection patterns: it's rarely one field in isolation, it's more often one field that contradicts another field describing the same episode from a different angle.</p>
+  <p>That's also why UB-04 review has to be structural in a way CMS-1500 review doesn't. Checking whether the diagnosis and procedure codes are individually correct is necessary but nowhere near sufficient &mdash; the Type of Bill has to agree with the claim's own history, the revenue codes have to agree with the HCPCS billed alongside them, and any condition, occurrence or value code entered has to be internally consistent with the rest of the episode being described. A biller who only checks the clinical codes on a UB-04 is checking a fraction of what the payer is actually going to evaluate.</p>
+
+  <div class="cta-band">
+    <div>
+      <h3>Institutional claims denying for reasons that don't add up?</h3>
+      <p>We scrub UB-04 claims field-block by field-block &mdash; Type of Bill, revenue codes, condition and occurrence codes included &mdash; before submission, not after a denial.</p>
+    </div>
+    <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>What's the difference between a UB-04 form locator and a CMS-1500 box?</summary><p>They're the same idea under different names, but the UB-04 has 81 form locators against the CMS-1500's 33 boxes because it's describing an entire institutional episode of care rather than a single office encounter. Blocks like condition codes, occurrence codes and value codes have no CMS-1500 equivalent at all, because a professional claim for one visit never needs to capture that kind of episode-level detail.</p></details>
+    <details class="faq-item"><summary>Why does the UB-04 need condition, occurrence and value codes if the diagnosis and procedure are already on the claim?</summary><p>Diagnosis and procedure codes describe what was clinically wrong and what was clinically done. Condition, occurrence and value codes describe the administrative circumstances around the claim itself &mdash; a status change mid-stay, a dated event like an accident or admission, a dollar amount the payer needs for coordination of benefits. A payer can't correctly adjudicate an institutional claim from clinical codes alone; it needs this administrative layer too, which is exactly what a professional claim for a single encounter doesn't carry.</p></details>
+    <details class="faq-item"><summary>What are FL 1 and FL 81 used for?</summary><p>FL 1 carries the billing provider's name and address, sitting at the very top of the form because every other field is read in reference to who is billing. FL 81 sits at the opposite end and carries the taxonomy code and qualifier that further identifies the billing provider's specialty designation to the payer. Between those two bookends sits the entire structure of the claim &mdash; identification, bill classification, dated occurrences, condition flags, dollar values, and clinical detail.</p></details>
+  </div>
+
+  <div class="content-disclaimer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
+    <p><b>Confirm before you rely on this.</b> Claim form requirements and payer-specific field rules change. The process information on this page reflects standard industry practice as of August 2026 and is provided for general education &mdash; verify current requirements against the current NUCC CMS-1500 and NUBC UB-04 instructions before relying on it.</p>
+  </div>
+
+  <h2>Related resources</h2>
+  <ul class="related-list">
+    <li><a href="claims-forms.html">Our complete claim forms guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="claims-forms-cms1500-common-rejections.html">CMS-1500 rejections: the fields that cause the most trouble <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="claims-forms-electronic-vs-paper.html">837P and 837I: why almost nobody actually mails a paper claim anymore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="claims-forms-professional-vs-institutional.html">CMS-1500 vs. UB-04: which form applies to which claim <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="service-revenue-cycle-management.html">Revenue cycle management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+  </ul>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-card">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
+          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        </div>
+        <div class="footer-actions">
+          <div class="footer-action">
+            <div class="footer-action-label">Book a consultation</div>
+            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
+            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
+            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
+          </div>
+          <div class="footer-action">
+            <div class="footer-action-label">Rate your experience</div>
+            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
+            <!-- TrustBox widget - Review Collector -->
+            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
+            <!-- End TrustBox widget -->
+          </div>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+        <nav class="footer-legal" aria-label="Legal">
+          <a href="privacy.html">Privacy policy</a>
+          <a href="terms.html">Terms of service</a>
+          <a href="hipaa-notice.html">HIPAA notice</a>
+          <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+        </nav>
+        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
+<!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<!-- End TrustBox script -->
+<script src="js/main.js"></script>
+</body>
+</html>

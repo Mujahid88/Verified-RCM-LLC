@@ -1,7 +1,7 @@
 # Verified RCM — website
 
 The marketing site for Verified RCM LLC, a US medical billing / revenue cycle management
-company. 324 HTML pages, one stylesheet, one script file, plus a small Cloudflare Worker
+company. 348 HTML pages, one stylesheet, one script file, plus a small Cloudflare Worker
 for the contact form. No frontend build step — every page can still be opened directly
 or served as plain static files.
 
@@ -35,16 +35,17 @@ or served as plain static files.
 │                                     CAQH/revalidation, denials/appeals and delegated
 │                                     credentialing, hub-and-spoke like the specialties
 │                                     (2026-08-30)
-├── eligibility-verification.html    Core RCM process pages
-├── prior-auth.html
-├── claims-scrubbing.html
-├── denials-management.html
+├── eligibility-verification.html    Medical billing process pillars, each with 4
+├── prior-auth.html                   spokes (24 total) and a quick-facts card —
+├── claims-scrubbing.html              eligibility, prior auth, claims scrubbing,
+├── denials-management.html           claim forms, denials, AR recovery. Verified
+├── claims-forms.html                 CARC/RARC codes, 837/270/271 transaction facts,
+├── accounts-receivable-recovery.html  Medicare's 12-month timely filing limit
+│                                     (2026-08-30)
 ├── medical-coding.html
-├── claims-forms.html
-├── accounts-receivable-recovery.html
-├── in-house-vs-outsourced-billing.html
-├── switching-billing-companies.html
-├── rcm-glossary.html
+├── in-house-vs-outsourced-billing.html   Practice resources, deepened to ~3-4.5K
+├── switching-billing-companies.html       words each with cross-links into the new
+├── rcm-glossary.html                      clusters (2026-08-30)
 ├── digital-marketing.html           "Growth & technology" service pages
 ├── seo-services.html                (marketing services offered alongside RCM)
 ├── google-business-profile.html
@@ -67,7 +68,7 @@ or served as plain static files.
 │                                     spokes (staffing, healthcare accounting, HIPAA,
 │                                     KPI reporting, EHR selection, multi-location
 │                                     scaling) (2026-08-30)
-├── sitemap.xml                      316 URLs, kept in sync with the page count
+├── sitemap.xml                      340 URLs, kept in sync with the page count
 ├── robots.txt
 ├── css/style.css                    The only stylesheet — design tokens + components
 ├── js/main.js                       Nav, filters, reveal/counter animation, form handling
@@ -163,7 +164,7 @@ Tracked events include the contact form, phone clicks, and email clicks.
 - WCAG AA target: `pa11y --standard WCAG2AA` should return 0 on both light and dark theme.
   Dark-theme pa11y runs need a ~2s wait after the theme toggle click, or most findings
   are phantom (mid-transition colour values, not real failures).
-- `sitemap.xml` is kept at exactly the live page count (316) — if you add or remove a
+- `sitemap.xml` is kept at exactly the live page count (340) — if you add or remove a
   page, update it in the same commit.
 
 ---
