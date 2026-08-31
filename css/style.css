@@ -1228,18 +1228,18 @@ p{margin:0 0 16px;text-wrap:pretty}
   display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;
   margin:0 auto 34px;max-width:1000px;text-align:left;
 }
-.audit-includes span{
+.audit-includes span,.audit-includes a{
   display:flex;gap:10px;align-items:flex-start;
   padding:6px 0 6px 18px;border-radius:0;
   background:none;border:0;border-left:1px solid rgba(255,255,255,.22);
   font-size:13.5px;font-weight:500;line-height:1.45;color:#e4e4e7;
   transition:transform .25s var(--ease),color .25s ease;
 }
-.audit-includes span:hover{
+.audit-includes span:hover,.audit-includes a:hover{
   transform:translateX(3px);
   color:#fff;
 }
-.audit-includes span::before{
+.audit-includes span::before,.audit-includes a::before{
   content:"";flex:0 0 auto;width:18px;height:18px;border-radius:999px;margin-top:1px;
   background:#ffffff;
   box-shadow:0 0 8px rgba(255,255,255,.6);
