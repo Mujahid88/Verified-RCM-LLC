@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Tracking Prior Authorizations Across Payers | Verified RCM</title>
+<meta name="description" content="How to track prior authorizations across a multi-payer schedule: the fields a tracker needs, the escalation step, and what a missed or expired authorization actually costs.">
+<link rel="canonical" href="https://www.verifiedrcm.com/prior-auth-tracking-workflow.html">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tracking Prior Authorizations Across Payers | Verified RCM">
+<meta property="og:description" content="How to track prior authorizations across a multi-payer schedule: the fields a tracker needs, the escalation step, and what a missed or expired authorization actually costs.">
+<meta property="og:url" content="https://www.verifiedrcm.com/prior-auth-tracking-workflow.html">
+<meta property="og:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<meta property="og:site_name" content="Verified RCM">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tracking Prior Authorizations Across Payers | Verified RCM">
+<meta name="twitter:description" content="How to track prior authorizations across a multi-payer schedule: the fields a tracker needs, the escalation step, and what a missed or expired authorization actually costs.">
+<meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Tracking prior authorizations across payers without losing one.","description":"How to track prior authorizations across a multi-payer schedule: the fields a tracker needs, the escalation step, and what a missed or expired authorization actually costs.","image":"https://www.verifiedrcm.com/images/og-cover.jpg","author":{"@type":"Person","name":"Marcus Fielding"},"publisher":{"@type":"Organization","name":"Verified RCM","logo":{"@type":"ImageObject","url":"https://www.verifiedrcm.com/images/logo.jpg"}},"datePublished":"2026-08-30","dateModified":"2026-08-30","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.verifiedrcm.com/prior-auth-tracking-workflow.html"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Revenue Cycle Management","item":"https://www.verifiedrcm.com/service-revenue-cycle-management.html"},{"@type":"ListItem","position":3,"name":"Prior Authorization","item":"https://www.verifiedrcm.com/prior-auth.html"},{"@type":"ListItem","position":4,"name":"Tracking Workflow","item":"https://www.verifiedrcm.com/prior-auth-tracking-workflow.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What fields does a prior authorization tracker actually need?","acceptedAnswer":{"@type":"Answer","text":"At minimum: submission date and method, the payer's reference or confirmation number, the expected decision date, the number of visits or units authorized, the expiration date, and a named escalation owner with a specific trigger date. Fewer fields than that and the tracker can't answer the questions that actually prevent a lapse — whether a request has gone quiet past its expected decision date, or whether an approved authorization is about to expire or run out of visits before the next scheduled appointment."}},{"@type":"Question","name":"Is a spreadsheet good enough, or do we need dedicated software?</summary>","acceptedAnswer":{"@type":"Answer","text":"A well-maintained spreadsheet, reviewed daily by a named owner, is genuinely good enough at lower volume — the discipline of checking it matters more than the tool. At higher volume, across many payers and many recurring-visit patients, a system that surfaces expirations and stalled requests automatically, rather than relying on someone remembering to scroll through rows, becomes worth the cost because the failure mode of a manual system at scale is the exact silent-lapse pattern this guide is about."}},{"@type":"Question","name":"What actually happens when an authorization is missed or expires?","acceptedAnswer":{"@type":"Answer","text":"One of two things, and neither is good: the service gets delayed while staff scramble to re-verify or resubmit, disrupting the patient's care and the day's schedule, or the service gets delivered anyway on the assumption the authorization was still in force, and the practice finds out otherwise when the claim denies weeks later — usually as a full write-off, since most payer contracts treat a missing authorization as the practice's failure rather than the patient's responsibility."}}]}
+</script>
+<!-- Google tag (gtag.js) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'granted'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-M6QSPSLHV2');
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="nav-wrap">
+  <div class="nav-bar" id="navBar">
+    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Verified RCM</a>
+      <div class="nav-item-mega">
+      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
+      <div class="nav-mega">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Billing</div>
+          <a href="eligibility-verification.html">Eligibility Verification</a>
+          <a href="prior-auth.html">Prior Authorization</a>
+          <a href="claims-scrubbing.html">Claims Submission</a>
+          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
+          <a href="denials-management.html">Denials Management</a>
+          <a href="accounts-receivable-recovery.html">AR Recovery</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Coding</div>
+          <a href="medical-coding.html">Coding Overview</a>
+          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
+          <a href="specialty-cardiology.html">Cardiology Coding</a>
+          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Credentialing</div>
+          <a href="credentialing-medicare.html">Medicare</a>
+          <a href="credentialing-medicaid.html">Medicaid</a>
+          <a href="credentialing-bcbs.html">BCBS</a>
+          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+          <a href="credentialing-aetna.html">Aetna</a>
+          <a href="credentialing-cigna.html">Cigna</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Practice Growth</div>
+          <a href="digital-marketing.html">Digital Marketing</a>
+          <a href="seo-services.html">Healthcare SEO</a>
+          <a href="google-business-profile.html">Google Business Profile</a>
+          <a href="social-media-management.html">Social Media</a>
+          <a href="web-development.html">Web Development</a>
+          <a href="virtual-assistant.html">Virtual Assistants</a>
+        </div>
+      </div>
+    </div>
+      <div class="nav-item-mega">
+      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
+      <div class="nav-mega">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Primary care</div>
+          <a href="specialty-internal-medicine.html">Internal Medicine</a>
+          <a href="specialty-family-medicine.html">Family Medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-urgent-care.html">Urgent Care</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical</div>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-neurology.html">Neurology</a>
+          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
+          <a href="specialty-nephrology.html">Nephrology</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Surgical</div>
+          <a href="specialty-orthopedics.html">Orthopedics</a>
+          <a href="specialty-general-surgery.html">General Surgery</a>
+          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Therapy &amp; more</div>
+          <a href="specialty-physical-therapy.html">Physical Therapy</a>
+          <a href="specialty-mental-health.html">Mental Health</a>
+          <a href="specialty-dental-care.html">Dental Care</a>
+          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
+        </div>
+      </div>
+    </div>
+      <div class="nav-item-mega">
+      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
+      <div class="nav-mega nav-mega-2col">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Practice resources</div>
+          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
+          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
+          <a href="switching-billing-companies.html">Switching Billing Companies</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Latest articles</div>
+          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
+          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
+          <a href="blog.html" class="see-all">See all articles &rarr;</a>
+        </div>
+      </div>
+    </div>
+      <a href="about.html" class="nav-link active">About us</a>
+    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
+    </nav>
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+    <div class="nav-spacer"></div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
+    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Verified RCM</a>
+    <a href="services.html">Services</a>
+    <a href="specialties.html">Specialties</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About us</a>
+  <a href="https://sams.verifiedrcm.com">SAMS</a>
+  </div>
+</div>
+<main id="main">
+<article class="wrap article">
+  <a href="prior-auth.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete prior authorization guide</a>
+  <h1>Tracking prior authorizations across payers without losing one.</h1>
+  <p class="lede">A practice working with a dozen payers is juggling a dozen portals, a dozen submission formats, and a dozen different turnaround expectations. Nothing about that is unified, which is exactly why authorizations get lost &mdash; not through one dramatic failure, but through a tracking gap that quietly repeats across every recurring-visit patient in the schedule.</p>
+  <div class="post-meta"><span class="muted">Reviewed by Marcus Fielding, CPB &middot; Certified Professional Biller (AAPC) &middot; Part of our <a href="prior-auth.html">prior authorization guide</a></span></div>
+
+  <section class="takeaways" aria-label="Key takeaways">
+    <h2>Key takeaways</h2>
+    <ul>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The problem is rarely one dramatic miss.</b> It's a tracking gap that repeats quietly across every recurring-visit patient until a denial audit surfaces the pattern.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A tracker needs six fields at minimum</b> to answer the two questions that actually matter: is this request stalled, and is this approval about to lapse.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The discipline matters more than the tool.</b> A spreadsheet checked daily by a named owner outperforms an expensive system nobody actually opens.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A missed authorization costs one of two ways</b> &mdash; a delayed service, or care delivered unauthorized and written off weeks later.</span></li>
+    </ul>
+  </section>
+
+  <h2>Why authorizations get lost across a multi-payer schedule</h2>
+  <p>Every payer runs its own version of the prior authorization process &mdash; its own portal or submission channel, its own documentation requirements, its own turnaround expectations, and its own definition of what counts as urgent versus standard. A practice billing a dozen payers is effectively running a dozen different processes in parallel, often for the exact same handful of high-volume procedures, and nothing forces those processes to stay consistent with each other. That fragmentation is the root cause behind most of the tracking failures that eventually surface as denials: not a single dramatic miss, but the same small gap &mdash; an expiration date nobody calendared, a visit count nobody was watching &mdash; repeating quietly across every recurring-visit patient in the practice.</p>
+  <p>The reason this stays invisible for so long is that a single missed authorization looks, from the billing desk, like an isolated denied claim. It's only when someone deliberately reconciles a batch of denials and traces each one back to its root cause that the pattern becomes visible &mdash; and by then, the same gap has usually repeated across dozens of encounters, not just the one that triggered the review. Building a tracker isn't about handling the occasional exception; it's about closing the systemic gap that produces that pattern in the first place.</p>
+
+  <h2>What a tracker needs to capture</h2>
+  <p>A tracking system, whether it's a dedicated module, a shared spreadsheet, or something in between, has to be able to answer two questions at a glance for every open authorization: is this request stalled somewhere it shouldn't be, and is this approval about to lapse before the next scheduled appointment. Answering those two questions reliably requires six fields, at minimum, tracked consistently for every request.</p>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <caption>The minimum field set for a prior authorization tracker, and what each one is actually for.</caption>
+      <thead><tr><th scope="col">Field</th><th scope="col">What it's for</th></tr></thead>
+      <tbody>
+        <tr><td><b>Submission date and method</b></td><td>Starts the clock for follow-up, and is the first thing a payer's representative asks for on any status call</td></tr>
+        <tr><td><b>Payer reference / confirmation number</b></td><td>Without it, every status inquiry starts from zero and takes longer to resolve</td></tr>
+        <tr><td><b>Expected decision date</b></td><td>Converts open-ended waiting into a specific date to follow up on if nothing has come back</td></tr>
+        <tr><td><b>Visits or units authorized</b></td><td>Enables tracking a running balance against the schedule, rather than discovering the count was exceeded after a claim denies</td></tr>
+        <tr><td><b>Expiration date</b></td><td>Has to be checked against the actual scheduled appointment date, not the date the authorization was originally requested</td></tr>
+        <tr><td><b>Escalation trigger and owner</b></td><td>A specific day past which a stalled request gets escalated, and a named person responsible for doing it</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The escalation field deserves particular attention because it's the one most trackers skip, and it's the one that actually prevents a stalled request from sitting silently until it expires. A tracker that only logs status without a defined trigger for action is a record-keeping exercise, not an operational tool &mdash; the value comes from someone being told, automatically or through a daily review habit, that a specific request has gone past its expected decision date and needs a phone call, not from the data simply existing somewhere.</p>
+
+  <h2>Spreadsheet, EHR module, or dedicated software</h2>
+  <p>The tool matters far less than the discipline behind using it. A well-maintained spreadsheet, reviewed by a named owner on a fixed daily schedule, reliably outperforms an expensive dedicated authorization system that nobody actually opens between submission and the day a claim denies. What makes a tracker work is the daily habit of checking it against the fields above, not the sophistication of the software underneath it.</p>
+  <p>Where volume genuinely justifies it, dedicated software or an EHR's authorization module earns its cost by surfacing expirations and stalled requests automatically, rather than depending on someone remembering to scroll through rows looking for dates that are approaching. That's a meaningful advantage at scale, because the failure mode of a manual system under high volume is exactly the silent-lapse pattern this guide describes: the tracker exists, the data is even accurate, but nobody looked at row 340 on the day it mattered. Whichever tool a practice uses, the test is the same &mdash; can someone, today, answer "which authorizations expire in the next two weeks" and "which requests have gone quiet past their expected decision date" without manually re-deriving both from scratch.</p>
+
+  <h2>What it actually costs to lose track of one</h2>
+  <p>The cost of a tracking failure lands in one of two places, and neither is good. If the gap is caught before the appointment &mdash; because a patient calls to confirm, or someone happens to check &mdash; the service gets delayed while staff scramble to re-verify status or resubmit a lapsed request, which disrupts both the patient's care and the day's schedule. If the gap isn't caught in time, the service gets delivered on the assumption the authorization was still in force, and the practice finds out otherwise when the claim denies weeks later, at which point it's very often the same full write-off this whole topic opened with: unbillable to the payer, and usually not billable to the patient either, because most payer contracts treat the missing authorization as the practice's failure.</p>
+  <p>Either outcome is avoidable with the same fix: a tracker that captures the six fields above, checked on a fixed schedule by someone whose job includes actually looking at it, with a defined escalation trigger before either the visit count or the expiration date is reached. That's the operational discipline that turns prior authorization from a source of quiet, recurring loss into a managed process &mdash; and it's the same discipline that, over time, builds the approval-rate history described in <a href="prior-auth-gold-carding.html">our gold-carding guide</a>, so the tracking effort pays off twice.</p>
+
+  <div class="cta-band">
+    <div>
+      <h3>Not confident you'd catch a lapsing authorization before the appointment?</h3>
+      <p>We track every open request against your schedule, with a named owner and an escalation trigger before anything expires or runs out of visits.</p>
+    </div>
+    <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>What fields does a prior authorization tracker actually need?</summary><p>At minimum: submission date and method, the payer's reference or confirmation number, the expected decision date, the number of visits or units authorized, the expiration date, and a named escalation owner with a specific trigger date. Fewer fields than that and the tracker can't answer the questions that actually prevent a lapse &mdash; whether a request has gone quiet past its expected decision date, or whether an approved authorization is about to expire or run out of visits before the next scheduled appointment.</p></details>
+    <details class="faq-item"><summary>Is a spreadsheet good enough, or do we need dedicated software?</summary><p>A well-maintained spreadsheet, reviewed daily by a named owner, is genuinely good enough at lower volume &mdash; the discipline of checking it matters more than the tool. At higher volume, across many payers and many recurring-visit patients, a system that surfaces expirations and stalled requests automatically, rather than relying on someone remembering to scroll through rows, becomes worth the cost because the failure mode of a manual system at scale is the exact silent-lapse pattern this guide is about.</p></details>
+    <details class="faq-item"><summary>What actually happens when an authorization is missed or expires?</summary><p>One of two things, and neither is good: the service gets delayed while staff scramble to re-verify or resubmit, disrupting the patient's care and the day's schedule, or the service gets delivered anyway on the assumption the authorization was still in force, and the practice finds out otherwise when the claim denies weeks later &mdash; usually as a full write-off, since most payer contracts treat a missing authorization as the practice's failure rather than the patient's responsibility.</p></details>
+  </div>
+
+  <div class="content-disclaimer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
+    <p><b>Confirm before you rely on this.</b> Prior authorization requirements, payer portals and turnaround times change by payer, plan and service. The process information on this page reflects standard industry practice as of August 2026 and is provided for general education &mdash; verify current requirements directly with the specific payer before relying on it.</p>
+  </div>
+
+  <h2>Related resources</h2>
+  <ul class="related-list">
+    <li><a href="prior-auth.html">Our complete prior authorization guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="prior-auth-peer-to-peer.html">Peer-to-peer review: how to win one <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="prior-auth-gold-carding.html">Gold-carding explained <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="prior-auth-denials-appeals.html">Denials and the appeal path <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="service-revenue-cycle-management.html">Revenue cycle management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+  </ul>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-card">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
+          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        </div>
+        <div class="footer-actions">
+          <div class="footer-action">
+            <div class="footer-action-label">Book a consultation</div>
+            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
+            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
+            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
+          </div>
+          <div class="footer-action">
+            <div class="footer-action-label">Rate your experience</div>
+            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
+            <!-- TrustBox widget - Review Collector -->
+            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
+            <!-- End TrustBox widget -->
+          </div>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+        <nav class="footer-legal" aria-label="Legal">
+          <a href="privacy.html">Privacy policy</a>
+          <a href="terms.html">Terms of service</a>
+          <a href="hipaa-notice.html">HIPAA notice</a>
+          <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+        </nav>
+        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
+<!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<!-- End TrustBox script -->
+<script src="js/main.js"></script>
+</body>
+</html>

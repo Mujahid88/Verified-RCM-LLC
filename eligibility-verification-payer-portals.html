@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Payer Portals, Clearinghouses &amp; the 270/271 Transaction | Verified RCM</title>
+<meta name="description" content="How the 270/271 EDI eligibility transaction works, real-time vs. batch checking, when a clearinghouse beats going direct to a payer portal, and what a successful 271 response actually confirms.">
+<link rel="canonical" href="https://www.verifiedrcm.com/eligibility-verification-payer-portals.html">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Payer Portals, Clearinghouses &amp; the 270/271 Transaction | Verified RCM">
+<meta property="og:description" content="How the 270/271 EDI eligibility transaction works, real-time vs. batch checking, when a clearinghouse beats going direct to a payer portal, and what a successful 271 response actually confirms.">
+<meta property="og:url" content="https://www.verifiedrcm.com/eligibility-verification-payer-portals.html">
+<meta property="og:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<meta property="og:site_name" content="Verified RCM">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Payer Portals, Clearinghouses &amp; the 270/271 Transaction | Verified RCM">
+<meta name="twitter:description" content="How the 270/271 EDI eligibility transaction works, real-time vs. batch checking, when a clearinghouse beats going direct to a payer portal, and what a successful 271 response actually confirms.">
+<meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Payer Portals, Clearinghouses &amp; the 270/271 Transaction | Verified RCM","description":"How the 270/271 EDI eligibility transaction works, real-time vs. batch checking, when a clearinghouse beats going direct to a payer portal, and what a successful 271 response actually confirms.","image":"https://www.verifiedrcm.com/images/og-cover.jpg","author":{"@type":"Person","name":"Sarah Ochieng"},"publisher":{"@type":"Organization","name":"Verified RCM","logo":{"@type":"ImageObject","url":"https://www.verifiedrcm.com/images/logo.jpg"}},"datePublished":"2026-08-30","dateModified":"2026-08-30","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.verifiedrcm.com/eligibility-verification-payer-portals.html"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Revenue Cycle Management","item":"https://www.verifiedrcm.com/service-revenue-cycle-management.html"},{"@type":"ListItem","position":3,"name":"Eligibility Verification","item":"https://www.verifiedrcm.com/eligibility-verification.html"},{"@type":"ListItem","position":4,"name":"Payer Portals, Clearinghouses &amp; the 270/271 Transaction","item":"https://www.verifiedrcm.com/eligibility-verification-payer-portals.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between a 270 and a 271?","acceptedAnswer":{"@type":"Answer","text":"The 270 is the eligibility inquiry sent out by a provider, practice management system, or clearinghouse. The 271 is the payer's response to that inquiry. Both are ANSI X12 transaction sets that HIPAA requires every covered payer to support, which is why the same 270 format works regardless of which payer, clearinghouse, or software is on the other end."}},{"@type":"Question","name":"Is a clearinghouse always better than going direct to a payer portal?","acceptedAnswer":{"@type":"Answer","text":"Not always. A clearinghouse earns its cost when a practice checks eligibility across many different payers, because one login and one interface replaces a dozen separate portal accounts. A practice whose volume is concentrated in one or two payers may find going direct to that payer's own portal simpler for the cases that need a closer look, even while using a clearinghouse for routine batch checking."}},{"@type":"Question","name":"Does a successful 271 response guarantee a claim will be paid?","acceptedAnswer":{"@type":"Answer","text":"No. A successful 271 confirms the payer found the member and the policy is active on the date asked about. It does not confirm that a specific planned service is covered, that no annual limit has been exhausted, or that authorization has been obtained. Those are benefits and authorization questions, which often require a more detailed inquiry or a direct call to the payer."}}]}
+</script>
+<!-- Google tag (gtag.js) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'granted'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-M6QSPSLHV2');
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="nav-wrap">
+  <div class="nav-bar" id="navBar">
+    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Verified RCM</a>
+      <div class="nav-item-mega">
+      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
+      <div class="nav-mega">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Billing</div>
+          <a href="eligibility-verification.html">Eligibility Verification</a>
+          <a href="prior-auth.html">Prior Authorization</a>
+          <a href="claims-scrubbing.html">Claims Submission</a>
+          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
+          <a href="denials-management.html">Denials Management</a>
+          <a href="accounts-receivable-recovery.html">AR Recovery</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Coding</div>
+          <a href="medical-coding.html">Coding Overview</a>
+          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
+          <a href="specialty-cardiology.html">Cardiology Coding</a>
+          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Credentialing</div>
+          <a href="credentialing-medicare.html">Medicare</a>
+          <a href="credentialing-medicaid.html">Medicaid</a>
+          <a href="credentialing-bcbs.html">BCBS</a>
+          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+          <a href="credentialing-aetna.html">Aetna</a>
+          <a href="credentialing-cigna.html">Cigna</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Practice Growth</div>
+          <a href="digital-marketing.html">Digital Marketing</a>
+          <a href="seo-services.html">Healthcare SEO</a>
+          <a href="google-business-profile.html">Google Business Profile</a>
+          <a href="social-media-management.html">Social Media</a>
+          <a href="web-development.html">Web Development</a>
+          <a href="virtual-assistant.html">Virtual Assistants</a>
+        </div>
+      </div>
+    </div>
+      <div class="nav-item-mega">
+      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
+      <div class="nav-mega">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Primary care</div>
+          <a href="specialty-internal-medicine.html">Internal Medicine</a>
+          <a href="specialty-family-medicine.html">Family Medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-urgent-care.html">Urgent Care</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical</div>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-neurology.html">Neurology</a>
+          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
+          <a href="specialty-nephrology.html">Nephrology</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Surgical</div>
+          <a href="specialty-orthopedics.html">Orthopedics</a>
+          <a href="specialty-general-surgery.html">General Surgery</a>
+          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Therapy &amp; more</div>
+          <a href="specialty-physical-therapy.html">Physical Therapy</a>
+          <a href="specialty-mental-health.html">Mental Health</a>
+          <a href="specialty-dental-care.html">Dental Care</a>
+          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
+        </div>
+      </div>
+    </div>
+      <div class="nav-item-mega">
+      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
+      <div class="nav-mega nav-mega-2col">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Practice resources</div>
+          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
+          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
+          <a href="switching-billing-companies.html">Switching Billing Companies</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Latest articles</div>
+          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
+          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
+          <a href="blog.html" class="see-all">See all articles &rarr;</a>
+        </div>
+      </div>
+    </div>
+      <a href="about.html" class="nav-link active">About us</a>
+    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
+    </nav>
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+    <div class="nav-spacer"></div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
+    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Verified RCM</a>
+    <a href="services.html">Services</a>
+    <a href="specialties.html">Specialties</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About us</a>
+  <a href="https://sams.verifiedrcm.com">SAMS</a>
+  </div>
+</div>
+<main id="main">
+<article class="wrap article">
+  <a href="eligibility-verification.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete eligibility verification guide</a>
+  <h1>Payer portals, clearinghouses, and the 270/271 transaction behind every eligibility check.</h1>
+  <p class="lede">Every eligibility check your practice runs, whatever software sits on top of it, resolves down to the same standardized electronic conversation: a 270 inquiry goes out, a 271 response comes back. Understanding what that exchange actually asks and answers changes how much you should trust the result &mdash; and where a clean response can still leave a real gap.</p>
+  <div class="post-meta"><span class="muted">Reviewed by Sarah Ochieng, CPB &middot; Certified Professional Biller (AAPC) &middot; Part of our <a href="eligibility-verification.html">eligibility verification guide</a></span></div>
+
+  <section class="takeaways" aria-label="Key takeaways">
+    <h2>Key takeaways</h2>
+    <ul>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The 270/271 is a HIPAA-mandated standard.</b> Every certified payer, clearinghouse, and practice management system speaks the same transaction format.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Real-time and batch checking answer different needs.</b> One confirms coverage at a single moment; the other clears an entire schedule at once.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A clearinghouse trades payer-specific depth for breadth.</b> One login checks every payer, but the response is only as detailed as the payer chooses to return.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>"Successful" means the transaction worked, not that the visit is covered.</b> A found, active member is a different fact than a payable service.</span></li>
+    </ul>
+  </section>
+
+  <h2>The 270/271 transaction, in plain terms</h2>
+  <p>The 270 and 271 are the two halves of the standard electronic eligibility inquiry defined under HIPAA's ANSI X12 transaction rules. The 270 is what your practice sends out: it identifies the patient (name, date of birth, and typically the subscriber or member ID), the payer being asked, the provider requesting the information (by NPI), and usually a service type code that narrows the inquiry to a general category of care &mdash; a routine office visit versus a hospital admission versus durable medical equipment, for example. The payer's system receives that inquiry, matches it against its own enrollment records, and returns a 271 in response.</p>
+  <p>The 271 is where the useful information lives. At minimum it confirms whether the member was found and whether coverage is active on the date asked about, along with the effective and termination dates on file. Beyond that baseline, payers can include eligibility-and-benefit (EB) segments &mdash; structured data about copays, coinsurance, deductible amounts, and coverage limitations tied to the service type code that was asked about. How much of that additional detail a given payer actually populates varies considerably. Some payers return rich, itemized benefit data for common service types; others return little beyond the active/inactive flag and leave the rest to a phone call. That variability is the single biggest reason a "successful" eligibility check can still leave a practice with an incomplete picture of what's actually covered.</p>
+  <p>Because the format itself is standardized and HIPAA-mandated, the 270 and 271 look structurally the same no matter which payer, clearinghouse, or practice management system is involved. What differs payer to payer is not the transaction format but the richness of what each payer chooses to populate inside it &mdash; which is exactly why the same clean, active-coverage response can mean very different amounts of actual assurance depending on which payer sent it.</p>
+
+  <h2>Real-time versus batch checking</h2>
+  <p>The same 270/271 exchange can happen in two different rhythms, and most practices need both. A real-time, or interactive, inquiry is fired off at a specific moment &mdash; while a patient is on the phone scheduling, or at check-in &mdash; and the response typically returns within the same interaction, fast enough to act on immediately. A batch inquiry bundles many patients' eligibility requests together, usually run against an entire day's upcoming schedule at once, and the responses come back as a set rather than one at a time; the whole batch is processed together rather than answered instantly.</p>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <caption>Real-time versus batch eligibility checking.</caption>
+      <thead><tr><th scope="col">Attribute</th><th scope="col">Real-time (interactive)</th><th scope="col">Batch</th></tr></thead>
+      <tbody>
+        <tr><td>When it runs</td><td>On demand, at scheduling or check-in</td><td>Against the full upcoming schedule, typically overnight</td></tr>
+        <tr><td>Best for</td><td>New appointments, walk-ins, same-day adds</td><td>Clearing an entire day's schedule before it starts</td></tr>
+        <tr><td>Staff involvement</td><td>One patient at a time, during the interaction</td><td>Reviewing an exception report, not running individual checks</td></tr>
+        <tr><td>Where it fits in this guide's recommended workflow</td><td>Same-day re-check for anything added after the batch ran</td><td>The core nightly run against tomorrow's schedule</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Relying on only one of the two leaves a gap. Batch-only checking misses same-day additions and walk-ins entirely, since they were never on the schedule when the batch ran. Real-time-only checking, done one patient at a time as each appointment is booked, works but doesn't scale well against a full day's volume and tends to get skipped under time pressure at a busy front desk. The combination &mdash; batch for the base schedule, real-time for anything added after &mdash; is what the workflow described in <a href="eligibility-verification-workflow-automation.html">our workflow and automation guide</a> is built around.</p>
+
+  <h2>Clearinghouse or payer portal &mdash; when each makes sense</h2>
+  <p>A clearinghouse sits between your practice and every payer you work with, translating and routing 270 inquiries and 271 responses through one interface regardless of which payer is on the other end. A direct payer portal connection skips that middle layer and talks to one payer's own system directly. Neither is universally correct; the right choice depends on how concentrated your payer mix is and what you're trying to accomplish with a given check.</p>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <caption>Clearinghouse versus a direct payer portal connection.</caption>
+      <thead><tr><th scope="col">Factor</th><th scope="col">Clearinghouse</th><th scope="col">Direct payer portal</th></tr></thead>
+      <tbody>
+        <tr><td>Number of payers checked</td><td>Many, from one login and interface</td><td>One payer per portal, one login each</td></tr>
+        <tr><td>Best fit</td><td>Diverse payer mix, high daily volume</td><td>A dominant payer, or troubleshooting one specific case</td></tr>
+        <tr><td>Response detail</td><td>Standardized, sometimes summarized across payers</td><td>The payer's own full interface, unsummarized</td></tr>
+        <tr><td>Staff overhead</td><td>One set of credentials to maintain</td><td>Separate credentials per payer portal</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Most practices with a genuinely mixed payer panel end up using a clearinghouse for the bulk of routine batch and real-time checking, precisely because it removes the burden of maintaining a separate login and workflow for every payer in the panel. That doesn't rule out going direct to a specific payer's portal for a case that's already flagged as a problem, where the payer's own interface may surface more detail or a clearer explanation than a clearinghouse's standardized pass-through view. The two aren't mutually exclusive; many practices run the default check through a clearinghouse and reserve direct portal access for exceptions that need a closer look.</p>
+
+  <h2>What a "successful" 271 response actually confirms</h2>
+  <p>This is the distinction that matters most in practice. A 271 response that comes back showing active coverage confirms exactly one thing with certainty: the payer's system found this member and considers the policy active on the date asked about. It does not, by itself, confirm that a specific planned service will be paid. Whether a service is covered at all, whether an annual visit or dollar limit has already been used up, and whether the plan requires prior authorization for that service are questions the eligibility transaction may only partially answer, or may not answer at all, depending on the service type code submitted and how much benefit detail the specific payer chooses to populate in its EB segments.</p>
+  <p>Treating an active 271 as full confirmation is the single most common way a practice believes it verified coverage and still ends up with a denied claim. For routine, low-cost, broadly-covered services, that gap rarely matters enough to justify a deeper inquiry every time. For anything non-routine, high-cost, or authorization-dependent, the eligibility check is the first step, not the last one &mdash; a benefits investigation or a direct call to the payer is what actually answers the question that matters. The scenarios where an eligibility check looks clean but coverage genuinely isn't what it appears &mdash; coordination of benefits, stale terminations, mid-year plan changes, newborn coverage not yet loaded &mdash; are covered in depth in <a href="eligibility-verification-coverage-gaps.html">our guide to coverage gap scenarios</a>, and what happens when one of those gaps makes it all the way to a denied claim is covered in <a href="eligibility-verification-denials.html">our guide to eligibility-driven denials</a>.</p>
+
+  <div class="cta-band">
+    <div>
+      <h3>Not sure your eligibility checking is catching what it should?</h3>
+      <p>We run automated batch and real-time checks through a clearinghouse spanning your full payer mix, and flag exceptions before the patient arrives.</p>
+    </div>
+    <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free eligibility review</a>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>What is the difference between a 270 and a 271?</summary><p>The 270 is the eligibility inquiry sent out by a provider, practice management system, or clearinghouse. The 271 is the payer's response to that inquiry. Both are ANSI X12 transaction sets that HIPAA requires every covered payer to support, which is why the same 270 format works regardless of which payer, clearinghouse, or software is on the other end.</p></details>
+    <details class="faq-item"><summary>Is a clearinghouse always better than going direct to a payer portal?</summary><p>Not always. A clearinghouse earns its cost when a practice checks eligibility across many different payers, because one login and one interface replaces a dozen separate portal accounts. A practice whose volume is concentrated in one or two payers may find going direct to that payer's own portal simpler for the cases that need a closer look, even while using a clearinghouse for routine batch checking.</p></details>
+    <details class="faq-item"><summary>Does a successful 271 response guarantee a claim will be paid?</summary><p>No. A successful 271 confirms the payer found the member and the policy is active on the date asked about. It does not confirm that a specific planned service is covered, that no annual limit has been exhausted, or that authorization has been obtained. Those are benefits and authorization questions, which often require a more detailed inquiry or a direct call to the payer.</p></details>
+  </div>
+
+  <div class="content-disclaimer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
+    <p><b>Confirm before you rely on this.</b> Payer eligibility systems, transaction formats and turnaround times change. The process information on this page reflects standard industry practice as of August 2026 and is provided for general education &mdash; verify current requirements directly with the specific payer before relying on it.</p>
+  </div>
+
+  <h2>Related resources</h2>
+  <ul class="related-list">
+    <li><a href="eligibility-verification.html">Our complete eligibility verification guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="eligibility-verification-coverage-gaps.html">Coverage gap scenarios <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="eligibility-verification-denials.html">Eligibility-driven denials &amp; CARC codes <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="eligibility-verification-workflow-automation.html">Building the verification workflow <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="service-revenue-cycle-management.html">Revenue cycle management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+  </ul>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-card">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
+          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        </div>
+        <div class="footer-actions">
+          <div class="footer-action">
+            <div class="footer-action-label">Book a consultation</div>
+            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
+            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
+            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
+          </div>
+          <div class="footer-action">
+            <div class="footer-action-label">Rate your experience</div>
+            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
+            <!-- TrustBox widget - Review Collector -->
+            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
+            <!-- End TrustBox widget -->
+          </div>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+        <nav class="footer-legal" aria-label="Legal">
+          <a href="privacy.html">Privacy policy</a>
+          <a href="terms.html">Terms of service</a>
+          <a href="hipaa-notice.html">HIPAA notice</a>
+          <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+        </nav>
+        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
+<!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<!-- End TrustBox script -->
+<script src="js/main.js"></script>
+</body>
+</html>
