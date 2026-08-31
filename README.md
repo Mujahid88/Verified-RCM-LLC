@@ -1,7 +1,7 @@
 # Verified RCM — website
 
 The marketing site for Verified RCM LLC, a US medical billing / revenue cycle management
-company. 310 HTML pages, one stylesheet, one script file, plus a small Cloudflare Worker
+company. 324 HTML pages, one stylesheet, one script file, plus a small Cloudflare Worker
 for the contact form. No frontend build step — every page can still be opened directly
 or served as plain static files.
 
@@ -60,7 +60,14 @@ or served as plain static files.
 │                                     at the specialty page, skipping the redirect hop)
 ├── privacy.html / terms.html / hipaa-notice.html
 ├── 404.html
-├── sitemap.xml                      302 URLs, kept in sync with the page count
+├── practice-licensing.html          Practice licensing pillar + 6 spokes (entity
+│                                     formation, state medical board licensure, DEA/
+│                                     MATE Act, NPI, multi-state/IMLC, CLIA) (2026-08-30)
+├── practice-management-operations.html  Practice management operations pillar + 6
+│                                     spokes (staffing, healthcare accounting, HIPAA,
+│                                     KPI reporting, EHR selection, multi-location
+│                                     scaling) (2026-08-30)
+├── sitemap.xml                      316 URLs, kept in sync with the page count
 ├── robots.txt
 ├── css/style.css                    The only stylesheet — design tokens + components
 ├── js/main.js                       Nav, filters, reveal/counter animation, form handling
@@ -156,7 +163,7 @@ Tracked events include the contact form, phone clicks, and email clicks.
 - WCAG AA target: `pa11y --standard WCAG2AA` should return 0 on both light and dark theme.
   Dark-theme pa11y runs need a ~2s wait after the theme toggle click, or most findings
   are phantom (mid-transition colour values, not real failures).
-- `sitemap.xml` is kept at exactly the live page count (302) — if you add or remove a
+- `sitemap.xml` is kept at exactly the live page count (316) — if you add or remove a
   page, update it in the same commit.
 
 ---
