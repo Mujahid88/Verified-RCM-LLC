@@ -27,15 +27,15 @@
    All text-bearing values clear WCAG AAA contrast (minimum 7:1).
    ------------------------------------------------------------------ */
 :root{
-  /* Clean high-contrast surfaces */
-  --color-bg:#fafafa; --color-surface:#ffffff; --color-text:#090a0b;   /* text 18.2:1 on bg */
-  --color-accent:#090a0b; --color-accent-2:#18181b;
-  --color-line:rgba(0, 0, 0, 0.08);
-  
+  /* Pure high-contrast surfaces */
+  --color-bg:#ffffff; --color-surface:#ffffff; --color-text:#000000;   /* text 21:1 on bg */
+  --color-accent:#000000; --color-accent-2:#18181b;
+  --color-line:rgba(0, 0, 0, 0.1);
+
   /* Neutral Monochrome Ramp */
   --color-accent-100:#f4f4f5; --color-accent-200:#e4e4e7; --color-accent-300:#d4d4d8;
   --color-accent-400:#a1a1aa; --color-accent-600:#52525b;
-  --color-accent-700:#27272a; --color-accent-800:#090a0b;
+  --color-accent-700:#27272a; --color-accent-800:#000000;
 
   --color-accent-2-100:#f4f4f5; --color-accent-2-300:#e4e4e7;
   --color-accent-2-800:#18181b;
@@ -44,13 +44,13 @@
   --color-accent-3:#18181b;
   --color-accent-3-100:#f4f4f5;
   --color-accent-3-300:#d4d4d8;
-  --color-accent-3-700:#090a0b;
+  --color-accent-3-700:#000000;
   --on-accent-3:#ffffff;
-  --coral-ink:#090a0b;
+  --coral-ink:#000000;
 
-  --accent-ink:#090a0b;
+  --accent-ink:#000000;
   --accent-ink-hover:#52525b;
-  --color-gold:#090a0b;
+  --color-gold:#000000;
 
   --on-accent:#ffffff;
   --on-accent-2:#ffffff;
@@ -65,12 +65,12 @@
   --shadow-glow:0 16px 40px rgba(0,0,0,.15);
   --ease:cubic-bezier(.16,1,.3,1);
   --ease-out2:cubic-bezier(.25,.46,.45,.94);
-  --color-ink-fixed:#090a0b;
+  --color-ink-fixed:#000000;
   --muted:#52525b;
 
   /* Gradients */
-  --grad-brand:linear-gradient(135deg,#090a0b 0%,#18181b 55%,#27272a 100%);
-  --grad-warm:linear-gradient(135deg,#27272a 0%,#18181b 55%,#090a0b 100%);
+  --grad-brand:linear-gradient(135deg,#000000 0%,#18181b 55%,#27272a 100%);
+  --grad-warm:linear-gradient(135deg,#27272a 0%,#18181b 55%,#000000 100%);
 
   /* Glass */
   --glass-bg:rgba(255,255,255,.75);
@@ -530,11 +530,11 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 .card:hover{
   transform:translateY(-5px);
-  box-shadow:0 18px 40px -10px rgba(16,32,28,.11), 0 2px 8px rgba(16,32,28,.04);
+  box-shadow:0 18px 40px -10px rgba(0,0,0,.11), 0 2px 8px rgba(0,0,0,.04);
   border-color:color-mix(in srgb,var(--color-accent) 28%,transparent);
 }
 [data-theme="dark"] .card:hover{
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 22px 50px -10px rgba(0,0,0,.68), 0 0 24px rgba(11,128,106,.15);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 22px 50px -10px rgba(0,0,0,.68), 0 0 24px rgba(255,255,255,.1);
   border-color:color-mix(in srgb,var(--color-accent) 45%,transparent);
 }
 @media (prefers-reduced-motion:reduce){
@@ -972,14 +972,14 @@ p{margin:0 0 16px;text-wrap:pretty}
   border-color:var(--color-accent-700);outline:none;
   box-shadow:0 0 0 4px color-mix(in srgb,var(--color-accent) 22%,transparent);
 }
-.contact-form input.invalid,.contact-form textarea.invalid,.contact-form select.invalid{border-color:#b3261e}
-.contact-form input.invalid:focus,.contact-form textarea.invalid:focus{box-shadow:0 0 0 4px rgba(179,38,30,.16)}
+.contact-form input.invalid,.contact-form textarea.invalid,.contact-form select.invalid{border-color:var(--color-accent-800);border-width:2px}
+.contact-form input.invalid:focus,.contact-form textarea.invalid:focus{box-shadow:0 0 0 4px color-mix(in srgb,var(--color-accent) 22%,transparent)}
 /* Errors sit next to their field, never only at the top (rule 55) */
 .field-error{
   display:flex;align-items:flex-start;gap:6px;
-  font-size:12.5px;font-weight:600;color:#b3261e;margin:0;
+  font-size:12.5px;font-weight:700;color:var(--color-accent-800);margin:0;
 }
-[data-theme="dark"] .field-error{color:#ff9b8f}
+[data-theme="dark"] .field-error{color:#ffffff}
 /* Honeypot: off-screen rather than display:none, because a bot that skips
    hidden inputs would sail past a display:none trap. Real people never see or
    tab into it (tabindex=-1, aria-hidden on the wrapper); bots fill it. */
@@ -996,8 +996,8 @@ p{margin:0 0 16px;text-wrap:pretty}
 [data-theme="dark"] .form-trust svg{color:var(--color-accent-400)}
 .form-status{font-size:14.5px;font-weight:600;margin:14px 0 0;min-height:1.2em}
 .form-status.ok{color:var(--color-accent-800)}
-.form-status.err{color:#b3261e}
-[data-theme="dark"] .form-status.err{color:#ff9b8f}
+.form-status.err{color:var(--color-accent-800)}
+[data-theme="dark"] .form-status.err{color:#ffffff}
 @media (max-width:560px){
   .form-grid{grid-template-columns:minmax(0,1fr)}
   .form-header,.form-body{padding-left:22px;padding-right:22px}
@@ -1335,10 +1335,10 @@ p{margin:0 0 16px;text-wrap:pretty}
 .reviews-track > .quote-card:hover{
   transform:translateY(-4px);
   border-color:color-mix(in srgb,var(--color-accent) 40%,transparent);
-  box-shadow:0 22px 50px -12px rgba(11,128,106,.15);
+  box-shadow:0 22px 50px -12px rgba(0,0,0,.15);
 }
 [data-theme="dark"] .reviews-track > .quote-card:hover{
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 24px 54px -10px rgba(0,0,0,.7), 0 0 26px rgba(11,128,106,.18);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 24px 54px -10px rgba(0,0,0,.7), 0 0 26px rgba(255,255,255,.12);
 }
 .reviews-track blockquote{font-size:22px;line-height:1.5;letter-spacing:-.02em;font-weight:500;color:var(--color-text)}
 .reviews-track .quote-meta{
@@ -1740,15 +1740,15 @@ p{margin:0 0 16px;text-wrap:pretty}
   background:var(--color-surface);
 }
 .dodont-col.do{border-color:color-mix(in srgb,var(--color-accent) 42%,transparent)}
-.dodont-col.dont{border-color:color-mix(in srgb,#b3261e 34%,transparent)}
+.dodont-col.dont{border-color:color-mix(in srgb,var(--color-accent-600) 40%,transparent)}
 .dodont-head{
   display:flex;align-items:center;gap:9px;
   font-size:14px;font-weight:600;margin-bottom:14px;
 }
 .dodont-col.do .dodont-head{color:var(--color-accent-800)}
-.dodont-col.dont .dodont-head{color:#b3261e}
+.dodont-col.dont .dodont-head{color:var(--color-accent-600)}
 [data-theme="dark"] .dodont-col.do .dodont-head{color:var(--color-accent-300)}
-[data-theme="dark"] .dodont-col.dont .dodont-head{color:#ff9b8f}
+[data-theme="dark"] .dodont-col.dont .dodont-head{color:var(--color-accent-400)}
 .dodont-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px}
 .dodont-col li{position:relative;padding-left:16px;font-size:14.5px;line-height:1.55}
 .dodont-col li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:999px;background:currentColor;opacity:.45}
