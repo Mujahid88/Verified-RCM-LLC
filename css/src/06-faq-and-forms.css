@@ -1,0 +1,93 @@
+/* ============================================================
+   FAQ and Lead Capture Form
+   ------------------------------------------------------------
+   This file holds the FAQ accordion list and the lead-capture contact
+   form: field grid, input/textarea/select styling, validation error
+   states, and the spam honeypot.
+   Want to change the field layout? edit `.form-grid` (two-column via
+   `repeat(2,minmax(0,1fr))`, collapses to one column in the
+   `@media (max-width:560px)` block). Want to restyle inputs themselves
+   (borders, focus ring, hover)? edit the shared
+   `.contact-form input,.contact-form textarea,.contact-form select`
+   rule and its `:hover`/`:focus` siblings, not individual fields. Error
+   styling (red border + message) lives in `.invalid` and `.field-error`
+   — dark-mode error color is overridden separately via
+   `[data-theme="dark"] .field-error`. The honeypot trap is `.hp-field`,
+   kept off-screen with absolute positioning rather than display:none.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+
+/* ---------- lead capture form ----------
+   Two-column field grid so the form reads as short; a labelled header and a
+   trust strip below the button answer the two questions that stall a form
+   submit ("what happens next" / "who gets my data"). */
+.contact-form{display:block;padding:0;overflow:hidden}
+.contact-form:hover{transform:none;box-shadow:var(--shadow-sm)}
+.form-header{
+  padding:26px 30px;border-bottom:1px solid var(--color-line);
+  background:linear-gradient(150deg,var(--color-accent-100),transparent 70%);
+}
+[data-theme="dark"] .form-header{background:linear-gradient(150deg,color-mix(in srgb,var(--color-accent) 12%,transparent),transparent 70%)}
+.form-header-title{font-size:19px;font-weight:600;letter-spacing:-.02em;margin-bottom:4px}
+.form-header-sub{font-size:14px;color:var(--muted);margin:0}
+.form-body{padding:26px 30px 30px}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field-full{grid-column:1 / -1}
+.field label{font-size:13.5px;font-weight:600;display:flex;align-items:center;gap:5px}
+/* Required marker is a word, not a bare asterisk (rule 59) */
+.req{font-size:11px;font-weight:600;color:var(--accent-ink);letter-spacing:.03em}
+.optional{font-size:11.5px;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.field-hint{font-size:12.5px;color:var(--muted);margin:0}
+/* accent-color + color-scheme recolour the parts of a form control the
+   BROWSER paints and CSS cannot reach — the option list in a <select> popup,
+   checkbox and radio fills, the focus ring on some platforms. Without these
+   the dropdown renders in the OS accent, which on Windows is blue, so the
+   form kept showing blue long after the last blue left the stylesheet. */
+.contact-form input,.contact-form textarea,.contact-form select{
+  accent-color:var(--color-accent);
+  width:100%;min-height:50px;padding:13px 16px;border-radius:var(--radius-sm);
+  border:1.5px solid var(--color-line);background:var(--color-surface);color:var(--color-text);
+  font-family:inherit;font-size:15.5px;
+  transition:border-color .25s ease,box-shadow .25s ease,background .25s ease;
+}
+.contact-form textarea{min-height:118px;resize:vertical;line-height:1.55}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:color-mix(in srgb,var(--color-text) 42%,transparent)}
+.contact-form input:hover,.contact-form textarea:hover,.contact-form select:hover{border-color:color-mix(in srgb,var(--color-accent) 45%,transparent)}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{
+  border-color:var(--color-accent-700);outline:none;
+  box-shadow:0 0 0 4px color-mix(in srgb,var(--color-accent) 22%,transparent);
+}
+.contact-form input.invalid,.contact-form textarea.invalid,.contact-form select.invalid{border-color:var(--color-accent-800);border-width:2px}
+.contact-form input.invalid:focus,.contact-form textarea.invalid:focus{box-shadow:0 0 0 4px color-mix(in srgb,var(--color-accent) 22%,transparent)}
+/* Errors sit next to their field, never only at the top (rule 55) */
+.field-error{
+  display:flex;align-items:flex-start;gap:6px;
+  font-size:12.5px;font-weight:700;color:var(--color-accent-800);margin:0;
+}
+[data-theme="dark"] .field-error{color:#ffffff}
+/* Honeypot: off-screen rather than display:none, because a bot that skips
+   hidden inputs would sail past a display:none trap. Real people never see or
+   tab into it (tabindex=-1, aria-hidden on the wrapper); bots fill it. */
+.hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cf-turnstile{margin-top:20px}
+.form-actions{margin-top:22px}
+.form-actions .btn{width:100%}
+.form-trust{
+  display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px;
+  padding-top:18px;border-top:1px dashed var(--color-line);
+}
+.form-trust span{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--muted)}
+.form-trust svg{flex:0 0 auto;color:var(--color-accent-800)}
+[data-theme="dark"] .form-trust svg{color:var(--color-accent-400)}
+.form-status{font-size:14.5px;font-weight:600;margin:14px 0 0;min-height:1.2em}
+.form-status.ok{color:var(--color-accent-800)}
+.form-status.err{color:var(--color-accent-800)}
+[data-theme="dark"] .form-status.err{color:#ffffff}
+@media (max-width:560px){
+  .form-grid{grid-template-columns:minmax(0,1fr)}
+  .form-header,.form-body{padding-left:22px;padding-right:22px}
+}
+

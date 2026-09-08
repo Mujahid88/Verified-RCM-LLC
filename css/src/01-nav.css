@@ -1,0 +1,169 @@
+/* ============================================================
+   Top Nav & Mega-Menu
+   ------------------------------------------------------------
+   This file is the sitewide fixed navigation bar: the logo, primary nav
+   links, the Services/Specialties/Blog mega-menu dropdowns, the site
+   search box, and the mobile burger/accordion menu.
+   Want to change the bar's own look (solid bar, hairline border, height
+   on scroll)? Edit `.nav-wrap` and `.nav-bar` / `.nav-bar.scrolled` near
+   the top. The mega-menu panel's width and column count are set on
+   `.nav-mega` (`width:min(760px,80vw)`, `grid-template-columns:repeat(4,1fr)`)
+   with the 2-column variant on `.nav-mega.nav-mega-2col`. The dead-zone
+   fix that keeps the panel open while the cursor crosses the gap lives on
+   `.nav-mega::before`. Site search styling (input, results dropdown,
+   result rows) is under the "site search" block on `.nav-search*` and
+   `.search-result*`; the mobile menu is `.mobile-menu` / `.mobile-menu a`.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+
+/* ---------- nav ---------- */
+.nav-wrap{position:fixed;top:0;left:0;right:0;z-index:70}
+/* A plain, solid, full-width bar with a hairline under it — the same header
+   treatment SAMS uses. This was a floating translucent pill with a 16px
+   backdrop blur, a 999px radius and a drop shadow, hovering over the page.
+   Glass is a specific effect for showing that something sits above content;
+   as permanent chrome it is just cost, and on a marketing site it was the
+   first thing that said "template". */
+.nav-wrap{
+  background:var(--color-surface);
+  border-bottom:1px solid var(--color-line);
+  transition:box-shadow .2s ease;
+}
+.nav-bar{
+  display:flex;align-items:center;gap:22px;
+  max-width:1280px;margin:0 auto;padding:10px 24px;
+  transition:padding .2s ease;
+}
+.nav-bar.scrolled{padding:6px 24px}
+.nav-bar.scrolled .nav-logo img{width:36px;height:36px}
+.nav-logo{flex:0 0 auto;display:block}
+.nav-logo img{width:44px;height:44px;border-radius:999px;object-fit:cover;transition:width .3s var(--ease),height .3s var(--ease)}
+.nav-links{display:flex;align-items:center;gap:2px}
+/* min-height 44px on every nav/chip/control below satisfies the 44x44
+   touch-target rule (iOS HIG / WCAG AAA 2.5.5). */
+.nav-link{
+  display:inline-flex;align-items:center;min-height:44px;
+  padding:0 16px;border-radius:999px;font-size:14.5px;font-weight:600;
+  color:var(--color-text);white-space:nowrap;transition:background .3s ease,color .3s ease;
+}
+.nav-link:hover{background:color-mix(in srgb, var(--color-accent) 14%, transparent);color:var(--color-text)}
+.nav-link.active{background:color-mix(in srgb, var(--color-accent) 20%, transparent);color:var(--color-accent-800)}
+[data-theme="dark"] .nav-link.active{color:var(--color-accent-300)}
+
+/* SAMS is a separate application (staff attendance/payroll), not a page on
+   this site — a light border marks it as a distinct product without
+   competing visually with the main nav items. */
+.nav-link-sams{border:1.5px solid color-mix(in srgb, var(--color-accent) 45%, transparent)}
+.nav-link-sams:hover{border-color:var(--color-accent)}
+
+/* ---------- nav mega-menu ----------
+   Hover- and focus-triggered (CSS only, no JS) so it works without
+   scripting; the mobile equivalent is the accordion inside .mobile-menu.
+   Column links point at pages that already exist today, so the menu is
+   never broken while more specialty coding articles get written. */
+.nav-item-mega{position:relative}
+.nav-mega-trigger{cursor:pointer}
+.nav-mega-trigger::after{content:"";display:inline-block;margin-left:6px;width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s ease}
+.nav-item-mega:hover .nav-mega-trigger::after,.nav-item-mega:focus-within .nav-mega-trigger::after{transform:translateY(1px) rotate(225deg)}
+.nav-mega{
+  /* Anchored to the trigger's own left edge, not centered — "Services"
+     sits near the left of the nav, so a centered 880px panel on a wide
+     viewport ran off the left edge of the screen entirely. */
+  position:absolute;top:calc(100% + 12px);left:0;
+  width:min(760px,80vw);padding:28px;display:none;grid-template-columns:repeat(4,1fr);gap:24px;
+  background:var(--color-surface);border:1px solid var(--color-line);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);z-index:75;
+}
+/* The 12px gap above sits between the trigger and the panel with nothing
+   painted in it, so a cursor moving diagonally toward a menu item drops
+   out of :hover mid-transit and the panel closes before it's reached.
+   This pseudo-element bridges that dead zone without affecting layout. */
+.nav-mega::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}
+.nav-item-mega:hover .nav-mega,.nav-item-mega:focus-within .nav-mega{display:grid}
+.nav-mega.nav-mega-2col{width:min(420px,80vw);grid-template-columns:repeat(2,1fr)}
+.nav-mega-col-title{
+  font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--color-accent-800);margin-bottom:12px;
+}
+[data-theme="dark"] .nav-mega-col-title{color:var(--color-accent-400)}
+.nav-mega-col a{
+  display:block;padding:8px 0;font-size:14px;font-weight:600;color:var(--color-text);
+  border-radius:8px;transition:color .2s ease;
+}
+.nav-mega-col a:hover{color:var(--color-accent-800)}
+[data-theme="dark"] .nav-mega-col a:hover{color:var(--color-accent-400)}
+.nav-mega-col a.see-all{color:var(--muted);font-weight:600;font-size:12.5px;margin-top:2px}
+@media (max-width:1100px){.nav-mega{display:none !important}}
+.nav-spacer{flex:1}
+.theme-toggle,.burger{
+  appearance:none;width:44px;height:44px;flex:0 0 auto;display:grid;place-items:center;
+  background:transparent;border:1px solid var(--color-line);border-radius:999px;
+  color:inherit;cursor:pointer;font-size:15px;transition:background .3s ease;
+}
+.theme-toggle:hover,.burger:hover{background:color-mix(in srgb, var(--color-accent) 14%, transparent)}
+.burger{display:none}
+.nav-cta{flex:0 0 auto}
+.mobile-menu{
+  display:none;max-width:1232px;margin:8px auto 0;background:var(--color-surface);
+  border:1px solid var(--color-line);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);
+  padding:14px;flex-direction:column;gap:2px;
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{display:flex;align-items:center;min-height:48px;padding:0 16px;border-radius:12px;font-size:16px;font-weight:600;color:var(--color-text)}
+.mobile-menu a:hover{background:color-mix(in srgb, var(--color-accent) 14%, transparent)}
+
+/* ---------- site search ----------
+   Sitewide (every page, not scoped to index.html): a real visible input box
+   in the nav — not an icon that hides it behind a click — with results
+   dropping down beneath it. Loads search-index.json once and filters
+   client-side; there's no server to query on a static, no-build-step site. */
+.nav-search{
+  position:relative;display:flex;align-items:center;gap:9px;flex:0 1 220px;min-width:0;
+  height:44px;padding:0 14px;border-radius:999px;
+  border:1px solid var(--color-line);background:var(--color-surface);
+  transition:border-color .25s ease,box-shadow .25s ease,flex-basis .25s ease;
+}
+.nav-search:focus-within{
+  flex-basis:280px;border-color:var(--color-accent-700);
+  box-shadow:0 0 0 4px color-mix(in srgb,var(--color-accent) 16%,transparent);
+}
+.nav-search-icon{flex:0 0 auto;color:var(--muted)}
+.nav-search-input{
+  flex:1;min-width:0;border:0;background:transparent;outline:none;color:var(--color-text);
+  font-family:inherit;font-size:14px;
+}
+.nav-search-input::placeholder{color:color-mix(in srgb,var(--color-text) 45%,transparent)}
+.nav-search-results{
+  position:absolute;top:calc(100% + 10px);right:0;width:380px;max-width:min(90vw,380px);
+  max-height:min(60vh,480px);overflow-y:auto;display:none;padding:8px;z-index:80;
+  background:var(--color-surface);border:1px solid var(--color-line);
+  border-radius:var(--radius-md);box-shadow:var(--shadow-lg);
+}
+.nav-search-results.open{display:block}
+.search-hint,.search-empty{padding:20px 14px;font-size:13px;color:var(--muted);text-align:center}
+.search-result{
+  display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:var(--radius-sm);
+  color:var(--color-text);transition:background .2s ease;
+}
+.search-result:hover,.search-result.active{background:color-mix(in srgb, var(--color-accent) 10%, transparent);color:var(--color-text)}
+.search-result-cat{
+  flex:0 0 auto;font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--color-accent-800);background:var(--color-accent-100);border-radius:999px;padding:4px 8px;
+}
+[data-theme="dark"] .search-result-cat{color:var(--color-accent-300);background:color-mix(in srgb,var(--color-accent) 16%,transparent)}
+.search-result-body{min-width:0}
+.search-result-title{font-size:14px;font-weight:600;line-height:1.35;margin-bottom:2px}
+.search-result-desc{font-size:12px;color:var(--muted);line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (max-width:1100px){
+  .nav-search{flex-basis:170px}
+  .nav-search:focus-within{flex-basis:200px}
+}
+@media (max-width:640px){
+  .nav-bar{gap:12px}
+  .nav-search{flex:0 1 130px;min-width:100px;padding:0 10px}
+  .nav-search:focus-within{flex-basis:160px}
+  .nav-search-results{right:-40px;width:min(94vw,340px)}
+}
+

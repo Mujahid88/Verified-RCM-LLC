@@ -1,0 +1,216 @@
+/* ============================================================
+   Specialties Directory & Growth Grid
+   ------------------------------------------------------------
+   The specialty directory index/grouped rows (.spec-index, .spec-row) used
+   on specialties.html, services.html and the homepage, plus the "growth &
+   technology" services tile grid (.growth-grid, .growth-tile) and the
+   pillar-page hero process diagram (.pillar-diagram).
+   Want to change the number of directory columns? Edit .spec-index's
+   grid-template-columns (and its max-900px media query). Want to restyle
+   the grouped specialty cards? Edit .spec-group / .spec-group-head /
+   .spec-row. Want to change the growth tiles per row? Edit .growth-grid's
+   grid-template-columns and its two responsive overrides near the bottom.
+   The tile hover arrow icon (external-link glyph) is inlined as a
+   data:image/svg+xml background on .growth-tile::after — edit both the
+   light and dark-theme copies together if you change its stroke color.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+
+/* ============================================================
+   Specialty index
+   ============================================================ */
+.spec-index{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.spec-group{
+  background:var(--color-surface);
+  border:1px solid var(--color-line);
+  border-radius:var(--radius-md);padding:24px 22px;
+  display:flex;flex-direction:column;min-width:0;
+  box-shadow:var(--shadow-sm);
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .35s ease;
+  will-change:transform;
+}
+.spec-group:hover{
+  transform:translateY(-4px);
+  border-color:color-mix(in srgb,var(--color-text) 22%,transparent);
+  box-shadow:var(--shadow-md);
+}
+[data-theme="dark"] .spec-group:hover{
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.1), 0 20px 46px -8px rgba(0,0,0,.65);
+  border-color:rgba(255,255,255,.2);
+}
+.spec-group-head{
+  display:flex;align-items:center;gap:10px;padding-bottom:14px;margin-bottom:8px;
+  border-bottom:1px solid var(--color-line);
+}
+.spec-group-title{
+  font-size:12.5px;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--color-text);
+  transition:color .25s ease;
+}
+.spec-group-count{
+  margin-left:auto;font-size:12px;font-weight:600;color:var(--muted);
+  background:var(--color-bg);border:1px solid var(--color-line);border-radius:999px;padding:3px 9px;
+  transition:transform .25s var(--ease),background-color .25s ease,color .25s ease;
+}
+.spec-group:hover .spec-group-count{
+  background:var(--color-text);color:var(--color-bg);
+  transform:scale(1.08);
+}
+.spec-rows{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.spec-row{
+  display:flex;align-items:center;gap:12px;min-height:48px;padding:9px 12px;
+  border-radius:var(--radius-sm);color:var(--color-text);
+  border-bottom:0;position:relative;
+  transition:background-color .25s ease,padding-left .25s var(--ease),transform .25s var(--ease);
+}
+.spec-row::before{
+  content:"";position:absolute;left:0;top:20%;bottom:20%;width:3px;
+  border-radius:4px;background:var(--color-text);
+  opacity:0;transform:scaleY(.3);
+  transition:opacity .25s ease,transform .25s var(--ease);
+}
+.spec-rows li:last-child .spec-row{border-bottom:0}
+.spec-row:hover{
+  background:var(--color-accent-100);color:var(--color-text);
+  padding-left:18px;
+}
+.spec-row:hover::before{
+  opacity:1;transform:scaleY(1);
+}
+[data-theme="dark"] .spec-row:hover{background:rgba(255,255,255,.07)}
+.spec-row-name{font-size:15px;font-weight:600;letter-spacing:-.015em;min-width:0;transition:color .25s ease}
+.spec-row-note{font-size:12.5px;color:var(--muted);display:block;font-weight:400;margin-top:1px;line-height:1.4}
+.spec-row-arrow{
+  margin-left:auto;flex:0 0 auto;color:var(--color-text);opacity:0;
+  transition:opacity .25s ease,transform .25s var(--ease);transform:translateX(-6px);
+}
+.spec-row:hover .spec-row-arrow{opacity:1;transform:translateX(0)}
+@media (max-width:900px){
+  .spec-index{grid-template-columns:minmax(0,1fr)}
+}
+
+/* ============================================================
+   Growth & technology grid
+   ============================================================ */
+.growth-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.growth-tile{
+  display:flex;flex-direction:column;padding:28px;min-width:0;
+  border:1px solid var(--color-line);
+  border-radius:var(--radius-md);
+  background:var(--color-surface);color:var(--color-text);position:relative;
+  box-shadow:var(--shadow-sm);
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),background-color .3s ease,border-color .35s ease;
+  overflow:hidden;
+  will-change:transform;
+}
+.growth-tile::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;
+  background:radial-gradient(450px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0,0,0,.04), transparent 70%);
+  opacity:0;pointer-events:none;z-index:2;
+  transition:opacity .35s ease;
+}
+[data-theme="dark"] .growth-tile::before{
+  background:radial-gradient(450px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,.06), transparent 70%);
+}
+.growth-tile:hover{
+  transform:translateY(-6px);
+  border-color:color-mix(in srgb,var(--color-text) 22%,transparent);
+  box-shadow:var(--shadow-md);
+}
+.growth-tile:hover::before{opacity:1}
+[data-theme="dark"] .growth-tile:hover{
+  border-color:rgba(255,255,255,.22);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 24px 54px -10px rgba(0,0,0,.7);
+}
+.growth-tile::after{
+  content:"";position:absolute;top:22px;right:22px;width:36px;height:36px;
+  border-radius:999px;background:var(--color-bg);
+  border:1px solid var(--color-line);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='%23090a0b' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7'/%3E%3Cpath d='M8 7h9v9'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:center;
+  transition:background-color .3s var(--ease),transform .35s var(--ease),box-shadow .3s ease,border-color .3s ease;
+  z-index:3;
+}
+.growth-tile:hover::after{
+  background-color:var(--color-text);
+  border-color:var(--color-text);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7'/%3E%3Cpath d='M8 7h9v9'/%3E%3C/svg%3E");
+  transform:translate(3px,-3px) rotate(45deg);
+  box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+[data-theme="dark"] .growth-tile::after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7'/%3E%3Cpath d='M8 7h9v9'/%3E%3C/svg%3E");
+}
+@media (prefers-reduced-motion:reduce){.growth-tile:hover::after{transform:none}}
+.growth-icon{
+  width:48px;height:48px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px;
+  background:var(--color-accent-100);color:var(--color-text);flex:0 0 auto;
+  border:1px solid var(--color-line);
+  position:relative;z-index:1;
+  transition:transform .4s var(--ease),background-color .3s ease,box-shadow .35s ease;
+}
+.growth-tile:hover .growth-icon{
+  transform:scale(1.1) rotate(4deg);
+  box-shadow:0 6px 18px rgba(0,0,0,.15);
+  background:var(--color-text);color:var(--color-bg);
+}
+.growth-tile h3{margin:0 0 8px;font-size:19px;position:relative;z-index:1;transition:color .25s ease}
+.growth-tile p{font-size:14.5px;line-height:1.6;color:var(--muted);margin:0 0 18px;position:relative;z-index:1}
+.growth-points{list-style:none;margin:0 0 20px;padding:0;display:flex;flex-direction:column;gap:8px;position:relative;z-index:1}
+.growth-points li{
+  display:flex;gap:9px;align-items:flex-start;font-size:13.5px;line-height:1.5;
+  color:var(--muted);
+  transition:transform .25s ease,color .25s ease;
+}
+.growth-tile:hover .growth-points li{color:var(--color-text)}
+.growth-points li:hover{transform:translateX(4px)}
+.growth-points svg{flex:0 0 auto;margin-top:3px;color:var(--color-text);transition:transform .25s ease}
+.growth-points li:hover svg{transform:scale(1.2)}
+.growth-cta{
+  margin-top:auto;display:inline-flex;align-items:center;gap:7px;min-height:32px;
+  font-size:14px;font-weight:700;color:var(--color-text);position:relative;z-index:1;
+  transition:color .25s ease;
+}
+.growth-tile:hover .growth-cta svg{transform:translateX(6px)}
+.growth-cta svg{transition:transform .35s var(--ease)}
+@media (max-width:900px){.growth-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.growth-grid{grid-template-columns:minmax(0,1fr)}}
+.growth-tile p{font-size:14.5px;line-height:1.6;color:var(--muted);margin:0 0 18px;position:relative;z-index:1}
+.growth-points{list-style:none;margin:0 0 20px;padding:0;display:flex;flex-direction:column;gap:8px;position:relative;z-index:1}
+.growth-points li{
+  display:flex;gap:9px;align-items:flex-start;font-size:13.5px;line-height:1.5;
+  color:color-mix(in srgb,var(--color-text) 80%,transparent);
+  transition:transform .25s ease,color .25s ease;
+}
+.growth-tile:hover .growth-points li{color:var(--color-text)}
+.growth-points li:hover{transform:translateX(4px)}
+.growth-points svg{flex:0 0 auto;margin-top:3px;color:var(--color-accent-700);transition:transform .25s ease}
+.growth-points li:hover svg{transform:scale(1.2)}
+[data-theme="dark"] .growth-points svg{color:var(--color-accent-400)}
+.growth-cta{
+  margin-top:auto;display:inline-flex;align-items:center;gap:7px;min-height:32px;
+  font-size:14px;font-weight:600;color:var(--color-accent-800);position:relative;z-index:1;
+  transition:color .25s ease;
+}
+[data-theme="dark"] .growth-cta{color:var(--color-accent-300)}
+.growth-tile:hover .growth-cta svg{transform:translateX(6px)}
+.growth-cta svg{transition:transform .35s var(--ease)}
+@media (max-width:900px){.growth-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.growth-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* Pillar hero diagram — original process illustration (not stock photography),
+   monochrome via currentColor so it tracks light/dark theme automatically. */
+.pillar-diagram{
+  margin:26px 0 30px;padding:22px 20px 18px;border-radius:var(--radius-lg);
+  border:1px solid var(--color-line);background:var(--color-surface);
+  overflow-x:auto;
+}
+.pillar-diagram svg{display:block;width:100%;height:auto;min-width:520px}
+.pillar-diagram-node-fill{fill:var(--color-accent);}
+.pillar-diagram-node-ring{fill:none;stroke:var(--color-accent);stroke-width:1.5;opacity:.35}
+.pillar-diagram-line{stroke:var(--color-line);stroke-width:2}
+.pillar-diagram-num{fill:var(--on-accent);font:600 12px/1 inherit}
+.pillar-diagram-label{fill:var(--color-text);font:600 12.5px/1.3 inherit}
+.pillar-diagram-sub{fill:var(--muted);font:400 11px/1.3 inherit}

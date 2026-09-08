@@ -1,4 +1,31 @@
 /* ============================================================
+   GENERATED FILE — do not edit directly.
+   Source lives in css/src/*.css (14 files, one per UI area: nav,
+   buttons, cards, services, specialties, article furniture, etc).
+   Edit those, then run:  node css/build.js
+   This file is what every page's <link href="css/style.css"> loads.
+   ============================================================ */
+
+/* ============================================================
+   Design Tokens & Base
+   ------------------------------------------------------------
+   Design tokens (CSS custom properties, light + dark theme), base reset,
+   typography scale, layout rhythm/spacing utilities, skip-link. This is
+   the foundation file every other file in css/src/ builds on.
+   Want to change a color, radius, or shadow site-wide? Edit the custom
+   properties in the :root block (e.g. --color-accent, --radius-md,
+   --shadow-md) or their dark-mode overrides in [data-theme="dark"] —
+   never a hard-coded color elsewhere. Want to change body font size or
+   heading scale? Edit the `body` rule or the `h1`/`h2`/`h3` rules here.
+   Section spacing (the gap between homepage sections) is controlled by
+   .section, .section--tight and .section--break, not by margins on
+   individual sections. The skip-link's offscreen/focus behavior lives
+   in .skip-link / .skip-link:focus at the bottom of this file.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+/* ============================================================
    Verified RCM - static site stylesheet
    Design tokens first, then base, layout, components.
    Dark mode is driven by [data-theme="dark"] on <html>.
@@ -280,6 +307,26 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 .skip-link:focus{left:0;color:#fff}
 
+/* ============================================================
+   Top Nav & Mega-Menu
+   ------------------------------------------------------------
+   This file is the sitewide fixed navigation bar: the logo, primary nav
+   links, the Services/Specialties/Blog mega-menu dropdowns, the site
+   search box, and the mobile burger/accordion menu.
+   Want to change the bar's own look (solid bar, hairline border, height
+   on scroll)? Edit `.nav-wrap` and `.nav-bar` / `.nav-bar.scrolled` near
+   the top. The mega-menu panel's width and column count are set on
+   `.nav-mega` (`width:min(760px,80vw)`, `grid-template-columns:repeat(4,1fr)`)
+   with the 2-column variant on `.nav-mega.nav-mega-2col`. The dead-zone
+   fix that keeps the panel open while the cursor crosses the gap lives on
+   `.nav-mega::before`. Site search styling (input, results dropdown,
+   result rows) is under the "site search" block on `.nav-search*` and
+   `.search-result*`; the mobile menu is `.mobile-menu` / `.mobile-menu a`.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+
 /* ---------- nav ---------- */
 .nav-wrap{position:fixed;top:0;left:0;right:0;z-index:70}
 /* A plain, solid, full-width bar with a hairline under it — the same header
@@ -429,6 +476,25 @@ p{margin:0 0 16px;text-wrap:pretty}
   .nav-search-results{right:-40px;width:min(94vw,340px)}
 }
 
+/* ============================================================
+   Buttons and Tag Pills
+   ------------------------------------------------------------
+   Button variants (.btn, .btn-accent, .btn-outline, .btn-ghost, reduced-motion
+   handling) and tag/chip pills.
+   Want to change the primary button color? Edit --color-accent (and
+   --color-accent-700 for its hover) in 00-tokens-and-base.css, not the
+   `.btn-accent` rule here. Want to change how buttons feel when pressed?
+   Edit `.btn:active{transform:scale(.98)}`. Dark-mode button text color is
+   pinned explicitly for `.btn-accent`, `.btn-outline`, and `.btn-ghost` under
+   `[data-theme="dark"]` — change those three rules together, not the base
+   `.btn-*` classes, if the dark-mode contrast fix needs revisiting. The
+   filter chips (`.chip`, `.chip.active`) and section tags (`.tag`,
+   `.tag-pill`) live at the bottom of this file.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+
 /* ---------- buttons ---------- */
 /* Modern buttons: gradient fill, sweeping shine on hover, lift + glow.
    Min height 48px ≥ the 44×44px touch-target rule. */
@@ -517,6 +583,24 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 .chip:hover{background:color-mix(in srgb, var(--color-accent) 14%, transparent)}
 .chip.active{background:var(--color-accent);border-color:var(--color-accent);color:var(--on-accent)}
+
+/* ============================================================
+   Cards, Stats & Service Head
+   ------------------------------------------------------------
+   Generic card surface (.card, .glass-card), stat callouts, and the
+   small header card used at the top of service pages.
+   Want to change the card hover lift or shadow? edit .card:hover and
+   the [data-theme="dark"] .card:hover override just below it. Want to
+   restyle the coral "amber" stat block? edit .amber-fill (uses
+   --color-accent-3 / --on-accent-3, not --color-accent). The big
+   number styling for stats (size/weight/colour) lives in .stat-big,
+   and the two-column intro-plus-figures layout at the top of a
+   service page is .service-head / .service-head-stats, including its
+   900px and 560px responsive collapses.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
 
 /* ---------- cards ---------- */
 /* Soft fill with subtle border, depth elevation, and interactive spotlight. */
@@ -636,6 +720,24 @@ p{margin:0 0 16px;text-wrap:pretty}
   .service-head-stats .stat-card+.stat-card{border-left:0;padding-left:0;border-top:1px solid var(--color-line)}
 }
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ============================================================
+   Comparison, Photos & Post Cards
+   ------------------------------------------------------------
+   The "hiring in-house vs Verified RCM" comparison table/card, generic
+   photo containers, and blog/specialty preview post cards.
+   Want to change which column reads as the "winner" in the comparison
+   table? Edit `.compare-head span:last-child` and `.compare-row>div:last-child`
+   (the highlighted background/font-weight is what makes the right column
+   look elevated). Want to resize photo blocks? Edit `.photo` (min-height:320px)
+   or `.photo.tall` (420px). Want to change the fixed post thumbnail height
+   so cards align in a row? Edit `.post-photo{height:210px;...}`. The
+   cursor-follow hover glow on post cards comes from `.post-card::before`
+   using the `--mouse-x`/`--mouse-y` custom properties.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
 
 /* ---------- comparison ----------
    Follows the comparison-table pattern: the winning column is visually
@@ -757,6 +859,24 @@ p{margin:0 0 16px;text-wrap:pretty}
 .spec-card p{font-size:13.5px;line-height:1.55;color:var(--muted);margin:8px 0 14px}
 .spec-card .tag-pill{margin-bottom:12px}
 .card-title-sm{margin-top:0}
+
+/* ============================================================
+   Article Body And Quotes
+   ------------------------------------------------------------
+   Long-form article body typography, the homepage testimonial/quotes
+   section, direct-contact info blocks, and (trailing off the end of this
+   range) the start of the FAQ accordion's list and item styling.
+   Want to change article paragraph size or color? edit `.article p`.
+   Want to restyle the testimonial section's dark/light panel or its
+   headline figures? edit `.reviews-stage`, `.reviews-figures`, and
+   `.quote-card`/`.quote-result` (the outcome numbers). Want to change the
+   phone/email link styling on the contact page? edit `.contact-direct a`.
+   The FAQ's two-column layout and its "+"/"–" toggle marker are set on
+   `.faq-list{columns:2}` and `.faq-item summary::after` respectively.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
 
 /* ---------- article body ---------- */
 .article{max-width:860px;padding-top:130px}
@@ -932,6 +1052,27 @@ p{margin:0 0 16px;text-wrap:pretty}
 .faq-item[open] summary::after{content:"\2013"}
 .faq-item p{margin:6px 0 16px;font-size:15px;line-height:1.7;color:var(--muted);max-width:60ch}
 
+/* ============================================================
+   FAQ and Lead Capture Form
+   ------------------------------------------------------------
+   This file holds the FAQ accordion list and the lead-capture contact
+   form: field grid, input/textarea/select styling, validation error
+   states, and the spam honeypot.
+   Want to change the field layout? edit `.form-grid` (two-column via
+   `repeat(2,minmax(0,1fr))`, collapses to one column in the
+   `@media (max-width:560px)` block). Want to restyle inputs themselves
+   (borders, focus ring, hover)? edit the shared
+   `.contact-form input,.contact-form textarea,.contact-form select`
+   rule and its `:hover`/`:focus` siblings, not individual fields. Error
+   styling (red border + message) lives in `.invalid` and `.field-error`
+   — dark-mode error color is overridden separately via
+   `[data-theme="dark"] .field-error`. The honeypot trap is `.hp-field`,
+   kept off-screen with absolute positioning rather than display:none.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+
 /* ---------- lead capture form ----------
    Two-column field grid so the form reads as short; a labelled header and a
    trust strip below the button answer the two questions that stall a form
@@ -1003,6 +1144,26 @@ p{margin:0 0 16px;text-wrap:pretty}
   .form-grid{grid-template-columns:minmax(0,1fr)}
   .form-header,.form-body{padding-left:22px;padding-right:22px}
 }
+
+/* ============================================================
+   Site Footer
+   ------------------------------------------------------------
+   Site footer: brand column, action cards, link columns, legal/bottom bar.
+   This is the flat, full-width footer band (.footer-card) that replaced an
+   inset rounded card, plus everything nested inside it.
+   Want to change the footer background/edge treatment? edit .footer-card
+   (background, border-radius, padding, border-top). The two-column top
+   section (logo/mission on the left, action cards on the right) is laid
+   out by .footer-top and .footer-actions; the four link columns are
+   .footer-cols (grid-template-columns:repeat(4,...)), and the bottom
+   copyright/legal row is .footer-bottom / .footer-legal. Accent-colored
+   text (link column headings, action values, hover states) all references
+   var(--color-accent-300)/var(--color-accent-400), defined in
+   00-tokens-and-base.css, not here.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
 
 /* ---------- footer ---------- */
 /* Flat, full-width band. The footer was an inset rounded card floating on
@@ -1083,6 +1244,25 @@ p{margin:0 0 16px;text-wrap:pretty}
   .footer-bottom{justify-content:flex-start}
 }
 
+/* ============================================================
+   Core Services
+   ------------------------------------------------------------
+   The 3 core-service explorer cards on the homepage/services page, the
+   dark CTA banner, the tabbed core-services page layout, plus the shared
+   scroll-reveal animation used across the site.
+   Want to change the explorer card's rail width or the two-column split?
+   Edit `.explorer-card{grid-template-columns:236px minmax(0,1fr)}`. The
+   dark CTA banner's background gradient and pulse animation live in
+   `.cta-dark` and the `aurora-pulse` keyframes. The four-item "included"
+   checklist under the CTA is `.audit-includes`, with the checkmark icon
+   built from an inline SVG data-URI mask on `.audit-includes span::before`.
+   The core-services tab bar and its active state are `.svc-tab` /
+   `.svc-tab.active`, and the stat tiles beneath the tab content are
+   `.svc-stat` / `.svc-stat-value`.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
 
 /* ---------- service explorer cards ----------
    Rebuilt as a two-column record: a fixed rail on the left carries the index
@@ -1284,6 +1464,26 @@ p{margin:0 0 16px;text-wrap:pretty}
   .reveal{opacity:1;transform:none}
 }
 
+/* ============================================================
+   Reviews Slider & Onboarding Rail
+   ------------------------------------------------------------
+   This file holds two components: the client-reviews slider, a
+   one-per-view carousel driven by a JS data array in js/main.js, and the
+   "Connected flow" onboarding rail, a four-day timeline whose connecting
+   line is drawn as a progress fill on scroll-in.
+   Want to change how many slides show at once or the gap between them?
+   Edit .reviews-track's grid-auto-columns and gap. The slider's dots,
+   count and prev/next buttons are .reviews-dot, .reviews-count and
+   .reviews-arrow — the active dot's color and width come from
+   .reviews-dot[aria-current="true"]::before. For the onboarding rail,
+   the hairline track and its animated fill are .flow::before and
+   .flow::after (the fill's final width is set by .flow.in::after{width:84%}),
+   each day's circular badge is .flow-num, and the card content styling is
+   .flow-card / .flow-card h3 / .flow-card p.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
 /* ============================================================
    Client reviews — a one-per-view slider.
    Rendered from a JS data array (see main.js).
@@ -1532,6 +1732,26 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 
 /* ============================================================
+   Specialties Directory & Growth Grid
+   ------------------------------------------------------------
+   The specialty directory index/grouped rows (.spec-index, .spec-row) used
+   on specialties.html, services.html and the homepage, plus the "growth &
+   technology" services tile grid (.growth-grid, .growth-tile) and the
+   pillar-page hero process diagram (.pillar-diagram).
+   Want to change the number of directory columns? Edit .spec-index's
+   grid-template-columns (and its max-900px media query). Want to restyle
+   the grouped specialty cards? Edit .spec-group / .spec-group-head /
+   .spec-row. Want to change the growth tiles per row? Edit .growth-grid's
+   grid-template-columns and its two responsive overrides near the bottom.
+   The tile hover arrow icon (external-link glyph) is inlined as a
+   data:image/svg+xml background on .growth-tile::after — edit both the
+   light and dark-theme copies together if you change its stroke color.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+
+/* ============================================================
    Specialty index
    ============================================================ */
 .spec-index{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
@@ -1729,6 +1949,25 @@ p{margin:0 0 16px;text-wrap:pretty}
 .pillar-diagram-sub{fill:var(--muted);font:400 11px/1.3 inherit}
 
 /* ============================================================
+   Article Furniture
+   ------------------------------------------------------------
+   Shared components used across every specialty/credentialing/licensing/
+   billing guide page: key-takeaways box, pro-tip callout, do/dont pairs,
+   data tables, inline CTA band, numbered cred-steps, payer quick-contact
+   card, content-accuracy disclaimer, and the pillar hero diagram.
+   Want to change the amber pro-tip callout? Edit .protip / .protip-icon —
+   note .content-disclaimer is deliberately kept neutral (var(--color-bg),
+   var(--color-line) border) rather than reusing that accent styling. The
+   numbered credentialing checklist is .cred-steps (counter-reset:cs drives
+   the circular step numbers via li::before). The top-of-guide contact card
+   is .payer-contact / .payer-contact-item. The boxed intro summary is
+   .takeaways, and the highlighted comparison table is .data-table /
+   .data-table-wrap.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+/* ============================================================
    Article furniture — pro tips, do/don't pairs and data tables used by
    the service and specialty deep-dives. Semantic and highly scannable,
    which also makes the pages easy for search and LLMs to parse.
@@ -1870,9 +2109,23 @@ p{margin:0 0 16px;text-wrap:pretty}
   .cta-band{padding:24px}
 }
 
-
 /* ============================================================
-   Responsive: verified at 1440px, 768px and 375px
+   Responsive Breakpoints
+   ------------------------------------------------------------
+   The main breakpoint media-query block (verified at 1440px, 768px
+   and 375px) that adjusts layout for the sections defined earlier
+   in this stylesheet, as it collapses from desktop down to phone.
+   Want to change when the nav switches to the burger menu? edit the
+   `@media (max-width:1100px)` block, where `.nav-links{display:none}`
+   and `.burger{display:grid}` swap places. Want to change when grids
+   stack to a single column? edit the `@media (max-width:900px)` block
+   (`.split,.grid-3,.grid-2{grid-template-columns:minmax(0,1fr)}`).
+   Want to change small-phone type sizes or the mobile CTA button
+   width? edit the `@media (max-width:560px)` block, where `h1`/`h2`
+   font-size and `.btn{width:100%;...}` live.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
    ============================================================ */
 @media (max-width:1100px){
   .nav-links{display:none}
@@ -1912,6 +2165,24 @@ p{margin:0 0 16px;text-wrap:pretty}
   .svc-tab{width:auto}
 }
 
+/* ============================================================
+   Homepage Extras
+   ------------------------------------------------------------
+   Homepage-only sections: the dark "Control Room" hero + live claim-activity
+   panel, the cited-industry-stats proof section, the EHR/SAMS "coming soon"
+   teaser cards, and the cookie-consent banner (site-wide, but defined here).
+   Want to change the dark hero's colors? Edit the --ink-900/--ink-800/--on-ink
+   tokens on :root and the [data-theme="dark"] override near the top — .ctrl-hero
+   itself just consumes var(--grad-brand). The simulated live-claims list is
+   .ctrl-row / .ctrl-pill (paid/accepted/review variants) inside .ctrl-panel.
+   The proof stats are .cite-stat/.cite-grid and the animated .bar-chart/.bar-fill
+   (driven by the --bar-pct custom property and the .in class for entrance).
+   The cookie banner's position and animation live on .consent-banner /
+   @keyframes consent-rise; its buttons are .consent-actions .btn.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
 /* ============================================================
    "Control Room" hero — dark monitoring-console treatment.
    Uses FIXED dark tokens (not --color-bg) so the panel stays dark

@@ -1,0 +1,161 @@
+/* ============================================================
+   Article Furniture
+   ------------------------------------------------------------
+   Shared components used across every specialty/credentialing/licensing/
+   billing guide page: key-takeaways box, pro-tip callout, do/dont pairs,
+   data tables, inline CTA band, numbered cred-steps, payer quick-contact
+   card, content-accuracy disclaimer, and the pillar hero diagram.
+   Want to change the amber pro-tip callout? Edit .protip / .protip-icon —
+   note .content-disclaimer is deliberately kept neutral (var(--color-bg),
+   var(--color-line) border) rather than reusing that accent styling. The
+   numbered credentialing checklist is .cred-steps (counter-reset:cs drives
+   the circular step numbers via li::before). The top-of-guide contact card
+   is .payer-contact / .payer-contact-item. The boxed intro summary is
+   .takeaways, and the highlighted comparison table is .data-table /
+   .data-table-wrap.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+/* ============================================================
+   Article furniture — pro tips, do/don't pairs and data tables used by
+   the service and specialty deep-dives. Semantic and highly scannable,
+   which also makes the pages easy for search and LLMs to parse.
+   ============================================================ */
+.protip{
+  display:flex;gap:16px;align-items:flex-start;margin:28px 0;padding:24px 26px;
+  border-radius:var(--radius-md);border:1px solid color-mix(in srgb,var(--color-accent-2) 42%,transparent);
+  background:linear-gradient(140deg,var(--color-accent-2-100),transparent 75%);
+}
+[data-theme="dark"] .protip{background:color-mix(in srgb,var(--color-accent-2) 11%,transparent)}
+.protip-icon{
+  width:38px;height:38px;flex:0 0 auto;border-radius:11px;display:grid;place-items:center;
+  background:var(--color-accent-2);color:var(--on-accent-2);
+}
+.protip-label{
+  font-size:11.5px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--color-accent-2-800);margin-bottom:6px;
+}
+[data-theme="dark"] .protip-label{color:var(--color-accent-2-300)}
+.protip p{margin:0;font-size:15px;line-height:1.62}
+/* Do / Don't */
+.dodont{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:28px 0}
+.dodont-col{
+  border-radius:var(--radius-md);padding:24px;border:1px solid var(--color-line);
+  background:var(--color-surface);
+}
+.dodont-col.do{border-color:color-mix(in srgb,var(--color-accent) 42%,transparent)}
+.dodont-col.dont{border-color:color-mix(in srgb,var(--color-accent-600) 40%,transparent)}
+.dodont-head{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;font-weight:600;margin-bottom:14px;
+}
+.dodont-col.do .dodont-head{color:var(--color-accent-800)}
+.dodont-col.dont .dodont-head{color:var(--color-accent-600)}
+[data-theme="dark"] .dodont-col.do .dodont-head{color:var(--color-accent-300)}
+[data-theme="dark"] .dodont-col.dont .dodont-head{color:var(--color-accent-400)}
+.dodont-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px}
+.dodont-col li{position:relative;padding-left:16px;font-size:14.5px;line-height:1.55}
+.dodont-col li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:999px;background:currentColor;opacity:.45}
+/* Data table */
+.data-table-wrap{overflow-x:auto;margin:26px 0;border-radius:var(--radius-md);border:1px solid var(--color-line)}
+.data-table{width:100%;border-collapse:collapse;font-size:14.5px;background:transparent;min-width:560px}
+.data-table caption{text-align:left;padding:16px 20px 0;font-size:13px;color:var(--muted)}
+.data-table th,.data-table td{padding:14px 18px;text-align:left;vertical-align:top;border-bottom:1px solid var(--color-line)}
+.data-table thead th{
+  font-size:12px;font-weight:600;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--muted);background:var(--color-bg);
+}
+.data-table tbody tr:last-child td{border-bottom:0}
+.data-table tbody tr:hover{background:var(--color-accent-100)}
+[data-theme="dark"] .data-table tbody tr:hover{background:color-mix(in srgb,var(--color-accent) 10%,transparent)}
+.data-table code{font-size:13px;background:var(--color-accent-100);padding:2px 7px;border-radius:6px;font-weight:600}
+[data-theme="dark"] .data-table code{background:color-mix(in srgb,var(--color-accent) 16%,transparent)}
+.glossary-group{margin:0 0 30px}
+.glossary-group-title{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 12px}
+[data-theme="dark"] .glossary-group-title{color:var(--color-accent-300)}
+.glossary-list{margin:0;padding:0;border:1px solid var(--color-line);border-radius:var(--radius-md);overflow:hidden}
+.glossary-item{padding:16px 20px;border-bottom:1px solid var(--color-line)}
+.glossary-list .glossary-item:last-child{border-bottom:0}
+.glossary-term{font-weight:600;font-size:15px;letter-spacing:-.01em;margin:0 0 4px}
+.glossary-def{margin:0;font-size:14.5px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 78%, transparent)}
+/* Inline CTA band inside articles */
+.cta-band{
+  display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;
+  margin:40px 0;padding:30px 34px;border-radius:var(--radius-lg);
+  background:var(--color-ink-fixed);color:#fff;
+}
+.cta-band h3{color:#fff;margin:0 0 6px;font-size:21px}
+.cta-band p{margin:0;color:rgba(255,255,255,.76);font-size:14.5px;max-width:60ch}
+.cta-band .btn{flex:0 0 auto}
+/* Numbered procedure steps for the credentialing guides */
+.cred-steps{list-style:none;counter-reset:cs;margin:26px 0;padding:0;display:flex;flex-direction:column;gap:2px}
+.cred-steps li{
+  counter-increment:cs;display:grid;grid-template-columns:auto minmax(0,1fr);
+  gap:6px 18px;padding:20px 22px;background:var(--color-surface);
+  border:1px solid var(--color-line);border-bottom:0;
+}
+.cred-steps li:first-child{border-radius:var(--radius-md) var(--radius-md) 0 0}
+.cred-steps li:last-child{border-bottom:1px solid var(--color-line);border-radius:0 0 var(--radius-md) var(--radius-md)}
+.cred-steps li::before{
+  content:counter(cs);grid-row:1 / span 2;
+  width:34px;height:34px;border-radius:999px;display:grid;place-items:center;
+  background:var(--color-accent);color:var(--on-accent);
+  font-size:14px;font-weight:600;
+}
+.cred-steps b{font-size:16px;font-weight:600;letter-spacing:-.015em;align-self:center}
+.cred-steps span{font-size:14.5px;line-height:1.6;color:var(--muted)}
+@media (max-width:560px){
+  .cred-steps li{padding:16px}
+  .cred-steps b{align-self:start}
+}
+/* Payer quick-contact card — website / phone / portal at the top of each credentialing guide */
+.payer-contact{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;
+  margin:26px 0;border-radius:var(--radius-md);overflow:hidden;
+  border:1px solid var(--color-line);background:var(--color-line);
+}
+.payer-contact-item{
+  background:var(--color-surface);padding:20px 22px;display:flex;flex-direction:column;gap:8px;
+}
+.payer-contact-label{
+  display:flex;align-items:center;gap:8px;
+  font-size:11.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--muted);
+}
+.payer-contact-label svg{flex:0 0 auto;color:var(--color-accent)}
+.payer-contact-value{font-size:16px;font-weight:600;letter-spacing:-.01em;word-break:break-word}
+.payer-contact-value a{color:var(--color-text)}
+.payer-contact-value a:hover{color:var(--color-accent)}
+.payer-contact-note{font-size:12.5px;line-height:1.5;color:var(--muted);margin:0}
+
+/* Content-accuracy disclaimer — deliberately NOT accent-coloured like .protip.
+   This is a compliance notice, not a helpful tip, and shouldn't compete for
+   attention with the amber "pro tip" pattern or read as an alarm (no red/warn
+   colour either). Neutral surface + line border, same visual weight as a
+   caption, placed once per article right before "Related resources". */
+.content-disclaimer{
+  display:flex;gap:14px;align-items:flex-start;margin:34px 0;padding:20px 22px;
+  border-radius:var(--radius-md);border:1px solid var(--color-line);
+  background:var(--color-bg);
+}
+[data-theme="dark"] .content-disclaimer{background:color-mix(in srgb,var(--color-text) 4%,transparent)}
+.content-disclaimer svg{flex:0 0 auto;margin-top:2px;color:var(--muted)}
+.content-disclaimer p{margin:0;font-size:13.5px;line-height:1.6;color:var(--muted)}
+.content-disclaimer b{color:var(--color-text);font-weight:600}
+
+/* Key-takeaways box */
+.takeaways{
+  margin:0 0 34px;padding:24px 26px;border-radius:var(--radius-md);
+  background:var(--color-surface);border:1px solid var(--color-line);box-shadow:var(--shadow-sm);
+}
+.takeaways h2{font-size:15px !important;margin:0 0 14px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.takeaways ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.takeaways li{display:flex;gap:11px;font-size:15px;line-height:1.55}
+.takeaways svg{flex:0 0 auto;margin-top:4px;color:var(--color-accent-700)}
+[data-theme="dark"] .takeaways svg{color:var(--color-accent-400)}
+@media (max-width:700px){
+  .dodont{grid-template-columns:minmax(0,1fr)}
+  .cta-band{padding:24px}
+}
+

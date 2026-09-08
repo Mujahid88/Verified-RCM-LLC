@@ -70,7 +70,20 @@ or served as plain static files.
 │                                     scaling) (2026-08-30)
 ├── sitemap.xml                      340 URLs, kept in sync with the page count
 ├── robots.txt
-├── css/style.css                    The only stylesheet — design tokens + components
+├── css/style.css                    GENERATED — every page's <link> still points here,
+│                                     but don't hand-edit it. Built from css/src/*.css by
+│                                     css/build.js; re-run that after editing a source file
+├── css/src/                         The stylesheet split into 14 focused files (nav,
+│   ├── 00-tokens-and-base.css        buttons, cards, services, specialties, article
+│   ├── 01-nav.css                    furniture, footer, forms, etc). Each file opens
+│   ├── 02-buttons.css                with a header comment naming what it controls and
+│   ├── 03-cards.css                  concrete "change X here" pointers. Numeric prefixes
+│   ├── ...                           fix the concatenation order — cascade/specificity
+│   └── 13-homepage-extras.css        depends on it, so don't renumber without checking.
+├── css/build.js                     node css/build.js — concatenates css/src/*.css into
+│                                     css/style.css. No other build step exists on this
+│                                     site; this is the only one, and it's optional to run
+│                                     until you've actually edited a css/src/ file (2026-09-08)
 ├── js/main.js                       Nav, filters, reveal/counter animation, form handling
 ├── fonts/                           Self-hosted woff2 (see Fonts below)
 ├── images/                          Licensed photography, .jpg + .webp per image
@@ -86,12 +99,14 @@ a subfolder — the Worker is the only piece that needs an actual domain (see §
 
 ## 2. Design system
 
-Teal + coral, rebuilt from an earlier lime/amber palette (which itself replaced an
-original blue). Every colour token in `css/style.css` is a **measured** contrast value,
-not an eyeballed one — the file's own comments carry the ratios and the reasoning
-(e.g. why teal and coral take opposite ink colours on purpose). Don't change a token
+Monochrome black/white/gray (rebuilt from an earlier teal + coral palette, which itself
+replaced lime/amber, which replaced an original blue — see git history if you need the
+reasoning behind an earlier palette). Every colour token lives in
+`css/src/00-tokens-and-base.css` and is a **measured** contrast value, not an eyeballed
+one — the file's own comments carry the ratios and the reasoning. Don't change a token
 without reading those comments first; several of them exist specifically because an
-earlier change silently broke AA contrast.
+earlier change silently broke AA contrast. After editing, run `node css/build.js` to
+regenerate css/style.css — the file every page actually loads.
 
 Radii are intentionally small (10/16/20px) to match **SAMS**, the same company's
 practice-management product at `sams.verifiedrcm.com` — the two products cross-link

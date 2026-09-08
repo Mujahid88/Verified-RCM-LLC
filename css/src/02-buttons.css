@@ -1,0 +1,107 @@
+/* ============================================================
+   Buttons and Tag Pills
+   ------------------------------------------------------------
+   Button variants (.btn, .btn-accent, .btn-outline, .btn-ghost, reduced-motion
+   handling) and tag/chip pills.
+   Want to change the primary button color? Edit --color-accent (and
+   --color-accent-700 for its hover) in 00-tokens-and-base.css, not the
+   `.btn-accent` rule here. Want to change how buttons feel when pressed?
+   Edit `.btn:active{transform:scale(.98)}`. Dark-mode button text color is
+   pinned explicitly for `.btn-accent`, `.btn-outline`, and `.btn-ghost` under
+   `[data-theme="dark"]` — change those three rules together, not the base
+   `.btn-*` classes, if the dark-mode contrast fix needs revisiting. The
+   filter chips (`.chip`, `.chip.active`) and section tags (`.tag`,
+   `.tag-pill`) live at the bottom of this file.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+
+/* ---------- buttons ---------- */
+/* Modern buttons: gradient fill, sweeping shine on hover, lift + glow.
+   Min height 48px ≥ the 44×44px touch-target rule. */
+/* Buttons follow SAMS's Button.vue exactly: a 6px radius, a flat brand fill,
+   a small shadow, and a 0.98 press. Gone are the pill shape, the gradient
+   fill, the lift on hover and the shine sweep that ran across the face of
+   every button — four separate effects on a control whose whole job is to
+   look pressable and say what it does. The press feedback is the one that
+   earns its place, because it answers the click. */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  min-height:40px;padding:0 16px;border:0;border-radius:var(--radius-sm);
+  font-size:14px;font-weight:500;letter-spacing:0;
+  cursor:pointer;white-space:nowrap;
+  transition:background .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease,border-color .15s ease;
+}
+.btn:active{transform:scale(.98)}
+@media (prefers-reduced-motion:reduce){.btn:active{transform:none}}
+.btn-lg{min-height:46px;padding:0 22px;font-size:15px}
+.btn-accent{background:var(--color-accent);color:var(--on-accent);box-shadow:var(--shadow-sm)}
+.btn-accent:hover{background:var(--color-accent-700);color:var(--on-accent)}
+/* Buttons are anchors here, and `[data-theme="dark"] a` is (0,1,1) against
+   `.btn-accent`'s (0,1,0) — so in dark mode every primary button silently
+   took the link colour: accent-400 text on an accent fill, 2.14:1. It has
+   been wrong for as long as the dark theme has existed. It never surfaced
+   because the fill used to be a gradient, and a contrast checker cannot
+   evaluate a gradient, so it skipped these elements entirely. Flattening the
+   fill to match SAMS is what made the bug visible.
+   The other two variants have the identical flaw; they only escaped the
+   checker because their colours happen to land above 4.5:1 by luck. A button
+   should never inherit the link colour, so all three are pinned here. */
+[data-theme="dark"] .btn-accent,
+[data-theme="dark"] .btn-accent:hover{color:var(--on-accent)}
+[data-theme="dark"] .btn-outline,
+[data-theme="dark"] .btn-outline:hover{color:var(--color-text)}
+[data-theme="dark"] .btn-ghost,
+[data-theme="dark"] .btn-ghost:hover{color:#fff}
+/* Secondary button. Deliberately NOT glass: a translucent white surface on a
+   light page reads as an unfinished shape rather than a control. It needs a
+   visible edge and a solid surface to look pressable. */
+/* Matches SAMS's secondary: 1px neutral border, white surface, small shadow,
+   and a hover that darkens the edge and tints the fill rather than growing
+   the shadow. The 1.5px border and shadow-md hover read as a heavier control
+   than the primary next to it, which inverted the hierarchy. */
+.btn-outline{
+  background:var(--color-surface);
+  border:1px solid color-mix(in srgb,var(--color-text) 22%, transparent);
+  color:var(--color-text);box-shadow:var(--shadow-sm);
+}
+.btn-outline:hover{
+  background:color-mix(in srgb,var(--color-text) 4%, var(--color-surface));
+  color:var(--color-text);
+  border-color:color-mix(in srgb,var(--color-text) 36%, transparent);
+}
+/* Reduced motion: kill the sweep + lift, keep colour feedback */
+@media (prefers-reduced-motion:reduce){
+  .btn::after{display:none}
+  .btn:hover,.btn:active{transform:none}
+}
+.crumb-back{
+  display:inline-flex;align-items:center;gap:8px;margin-bottom:28px;padding:9px 16px;
+  border-radius:999px;border:1px solid var(--color-line);background:var(--color-surface);
+  color:var(--color-text);font-size:13.5px;font-weight:600;transition:background .3s ease;
+}
+.crumb-back:hover{background:color-mix(in srgb, var(--color-accent) 14%, transparent);color:var(--color-text)}
+
+/* ---------- tags, chips ----------
+   The .badge pill that sat above almost every heading on the site is gone.
+   Nineteen of them, one per section, each restating its own heading in
+   smaller, weaker words: "FAQ" over "Questions we get on the first call",
+   "Specialties we bill for" over "Billing built around how your specialty
+   actually works". A label that repeats the thing it labels is not
+   wayfinding, it is a second, worse headline competing with the first. */
+.tag,.tag-pill{
+  display:inline-block;padding:6px 13px;border-radius:999px;
+  background:var(--color-accent-100);color:var(--color-accent-800);font-size:12px;font-weight:600;
+}
+.tag{background:var(--color-accent-2-100);color:var(--color-accent-2-800);padding:6px 12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.filter-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.chip{
+  appearance:none;display:inline-flex;align-items:center;min-height:44px;
+  padding:0 18px;border-radius:999px;border:1px solid var(--color-line);
+  background:transparent;color:var(--color-text);font-family:inherit;font-size:13px;font-weight:600;
+  cursor:pointer;transition:background .3s ease,border-color .3s ease,color .3s ease;
+}
+.chip:hover{background:color-mix(in srgb, var(--color-accent) 14%, transparent)}
+.chip.active{background:var(--color-accent);border-color:var(--color-accent);color:var(--on-accent)}

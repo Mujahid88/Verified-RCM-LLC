@@ -1,0 +1,266 @@
+/* ============================================================
+   Reviews Slider & Onboarding Rail
+   ------------------------------------------------------------
+   This file holds two components: the client-reviews slider, a
+   one-per-view carousel driven by a JS data array in js/main.js, and the
+   "Connected flow" onboarding rail, a four-day timeline whose connecting
+   line is drawn as a progress fill on scroll-in.
+   Want to change how many slides show at once or the gap between them?
+   Edit .reviews-track's grid-auto-columns and gap. The slider's dots,
+   count and prev/next buttons are .reviews-dot, .reviews-count and
+   .reviews-arrow — the active dot's color and width come from
+   .reviews-dot[aria-current="true"]::before. For the onboarding rail,
+   the hairline track and its animated fill are .flow::before and
+   .flow::after (the fill's final width is set by .flow.in::after{width:84%}),
+   each day's circular badge is .flow-num, and the card content styling is
+   .flow-card / .flow-card h3 / .flow-card p.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+/* ============================================================
+   Client reviews — a one-per-view slider.
+   Rendered from a JS data array (see main.js).
+
+   This was a 3-column grid of 4 equal cards, so the fourth sat alone on
+   row two, and the 2-column tablet step stranded the third the same way.
+   A grid whose column count has to divide the number of real testimonials
+   is a grid fighting its content, and padding the list with invented
+   reviews to make it divide evenly is not an option.
+
+   One slide per view instead. Each review gets the full width to read
+   across — quote at display size on the left, the number it moved and who
+   said it on the right — and the next slide stays deliberately half-shown
+   so the track advertises itself as scrollable without an overlay hint.
+
+   Built on native scroll-snap rather than transforms: swipe, trackpad,
+   scrollbar and keyboard all work without JS re-implementing them, and if
+   the control wiring fails it degrades to an ordinary scroller.
+   ============================================================ */
+.reviews-slider{display:grid;gap:24px;margin-top:44px}
+.reviews-track{
+  position:relative;              /* slides measure offsetLeft against this */
+  display:grid;grid-auto-flow:column;grid-auto-columns:86%;gap:22px;
+  overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;-ms-overflow-style:none;
+  padding-block:4px;
+}
+.reviews-track::-webkit-scrollbar{display:none}
+.reviews-track:focus-visible{
+  outline:3px solid var(--color-accent);outline-offset:5px;border-radius:var(--radius-md);
+}
+.reviews-track > .quote-card{scroll-snap-align:start}
+
+/* Glass slides on the ink panel. The depth comes from the surface itself —
+   a lifted translucent plane over a tinted ground — rather than from a drop
+   shadow, which a dark panel swallows anyway. */
+.reviews-track > .quote-card{
+  display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.8fr);
+  /* stretch, not start: the divider should run the height of the card. Top-
+     aligning a short proof column against a long quote left a hole under it
+     and cut the hairline off halfway down. */
+  gap:44px;align-items:stretch;padding:40px 44px;
+  background:var(--color-surface);
+  border:1px solid var(--color-line);
+  border-radius:var(--radius-md);
+  box-shadow:var(--shadow-sm);
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .35s ease;
+  will-change:transform;
+}
+.reviews-track > .quote-card:hover{
+  transform:translateY(-4px);
+  border-color:color-mix(in srgb,var(--color-accent) 40%,transparent);
+  box-shadow:0 22px 50px -12px rgba(0,0,0,.15);
+}
+[data-theme="dark"] .reviews-track > .quote-card:hover{
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 24px 54px -10px rgba(0,0,0,.7), 0 0 26px rgba(255,255,255,.12);
+}
+.reviews-track blockquote{font-size:22px;line-height:1.5;letter-spacing:-.02em;font-weight:500;color:var(--color-text)}
+.reviews-track .quote-meta{
+  /* margin-top:auto pins the meta to the card floor when the card is a
+     column; here it is a full-height side panel with its content centred. */
+  margin-top:0;border-top:0;padding-top:0;
+  border-left:1px solid var(--color-line);padding-left:36px;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.reviews-track .quote-result b{
+  font-size:40px;
+  transition:transform .3s var(--ease),color .3s ease;
+  display:inline-block;
+}
+.reviews-track > .quote-card:hover .quote-result b{
+  transform:scale(1.06);
+  color:var(--color-accent-800);
+}
+[data-theme="dark"] .reviews-track > .quote-card:hover .quote-result b{
+  color:var(--color-accent-400);
+}
+
+@media (max-width:1000px){
+  .reviews-track{grid-auto-columns:90%}
+  .reviews-track > .quote-card{grid-template-columns:1fr;gap:24px;padding:30px}
+  .reviews-track blockquote{font-size:19px}
+  .reviews-track .quote-meta{
+    border-left:0;padding-left:0;
+    border-top:1px solid var(--ink-line);padding-top:20px;
+    display:block;                 /* back to stacked flow below the quote */
+  }
+  .reviews-track .quote-result b{font-size:32px}
+}
+@media (max-width:640px){
+  .reviews-track{gap:14px;grid-auto-columns:92%}
+  .reviews-track > .quote-card{padding:24px}
+  .reviews-track blockquote{font-size:17.5px}
+}
+
+/* ---------- slider controls ---------- */
+.reviews-nav{display:flex;align-items:center;gap:16px}
+.reviews-dots{display:flex;align-items:center;gap:4px;margin-right:auto}
+/* 24px hit area around a 9px dot: the visible mark stays small without
+   dropping the touch target below the 24px minimum. */
+.reviews-dot{
+  min-width:24px;height:24px;padding:0 2px;border:0;background:none;
+  display:grid;place-items:center;cursor:pointer;
+}
+.reviews-dot::before{
+  content:"";display:block;width:9px;height:9px;border-radius:999px;
+  background:color-mix(in srgb,var(--color-text) 22%,transparent);
+  transition:width .35s var(--ease),background .35s var(--ease);
+}
+.reviews-dot:hover::before{background:color-mix(in srgb,var(--color-text) 42%,transparent)}
+.reviews-dot[aria-current="true"]::before{width:26px;background:var(--color-accent)}
+.reviews-dot:focus-visible{outline:2px solid var(--color-accent);outline-offset:1px;border-radius:999px}
+.reviews-count{
+  margin:0;font-size:13.5px;font-weight:600;color:var(--muted);
+  font-variant-numeric:tabular-nums;
+}
+.reviews-arrows{display:flex;gap:8px}
+.reviews-arrow{
+  width:44px;height:44px;display:grid;place-items:center;cursor:pointer;
+  border-radius:999px;border:0;
+  background:var(--color-surface);color:var(--color-text);
+  transition:background-color .3s ease,color .3s ease,opacity .3s ease,transform .25s var(--ease);
+}
+.reviews-arrow:hover:not(:disabled){
+  background:var(--color-accent-100);color:var(--accent-ink);
+  transform:scale(1.05);
+}
+.reviews-arrow:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.reviews-arrow:disabled{opacity:.3;cursor:default}
+@media (prefers-reduced-motion:reduce){
+  .reviews-dot::before{transition:none}
+}
+
+/* ============================================================
+   Connected flow — the onboarding rail.
+   The connection IS the content here: the rail is a four-day timeline,
+   so the line between cards carries meaning rather than decorating them.
+   Markers sit ON the rail; each card hangs from its marker by a stem.
+   The rail's lime progress fill draws left-to-right once, on scroll-in:
+   that draw is the section's single authored moment.
+   ============================================================ */
+.flow{
+  list-style:none;margin:0;padding:0;position:relative;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;
+}
+/* The rail: a hairline track behind every marker */
+.flow::before{
+  content:"";position:absolute;top:27px;left:8%;right:8%;height:2px;
+  background:var(--color-accent-200);border-radius:999px;
+}
+/* The progress fill, drawn on reveal */
+.flow::after{
+  content:"";position:absolute;top:27px;left:8%;height:2px;width:0;
+  background:linear-gradient(90deg,var(--color-accent-600),var(--color-accent));
+  border-radius:999px;
+  transition:width 1.25s var(--ease-out2) .15s;
+}
+.flow.in::after{width:84%}
+.flow-step{display:flex;flex-direction:column;align-items:center;position:relative;min-width:0}
+/* Marker: the day node sitting on the rail */
+.flow-marker{
+  position:relative;z-index:1;display:inline-flex;align-items:center;gap:9px;
+  height:54px;padding:0 20px 0 8px;border-radius:999px;
+  background:var(--color-surface);border:2px solid var(--color-accent-200);
+  box-shadow:var(--shadow-sm);
+  transition:border-color .5s var(--ease),box-shadow .5s var(--ease),transform .4s var(--ease);
+}
+.flow.in .flow-step:nth-child(1) .flow-marker{transition-delay:.25s}
+.flow.in .flow-step:nth-child(2) .flow-marker{transition-delay:.6s}
+.flow.in .flow-step:nth-child(3) .flow-marker{transition-delay:.95s}
+.flow.in .flow-marker{border-color:var(--color-accent)}
+.flow-step:hover .flow-marker{
+  transform:scale(1.08);
+  border-color:var(--color-accent);
+  box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+[data-theme="dark"] .flow-step:hover .flow-marker{
+  box-shadow:0 0 20px rgba(255,255,255,.2);
+}
+.flow-num{
+  width:36px;height:36px;flex:0 0 auto;border-radius:999px;
+  background:var(--color-accent);color:var(--on-accent);
+  display:grid;place-items:center;font-size:14px;font-weight:700;
+  transition:transform .35s var(--ease);
+}
+.flow-step:hover .flow-num{transform:rotate(360deg)}
+.flow-day{font-size:13px;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+/* Stem: joins each card up to its marker */
+.flow-stem{width:2px;height:22px;background:var(--color-accent-200);flex:0 0 auto;transition:background-color .35s ease,height .35s var(--ease)}
+.flow.in .flow-stem{background:var(--color-accent)}
+.flow-step:hover .flow-stem{background:var(--color-accent);box-shadow:0 0 8px rgba(0,0,0,.3)}
+.flow-card{
+  background:var(--color-surface);border:1px solid var(--color-line);
+  border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-sm);width:100%;
+  flex:1;display:flex;flex-direction:column;
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .35s ease;
+  position:relative;overflow:hidden;
+  will-change:transform;
+}
+.flow-card::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;
+  background:radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0,0,0,.04), transparent 70%);
+  opacity:0;pointer-events:none;z-index:2;
+  transition:opacity .35s ease;
+}
+[data-theme="dark"] .flow-card::before{
+  background:radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,.06), transparent 70%);
+}
+.flow-card:hover::before{opacity:1}
+.flow-card .tags{margin-top:auto;padding-top:18px;position:relative;z-index:1}
+.flow-card .tag{
+  transition:transform .25s var(--ease),background-color .25s ease,color .25s ease;
+}
+.flow-card .tag:hover{
+  transform:translateY(-2px);
+  background:var(--color-accent);color:var(--on-accent);
+}
+.flow + .btn{margin-top:34px}
+.flow-card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow-md);
+  border-color:color-mix(in srgb,var(--color-text) 22%,transparent);
+}
+[data-theme="dark"] .flow-card:hover{
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.15), 0 26px 58px -10px rgba(0,0,0,.7);
+  border-color:rgba(255,255,255,.24);
+}
+.flow-card h3{margin:0 0 10px;position:relative;z-index:1;transition:color .25s ease}
+.flow-card p{font-size:15px;line-height:1.6;color:var(--muted);margin:0 0 16px;position:relative;z-index:1}
+.flow-icon{display:block;margin-bottom:14px;color:var(--color-text);transition:transform .4s var(--ease),color .35s ease;position:relative;z-index:1}
+.flow-card:hover .flow-icon{transform:scale(1.15) translateY(-2px)}
+@media (max-width:900px){
+  .flow{grid-template-columns:minmax(0,1fr);gap:0}
+  .flow::before{top:14px;bottom:14px;left:26px;right:auto;width:2px;height:auto}
+  .flow::after{top:14px;left:26px;width:2px;height:0}
+  .flow.in::after{width:2px;height:calc(100% - 28px);transition:height 1.25s var(--ease-out2) .15s}
+  .flow-step{flex-direction:row;align-items:flex-start;gap:18px;padding-bottom:26px}
+  .flow-marker{height:auto;min-height:54px;flex-direction:column;padding:8px;gap:4px}
+  .flow-day{font-size:11px}
+  .flow-stem{width:18px;height:2px;margin-top:26px}
+}
+@media (prefers-reduced-motion:reduce){
+  .flow::after{transition:none;width:84%}
+  .flow-card:hover{transform:none}
+  .flow-marker{transition:none}
+}

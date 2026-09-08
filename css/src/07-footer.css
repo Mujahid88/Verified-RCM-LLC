@@ -1,0 +1,99 @@
+/* ============================================================
+   Site Footer
+   ------------------------------------------------------------
+   Site footer: brand column, action cards, link columns, legal/bottom bar.
+   This is the flat, full-width footer band (.footer-card) that replaced an
+   inset rounded card, plus everything nested inside it.
+   Want to change the footer background/edge treatment? edit .footer-card
+   (background, border-radius, padding, border-top). The two-column top
+   section (logo/mission on the left, action cards on the right) is laid
+   out by .footer-top and .footer-actions; the four link columns are
+   .footer-cols (grid-template-columns:repeat(4,...)), and the bottom
+   copyright/legal row is .footer-bottom / .footer-legal. Accent-colored
+   text (link column headings, action values, hover states) all references
+   var(--color-accent-300)/var(--color-accent-400), defined in
+   00-tokens-and-base.css, not here.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+
+/* ---------- footer ---------- */
+/* Flat, full-width band. The footer was an inset rounded card floating on
+   the page background with a gap under it, which reads as one more section
+   rather than the end of the document. A footer should meet the viewport
+   edges and the bottom of the window. */
+.site-footer{padding-bottom:0}
+.site-footer > .wrap{max-width:none;padding:0}
+.footer-card{
+  background:#09090b;color:#fff;border-radius:0;
+  padding:64px 24px 40px;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+.footer-card > *{max-width:1280px;margin-inline:auto}
+.footer-top{
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);
+  gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12);
+}
+.footer-brand{min-width:0}
+.footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.footer-logo img{width:44px;height:44px;border-radius:999px;object-fit:cover}
+.footer-logo span{font-size:19px;font-weight:600;letter-spacing:-.02em}
+.footer-mission{
+  font-size:15px;line-height:1.7;color:rgba(255,255,255,.76);
+  max-width:56ch;margin:0 0 22px;
+}
+/* Ruled rows, not two boxes inside a box. These were bordered cards nested
+   in the footer panel — a card within a card, which is never right, and the
+   last one left on the site. A hairline does the same separating job without
+   drawing a second container. */
+.footer-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;min-width:0}
+.footer-action{
+  background:none;border:0;border-top:1px solid rgba(255,255,255,.20);
+  border-radius:0;padding:22px 0 0;display:flex;flex-direction:column;min-width:0;
+}
+.footer-action-label{
+  font-size:15px;font-weight:600;letter-spacing:-.015em;margin-bottom:6px;
+}
+.footer-action p{font-size:13.5px;line-height:1.55;color:rgba(255,255,255,.66);margin:0 0 14px}
+.footer-action-value{
+  display:block;font-size:17px;font-weight:600;color:var(--color-accent-300);   /* 8.54:1 */
+  margin-bottom:16px;margin-top:auto;word-break:break-word;
+}
+.footer-action-value:hover{color:#fff}
+.btn-block-sm{width:100%}
+.footer-action .btn-outline{
+  background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.28);color:#fff;box-shadow:none;
+}
+.footer-action .btn-outline:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.5);color:#fff}
+@media (max-width:900px){
+  .footer-top{grid-template-columns:minmax(0,1fr);gap:34px}
+}
+@media (max-width:560px){
+  .footer-actions{grid-template-columns:minmax(0,1fr)}
+}
+.footer-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;padding:40px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.footer-col-title{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-300);margin-bottom:16px}   /* 8.54:1 */
+.footer-cols ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
+/* Dense link lists: a full 44px per row would balloon the footer, so these
+   target the WCAG 2.2 AA minimum (2.5.8, 24x24) rather than the AAA 44px. */
+.footer-cols a{display:inline-flex;align-items:center;min-height:28px;font-size:14.5px;color:rgba(255,255,255,.74)}
+.footer-cols a:hover{color:var(--color-accent-400)}
+/* Bottom bar carries legal links and a compliance line, so the row is not
+   a mostly-empty strip holding one copyright notice. */
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;
+  gap:14px 26px;padding-top:24px;font-size:13px;color:rgba(255,255,255,.58);
+}
+.footer-legal{display:flex;flex-wrap:wrap;gap:6px 20px}
+.footer-legal a{
+  display:inline-flex;align-items:center;min-height:28px;
+  font-size:13px;color:rgba(255,255,255,.68);
+}
+.footer-legal a:hover{color:var(--color-accent-400)}
+.footer-badge{display:inline-flex;align-items:center;gap:7px;font-weight:600;color:rgba(255,255,255,.68)}
+.footer-badge svg{color:var(--color-accent-400)}
+@media (max-width:900px){
+  .footer-bottom{justify-content:flex-start}
+}
+
