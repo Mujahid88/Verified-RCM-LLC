@@ -1,0 +1,300 @@
+/* ============================================================
+   Design Tokens & Base
+   ------------------------------------------------------------
+   Design tokens (CSS custom properties, light + dark theme), base reset,
+   typography scale, layout rhythm/spacing utilities, skip-link. This is
+   the foundation file every other file in css/src/ builds on.
+   Want to change a color, radius, or shadow site-wide? Edit the custom
+   properties in the :root block (e.g. --color-accent, --radius-md,
+   --shadow-md) or their dark-mode overrides in [data-theme="dark"] —
+   never a hard-coded color elsewhere. Want to change body font size or
+   heading scale? Edit the `body` rule or the `h1`/`h2`/`h3` rules here.
+   Section spacing (the gap between homepage sections) is controlled by
+   .section, .section--tight and .section--break, not by margins on
+   individual sections. The skip-link's offscreen/focus behavior lives
+   in .skip-link / .skip-link:focus at the bottom of this file.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+/* ============================================================
+   Verified RCM - static site stylesheet
+   Design tokens first, then base, layout, components.
+   Dark mode is driven by [data-theme="dark"] on <html>.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@font-face{
+  font-family:"Instrument Sans";
+  src:url("../fonts/instrument-sans-400-normal.woff2") format("woff2");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Instrument Sans";
+  src:url("../fonts/instrument-sans-500-normal.woff2") format("woff2");
+  font-weight:500; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Instrument Sans";
+  src:url("../fonts/instrument-sans-600-normal.woff2") format("woff2");
+  font-weight:600; font-style:normal; font-display:swap;
+}
+
+/* ------------------------------------------------------------------
+   Palette: Monochrome Luxury & High-Contrast Swiss Minimalist System
+   Pure Blacks (#090a0b), Crisp Whites (#ffffff), Clean Zinc Neutrals.
+   All text-bearing values clear WCAG AAA contrast (minimum 7:1).
+   ------------------------------------------------------------------ */
+:root{
+  /* Pure high-contrast surfaces */
+  --color-bg:#ffffff; --color-surface:#ffffff; --color-text:#000000;   /* text 21:1 on bg */
+  --color-accent:#000000; --color-accent-2:#18181b;
+  --color-line:rgba(0, 0, 0, 0.1);
+
+  /* Neutral Monochrome Ramp */
+  --color-accent-100:#f4f4f5; --color-accent-200:#e4e4e7; --color-accent-300:#d4d4d8;
+  --color-accent-400:#a1a1aa; --color-accent-600:#52525b;
+  --color-accent-700:#27272a; --color-accent-800:#000000;
+
+  --color-accent-2-100:#f4f4f5; --color-accent-2-300:#e4e4e7;
+  --color-accent-2-800:#18181b;
+
+  /* Secondary neutral accent */
+  --color-accent-3:#18181b;
+  --color-accent-3-100:#f4f4f5;
+  --color-accent-3-300:#d4d4d8;
+  --color-accent-3-700:#000000;
+  --on-accent-3:#ffffff;
+  --coral-ink:#000000;
+
+  --accent-ink:#000000;
+  --accent-ink-hover:#52525b;
+  --color-gold:#000000;
+
+  --on-accent:#ffffff;
+  --on-accent-2:#ffffff;
+
+  /* Modern radii */
+  --radius-sm:8px; --radius-md:14px; --radius-lg:18px;
+
+  /* Crisp monochrome shadows */
+  --shadow-sm:0 1px 2px rgba(0,0,0,.04), 0 2px 8px rgba(0,0,0,.03);
+  --shadow-md:0 6px 20px -2px rgba(0,0,0,.07), 0 2px 6px rgba(0,0,0,.04);
+  --shadow-lg:0 20px 50px -10px rgba(0,0,0,.10), 0 4px 14px rgba(0,0,0,.04);
+  --shadow-glow:0 16px 40px rgba(0,0,0,.15);
+  --ease:cubic-bezier(.16,1,.3,1);
+  --ease-out2:cubic-bezier(.25,.46,.45,.94);
+  --color-ink-fixed:#000000;
+  --muted:#52525b;
+
+  /* Gradients */
+  --grad-brand:linear-gradient(135deg,#000000 0%,#18181b 55%,#27272a 100%);
+  --grad-warm:linear-gradient(135deg,#27272a 0%,#18181b 55%,#000000 100%);
+
+  /* Glass */
+  --glass-bg:rgba(255,255,255,.75);
+  --glass-bg-strong:rgba(255,255,255,.90);
+  --glass-border:rgba(0,0,0,.08);
+  --glass-blur:16px;
+}
+
+/* Dark theme: Obsidian / Deep Zinc Luxury */
+[data-theme="dark"]{
+  --color-bg:#09090b; --color-surface:#141417; --color-text:#f4f4f5;
+  --color-line:rgba(255, 255, 255, 0.10);
+  --muted:#a1a1aa;
+  --accent-ink:#f4f4f5;
+  --accent-ink-hover:#ffffff;
+  --coral-ink:#f4f4f5;
+  color-scheme:dark;
+  --color-gold:#ffffff;
+  --color-accent:#ffffff;
+  --on-accent:#09090b;
+  --on-accent-2:#09090b;
+  --color-accent-100:rgba(255,255,255,.08);
+  --color-accent-200:rgba(255,255,255,.14);
+  --color-accent-300:#e4e4e7;
+  --color-accent-400:#ffffff;
+  --color-accent-700:#d4d4d8;
+  --color-accent-800:#fafafa;
+  --shadow-sm:inset 0 1px 0 rgba(255,255,255,.08), 0 2px 8px rgba(0,0,0,.6);
+  --shadow-md:inset 0 1px 0 rgba(255,255,255,.10), 0 14px 34px rgba(0,0,0,.6);
+  --shadow-lg:inset 0 1px 0 rgba(255,255,255,.12), 0 30px 70px rgba(0,0,0,.7);
+  --shadow-glow:0 16px 40px rgba(255,255,255,.08);
+  --glass-bg:rgba(20,20,23,.68);
+  --glass-bg-strong:rgba(20,20,23,.88);
+  --glass-border:rgba(255,255,255,.12);
+  --grad-brand:linear-gradient(135deg,#000000 0%,#09090b 55%,#18181b 100%);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--color-bg);color:var(--color-text);
+  font-family:"Plus Jakarta Sans","Inter","Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:var(--color-text);text-decoration:none;transition:color .25s ease}
+a:hover{color:var(--muted)}
+[data-theme="dark"] a{color:var(--color-text)}
+[data-theme="dark"] a:hover{color:var(--muted)}
+:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+::selection{background:var(--color-text);color:var(--color-bg)}
+
+h1,h2,h3,h4{
+  font-family:"Plus Jakarta Sans","Inter",system-ui,-apple-system,sans-serif;
+  font-synthesis-weight:none;
+  letter-spacing:-.038em;font-weight:700;line-height:1.12;margin:0 0 16px;
+  color:var(--color-text);
+}
+h1{font-size:clamp(34px,4.8vw,64px);letter-spacing:-.045em;font-weight:800}
+h2{font-size:clamp(27px,3.3vw,46px)}
+h3{font-size:21px;letter-spacing:-.02em;line-height:1.25}
+/* Three h2 weights, not one.
+   Every section heading on the homepage was the same 46px, which makes a
+   long page read as a flat list of equal claims — the reader gets no signal
+   about which sections carry the argument and which are supporting shelves.
+   --lead is for the pillars (the problem, the offer, the reason to switch);
+   the default carries the body of the page; --minor is for the utility
+   sections at the foot, which currently shout as loudly as the pitch. */
+h2.h2-lead{font-size:clamp(31px,4.1vw,58px);letter-spacing:-.042em;line-height:1.03}
+h2.h2-minor{font-size:clamp(23px,2.3vw,32px);letter-spacing:-.03em}
+p{margin:0 0 16px;text-wrap:pretty}
+.lede{font-size:18px;line-height:1.7;color:var(--muted);max-width:62ch}
+.tagline{font-size:19px;line-height:1.5;font-weight:600;color:var(--accent-ink);margin:0 0 20px}
+.muted{color:var(--muted)}
+.accent-text{color:var(--color-accent-800)}
+[data-theme="dark"] .accent-text{color:var(--color-accent-400)}
+.eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;opacity:.7;margin-bottom:14px}
+.eyebrow-sm{font-size:11.5px;font-weight:600;color:var(--accent-ink);margin-bottom:6px}
+.section-sub{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
+
+/* ---------- layout ---------- */
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+.section{padding-bottom:96px}
+/* Section rhythm: the intro block (badge / heading / lede) is a tight group,
+   then a generous gap before the content it introduces. Previously the lede
+   sat 16px from the content — the same gap as between two paragraphs — so the
+   intro read as part of the content instead of as a header for it. */
+.section>h2{margin-bottom:14px}
+
+/* ---------- vertical rhythm ----------
+   Every section used to sit 96px from the next — the same interval eleven
+   times running. Uniform spacing carries no information: it cannot tell you
+   that three sections belong to one argument and the fourth starts a new one.
+   These modifiers group the page instead of listing it. */
+.section--tight{padding-bottom:52px}    /* continues the thought above it   */
+.section--break{padding-bottom:150px}   /* closes an argument, opens another */
+@media (max-width:700px){
+  .section--break{padding-bottom:96px}
+  .section--tight{padding-bottom:40px}
+}
+
+/* ---------- lead + image split ----------
+   A section heading and two lines of lede across the full 1280px leaves most
+   of the row empty. Pairing them with a photograph uses the space, and gives
+   the page a second point where something other than a text box carries the
+   width. */
+.lead-split{
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  gap:56px;align-items:center;margin-bottom:40px;
+}
+.lead-split h2{margin-bottom:16px}
+.lead-split .lede{margin:0}
+/* Photograph on a coral block, offset — the reference's device for imagery.
+   The block is what makes a stock photo read as art-directed rather than
+   dropped in: the colour is the composition, the photo just sits in it. */
+.lead-split-figure{
+  position:relative;margin:0;padding:18px 0 0 18px;
+}
+.lead-split-figure::before{
+  content:"";position:absolute;inset:0 18px 18px 0;
+  background:var(--color-accent-3);border-radius:var(--radius-md);
+}
+.lead-split-img{
+  position:relative;display:block;
+  width:100%;height:100%;max-height:340px;object-fit:cover;object-position:50% 40%;
+  border-radius:var(--radius-md);
+}
+@media (max-width:900px){
+  .lead-split-figure{padding:14px 0 0 14px}
+  .lead-split-figure::before{inset:0 14px 14px 0}
+  .lead-split-img{max-height:240px}
+}
+@media (max-width:900px){
+  .lead-split{grid-template-columns:1fr;gap:28px;margin-bottom:30px}
+  .lead-split-img{max-height:240px}
+}
+
+.section>h2+.lede,.section>.lede{margin-bottom:44px}
+.section>.lede:last-child{margin-bottom:0}
+/* A heading that follows content needs more air above it than below. */
+.section>*+h2{margin-top:12px}
+.narrow{max-width:860px}
+/* The fixed nav occupies the first 86px, so this padding is not the gap the
+   reader sees — it left only 44px of clearance once the badge that used to
+   sit in that space was removed, and the h1 crowded the nav. */
+.page-head{padding-top:176px}
+/* No top padding and no side padding: the hero's own full-bleed field owns
+   its spacing now, and any padding here shows as a white strip between the
+   nav and the colour, which breaks the one effect the hero exists for. */
+.hero{padding:0 0 80px;max-width:1280px;margin:0 auto}
+.stack{display:flex;flex-direction:column;gap:18px}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px;align-items:center}
+/* When a split pairs a photo with a text column, centring leaves the image
+   floating against a taller neighbour with uneven margins top and bottom.
+   Stretching makes the photo match its partner's height exactly, so both
+   columns share one top and bottom edge. */
+.split:has(> .photo){align-items:stretch}
+.split > .photo{height:100%}
+.split > .photo img{height:100%;width:100%;object-fit:cover}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.article .grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:36px;flex-wrap:wrap;margin-bottom:28px}
+/* A lede that introduces a whole section can run wider than a lede sitting
+   beside a photo — it should use close to the full column so the row
+   doesn't wrap into a narrow strip with a dead gap of empty page beside it.
+   82ch (~810px) left roughly 400px unused in the 1232px wrap; this uses
+   effectively the whole row instead. */
+.lede-wide{max-width:min(100%,1180px)}
+/* Engagement terms as an open strip with rules between items, not a boxed
+   panel. Proximity does the grouping; a container would only add weight. */
+.terms-strip{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:0;margin:30px 0 44px;padding:22px 0;
+  border-top:1px solid var(--color-line);border-bottom:1px solid var(--color-line);
+}
+.terms-item{padding:0 26px;position:relative;min-width:0}
+.terms-item:first-child{padding-left:0}
+.terms-item+.terms-item::before{
+  content:"";position:absolute;left:0;top:2px;bottom:2px;width:1px;background:var(--color-line);
+}
+.terms-value{
+  display:block;font-size:17px;font-weight:600;
+  letter-spacing:-.02em;color:var(--color-accent-800);margin-bottom:4px;
+}
+[data-theme="dark"] .terms-value{color:var(--color-accent-300)}
+.terms-label{display:block;font-size:13.5px;line-height:1.45;color:var(--muted)}
+@media (max-width:900px){
+  .terms-strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 0}
+  .terms-item:nth-child(3){padding-left:0}
+  .terms-item:nth-child(3)::before{display:none}
+}
+@media (max-width:520px){
+  .terms-strip{grid-template-columns:minmax(0,1fr);gap:18px}
+  .terms-item{padding:0}
+  .terms-item::before{display:none}
+}
+
+/* ---------- skip link (rule 45) ----------
+   Offscreen until focused, then pinned top-left above the fixed nav so
+   keyboard users can jump the whole nav block. */
+.skip-link{
+  position:absolute;left:-9999px;top:0;z-index:100;
+  display:inline-flex;align-items:center;min-height:44px;padding:0 20px;
+  background:var(--color-accent-800);color:#fff;font-weight:600;font-size:14px;
+  border-radius:0 0 var(--radius-sm) 0;
+}
+.skip-link:focus{left:0;color:#fff}

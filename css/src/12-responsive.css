@@ -1,0 +1,55 @@
+/* ============================================================
+   Responsive Breakpoints
+   ------------------------------------------------------------
+   The main breakpoint media-query block (verified at 1440px, 768px
+   and 375px) that adjusts layout for the sections defined earlier
+   in this stylesheet, as it collapses from desktop down to phone.
+   Want to change when the nav switches to the burger menu? edit the
+   `@media (max-width:1100px)` block, where `.nav-links{display:none}`
+   and `.burger{display:grid}` swap places. Want to change when grids
+   stack to a single column? edit the `@media (max-width:900px)` block
+   (`.split,.grid-3,.grid-2{grid-template-columns:minmax(0,1fr)}`).
+   Want to change small-phone type sizes or the mobile CTA button
+   width? edit the `@media (max-width:560px)` block, where `h1`/`h2`
+   font-size and `.btn{width:100%;...}` live.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+@media (max-width:1100px){
+  .nav-links{display:none}
+  .burger{display:grid}
+  .footer-cols{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+}
+@media (max-width:900px){
+  .split,.grid-3,.grid-2{grid-template-columns:minmax(0,1fr)}
+  .split{gap:32px}
+  .photo.tall{min-height:300px}
+  .explorer-head{grid-template-columns:48px 1fr}
+  .explorer-arrow{display:none}
+  .svc-split{grid-template-columns:minmax(0,1fr);gap:36px}
+  .svc-items,.svc-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .panel{padding:28px}
+  .compare-head,.compare-row{grid-template-columns:minmax(0,1fr);gap:12px}
+  .compare-head span:last-child{display:none}
+  .compare-row>div:last-child{padding-top:12px;border-top:1px dashed var(--color-line)}
+  .footer-card{padding:32px 24px}
+  .stat-row{gap:12px}
+}
+@media (max-width:560px){
+  h1{font-size:32px}
+  h2{font-size:26px}
+  .page-head,.hero,.article{padding-top:132px}
+  .section{padding-bottom:64px}
+  .nav-cta{display:none}
+  .explorer-card,.svc-item{padding:22px}
+  .svc-items,.svc-stat-grid{grid-template-columns:minmax(0,1fr)}
+  .cta-dark{padding:32px 24px}
+  .card{padding:22px}
+  .article-photo{height:220px}
+  .footer-cols{grid-template-columns:minmax(0,1fr);gap:26px;padding:28px 0}
+  .btn{width:100%;justify-content:center}
+  .crumb-back,.chip,.tag-pill,.tag{width:auto}
+  .hero-ctas .btn{width:100%}
+  .svc-tab{width:auto}
+}

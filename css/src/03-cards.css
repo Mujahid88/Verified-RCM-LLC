@@ -1,0 +1,136 @@
+/* ============================================================
+   Cards, Stats & Service Head
+   ------------------------------------------------------------
+   Generic card surface (.card, .glass-card), stat callouts, and the
+   small header card used at the top of service pages.
+   Want to change the card hover lift or shadow? edit .card:hover and
+   the [data-theme="dark"] .card:hover override just below it. Want to
+   restyle the coral "amber" stat block? edit .amber-fill (uses
+   --color-accent-3 / --on-accent-3, not --color-accent). The big
+   number styling for stats (size/weight/colour) lives in .stat-big,
+   and the two-column intro-plus-figures layout at the top of a
+   service page is .service-head / .service-head-stats, including its
+   900px and 560px responsive collapses.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+
+/* ---------- cards ---------- */
+/* Soft fill with subtle border, depth elevation, and interactive spotlight. */
+.card{
+  position:relative;
+  background:var(--color-surface);
+  border:1px solid var(--color-line);
+  border-radius:var(--radius-md);padding:28px;
+  box-shadow:var(--shadow-sm);
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .35s ease,background-color .35s ease;
+  will-change:transform;
+}
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 18px 40px -10px rgba(0,0,0,.11), 0 2px 8px rgba(0,0,0,.04);
+  border-color:color-mix(in srgb,var(--color-accent) 28%,transparent);
+}
+[data-theme="dark"] .card:hover{
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 22px 50px -10px rgba(0,0,0,.68), 0 0 24px rgba(255,255,255,.1);
+  border-color:color-mix(in srgb,var(--color-accent) 45%,transparent);
+}
+@media (prefers-reduced-motion:reduce){
+  .card:hover{transform:none}
+}
+.card.dark{background:var(--color-ink-fixed);color:#fff;border-color:transparent}
+.card.dark .group-heading,.card.dark h2,.card.dark h3{color:#fff}
+.card.dark .check-list li{color:rgba(255,255,255,.85)}
+.card.dark p{color:rgba(255,255,255,.78)}
+.card-title-sm{font-size:18px;font-weight:600;letter-spacing:-.02em;line-height:1.28;margin:0 0 10px}
+.group-heading{font-size:17px;font-weight:600;letter-spacing:-.02em;margin:0 0 16px}
+.mini{padding:20px;border-radius:var(--radius-md);box-shadow:none}
+.mini-title{font-size:15px;font-weight:600;letter-spacing:-.015em;margin-bottom:5px}
+.mini-body{font-size:13.5px;line-height:1.5;color:var(--muted)}
+.mini.dark{background:var(--color-ink-fixed);color:#fff}
+.mini.dark .mini-body{color:rgba(255,255,255,.7)}
+.accent-fill{background:var(--color-accent);color:var(--on-accent);border-color:transparent}
+.accent-fill .stat-label,.accent-fill div{color:var(--on-accent)}
+/* Coral, not amber. This filled stat card was the last thing on the site
+   wearing a third colour — amber is now reserved for the semantic "needs
+   attention" state on claim pills, so a decorative amber block read as a
+   warning about nothing. Coral takes dark ink (5.48:1), same as everywhere. */
+.amber-fill{background:var(--color-accent-3);color:var(--on-accent-3);border-color:transparent}
+.amber-fill .stat-label,.amber-fill div{color:var(--on-accent-3)}
+.panel{border:1px solid var(--color-line);border-radius:var(--radius-lg);padding:48px;background:var(--color-surface);box-shadow:var(--shadow-sm)}
+/* Inside a panel the photo was inheriting the base .photo min-height and
+   sitting shorter than its text column, which is the height/width mismatch
+   flagged in review. Stretching it to the row height fixes both sides. */
+.panel .split{align-items:stretch}
+.panel .split > .photo{height:100%;min-height:340px;border-radius:var(--radius-md)}
+.panel .split > .photo img{height:100%;width:100%;object-fit:cover}
+@media (max-width:900px){
+  .panel .split > .photo{min-height:260px}
+}
+.link-card{display:block;color:var(--color-text);transition:transform .3s var(--ease),color .2s ease}
+.link-card:hover{color:var(--color-text);transform:translateX(3px)}
+.link-card-title{font-size:17px;font-weight:600;letter-spacing:-.02em;margin-bottom:6px}
+.link-card p{font-size:13.5px;line-height:1.5;color:var(--muted);margin:0}
+.link-cta{font-size:13.5px;font-weight:600;color:var(--accent-ink)}
+.check-list li,.check-item{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 78%, transparent)}
+.check-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px}
+.check,.warn,.x-mark,.check-mark{
+  width:20px;height:20px;flex:0 0 auto;border-radius:999px;display:grid;place-items:center;
+  font-size:11px;font-weight:600;margin-top:2px;background:var(--color-accent);color:var(--on-accent);
+}
+.warn{background:var(--color-accent-2);color:var(--on-accent-2)}
+.x-mark{background:color-mix(in srgb, var(--color-text) 10%, transparent);color:var(--color-text)}
+.why-panel .grid-2{gap:14px}
+.why-panel .check-item{color:rgba(255,255,255,.88);font-size:15px}
+.cta-mini{margin-top:24px;border-radius:var(--radius-lg);padding:28px}
+.cta-mini p{font-size:14.5px;margin-bottom:18px}
+.cta-banner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin:40px 0}
+.cta-banner-title{font-size:20px;font-weight:600;letter-spacing:-.02em}
+
+/* ---------- stats ---------- */
+/* Big and light, in brand colour — the reference sets its 200+ / 97% at 48px
+   weight 500, not bold. A bolded stat shouts the number; a large light one
+   states it. The restraint is the point, and it is free. */
+.stat-big{
+  font-size:clamp(34px,3.4vw,46px);font-weight:500;letter-spacing:-.03em;
+  line-height:1;color:var(--accent-ink);
+}
+/* Fills already carry their own ink (white on teal, dark on amber). */
+.accent-fill .stat-big,.amber-fill .stat-big,.svc-stat .stat-big{color:inherit}
+.stat-label{font-size:13px;font-weight:600;color:var(--muted);margin-top:6px}
+.stat-card{padding:26px;border-radius:var(--radius-lg)}
+.stat-row{gap:14px}
+
+/* ---------- service page hero ----------
+   The intro copy used to run down the left of a full-width section with the
+   entire right half empty, and the three proof figures sat in their own
+   section underneath it. Pairing them fills the column with the numbers a
+   reader wants next to the pitch, and shortens the page by a section. */
+.service-head{
+  display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);
+  gap:64px;align-items:start;
+}
+.service-head-copy>*:last-child{margin-bottom:0}
+.service-head-copy .lede{max-width:60ch}
+/* One panel with ruled rows, not three stacked cards — same reasoning as the
+   capability list: three bordered boxes to show three numbers is two borders
+   too many. */
+.service-head-stats{
+  background:var(--color-surface);border:1px solid var(--color-line);
+  border-radius:var(--radius-md);padding:4px 28px;box-shadow:var(--shadow-sm);
+}
+.service-head-stats .stat-card{
+  background:none;border:0;box-shadow:none;border-radius:0;padding:24px 0;
+}
+.service-head-stats .stat-card+.stat-card{border-top:1px solid var(--color-line)}
+@media (max-width:900px){
+  .service-head{grid-template-columns:minmax(0,1fr);gap:34px}
+  .service-head-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 26px;padding:4px 24px}
+  .service-head-stats .stat-card+.stat-card{border-top:0;border-left:1px solid var(--color-line);padding-left:26px}
+}
+@media (max-width:560px){
+  .service-head-stats{grid-template-columns:minmax(0,1fr)}
+  .service-head-stats .stat-card+.stat-card{border-left:0;padding-left:0;border-top:1px solid var(--color-line)}
+}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
