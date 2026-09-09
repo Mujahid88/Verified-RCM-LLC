@@ -47,7 +47,7 @@
    ------------------------------------------------------------------ */
 :root{
   /* Pure high-contrast surfaces */
-  --color-bg:#ffffff; --color-surface:#ffffff; --color-text:#000000;   /* text 21:1 on bg */
+  --color-bg:#ffffff; --color-surface:#ffffff; --color-text:#212529;
   --color-accent:#000000; --color-accent-2:#18181b;
   --color-line:rgba(0, 0, 0, 0.1);
 
@@ -127,12 +127,15 @@
   --grad-brand:linear-gradient(135deg,#000000 0%,#09090b 55%,#18181b 100%);
 }
 
-*,*::before,*::after{box-sizing:border-box}
+html{box-sizing:border-box}
+*,*::before,*::after{box-sizing:inherit}
 html{scroll-behavior:smooth}
 body{
-  margin:0;background:var(--color-bg);color:var(--color-text);
-  font-family:"Plus Jakarta Sans","Inter","Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  margin:0;background-color:var(--color-bg);color:var(--color-text);
+  font-family:'Inter',-apple-system,sans-serif;
+  font-size:15px;font-weight:400;line-height:1.6;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;overflow-x:hidden;
 }
 img{max-width:100%;display:block}
 a{color:var(--color-text);text-decoration:none;transition:color .25s ease}
