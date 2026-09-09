@@ -30,22 +30,48 @@
    Design tokens first, then base, layout, components.
    Dark mode is driven by [data-theme="dark"] on <html>.
    ============================================================ */
+
+
+   body{
+     font-family: 'Inter', -apple-system, sans-serif;
+   }
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 @font-face{
-  font-family:"Instrument Sans";
+   font-family: 'Inter', -apple-system, sans-serif;
   src:url("../fonts/instrument-sans-400-normal.woff2") format("woff2");
   font-weight:400; font-style:normal; font-display:swap;
 }
 @font-face{
-  font-family:"Instrument Sans";
+   font-family: 'Inter', -apple-system, sans-serif;
   src:url("../fonts/instrument-sans-500-normal.woff2") format("woff2");
   font-weight:500; font-style:normal; font-display:swap;
 }
 @font-face{
-  font-family:"Instrument Sans";
+   font-family: 'Inter', -apple-system, sans-serif;
   src:url("../fonts/instrument-sans-600-normal.woff2") format("woff2");
   font-weight:600; font-style:normal; font-display:swap;
+}
+
+
+*{
+
+   /* this is a universal Selector this style is applied on the hole website  .. aouther : Asim javed   */
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Text Clarity Engines */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
+  /* Readability baselines */
+  font-weight: 400;
+  letter-spacing: -0.01em; /* For body or large titles */
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000; 
+  
 }
 
 /* ------------------------------------------------------------------
@@ -53,9 +79,11 @@
    Pure Blacks (#090a0b), Crisp Whites (#ffffff), Clean Zinc Neutrals.
    All text-bearing values clear WCAG AAA contrast (minimum 7:1).
    ------------------------------------------------------------------ */
+
+
 :root{
   /* Pure high-contrast surfaces */
-  --color-bg:#ffffff; --color-surface:#ffffff; --color-text:#000000;   /* text 21:1 on bg */
+  --color-bg:#ffffff; --color-surface:#ffffff; --color-text:#212529;
   --color-accent:#000000; --color-accent-2:#18181b;
   --color-line:rgba(0, 0, 0, 0.1);
 
@@ -135,12 +163,15 @@
   --grad-brand:linear-gradient(135deg,#000000 0%,#09090b 55%,#18181b 100%);
 }
 
-*,*::before,*::after{box-sizing:border-box}
+html{box-sizing:border-box}
+*,*::before,*::after{box-sizing:inherit}
 html{scroll-behavior:smooth}
 body{
-  margin:0;background:var(--color-bg);color:var(--color-text);
-  font-family:"Plus Jakarta Sans","Inter","Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  margin:0;background-color:var(--color-bg);color:var(--color-text);
+  font-family:'Inter',-apple-system,sans-serif;
+  font-size:15px;font-weight:400;line-height:1.6;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;overflow-x:hidden;
 }
 img{max-width:100%;display:block}
 a{color:var(--color-text);text-decoration:none;transition:color .25s ease}
@@ -151,7 +182,7 @@ a:hover{color:var(--muted)}
 ::selection{background:var(--color-text);color:var(--color-bg)}
 
 h1,h2,h3,h4{
-  font-family:"Plus Jakarta Sans","Inter",system-ui,-apple-system,sans-serif;
+   font-family: 'Inter', -apple-system, sans-serif;
   font-synthesis-weight:none;
   letter-spacing:-.038em;font-weight:700;line-height:1.12;margin:0 0 16px;
   color:var(--color-text);
@@ -611,10 +642,13 @@ p{margin:0 0 16px;text-wrap:pretty}
   border-radius:var(--radius-md);padding:28px;
   box-shadow:var(--shadow-sm);
   transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .35s ease,background-color .35s ease;
+  isolation:isolate;
+  transform:translateZ(0);
   will-change:transform;
+  backface-visibility:hidden;
 }
 .card:hover{
-  transform:translateY(-5px);
+  transform:translate3d(0,-5px,0);
   box-shadow:0 18px 40px -10px rgba(0,0,0,.11), 0 2px 8px rgba(0,0,0,.04);
   border-color:color-mix(in srgb,var(--color-accent) 28%,transparent);
 }
@@ -685,7 +719,10 @@ p{margin:0 0 16px;text-wrap:pretty}
 /* Fills already carry their own ink (white on teal, dark on amber). */
 .accent-fill .stat-big,.amber-fill .stat-big,.svc-stat .stat-big{color:inherit}
 .stat-label{font-size:13px;font-weight:600;color:var(--muted);margin-top:6px}
-.stat-card{padding:26px;border-radius:var(--radius-lg)}
+.stat-card{
+  padding:26px;border-radius:var(--radius-lg);
+  isolation:isolate;transform:translateZ(0);will-change:transform;backface-visibility:hidden;
+}
 .stat-row{gap:14px}
 
 /* ---------- service page hero ----------
@@ -2214,9 +2251,9 @@ p{margin:0 0 16px;text-wrap:pretty}
 }
 .ctrl-hero-grid{
   position:relative;z-index:1;
-  max-width:1280px;margin:0 auto;
+  max-width:100%; width:100%; margin:0;
   display:grid;grid-template-columns:minmax(0,1fr);
-  gap:52px;justify-items:center;text-align:center;
+  gap:52px;justify-items:stretch;text-align:left;
 }
 @media (max-width:700px){
   .ctrl-hero{padding:84px 20px 64px}
@@ -2226,7 +2263,7 @@ p{margin:0 0 16px;text-wrap:pretty}
   max-width:18ch;text-wrap:balance;
 }
 .ctrl-hero .lede{color:rgba(255,255,255,.82);max-width:52ch;margin-bottom:30px}
-.ctrl-hero .hero-ctas{justify-content:center}
+.ctrl-hero .hero-ctas{justify-content:flex-start}
 .ctrl-hero .btn-accent{
   background:#fff;color:#090a0b;border-radius:90px;
   min-height:46px;padding:0 26px;font-size:15px;font-weight:600;
@@ -2243,16 +2280,17 @@ p{margin:0 0 16px;text-wrap:pretty}
 .ctrl-hero .btn-ghost:hover{background:rgba(255,255,255,.18);border-color:#fff;color:#fff}
 
 .ctrl-trust{
-  display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;
+  display:flex;flex-wrap:wrap;justify-content:flex-start;gap:10px 22px;
   margin:34px 0 0;padding-top:24px;
   border-top:1px solid rgba(255,255,255,.18);
   font-size:14px;font-weight:500;color:rgba(255,255,255,.76);
 }
-.ctrl-trust > span{display:inline-flex;align-items:baseline;gap:6px}
+.ctrl-trust > span{display:inline-flex;align-items:baseline;gap:6px;color:#fff}
 .ctrl-trust > span + span{
   padding-left:22px;border-left:1px solid rgba(255,255,255,.18);
 }
 .ctrl-trust b{font-weight:700;font-size:15.5px;color:#fff}
+.ctrl-panel{justify-self:stretch;width:100%;max-width:100%}
 @media (max-width:520px){
   .ctrl-trust > span + span{padding-left:0;border-left:0}
   .ctrl-trust{gap:6px 18px}
@@ -2268,7 +2306,7 @@ p{margin:0 0 16px;text-wrap:pretty}
   background:var(--ink-800);
   border:1px solid var(--ink-line);
   border-radius:var(--radius-md);overflow:hidden;
-  position:relative;
+  position:relative; width:100%; max-width:100%; min-height:230px;
   box-shadow:0 24px 60px -12px rgba(0,0,0,.6), 0 0 30px rgba(255,255,255,.05);
   transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .35s ease;
 }
@@ -2297,18 +2335,23 @@ p{margin:0 0 16px;text-wrap:pretty}
   animation:ctrl-pulse 2s ease-in-out infinite;
 }
 @keyframes ctrl-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}
+.ctrl-activity{
+  display:flex; flex-wrap:nowrap; overflow-x:auto; align-items:stretch; width:100%;
+  scrollbar-width:thin; scrollbar-color:rgba(255,255,255,.22) transparent;
+}
 .ctrl-row{
-  display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:center;
-  padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.06);font-size:13px;
-  transition:background-color .3s ease,transform .3s var(--ease);
+  display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:center;
+  flex:1 1 0; min-width:300px; max-width:none; width:100%;
+  padding:18px 20px;border-right:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);
+  font-size:13.5px; transition:background-color .3s ease,transform .3s var(--ease);
 }
 .ctrl-row:hover, .ctrl-row.active-simulated{
   background-color:rgba(255,255,255,.07);
 }
-.ctrl-row:last-of-type{border-bottom:0}
+.ctrl-row:last-of-type{border-right:0}
 .ctrl-id{color:var(--on-ink-muted);font-variant-numeric:tabular-nums;font-size:12px;transition:color .25s ease}
 .ctrl-row:hover .ctrl-id{color:#fff}
-.ctrl-desc{color:var(--on-ink);min-width:0}
+.ctrl-desc{color:var(--on-ink);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ctrl-pill{
   font-size:10.5px;font-weight:600;letter-spacing:.04em;padding:4px 10px;border-radius:999px;
   justify-self:end;white-space:nowrap;
@@ -2319,14 +2362,17 @@ p{margin:0 0 16px;text-wrap:pretty}
 .ctrl-pill.accepted{background:rgba(255,255,255,.12);color:#f4f4f5;box-shadow:0 0 10px rgba(255,255,255,.08)}
 .ctrl-pill.review{background:rgba(255,255,255,.06);color:#a1a1aa}
 .ctrl-note{
-  margin:0;padding:12px 18px;font-size:11.5px;line-height:1.45;
-  color:var(--on-ink-muted);border-top:1px solid var(--ink-line);
+  margin:0;padding:12px 18px;font-size:12.5px;line-height:1.45;
+  color:#fff;border-top:1px solid var(--ink-line);
 }
 @media (prefers-reduced-motion:reduce){.ctrl-live-dot{animation:none}}
 @media (max-width:900px){
   .ctrl-hero{padding:40px 24px}
   .ctrl-hero-grid{grid-template-columns:minmax(0,1fr);gap:34px}
   .ctrl-trust{gap:24px}
+  .ctrl-activity{flex-direction:column;overflow:visible}
+  .ctrl-row{max-width:none;min-width:0;flex-basis:auto;border-right:0;border-bottom:1px solid rgba(255,255,255,.06)}
+  .ctrl-row:last-of-type{border-bottom:0}
 }
 
 /* ---------- proof section: cited stats + our own numbers ---------- */
@@ -2336,7 +2382,10 @@ p{margin:0 0 16px;text-wrap:pretty}
   border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);
   transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .35s ease;
   overflow:hidden;
+  isolation:isolate;
+  transform:translateZ(0);
   will-change:transform;
+  backface-visibility:hidden;
 }
 .glass-card::before{
   content:"";position:absolute;inset:0;border-radius:inherit;
@@ -2348,7 +2397,7 @@ p{margin:0 0 16px;text-wrap:pretty}
   background:radial-gradient(450px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,.07), transparent 70%);
 }
 .glass-card:hover{
-  transform:translateY(-6px);
+  transform:translate3d(0,-6px,0);
   border-color:color-mix(in srgb,var(--color-text) 22%,transparent);
   box-shadow:var(--shadow-md);
 }
