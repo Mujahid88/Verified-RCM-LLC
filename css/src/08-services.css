@@ -105,7 +105,7 @@
 .explorer-groups{display:flex;flex-wrap:wrap;gap:8px}
 .explorer-group{
   border-radius:999px;background:var(--color-bg);border:1px solid var(--color-line);
-  padding:9px 15px;font-size:13px;font-weight:600;
+  padding:9px 15px;font-size:13px;font-weight:600; color:var(--color-text);
   transition:border-color .25s ease,background-color .25s ease,transform .25s var(--ease),color .25s ease;
 }
 .explorer-group:hover{
@@ -113,9 +113,12 @@
   background:var(--color-accent-100);border-color:var(--color-accent);
   color:var(--accent-ink);
 }
+[data-theme="dark"] .explorer-group{
+  background:rgba(255,255,255,.03); color:#ffffff;
+}
 [data-theme="dark"] .explorer-group:hover{
   background:color-mix(in srgb,var(--color-accent) 22%,transparent);
-  border-color:var(--color-accent-400);color:var(--color-accent-300);
+  border-color:var(--color-accent-400);color:#ffffff;
 }
 .explorer-card:hover .explorer-group{border-color:color-mix(in srgb,var(--color-accent) 34%,transparent)}
 @media (max-width:900px){

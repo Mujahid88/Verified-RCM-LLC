@@ -27,12 +27,12 @@
   --ink-800:#141417;                 /* raised panel       */
   --ink-line:rgba(255,255,255,.12);  /* hairline on dark   */
   --on-ink:#ffffff;                  /* 18:1 on ink-900    */
-  --on-ink-muted:#a1a1aa;            /* 7.5:1 on ink-900   */
+  --on-ink-muted:#ffffff;            /* full white text for dark UI */
 }
 [data-theme="dark"]{
   --ink-900:#000000;                 /* hero card — deep black             */
   --ink-800:#141417;                 /* raised panel — above that          */
-  --on-ink-muted:#a1a1aa;            /* clean light neutral                */
+  --on-ink-muted:#ffffff;            /* full white text for dark UI        */
 }
 /* The hero is the page's prominent statement: deep obsidian luxury field */
 .ctrl-hero{
