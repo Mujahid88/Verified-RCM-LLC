@@ -102,10 +102,10 @@
 [data-theme="dark"]{
   --color-bg:#09090b; --color-surface:#141417; --color-text:#f4f4f5;
   --color-line:rgba(255, 255, 255, 0.10);
-  --muted:#a1a1aa;
-  --accent-ink:#f4f4f5;
+  --muted:#ffffff;
+  --accent-ink:#ffffff;
   --accent-ink-hover:#ffffff;
-  --coral-ink:#f4f4f5;
+  --coral-ink:#ffffff;
   color-scheme:dark;
   --color-gold:#ffffff;
   --color-accent:#ffffff;
