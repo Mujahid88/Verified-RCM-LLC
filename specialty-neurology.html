@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Neurology Billing and Coding: The Complete 2026 Guide | Verified RCM">
 <meta name="twitter:description" content="Neurology billing and coding guide: EMG/NCS and EEG CPT codes, Botox migraine billing, ICD-10 specificity, NCCI/MUE values, MAC-specific LCDs, and denial appeals.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Neurology","item":"https://www.verifiedrcm.com/specialty-neurology.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is the unspecified G35 code no longer valid for multiple sclerosis claims?","acceptedAnswer":{"@type":"Answer","text":"The FY2026 ICD-10-CM restructuring split multiple sclerosis into phenotype-specific codes, and the bare G35 header is a category heading only — it was never billable and still is not. You now have to code the phenotype and, for progressive forms, the activity status: G35.A for relapsing-remitting, G35.B0/B1/B2 for primary progressive (unspecified, active, or non-active), G35.C0/C1/C2 for secondary progressive by the same activity split, or G35.D if the phenotype genuinely can't be determined yet. G35.D is billable, but it should be a placeholder while workup continues, not a permanent habit — payers increasingly expect the phenotype-specific code once the diagnosis is established."}},{"@type":"Question","name":"What changed in Noridian's EMG and nerve conduction study coverage article?","acceptedAnswer":{"@type":"Answer","text":"Noridian retired article A54992 (Billing and Coding: Nerve Conduction Studies and Electromyography) on 10/23/2025 and replaced it the same day with A54969 under the identical title. If a scrubber rule, order set, or documentation template still cites A54992, it's referencing a dead article — the citation itself becomes a compliance problem even if the underlying coverage criteria carried over unchanged, because an auditor checking your documentation against a retired article number can't confirm you're following current policy."}},{"@type":"Question","name":"Why did Botulinum Toxin LCDs get replaced in February 2026?","acceptedAnswer":{"@type":"Answer","text":"Five MACs retired their Botulinum Toxin LCDs effective 2/21/2026 — WPS (L34635), National Government Services (L33646), and CGS (L33949) — and replaced them the next day, 2/22/2026, with renumbered LCDs: Palmetto L39836, CGS L39857, Noridian L35172 and L35170, and a new L39832 now published under Wellpoint Federal rather than NGS. Wellpoint Federal shares NGS's contract numbers in CMS's system, which reflects NGS's ownership transition — if your team is still searching the coverage database for \"National Government Services\" botulinum toxin coverage, the current LCD for that jurisdiction now lists under Wellpoint Federal. WPS's replacement, L39909, didn't take effect until 4/2/2026, roughly six weeks after L34635 retired — confirm what your MAC's operative LCD was for any Botox claim with a date of service in that window."}},{"@type":"Question","name":"Can we bill 95885-95887 with 95907-95913 the same day?","acceptedAnswer":{"@type":"Answer","text":"Yes — that's the intended pairing. 95885 (limited extremity EMG), 95886 (complete extremity EMG), and 95887 (non-extremity EMG) are add-on codes that exist specifically to be reported with a same-day nerve conduction study from the 95907-95913 tier; they aren't separately payable on their own and CMS will deny an add-on code billed without its primary code on the same claim. The edit to actually watch is billing 95860-95864 (standalone EMG without a same-day NCS) alongside the 95885-95887 add-ons for the same limb on the same date — that combination usually reflects a workflow or ordering error rather than two genuinely distinct services, and it's the pairing most likely to draw a bundling denial or audit attention."}},{"@type":"Question","name":"What's the diagnostic threshold for Botox coverage in chronic migraine?","acceptedAnswer":{"@type":"Answer","text":"The clinical definition of chronic migraine used to establish medical necessity is a headache on 15 or more days per month for at least three months, with at least 8 of those days meeting migraine or migraine-responsive-to-triptan criteria. That threshold has to be supported in the chart — typically with a headache diary or calendar covering at least one full month before the request — not just asserted in a note. Most payers also want at least one documented failed or contraindicated oral preventive, even though onabotulinumtoxinA's FDA labeling for chronic migraine doesn't itself require a failed-oral trial; that's a payer overlay, not an FDA requirement, and it's worth knowing the difference when you're pushing back on a denial."}},{"@type":"Question","name":"Why do our EMG and NCS claims deny as bundled (CO-97)?","acceptedAnswer":{"@type":"Answer","text":"Almost always because the claim reports a standalone EMG code (95860-95864) alongside the tiered NCS-plus-EMG combination (95907-95913 with the 95885-95887 add-ons) for the same extremity, same date — the payer's system reads that as double-billing the EMG component. The fix starts with the order: if the study genuinely needs both NCS and needle EMG on a limb, it should be ordered and billed as the combined pathway, not stacked with a separate standalone EMG code. If two genuinely separate extremities were studied by design, the claim needs to state that distinctly rather than relying on the payer to infer it."}},{"@type":"Question","name":"Do we need prior authorization for video EEG monitoring?","acceptedAnswer":{"@type":"Answer","text":"Most commercial payers and a growing share of Medicare Advantage plans require prior authorization once continuous video-EEG monitoring extends past roughly 24 to 48 hours, and some require it for any inpatient long-term monitoring admission regardless of duration. The documentation that actually gets it approved is seizure frequency and semiology detail, prior AED trials and their outcomes (not just a drug list), and the specific localization question the monitoring is meant to answer — pre-surgical workup, differentiating epileptic from non-epileptic events, or classifying an unclear seizure type. Requesting the authorization before the admission, with that detail already in hand, avoids the retrospective medical-necessity fight that shows up as a CO-197 denial after the stay."}},{"@type":"Question","name":"Why is neurology's denial rate so much higher than other specialties?","acceptedAnswer":{"@type":"Answer","text":"Neurology runs roughly 18% average denial rates against 5-10% for most other specialties, by industry benchmarking, because it stacks several hard problems at once: diagnostic testing with dense same-day bundling rules (EMG/NCS, EEG), a high-cost injectable (Botox) that most payers gate behind prior authorization and diary documentation, MAC-specific coverage policy that changes on a rolling basis rather than once a year, and diagnosis coding — stroke, MS, epilepsy, migraine — where the specific code, not just the category, decides whether a study or procedure is covered at all. Each of those is manageable individually; the volume of claims that trip more than one at once is what pushes the aggregate rate up."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is the unspecified G35 code no longer valid for multiple sclerosis claims?","acceptedAnswer":{"@type":"Answer","text":"The FY2026 ICD-10-CM restructuring split multiple sclerosis into phenotype-specific codes, and the bare G35 header is a category heading only, it was never billable and still is not. You now have to code the phenotype and, for progressive forms, the activity status: G35.A for relapsing-remitting, G35.B0/B1/B2 for primary progressive (unspecified, active, or non-active), G35.C0/C1/C2 for secondary progressive by the same activity split, or G35.D if the phenotype genuinely can't be determined yet. G35.D is billable, but it should be a placeholder while workup continues, not a permanent habit, payers increasingly expect the phenotype-specific code once the diagnosis is established."}},{"@type":"Question","name":"What changed in Noridian's EMG and nerve conduction study coverage article?","acceptedAnswer":{"@type":"Answer","text":"Noridian retired article A54992 (Billing and Coding: Nerve Conduction Studies and Electromyography) on 10/23/2025 and replaced it the same day with A54969 under the identical title. If a scrubber rule, order set, or documentation template still cites A54992, it's referencing a dead article, the citation itself becomes a compliance problem even if the underlying coverage criteria carried over unchanged, because an auditor checking your documentation against a retired article number can't confirm you're following current policy."}},{"@type":"Question","name":"Why did Botulinum Toxin LCDs get replaced in February 2026?","acceptedAnswer":{"@type":"Answer","text":"Five MACs retired their Botulinum Toxin LCDs effective 2/21/2026, WPS (L34635), National Government Services (L33646), and CGS (L33949), and replaced them the next day, 2/22/2026, with renumbered LCDs: Palmetto L39836, CGS L39857, Noridian L35172 and L35170, and a new L39832 now published under Wellpoint Federal rather than NGS. Wellpoint Federal shares NGS's contract numbers in CMS's system, which reflects NGS's ownership transition, if your team is still searching the coverage database for \"National Government Services\" botulinum toxin coverage, the current LCD for that jurisdiction now lists under Wellpoint Federal. WPS's replacement, L39909, didn't take effect until 4/2/2026, roughly six weeks after L34635 retired, confirm what your MAC's operative LCD was for any Botox claim with a date of service in that window."}},{"@type":"Question","name":"Can we bill 95885-95887 with 95907-95913 the same day?","acceptedAnswer":{"@type":"Answer","text":"Yes, that's the intended pairing. 95885 (limited extremity EMG), 95886 (complete extremity EMG), and 95887 (non-extremity EMG) are add-on codes that exist specifically to be reported with a same-day nerve conduction study from the 95907-95913 tier; they aren't separately payable on their own and CMS will deny an add-on code billed without its primary code on the same claim. The edit to actually watch is billing 95860-95864 (standalone EMG without a same-day NCS) alongside the 95885-95887 add-ons for the same limb on the same date, that combination usually reflects a workflow or ordering error rather than two genuinely distinct services, and it's the pairing most likely to draw a bundling denial or audit attention."}},{"@type":"Question","name":"What's the diagnostic threshold for Botox coverage in chronic migraine?","acceptedAnswer":{"@type":"Answer","text":"The clinical definition of chronic migraine used to establish medical necessity is a headache on 15 or more days per month for at least three months, with at least 8 of those days meeting migraine or migraine-responsive-to-triptan criteria. That threshold has to be supported in the chart, typically with a headache diary or calendar covering at least one full month before the request, not just asserted in a note. Most payers also want at least one documented failed or contraindicated oral preventive, even though onabotulinumtoxinA's FDA labeling for chronic migraine doesn't itself require a failed-oral trial; that's a payer overlay, not an FDA requirement, and it's worth knowing the difference when you're pushing back on a denial."}},{"@type":"Question","name":"Why do our EMG and NCS claims deny as bundled (CO-97)?","acceptedAnswer":{"@type":"Answer","text":"Almost always because the claim reports a standalone EMG code (95860-95864) alongside the tiered NCS-plus-EMG combination (95907-95913 with the 95885-95887 add-ons) for the same extremity, same date, the payer's system reads that as double-billing the EMG component. The fix starts with the order: if the study genuinely needs both NCS and needle EMG on a limb, it should be ordered and billed as the combined pathway, not stacked with a separate standalone EMG code. If two genuinely separate extremities were studied by design, the claim needs to state that distinctly rather than relying on the payer to infer it."}},{"@type":"Question","name":"Do we need prior authorization for video EEG monitoring?","acceptedAnswer":{"@type":"Answer","text":"Most commercial payers and a growing share of Medicare Advantage plans require prior authorization once continuous video-EEG monitoring extends past roughly 24 to 48 hours, and some require it for any inpatient long-term monitoring admission regardless of duration. The documentation that actually gets it approved is seizure frequency and semiology detail, prior AED trials and their outcomes (not just a drug list), and the specific localization question the monitoring is meant to answer, pre-surgical workup, differentiating epileptic from non-epileptic events, or classifying an unclear seizure type. Requesting the authorization before the admission, with that detail already in hand, avoids the retrospective medical-necessity fight that shows up as a CO-197 denial after the stay."}},{"@type":"Question","name":"Why is neurology's denial rate so much higher than other specialties?","acceptedAnswer":{"@type":"Answer","text":"Neurology runs roughly 18% average denial rates against 5-10% for most other specialties, by industry benchmarking, because it stacks several hard problems at once: diagnostic testing with dense same-day bundling rules (EMG/NCS, EEG), a high-cost injectable (Botox) that most payers gate behind prior authorization and diary documentation, MAC-specific coverage policy that changes on a rolling basis rather than once a year, and diagnosis coding, stroke, MS, epilepsy, migraine, where the specific code, not just the category, decides whether a study or procedure is covered at all. Each of those is manageable individually; the volume of claims that trip more than one at once is what pushes the aggregate rate up."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 25 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 25 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialties.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>All specialties</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of branching neurons connecting at synapse nodes, representing neurology">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialties.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>All specialties</a>
+      <h1>Neurology billing and coding: the complete 2026 guide.</h1>
+      <p class="lede">Neurology denies at roughly 18% by industry benchmarking, against 5&ndash;10% for most other specialties, because it stacks dense same-day testing bundles, a high-cost injectable gated behind diary documentation, MAC coverage policy that turns over on a rolling basis rather than once a year, and diagnosis coding where the specific code, not the category, decides coverage. This guide covers the full revenue cycle: what actually changed in late 2025 and early 2026 (with the retired-vs-current article and LCD numbers nobody else tracks), every core procedure family, and the denial-to-appeal pairing most competitor guides treat as an afterthought.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Updated August 2026</span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of branching neurons connecting at synapse nodes, representing neurology">
   <!-- secondary background branches -->
   <path d="M240 240 C 200 210, 175 180, 150 140" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M150 140 C 138 122, 128 108, 120 92" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -214,9 +270,9 @@
   <circle cx="336" cy="118" r="4.5" fill="var(--cat-medical)"/>
   <path d="M240 240 C 226 274, 220 300, 226 332" fill="none" stroke="var(--cat-medical)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
 </svg></figure>
-  <h1>Neurology billing and coding: the complete 2026 guide.</h1>
-  <p class="lede">Neurology denies at roughly 18% by industry benchmarking, against 5&ndash;10% for most other specialties, because it stacks dense same-day testing bundles, a high-cost injectable gated behind diary documentation, MAC coverage policy that turns over on a rolling basis rather than once a year, and diagnosis coding where the specific code &mdash; not the category &mdash; decides coverage. This guide covers the full revenue cycle: what actually changed in late 2025 and early 2026 (with the retired-vs-current article and LCD numbers nobody else tracks), every core procedure family, and the denial-to-appeal pairing most competitor guides treat as an afterthought.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Updated August 2026</span></div>
+  </div>
+</header>
+<article class="wrap article">
   <figure class="pillar-diagram">
     <svg viewBox="0 0 720 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pd-title"><title id="pd-title">Encounter → Code & document → Claim submitted → Payer adjudication → Paid or denied</title><line class="pillar-diagram-line" x1="70" y1="42" x2="650" y2="42"></line><circle class="pillar-diagram-node-ring" cx="70" cy="42" r="26"></circle><circle class="pillar-diagram-node-fill" cx="70" cy="42" r="20"></circle><text class="pillar-diagram-num" x="70" y="46" text-anchor="middle">1</text><text class="pillar-diagram-label" x="70" y="80" text-anchor="middle">Encounter</text><circle class="pillar-diagram-node-ring" cx="215" cy="42" r="26"></circle><circle class="pillar-diagram-node-fill" cx="215" cy="42" r="20"></circle><text class="pillar-diagram-num" x="215" y="46" text-anchor="middle">2</text><text class="pillar-diagram-label" x="215" y="80" text-anchor="middle">Code & document</text><circle class="pillar-diagram-node-ring" cx="360" cy="42" r="26"></circle><circle class="pillar-diagram-node-fill" cx="360" cy="42" r="20"></circle><text class="pillar-diagram-num" x="360" y="46" text-anchor="middle">3</text><text class="pillar-diagram-label" x="360" y="80" text-anchor="middle">Claim submitted</text><circle class="pillar-diagram-node-ring" cx="505" cy="42" r="26"></circle><circle class="pillar-diagram-node-fill" cx="505" cy="42" r="20"></circle><text class="pillar-diagram-num" x="505" y="46" text-anchor="middle">4</text><text class="pillar-diagram-label" x="505" y="80" text-anchor="middle">Payer adjudication</text><circle class="pillar-diagram-node-ring" cx="650" cy="42" r="26"></circle><circle class="pillar-diagram-node-fill" cx="650" cy="42" r="20"></circle><text class="pillar-diagram-num" x="650" y="46" text-anchor="middle">5</text><text class="pillar-diagram-label" x="650" y="80" text-anchor="middle">Paid or denied</text></svg>
     <figcaption class="payer-contact-note" style="margin-top:14px;text-align:center">The billing lifecycle this guide covers, from the visit to the remittance.</figcaption>
@@ -225,9 +281,9 @@
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The G35 header is dead for billing, and it has real replacements.</b> Unspecified "multiple sclerosis" no longer clears HIPAA transactions &mdash; you need phenotype plus, for progressive forms, activity status: G35.A, G35.B0/B1/B2, G35.C0/C1/C2, or G35.D as a genuine placeholder.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Article and LCD numbers changed under your feet in late 2025 and early 2026.</b> Noridian retired its NCS/EMG article A54992 and replaced it same-day with A54969. Five MACs retired their Botulinum Toxin LCDs 2/21/2026 and replaced them 2/22/2026 &mdash; one under a renamed contractor (NGS is now listed as Wellpoint Federal), one (WPS) with a six-week coverage gap before its replacement took effect.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The EMG/NCS bundling trap isn't the add-on pairing itself &mdash; it's the standalone codes.</b> 95885-95887 are designed to be billed with 95907-95913. The denial shows up when 95860-95864 (standalone EMG) is stacked on top of that combination for the same limb.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The G35 header is dead for billing, and it has real replacements.</b> Unspecified "multiple sclerosis" no longer clears HIPAA transactions, you need phenotype plus, for progressive forms, activity status: G35.A, G35.B0/B1/B2, G35.C0/C1/C2, or G35.D as a genuine placeholder.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Article and LCD numbers changed under your feet in late 2025 and early 2026.</b> Noridian retired its NCS/EMG article A54992 and replaced it same-day with A54969. Five MACs retired their Botulinum Toxin LCDs 2/21/2026 and replaced them 2/22/2026, one under a renamed contractor (NGS is now listed as Wellpoint Federal), one (WPS) with a six-week coverage gap before its replacement took effect.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The EMG/NCS bundling trap isn't the add-on pairing itself, it's the standalone codes.</b> 95885-95887 are designed to be billed with 95907-95913. The denial shows up when 95860-95864 (standalone EMG) is stacked on top of that combination for the same limb.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Denial-to-appeal pairing is where neurology guides consistently go thin.</b> A CARC code and a root cause aren't an appeal strategy. Every denial in this guide is paired with the specific argument, the citation to use, and the upstream fix.</span></li>
     </ul>
   </section>
@@ -241,16 +297,16 @@
       <tbody>
         <tr><td><b>Top code families</b></td><td>NCS (95907&ndash;95913) with EMG add-ons (95885&ndash;95887) or standalone EMG (95860&ndash;95864), EEG (95812&ndash;95816 routine, 95700&ndash;95726 extended/video), chronic migraine Botox (64615 + J0585), high-complexity E/M (99204/99205, 99214/99215), DBS programming (95970/95983/95984)</td></tr>
         <tr><td><b>High-impact modifiers</b></td><td>25 (E/M same day as a minor procedure or unrelated to testing), 59 / XS (genuinely distinct same-day procedure), 26 / TC (component split for off-site equipment interpretation), 95 (telehealth)</td></tr>
-        <tr><td><b>Top denial reasons</b></td><td>CO-50 (medical necessity vs. LCD, esp. Botox and advanced imaging), CO-97 (EMG/NCS or EEG/EMG bundling), CO-197 / CO-15 (missing or expired prior authorization &mdash; neurology's single biggest driver), CO-4 (component modifier missing or invalid)</td></tr>
+        <tr><td><b>Top denial reasons</b></td><td>CO-50 (medical necessity vs. LCD, esp. Botox and advanced imaging), CO-97 (EMG/NCS or EEG/EMG bundling), CO-197 / CO-15 (missing or expired prior authorization, neurology's single biggest driver), CO-4 (component modifier missing or invalid)</td></tr>
         <tr><td><b>Headline stat</b></td><td>~18% average denial rate in neurology by industry benchmarking, against 5&ndash;10% for most other specialties</td></tr>
       </tbody>
     </table>
   </div>
-  <p>None of these four is exotic. What makes neurology expensive to bill is that a single patient &mdash; a chronic migraine workup that includes an EMG for a separate complaint, say &mdash; can touch three or four of them on one encounter, and each one has its own coverage logic, its own MAC-specific policy, and its own documentation bar.</p>
+  <p>None of these four is exotic. What makes neurology expensive to bill is that a single patient, a chronic migraine workup that includes an EMG for a separate complaint, say, can touch three or four of them on one encounter, and each one has its own coverage logic, its own MAC-specific policy, and its own documentation bar.</p>
 
   <h2>What changed recently</h2>
-  <p>Three things changed between late 2025 and early 2026 that matter operationally, not as trivia. All three were verified directly against live sources for this build, and all three are the kind of change that breaks silently &mdash; a scrubber rule or order set that still cites the old number keeps running, it just stops being current.</p>
-  <p><b>The FY2026 G35 multiple sclerosis restructuring.</b> We confirmed this live against the current ICD-10-CM code set: the bare <code>G35</code> header ("Multiple sclerosis") is a category heading only and does not clear HIPAA transactions &mdash; it never did, but the restructuring makes the point unavoidable because there's no longer a plausible "close enough" specific code sitting one level down. Billing now requires phenotype, and for progressive disease, activity status:</p>
+  <p>Three things changed between late 2025 and early 2026 that matter operationally, not as trivia. All three were verified directly against live sources for this build, and all three are the kind of change that breaks silently, a scrubber rule or order set that still cites the old number keeps running, it just stops being current.</p>
+  <p><b>The FY2026 G35 multiple sclerosis restructuring.</b> We confirmed this live against the current ICD-10-CM code set: the bare <code>G35</code> header ("Multiple sclerosis") is a category heading only and does not clear HIPAA transactions, it never did, but the restructuring makes the point unavoidable because there's no longer a plausible "close enough" specific code sitting one level down. Billing now requires phenotype, and for progressive disease, activity status:</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>G35 multiple sclerosis, current billable set. Verified live against the FY2026 ICD-10-CM code set.</caption>
@@ -263,34 +319,34 @@
         <tr><td><code>G35.C0</code></td><td>Secondary progressive, unspecified activity</td></tr>
         <tr><td><code>G35.C1</code></td><td>Secondary progressive, active</td></tr>
         <tr><td><code>G35.C2</code></td><td>Secondary progressive, non-active</td></tr>
-        <tr><td><code>G35.D</code></td><td>Multiple sclerosis, unspecified (billable, but a placeholder &mdash; not a substitute for phenotyping once it's established)</td></tr>
+        <tr><td><code>G35.D</code></td><td>Multiple sclerosis, unspecified (billable, but a placeholder, not a substitute for phenotyping once it's established)</td></tr>
       </tbody>
     </table>
   </div>
   <p>The full crosswalk against the old coding pattern, plus the same treatment for stroke, TIA, epilepsy, and migraine specificity, is in <a href="specialty-neurology-icd10-specificity.html">our neurology ICD-10 specificity guide</a>.</p>
-  <p><b>Noridian's EMG/NCS article split.</b> Noridian Healthcare Solutions retired article <code>A54992</code> ("Billing and Coding: Nerve Conduction Studies and Electromyography") on 10/23/2025 and published <code>A54969</code>, under the identical title, effective the same day. If your documentation template, payer policy library, or claims scrubber still cites A54992, the citation itself is now wrong even if nothing about the underlying coverage criteria changed &mdash; and on audit, a reference to a retired article number reads as evidence your compliance references aren't current, which is exactly the kind of finding that turns a routine chart pull into a broader review.</p>
+  <p><b>Noridian's EMG/NCS article split.</b> Noridian Healthcare Solutions retired article <code>A54992</code> ("Billing and Coding: Nerve Conduction Studies and Electromyography") on 10/23/2025 and published <code>A54969</code>, under the identical title, effective the same day. If your documentation template, payer policy library, or claims scrubber still cites A54992, the citation itself is now wrong even if nothing about the underlying coverage criteria changed, and on audit, a reference to a retired article number reads as evidence your compliance references aren't current, which is exactly the kind of finding that turns a routine chart pull into a broader review.</p>
   <p><b>The Botulinum Toxin LCD retirement wave.</b> Five MACs retired their Botulinum Toxin LCDs effective 2/21/2026 and replaced them 2/22/2026, verified live against the CMS Coverage Database:</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Botulinum Toxin LCD retirements and replacements, verified live against the CMS Coverage Database.</caption>
       <thead><tr><th scope="col">MAC</th><th scope="col">Retired (eff. 02/21/2026)</th><th scope="col">Replaced by</th><th scope="col">Replacement effective</th></tr></thead>
       <tbody>
-        <tr><td>WPS Insurance Corporation</td><td><code>L34635</code> &mdash; Botulinum Toxin Type A &amp; Type B</td><td><code>L39909</code> &mdash; Botulinum Toxin Injections</td><td>04/02/2026</td></tr>
-        <tr><td>National Government Services (now listed as Wellpoint Federal)</td><td><code>L33646</code> &mdash; Botulinum Toxins</td><td><code>L39832</code> &mdash; Botulinum Toxin Injections</td><td>02/22/2026</td></tr>
-        <tr><td>CGS Administrators</td><td><code>L33949</code> &mdash; Botulinum Toxins</td><td><code>L39857</code> &mdash; Botulinum Toxin Injections</td><td>02/22/2026</td></tr>
-        <tr><td>Palmetto GBA</td><td>n/a</td><td><code>L39836</code> &mdash; Botulinum Toxin Injections</td><td>02/22/2026</td></tr>
-        <tr><td>Noridian Healthcare Solutions (JE)</td><td>n/a</td><td><code>L35172</code> &mdash; Botulinum Toxin Injections</td><td>02/22/2026</td></tr>
-        <tr><td>Noridian Healthcare Solutions (JF)</td><td>n/a</td><td><code>L35170</code> &mdash; Botulinum Toxin Injections</td><td>02/22/2026</td></tr>
+        <tr><td>WPS Insurance Corporation</td><td><code>L34635</code>, Botulinum Toxin Type A &amp; Type B</td><td><code>L39909</code>, Botulinum Toxin Injections</td><td>04/02/2026</td></tr>
+        <tr><td>National Government Services (now listed as Wellpoint Federal)</td><td><code>L33646</code>, Botulinum Toxins</td><td><code>L39832</code>, Botulinum Toxin Injections</td><td>02/22/2026</td></tr>
+        <tr><td>CGS Administrators</td><td><code>L33949</code>, Botulinum Toxins</td><td><code>L39857</code>, Botulinum Toxin Injections</td><td>02/22/2026</td></tr>
+        <tr><td>Palmetto GBA</td><td>n/a</td><td><code>L39836</code>, Botulinum Toxin Injections</td><td>02/22/2026</td></tr>
+        <tr><td>Noridian Healthcare Solutions (JE)</td><td>n/a</td><td><code>L35172</code>, Botulinum Toxin Injections</td><td>02/22/2026</td></tr>
+        <tr><td>Noridian Healthcare Solutions (JF)</td><td>n/a</td><td><code>L35170</code>, Botulinum Toxin Injections</td><td>02/22/2026</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Two details here matter more than the renumbering itself. First, National Government Services' replacement LCD, L39832, is published in CMS's database under contractor name "Wellpoint Federal," not NGS &mdash; the contract numbers match NGS's existing jurisdiction exactly, which reflects an ownership rebrand, not a jurisdiction change, but if your team is still searching the coverage database for "National Government Services" botulinum toxin coverage, you'll come up empty on the current LCD. Second, WPS's old LCD retired 2/21/2026 but its replacement didn't take effect until 4/2/2026 &mdash; a roughly six-week window where the specific documented Botox coverage criteria for that jurisdiction weren't published under either the old or new LCD number. Neither of these details shows up in a generic "the LCD changed" note; both change what you cite on a claim or an appeal with a date of service in that window. Full Botox billing detail, including the PREEMPT dosing and documentation payers actually check, is in <a href="specialty-neurology-botox-chronic-migraine-billing.html">our Botox for chronic migraine billing guide</a>.</p>
+  <p>Two details here matter more than the renumbering itself. First, National Government Services' replacement LCD, L39832, is published in CMS's database under contractor name "Wellpoint Federal," not NGS, the contract numbers match NGS's existing jurisdiction exactly, which reflects an ownership rebrand, not a jurisdiction change, but if your team is still searching the coverage database for "National Government Services" botulinum toxin coverage, you'll come up empty on the current LCD. Second, WPS's old LCD retired 2/21/2026 but its replacement didn't take effect until 4/2/2026, a roughly six-week window where the specific documented Botox coverage criteria for that jurisdiction weren't published under either the old or new LCD number. Neither of these details shows up in a generic "the LCD changed" note; both change what you cite on a claim or an appeal with a date of service in that window. Full Botox billing detail, including the PREEMPT dosing and documentation payers actually check, is in <a href="specialty-neurology-botox-chronic-migraine-billing.html">our Botox for chronic migraine billing guide</a>.</p>
   <p>The practical fallout across all three changes: any order set, scrubber rule, or documentation template that cites a retired article or LCD number is technically citing dead policy, even where the clinical criteria carried over unchanged. Audit your references against the tables above before your next EMG, NCS, or Botox claim goes out, not after a denial or an audit letter forces the question.</p>
 
   <h2>E/M coding for neurology</h2>
-  <p>Established-patient office visits (99202&ndash;99215) are billed on either total time or medical decision making, whichever the note more fully supports &mdash; not both stacked together. What makes neurology's MDM genuinely higher-complexity, and worth documenting as such, is multiple chronic neurologic conditions managed concurrently, independent interpretation of imaging or neurophysiologic testing (EEG, EMG, NCS) the physician reads personally rather than relying on someone else's report, and high-risk medication management &mdash; AEDs with narrow therapeutic windows, disease-modifying MS therapies with monitoring requirements, or anticoagulation in a stroke patient. A 99215-level visit that only documents "follow-up, stable" reads as a 99213 on audit regardless of how complex the actual decision-making was; the complexity has to be visible in the note, not just present in the physician's head.</p>
-  <p>Two coding paths get missed constantly. Prolonged services beyond the time threshold for the highest-level E/M code have separate codes depending on payer: 99417 for commercial payers that follow CPT's prolonged-services structure, and G2212 for Medicare, which uses its own code and its own time threshold rather than CPT's. Billing 99417 on a Medicare claim, or vice versa, is a straightforward crosswalk error that denies on code-payer mismatch. Second, a dementia or cognitive-decline workup billed as a standard E/M routinely undercodes the actual work; <b>99483</b>, the cognitive assessment and care planning code, covers the standardized cognitive testing, functional assessment, safety evaluation, and care plan documentation a real dementia workup involves, and reimburses at a materially higher level than a comparable E/M &mdash; it's the single most commonly missed higher-value code in general neurology practice.</p>
-  <p>Modifier 25 belongs on the E/M when a significant, separately identifiable evaluation happens the same day as a minor procedure or a diagnostic test &mdash; not routinely, and never as a way to guarantee both claims pay. The trap that costs neurology practices real money: billing an E/M same-day as an EMG/NCS or EEG without documentation that the visit involved decision-making genuinely separate from ordering and reviewing the test itself. If the E/M note is essentially "patient here for EMG, will proceed with testing," that's not a modifier-25 visit &mdash; it's part of the testing encounter. The full time-vs-MDM decision tree and the specific EMG/EEG-same-day modifier-25 pattern are in <a href="specialty-neurology-modifiers.html">our neurology modifiers guide</a>.</p>
+  <p>Established-patient office visits (99202&ndash;99215) are billed on either total time or medical decision making, whichever the note more fully supports, not both stacked together. What makes neurology's MDM genuinely higher-complexity, and worth documenting as such, is multiple chronic neurologic conditions managed concurrently, independent interpretation of imaging or neurophysiologic testing (EEG, EMG, NCS) the physician reads personally rather than relying on someone else's report, and high-risk medication management, AEDs with narrow therapeutic windows, disease-modifying MS therapies with monitoring requirements, or anticoagulation in a stroke patient. A 99215-level visit that only documents "follow-up, stable" reads as a 99213 on audit regardless of how complex the actual decision-making was; the complexity has to be visible in the note, not just present in the physician's head.</p>
+  <p>Two coding paths get missed constantly. Prolonged services beyond the time threshold for the highest-level E/M code have separate codes depending on payer: 99417 for commercial payers that follow CPT's prolonged-services structure, and G2212 for Medicare, which uses its own code and its own time threshold rather than CPT's. Billing 99417 on a Medicare claim, or vice versa, is a straightforward crosswalk error that denies on code-payer mismatch. Second, a dementia or cognitive-decline workup billed as a standard E/M routinely undercodes the actual work; <b>99483</b>, the cognitive assessment and care planning code, covers the standardized cognitive testing, functional assessment, safety evaluation, and care plan documentation a real dementia workup involves, and reimburses at a materially higher level than a comparable E/M, it's the single most commonly missed higher-value code in general neurology practice.</p>
+  <p>Modifier 25 belongs on the E/M when a significant, separately identifiable evaluation happens the same day as a minor procedure or a diagnostic test, not routinely, and never as a way to guarantee both claims pay. The trap that costs neurology practices real money: billing an E/M same-day as an EMG/NCS or EEG without documentation that the visit involved decision-making genuinely separate from ordering and reviewing the test itself. If the E/M note is essentially "patient here for EMG, will proceed with testing," that's not a modifier-25 visit, it's part of the testing encounter. The full time-vs-MDM decision tree and the specific EMG/EEG-same-day modifier-25 pattern are in <a href="specialty-neurology-modifiers.html">our neurology modifiers guide</a>.</p>
 
   <h2>EMG and nerve conduction studies</h2>
   <p>This is neurology's highest-volume diagnostic family and its densest bundling risk, because the same limb can legitimately be billed several different ways depending on what was actually studied.</p>
@@ -300,53 +356,53 @@
       <thead><tr><th scope="col">Code</th><th scope="col">Service</th><th scope="col">Billing logic</th></tr></thead>
       <tbody>
         <tr><td><code>95907</code>&ndash;<code>95913</code></td><td>Nerve conduction studies, tiered by number of studies performed (roughly 1&ndash;2 studies through 13 or more)</td><td>Primary code for the NCS component; select the tier by actual study count, not by convention</td></tr>
-        <tr><td><code>95885</code></td><td>Needle EMG, limited study, each extremity</td><td>Add-on to a same-day NCS code &mdash; not separately payable alone</td></tr>
+        <tr><td><code>95885</code></td><td>Needle EMG, limited study, each extremity</td><td>Add-on to a same-day NCS code, not separately payable alone</td></tr>
         <tr><td><code>95886</code></td><td>Needle EMG, complete study, each extremity</td><td>Add-on to a same-day NCS code; requires at least five muscles studied, spanning three nerves or four spinal levels, to support "complete" over "limited"</td></tr>
         <tr><td><code>95887</code></td><td>Needle EMG, non-extremity muscles (e.g., cranial nerve or thoracic paraspinal)</td><td>Add-on to a same-day NCS code, for muscles outside the standard extremity groups</td></tr>
         <tr><td><code>95860</code>&ndash;<code>95864</code></td><td>Standalone needle EMG, by extremity count, without a same-day NCS</td><td>Used only when no NCS was performed the same date; billing this alongside 95885&ndash;95887 for the same limb is the bundling trap below</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The add-on relationship between 95885&ndash;95887 and 95907&ndash;95913 is intentional, not a bundling edit to route around &mdash; CMS built these codes to be reported together, and an add-on code billed without a payable primary code on the same claim denies outright. The genuine trap sits one layer over: billing a standalone EMG code (95860&ndash;95864) for a limb that was <i>also</i> billed under the NCS-plus-add-on combination the same date. That pattern usually traces to an ordering or workflow error &mdash; two separate orders for what should have been one combined study &mdash; rather than a coding decision, and it's the pairing most likely to trigger a CO-97 bundling denial or draw audit attention if it recurs.</p>
-  <p>Documentation has to name the actual nerves and muscles studied &mdash; "bilateral upper extremity NCS" in a note doesn't support the tier or the add-on level billed; the report needs to list which specific nerves (median, ulnar, radial, etc.) and which specific muscles were tested, because that's what a payer or auditor checks the billed tier against. Unit-count logic for 95886 follows directly from the five-muscle, three-nerve-or-four-spinal-level threshold above: fall short of that and the study supports 95885 (limited), not 95886 (complete), regardless of what the order said. And the retired-vs-current article trap from the section above lands squarely here &mdash; if your EMG/NCS documentation policy or scrubber still references Noridian's A54992, it's citing a dead article; the current one is A54969, same title, effective 10/23/2025. Full code-by-code detail, worked billing scenarios, and every MAC's current NCS/EMG article are in <a href="specialty-neurology-emg-nerve-conduction-billing.html">our EMG and nerve conduction study billing guide</a>.</p>
+  <p>The add-on relationship between 95885&ndash;95887 and 95907&ndash;95913 is intentional, not a bundling edit to route around, CMS built these codes to be reported together, and an add-on code billed without a payable primary code on the same claim denies outright. The genuine trap sits one layer over: billing a standalone EMG code (95860&ndash;95864) for a limb that was <i>also</i> billed under the NCS-plus-add-on combination the same date. That pattern usually traces to an ordering or workflow error, two separate orders for what should have been one combined study, rather than a coding decision, and it's the pairing most likely to trigger a CO-97 bundling denial or draw audit attention if it recurs.</p>
+  <p>Documentation has to name the actual nerves and muscles studied, "bilateral upper extremity NCS" in a note doesn't support the tier or the add-on level billed; the report needs to list which specific nerves (median, ulnar, radial, etc.) and which specific muscles were tested, because that's what a payer or auditor checks the billed tier against. Unit-count logic for 95886 follows directly from the five-muscle, three-nerve-or-four-spinal-level threshold above: fall short of that and the study supports 95885 (limited), not 95886 (complete), regardless of what the order said. And the retired-vs-current article trap from the section above lands squarely here, if your EMG/NCS documentation policy or scrubber still references Noridian's A54992, it's citing a dead article; the current one is A54969, same title, effective 10/23/2025. Full code-by-code detail, worked billing scenarios, and every MAC's current NCS/EMG article are in <a href="specialty-neurology-emg-nerve-conduction-billing.html">our EMG and nerve conduction study billing guide</a>.</p>
 
   <h2>EEG coding: routine, ambulatory, and video monitoring</h2>
   <p>EEG billing splits along two axes that get confused constantly: how the recording was obtained (routine office EEG, ambulatory take-home monitoring, or inpatient/outpatient video-EEG), and who owns the equipment versus who interprets the tracing.</p>
   <ul class="check-list">
-    <li><span class="check">1</span><span><b>Routine EEG (roughly the 95812&ndash;95816 family).</b> Distinguished by recording duration and state &mdash; awake, drowsy, and asleep recordings are documented and coded differently, and the report has to state which states were actually captured, not just that "a routine EEG was performed." A study ordered to capture sleep-activated abnormalities that never actually records sleep doesn't support the sleep-inclusive code, however the order was written.</span></li>
-    <li><span class="check">2</span><span><b>Ambulatory EEG.</b> The take-home setup and application is billed once per monitoring period, not per day of recording &mdash; billing the setup code repeatedly across a single multi-day ambulatory study is a frequency error that denies or, worse, goes uncaught and simply overbills the payer.</span></li>
+    <li><span class="check">1</span><span><b>Routine EEG (roughly the 95812&ndash;95816 family).</b> Distinguished by recording duration and state, awake, drowsy, and asleep recordings are documented and coded differently, and the report has to state which states were actually captured, not just that "a routine EEG was performed." A study ordered to capture sleep-activated abnormalities that never actually records sleep doesn't support the sleep-inclusive code, however the order was written.</span></li>
+    <li><span class="check">2</span><span><b>Ambulatory EEG.</b> The take-home setup and application is billed once per monitoring period, not per day of recording, billing the setup code repeatedly across a single multi-day ambulatory study is a frequency error that denies or, worse, goes uncaught and simply overbills the payer.</span></li>
     <li><span class="check">3</span><span><b>Video / long-term monitoring (roughly the 95700&ndash;95726 family).</b> Tiered by monitoring duration and complexity rather than a single flat code; inpatient epilepsy-monitoring-unit admissions and outpatient ambulatory video-EEG use different codes within this range, and duration has to be documented precisely enough to support the tier billed.</span></li>
   </ul>
-  <p>The global-versus-component split works the same way it does for EMG and NCS: bill globally only when your practice owns the recording equipment, employs the technologist, and your physician performs the interpretation. Bill 26 (professional component) when your physician interprets a tracing recorded on equipment your practice doesn't own &mdash; common for hospital-based epilepsy-monitoring-unit reads &mdash; and TC (technical component) when your equipment and staff produced the recording but the interpretation happened elsewhere. Billing globally on a hospital-recorded study creates the same duplicate-claim conflict covered in the modifiers section below.</p>
-  <p>Prior authorization is where video-EEG denials concentrate. Most commercial payers and a growing share of Medicare Advantage plans require authorization once continuous monitoring extends past roughly 24 to 48 hours, and some gate any inpatient long-term monitoring admission regardless of length. The documentation that actually clears review is seizure semiology and frequency detail, prior antiepileptic drug trials with outcomes rather than a bare medication list, and the specific clinical question the monitoring is meant to resolve &mdash; pre-surgical localization, distinguishing epileptic from non-epileptic events, or classifying an ambiguous seizure type. Requesting authorization with that detail in hand before the admission, rather than reconstructing it after a CO-197 denial, is the difference between a routine approval and a peer-to-peer fight. Full code-by-code detail and the complete component-split logic are in <a href="specialty-neurology-eeg-billing.html">our EEG billing and coding guide</a>.</p>
+  <p>The global-versus-component split works the same way it does for EMG and NCS: bill globally only when your practice owns the recording equipment, employs the technologist, and your physician performs the interpretation. Bill 26 (professional component) when your physician interprets a tracing recorded on equipment your practice doesn't own, common for hospital-based epilepsy-monitoring-unit reads, and TC (technical component) when your equipment and staff produced the recording but the interpretation happened elsewhere. Billing globally on a hospital-recorded study creates the same duplicate-claim conflict covered in the modifiers section below.</p>
+  <p>Prior authorization is where video-EEG denials concentrate. Most commercial payers and a growing share of Medicare Advantage plans require authorization once continuous monitoring extends past roughly 24 to 48 hours, and some gate any inpatient long-term monitoring admission regardless of length. The documentation that actually clears review is seizure semiology and frequency detail, prior antiepileptic drug trials with outcomes rather than a bare medication list, and the specific clinical question the monitoring is meant to resolve, pre-surgical localization, distinguishing epileptic from non-epileptic events, or classifying an ambiguous seizure type. Requesting authorization with that detail in hand before the admission, rather than reconstructing it after a CO-197 denial, is the difference between a routine approval and a peer-to-peer fight. Full code-by-code detail and the complete component-split logic are in <a href="specialty-neurology-eeg-billing.html">our EEG billing and coding guide</a>.</p>
 
   <h2>Botox for chronic migraine</h2>
-  <p>OnabotulinumtoxinA for chronic migraine bills as HCPCS <code>J0585</code> (the drug) alongside CPT <code>64615</code> (chemodenervation of muscles innervated by the facial, trigeminal, cervical spinal, and accessory nerves for chronic migraine) &mdash; and it should never be billed with <code>64612</code>, the standard facial chemodenervation code used for non-migraine indications like blepharospasm or hemifacial spasm. Reporting both codes for what is clinically one injection session is an unbundling error, not two separately payable services, and it's an easy pattern for a payer's claims-edit system to catch.</p>
-  <p>Medical necessity turns on the chronic migraine definition: headache on 15 or more days per month for at least three months, with at least 8 of those days meeting migraine criteria or responding to a triptan. That threshold has to be documented, not asserted &mdash; a headache diary or calendar, ideally covering at least a full month immediately before the treatment request, is what most MAC LCDs and commercial policies actually check for. A note that says "patient reports frequent migraines" without day-count detail is the single most common reason a well-indicated Botox claim still denies as not medically necessary.</p>
-  <p>Injection technique follows the PREEMPT protocol from the FDA labeling: a fixed-site, fixed-dose regimen delivering a minimum of 155 units across 31 sites spanning seven head-and-neck muscle groups, with an optional "follow-the-pain" extension of up to 40 additional units across up to 8 additional sites (frontalis, temporalis, occipitalis, cervical paraspinal, and trapezius) for a maximum of 195 units across 39 sites. The operative note needs to reflect the actual sites and total dose delivered, matched against the units of J0585 billed &mdash; a documented 155-unit, 31-site injection billed against a claim for 195 units is a units-versus-documentation mismatch that a payer's claims-edit system, or an auditor, will catch immediately.</p>
+  <p>OnabotulinumtoxinA for chronic migraine bills as HCPCS <code>J0585</code> (the drug) alongside CPT <code>64615</code> (chemodenervation of muscles innervated by the facial, trigeminal, cervical spinal, and accessory nerves for chronic migraine), and it should never be billed with <code>64612</code>, the standard facial chemodenervation code used for non-migraine indications like blepharospasm or hemifacial spasm. Reporting both codes for what is clinically one injection session is an unbundling error, not two separately payable services, and it's an easy pattern for a payer's claims-edit system to catch.</p>
+  <p>Medical necessity turns on the chronic migraine definition: headache on 15 or more days per month for at least three months, with at least 8 of those days meeting migraine criteria or responding to a triptan. That threshold has to be documented, not asserted, a headache diary or calendar, ideally covering at least a full month immediately before the treatment request, is what most MAC LCDs and commercial policies actually check for. A note that says "patient reports frequent migraines" without day-count detail is the single most common reason a well-indicated Botox claim still denies as not medically necessary.</p>
+  <p>Injection technique follows the PREEMPT protocol from the FDA labeling: a fixed-site, fixed-dose regimen delivering a minimum of 155 units across 31 sites spanning seven head-and-neck muscle groups, with an optional "follow-the-pain" extension of up to 40 additional units across up to 8 additional sites (frontalis, temporalis, occipitalis, cervical paraspinal, and trapezius) for a maximum of 195 units across 39 sites. The operative note needs to reflect the actual sites and total dose delivered, matched against the units of J0585 billed, a documented 155-unit, 31-site injection billed against a claim for 195 units is a units-versus-documentation mismatch that a payer's claims-edit system, or an auditor, will catch immediately.</p>
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>OnabotulinumtoxinA's FDA labeling for chronic migraine does not require a documented failed oral preventive before treatment &mdash; that requirement, where it appears, is a payer policy overlay, not an FDA condition. If a prior-auth denial cites "no failed oral preventive" as the reason and your payer's own published policy doesn't actually require one for this indication, that's an appealable point worth checking before assuming the denial is correct.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>OnabotulinumtoxinA's FDA labeling for chronic migraine does not require a documented failed oral preventive before treatment, that requirement, where it appears, is a payer policy overlay, not an FDA condition. If a prior-auth denial cites "no failed oral preventive" as the reason and your payer's own published policy doesn't actually require one for this indication, that's an appealable point worth checking before assuming the denial is correct.</p></div>
   </div>
   <p>Full dosing documentation templates, the diary format payers actually accept, and MAC-by-MAC coverage detail beyond the retirement wave above are in <a href="specialty-neurology-botox-chronic-migraine-billing.html">our Botox for chronic migraine billing guide</a>.</p>
 
   <h2>ICD-10 specificity and crosswalks</h2>
-  <p>Neurology's medical necessity runs on diagnosis specificity more than almost any category of billing outside cardiology, because the specific code &mdash; not the disease category &mdash; decides what a payer's coverage policy will pay for. Four categories carry most of the volume, and all of the codes below were verified live against the FY2026 ICD-10-CM code set.</p>
+  <p>Neurology's medical necessity runs on diagnosis specificity more than almost any category of billing outside cardiology, because the specific code, not the disease category, decides what a payer's coverage policy will pay for. Four categories carry most of the volume, and all of the codes below were verified live against the FY2026 ICD-10-CM code set.</p>
   <div class="data-table-wrap">
     <table class="data-table">
-      <caption>Stroke, TIA, and sequelae &mdash; the imaging-driven decision logic. All codes verified live against the FY2026 ICD-10-CM set.</caption>
+      <caption>Stroke, TIA, and sequelae, the imaging-driven decision logic. All codes verified live against the FY2026 ICD-10-CM set.</caption>
       <thead><tr><th scope="col">Clinical picture</th><th scope="col">Code family</th><th scope="col">Decision driver</th></tr></thead>
       <tbody>
         <tr><td>Acute ischemic stroke, confirmed on imaging</td><td><code>I63.-</code> (e.g. <code>I63.311</code> right MCA thrombosis, <code>I63.9</code> unspecified)</td><td>Bill the artery- and mechanism-specific code (thrombosis vs. embolism, named vessel) when imaging confirms it; <code>I63.9</code> is billable but should be transitional, pending the read, not a permanent default</td></tr>
         <tr><td>Transient neurologic deficit that fully resolves, no infarct on imaging</td><td><code>G45.-</code> (e.g. <code>G45.9</code> unspecified TIA, <code>G45.1</code> carotid territory)</td><td>TIA codes apply only when imaging does not show an infarct; if imaging shows one, the encounter is a stroke (I63) regardless of how quickly symptoms resolved clinically</td></tr>
-        <tr><td>Residual deficits from a prior, already-resolved stroke</td><td><code>I69.3-</code> (e.g. <code>I69.351</code> hemiplegia, dominant side; <code>I69.320</code> aphasia; <code>I69.391</code> dysphagia)</td><td>Used for the current encounter treating the after-effect, not the acute event &mdash; code the specific deficit(s) being managed, not a generic "history of stroke"</td></tr>
+        <tr><td>Residual deficits from a prior, already-resolved stroke</td><td><code>I69.3-</code> (e.g. <code>I69.351</code> hemiplegia, dominant side; <code>I69.320</code> aphasia; <code>I69.391</code> dysphagia)</td><td>Used for the current encounter treating the after-effect, not the acute event, code the specific deficit(s) being managed, not a generic "history of stroke"</td></tr>
       </tbody>
     </table>
   </div>
   <p>The imaging report is what settles which family applies: a symptom-only note without a confirmed read tends to default to the unspecified code in each family, which is billable but weaker on medical necessity review than the specific alternative once imaging is available. Chronic migraine specificity was covered in detail above (the G43.7xx/G43.Exx chronic-migraine set, by aura status, intractability, and status migrainosus); epilepsy runs the same pattern.</p>
   <div class="data-table-wrap">
     <table class="data-table">
-      <caption>Epilepsy specificity, verified live against the FY2026 ICD-10-CM code set. G40.909 exists and is billable &mdash; it's also the code that tells a reviewer nothing was actually specified.</caption>
+      <caption>Epilepsy specificity, verified live against the FY2026 ICD-10-CM code set. G40.909 exists and is billable, it's also the code that tells a reviewer nothing was actually specified.</caption>
       <thead><tr><th scope="col">Presentation</th><th scope="col">Specific code</th></tr></thead>
       <tbody>
         <tr><td>Generalized idiopathic epilepsy</td><td><code>G40.30</code>&ndash;<code>G40.319</code> by intractability and status epilepticus</td></tr>
@@ -356,61 +412,61 @@
         <tr><td>Lafora progressive myoclonus epilepsy</td><td><code>G40.C0-</code>/<code>G40.C1-</code></td></tr>
         <tr><td>Dravet syndrome</td><td><code>G40.83-</code></td></tr>
         <tr><td>KCNQ2-related epilepsy</td><td><code>G40.84-</code></td></tr>
-        <tr><td><i>Avoid as a primary, established diagnosis</i></td><td><code>G40.909</code> Epilepsy, unspecified, not intractable, without status epilepticus &mdash; billable, but the named-syndrome and type-specific codes above support medical necessity for ongoing EEG monitoring and AED management far more reliably</td></tr>
+        <tr><td><i>Avoid as a primary, established diagnosis</i></td><td><code>G40.909</code> Epilepsy, unspecified, not intractable, without status epilepticus, billable, but the named-syndrome and type-specific codes above support medical necessity for ongoing EEG monitoring and AED management far more reliably</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The pattern across all four categories &mdash; stroke, TIA/sequelae, migraine, and epilepsy &mdash; is the same one driving the G35 restructuring: payers increasingly treat the unspecified or category-level code as a placeholder for an incomplete workup, not a legitimate long-term billing choice. Full crosswalks against the highest-volume EMG, EEG, and Botox claims, plus the complete G35 restructuring detail, are in <a href="specialty-neurology-icd10-specificity.html">our neurology ICD-10 specificity guide</a>.</p>
+  <p>The pattern across all four categories, stroke, TIA/sequelae, migraine, and epilepsy, is the same one driving the G35 restructuring: payers increasingly treat the unspecified or category-level code as a placeholder for an incomplete workup, not a legitimate long-term billing choice. Full crosswalks against the highest-volume EMG, EEG, and Botox claims, plus the complete G35 restructuring detail, are in <a href="specialty-neurology-icd10-specificity.html">our neurology ICD-10 specificity guide</a>.</p>
 
   <h2>Modifiers</h2>
   <p>Neurology's modifier logic centers on three decisions: whether the E/M is genuinely separate from same-day testing, whether two same-day procedures are genuinely distinct, and who owns the equipment behind an interpreted study.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>26 / TC</div><ul>
-      <li><b>26</b> &mdash; professional component only; physician interprets an EEG or EMG/NCS tracing recorded on equipment the practice doesn't own. Default for hospital-based EEG reads and off-site EMG interpretation.</li>
-      <li><b>TC</b> &mdash; technical component only; equipment, supplies, and technologist time, billed by whoever owns the equipment regardless of who reads the study.</li>
+      <li><b>26</b>, professional component only; physician interprets an EEG or EMG/NCS tracing recorded on equipment the practice doesn't own. Default for hospital-based EEG reads and off-site EMG interpretation.</li>
+      <li><b>TC</b>, technical component only; equipment, supplies, and technologist time, billed by whoever owns the equipment regardless of who reads the study.</li>
     </ul></div>
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>59 / XS</div><ul>
-      <li>Distinct procedural service &mdash; a genuinely separate anatomic site, structure, or session, not the same study reported twice or a workflow artifact from a duplicate order.</li>
-      <li>XS (separate structure) is usually the right choice in neurology over generic 59, since most defensible same-day unbundling here is anatomic &mdash; a genuinely separate limb or nerve territory.</li>
+      <li>Distinct procedural service, a genuinely separate anatomic site, structure, or session, not the same study reported twice or a workflow artifact from a duplicate order.</li>
+      <li>XS (separate structure) is usually the right choice in neurology over generic 59, since most defensible same-day unbundling here is anatomic, a genuinely separate limb or nerve territory.</li>
     </ul></div>
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>95 (telehealth)</div><ul>
-      <li>Synchronous audio-video telehealth for follow-up visits &mdash; medication management, stable chronic-condition checks &mdash; where the payer's telehealth policy covers the code billed.</li>
+      <li>Synchronous audio-video telehealth for follow-up visits, medication management, stable chronic-condition checks, where the payer's telehealth policy covers the code billed.</li>
       <li>Not appropriate for anything requiring hands-on exam findings (new focal deficit, gait assessment) the visit note claims to have captured.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>25 on a testing-only visit</div><ul>
-      <li>Modifier 25 requires a significant, separately identifiable E/M &mdash; not routine attachment to guarantee both the visit and a same-day EMG, NCS, or EEG both pay. A note that's essentially "here for testing, proceeding with testing" doesn't support it, and this is the single most common modifier error the specialty's audits flag.</li>
+      <li>Modifier 25 requires a significant, separately identifiable E/M, not routine attachment to guarantee both the visit and a same-day EMG, NCS, or EEG both pay. A note that's essentially "here for testing, proceeding with testing" doesn't support it, and this is the single most common modifier error the specialty's audits flag.</li>
     </ul></div>
   </div>
-  <p>The component-split error costs the same way it does in every specialty that has one: billing 26 and TC together (the global fee) for a study recorded on equipment the practice doesn't own creates a conflicting claim once the facility bills its own technical component for the same date and patient &mdash; easy for a payer to catch, because the two claims contradict each other on their face. The complete modifier reference, including the telehealth POS/modifier pairing by payer type, is in <a href="specialty-neurology-modifiers.html">our neurology modifiers guide</a>.</p>
+  <p>The component-split error costs the same way it does in every specialty that has one: billing 26 and TC together (the global fee) for a study recorded on equipment the practice doesn't own creates a conflicting claim once the facility bills its own technical component for the same date and patient, easy for a payer to catch, because the two claims contradict each other on their face. The complete modifier reference, including the telehealth POS/modifier pairing by payer type, is in <a href="specialty-neurology-modifiers.html">our neurology modifiers guide</a>.</p>
 
   <h2>NCCI edits, MUEs, and bundling</h2>
-  <p>Two CMS-published values decide whether a bundled or capped neurology code is billable at all, and both are pair- and code-specific &mdash; never a guess, and never something to infer from "we've always billed it that way."</p>
+  <p>Two CMS-published values decide whether a bundled or capped neurology code is billable at all, and both are pair- and code-specific, never a guess, and never something to infer from "we've always billed it that way."</p>
   <p><b>The NCCI modifier indicator</b> attached to a Column 1/Column 2 code pair:</p>
   <ul class="check-list">
     <li><span class="warn">0</span><span><b>Never bypassable.</b> No modifier overrides it, however well the record supports separateness.</span></li>
-    <li><span class="check">1</span><span><b>Bypassable with documentation.</b> An NCCI-associated modifier (59 or the specific X-modifier) can override the edit, but only where the record shows the second service was genuinely distinct &mdash; separate site, session, or structure.</span></li>
+    <li><span class="check">1</span><span><b>Bypassable with documentation.</b> An NCCI-associated modifier (59 or the specific X-modifier) can override the edit, but only where the record shows the second service was genuinely distinct, separate site, session, or structure.</span></li>
     <li><span class="check">9</span><span><b>Edit deleted.</b> The pair no longer applies.</span></li>
   </ul>
   <p><b>The MUE Adjudication Indicator (MAI)</b> attached to a per-code, per-day unit cap:</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Claim-line edit.</b> Units above the cap deny that line; a genuinely repeated study can sometimes be split across lines with the correct modifier and documentation.</span></li>
-    <li><span class="warn">2</span><span><b>Absolute, date-of-service edit.</b> CMS treats exceeding it as clinically implausible. No appeal path exists &mdash; confirm the MAI before staff spend time on one.</span></li>
+    <li><span class="warn">2</span><span><b>Absolute, date-of-service edit.</b> CMS treats exceeding it as clinically implausible. No appeal path exists, confirm the MAI before staff spend time on one.</span></li>
     <li><span class="check">3</span><span><b>Appealable, date-of-service edit.</b> A real path exists with documentation the excess units reflect genuinely distinct, medically necessary sessions.</span></li>
   </ul>
-  <p>Where these show up most in neurology: the 95885&ndash;95887 EMG add-on codes exist specifically to be reported with the 95907&ndash;95913 NCS tier, so that pairing is not an edit to route around &mdash; it's the intended billing structure. The pairing that actually needs a modifier-indicator check is 95860&ndash;95864 (standalone EMG) against the combined NCS-plus-add-on billing for the same limb, same date; whether that combination is bypassable, and under what documentation, is pair-specific and needs to be confirmed in the CMS NCCI PTP Edits Lookup Tool rather than assumed. Same-day EEG and EMG on a patient being worked up for both seizure and neuropathic symptoms, and same-day Botox injection with an E/M, are the other two combinations most likely to trigger a Column 1/Column 2 edit or draw a modifier-25 audit flag.</p>
-  <p>⚠️ <b>On specificity:</b> this build could not open CMS's primary NCCI PTP edit file or MUE file directly to confirm the exact modifier-indicator and MAI values for the EMG/NCS pairs above &mdash; CMS's coverage-database and NCCI file pages returned an access error to every automated fetch attempt made while researching this page, consistent with what we've found building this content for other specialties. Treat the structural framework above (which pairing is the actual risk, and why) as confirmed; verify the specific indicator or MAI value for any pair in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before building it into a scrubber rule, because these values change quarterly and the lookup tool is the only source that's always current. The complete bundling reference, organized by procedure family, is in <a href="specialty-neurology-ncci-mue-bundling.html">our neurology NCCI edits and MUE limits guide</a>.</p>
+  <p>Where these show up most in neurology: the 95885&ndash;95887 EMG add-on codes exist specifically to be reported with the 95907&ndash;95913 NCS tier, so that pairing is not an edit to route around, it's the intended billing structure. The pairing that actually needs a modifier-indicator check is 95860&ndash;95864 (standalone EMG) against the combined NCS-plus-add-on billing for the same limb, same date; whether that combination is bypassable, and under what documentation, is pair-specific and needs to be confirmed in the CMS NCCI PTP Edits Lookup Tool rather than assumed. Same-day EEG and EMG on a patient being worked up for both seizure and neuropathic symptoms, and same-day Botox injection with an E/M, are the other two combinations most likely to trigger a Column 1/Column 2 edit or draw a modifier-25 audit flag.</p>
+  <p>⚠️ <b>On specificity:</b> this build could not open CMS's primary NCCI PTP edit file or MUE file directly to confirm the exact modifier-indicator and MAI values for the EMG/NCS pairs above, CMS's coverage-database and NCCI file pages returned an access error to every automated fetch attempt made while researching this page, consistent with what we've found building this content for other specialties. Treat the structural framework above (which pairing is the actual risk, and why) as confirmed; verify the specific indicator or MAI value for any pair in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before building it into a scrubber rule, because these values change quarterly and the lookup tool is the only source that's always current. The complete bundling reference, organized by procedure family, is in <a href="specialty-neurology-ncci-mue-bundling.html">our neurology NCCI edits and MUE limits guide</a>.</p>
 
   <h2>Top denials and appeals</h2>
-  <p>This is the section every neurology guide we reviewed treats thinly &mdash; a denial-code table with a root cause and nothing else. A root cause isn't an appeal strategy. Every row below pairs the denial with the actual argument, the citation to use, and the fix that prevents it from recurring.</p>
+  <p>This is the section every neurology guide we reviewed treats thinly, a denial-code table with a root cause and nothing else. A root cause isn't an appeal strategy. Every row below pairs the denial with the actual argument, the citation to use, and the fix that prevents it from recurring.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Neurology's recurring denials, the appeal argument when the claim was correct, and the upstream prevention fix.</caption>
       <thead><tr><th scope="col">Denial</th><th scope="col">Why it fires</th><th scope="col">Appeal argument (if the claim was correct)</th><th scope="col">Prevention</th></tr></thead>
       <tbody>
-        <tr><td><b>CO-50</b><br>Not medically necessary</td><td>Diagnosis doesn't support the payer's coverage policy &mdash; most often Botox without a documented chronic-migraine day-count, or advanced imaging without a specific supporting diagnosis</td><td>Attach the specific LCD by MAC and number, cite the exact covered criteria the chart supports (headache diary for Botox; the specific diagnosis and clinical indication for imaging), and include the note establishing it &mdash; a generic "medically necessary" appeal without naming the policy rarely succeeds</td><td>Build the diary/day-count requirement into the intake and pre-visit workflow for Botox; confirm imaging coverage criteria at order entry</td></tr>
-        <tr><td><b>CO-97</b><br>Bundled into another service</td><td>Standalone EMG (95860&ndash;95864) billed alongside the combined NCS-plus-add-on pathway for the same limb, same date; or an EEG component billed against an already-paid global claim</td><td>Only appealable if the pair's modifier indicator is 1, not 0 &mdash; confirm the indicator first, then appeal with documentation the second service was genuinely a separate limb, structure, or session</td><td>Fix the order-entry workflow so a limb needing both NCS and needle EMG is ordered as the combined study, not as two separate orders</td></tr>
-        <tr><td><b>CO-197 / CO-15</b><br>Missing or expired prior authorization</td><td>Neurology's single biggest denial driver &mdash; video-EEG beyond 24&ndash;48 hours, Botox, and increasingly EMG/NCS on some commercial plans, performed without a current authorization on file</td><td>Rarely appealable on the merits alone; if the service was authorized but the claim used the wrong authorization number or date range, correct and resubmit rather than appeal</td><td>Track authorization expiration and scope against the actual service date before scheduling, not at claim submission</td></tr>
-        <tr><td><b>CO-4</b><br>Modifier missing or invalid</td><td>26 or TC absent or wrong for the site of service on an EEG or EMG/NCS interpretation</td><td>Rebill with the correct component modifier &mdash; a correction, not an appeal, in nearly every case</td><td>Map each diagnostic study to its default component split by site of service in the charge master</td></tr>
+        <tr><td><b>CO-50</b><br>Not medically necessary</td><td>Diagnosis doesn't support the payer's coverage policy, most often Botox without a documented chronic-migraine day-count, or advanced imaging without a specific supporting diagnosis</td><td>Attach the specific LCD by MAC and number, cite the exact covered criteria the chart supports (headache diary for Botox; the specific diagnosis and clinical indication for imaging), and include the note establishing it, a generic "medically necessary" appeal without naming the policy rarely succeeds</td><td>Build the diary/day-count requirement into the intake and pre-visit workflow for Botox; confirm imaging coverage criteria at order entry</td></tr>
+        <tr><td><b>CO-97</b><br>Bundled into another service</td><td>Standalone EMG (95860&ndash;95864) billed alongside the combined NCS-plus-add-on pathway for the same limb, same date; or an EEG component billed against an already-paid global claim</td><td>Only appealable if the pair's modifier indicator is 1, not 0, confirm the indicator first, then appeal with documentation the second service was genuinely a separate limb, structure, or session</td><td>Fix the order-entry workflow so a limb needing both NCS and needle EMG is ordered as the combined study, not as two separate orders</td></tr>
+        <tr><td><b>CO-197 / CO-15</b><br>Missing or expired prior authorization</td><td>Neurology's single biggest denial driver, video-EEG beyond 24&ndash;48 hours, Botox, and increasingly EMG/NCS on some commercial plans, performed without a current authorization on file</td><td>Rarely appealable on the merits alone; if the service was authorized but the claim used the wrong authorization number or date range, correct and resubmit rather than appeal</td><td>Track authorization expiration and scope against the actual service date before scheduling, not at claim submission</td></tr>
+        <tr><td><b>CO-4</b><br>Modifier missing or invalid</td><td>26 or TC absent or wrong for the site of service on an EEG or EMG/NCS interpretation</td><td>Rebill with the correct component modifier, a correction, not an appeal, in nearly every case</td><td>Map each diagnostic study to its default component split by site of service in the charge master</td></tr>
         <tr><td><b>CO-16</b><br>Missing or incomplete information</td><td>Botox claim missing units-to-dose correlation, or an EMG/NCS claim missing the specific nerves/muscles studied</td><td>Resubmit with the complete documentation attached; this is a documentation gap, not a coverage dispute</td><td>Build a pre-submission checklist requiring named nerves/muscles for EMG/NCS and dose-to-site correlation for Botox before the claim releases</td></tr>
       </tbody>
     </table>
@@ -422,7 +478,7 @@
   <p>Full appeal-letter structure, additional denial patterns specific to DBS programming and remote neurologic monitoring, and a broader look at why neurology's ~18% denial rate outpaces most specialties are in <a href="specialty-neurology-denials-appeals.html">our neurology denials and appeals guide</a>.</p>
 
   <h2>Payer-specific nuances and Medicare LCD coverage</h2>
-  <p>"The LCD says" is close to meaningless in neurology, because coverage for EMG/NCS and Botulinum Toxin injections is written and maintained per Medicare Administrative Contractor, and &mdash; as the sections above show &mdash; those articles and LCDs get renumbered and retired on a rolling basis, not once a year. We confirmed this directly against the CMS Coverage Database while building this page.</p>
+  <p>"The LCD says" is close to meaningless in neurology, because coverage for EMG/NCS and Botulinum Toxin injections is written and maintained per Medicare Administrative Contractor, and, as the sections above show, those articles and LCDs get renumbered and retired on a rolling basis, not once a year. We confirmed this directly against the CMS Coverage Database while building this page.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Confirmed current local coverage articles/LCDs for EMG/NCS and Botulinum Toxin, by MAC (retrieved from the CMS Coverage Database, 2026-08).</caption>
@@ -443,8 +499,8 @@
       </tbody>
     </table>
   </div>
-  <p>Find your practice's MAC first, then pull that MAC's specific current article or LCD number &mdash; not a generic search result, and not the number you had on file last year &mdash; before building a coverage requirement into an order set or scrubber rule. ⚠️ This build confirmed the article/LCD IDs, MACs, and effective dates above directly against the CMS Coverage Database; the full covered-diagnosis lists, unit limits, and documentation requirements inside each document were not independently re-verified here (the underlying CMS coverage-database pages returned an access error to automated retrieval during this build), so pull the specific document text yourself before finalizing an order-set rule against it.</p>
-  <p><b>Commercial payers</b> layer their own prior-auth thresholds and documentation requirements on top of, and sometimes contradicting, Medicare's LCD criteria &mdash; a Medicare LCD is useful context for a commercial Botox or EMG/NCS claim, never the answer to what that commercial plan requires. Full prior-authorization mechanics, including the specific documentation that clears review for each service, are in <a href="specialty-neurology-prior-authorization.html">our neurology prior authorization guide</a>.</p>
+  <p>Find your practice's MAC first, then pull that MAC's specific current article or LCD number, not a generic search result, and not the number you had on file last year, before building a coverage requirement into an order set or scrubber rule. ⚠️ This build confirmed the article/LCD IDs, MACs, and effective dates above directly against the CMS Coverage Database; the full covered-diagnosis lists, unit limits, and documentation requirements inside each document were not independently re-verified here (the underlying CMS coverage-database pages returned an access error to automated retrieval during this build), so pull the specific document text yourself before finalizing an order-set rule against it.</p>
+  <p><b>Commercial payers</b> layer their own prior-auth thresholds and documentation requirements on top of, and sometimes contradicting, Medicare's LCD criteria, a Medicare LCD is useful context for a commercial Botox or EMG/NCS claim, never the answer to what that commercial plan requires. Full prior-authorization mechanics, including the specific documentation that clears review for each service, are in <a href="specialty-neurology-prior-authorization.html">our neurology prior authorization guide</a>.</p>
 
   <h2>Prior authorization</h2>
   <p>Prior authorization is neurology's single largest denial driver by volume, and it's also the most preventable, because every trigger below is knowable before the service is scheduled.</p>
@@ -460,7 +516,7 @@
       </tbody>
     </table>
   </div>
-  <p>Peer-to-peer review is where a denied authorization actually gets reversed, and it goes faster when the physician on the call has the specific denial reason and the specific chart detail that addresses it in hand before dialing &mdash; not a general sense that the service was indicated. For Botox specifically, knowing that FDA labeling doesn't itself require a failed-oral trial, even when a payer's own policy does, is the kind of distinction that turns a peer-to-peer from a re-explanation of the diagnosis into a pointed correction of the payer's stated basis for denial. The full documentation checklist for each trigger above, plus the peer-to-peer mechanics that actually move a denial, are in <a href="specialty-neurology-prior-authorization.html">our neurology prior authorization guide</a>.</p>
+  <p>Peer-to-peer review is where a denied authorization actually gets reversed, and it goes faster when the physician on the call has the specific denial reason and the specific chart detail that addresses it in hand before dialing, not a general sense that the service was indicated. For Botox specifically, knowing that FDA labeling doesn't itself require a failed-oral trial, even when a payer's own policy does, is the kind of distinction that turns a peer-to-peer from a re-explanation of the diagnosis into a pointed correction of the payer's stated basis for denial. The full documentation checklist for each trigger above, plus the peer-to-peer mechanics that actually move a denial, are in <a href="specialty-neurology-prior-authorization.html">our neurology prior authorization guide</a>.</p>
 
   <h2>Conclusion and next step</h2>
   <p>Neurology's ~18% denial rate isn't one problem, it's four compounding ones: coding references that go stale faster than most billers check (the G35 restructuring, the retired Noridian article, the Botox LCD wave), same-day bundling that looks simple until the standalone-versus-add-on distinction gets missed, diagnosis specificity that decides coverage outright, and a denial-to-appeal process that too many practices run generically instead of by CARC-specific argument. Each one is fixable on its own. Together, they're the difference between a neurology practice that's leaving five to ten points of collectible revenue on the table every month and one that isn't.</p>
@@ -475,23 +531,23 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Why is the unspecified G35 code no longer valid for multiple sclerosis claims?</summary><p>The FY2026 ICD-10-CM restructuring split multiple sclerosis into phenotype-specific codes, and the bare G35 header ("Multiple sclerosis") is a category heading only &mdash; it was never billable and still is not. You now have to code the phenotype and, for progressive forms, activity status: G35.A for relapsing-remitting, G35.B0/B1/B2 for primary progressive (unspecified, active, or non-active), G35.C0/C1/C2 for secondary progressive by the same activity split, or G35.D if the phenotype genuinely can't be determined yet. G35.D is billable, but it should be a placeholder while workup continues, not a permanent habit &mdash; payers increasingly expect the phenotype-specific code once the diagnosis is established.</p></details>
-    <details class="faq-item"><summary>What changed in Noridian's EMG and nerve conduction study coverage article?</summary><p>Noridian retired article A54992 (Billing and Coding: Nerve Conduction Studies and Electromyography) on 10/23/2025 and replaced it the same day with A54969 under the identical title. If a scrubber rule, order set, or documentation template still cites A54992, it's referencing a dead article &mdash; the citation itself becomes a compliance problem even if the underlying coverage criteria carried over unchanged, because an auditor checking your documentation against a retired article number can't confirm you're following current policy.</p></details>
-    <details class="faq-item"><summary>Why did Botulinum Toxin LCDs get replaced in February 2026?</summary><p>Five MACs retired their Botulinum Toxin LCDs effective 2/21/2026 &mdash; WPS (L34635), National Government Services (L33646), and CGS (L33949) &mdash; and replaced them the next day, 2/22/2026, with renumbered LCDs: Palmetto L39836, CGS L39857, Noridian L35172 and L35170, and a new L39832 now published under Wellpoint Federal rather than NGS. Wellpoint Federal shares NGS's contract numbers in CMS's system, which reflects NGS's ownership transition &mdash; if your team is still searching the coverage database for "National Government Services" botulinum toxin coverage, the current LCD for that jurisdiction now lists under Wellpoint Federal. WPS's replacement, L39909, didn't take effect until 4/2/2026, roughly six weeks after L34635 retired &mdash; confirm what your MAC's operative LCD was for any Botox claim with a date of service in that window.</p></details>
-    <details class="faq-item"><summary>Can we bill 95885-95887 with 95907-95913 the same day?</summary><p>Yes &mdash; that's the intended pairing. 95885 (limited extremity EMG), 95886 (complete extremity EMG), and 95887 (non-extremity EMG) are add-on codes that exist specifically to be reported with a same-day nerve conduction study from the 95907-95913 tier; they aren't separately payable on their own and CMS will deny an add-on code billed without its primary code on the same claim. The edit to actually watch is billing 95860-95864 (standalone EMG without a same-day NCS) alongside the 95885-95887 add-ons for the same limb on the same date &mdash; that combination usually reflects a workflow or ordering error rather than two genuinely distinct services, and it's the pairing most likely to draw a bundling denial or audit attention.</p></details>
-    <details class="faq-item"><summary>What's the diagnostic threshold for Botox coverage in chronic migraine?</summary><p>The clinical definition of chronic migraine used to establish medical necessity is a headache on 15 or more days per month for at least three months, with at least 8 of those days meeting migraine or migraine-responsive-to-triptan criteria. That threshold has to be supported in the chart &mdash; typically with a headache diary or calendar covering at least one full month before the request &mdash; not just asserted in a note. Most payers also want at least one documented failed or contraindicated oral preventive, even though onabotulinumtoxinA's FDA labeling for chronic migraine doesn't itself require a failed-oral trial; that's a payer overlay, not an FDA requirement, and it's worth knowing the difference when you're pushing back on a denial.</p></details>
-    <details class="faq-item"><summary>Why do our EMG and NCS claims deny as bundled (CO-97)?</summary><p>Almost always because the claim reports a standalone EMG code (95860-95864) alongside the tiered NCS-plus-EMG combination (95907-95913 with the 95885-95887 add-ons) for the same extremity, same date &mdash; the payer's system reads that as double-billing the EMG component. The fix starts with the order: if the study genuinely needs both NCS and needle EMG on a limb, it should be ordered and billed as the combined pathway, not stacked with a separate standalone EMG code. If two genuinely separate extremities were studied by design, the claim needs to state that distinctly rather than relying on the payer to infer it.</p></details>
-    <details class="faq-item"><summary>Do we need prior authorization for video EEG monitoring?</summary><p>Most commercial payers and a growing share of Medicare Advantage plans require prior authorization once continuous video-EEG monitoring extends past roughly 24 to 48 hours, and some require it for any inpatient long-term monitoring admission regardless of duration. The documentation that actually gets it approved is seizure frequency and semiology detail, prior AED trials and their outcomes (not just a drug list), and the specific localization question the monitoring is meant to answer &mdash; pre-surgical workup, differentiating epileptic from non-epileptic events, or classifying an unclear seizure type. Requesting the authorization before the admission, with that detail already in hand, avoids the retrospective medical-necessity fight that shows up as a CO-197 denial after the stay.</p></details>
-    <details class="faq-item"><summary>Why is neurology's denial rate so much higher than other specialties?</summary><p>Neurology runs roughly 18% average denial rates against 5-10% for most other specialties, by industry benchmarking, because it stacks several hard problems at once: diagnostic testing with dense same-day bundling rules (EMG/NCS, EEG), a high-cost injectable (Botox) that most payers gate behind prior authorization and diary documentation, MAC-specific coverage policy that changes on a rolling basis rather than once a year, and diagnosis coding &mdash; stroke, MS, epilepsy, migraine &mdash; where the specific code, not just the category, decides whether a study or procedure is covered at all. Each of those is manageable individually; the volume of claims that trip more than one at once is what pushes the aggregate rate up.</p></details>
+    <details class="faq-item"><summary>Why is the unspecified G35 code no longer valid for multiple sclerosis claims?</summary><p>The FY2026 ICD-10-CM restructuring split multiple sclerosis into phenotype-specific codes, and the bare G35 header ("Multiple sclerosis") is a category heading only, it was never billable and still is not. You now have to code the phenotype and, for progressive forms, activity status: G35.A for relapsing-remitting, G35.B0/B1/B2 for primary progressive (unspecified, active, or non-active), G35.C0/C1/C2 for secondary progressive by the same activity split, or G35.D if the phenotype genuinely can't be determined yet. G35.D is billable, but it should be a placeholder while workup continues, not a permanent habit, payers increasingly expect the phenotype-specific code once the diagnosis is established.</p></details>
+    <details class="faq-item"><summary>What changed in Noridian's EMG and nerve conduction study coverage article?</summary><p>Noridian retired article A54992 (Billing and Coding: Nerve Conduction Studies and Electromyography) on 10/23/2025 and replaced it the same day with A54969 under the identical title. If a scrubber rule, order set, or documentation template still cites A54992, it's referencing a dead article, the citation itself becomes a compliance problem even if the underlying coverage criteria carried over unchanged, because an auditor checking your documentation against a retired article number can't confirm you're following current policy.</p></details>
+    <details class="faq-item"><summary>Why did Botulinum Toxin LCDs get replaced in February 2026?</summary><p>Five MACs retired their Botulinum Toxin LCDs effective 2/21/2026, WPS (L34635), National Government Services (L33646), and CGS (L33949), and replaced them the next day, 2/22/2026, with renumbered LCDs: Palmetto L39836, CGS L39857, Noridian L35172 and L35170, and a new L39832 now published under Wellpoint Federal rather than NGS. Wellpoint Federal shares NGS's contract numbers in CMS's system, which reflects NGS's ownership transition, if your team is still searching the coverage database for "National Government Services" botulinum toxin coverage, the current LCD for that jurisdiction now lists under Wellpoint Federal. WPS's replacement, L39909, didn't take effect until 4/2/2026, roughly six weeks after L34635 retired, confirm what your MAC's operative LCD was for any Botox claim with a date of service in that window.</p></details>
+    <details class="faq-item"><summary>Can we bill 95885-95887 with 95907-95913 the same day?</summary><p>Yes, that's the intended pairing. 95885 (limited extremity EMG), 95886 (complete extremity EMG), and 95887 (non-extremity EMG) are add-on codes that exist specifically to be reported with a same-day nerve conduction study from the 95907-95913 tier; they aren't separately payable on their own and CMS will deny an add-on code billed without its primary code on the same claim. The edit to actually watch is billing 95860-95864 (standalone EMG without a same-day NCS) alongside the 95885-95887 add-ons for the same limb on the same date, that combination usually reflects a workflow or ordering error rather than two genuinely distinct services, and it's the pairing most likely to draw a bundling denial or audit attention.</p></details>
+    <details class="faq-item"><summary>What's the diagnostic threshold for Botox coverage in chronic migraine?</summary><p>The clinical definition of chronic migraine used to establish medical necessity is a headache on 15 or more days per month for at least three months, with at least 8 of those days meeting migraine or migraine-responsive-to-triptan criteria. That threshold has to be supported in the chart, typically with a headache diary or calendar covering at least one full month before the request, not just asserted in a note. Most payers also want at least one documented failed or contraindicated oral preventive, even though onabotulinumtoxinA's FDA labeling for chronic migraine doesn't itself require a failed-oral trial; that's a payer overlay, not an FDA requirement, and it's worth knowing the difference when you're pushing back on a denial.</p></details>
+    <details class="faq-item"><summary>Why do our EMG and NCS claims deny as bundled (CO-97)?</summary><p>Almost always because the claim reports a standalone EMG code (95860-95864) alongside the tiered NCS-plus-EMG combination (95907-95913 with the 95885-95887 add-ons) for the same extremity, same date, the payer's system reads that as double-billing the EMG component. The fix starts with the order: if the study genuinely needs both NCS and needle EMG on a limb, it should be ordered and billed as the combined pathway, not stacked with a separate standalone EMG code. If two genuinely separate extremities were studied by design, the claim needs to state that distinctly rather than relying on the payer to infer it.</p></details>
+    <details class="faq-item"><summary>Do we need prior authorization for video EEG monitoring?</summary><p>Most commercial payers and a growing share of Medicare Advantage plans require prior authorization once continuous video-EEG monitoring extends past roughly 24 to 48 hours, and some require it for any inpatient long-term monitoring admission regardless of duration. The documentation that actually gets it approved is seizure frequency and semiology detail, prior AED trials and their outcomes (not just a drug list), and the specific localization question the monitoring is meant to answer, pre-surgical workup, differentiating epileptic from non-epileptic events, or classifying an unclear seizure type. Requesting the authorization before the admission, with that detail already in hand, avoids the retrospective medical-necessity fight that shows up as a CO-197 denial after the stay.</p></details>
+    <details class="faq-item"><summary>Why is neurology's denial rate so much higher than other specialties?</summary><p>Neurology runs roughly 18% average denial rates against 5-10% for most other specialties, by industry benchmarking, because it stacks several hard problems at once: diagnostic testing with dense same-day bundling rules (EMG/NCS, EEG), a high-cost injectable (Botox) that most payers gate behind prior authorization and diary documentation, MAC-specific coverage policy that changes on a rolling basis rather than once a year, and diagnosis coding, stroke, MS, epilepsy, migraine, where the specific code, not just the category, decides whether a study or procedure is covered at all. Each of those is manageable individually; the volume of claims that trip more than one at once is what pushes the aggregate rate up.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
   <h2>Sources and verification</h2>
-  <p>ICD-10-CM codes (the full G35 multiple sclerosis restructuring, G43 migraine family, G40 epilepsy family, G45 transient cerebral ischemia, I63 cerebral infarction, and I69.3 stroke sequelae) were validated live against the FY2026 ICD-10-CM code set via the ICD-10 coding connector, including confirmation that the bare G35 and G40 category headers do not clear HIPAA transactions. Medicare local coverage article and LCD IDs, contractor names, effective dates, and retirement dates for EMG/NCS billing-and-coding articles and Botulinum Toxin Injections LCDs across all relevant MACs &mdash; including the Noridian A54992/A54969 article split and the five-MAC Botulinum Toxin LCD retirement wave of 2/21&ndash;2/22/2026 &mdash; were retrieved live from the CMS Coverage Database. The PREEMPT injection protocol dosing (155&ndash;195 units, 31&ndash;39 sites, seven head-and-neck muscle groups) was confirmed against onabotulinumtoxinA's published chronic-migraine dosing information. NCCI modifier-indicator and MUE Adjudication Indicator definitions are stated with confidence as CMS policy structure; specific indicator and MAI values for individual neurology code pairs (95885&ndash;95887 vs. 95907&ndash;95913 vs. 95860&ndash;95864, and same-day EEG/EMG or Botox/E&#47;M pairs) could not be confirmed against CMS's primary NCCI PTP or MUE files during this build &mdash; those pages returned an access error to every automated retrieval attempt &mdash; and are flagged inline wherever cited; verify the current value for any pair in the CMS NCCI Edits Lookup Tool before relying on it operationally. No Medicare Physician Fee Schedule dollar amounts are published in this guide; PFS rates are locality-specific and change annually, so check the CMS PFS Look-Up Tool for your own locality and year rather than relying on a rate published here or anywhere else. The ~18% neurology denial-rate figure cited in this guide reflects industry benchmarking reporting rather than a single primary CMS source, consistent with how comparable denial-rate statistics are sourced across this site's specialty guides.</p>
+  <p>ICD-10-CM codes (the full G35 multiple sclerosis restructuring, G43 migraine family, G40 epilepsy family, G45 transient cerebral ischemia, I63 cerebral infarction, and I69.3 stroke sequelae) were validated live against the FY2026 ICD-10-CM code set via the ICD-10 coding connector, including confirmation that the bare G35 and G40 category headers do not clear HIPAA transactions. Medicare local coverage article and LCD IDs, contractor names, effective dates, and retirement dates for EMG/NCS billing-and-coding articles and Botulinum Toxin Injections LCDs across all relevant MACs, including the Noridian A54992/A54969 article split and the five-MAC Botulinum Toxin LCD retirement wave of 2/21&ndash;2/22/2026, were retrieved live from the CMS Coverage Database. The PREEMPT injection protocol dosing (155&ndash;195 units, 31&ndash;39 sites, seven head-and-neck muscle groups) was confirmed against onabotulinumtoxinA's published chronic-migraine dosing information. NCCI modifier-indicator and MUE Adjudication Indicator definitions are stated with confidence as CMS policy structure; specific indicator and MAI values for individual neurology code pairs (95885&ndash;95887 vs. 95907&ndash;95913 vs. 95860&ndash;95864, and same-day EEG/EMG or Botox/E&#47;M pairs) could not be confirmed against CMS's primary NCCI PTP or MUE files during this build, those pages returned an access error to every automated retrieval attempt, and are flagged inline wherever cited; verify the current value for any pair in the CMS NCCI Edits Lookup Tool before relying on it operationally. No Medicare Physician Fee Schedule dollar amounts are published in this guide; PFS rates are locality-specific and change annually, so check the CMS PFS Look-Up Tool for your own locality and year rather than relying on a rate published here or anywhere else. The ~18% neurology denial-rate figure cited in this guide reflects industry benchmarking reporting rather than a single primary CMS source, consistent with how comparable denial-rate statistics are sourced across this site's specialty guides.</p>
 
   <h2>Related resources</h2>
   <ul class="related-list">
@@ -509,62 +565,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>
