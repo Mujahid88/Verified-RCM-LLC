@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Medical Practice Management Operations: Staffing, Accounting, HIPAA | Verified RCM">
 <meta name="twitter:description" content="Running a medical practice day to day: staffing and hiring, healthcare accounting, HIPAA compliance, KPI reporting, EHR selection, and scaling to multiple locations.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Practice Management","item":"https://www.verifiedrcm.com/service-practice-management.html"},{"@type":"ListItem","position":3,"name":"Operations","item":"https://www.verifiedrcm.com/practice-management-operations.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between this and the practice management service page?","acceptedAnswer":{"@type":"Answer","text":"The service page describes what we do for you. This guide and its cluster are the deep reference material behind it — the actual mechanics of staffing, accounting, HIPAA compliance, reporting and EHR selection, useful whether or not you ever work with us."}},{"@type":"Question","name":"Do we need a full HIPAA compliance program if we're a small practice?","acceptedAnswer":{"@type":"Answer","text":"Yes. HIPAA's Privacy, Security and Breach Notification Rules apply to every covered entity regardless of size — there's no small-practice exemption. What scales with size is the complexity of the program, not whether one is required. A two-provider practice still needs signed BAAs with every vendor touching PHI, a risk analysis on file, and documented workforce training."}},{"@type":"Question","name":"Do you handle these operational functions for us?","acceptedAnswer":{"@type":"Answer","text":"Yes — staffing coordination, healthcare-specific accounting, HIPAA policy and training, KPI reporting, and operational scaling as a practice adds providers or locations. Many clients keep their existing accountant or software and hand us only the pieces that are underperforming."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between this and the practice management service page?","acceptedAnswer":{"@type":"Answer","text":"The service page describes what we do for you. This guide and its cluster are the deep reference material behind it, the actual mechanics of staffing, accounting, HIPAA compliance, reporting and EHR selection, useful whether or not you ever work with us."}},{"@type":"Question","name":"Do we need a full HIPAA compliance program if we're a small practice?","acceptedAnswer":{"@type":"Answer","text":"Yes. HIPAA's Privacy, Security and Breach Notification Rules apply to every covered entity regardless of size, there's no small-practice exemption. What scales with size is the complexity of the program, not whether one is required. A two-provider practice still needs signed BAAs with every vendor touching PHI, a risk analysis on file, and documented workforce training."}},{"@type":"Question","name":"Do you handle these operational functions for us?","acceptedAnswer":{"@type":"Answer","text":"Yes, staffing coordination, healthcare-specific accounting, HIPAA policy and training, KPI reporting, and operational scaling as a practice adds providers or locations. Many clients keep their existing accountant or software and hand us only the pieces that are underperforming."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,180 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 25 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 25 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="service-practice-management.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Practice management hub</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dashboard gauge with a needle pointing into a highlighted zone, representing practice management operations">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="service-practice-management.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Practice management hub</a>
+      <h1>Running a medical practice: staffing, accounting, HIPAA, reporting and scaling.</h1>
+      <p class="lede">Licensing and credentialing get a practice able to open and bill. What keeps it running well, and profitable, is the operational layer underneath the clinical work: who's hired and how fast they're productive, whether the books actually reconcile to what payers remit, whether a HIPAA audit would find a real program or a folder nobody's opened since intake, and whether anyone can see the practice's real numbers without waiting for a bank balance to tell the story.</p>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dashboard gauge with a needle pointing into a highlighted zone, representing practice management operations">
   <!-- base line -->
   <line x1="100" y1="336" x2="380" y2="336" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
 
@@ -194,18 +249,19 @@
   <!-- pivot -->
   <circle cx="240" cy="320" r="9" fill="none" stroke="var(--color-text)" stroke-width="2.5"/>
 </svg></figure>
-  <h1>Running a medical practice: staffing, accounting, HIPAA, reporting and scaling.</h1>
-  <p class="lede">Licensing and credentialing get a practice able to open and bill. What keeps it running well &mdash; and profitable &mdash; is the operational layer underneath the clinical work: who's hired and how fast they're productive, whether the books actually reconcile to what payers remit, whether a HIPAA audit would find a real program or a folder nobody's opened since intake, and whether anyone can see the practice's real numbers without waiting for a bank balance to tell the story.</p>
+  </div>
+</header>
+<article class="wrap article">
   <div class="payer-contact">
     <div class="payer-contact-item">
       <div class="payer-contact-label"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>HIPAA rules</div>
       <div class="payer-contact-value"><a href="https://www.hhs.gov/hipaa/for-professionals/index.html" target="_blank" rel="noopener">hhs.gov/hipaa</a></div>
-      <p class="payer-contact-note">HHS Office for Civil Rights enforces the Privacy, Security and Breach Notification Rules &mdash; the three rules that apply to every covered entity, regardless of size.</p>
+      <p class="payer-contact-note">HHS Office for Civil Rights enforces the Privacy, Security and Breach Notification Rules, the three rules that apply to every covered entity, regardless of size.</p>
     </div>
     <div class="payer-contact-item">
       <div class="payer-contact-label"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3H5a2 2 0 0 0-2 2v4"></path><path d="M9 21H5a2 2 0 0 1-2-2v-4"></path><path d="M15 3h4a2 2 0 0 1 2 2v4"></path><path d="M15 21h4a2 2 0 0 0 2-2v-4"></path></svg>CAQH ProView</div>
       <div class="payer-contact-value"><a href="https://proview.caqh.org" target="_blank" rel="noopener">proview.caqh.org</a></div>
-      <p class="payer-contact-note">The credentialing-data profile most commercial payers pull from &mdash; keeping it current is an ongoing operational task, not a one-time setup.</p>
+      <p class="payer-contact-note">The credentialing-data profile most commercial payers pull from, keeping it current is an ongoing operational task, not a one-time setup.</p>
     </div>
   </div>
   <figure class="pillar-diagram">
@@ -236,11 +292,11 @@
   </div>
   <p>These four aren't independent of each other, either. A staffing gap produces sloppier intake, which produces more eligibility-related denials, which shows up in KPI reporting as a denial-rate spike that actually traces back to a training gap, not a coding problem. Treating each function as its own silo is exactly how a root cause hides for months behind a symptom in a different department.</p>
   <h2>Staffing: the hire that competes with clinical time</h2>
-  <p>Front-desk and clinical support staff are usually the hardest roles a small practice fills, for a structural reason: the person doing the hiring is also the provider who should be seeing patients, not screening resumes. Beyond the hiring itself, new hires need onboarding into workflows &mdash; intake, eligibility verification, check-out, prior auth requests &mdash; that a provider often hasn't documented anywhere because they've just always known how it's supposed to work. A new front-desk hire without a documented workflow takes weeks to become productive; one with a clear playbook takes days. Full detail on sourcing, screening, and building the onboarding workflow that gets a new hire productive fast, is in <a href="practice-management-operations-staffing-hiring.html">our staffing and hiring guide</a>.</p>
+  <p>Front-desk and clinical support staff are usually the hardest roles a small practice fills, for a structural reason: the person doing the hiring is also the provider who should be seeing patients, not screening resumes. Beyond the hiring itself, new hires need onboarding into workflows, intake, eligibility verification, check-out, prior auth requests, that a provider often hasn't documented anywhere because they've just always known how it's supposed to work. A new front-desk hire without a documented workflow takes weeks to become productive; one with a clear playbook takes days. Full detail on sourcing, screening, and building the onboarding workflow that gets a new hire productive fast, is in <a href="practice-management-operations-staffing-hiring.html">our staffing and hiring guide</a>.</p>
   <h2>Healthcare accounting: different from personal or general-business bookkeeping</h2>
-  <p>Practice-level accounting has specifics that a general bookkeeper misses: provider compensation models tied to collections or RVUs rather than a flat salary, payer remittance reconciliation where the amount deposited rarely matches the amount billed and the gap has to be explained line by line, and a cash-flow timing gap between delivering care and actually getting paid for it that can run months on a slow payer. A monthly close that doesn't reconcile to remittances isn't actually a close &mdash; it's a guess with a due date. Full detail on provider comp models, remittance reconciliation, and the financial statements a lender or accountant will actually ask for, is in <a href="practice-management-operations-healthcare-accounting.html">our healthcare accounting guide</a>.</p>
+  <p>Practice-level accounting has specifics that a general bookkeeper misses: provider compensation models tied to collections or RVUs rather than a flat salary, payer remittance reconciliation where the amount deposited rarely matches the amount billed and the gap has to be explained line by line, and a cash-flow timing gap between delivering care and actually getting paid for it that can run months on a slow payer. A monthly close that doesn't reconcile to remittances isn't actually a close, it's a guess with a due date. Full detail on provider comp models, remittance reconciliation, and the financial statements a lender or accountant will actually ask for, is in <a href="practice-management-operations-healthcare-accounting.html">our healthcare accounting guide</a>.</p>
   <h2>HIPAA compliance: a program, not a poster</h2>
-  <p>HIPAA sets three baseline requirements enforced by the HHS Office for Civil Rights: the Privacy Rule governs how protected health information can be used and disclosed, the Security Rule requires administrative, physical and technical safeguards for electronic PHI including a documented risk analysis, and the Breach Notification Rule sets out what has to happen &mdash; and how fast &mdash; if PHI is exposed anyway. None of these scale down for practice size; what scales is the complexity of the program required to satisfy them, not whether one is required at all. Billing is one of the highest-risk points in the whole chain, since PHI moves between the practice, the clearinghouse and the payer at every claim, and every one of those touchpoints needs a signed Business Associate Agreement on file. Full detail on what a real compliance program contains &mdash; the risk analysis, the BAA inventory, the training cadence &mdash; is in <a href="practice-management-operations-hipaa-compliance.html">our HIPAA compliance guide</a>.</p>
+  <p>HIPAA sets three baseline requirements enforced by the HHS Office for Civil Rights: the Privacy Rule governs how protected health information can be used and disclosed, the Security Rule requires administrative, physical and technical safeguards for electronic PHI including a documented risk analysis, and the Breach Notification Rule sets out what has to happen, and how fast, if PHI is exposed anyway. None of these scale down for practice size; what scales is the complexity of the program required to satisfy them, not whether one is required at all. Billing is one of the highest-risk points in the whole chain, since PHI moves between the practice, the clearinghouse and the payer at every claim, and every one of those touchpoints needs a signed Business Associate Agreement on file. Full detail on what a real compliance program contains, the risk analysis, the BAA inventory, the training cadence, is in <a href="practice-management-operations-hipaa-compliance.html">our HIPAA compliance guide</a>.</p>
   <h2>KPI reporting: seeing the practice's actual numbers</h2>
   <p>A practice that can't see its own numbers can't fix what's wrong with them, and a bank balance tells you almost nothing about why revenue is up or down. The metrics that actually matter require pulling from the billing system and payer remittances, not the bank statement.</p>
   <div class="data-table-wrap">
@@ -249,7 +305,7 @@
       <thead><tr><th scope="col">Metric</th><th scope="col">What it reveals</th><th scope="col">Red flag</th></tr></thead>
       <tbody>
         <tr><td><b>Net collection rate</b></td><td>What's actually collected against what was contractually owed</td><td>A declining rate with steady charge volume points to a collections or denial problem, not a volume problem</td></tr>
-        <tr><td><b>A/R aging by bucket</b></td><td>How long money sits before it's collected</td><td>A growing 90+ day bucket is where revenue actually dies &mdash; the longer it ages, the less likely it's ever collected</td></tr>
+        <tr><td><b>A/R aging by bucket</b></td><td>How long money sits before it's collected</td><td>A growing 90+ day bucket is where revenue actually dies, the longer it ages, the less likely it's ever collected</td></tr>
         <tr><td><b>Denial rate by cause</b></td><td>Why claims deny, not just how many</td><td>A rate that's stable but concentrated in one avoidable cause (eligibility, authorization) is a fixable process gap, not bad luck</td></tr>
         <tr><td><b>Provider productivity</b></td><td>Whether clinical volume is keeping pace with capacity</td><td>Productivity dropping while staffing costs hold steady erodes margin quietly</td></tr>
       </tbody>
@@ -257,7 +313,7 @@
   </div>
   <p>Full detail on building a KPI dashboard that surfaces problems before they show up as a cash-flow crisis, is in <a href="practice-management-operations-kpi-reporting.html">our KPI reporting guide</a>.</p>
   <h2>The onboarding checklist a new hire actually needs</h2>
-  <p>"Training" for a new front-desk hire usually means shadowing someone for a few days and absorbing whatever that person happens to remember to explain &mdash; which means every new hire learns a slightly different version of the job, and the gaps only surface later, as a claim denial or a frustrated patient. A written checklist fixes this cheaply and permanently.</p>
+  <p>"Training" for a new front-desk hire usually means shadowing someone for a few days and absorbing whatever that person happens to remember to explain, which means every new hire learns a slightly different version of the job, and the gaps only surface later, as a claim denial or a frustrated patient. A written checklist fixes this cheaply and permanently.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>The minimum a documented front-desk onboarding checklist should cover.</caption>
@@ -267,18 +323,18 @@
         <tr><td>Eligibility verification</td><td>When to check it (every visit vs. periodically), what a failed check means, and who to escalate to</td></tr>
         <tr><td>Prior authorization</td><td>Which services require it, how far in advance to request it, and where the status is tracked</td></tr>
         <tr><td>Check-out and collections</td><td>What's collected at time of service vs. billed later, and the script for a patient who can't pay</td></tr>
-        <tr><td>Escalation</td><td>Exactly who to ask when something doesn't fit the checklist &mdash; a named person, not "ask around"</td></tr>
+        <tr><td>Escalation</td><td>Exactly who to ask when something doesn't fit the checklist, a named person, not "ask around"</td></tr>
       </tbody>
     </table>
   </div>
   <h2>EHR and practice management software selection</h2>
-  <p>The EHR/PM system a practice picks shapes almost everything downstream of it &mdash; how clean claims go out, how easily a biller can work a denial, whether a patient portal reduces front-desk call volume or just adds a second inbox nobody checks. Switching later is expensive and disruptive enough that most practices live with a wrong choice for years rather than replace it. Full detail on the selection criteria that actually predict whether a system will still fit the practice at double its current size, is in <a href="practice-management-operations-ehr-software-selection.html">our EHR and practice management software guide</a>.</p>
+  <p>The EHR/PM system a practice picks shapes almost everything downstream of it, how clean claims go out, how easily a biller can work a denial, whether a patient portal reduces front-desk call volume or just adds a second inbox nobody checks. Switching later is expensive and disruptive enough that most practices live with a wrong choice for years rather than replace it. Full detail on the selection criteria that actually predict whether a system will still fit the practice at double its current size, is in <a href="practice-management-operations-ehr-software-selection.html">our EHR and practice management software guide</a>.</p>
   <h2>What a real HIPAA program actually contains</h2>
-  <p>A policy document alone isn't a program &mdash; OCR investigations and audits look for evidence the policy was actually operating, not just written. The gap between "we have a HIPAA policy" and "we have a HIPAA program" is almost always in these four items:</p>
+  <p>A policy document alone isn't a program, OCR investigations and audits look for evidence the policy was actually operating, not just written. The gap between "we have a HIPAA policy" and "we have a HIPAA program" is almost always in these four items:</p>
   <ul class="check-list">
     <li><span class="check">&#10003;</span><span><b>A documented Risk Analysis</b>, actually completed and dated, not a template downloaded and left blank.</span></li>
-    <li><span class="check">&#10003;</span><span><b>A current BAA on file for every vendor touching PHI</b> &mdash; billing company, clearinghouse, EHR vendor, cloud storage, IT support, answering service.</span></li>
-    <li><span class="check">&#10003;</span><span><b>Workforce training records</b> showing who was trained, when, and on what &mdash; at hire, periodically after, and whenever a policy or system changes.</span></li>
+    <li><span class="check">&#10003;</span><span><b>A current BAA on file for every vendor touching PHI</b>, billing company, clearinghouse, EHR vendor, cloud storage, IT support, answering service.</span></li>
+    <li><span class="check">&#10003;</span><span><b>Workforce training records</b> showing who was trained, when, and on what, at hire, periodically after, and whenever a policy or system changes.</span></li>
     <li><span class="check">&#10003;</span><span><b>A breach response plan</b> that names who does what in the first 24 hours, not one improvised after the fact.</span></li>
   </ul>
   <p>Full detail on building each of these from scratch, and the specific ways billing and claims processing raise the PHI-exposure stakes compared to purely clinical workflows, is in <a href="practice-management-operations-hipaa-compliance.html">our HIPAA compliance guide</a>.</p>
@@ -293,7 +349,7 @@
   <ul class="check-list">
     <li><span class="check">&#10003;</span><span><b>A lender or line of credit</b> wants reconciled financial statements tied to actual collections, not just bank deposits, typically 2-3 years of them.</span></li>
     <li><span class="check">&#10003;</span><span><b>An acquisition or new partner</b> wants clean KPI history (collections, A/R aging, denial trends) as proof the practice's revenue is stable and explainable, not just present.</span></li>
-    <li><span class="check">&#10003;</span><span><b>A HIPAA audit or breach investigation</b> wants the actual Risk Analysis document, the BAA inventory, and training records &mdash; not a policy binder nobody's opened since it was purchased.</span></li>
+    <li><span class="check">&#10003;</span><span><b>A HIPAA audit or breach investigation</b> wants the actual Risk Analysis document, the BAA inventory, and training records, not a policy binder nobody's opened since it was purchased.</span></li>
   </ul>
   <h2>Do and don't</h2>
   <div class="dodont">
@@ -305,7 +361,7 @@
       <li>Stress-test any process against "what if this were three locations" before scaling.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Don't</div><ul>
-      <li>Don't assume HIPAA requirements are lighter for a small practice &mdash; they aren't.</li>
+      <li>Don't assume HIPAA requirements are lighter for a small practice, they aren't.</li>
       <li>Don't treat a bank balance as a substitute for real KPI reporting.</li>
       <li>Don't let CAQH or licensing data go stale between active credentialing cycles.</li>
       <li>Don't pick an EHR/PM system without checking how it handles the practice at double its current size.</li>
@@ -314,9 +370,9 @@
   </div>
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>What's the difference between this and the practice management service page?</summary><p>The service page describes what we do for you. This guide and its cluster are the deep reference material behind it &mdash; the actual mechanics of staffing, accounting, HIPAA compliance, reporting and EHR selection, useful whether or not you ever work with us.</p></details>
-    <details class="faq-item"><summary>Do we need a full HIPAA compliance program if we're a small practice?</summary><p>Yes. HIPAA's Privacy, Security and Breach Notification Rules apply to every covered entity regardless of size &mdash; there's no small-practice exemption. What scales with size is the complexity of the program, not whether one is required. A two-provider practice still needs signed BAAs with every vendor touching PHI, a risk analysis on file, and documented workforce training.</p></details>
-    <details class="faq-item"><summary>Do you handle these operational functions for us?</summary><p>Yes &mdash; staffing coordination, healthcare-specific accounting, HIPAA policy and training, KPI reporting, and operational scaling as a practice adds providers or locations. Many clients keep their existing accountant or software and hand us only the pieces that are underperforming.</p></details>
+    <details class="faq-item"><summary>What's the difference between this and the practice management service page?</summary><p>The service page describes what we do for you. This guide and its cluster are the deep reference material behind it, the actual mechanics of staffing, accounting, HIPAA compliance, reporting and EHR selection, useful whether or not you ever work with us.</p></details>
+    <details class="faq-item"><summary>Do we need a full HIPAA compliance program if we're a small practice?</summary><p>Yes. HIPAA's Privacy, Security and Breach Notification Rules apply to every covered entity regardless of size, there's no small-practice exemption. What scales with size is the complexity of the program, not whether one is required. A two-provider practice still needs signed BAAs with every vendor touching PHI, a risk analysis on file, and documented workforce training.</p></details>
+    <details class="faq-item"><summary>Do you handle these operational functions for us?</summary><p>Yes, staffing coordination, healthcare-specific accounting, HIPAA policy and training, KPI reporting, and operational scaling as a practice adds providers or locations. Many clients keep their existing accountant or software and hand us only the pieces that are underperforming.</p></details>
   </div>
   <div class="cta-band">
     <div><h3>Want the operational layer handled end to end?</h3><p>Staffing, accounting, HIPAA compliance and reporting, run by one accountable partner instead of five separate vendors.</p></div>
@@ -324,7 +380,7 @@
   </div>
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Confirm before you rely on this.</b> Regulatory requirements, software options and best practices change. The process information on this page reflects standard industry practice as of August 2026 and is provided for general education &mdash; verify current requirements directly with HHS OCR, your accountant, or the relevant vendor before relying on it.</p>
+    <p><b>Confirm before you rely on this.</b> Regulatory requirements, software options and best practices change. The process information on this page reflects standard industry practice as of August 2026 and is provided for general education, verify current requirements directly with HHS OCR, your accountant, or the relevant vendor before relying on it.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -342,62 +398,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>
