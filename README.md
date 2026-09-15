@@ -1,29 +1,36 @@
-# Verified RCM — website
+# Verified RCM: website
 
 The marketing site for Verified RCM LLC, a US medical billing / revenue cycle management
 company. 348 HTML pages, one stylesheet, one script file, plus a small Cloudflare Worker
-for the contact form. No frontend build step — every page can still be opened directly
+for the contact form. No frontend build step: every page can still be opened directly
 or served as plain static files.
 
 ---
 
-## 0. Home page redesign, phase 1 (2026-09-15) — READ THIS FIRST
+## 0. Design system: "Lake" (site-wide since 2026-09-15)
 
-`index.html` now uses a **new design system** ported from the Belleville Lake
-Pediatrics site: `css/lake.css` (hand-written, standalone, NOT built by
-`css/build.js`), `js/lake.js` (accessible mobile drawer), self-hosted
-Quicksand 700 + Nunito Sans (variable) in `fonts/`, licensed stock photography in
-`images/home/` (Unsplash, license-free), and an inline SVG "claim river" hero
-scene. Black type on white; all colour lives in pastel section bands, accent
-tiles, buttons and artwork. Light theme only — the dark-mode toggle was dropped
-on the home page on purpose.
+The whole site runs on ONE hand-written stylesheet, `css/lake.css`, ported from the
+Belleville Lake Pediatrics design: pure black type on white, all colour in pastel
+section bands, accent tiles, buttons and artwork; frosted-glass cards over soft
+colour glows; Quicksand 700 headings + Nunito Sans body (self-hosted, `fonts/`);
+the three-layer wave divider; and an inline SVG "claim river" hero on the home page.
+Light theme only: the dark-mode toggle was retired on purpose.
 
-Every other page still loads `css/style.css` (the monochrome system below).
-The plan is to roll `lake.css` out to the shared header/footer and the interior
-templates next; until then the two systems coexist and the interior docs below
-still apply to them. `js/main.js` is still loaded by the home page for search,
-the reviews slider, counters and the cookie banner; `lake.css` styles those
-class names itself.
+- `css/lake.css` sections 1-26 are the home page system; section 27 restyles every
+  interior class (article, takeaways, data-table, protip, dodont, cta-band,
+  faq-list, payer-contact, cred-steps, pillar-diagram, spec-card, post-card,
+  contact-form, glossary, flow, svc-*) so no page body had to be rewritten.
+- `js/lake.js` carries the accessible mobile drawer, the home page's live claim
+  feed, denial-cost calculator, specialty finder, scroll-in bars and tilt.
+  `js/main.js` still handles search, filters, counters, the reviews slider,
+  the contact form and the cookie banner.
+- `tools/migrate-lake.py` is the one-off script that moved the 340 interior pages
+  onto the new header/footer and lifted each article's breadcrumb, cover, title,
+  lede and byline into a full-width `<header class="art-head">` band. It is
+  idempotent (skips pages already on lake.css) and documents exactly what changed.
+- House style: no em dashes anywhere in copy. The migration replaced them with commas.
+- `css/build-covers.js` still inlines the SVG covers; `css/build.js`, `css/src/`
+  and `css/style.css` were deleted with the old monochrome system.
 
 ---
 
@@ -44,19 +51,19 @@ class names itself.
 │                                     pillars (modifiers, denials/appeals, NCCI/MUE or
 │                                     bundling, E/M, top procedure families, ICD-10
 │                                     specificity, prior auth, and specialty-specific
-│                                     topics) — hub-and-spoke, same template throughout,
+│                                     topics): hub-and-spoke, same template throughout,
 │                                     built via the rcm-authority-content + medical-rcm-expert
 │                                     skills and a multi-agent Workflow batch (2026-08-28/30)
 ├── credentialing-*.html             6 payer credentialing pillars + 36 cluster spokes
 │                                     (Medicare, Medicaid, BCBS, UnitedHealthcare,
-│                                     Aetna, Cigna) — each pillar carries a verified
+│                                     Aetna, Cigna): each pillar carries a verified
 │                                     payer-contact card (official website, phone,
 │                                     hours) and 6 spokes on enrollment mechanics,
 │                                     CAQH/revalidation, denials/appeals and delegated
 │                                     credentialing, hub-and-spoke like the specialties
 │                                     (2026-08-30)
 ├── eligibility-verification.html    Medical billing process pillars, each with 4
-├── prior-auth.html                   spokes (24 total) and a quick-facts card —
+├── prior-auth.html                   spokes (24 total) and a quick-facts card , 
 ├── claims-scrubbing.html              eligibility, prior auth, claims scrubbing,
 ├── denials-management.html           claim forms, denials, AR recovery. Verified
 ├── claims-forms.html                 CARC/RARC codes, 837/270/271 transaction facts,
@@ -75,7 +82,7 @@ class names itself.
 ├── blog.html                        Blog index (filterable)
 ├── blog-*.html                      2 full articles + 7 redirect stubs (2026-08-28: retired
 │                                     patient-facing posts that duplicated the matching
-│                                     specialty-*.html guide — meta-refresh + canonical to
+│                                     specialty-*.html guide: meta-refresh + canonical to
 │                                     the specialty page, since GitHub Pages can't serve a
 │                                     true server-side 301; internal links now point straight
 │                                     at the specialty page, skipping the redirect hop)
@@ -90,21 +97,10 @@ class names itself.
 │                                     scaling) (2026-08-30)
 ├── sitemap.xml                      340 URLs, kept in sync with the page count
 ├── robots.txt
-├── css/style.css                    GENERATED — every page's <link> still points here,
-│                                     but don't hand-edit it. Built from css/src/*.css by
-│                                     css/build.js; re-run that after editing a source file
-├── css/src/                         The stylesheet split into 14 focused files (nav,
-│   ├── 00-tokens-and-base.css        buttons, cards, services, specialties, article
-│   ├── 01-nav.css                    furniture, footer, forms, etc). Each file opens
-│   ├── 02-buttons.css                with a header comment naming what it controls and
-│   ├── 03-cards.css                  concrete "change X here" pointers. Numeric prefixes
-│   ├── ...                           fix the concatenation order — cascade/specificity
-│   └── 13-homepage-extras.css        depends on it, so don't renumber without checking.
-├── css/build.js                     node css/build.js — concatenates css/src/*.css into
-│                                     css/style.css. No other build step exists on this
-│                                     site; this is the only one, and it's optional to run
-│                                     until you've actually edited a css/src/ file (2026-09-08)
-├── css/build-covers.js              node css/build-covers.js — inlines each pillar's SVG
+├── css/lake.css                     The whole design system, hand written (see §0)
+├── js/lake.js                       Drawer, home page interactivity (see §0)
+├── tools/migrate-lake.py            One-off migration that moved every page onto lake.css
+├── css/build-covers.js              node css/build-covers.js: inlines each pillar's SVG
 │                                     cover (images/covers/*.svg) into every article, spoke,
 │                                     and directory-card page. Re-run after adding/editing a
 │                                     cover file or a new article page; idempotent, safe to
@@ -115,55 +111,28 @@ class names itself.
 ├── images/covers/                   49 hand-designed SVG cover illustrations, one per
 │                                     pillar topic (25 specialties + 6 credentialing payers
 │                                     + 6 billing-process pillars + 2 practice-management
-│                                     pillars + 10 standalone growth/resource pages) —
+│                                     pillars + 10 standalone growth/resource pages) , 
 │                                     abstract monochrome line art, each with 1-3 elements
 │                                     in that topic's category accent color (see
-│                                     css/src/14-article-covers.css for the palette). Spoke
+│                                     section 27 of css/lake.css for the palette). Spoke
 │                                     articles reuse their pillar's cover; edit the source
 │                                     .svg here, then re-run css/build-covers.js to
-│                                     propagate — don't hand-edit the inlined copy in a page
+│                                     propagate: don't hand-edit the inlined copy in a page
 └── worker/                          Cloudflare Worker: the contact form backend
     ├── contact-form.js
     └── wrangler.jsonc
 ```
 
 All in-page paths are relative, so the site still works opened from disk or served from
-a subfolder — the Worker is the only piece that needs an actual domain (see §4).
+a subfolder: the Worker is the only piece that needs an actual domain (see §4).
 
 ---
 
 ## 2. Design system
 
-Monochrome black/white/gray (rebuilt from an earlier teal + coral palette, which itself
-replaced lime/amber, which replaced an original blue — see git history if you need the
-reasoning behind an earlier palette). Every colour token lives in
-`css/src/00-tokens-and-base.css` and is a **measured** contrast value, not an eyeballed
-one — the file's own comments carry the ratios and the reasoning. Don't change a token
-without reading those comments first; several of them exist specifically because an
-earlier change silently broke AA contrast. After editing, run `node css/build.js` to
-regenerate css/style.css — the file every page actually loads.
-
-**One deliberate exception to monochrome**: the 49 article covers (`images/covers/`,
-§ above) each carry 1-3 elements in a muted category accent color, defined in
-`css/src/14-article-covers.css` as 12 `--cat-*` custom properties, evenly spaced 30°
-around the hue wheel at a fixed saturation/lightness formula. This was a considered,
-confirmed reintroduction of color — not drift — made after flagging the site's
-monochrome history to the user (2026-09-14). Every other surface on the site stays
-strictly grayscale; don't let a cover's accent leak into surrounding chrome.
-
-Radii are intentionally small (10/16/20px) to match **SAMS**, the same company's
-practice-management product at `sams.verifiedrcm.com` — the two products cross-link
-(nav, footer, and a homepage section) and were deliberately brought into the same
-visual family.
-
-**Fonts** — self-hosted woff2, zero third-party font requests:
-- `Lexend-Variable.woff2` — headings
-- `instrument-sans-{400,500,600}-normal.woff2` — body/UI
-
-`fonts/Fraunces-Variable.woff2` and `fonts/SourceSans3-Variable.woff2` are **orphaned** —
-both were tried as the display/body face at an earlier point and later replaced; nothing
-in the CSS references them anymore, so browsers never fetch them, but the files are still
-sitting in the repo. Safe to delete as housekeeping; left in place for now.
+See section 0. Colour tokens, type and spacing all live at the top of `css/lake.css`;
+the 12 `--cat-*` cover accents referenced by the inline SVG covers are defined in
+section 27 of the same file, mapped onto the Lake accent palette.
 
 ---
 
@@ -173,13 +142,13 @@ The form used to post to Formspree. It now posts same-origin to
 `/api/contact`, handled by `worker/contact-form.js` deployed as a Cloudflare Worker,
 sending through **Resend**. Rationale for the rebuild, and why mail is sent from
 `noreply@verifiedrcm.com` rather than a different domain, is documented in the comment
-block at the top of `contact-form.js` — worth reading before touching it, it explains a
+block at the top of `contact-form.js`: worth reading before touching it, it explains a
 real deliverability problem the original setup had.
 
 **Required secrets** (Cloudflare dashboard → Workers → this worker → Settings →
 Variables, never in this repo):
-- `RESEND_API_KEY` — send-only key, kept separate from any key SAMS uses
-- `TURNSTILE_SECRET` — pairs with the Turnstile widget on the form
+- `RESEND_API_KEY`: send-only key, kept separate from any key SAMS uses
+- `TURNSTILE_SECRET`: pairs with the Turnstile widget on the form
 
 Confirmed working end-to-end via a real test submission (2026-08).
 
@@ -188,14 +157,14 @@ Confirmed working end-to-end via a real test submission (2026-08).
 ## 4. Hosting and deployment
 
 - **Domain**: `verifiedrcm.com` / `www.verifiedrcm.com`, registered at Namecheap.
-- **DNS/CDN**: proxied through **Cloudflare** (both apex and `www`) — this is what makes
+- **DNS/CDN**: proxied through **Cloudflare** (both apex and `www`): this is what makes
   the `/api/contact` Worker route possible. TLS is Cloudflare's own certificate.
 - **Origin**: the static site is still deployed via **GitHub Pages** from this repo's
-  `main` branch (confirm current state in this repo's Settings → Pages if it matters —
+  `main` branch (confirm current state in this repo's Settings → Pages if it matters , 
   not re-verified every session).
-- **Deploying**: push to `main`. There's no build step for the HTML/CSS/JS — GitHub
+- **Deploying**: push to `main`. There's no build step for the HTML/CSS/JS: GitHub
   Pages serves the repo as-is. The Worker is deployed **separately** via
-  `wrangler deploy` from inside `worker/` — pushing this repo does **not** redeploy the
+  `wrangler deploy` from inside `worker/`: pushing this repo does **not** redeploy the
   Worker; that's a manual/separate step.
 
 ---
@@ -217,12 +186,12 @@ Tracked events include the contact form, phone clicks, and email clicks.
   `BreadcrumbList`, and `HowTo` schema where relevant.
 - Every specialty/credentialing/coding/process page (33 of them) carries a
   **content-accuracy disclaimer** (`.content-disclaimer`, just above "Related resources")
-  — codes and payer policy go stale, and this makes that explicit rather than implying
+ : codes and payer policy go stale, and this makes that explicit rather than implying
   the site is a substitute for current payer verification.
 - WCAG AA target: `pa11y --standard WCAG2AA` should return 0 on both light and dark theme.
   Dark-theme pa11y runs need a ~2s wait after the theme toggle click, or most findings
   are phantom (mid-transition colour values, not real failures).
-- `sitemap.xml` is kept at exactly the live page count (340) — if you add or remove a
+- `sitemap.xml` is kept at exactly the live page count (340): if you add or remove a
   page, update it in the same commit.
 
 ---
@@ -235,16 +204,16 @@ python -m http.server 8891 --directory .
 or, from the Claude Code session, `preview_start` with the launch.json entry
 `verified-rcm-static-site` (defined in `D:\Claude\.claude\launch.json`, one level up from
 this repo). The previous setup used a custom PowerShell script (`serve.ps1`) that no
-longer exists — this repo doesn't need one now that Python's built-in server covers it.
+longer exists: this repo doesn't need one now that Python's built-in server covers it.
 
 ---
 
 ## 8. Known gaps
 
-- [ ] Delete the two orphaned font files (§2) — cosmetic, no functional impact.
+- [ ] Delete the two orphaned font files (§2): cosmetic, no functional impact.
 - [ ] Confirm whether GitHub Pages is still the actual origin behind Cloudflare, or
-      whether hosting moved somewhere else at some point (§4) — inferred from response
+      whether hosting moved somewhere else at some point (§4): inferred from response
       headers, not confirmed directly.
 - [ ] Clinical/payer content (CPT codes, denial reasons, credentialing steps) reflects
-      standard practice as documented, not a real payer-mix-specific review — the
+      standard practice as documented, not a real payer-mix-specific review: the
       disclaimer in §6 covers this in the meantime.
