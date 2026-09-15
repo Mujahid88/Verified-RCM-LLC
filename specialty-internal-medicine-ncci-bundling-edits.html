@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="NCCI Edits and Bundling in Internal Medicine: EKG, Spirometry, In-Office Procedures | Verified RCM">
 <meta name="twitter:description" content="NCCI edits and bundling in internal medicine: modifier indicator and MUE Adjudication Indicator logic applied to EKG, spirometry, and injection administration collisions.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Internal Medicine","item":"https://www.verifiedrcm.com/specialty-internal-medicine.html"},{"@type":"ListItem","position":4,"name":"NCCI Edits and Bundling in Internal Medicine: EKG, Spirometry, and In-Office Procedures","item":"https://www.verifiedrcm.com/specialty-internal-medicine-ncci-bundling-edits.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can we bill 93000 and 93010 for the same EKG if two different physicians reviewed it?","acceptedAnswer":{"@type":"Answer","text":"No — 93000 already reports the global service (tracing plus interpretation) for that single EKG, and a second physician's review of the same tracing isn't a separately billable interpretation just because a different person looked at it. A separately billable second interpretation requires a genuinely distinct clinical reason, not a duplicate read of the same test. If a formal second opinion is medically necessary and documented as such, that's a rare, specific scenario worth confirming against your payer's own policy before billing it — it isn't the default rule for two physicians reviewing one tracing."}},{"@type":"Question","name":"Why does 94010 deny when billed with 94060 on the same date?","acceptedAnswer":{"@type":"Answer","text":"94060 already reports spirometry performed before and after bronchodilator administration as a single global service, and that pre-bronchodilator measurement is the same baseline spirometry that 94010 reports on its own. Billing 94010 separately for the same encounter's baseline reading is a component-of-the-whole error — you're billing part of 94060 a second time under a different code, not a distinct additional service. If a genuinely separate, medically necessary spirometry was performed outside the bronchodilator-response protocol, document why before appending any override modifier."}},{"@type":"Question","name":"Is a CO-97 denial on an injection administration code always appealable?","acceptedAnswer":{"@type":"Answer","text":"No — it depends on why the edit fired. If 96372 denied because the claim also billed a same-day E/M with no modifier 25, and the E/M note doesn't independently support a significant, separately identifiable service, the denial is correct and the fix is a corrected claim, not an appeal. If the E/M genuinely was separate and distinct — a new problem evaluated and diagnosed before the injection was given for it — the fix is resubmitting with modifier 25 on the E/M code, which is a correction rather than a true appeal. A true appeal, with documentation, applies only when the record already supported the distinction and the modifier was simply missing or the payer processed it incorrectly."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can we bill 93000 and 93010 for the same EKG if two different physicians reviewed it?","acceptedAnswer":{"@type":"Answer","text":"No, 93000 already reports the global service (tracing plus interpretation) for that single EKG, and a second physician's review of the same tracing isn't a separately billable interpretation just because a different person looked at it. A separately billable second interpretation requires a genuinely distinct clinical reason, not a duplicate read of the same test. If a formal second opinion is medically necessary and documented as such, that's a rare, specific scenario worth confirming against your payer's own policy before billing it, it isn't the default rule for two physicians reviewing one tracing."}},{"@type":"Question","name":"Why does 94010 deny when billed with 94060 on the same date?","acceptedAnswer":{"@type":"Answer","text":"94060 already reports spirometry performed before and after bronchodilator administration as a single global service, and that pre-bronchodilator measurement is the same baseline spirometry that 94010 reports on its own. Billing 94010 separately for the same encounter's baseline reading is a component-of-the-whole error, you're billing part of 94060 a second time under a different code, not a distinct additional service. If a genuinely separate, medically necessary spirometry was performed outside the bronchodilator-response protocol, document why before appending any override modifier."}},{"@type":"Question","name":"Is a CO-97 denial on an injection administration code always appealable?","acceptedAnswer":{"@type":"Answer","text":"No, it depends on why the edit fired. If 96372 denied because the claim also billed a same-day E/M with no modifier 25, and the E/M note doesn't independently support a significant, separately identifiable service, the denial is correct and the fix is a corrected claim, not an appeal. If the E/M genuinely was separate and distinct, a new problem evaluated and diagnosed before the injection was given for it, the fix is resubmitting with modifier 25 on the E/M code, which is a correction rather than a true appeal. A true appeal, with documentation, applies only when the record already supported the distinction and the modifier was simply missing or the payer processed it incorrectly."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 25 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 25 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-internal-medicine.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete internal medicine guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of layered arcs and a heartbeat pulse line, symbolizing internal medicine and ongoing whole-body primary care">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-internal-medicine.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete internal medicine guide</a>
+      <h1>NCCI edits and bundling in internal medicine: EKG, spirometry, and in-office procedures.</h1>
+      <p class="lede">Internal medicine's bundling collisions aren't exotic, they're the same handful of in-office tests and procedures colliding with themselves and with the visit around them, week after week: the EKG billed with more than one of its own component codes, a baseline spirometry billed alongside the code that already includes it, an injection administration line denying against the E/M that ordered it. Two CMS values decide whether any of these can be resolved with a modifier at all, and neither is a guess. See <a href="specialty-internal-medicine.html">the complete internal medicine billing guide</a> for the rest of the specialty's coding rules, this guide goes deep on the bundling logic alone.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-internal-medicine.html">internal medicine billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of layered arcs and a heartbeat pulse line, symbolizing internal medicine and ongoing whole-body primary care">
   <path d="M100,360 A190,190 0 0,1 380,360" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M130,360 A160,160 0 0,1 350,360" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M160,360 A125,125 0 0,1 320,360" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -178,15 +234,14 @@
   <circle cx="150" cy="210" r="4" fill="var(--cat-primary-care)"/>
   <circle cx="330" cy="210" r="4" fill="var(--cat-primary-care)"/>
 </svg></figure>
-  <h1>NCCI edits and bundling in internal medicine: EKG, spirometry, and in-office procedures.</h1>
-  <p class="lede">Internal medicine's bundling collisions aren't exotic &mdash; they're the same handful of in-office tests and procedures colliding with themselves and with the visit around them, week after week: the EKG billed with more than one of its own component codes, a baseline spirometry billed alongside the code that already includes it, an injection administration line denying against the E/M that ordered it. Two CMS values decide whether any of these can be resolved with a modifier at all, and neither is a guess. See <a href="specialty-internal-medicine.html">the complete internal medicine billing guide</a> for the rest of the specialty's coding rules &mdash; this guide goes deep on the bundling logic alone.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-internal-medicine.html">internal medicine billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The NCCI modifier indicator decides whether an edit can be overridden at all.</b> Indicator 0 means no modifier changes the outcome, ever &mdash; and most of internal medicine's EKG and spirometry collisions are actually indicator-0-style code-selection errors, not indicator-1 situations a modifier can legitimately clear.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The MUE Adjudication Indicator (MAI) decides whether a unit-cap denial is even appealable.</b> MAI 2 denials have no appeal path, full stop &mdash; confirm the MAI before staff spend time writing one.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The NCCI modifier indicator decides whether an edit can be overridden at all.</b> Indicator 0 means no modifier changes the outcome, ever, and most of internal medicine's EKG and spirometry collisions are actually indicator-0-style code-selection errors, not indicator-1 situations a modifier can legitimately clear.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The MUE Adjudication Indicator (MAI) decides whether a unit-cap denial is even appealable.</b> MAI 2 denials have no appeal path, full stop, confirm the MAI before staff spend time writing one.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>94060 already includes the pre- and post-bronchodilator spirometry as one global service.</b> Billing 94010 separately for the same encounter's baseline reading is billing part of 94060 twice, not a distinct test.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Injection administration's bundling conflict is with the E/M's built-in evaluative work, not with the injection itself.</b> Modifier 25 belongs on the E/M line; a blanket 59 on the injection line doesn't solve the actual edit.</span></li>
     </ul>
@@ -196,22 +251,22 @@
   <p><b>The NCCI modifier indicator</b> attached to a Column 1/Column 2 code pair:</p>
   <ul class="check-list">
     <li><span class="warn">0</span><span><b>Never bypassable.</b> No modifier, however well-documented, overrides it. If the pair carries a 0, the second code simply isn't separately payable, full stop.</span></li>
-    <li><span class="check">1</span><span><b>Bypassable with documentation.</b> An NCCI-associated modifier (59 or the specific X-modifier) can override the edit, but only where the record actually shows the second service was distinct &mdash; separate site, separate session, separate structure.</span></li>
+    <li><span class="check">1</span><span><b>Bypassable with documentation.</b> An NCCI-associated modifier (59 or the specific X-modifier) can override the edit, but only where the record actually shows the second service was distinct, separate site, separate session, separate structure.</span></li>
     <li><span class="check">9</span><span><b>Edit deleted.</b> The pair no longer applies; the indicator itself is not meaningful going forward.</span></li>
   </ul>
   <p><b>The MUE Adjudication Indicator (MAI)</b> attached to a per-code, per-day unit cap:</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Claim-line edit.</b> Units above the cap deny that line, but can sometimes be split across separate lines with the correct modifier and documentation.</span></li>
-    <li><span class="warn">2</span><span><b>Absolute, date-of-service edit.</b> CMS treats exceeding it as clinically implausible based on anatomy or the code's own definition. There is no appeal path &mdash; confirm the MAI before staff spend time writing one.</span></li>
+    <li><span class="warn">2</span><span><b>Absolute, date-of-service edit.</b> CMS treats exceeding it as clinically implausible based on anatomy or the code's own definition. There is no appeal path, confirm the MAI before staff spend time writing one.</span></li>
     <li><span class="check">3</span><span><b>Appealable, date-of-service edit.</b> A real path exists with documentation showing the excess units reflect genuinely distinct, medically necessary services.</span></li>
   </ul>
-  <p>Both values are pair-specific and code-specific, published by CMS, and updated quarterly — a value confirmed today can shift at the next quarterly release. Look up the current value in the CMS NCCI PTP Edits Lookup Tool and the MUE tables before building either into a scrubber rule.</p>
+  <p>Both values are pair-specific and code-specific, published by CMS, and updated quarterly, a value confirmed today can shift at the next quarterly release. Look up the current value in the CMS NCCI PTP Edits Lookup Tool and the MUE tables before building either into a scrubber rule.</p>
 
-  <h2>EKG: 93000, 93005, 93010 &mdash; a code-selection collision, not a modifier override</h2>
-  <p>The single most common EKG billing error in internal medicine isn't a true NCCI bundling conflict between the EKG and the same-day E/M &mdash; a diagnostic EKG is generally separately payable from an E/M performed the same day, because it's a distinct diagnostic service, not a bundled component of the visit. The actual collision is internal to the EKG code family itself.</p>
+  <h2>EKG: 93000, 93005, 93010, a code-selection collision, not a modifier override</h2>
+  <p>The single most common EKG billing error in internal medicine isn't a true NCCI bundling conflict between the EKG and the same-day E/M, a diagnostic EKG is generally separately payable from an E/M performed the same day, because it's a distinct diagnostic service, not a bundled component of the visit. The actual collision is internal to the EKG code family itself.</p>
   <div class="data-table-wrap">
     <table class="data-table">
-      <caption>The EKG code family and the split logic that governs it. One test, one date, one of these three &mdash; not a combination.</caption>
+      <caption>The EKG code family and the split logic that governs it. One test, one date, one of these three, not a combination.</caption>
       <thead><tr><th scope="col">Code</th><th scope="col">Component</th><th scope="col">Bill when</th></tr></thead>
       <tbody>
         <tr><td><code>93000</code></td><td>Tracing plus interpretation and report (global)</td><td>Same physician/practice performs the tracing and the interpretation</td></tr>
@@ -220,16 +275,16 @@
       </tbody>
     </table>
   </div>
-  <p>Billing more than one of these three for a single EKG performed once is the mistake that generates most CO-97 denials on this code family &mdash; not a conflict with the office visit billed the same day. This is a code-selection error, and the fix is picking the one code that matches how the test was actually performed and read, not appending a modifier to force two of them through together.</p>
-  <p>A genuine second, medically necessary tracing performed later the same visit &mdash; a patient develops new chest pain mid-encounter and a repeat EKG is clinically warranted &mdash; is a real scenario, but the modifier that fits is usually 76 (repeat procedure, same physician), reporting a true repeat of the identical test, rather than 59 or an X-modifier, which claim the second service was distinct rather than a repeat. Documentation for a 76 needs to state why the repeat was medically necessary, not just that a second tracing exists in the chart. We confirmed an active Noridian Healthcare Solutions billing-and-coding article for electrocardiograms (Article A57326, effective 11/06/2025, superseding the prior A57327) directly against the CMS Coverage Database — confirm your own MAC's specific EKG article before finalizing a scrubber rule, since coverage articles are jurisdiction-specific and Noridian's may not match your MAC.</p>
+  <p>Billing more than one of these three for a single EKG performed once is the mistake that generates most CO-97 denials on this code family, not a conflict with the office visit billed the same day. This is a code-selection error, and the fix is picking the one code that matches how the test was actually performed and read, not appending a modifier to force two of them through together.</p>
+  <p>A genuine second, medically necessary tracing performed later the same visit, a patient develops new chest pain mid-encounter and a repeat EKG is clinically warranted, is a real scenario, but the modifier that fits is usually 76 (repeat procedure, same physician), reporting a true repeat of the identical test, rather than 59 or an X-modifier, which claim the second service was distinct rather than a repeat. Documentation for a 76 needs to state why the repeat was medically necessary, not just that a second tracing exists in the chart. We confirmed an active Noridian Healthcare Solutions billing-and-coding article for electrocardiograms (Article A57326, effective 11/06/2025, superseding the prior A57327) directly against the CMS Coverage Database, confirm your own MAC's specific EKG article before finalizing a scrubber rule, since coverage articles are jurisdiction-specific and Noridian's may not match your MAC.</p>
 
   <h2>Spirometry: 94010, 94060, and the pre/post-bronchodilator bundle</h2>
-  <p>Spirometry billing has its own internal component logic worth knowing before appending anything. <code>94010</code> reports a single, baseline spirometry &mdash; the graphic record, vital capacity, and expiratory flow rates. <code>94060</code> reports bronchodilator responsiveness testing: spirometry performed both before and after the patient receives a bronchodilator, as a single global service. Because 94060 already includes the pre-bronchodilator baseline reading as part of its own definition, billing 94010 separately for that same encounter's baseline measurement is a component-of-the-whole error &mdash; the same category of mistake as double-billing the EKG family, just inside a different code pair.</p>
-  <p>The clinical scenario where this shows up constantly: a patient with a respiratory complaint &mdash; new dyspnea, a suspected COPD exacerbation (<code>J44.1</code>, verified billable against the FY2026 ICD-10-CM code set) &mdash; gets a baseline spirometry that, based on the result, the physician decides to repeat post-bronchodilator to assess reversibility. If both readings happened as part of one bronchodilator-response protocol, that's 94060 alone, not 94010 plus 94060. 94010 is only separately appropriate when a genuinely distinct, standalone baseline spirometry was performed outside a bronchodilator-response encounter &mdash; a different visit, a different clinical question, not two readings of the same testing session split across two codes.</p>
-  <p>Medicare local coverage for spirometry is narrower than most competitor content assumes. We searched the CMS Coverage Database directly and found only a CGS Administrators LCD specific to <i>transtelephonic</i> spirometry (<code>L34541</code>, effective 10/02/2025) — a remote-monitoring context, not general in-office spirometry. No general "pulmonary function testing" LCD surfaced in that search. Don't assume a parallel in-office spirometry LCD exists for your MAC just because one exists for the transtelephonic variant; confirm your own MAC's specific coverage posture for in-office spirometry directly, since it may be governed by national coverage rules rather than a local policy at all.</p>
+  <p>Spirometry billing has its own internal component logic worth knowing before appending anything. <code>94010</code> reports a single, baseline spirometry, the graphic record, vital capacity, and expiratory flow rates. <code>94060</code> reports bronchodilator responsiveness testing: spirometry performed both before and after the patient receives a bronchodilator, as a single global service. Because 94060 already includes the pre-bronchodilator baseline reading as part of its own definition, billing 94010 separately for that same encounter's baseline measurement is a component-of-the-whole error, the same category of mistake as double-billing the EKG family, just inside a different code pair.</p>
+  <p>The clinical scenario where this shows up constantly: a patient with a respiratory complaint, new dyspnea, a suspected COPD exacerbation (<code>J44.1</code>, verified billable against the FY2026 ICD-10-CM code set), gets a baseline spirometry that, based on the result, the physician decides to repeat post-bronchodilator to assess reversibility. If both readings happened as part of one bronchodilator-response protocol, that's 94060 alone, not 94010 plus 94060. 94010 is only separately appropriate when a genuinely distinct, standalone baseline spirometry was performed outside a bronchodilator-response encounter, a different visit, a different clinical question, not two readings of the same testing session split across two codes.</p>
+  <p>Medicare local coverage for spirometry is narrower than most competitor content assumes. We searched the CMS Coverage Database directly and found only a CGS Administrators LCD specific to <i>transtelephonic</i> spirometry (<code>L34541</code>, effective 10/02/2025), a remote-monitoring context, not general in-office spirometry. No general "pulmonary function testing" LCD surfaced in that search. Don't assume a parallel in-office spirometry LCD exists for your MAC just because one exists for the transtelephonic variant; confirm your own MAC's specific coverage posture for in-office spirometry directly, since it may be governed by national coverage rules rather than a local policy at all.</p>
 
   <h2>Injection administration versus the same-day E/M: where the real collision is</h2>
-  <p>Injection administration (<code>96372</code> and similar) is the pattern most often billed incorrectly in either direction, and the actual NCCI conflict is between the E/M and the injection's own built-in evaluative component &mdash; not between the injection and some other procedure code. NCCI treats the minimal clinical work inherent to giving an injection (confirming the drug, route, and patient tolerance) as bundled into 96372 itself; that bundled work doesn't independently support a separately billed E/M.</p>
+  <p>Injection administration (<code>96372</code> and similar) is the pattern most often billed incorrectly in either direction, and the actual NCCI conflict is between the E/M and the injection's own built-in evaluative component, not between the injection and some other procedure code. NCCI treats the minimal clinical work inherent to giving an injection (confirming the drug, route, and patient tolerance) as bundled into 96372 itself; that bundled work doesn't independently support a separately billed E/M.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Correctly billed together</div><ul>
       <li>Physician examines and diagnoses cellulitis, then has staff administer an IM antibiotic for it: E/M with modifier 25, plus 96372 on its own line.</li>
@@ -240,10 +295,10 @@
       <li>Two injections billed as a single unit of 96372 with no documentation identifying them as distinct, or a blanket modifier 59 appended without stating which specific injection it applies to.</li>
     </ul></div>
   </div>
-  <p>96372 also carries its own per-date-of-service unit cap under CMS's MUE table. ⚠️ Secondary billing-industry sources consistently describe a 3-unit MUE for 96372, but this build could not confirm that value, or its associated MAI, against CMS's primary MUE file directly (CMS's practitioner-services MUE lookup pages returned access errors to automated retrieval during this build). Confirm both the current unit cap and its MAI in the CMS MUE table before assuming a third or fourth same-day injection is billable at all — if the MAI comes back as 2, there's no appeal path regardless of how well the additional injections are documented.</p>
+  <p>96372 also carries its own per-date-of-service unit cap under CMS's MUE table. ⚠️ Secondary billing-industry sources consistently describe a 3-unit MUE for 96372, but this build could not confirm that value, or its associated MAI, against CMS's primary MUE file directly (CMS's practitioner-services MUE lookup pages returned access errors to automated retrieval during this build). Confirm both the current unit cap and its MAI in the CMS MUE table before assuming a third or fourth same-day injection is billable at all, if the MAI comes back as 2, there's no appeal path regardless of how well the additional injections are documented.</p>
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Before appealing any bundling or unit-cap denial in internal medicine, name which of the three collisions you're actually looking at: a code-family duplication (EKG, spirometry &mdash; the fix is picking one correct code, not a modifier), a genuine NCCI Column 1/Column 2 edit (check the indicator first), or an MUE unit-cap denial (check the MAI first). Writing an appeal for the wrong category &mdash; arguing medical necessity on what's actually a code-selection error, for instance &mdash; wastes staff time and doesn't fix the claim.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Before appealing any bundling or unit-cap denial in internal medicine, name which of the three collisions you're actually looking at: a code-family duplication (EKG, spirometry, the fix is picking one correct code, not a modifier), a genuine NCCI Column 1/Column 2 edit (check the indicator first), or an MUE unit-cap denial (check the MAI first). Writing an appeal for the wrong category, arguing medical necessity on what's actually a code-selection error, for instance, wastes staff time and doesn't fix the claim.</p></div>
   </div>
 
   <div class="cta-band">
@@ -256,14 +311,14 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Can we bill 93000 and 93010 for the same EKG if two different physicians reviewed it?</summary><p>No &mdash; 93000 already reports the global service (tracing plus interpretation) for that single EKG, and a second physician's review of the same tracing isn't a separately billable interpretation just because a different person looked at it. A separately billable second interpretation requires a genuinely distinct clinical reason, not a duplicate read of the same test. If a formal second opinion is medically necessary and documented as such, that's a rare, specific scenario worth confirming against your payer's own policy before billing it &mdash; it isn't the default rule for two physicians reviewing one tracing.</p></details>
-    <details class="faq-item"><summary>Why does 94010 deny when billed with 94060 on the same date?</summary><p>94060 already reports spirometry performed before and after bronchodilator administration as a single global service, and that pre-bronchodilator measurement is the same baseline spirometry that 94010 reports on its own. Billing 94010 separately for the same encounter's baseline reading is a component-of-the-whole error &mdash; you're billing part of 94060 a second time under a different code, not a distinct additional service. If a genuinely separate, medically necessary spirometry was performed outside the bronchodilator-response protocol, document why before appending any override modifier.</p></details>
-    <details class="faq-item"><summary>Is a CO-97 denial on an injection administration code always appealable?</summary><p>No &mdash; it depends on why the edit fired. If 96372 denied because the claim also billed a same-day E/M with no modifier 25, and the E/M note doesn't independently support a significant, separately identifiable service, the denial is correct and the fix is a corrected claim, not an appeal. If the E/M genuinely was separate and distinct &mdash; a new problem evaluated and diagnosed before the injection was given for it &mdash; the fix is resubmitting with modifier 25 on the E/M code, which is a correction rather than a true appeal. A true appeal, with documentation, applies only when the record already supported the distinction and the modifier was simply missing or the payer processed it incorrectly.</p></details>
+    <details class="faq-item"><summary>Can we bill 93000 and 93010 for the same EKG if two different physicians reviewed it?</summary><p>No, 93000 already reports the global service (tracing plus interpretation) for that single EKG, and a second physician's review of the same tracing isn't a separately billable interpretation just because a different person looked at it. A separately billable second interpretation requires a genuinely distinct clinical reason, not a duplicate read of the same test. If a formal second opinion is medically necessary and documented as such, that's a rare, specific scenario worth confirming against your payer's own policy before billing it, it isn't the default rule for two physicians reviewing one tracing.</p></details>
+    <details class="faq-item"><summary>Why does 94010 deny when billed with 94060 on the same date?</summary><p>94060 already reports spirometry performed before and after bronchodilator administration as a single global service, and that pre-bronchodilator measurement is the same baseline spirometry that 94010 reports on its own. Billing 94010 separately for the same encounter's baseline reading is a component-of-the-whole error, you're billing part of 94060 a second time under a different code, not a distinct additional service. If a genuinely separate, medically necessary spirometry was performed outside the bronchodilator-response protocol, document why before appending any override modifier.</p></details>
+    <details class="faq-item"><summary>Is a CO-97 denial on an injection administration code always appealable?</summary><p>No, it depends on why the edit fired. If 96372 denied because the claim also billed a same-day E/M with no modifier 25, and the E/M note doesn't independently support a significant, separately identifiable service, the denial is correct and the fix is a corrected claim, not an appeal. If the E/M genuinely was separate and distinct, a new problem evaluated and diagnosed before the injection was given for it, the fix is resubmitting with modifier 25 on the E/M code, which is a correction rather than a true appeal. A true appeal, with documentation, applies only when the record already supported the distinction and the modifier was simply missing or the payer processed it incorrectly.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -276,62 +331,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>

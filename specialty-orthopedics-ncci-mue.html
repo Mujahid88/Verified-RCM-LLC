@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Orthopedic NCCI Edits and MUE Limits | Verified RCM">
 <meta name="twitter:description" content="Orthopedic NCCI bundling edits explained: modifier indicators 0/1/9, MUE Adjudication Indicators 1/2/3, and the specific arthroscopy and hardware-removal pairs that trip claims.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Orthopedics","item":"https://www.verifiedrcm.com/specialty-orthopedics.html"},{"@type":"ListItem","position":4,"name":"Orthopedic NCCI Edits and MUE Limits","item":"https://www.verifiedrcm.com/specialty-orthopedics-ncci-mue.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can we ever bill 29877 with 29880 or 29881 on the same knee?","acceptedAnswer":{"@type":"Answer","text":"Not under the standard CPT pairing — chondroplasty (29877) performed in the same compartment as a meniscectomy (29880 or 29881) is bundled into the meniscectomy by definition, and industry-reported guidance treats that pair as a modifier indicator of 0, meaning no override modifier changes the outcome. The Medicare-specific path is HCPCS G0289, which reports chondroplasty or loose-body removal performed in a genuinely different compartment of the same knee during the same arthroscopic session. It only applies to the different-compartment scenario, and it's a Medicare-specific code, not a universal CPT substitute — check whether a given commercial payer recognizes it before relying on it."}},{"@type":"Question","name":"Why does our hardware-removal claim keep bundling into the arthroplasty or fixation code?","acceptedAnswer":{"@type":"Answer","text":"20680 is widely reported as a common Column 2 code against arthroplasty and fracture-fixation procedures when the hardware removed is an integral, expected part of the primary procedure at the same anatomic site — for example, removing temporary fixation hardware as part of a planned staged revision. It's billable separately, with an override modifier, only when the hardware removed is at a distinct anatomic site or is left over from a prior, unrelated procedure, and the operative note has to say so explicitly. Confirm the specific pair's modifier indicator before appending 59 or an X-modifier, because a 0 indicator means no modifier changes the outcome regardless of documentation."}},{"@type":"Question","name":"What's the difference between an MAI 2 and an MAI 3 denial, practically?","acceptedAnswer":{"@type":"Answer","text":"MAI 2 is an absolute, date-of-service unit cap that CMS treats as clinically implausible to exceed — there is no appeal path, full stop, no matter how well the extra units are documented. MAI 3 is also a date-of-service cap, but it can be appealed with documentation showing the excess units reflect genuinely distinct, medically necessary services, such as bilateral procedures billed correctly with laterality modifiers. Writing an appeal against an MAI 2 denial is wasted staff time; confirm the MAI for the specific code before any appeal is drafted, because guessing wrong burns the appeal window on a claim that was never winnable."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can we ever bill 29877 with 29880 or 29881 on the same knee?","acceptedAnswer":{"@type":"Answer","text":"Not under the standard CPT pairing, chondroplasty (29877) performed in the same compartment as a meniscectomy (29880 or 29881) is bundled into the meniscectomy by definition, and industry-reported guidance treats that pair as a modifier indicator of 0, meaning no override modifier changes the outcome. The Medicare-specific path is HCPCS G0289, which reports chondroplasty or loose-body removal performed in a genuinely different compartment of the same knee during the same arthroscopic session. It only applies to the different-compartment scenario, and it's a Medicare-specific code, not a universal CPT substitute, check whether a given commercial payer recognizes it before relying on it."}},{"@type":"Question","name":"Why does our hardware-removal claim keep bundling into the arthroplasty or fixation code?","acceptedAnswer":{"@type":"Answer","text":"20680 is widely reported as a common Column 2 code against arthroplasty and fracture-fixation procedures when the hardware removed is an integral, expected part of the primary procedure at the same anatomic site, for example, removing temporary fixation hardware as part of a planned staged revision. It's billable separately, with an override modifier, only when the hardware removed is at a distinct anatomic site or is left over from a prior, unrelated procedure, and the operative note has to say so explicitly. Confirm the specific pair's modifier indicator before appending 59 or an X-modifier, because a 0 indicator means no modifier changes the outcome regardless of documentation."}},{"@type":"Question","name":"What's the difference between an MAI 2 and an MAI 3 denial, practically?","acceptedAnswer":{"@type":"Answer","text":"MAI 2 is an absolute, date-of-service unit cap that CMS treats as clinically implausible to exceed, there is no appeal path, full stop, no matter how well the extra units are documented. MAI 3 is also a date-of-service cap, but it can be appealed with documentation showing the excess units reflect genuinely distinct, medically necessary services, such as bilateral procedures billed correctly with laterality modifiers. Writing an appeal against an MAI 2 denial is wasted staff time; confirm the MAI for the specific code before any appeal is drafted, because guessing wrong burns the appeal window on a claim that was never winnable."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 25 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 25 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-orthopedics.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete orthopedics guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a joint hinge, two angled bone segments meeting at a pivot, representing orthopedics">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-orthopedics.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete orthopedics guide</a>
+      <h1>Orthopedic NCCI edits and MUE limits: bundling, indicators, and unit caps.</h1>
+      <p class="lede">Orthopedics stacks more NCCI bundling into a single operative session than almost any other specialty, a knee arthroscopy alone can touch meniscectomy, chondroplasty, loose-body removal, and diagnostic arthroscopy codes in one sitting, and hardware removal shows up as a column-2 pair against half the fixation and arthroplasty codes in the book. Two CMS values decide whether any of that is billable at all: the NCCI modifier indicator, and the MUE Adjudication Indicator. Neither is a guess, and neither is optional to check before a claim goes out or an appeal gets written.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-orthopedics.html">orthopedics billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a joint hinge, two angled bone segments meeting at a pivot, representing orthopedics">
   <!-- outer decorative range-of-motion arc -->
   <path d="M 151.4 207.5 A 85 85 0 0 1 298.6 207.5" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="1 9"/>
   <!-- inner range-of-motion arc -->
@@ -196,71 +252,70 @@
   <circle cx="225" cy="250" r="16" fill="none" stroke="var(--cat-surgical)" stroke-width="2.5"/>
   <circle cx="225" cy="250" r="3.5" fill="var(--cat-surgical)"/>
 </svg></figure>
-  <h1>Orthopedic NCCI edits and MUE limits: bundling, indicators, and unit caps.</h1>
-  <p class="lede">Orthopedics stacks more NCCI bundling into a single operative session than almost any other specialty &mdash; a knee arthroscopy alone can touch meniscectomy, chondroplasty, loose-body removal, and diagnostic arthroscopy codes in one sitting, and hardware removal shows up as a column-2 pair against half the fixation and arthroplasty codes in the book. Two CMS values decide whether any of that is billable at all: the NCCI modifier indicator, and the MUE Adjudication Indicator. Neither is a guess, and neither is optional to check before a claim goes out or an appeal gets written.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-orthopedics.html">orthopedics billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The modifier indicator decides whether an override is even possible.</b> Indicator 0 means no modifier, however well-documented, changes the outcome &mdash; 29877 into 29880/29881 in the same compartment is the clearest orthopedic example.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>20680 (deep hardware removal) is a recurring column-2 pair</b> against fixation and arthroplasty codes when the hardware sits at the same operative site &mdash; billable separately only when it's a genuinely distinct site or a leftover from a prior, unrelated procedure.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The modifier indicator decides whether an override is even possible.</b> Indicator 0 means no modifier, however well-documented, changes the outcome, 29877 into 29880/29881 in the same compartment is the clearest orthopedic example.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>20680 (deep hardware removal) is a recurring column-2 pair</b> against fixation and arthroplasty codes when the hardware sits at the same operative site, billable separately only when it's a genuinely distinct site or a leftover from a prior, unrelated procedure.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>MAI 2 is not appealable under any circumstances; MAI 3 is, with documentation.</b> Confirm which one applies to the specific code before staff spend an hour writing an appeal that was never winnable.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Every indicator and MAI value changes quarterly.</b> Build the specific pair check into your scrubber against the current CMS NCCI Edits Lookup Tool release &mdash; not against a table printed six months ago, including this one.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Every indicator and MAI value changes quarterly.</b> Build the specific pair check into your scrubber against the current CMS NCCI Edits Lookup Tool release, not against a table printed six months ago, including this one.</span></li>
     </ul>
   </section>
 
   <h2>Why orthopedics carries so much bundling exposure</h2>
-  <p>Four patterns generate most of the NCCI volume in this specialty. Knee and shoulder arthroscopy routinely touch multiple procedures in one compartment or one session &mdash; diagnostic arthroscopy converted to surgical, chondroplasty alongside meniscectomy, subacromial decompression alongside rotator cuff repair. Fracture care bundles the first cast or splint and routine follow-up into the definitive treatment code, so a separately billed casting-application code on the same date as the definitive fixation is a near-automatic edit. Hardware removal is functionally part of many revision and staged procedures, which is exactly why 20680 shows up as a column-2 code so often. And joint injection codes bundle their own ultrasound guidance and cap at one code per joint per session, which is a unit-cap issue rather than a pairing issue. Covered in the pillar guide's overview, this page goes deeper into the pair-specific and code-specific values that decide what's actually billable.</p>
+  <p>Four patterns generate most of the NCCI volume in this specialty. Knee and shoulder arthroscopy routinely touch multiple procedures in one compartment or one session, diagnostic arthroscopy converted to surgical, chondroplasty alongside meniscectomy, subacromial decompression alongside rotator cuff repair. Fracture care bundles the first cast or splint and routine follow-up into the definitive treatment code, so a separately billed casting-application code on the same date as the definitive fixation is a near-automatic edit. Hardware removal is functionally part of many revision and staged procedures, which is exactly why 20680 shows up as a column-2 code so often. And joint injection codes bundle their own ultrasound guidance and cap at one code per joint per session, which is a unit-cap issue rather than a pairing issue. Covered in the pillar guide's overview, this page goes deeper into the pair-specific and code-specific values that decide what's actually billable.</p>
 
   <h2>The NCCI modifier indicator: 0, 1, 9</h2>
-  <p>Every Column 1/Column 2 code pair in the NCCI Procedure-to-Procedure edit file carries one of three indicator values, and the indicator &mdash; not the clinical story &mdash; decides whether an override modifier can even be attempted.</p>
+  <p>Every Column 1/Column 2 code pair in the NCCI Procedure-to-Procedure edit file carries one of three indicator values, and the indicator, not the clinical story, decides whether an override modifier can even be attempted.</p>
   <ul class="check-list">
-    <li><span class="warn">0</span><span><b>Never bypassable.</b> No modifier, however well the record supports a distinct service, overrides the edit. If the pair carries a 0, the column-2 code simply isn't separately payable on that claim, full stop. Appending 59 or an X-modifier here doesn't get the claim paid &mdash; it just adds an unsupported modifier to a claim that was already going to deny.</span></li>
-    <li><span class="check">1</span><span><b>Bypassable with documentation.</b> An NCCI-associated modifier (59, or the more specific XE/XS/XP/XU) can override the edit, but only where the operative note independently shows the second procedure was genuinely separate &mdash; a different compartment, a different anatomic site, a different session. The modifier doesn't create the distinction; it reports one that already exists in the documentation.</span></li>
-    <li><span class="check">9</span><span><b>Edit deleted.</b> The pair no longer applies. This shows up when CMS restructures a code family &mdash; it's a historical marker, not something to build a current rule around.</span></li>
+    <li><span class="warn">0</span><span><b>Never bypassable.</b> No modifier, however well the record supports a distinct service, overrides the edit. If the pair carries a 0, the column-2 code simply isn't separately payable on that claim, full stop. Appending 59 or an X-modifier here doesn't get the claim paid, it just adds an unsupported modifier to a claim that was already going to deny.</span></li>
+    <li><span class="check">1</span><span><b>Bypassable with documentation.</b> An NCCI-associated modifier (59, or the more specific XE/XS/XP/XU) can override the edit, but only where the operative note independently shows the second procedure was genuinely separate, a different compartment, a different anatomic site, a different session. The modifier doesn't create the distinction; it reports one that already exists in the documentation.</span></li>
+    <li><span class="check">9</span><span><b>Edit deleted.</b> The pair no longer applies. This shows up when CMS restructures a code family, it's a historical marker, not something to build a current rule around.</span></li>
   </ul>
-  <p>The practical filter: before appending any override modifier to an orthopedic claim, look up the specific pair's current indicator. If it's 0, stop &mdash; there's no version of the documentation that changes the outcome, and the right move is to not bill the column-2 code at all rather than bill it and lose the appeal later.</p>
+  <p>The practical filter: before appending any override modifier to an orthopedic claim, look up the specific pair's current indicator. If it's 0, stop, there's no version of the documentation that changes the outcome, and the right move is to not bill the column-2 code at all rather than bill it and lose the appeal later.</p>
 
   <h2>Orthopedic bundling pairs that show up most</h2>
   <p>These are the pairs that generate the highest denial and take-back volume in orthopedic claims review, based on consistent billing-industry and coding-education sourcing.</p>
   <div class="data-table-wrap">
     <table class="data-table">
-      <caption>Common orthopedic NCCI bundling patterns. Indicator values reflect industry-reported billing guidance &mdash; confirm the current value for your specific pair before relying on it (see the note below the table).</caption>
+      <caption>Common orthopedic NCCI bundling patterns. Indicator values reflect industry-reported billing guidance, confirm the current value for your specific pair before relying on it (see the note below the table).</caption>
       <thead><tr><th scope="col">Column 1 (paid)</th><th scope="col">Column 2 (bundled)</th><th scope="col">When it bundles</th><th scope="col">Reported indicator</th></tr></thead>
       <tbody>
-        <tr><td><code>29880</code>/<code>29881</code><br>Meniscectomy</td><td><code>29877</code><br>Chondroplasty</td><td>Same knee, same compartment, same session</td><td>0 &mdash; use HCPCS <code>G0289</code> instead when the chondroplasty is genuinely in a different compartment (Medicare-specific code)</td></tr>
-        <tr><td><code>29880</code>/<code>29881</code></td><td><code>29870</code><br>Diagnostic knee arthroscopy</td><td>Diagnostic scope converted to a surgical procedure in the same session</td><td>0 &mdash; the diagnostic look is included in the surgical code once treatment is rendered</td></tr>
-        <tr><td><code>27130</code> total hip / <code>27447</code> total knee</td><td><code>20680</code><br>Deep hardware removal</td><td>Hardware removed is integral to the same operative site as the primary procedure</td><td>1 &mdash; override defensible only when the hardware is at a distinct anatomic site or left from a prior, unrelated procedure, documented explicitly</td></tr>
+        <tr><td><code>29880</code>/<code>29881</code><br>Meniscectomy</td><td><code>29877</code><br>Chondroplasty</td><td>Same knee, same compartment, same session</td><td>0, use HCPCS <code>G0289</code> instead when the chondroplasty is genuinely in a different compartment (Medicare-specific code)</td></tr>
+        <tr><td><code>29880</code>/<code>29881</code></td><td><code>29870</code><br>Diagnostic knee arthroscopy</td><td>Diagnostic scope converted to a surgical procedure in the same session</td><td>0, the diagnostic look is included in the surgical code once treatment is rendered</td></tr>
+        <tr><td><code>27130</code> total hip / <code>27447</code> total knee</td><td><code>20680</code><br>Deep hardware removal</td><td>Hardware removed is integral to the same operative site as the primary procedure</td><td>1, override defensible only when the hardware is at a distinct anatomic site or left from a prior, unrelated procedure, documented explicitly</td></tr>
         <tr><td>ORIF fixation codes (e.g., <code>25607</code>&ndash;<code>25609</code>)</td><td><code>20690</code>/<code>20692</code><br>External fixation application</td><td>Fixation device application is part of the same definitive fixation procedure, same site, same session</td><td>0 when the device is part of the billed fixation; separately payable only as a distinct, later procedure</td></tr>
-        <tr><td>Definitive fracture treatment code</td><td><code>29065</code>&ndash;<code>29086</code> series<br>Cast/splint application</td><td>First cast or splint applied as part of the same fracture-treatment encounter</td><td>0 &mdash; the initial cast or splint is part of the global package, not a separate line</td></tr>
-        <tr><td><code>29827</code><br>Arthroscopic rotator cuff repair</td><td><code>29826</code><br>Arthroscopic subacromial decompression (add-on)</td><td>Reported together in the same shoulder, same session</td><td>Not a standard PTP pair &mdash; 29826 is an add-on code that requires a qualifying primary procedure on the same claim; check current add-on code eligibility rather than a PTP indicator</td></tr>
+        <tr><td>Definitive fracture treatment code</td><td><code>29065</code>&ndash;<code>29086</code> series<br>Cast/splint application</td><td>First cast or splint applied as part of the same fracture-treatment encounter</td><td>0, the initial cast or splint is part of the global package, not a separate line</td></tr>
+        <tr><td><code>29827</code><br>Arthroscopic rotator cuff repair</td><td><code>29826</code><br>Arthroscopic subacromial decompression (add-on)</td><td>Reported together in the same shoulder, same session</td><td>Not a standard PTP pair, 29826 is an add-on code that requires a qualifying primary procedure on the same claim; check current add-on code eligibility rather than a PTP indicator</td></tr>
       </tbody>
     </table>
   </div>
-  <p>⚠️ <b>On specificity:</b> the indicator values in this table reflect consistent secondary sourcing from coding-education publishers and billing-industry commentary; this build could not open CMS's primary NCCI PTP Edits file directly to confirm the exact indicator digit for each pair, because CMS's site returned an access error to automated fetch attempts made while researching this page &mdash; the same limitation disclosed on this site's orthopedics pillar guide. Treat every value above as reported-but-unconfirmed and verify the current value for your specific pair in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before building it into a scrubber rule, because these values are republished quarterly and the lookup tool is the only source that's always current.</p>
+  <p>⚠️ <b>On specificity:</b> the indicator values in this table reflect consistent secondary sourcing from coding-education publishers and billing-industry commentary; this build could not open CMS's primary NCCI PTP Edits file directly to confirm the exact indicator digit for each pair, because CMS's site returned an access error to automated fetch attempts made while researching this page, the same limitation disclosed on this site's orthopedics pillar guide. Treat every value above as reported-but-unconfirmed and verify the current value for your specific pair in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before building it into a scrubber rule, because these values are republished quarterly and the lookup tool is the only source that's always current.</p>
 
   <h2>MAI 1, 2, 3: what an MUE denial actually means</h2>
   <p>The Medically Unlikely Edit sets a per-code, per-day unit cap, and the MUE Adjudication Indicator attached to that cap decides whether exceeding it can ever be appealed.</p>
   <ul class="check-list">
-    <li><span class="check">1</span><span><b>Claim-line edit.</b> Units above the cap deny that specific line, but a genuinely repeated or bilateral service can often be split across separate claim lines with the correct laterality or distinct-service modifier and documentation &mdash; it's a formatting fix more than an appeal.</span></li>
-    <li><span class="warn">2</span><span><b>Absolute, date-of-service edit.</b> CMS treats exceeding it as clinically implausible for a single date of service. There is no appeal path &mdash; not with better documentation, not with a peer-to-peer, nothing reverses it. Confirm the MAI before any staff time goes into a denial in this category.</span></li>
-    <li><span class="check">3</span><span><b>Appealable, date-of-service edit.</b> A real path exists with documentation showing the excess units reflect genuinely distinct, medically necessary services &mdash; the scenario that shows up most in orthopedics is a bilateral procedure or injection billed correctly across two lines with LT/RT, where the raw unit count on the code exceeds a single-side cap but the documentation supports both sides.</span></li>
+    <li><span class="check">1</span><span><b>Claim-line edit.</b> Units above the cap deny that specific line, but a genuinely repeated or bilateral service can often be split across separate claim lines with the correct laterality or distinct-service modifier and documentation, it's a formatting fix more than an appeal.</span></li>
+    <li><span class="warn">2</span><span><b>Absolute, date-of-service edit.</b> CMS treats exceeding it as clinically implausible for a single date of service. There is no appeal path, not with better documentation, not with a peer-to-peer, nothing reverses it. Confirm the MAI before any staff time goes into a denial in this category.</span></li>
+    <li><span class="check">3</span><span><b>Appealable, date-of-service edit.</b> A real path exists with documentation showing the excess units reflect genuinely distinct, medically necessary services, the scenario that shows up most in orthopedics is a bilateral procedure or injection billed correctly across two lines with LT/RT, where the raw unit count on the code exceeds a single-side cap but the documentation supports both sides.</span></li>
     </ul>
-  <p>Where this shows up most in orthopedic claims: a single meniscectomy or arthroplasty code billed more than once for the same knee on the same date is the pattern most likely to hit an absolute cap, because it's rarely clinically plausible to repeat the identical procedure on the identical joint same day &mdash; genuine bilateral cases need to be billed as two distinct lines with laterality modifiers from the start, not as extra units on one line. Joint injection codes (20600/20605/20610 and their ultrasound-guided equivalents) cap at one unit per joint per session regardless of how many substances were injected into that joint, which is a unit-cap issue separate from the NCCI pairing question above. ⚠️ Specific MAI values for individual orthopedic codes could not be confirmed against CMS's primary MUE table during this build for the same access-error reason described above &mdash; verify the current MAI for any code you're building a rule or appeal against directly in the CMS NCCI Edits Lookup Tool.</p>
+  <p>Where this shows up most in orthopedic claims: a single meniscectomy or arthroplasty code billed more than once for the same knee on the same date is the pattern most likely to hit an absolute cap, because it's rarely clinically plausible to repeat the identical procedure on the identical joint same day, genuine bilateral cases need to be billed as two distinct lines with laterality modifiers from the start, not as extra units on one line. Joint injection codes (20600/20605/20610 and their ultrasound-guided equivalents) cap at one unit per joint per session regardless of how many substances were injected into that joint, which is a unit-cap issue separate from the NCCI pairing question above. ⚠️ Specific MAI values for individual orthopedic codes could not be confirmed against CMS's primary MUE table during this build for the same access-error reason described above, verify the current MAI for any code you're building a rule or appeal against directly in the CMS NCCI Edits Lookup Tool.</p>
 
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Check the modifier indicator first, then the MAI, in that order, every time &mdash; before you bill an override modifier and before you draft an appeal. A pair with indicator 0 never needs an MAI check, because the column-2 code was never separately payable to begin with. A code that clears the indicator check still has to clear the unit cap separately; the two values answer different questions and both have to come back favorable before staff time goes into the claim.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Check the modifier indicator first, then the MAI, in that order, every time, before you bill an override modifier and before you draft an appeal. A pair with indicator 0 never needs an MAI check, because the column-2 code was never separately payable to begin with. A code that clears the indicator check still has to clear the unit cap separately; the two values answer different questions and both have to come back favorable before staff time goes into the claim.</p></div>
   </div>
 
   <h2>Building a scrubber rule that won't go stale</h2>
-  <p>An NCCI or MUE rule hard-coded from a table like this one &mdash; ours included &mdash; is accurate on the day it's built and wrong within a quarter if nobody revisits it. CMS republishes both the PTP edit file and the MUE table quarterly, and pairs get added, removed, or flip indicator values without much notice outside the release itself.</p>
+  <p>An NCCI or MUE rule hard-coded from a table like this one, ours included, is accurate on the day it's built and wrong within a quarter if nobody revisits it. CMS republishes both the PTP edit file and the MUE table quarterly, and pairs get added, removed, or flip indicator values without much notice outside the release itself.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Identify the pair or code, not the category.</b> "Arthroscopy bundling" isn't a rule; "29877 into 29881, same compartment" is. Build rules at the CPT-pair level.</span></li>
     <li><span class="check">2</span><span><b>Pull the current-quarter value from the CMS NCCI Edits Lookup Tool</b> directly, not from a vendor's cached summary or last quarter's export, before the rule goes live.</span></li>
     <li><span class="check">3</span><span><b>Record the release date the rule was built against.</b> A rule with no version stamp is unauditable the next time a denial pattern shifts and someone has to figure out why.</span></li>
-    <li><span class="check">4</span><span><b>Set a quarterly review trigger tied to CMS's publication schedule</b>, not an annual one &mdash; NCCI updates land quarterly, and an annual review misses three of every four release cycles.</span></li>
+    <li><span class="check">4</span><span><b>Set a quarterly review trigger tied to CMS's publication schedule</b>, not an annual one, NCCI updates land quarterly, and an annual review misses three of every four release cycles.</span></li>
   </ul>
 
   <h2>Do and don't</h2>
@@ -273,7 +328,7 @@
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Don't</div><ul>
       <li>Don't append an override modifier to a pair without checking whether the indicator is 0 first.</li>
-      <li>Don't bill 29877 against 29880/29881 in the same compartment on a Medicare claim &mdash; use G0289 for the different-compartment scenario instead.</li>
+      <li>Don't bill 29877 against 29880/29881 in the same compartment on a Medicare claim, use G0289 for the different-compartment scenario instead.</li>
       <li>Don't write an appeal against a unit-cap denial before confirming the MAI isn't a 2.</li>
       <li>Don't run a scrubber rule for more than one quarter without re-checking it against the current NCCI release.</li>
     </ul></div>
@@ -289,14 +344,14 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Can we ever bill 29877 with 29880 or 29881 on the same knee?</summary><p>Not under the standard CPT pairing &mdash; chondroplasty (29877) performed in the same compartment as a meniscectomy (29880 or 29881) is bundled into the meniscectomy by definition, and industry-reported guidance treats that pair as a modifier indicator of 0, meaning no override modifier changes the outcome. The Medicare-specific path is HCPCS G0289, which reports chondroplasty or loose-body removal performed in a genuinely different compartment of the same knee during the same arthroscopic session. It only applies to the different-compartment scenario, and it's a Medicare-specific code, not a universal CPT substitute &mdash; check whether a given commercial payer recognizes it before relying on it.</p></details>
-    <details class="faq-item"><summary>Why does our hardware-removal claim keep bundling into the arthroplasty or fixation code?</summary><p>20680 is widely reported as a common Column 2 code against arthroplasty and fracture-fixation procedures when the hardware removed is an integral, expected part of the primary procedure at the same anatomic site &mdash; for example, removing temporary fixation hardware as part of a planned staged revision. It's billable separately, with an override modifier, only when the hardware removed is at a distinct anatomic site or is left over from a prior, unrelated procedure, and the operative note has to say so explicitly. Confirm the specific pair's modifier indicator before appending 59 or an X-modifier, because a 0 indicator means no modifier changes the outcome regardless of documentation.</p></details>
-    <details class="faq-item"><summary>What's the difference between an MAI 2 and an MAI 3 denial, practically?</summary><p>MAI 2 is an absolute, date-of-service unit cap that CMS treats as clinically implausible to exceed &mdash; there is no appeal path, full stop, no matter how well the extra units are documented. MAI 3 is also a date-of-service cap, but it can be appealed with documentation showing the excess units reflect genuinely distinct, medically necessary services, such as bilateral procedures billed correctly with laterality modifiers. Writing an appeal against an MAI 2 denial is wasted staff time; confirm the MAI for the specific code before any appeal is drafted, because guessing wrong burns the appeal window on a claim that was never winnable.</p></details>
+    <details class="faq-item"><summary>Can we ever bill 29877 with 29880 or 29881 on the same knee?</summary><p>Not under the standard CPT pairing, chondroplasty (29877) performed in the same compartment as a meniscectomy (29880 or 29881) is bundled into the meniscectomy by definition, and industry-reported guidance treats that pair as a modifier indicator of 0, meaning no override modifier changes the outcome. The Medicare-specific path is HCPCS G0289, which reports chondroplasty or loose-body removal performed in a genuinely different compartment of the same knee during the same arthroscopic session. It only applies to the different-compartment scenario, and it's a Medicare-specific code, not a universal CPT substitute, check whether a given commercial payer recognizes it before relying on it.</p></details>
+    <details class="faq-item"><summary>Why does our hardware-removal claim keep bundling into the arthroplasty or fixation code?</summary><p>20680 is widely reported as a common Column 2 code against arthroplasty and fracture-fixation procedures when the hardware removed is an integral, expected part of the primary procedure at the same anatomic site, for example, removing temporary fixation hardware as part of a planned staged revision. It's billable separately, with an override modifier, only when the hardware removed is at a distinct anatomic site or is left over from a prior, unrelated procedure, and the operative note has to say so explicitly. Confirm the specific pair's modifier indicator before appending 59 or an X-modifier, because a 0 indicator means no modifier changes the outcome regardless of documentation.</p></details>
+    <details class="faq-item"><summary>What's the difference between an MAI 2 and an MAI 3 denial, practically?</summary><p>MAI 2 is an absolute, date-of-service unit cap that CMS treats as clinically implausible to exceed, there is no appeal path, full stop, no matter how well the extra units are documented. MAI 3 is also a date-of-service cap, but it can be appealed with documentation showing the excess units reflect genuinely distinct, medically necessary services, such as bilateral procedures billed correctly with laterality modifiers. Writing an appeal against an MAI 2 denial is wasted staff time; confirm the MAI for the specific code before any appeal is drafted, because guessing wrong burns the appeal window on a claim that was never winnable.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates and quarterly NCCI/MUE revisions. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix and the current-quarter CMS NCCI Edits Lookup Tool before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates and quarterly NCCI/MUE revisions. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix and the current-quarter CMS NCCI Edits Lookup Tool before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -310,62 +365,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>

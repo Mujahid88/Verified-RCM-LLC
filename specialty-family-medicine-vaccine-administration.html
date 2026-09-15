@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Vaccine Administration Billing: CPT 90460-90474 | Verified RCM">
 <meta name="twitter:description" content="Vaccine administration billing for family medicine: 90460/90461 vs 90471-90474, Medicare's separate G0008-G0010 pathway, Z23 diagnosis coding, and VFC modifier SL rules.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Family Medicine","item":"https://www.verifiedrcm.com/specialty-family-medicine.html"},{"@type":"ListItem","position":4,"name":"Vaccine administration billing: CPT 90460-90474","item":"https://www.verifiedrcm.com/specialty-family-medicine-vaccine-administration.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does Medicare deny CPT 90471 for a flu or pneumococcal vaccine administration?","acceptedAnswer":{"@type":"Answer","text":"Medicare Part B doesn't pay 90460-90474 for its three statutorily-covered preventive vaccines. Influenza, pneumococcal, and hepatitis B administration bill through their own HCPCS codes instead — G0008, G0009, and G0010 — alongside the vaccine product code. Billing 90471 to Medicare for one of these three vaccines isn't a modifier problem; it's the wrong code family, and it denies as a benefit-category mismatch every time."}},{"@type":"Question","name":"Can we bill an E/M visit for vaccine counseling on the same day as the immunization administration?","acceptedAnswer":{"@type":"Answer","text":"Not for the counseling itself — CPT 90460 already includes face-to-face counseling for the first vaccine component, and 90461 covers each additional one, so that counseling isn't separately billable as an E/M no matter how it's documented. NCCI bundles E/M codes against 90460-90474 by default. A same-day E/M is billable with modifier 25 only when the visit addresses a genuinely separate, significant problem — its own history, exam, and medical decision making — not the vaccine discussion itself."}},{"@type":"Question","name":"Does the SL modifier need to go on every VFC vaccine claim?","acceptedAnswer":{"@type":"Answer","text":"No — whether and where modifier SL applies varies by state Medicaid program. Some states require it on the vaccine product code only, some on both the vaccine and administration codes, and at least one state's Medicaid policy prohibits it entirely. Confirm your specific state's VFC billing manual before applying SL as a standing rule across your panel."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does Medicare deny CPT 90471 for a flu or pneumococcal vaccine administration?","acceptedAnswer":{"@type":"Answer","text":"Medicare Part B doesn't pay 90460-90474 for its three statutorily-covered preventive vaccines. Influenza, pneumococcal, and hepatitis B administration bill through their own HCPCS codes instead, G0008, G0009, and G0010, alongside the vaccine product code. Billing 90471 to Medicare for one of these three vaccines isn't a modifier problem; it's the wrong code family, and it denies as a benefit-category mismatch every time."}},{"@type":"Question","name":"Can we bill an E/M visit for vaccine counseling on the same day as the immunization administration?","acceptedAnswer":{"@type":"Answer","text":"Not for the counseling itself, CPT 90460 already includes face-to-face counseling for the first vaccine component, and 90461 covers each additional one, so that counseling isn't separately billable as an E/M no matter how it's documented. NCCI bundles E/M codes against 90460-90474 by default. A same-day E/M is billable with modifier 25 only when the visit addresses a genuinely separate, significant problem, its own history, exam, and medical decision making, not the vaccine discussion itself."}},{"@type":"Question","name":"Does the SL modifier need to go on every VFC vaccine claim?","acceptedAnswer":{"@type":"Answer","text":"No, whether and where modifier SL applies varies by state Medicaid program. Some states require it on the vaccine product code only, some on both the vaccine and administration codes, and at least one state's Medicaid policy prohibits it entirely. Confirm your specific state's VFC billing manual before applying SL as a standing rule across your panel."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,149 +52,202 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 25 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 25 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-family-medicine.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete family medicine guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract nested arcs of varying sizes representing generations of a family joined by one continuous line of care">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-family-medicine.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete family medicine guide</a>
+      <h1>Vaccine administration billing: CPT 90460-90474 explained.</h1>
+      <p class="lede">A mixed-age family medicine panel runs three vaccine billing systems at once, not one: the CPT component-versus-route split, Medicare's own G-code pathway that bypasses 90460-90474 for its three core preventive vaccines, and VFC's product-versus-administration-fee split for eligible children. Mixing any two of these up is how a vaccine claim under- or over-bills.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-family-medicine.html">family medicine billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract nested arcs of varying sizes representing generations of a family joined by one continuous line of care">
   <path d="M128.6,152.8 A148,148 0 1 1 146.8,361.4" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M140.3,206.4 A104,104 0 1 1 147.9,294" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M215,182.3 A62,62 0 1 1 235.2,297.1" fill="none" stroke="var(--muted)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M170,130 C220,170 190,250 250,270 C300,290 280,340 320,362" fill="none" stroke="var(--cat-primary-care)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="240" cy="240" r="5" fill="var(--cat-primary-care)"/>
 </svg></figure>
-  <h1>Vaccine administration billing: CPT 90460-90474 explained.</h1>
-  <p class="lede">A mixed-age family medicine panel runs three vaccine billing systems at once, not one: the CPT component-versus-route split, Medicare's own G-code pathway that bypasses 90460-90474 for its three core preventive vaccines, and VFC's product-versus-administration-fee split for eligible children. Mixing any two of these up is how a vaccine claim under- or over-bills.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-family-medicine.html">family medicine billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>90460/90461 count components; 90471-90474 count injections.</b> Which family applies depends on the patient's age and whether counseling actually happened &mdash; not on which code pays more or which one a template defaults to.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Medicare doesn't use 90460-90474 for flu, pneumococcal, or hepatitis B.</b> Those three bill through G0008, G0009, and G0010 instead &mdash; and most remaining adult vaccines route through Part D, not a Part B medical claim at all.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Z23 is the primary diagnosis for a routine immunization encounter</b> &mdash; not a symptom code, and not left blank because "it's just a shot."</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>90460/90461 count components; 90471-90474 count injections.</b> Which family applies depends on the patient's age and whether counseling actually happened, not on which code pays more or which one a template defaults to.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Medicare doesn't use 90460-90474 for flu, pneumococcal, or hepatitis B.</b> Those three bill through G0008, G0009, and G0010 instead, and most remaining adult vaccines route through Part D, not a Part B medical claim at all.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Z23 is the primary diagnosis for a routine immunization encounter</b>, not a symptom code, and not left blank because "it's just a shot."</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>VFC's product-versus-administration split, and modifier SL, are state-specific.</b> One state's rule doesn't transfer to another, so a practice billing across state Medicaid lines needs a rule per state, not one default.</span></li>
     </ul>
   </section>
 
   <h2>Component-based vs. route-based: picking the right family</h2>
-  <p>CPT gives family medicine two structurally different ways to bill vaccine administration. The choice isn't a preference &mdash; it's set by the patient's age and whether counseling actually occurred.</p>
+  <p>CPT gives family medicine two structurally different ways to bill vaccine administration. The choice isn't a preference, it's set by the patient's age and whether counseling actually occurred.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Vaccine administration code families and the rule that governs each.</caption>
@@ -207,14 +262,14 @@
       </tbody>
     </table>
   </div>
-  <p>Two worked examples make the split concrete. A 4-year-old receives a three-antigen combination vaccine, and the physician personally counsels the parent on it: that's <code>90460</code> for the first component plus two units of <code>90461</code> &mdash; three lines total for one needle stick, because the code counts antigens, not injections. A 68-year-old receives a flu vaccine and a separate Tdap in the same visit, with no formal counseling documented: that's <code>90471</code> for the first vaccine and <code>90472</code> for the second &mdash; two lines for two needle sticks, because the code counts injection events, not components.</p>
-  <p>Reversing either pattern misbills the encounter. Billing 90471 for a counseled pediatric visit undercodes it, since the component-based family typically reimburses more per line. Billing 90460 for an adult simply won't pay &mdash; it's not payable outside the pediatric/adolescent range. And counseling is a genuine requirement, not a formality: if a nurse gives the vaccine with no physician or QHP counseling documented, 90460/90461 don't apply even to a pediatric patient, and the route-based family applies instead.</p>
+  <p>Two worked examples make the split concrete. A 4-year-old receives a three-antigen combination vaccine, and the physician personally counsels the parent on it: that's <code>90460</code> for the first component plus two units of <code>90461</code>, three lines total for one needle stick, because the code counts antigens, not injections. A 68-year-old receives a flu vaccine and a separate Tdap in the same visit, with no formal counseling documented: that's <code>90471</code> for the first vaccine and <code>90472</code> for the second, two lines for two needle sticks, because the code counts injection events, not components.</p>
+  <p>Reversing either pattern misbills the encounter. Billing 90471 for a counseled pediatric visit undercodes it, since the component-based family typically reimburses more per line. Billing 90460 for an adult simply won't pay, it's not payable outside the pediatric/adolescent range. And counseling is a genuine requirement, not a formality: if a nurse gives the vaccine with no physician or QHP counseling documented, 90460/90461 don't apply even to a pediatric patient, and the route-based family applies instead.</p>
 
   <h2>Medicare's separate pathway: G0008, G0009, G0010</h2>
   <p>This is the split most vaccine-billing guides skip, and it drives some of the most avoidable denials on a Medicare panel. Medicare Part B doesn't pay 90460-90474 for its three statutorily-covered preventive vaccines. Influenza, pneumococcal, and hepatitis B vaccine administration bill through their own HCPCS Level II codes instead, each reported alongside the specific vaccine product code:</p>
   <div class="data-table-wrap">
     <table class="data-table">
-      <caption>Medicare's vaccine administration G-codes. These replace 90460-90474 for these three vaccines on a Medicare Part B claim &mdash; they aren't billed in addition to them.</caption>
+      <caption>Medicare's vaccine administration G-codes. These replace 90460-90474 for these three vaccines on a Medicare Part B claim, they aren't billed in addition to them.</caption>
       <thead><tr><th scope="col">Code</th><th scope="col">Vaccine administered</th><th scope="col">Beneficiary eligibility</th></tr></thead>
       <tbody>
         <tr><td><code>G0008</code></td><td>Influenza virus vaccine</td><td>All Medicare Part B beneficiaries, no risk restriction</td></tr>
@@ -223,21 +278,21 @@
       </tbody>
     </table>
   </div>
-  <p>All three carry no deductible or coinsurance when billed correctly, and Medicare adds an in-home administration payment (HCPCS <code>M0201</code>) on top when given in a patient's home. ⚠️ This build located a 2026 national administration rate of $34.62 for G0008/G0009/G0010 (and $40.98 for M0201) via a Medicare Administrative Contractor's fee page, but could not open CMS's own fee schedule page directly to confirm it (cms.gov returned an access error) &mdash; confirm the current rate in the <a href="https://www.cms.gov/medicare/physician-fee-schedule/search" rel="noopener">CMS Physician Fee Schedule Look-Up Tool</a> before quoting it. COVID-19 vaccine administration follows its own dedicated code, separate from this table and 90460-90474.</p>
-  <p>The rest of the adult schedule mostly doesn't run through Part B. Tdap, shingles (Shingrix), and HPV are the common examples: for a typical beneficiary these route through the Part D pharmacy benefit, so billing 90471 for a shingles vaccine against Part B generates a benefit-category denial, not a fixable coding error. Part B coverage of Tdap is the exception, and typically requires documented medical necessity rather than routine booster use. Confirm which benefit a vaccine falls under before the encounter &mdash; no amount of chart detail moves a Part D vaccine onto a Part B claim.</p>
+  <p>All three carry no deductible or coinsurance when billed correctly, and Medicare adds an in-home administration payment (HCPCS <code>M0201</code>) on top when given in a patient's home. ⚠️ This build located a 2026 national administration rate of $34.62 for G0008/G0009/G0010 (and $40.98 for M0201) via a Medicare Administrative Contractor's fee page, but could not open CMS's own fee schedule page directly to confirm it (cms.gov returned an access error), confirm the current rate in the <a href="https://www.cms.gov/medicare/physician-fee-schedule/search" rel="noopener">CMS Physician Fee Schedule Look-Up Tool</a> before quoting it. COVID-19 vaccine administration follows its own dedicated code, separate from this table and 90460-90474.</p>
+  <p>The rest of the adult schedule mostly doesn't run through Part B. Tdap, shingles (Shingrix), and HPV are the common examples: for a typical beneficiary these route through the Part D pharmacy benefit, so billing 90471 for a shingles vaccine against Part B generates a benefit-category denial, not a fixable coding error. Part B coverage of Tdap is the exception, and typically requires documented medical necessity rather than routine booster use. Confirm which benefit a vaccine falls under before the encounter, no amount of chart detail moves a Part D vaccine onto a Part B claim.</p>
 
   <h2>Diagnosis coding: Z23 and what sits around it</h2>
-  <p>The primary diagnosis for a routine immunization encounter is <code>Z23</code>, Encounter for immunization &mdash; verified live against the FY2026 ICD-10-CM code set, billable, and not a placeholder to be replaced with a symptom code just because the visit felt routine. It applies whether the vaccine is being given as part of a preventive exam, an AWV, a stand-alone immunization visit, or alongside a problem E/M; the vaccine's own diagnosis pointer is Z23, independent of whatever diagnosis supports the E/M line if one is billed the same day.</p>
+  <p>The primary diagnosis for a routine immunization encounter is <code>Z23</code>, Encounter for immunization, verified live against the FY2026 ICD-10-CM code set, billable, and not a placeholder to be replaced with a symptom code just because the visit felt routine. It applies whether the vaccine is being given as part of a preventive exam, an AWV, a stand-alone immunization visit, or alongside a problem E/M; the vaccine's own diagnosis pointer is Z23, independent of whatever diagnosis supports the E/M line if one is billed the same day.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Diagnosis codes for the immunization encounter and its exceptions, verified against the FY2026 ICD-10-CM code set.</caption>
       <thead><tr><th scope="col">Code</th><th scope="col">Use</th></tr></thead>
       <tbody>
-        <tr><td><code>Z23</code></td><td>Primary diagnosis for a routine immunization encounter &mdash; the default for the vaccine line itself</td></tr>
-        <tr><td><code>Z28.21</code></td><td>Immunization not carried out because of patient refusal &mdash; documents the encounter when a scheduled vaccine wasn't given</td></tr>
-        <tr><td><code>Z28.82</code></td><td>Immunization not carried out because of caregiver refusal &mdash; the pediatric-specific version of the above</td></tr>
+        <tr><td><code>Z23</code></td><td>Primary diagnosis for a routine immunization encounter, the default for the vaccine line itself</td></tr>
+        <tr><td><code>Z28.21</code></td><td>Immunization not carried out because of patient refusal, documents the encounter when a scheduled vaccine wasn't given</td></tr>
+        <tr><td><code>Z28.82</code></td><td>Immunization not carried out because of caregiver refusal, the pediatric-specific version of the above</td></tr>
         <tr><td><code>Z28.03</code></td><td>Immunization not carried out because of the patient's immunocompromised state</td></tr>
-        <tr><td><code>T88.0XXA</code></td><td>Infection following immunization, initial encounter &mdash; a subsequent visit for a vaccine complication, not the immunization visit itself</td></tr>
+        <tr><td><code>T88.0XXA</code></td><td>Infection following immunization, initial encounter, a subsequent visit for a vaccine complication, not the immunization visit itself</td></tr>
       </tbody>
     </table>
   </div>
@@ -245,11 +300,11 @@
 
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Before appending modifier 25 to a same-day E/M on a vaccine visit, check whether the "extra" work billed is actually the vaccine counseling itself &mdash; already included in 90460/90461 and not a second billable service, however thoroughly it's documented. Modifier 25 only holds up when the E/M addresses a distinct problem with its own history, exam, and MDM.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Before appending modifier 25 to a same-day E/M on a vaccine visit, check whether the "extra" work billed is actually the vaccine counseling itself, already included in 90460/90461 and not a second billable service, however thoroughly it's documented. Modifier 25 only holds up when the E/M addresses a distinct problem with its own history, exam, and MDM.</p></div>
   </div>
 
   <h2>NCCI bundling: E/M against the administration codes</h2>
-  <p>NCCI bundles E/M codes against the vaccine administration family by default. An office visit billed alongside a vaccine, with no distinct problem beyond the immunization itself, should not carry modifier 25 &mdash; the counseling and administration are already the visit's content, and the E/M line duplicates rather than adds to it.</p>
+  <p>NCCI bundles E/M codes against the vaccine administration family by default. An office visit billed alongside a vaccine, with no distinct problem beyond the immunization itself, should not carry modifier 25, the counseling and administration are already the visit's content, and the E/M line duplicates rather than adds to it.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Confirm age and whether counseling actually happened before choosing 90460/90461 versus the 90471 family.</li>
@@ -258,15 +313,15 @@
       <li>Verify your state's VFC and SL-modifier rule directly rather than assuming it matches a neighboring state's.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Don't</div><ul>
-      <li>Don't bill 90471 for flu, pneumococcal, or hepatitis B administration on a Medicare claim &mdash; use G0008/G0009/G0010.</li>
+      <li>Don't bill 90471 for flu, pneumococcal, or hepatitis B administration on a Medicare claim, use G0008/G0009/G0010.</li>
       <li>Don't append modifier 25 to an E/M whose only content is the vaccine counseling already included in 90460/90461.</li>
       <li>Don't bill a Part D vaccine (Tdap, shingles, HPV, for a typical Medicare beneficiary) against Part B coverage.</li>
-      <li>Don't bill the vaccine product itself on a VFC-eligible patient &mdash; only the administration fee is separately reimbursable.</li>
+      <li>Don't bill the vaccine product itself on a VFC-eligible patient, only the administration fee is separately reimbursable.</li>
     </ul></div>
   </div>
 
   <h2>VFC and state-supplied vaccine billing</h2>
-  <p>Under the Vaccines for Children program and many state Medicaid plans, the vaccine product is supplied to VFC-enrolled providers at no cost, and only the administration fee &mdash; billed through the 90460/90471 family &mdash; is separately reimbursable. Billing for the vaccine product itself on a VFC-eligible patient is a compliance issue distinct from a coding one; the product line is still reported, but at no charge.</p>
+  <p>Under the Vaccines for Children program and many state Medicaid plans, the vaccine product is supplied to VFC-enrolled providers at no cost, and only the administration fee, billed through the 90460/90471 family, is separately reimbursable. Billing for the vaccine product itself on a VFC-eligible patient is a compliance issue distinct from a coding one; the product line is still reported, but at no charge.</p>
   <p>Modifier SL (state-supplied vaccine) flags that product line for many state Medicaid programs, but its application isn't uniform. Some states require SL on the vaccine product code only; others require it on both the vaccine and administration codes; at least one state's Medicaid policy prohibits its use altogether. A practice billing across more than one state needs a rule per state, checked against that state's current VFC manual, not one default carried from wherever the practice is headquartered.</p>
 
   <div class="cta-band">
@@ -279,14 +334,14 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Why does Medicare deny CPT 90471 for a flu or pneumococcal vaccine administration?</summary><p>Medicare Part B doesn't pay 90460-90474 for its three statutorily-covered preventive vaccines. Influenza, pneumococcal, and hepatitis B administration bill through their own HCPCS codes instead &mdash; G0008, G0009, and G0010 &mdash; alongside the vaccine product code. Billing 90471 to Medicare for one of these three vaccines isn't a modifier problem; it's the wrong code family, and it denies as a benefit-category mismatch every time.</p></details>
-    <details class="faq-item"><summary>Can we bill an E/M visit for vaccine counseling on the same day as the immunization administration?</summary><p>Not for the counseling itself &mdash; CPT 90460 already includes face-to-face counseling for the first vaccine component, and 90461 covers each additional one, so that counseling isn't separately billable as an E/M no matter how it's documented. NCCI bundles E/M codes against 90460-90474 by default. A same-day E/M is billable with modifier 25 only when the visit addresses a genuinely separate, significant problem &mdash; its own history, exam, and medical decision making &mdash; not the vaccine discussion itself.</p></details>
-    <details class="faq-item"><summary>Does the SL modifier need to go on every VFC vaccine claim?</summary><p>No &mdash; whether and where modifier SL applies varies by state Medicaid program. Some states require it on the vaccine product code only, some on both the vaccine and administration codes, and at least one state's Medicaid policy prohibits it entirely. Confirm your specific state's VFC billing manual before applying SL as a standing rule across your panel.</p></details>
+    <details class="faq-item"><summary>Why does Medicare deny CPT 90471 for a flu or pneumococcal vaccine administration?</summary><p>Medicare Part B doesn't pay 90460-90474 for its three statutorily-covered preventive vaccines. Influenza, pneumococcal, and hepatitis B administration bill through their own HCPCS codes instead, G0008, G0009, and G0010, alongside the vaccine product code. Billing 90471 to Medicare for one of these three vaccines isn't a modifier problem; it's the wrong code family, and it denies as a benefit-category mismatch every time.</p></details>
+    <details class="faq-item"><summary>Can we bill an E/M visit for vaccine counseling on the same day as the immunization administration?</summary><p>Not for the counseling itself, CPT 90460 already includes face-to-face counseling for the first vaccine component, and 90461 covers each additional one, so that counseling isn't separately billable as an E/M no matter how it's documented. NCCI bundles E/M codes against 90460-90474 by default. A same-day E/M is billable with modifier 25 only when the visit addresses a genuinely separate, significant problem, its own history, exam, and medical decision making, not the vaccine discussion itself.</p></details>
+    <details class="faq-item"><summary>Does the SL modifier need to go on every VFC vaccine claim?</summary><p>No, whether and where modifier SL applies varies by state Medicaid program. Some states require it on the vaccine product code only, some on both the vaccine and administration codes, and at least one state's Medicaid policy prohibits it entirely. Confirm your specific state's VFC billing manual before applying SL as a standing rule across your panel.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -298,62 +353,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>

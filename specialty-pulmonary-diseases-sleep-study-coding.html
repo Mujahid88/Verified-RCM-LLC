@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Sleep Study &amp; HSAT Coding: CPT vs. HCPCS G-Codes | Verified RCM">
 <meta name="twitter:description" content="Sleep study and home sleep apnea test coding: the CPT 95800 family explained code by code, HCPCS G0398-G0400 by AASM monitor type, modifier 52's 6-hour rule, and the CPT overhaul coming January 2027.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Pulmonary Medicine","item":"https://www.verifiedrcm.com/specialty-pulmonary-diseases.html"},{"@type":"ListItem","position":4,"name":"Sleep study and home sleep apnea test coding: CPT vs. HCPCS G-codes","item":"https://www.verifiedrcm.com/specialty-pulmonary-diseases-sleep-study-coding.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can we still bill 95800, 95801, or 95806 in 2026?","acceptedAnswer":{"@type":"Answer","text":"Yes — all three remain active, billable CPT codes through the end of 2026. The AMA CPT Editorial Panel approved their deletion effective January 1, 2027, replacing them with a new complexity-tiered family of six codes (temporarily designated 95X18 through 95X23 pending final code assignment). Nothing changes for claims with a 2026 date of service; the transition planning is for 2027 charge masters and payer contracts, not for anything billable today."}},{"@type":"Question","name":"How do we know whether to bill G0398, G0399, or G0400?","acceptedAnswer":{"@type":"Answer","text":"Match the code to the actual monitor type used for that patient's study, not the device's marketing name. G0398 requires a minimum of 7 channels (Type II), G0399 requires a minimum of 4 channels including two respiratory movement/airflow channels plus one ECG/heart rate channel and one oxygen saturation channel (Type III), and G0400 covers the simplest devices, recording a minimum of 3 channels (Type IV). If a device drops a channel mid-study and effectively records fewer channels than its rated type, code to what was actually recorded that night, not the device's nominal capability."}},{"@type":"Question","name":"Do commercial payers ever require the HCPCS G-codes instead of CPT?","acceptedAnswer":{"@type":"Answer","text":"Some do. Medicare's G0398-G0400 requirement is the clearest and most consistent rule in sleep testing, but a subset of commercial payers and some state Medicaid programs crosswalk their own sleep-testing policy to Medicare's methodology and require the same G-codes rather than the CPT HST codes. There's no universal rule here — confirm each payer's current medical policy bulletin rather than assuming CPT applies just because the payer isn't Medicare."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can we still bill 95800, 95801, or 95806 in 2026?","acceptedAnswer":{"@type":"Answer","text":"Yes, all three remain active, billable CPT codes through the end of 2026. The AMA CPT Editorial Panel approved their deletion effective January 1, 2027, replacing them with a new complexity-tiered family of six codes (temporarily designated 95X18 through 95X23 pending final code assignment). Nothing changes for claims with a 2026 date of service; the transition planning is for 2027 charge masters and payer contracts, not for anything billable today."}},{"@type":"Question","name":"How do we know whether to bill G0398, G0399, or G0400?","acceptedAnswer":{"@type":"Answer","text":"Match the code to the actual monitor type used for that patient's study, not the device's marketing name. G0398 requires a minimum of 7 channels (Type II), G0399 requires a minimum of 4 channels including two respiratory movement/airflow channels plus one ECG/heart rate channel and one oxygen saturation channel (Type III), and G0400 covers the simplest devices, recording a minimum of 3 channels (Type IV). If a device drops a channel mid-study and effectively records fewer channels than its rated type, code to what was actually recorded that night, not the device's nominal capability."}},{"@type":"Question","name":"Do commercial payers ever require the HCPCS G-codes instead of CPT?","acceptedAnswer":{"@type":"Answer","text":"Some do. Medicare's G0398-G0400 requirement is the clearest and most consistent rule in sleep testing, but a subset of commercial payers and some state Medicaid programs crosswalk their own sleep-testing policy to Medicare's methodology and require the same G-codes rather than the CPT HST codes. There's no universal rule here, confirm each payer's current medical policy bulletin rather than assuming CPT applies just because the payer isn't Medicare."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 25 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 25 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-pulmonary-diseases.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete pulmonary medicine guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a branching bronchial tree, representing pulmonary and respiratory diseases">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-pulmonary-diseases.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete pulmonary medicine guide</a>
+      <h1>Sleep study and home sleep apnea test coding: CPT vs. HCPCS G-codes.</h1>
+      <p class="lede">Sleep testing runs on two code sets that overlap in what they measure and diverge completely in who accepts which one. Get the CPT-versus-HCPCS call wrong and Medicare denies automatically. Get the specific code wrong within the right family and the claim can still deny on a technicality unrelated to medical necessity. This guide goes code by code through both families, the monitor-type logic that picks the right G-code, the modifier 52 threshold nobody reads past the headline rule on, and the CPT overhaul landing January 1, 2027.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-pulmonary-diseases.html">pulmonary medicine billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a branching bronchial tree, representing pulmonary and respiratory diseases">
   <path d="M150,120 C90,180 80,300 140,380" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M330,120 C390,180 400,300 340,380" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 
@@ -202,46 +258,45 @@
   <circle cx="226" cy="348" r="4.5" fill="var(--cat-medical)"/>
   <circle cx="350" cy="342" r="4.5" fill="var(--cat-medical)"/>
 </svg></figure>
-  <h1>Sleep study and home sleep apnea test coding: CPT vs. HCPCS G-codes.</h1>
-  <p class="lede">Sleep testing runs on two code sets that overlap in what they measure and diverge completely in who accepts which one. Get the CPT-versus-HCPCS call wrong and Medicare denies automatically. Get the specific code wrong within the right family and the claim can still deny on a technicality unrelated to medical necessity. This guide goes code by code through both families, the monitor-type logic that picks the right G-code, the modifier 52 threshold nobody reads past the headline rule on, and the CPT overhaul landing January 1, 2027.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-pulmonary-diseases.html">pulmonary medicine billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>G0398/G0399/G0400 map to a specific AASM monitor type, not to "any home test."</b> Billing the wrong G-code for the channel count actually recorded is its own denial reason, separate from the CPT-versus-HCPCS mix-up.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>95800, 95801, and 95806 are being deleted January 1, 2027</b>, replaced by a new complexity-tiered family of six codes. 2026 is the last full year the legacy codes are billable &mdash; build the transition into next year's charge master now, not in December.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>95800, 95801, and 95806 are being deleted January 1, 2027</b>, replaced by a new complexity-tiered family of six codes. 2026 is the last full year the legacy codes are billable, build the transition into next year's charge master now, not in December.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Modifier 52 isn't optional under 6 hours of recording.</b> It governs the HST codes and, less commonly remembered, the attended in-lab codes whenever a study is cut short of a full night.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The sleep study and the CPAP device travel through two different Medicare pathways.</b> The G-code for the test routes to the local Part A/B MAC under the same polysomnography article covered in our pillar guide; the CPAP unit itself is a separate DME claim.</span></li>
     </ul>
   </section>
 
   <h2>Why two code sets exist for the same test</h2>
-  <p>CPT is AMA-maintained and priced through the Medicare Physician Fee Schedule's RVU methodology. HCPCS Level II is CMS's own code set, used when CMS wants to control pricing outside that structure. Home sleep apnea testing landed in both because CMS chose a payment methodology it fully owns for this service rather than accepting the AMA's CPT valuation &mdash; which is also why Medicare won't accept a CPT-to-HCPCS crosswalk from a biller and simply denies the CPT codes outright. Commercial payers, with no obligation to follow CMS's coding choices, generally stayed on CPT. That's a policy decision, not a coding ambiguity a modifier or appeal can work around.</p>
+  <p>CPT is AMA-maintained and priced through the Medicare Physician Fee Schedule's RVU methodology. HCPCS Level II is CMS's own code set, used when CMS wants to control pricing outside that structure. Home sleep apnea testing landed in both because CMS chose a payment methodology it fully owns for this service rather than accepting the AMA's CPT valuation, which is also why Medicare won't accept a CPT-to-HCPCS crosswalk from a biller and simply denies the CPT codes outright. Commercial payers, with no obligation to follow CMS's coding choices, generally stayed on CPT. That's a policy decision, not a coding ambiguity a modifier or appeal can work around.</p>
 
   <h2>The CPT sleep-testing family, code by code</h2>
   <p>Nine CPT codes cover sleep medicine, and the three unattended home-testing codes get confused with each other as often as they get confused with the HCPCS G-codes.</p>
   <div class="data-table-wrap">
     <table class="data-table">
-      <caption>CPT sleep-testing family. Descriptions paraphrased &mdash; confirm exact language against your current CPT Professional edition before building a charge master entry.</caption>
+      <caption>CPT sleep-testing family. Descriptions paraphrased, confirm exact language against your current CPT Professional edition before building a charge master entry.</caption>
       <thead><tr><th scope="col">Code</th><th scope="col">What it captures</th><th scope="col">Setting</th></tr></thead>
       <tbody>
         <tr><td><code>95803</code></td><td>Actigraphy testing, recording, analysis, and report over a minimum 72-hour, up to 14-consecutive-day period</td><td>Ambulatory, not a single-night sleep study</td></tr>
         <tr><td><code>95805</code></td><td>Multiple sleep latency or maintenance of wakefulness testing across multiple daytime trials</td><td>Daytime, facility-based</td></tr>
-        <tr><td><code>95806</code></td><td>Unattended recording of heart rate, oxygen saturation, respiratory airflow, and respiratory effort &mdash; no sleep staging</td><td>Home, unattended</td></tr>
-        <tr><td><code>95800</code></td><td>Unattended recording of heart rate, oxygen saturation, respiratory analysis, and sleep time &mdash; no EEG-based staging</td><td>Home, unattended</td></tr>
-        <tr><td><code>95801</code></td><td>Unattended recording of a minimum of heart rate, oxygen saturation, and respiratory analysis &mdash; the narrowest parameter set of the three home codes</td><td>Home, unattended</td></tr>
-        <tr><td><code>95807</code></td><td>Ventilation, respiratory effort, ECG/heart rate, and oxygen saturation, technologist-attended &mdash; no sleep staging</td><td>Facility, attended</td></tr>
+        <tr><td><code>95806</code></td><td>Unattended recording of heart rate, oxygen saturation, respiratory airflow, and respiratory effort, no sleep staging</td><td>Home, unattended</td></tr>
+        <tr><td><code>95800</code></td><td>Unattended recording of heart rate, oxygen saturation, respiratory analysis, and sleep time, no EEG-based staging</td><td>Home, unattended</td></tr>
+        <tr><td><code>95801</code></td><td>Unattended recording of a minimum of heart rate, oxygen saturation, and respiratory analysis, the narrowest parameter set of the three home codes</td><td>Home, unattended</td></tr>
+        <tr><td><code>95807</code></td><td>Ventilation, respiratory effort, ECG/heart rate, and oxygen saturation, technologist-attended, no sleep staging</td><td>Facility, attended</td></tr>
         <tr><td><code>95808</code></td><td>Polysomnography: sleep staging plus 1&ndash;3 additional physiological parameters</td><td>Facility, attended</td></tr>
         <tr><td><code>95810</code></td><td>Polysomnography: sleep staging plus 4 or more additional parameters</td><td>Facility, attended</td></tr>
         <tr><td><code>95811</code></td><td>Polysomnography with CPAP titration: sleep staging plus 4 or more parameters, inclusive of split-night studies</td><td>Facility, attended</td></tr>
       </tbody>
     </table>
   </div>
-  <p>None of the three home-testing codes involves EEG-based sleep staging &mdash; that's what separates all three from true polysomnography, not the setting. What separates them from each other is the parameter set: 95801 is the narrowest (heart rate, oxygen saturation, respiratory analysis), 95800 adds a sleep-time component, and 95806 substitutes airflow and effort for the sleep-time measurement. Picking among the three has to match what the ordered device actually recorded, not the diagnosis being ruled out &mdash; the wrong pick is a device-versus-code mismatch, and it denies the same way an unsupported diagnosis code does, just for a different reason.</p>
+  <p>None of the three home-testing codes involves EEG-based sleep staging, that's what separates all three from true polysomnography, not the setting. What separates them from each other is the parameter set: 95801 is the narrowest (heart rate, oxygen saturation, respiratory analysis), 95800 adds a sleep-time component, and 95806 substitutes airflow and effort for the sleep-time measurement. Picking among the three has to match what the ordered device actually recorded, not the diagnosis being ruled out, the wrong pick is a device-versus-code mismatch, and it denies the same way an unsupported diagnosis code does, just for a different reason.</p>
 
   <h2>Selecting the right HCPCS G-code by AASM monitor type</h2>
-  <p>Medicare's three HST codes aren't interchangeable by convenience &mdash; each is tied to a specific portable monitor classification, defined by channel count and content, not the device's marketing name.</p>
+  <p>Medicare's three HST codes aren't interchangeable by convenience, each is tied to a specific portable monitor classification, defined by channel count and content, not the device's marketing name.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>HCPCS G-codes for Medicare home sleep apnea testing, by AASM monitor type.</caption>
@@ -249,26 +304,26 @@
       <tbody>
         <tr><td><code>G0398</code></td><td>Type II</td><td>7 channels: EEG, EOG, EMG, ECG/heart rate, airflow, respiratory effort, and oxygen saturation</td></tr>
         <tr><td><code>G0399</code></td><td>Type III</td><td>4 channels: 2 respiratory movement/airflow, 1 ECG/heart rate, and 1 oxygen saturation</td></tr>
-        <tr><td><code>G0400</code></td><td>Type IV</td><td>3 channels &mdash; the simplest and most commonly deployed home test device</td></tr>
+        <tr><td><code>G0400</code></td><td>Type IV</td><td>3 channels, the simplest and most commonly deployed home test device</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The code has to match what the device actually recorded, confirmed against its own specification sheet, not assumed from the vendor's product category. A Type III device that drops a channel mid-study &mdash; a dislodged airflow sensor, a failed oximeter probe &mdash; effectively produced a Type IV-equivalent record for that night. Coding to the device's nominal, rated type rather than what it actually captured is the kind of gap an auditor finds by pulling the raw data file, not something a denial surfaces on its own, because the claim usually pays.</p>
+  <p>The code has to match what the device actually recorded, confirmed against its own specification sheet, not assumed from the vendor's product category. A Type III device that drops a channel mid-study, a dislodged airflow sensor, a failed oximeter probe, effectively produced a Type IV-equivalent record for that night. Coding to the device's nominal, rated type rather than what it actually captured is the kind of gap an auditor finds by pulling the raw data file, not something a denial surfaces on its own, because the claim usually pays.</p>
 
   <h2>Modifier 52: the 6-hour threshold, and where it actually applies</h2>
-  <p>The rule most billers know: 95800, 95801, and 95806 require a minimum of 6 continuous hours of recorded data, and a study that falls short &mdash; while still producing clinically interpretable results &mdash; is billed with modifier 52 (reduced services) rather than as a complete study. The rule most billers miss: that logic isn't limited to home testing. Secondary billing-industry sources describe the same reduced-services expectation extending to the attended codes (95807, 95810, 95811) whenever an in-lab study is cut short of a full night for reasons other than a planned split-night titration &mdash; equipment failure, patient withdrawal, or a technical abort. ⚠️ This build corroborated the 6-hour threshold and its extension to the attended codes against secondary sources (Sleep Review, Codapedia, AAPC), but could not confirm the exact governing language in a specific MAC's current article, since the CMS Coverage connector returns article metadata rather than full body text for local articles. Confirm against the article for your own MAC &mdash; named by contractor and article number in our pillar guide &mdash; before applying modifier 52 to an attended-study claim.</p>
-  <p>There's a floor below which modifier 52 doesn't apply at all: data too short or corrupted to support interpretation isn't a reduced service, it's a technical failure &mdash; a repeat study on a new date of service, not the original code with a modifier appended.</p>
+  <p>The rule most billers know: 95800, 95801, and 95806 require a minimum of 6 continuous hours of recorded data, and a study that falls short, while still producing clinically interpretable results, is billed with modifier 52 (reduced services) rather than as a complete study. The rule most billers miss: that logic isn't limited to home testing. Secondary billing-industry sources describe the same reduced-services expectation extending to the attended codes (95807, 95810, 95811) whenever an in-lab study is cut short of a full night for reasons other than a planned split-night titration, equipment failure, patient withdrawal, or a technical abort. ⚠️ This build corroborated the 6-hour threshold and its extension to the attended codes against secondary sources (Sleep Review, Codapedia, AAPC), but could not confirm the exact governing language in a specific MAC's current article, since the CMS Coverage connector returns article metadata rather than full body text for local articles. Confirm against the article for your own MAC, named by contractor and article number in our pillar guide, before applying modifier 52 to an attended-study claim.</p>
+  <p>There's a floor below which modifier 52 doesn't apply at all: data too short or corrupted to support interpretation isn't a reduced service, it's a technical failure, a repeat study on a new date of service, not the original code with a modifier appended.</p>
 
   <h2>Split-night studies: one code, not two</h2>
-  <p>95811 already includes what 95810 covers, so a split-night study &mdash; diagnostic polysomnography for the first portion of the night, CPAP titration for the second once obstructive sleep apnea is confirmed &mdash; bills as 95811 alone for the entire encounter. Reporting 95810 for the diagnostic segment and 95811 for the titration segment of the same night is a duplicate-service pattern, not two payable phases of care, and denies as a bundling conflict rather than paying twice.</p>
+  <p>95811 already includes what 95810 covers, so a split-night study, diagnostic polysomnography for the first portion of the night, CPAP titration for the second once obstructive sleep apnea is confirmed, bills as 95811 alone for the entire encounter. Reporting 95810 for the diagnostic segment and 95811 for the titration segment of the same night is a duplicate-service pattern, not two payable phases of care, and denies as a bundling conflict rather than paying twice.</p>
 
   <h2>The CPT overhaul coming January 1, 2027</h2>
-  <p>The AMA CPT Editorial Panel approved deletion of 95800, 95801, and 95806 effective January 1, 2027, at a February 2025 meeting, replacing them with a new family of six complexity-tiered codes &mdash; provisionally designated 95X18 through 95X23 pending final code-number assignment, developed with input from the American Academy of Sleep Medicine, the American Thoracic Society, the American College of Chest Physicians, and the American Academy of Neurology. The intent is a code family that better reflects device complexity across a broader range of sleep disorders than the current three-code home-testing set. Every date of service through December 31, 2026 still bills on the current codes.</p>
+  <p>The AMA CPT Editorial Panel approved deletion of 95800, 95801, and 95806 effective January 1, 2027, at a February 2025 meeting, replacing them with a new family of six complexity-tiered codes, provisionally designated 95X18 through 95X23 pending final code-number assignment, developed with input from the American Academy of Sleep Medicine, the American Thoracic Society, the American College of Chest Physicians, and the American Academy of Neurology. The intent is a code family that better reflects device complexity across a broader range of sleep disorders than the current three-code home-testing set. Every date of service through December 31, 2026 still bills on the current codes.</p>
   <p>⚠️ Two things this build could not confirm: the final numeric code assignments replacing the 95X18&ndash;95X23 placeholders, and whether CMS will issue its own crosswalk decision extending G0398&ndash;G0400's Medicare-mandatory status once the new CPT family takes effect, since HCPCS Level II is CMS-maintained independent of the AMA's CPT action. Watch for the final AMA CPT code set and a forthcoming CMS transmittal addressing the crosswalk before finalizing a 2027 charge master.</p>
 
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Don't build a payer-specific CPT-versus-HCPCS charge rule from claims history alone. A commercial payer that denied the G-codes eighteen months ago may have since crosswalked its policy to Medicare's methodology, or the reverse. Check the payer's current medical policy bulletin before you lock in a rule &mdash; and revisit every payer's rule again once the 2027 CPT transition lands, since payers update crosswalks on their own schedule, not CMS's.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Don't build a payer-specific CPT-versus-HCPCS charge rule from claims history alone. A commercial payer that denied the G-codes eighteen months ago may have since crosswalked its policy to Medicare's methodology, or the reverse. Check the payer's current medical policy bulletin before you lock in a rule, and revisit every payer's rule again once the 2027 CPT transition lands, since payers update crosswalks on their own schedule, not CMS's.</p></div>
   </div>
 
   <h2>Payer matrix: which code set to bill</h2>
@@ -277,10 +332,10 @@
       <caption>Sleep testing code set by payer type.</caption>
       <thead><tr><th scope="col">Payer</th><th scope="col">Code set</th><th scope="col">Note</th></tr></thead>
       <tbody>
-        <tr><td>Medicare (traditional Part B)</td><td>G0398 / G0399 / G0400 only</td><td>CPT HST codes deny automatically &mdash; a code-selection rule, not a coverage dispute</td></tr>
-        <tr><td>Medicare Advantage</td><td>Plan-dependent</td><td>Most follow Medicare's G-code requirement as a UM overlay; some layer added precertification steps &mdash; confirm per plan</td></tr>
-        <tr><td>Commercial payers</td><td>CPT (transitioning to the new tiered family in 2027)</td><td>A minority crosswalk to the G-codes instead &mdash; verify per payer</td></tr>
-        <tr><td>Medicaid (state programs)</td><td>State-specific</td><td>Some crosswalk to the G-codes, others follow CPT &mdash; check your state plan directly</td></tr>
+        <tr><td>Medicare (traditional Part B)</td><td>G0398 / G0399 / G0400 only</td><td>CPT HST codes deny automatically, a code-selection rule, not a coverage dispute</td></tr>
+        <tr><td>Medicare Advantage</td><td>Plan-dependent</td><td>Most follow Medicare's G-code requirement as a UM overlay; some layer added precertification steps, confirm per plan</td></tr>
+        <tr><td>Commercial payers</td><td>CPT (transitioning to the new tiered family in 2027)</td><td>A minority crosswalk to the G-codes instead, verify per payer</td></tr>
+        <tr><td>Medicaid (state programs)</td><td>State-specific</td><td>Some crosswalk to the G-codes, others follow CPT, check your state plan directly</td></tr>
       </tbody>
     </table>
   </div>
@@ -290,11 +345,11 @@
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Confirm the monitor type against the device's actual spec sheet before selecting G0398, G0399, or G0400.</li>
       <li>Append modifier 52 whenever recorded time falls under 6 hours but the study is still clinically interpretable.</li>
-      <li>Bill 95811 alone for a split-night study &mdash; never both 95810 and 95811 for the same encounter.</li>
+      <li>Bill 95811 alone for a split-night study, never both 95810 and 95811 for the same encounter.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Don't</div><ul>
-      <li>Don't submit 95800, 95801, or 95806 to Medicare under any circumstance &mdash; the G-code substitution is mandatory, not optional.</li>
-      <li>Don't bill the full HST code when recorded data is too short to interpret at all &mdash; that's a repeat study, not a reduced service.</li>
+      <li>Don't submit 95800, 95801, or 95806 to Medicare under any circumstance, the G-code substitution is mandatory, not optional.</li>
+      <li>Don't bill the full HST code when recorded data is too short to interpret at all, that's a repeat study, not a reduced service.</li>
       <li>Don't wait until December 2026 to map your CPT sleep codes to the incoming complexity-tiered family.</li>
     </ul></div>
   </div>
@@ -309,14 +364,14 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Can we still bill 95800, 95801, or 95806 in 2026?</summary><p>Yes &mdash; all three remain active, billable CPT codes through the end of 2026. The AMA CPT Editorial Panel approved their deletion effective January 1, 2027, replacing them with a new complexity-tiered family of six codes (temporarily designated 95X18 through 95X23 pending final code assignment). Nothing changes for claims with a 2026 date of service; the transition planning is for 2027 charge masters and payer contracts, not for anything billable today.</p></details>
+    <details class="faq-item"><summary>Can we still bill 95800, 95801, or 95806 in 2026?</summary><p>Yes, all three remain active, billable CPT codes through the end of 2026. The AMA CPT Editorial Panel approved their deletion effective January 1, 2027, replacing them with a new complexity-tiered family of six codes (temporarily designated 95X18 through 95X23 pending final code assignment). Nothing changes for claims with a 2026 date of service; the transition planning is for 2027 charge masters and payer contracts, not for anything billable today.</p></details>
     <details class="faq-item"><summary>How do we know whether to bill G0398, G0399, or G0400?</summary><p>Match the code to the actual monitor type used for that patient's study, not the device's marketing name. G0398 requires a minimum of 7 channels (Type II), G0399 requires a minimum of 4 channels including two respiratory movement/airflow channels plus one ECG/heart rate channel and one oxygen saturation channel (Type III), and G0400 covers the simplest devices, recording a minimum of 3 channels (Type IV). If a device drops a channel mid-study and effectively records fewer channels than its rated type, code to what was actually recorded that night, not the device's nominal capability.</p></details>
-    <details class="faq-item"><summary>Do commercial payers ever require the HCPCS G-codes instead of CPT?</summary><p>Some do. Medicare's G0398-G0400 requirement is the clearest and most consistent rule in sleep testing, but a subset of commercial payers and some state Medicaid programs crosswalk their own sleep-testing policy to Medicare's methodology and require the same G-codes rather than the CPT HST codes. There's no universal rule here &mdash; confirm each payer's current medical policy bulletin rather than assuming CPT applies just because the payer isn't Medicare.</p></details>
+    <details class="faq-item"><summary>Do commercial payers ever require the HCPCS G-codes instead of CPT?</summary><p>Some do. Medicare's G0398-G0400 requirement is the clearest and most consistent rule in sleep testing, but a subset of commercial payers and some state Medicaid programs crosswalk their own sleep-testing policy to Medicare's methodology and require the same G-codes rather than the CPT HST codes. There's no universal rule here, confirm each payer's current medical policy bulletin rather than assuming CPT applies just because the payer isn't Medicare.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -328,62 +383,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>
