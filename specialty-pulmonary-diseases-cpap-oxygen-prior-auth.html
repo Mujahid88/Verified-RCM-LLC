@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="CPAP and Oxygen Prior Authorization: Avoiding the 30% Denial Rate | Verified RCM">
 <meta name="twitter:description" content="CPAP and oxygen prior auth by the numbers: LCD L33718/L33800/L33797 criteria, AHI/RDI and blood-gas thresholds, the 2026 DMEPOS PA master list, and the two-part re-evaluation payers actually check.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 25 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 25 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-pulmonary-diseases.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete pulmonary medicine guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a branching bronchial tree, representing pulmonary and respiratory diseases">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-pulmonary-diseases.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete pulmonary medicine guide</a>
+      <h1>CPAP and oxygen therapy prior authorization: avoiding the 30% denial rate.</h1>
+      <p class="lede">CPAP and home oxygen are two of the most common items pulmonology bills and two of the most heavily gated. Both HCPCS E0601 (CPAP) and E1390 (oxygen concentrator) sit on CMS's Required Prior Authorization list for DMEPOS, both are governed by DME MAC local coverage policy with specific numeric thresholds, and both carry a second authorization checkpoint after the initial approval that a surprising number of practices never build into their workflow. This guide goes past "get a prior auth" into the actual AHI/RDI and blood-gas numbers, the document IDs behind them, and the two-part re-evaluation that decides whether coverage continues past the first 90 days.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-pulmonary-diseases.html">pulmonary medicine billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a branching bronchial tree, representing pulmonary and respiratory diseases">
   <path d="M150,120 C90,180 80,300 140,380" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M330,120 C390,180 400,300 340,380" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 
@@ -202,14 +258,13 @@
   <circle cx="226" cy="348" r="4.5" fill="var(--cat-medical)"/>
   <circle cx="350" cy="342" r="4.5" fill="var(--cat-medical)"/>
 </svg></figure>
-  <h1>CPAP and oxygen therapy prior authorization: avoiding the 30% denial rate.</h1>
-  <p class="lede">CPAP and home oxygen are two of the most common items pulmonology bills and two of the most heavily gated. Both HCPCS E0601 (CPAP) and E1390 (oxygen concentrator) sit on CMS's Required Prior Authorization list for DMEPOS, both are governed by DME MAC local coverage policy with specific numeric thresholds, and both carry a second authorization checkpoint after the initial approval that a surprising number of practices never build into their workflow. This guide goes past "get a prior auth" into the actual AHI/RDI and blood-gas numbers, the document IDs behind them, and the two-part re-evaluation that decides whether coverage continues past the first 90 days.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-pulmonary-diseases.html">pulmonary medicine billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>E0601 (CPAP) and E1390 (oxygen concentrator) are both on CMS's DMEPOS Required Prior Authorization Master List.</b> Medical necessity alone doesn't move the claim &mdash; an approved PA number has to exist before the equipment goes out the door.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>E0601 (CPAP) and E1390 (oxygen concentrator) are both on CMS's DMEPOS Required Prior Authorization Master List.</b> Medical necessity alone doesn't move the claim, an approved PA number has to exist before the equipment goes out the door.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The AHI/RDI threshold decides how much documentation the chart needs.</b> 15+ events per hour needs nothing beyond the study itself; 5&ndash;14 needs a specific symptom or comorbidity spelled out in the note (LCD L33718).</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Oxygen coverage runs on two blood-gas tiers, not one.</b> Group I and Group II under LCD L33797 take different modifiers (N1 vs. N2), and Group II always needs a second qualifying factor on top of the number itself.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Continued CPAP coverage past 90 days needs a visit note and a compliance download together, in the same encounter.</b> Submitting either one alone is one of the specialty's most avoidable denials.</span></li>
@@ -217,7 +272,7 @@
   </section>
 
   <h2>Why this pair of items denies harder than almost anything else in pulmonology</h2>
-  <p>CPAP and oxygen aren't denied because the equipment is clinically wrong for the patient &mdash; they're denied because the claim has to clear three separate gates and most workflows are only built to clear one. The first gate is a DME MAC local coverage determination with a specific numeric threshold: an AHI/RDI cutoff for CPAP, a blood-gas cutoff for oxygen. The second gate is prior authorization itself, which for both items is a condition of payment under CMS's DMEPOS Required Prior Authorization program, not a courtesy check. The third gate is a re-evaluation checkpoint after the initial approval, which most practices treat as a formality and most payers treat as a hard requirement. Miss any one of the three and the claim denies regardless of how appropriate the therapy is.</p>
+  <p>CPAP and oxygen aren't denied because the equipment is clinically wrong for the patient, they're denied because the claim has to clear three separate gates and most workflows are only built to clear one. The first gate is a DME MAC local coverage determination with a specific numeric threshold: an AHI/RDI cutoff for CPAP, a blood-gas cutoff for oxygen. The second gate is prior authorization itself, which for both items is a condition of payment under CMS's DMEPOS Required Prior Authorization program, not a courtesy check. The third gate is a re-evaluation checkpoint after the initial approval, which most practices treat as a formality and most payers treat as a hard requirement. Miss any one of the three and the claim denies regardless of how appropriate the therapy is.</p>
 
   <h2>CPAP prior authorization: the AHI/RDI gate</h2>
   <p>CPAP (HCPCS <code>E0601</code>) is governed by <b>LCD L33718, Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea</b>, jointly published by DME MACs CGS Administrators and Noridian Healthcare Solutions, effective 01/01/2024, with its companion Policy Article A52467 last updated 05/08/2024. The medical necessity threshold is a specific numeric split, not a single cutoff:</p>
@@ -226,20 +281,20 @@
       <caption>CPAP qualifying criteria under LCD L33718.</caption>
       <thead><tr><th scope="col">AHI/RDI result</th><th scope="col">What the chart needs</th></tr></thead>
       <tbody>
-        <tr><td>&ge;15 events/hour (minimum 30 events on the study)</td><td>Qualifies on the study alone &mdash; no additional symptom documentation required</td></tr>
-        <tr><td>5&ndash;14 events/hour (minimum 10 events on the study)</td><td>Qualifies only with documented excessive daytime sleepiness, impaired cognition, a mood disorder, or insomnia &mdash; or a history of hypertension, ischemic heart disease, or stroke</td></tr>
+        <tr><td>&ge;15 events/hour (minimum 30 events on the study)</td><td>Qualifies on the study alone, no additional symptom documentation required</td></tr>
+        <tr><td>5&ndash;14 events/hour (minimum 10 events on the study)</td><td>Qualifies only with documented excessive daytime sleepiness, impaired cognition, a mood disorder, or insomnia, or a history of hypertension, ischemic heart disease, or stroke</td></tr>
         <tr><td>&lt;5 events/hour</td><td>Does not meet CPAP medical necessity under this LCD</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The 5&ndash;14 tier is where most preventable CPAP denials start. A sleep study result alone is enough to order the device clinically, but it is not enough to satisfy the LCD unless the qualifying symptom or comorbidity is written into the same chart &mdash; not implied by the diagnosis, stated. A note that says "OSA, AHI 9" without naming daytime sleepiness, a mood disorder, or one of the listed comorbidities reads as unqualified on review even when the patient's condition is real.</p>
-  <p>E0601 sits on CMS's <b>DMEPOS Required Prior Authorization Master List</b>, which means an approved prior authorization number is a condition of payment, not just good practice. CMS's January 13, 2026 Federal Register update to the master list took effect April 13, 2026 and added several oxygen-related codes to the parallel face-to-face/written-order-prior-to-delivery requirement &mdash; confirm your supplier's current list placement before assuming an item's PA status hasn't changed year over year, since these lists are revised on their own schedule.</p>
+  <p>The 5&ndash;14 tier is where most preventable CPAP denials start. A sleep study result alone is enough to order the device clinically, but it is not enough to satisfy the LCD unless the qualifying symptom or comorbidity is written into the same chart, not implied by the diagnosis, stated. A note that says "OSA, AHI 9" without naming daytime sleepiness, a mood disorder, or one of the listed comorbidities reads as unqualified on review even when the patient's condition is real.</p>
+  <p>E0601 sits on CMS's <b>DMEPOS Required Prior Authorization Master List</b>, which means an approved prior authorization number is a condition of payment, not just good practice. CMS's January 13, 2026 Federal Register update to the master list took effect April 13, 2026 and added several oxygen-related codes to the parallel face-to-face/written-order-prior-to-delivery requirement, confirm your supplier's current list placement before assuming an item's PA status hasn't changed year over year, since these lists are revised on their own schedule.</p>
 
-  <h2>When a bi-level RAD device replaces CPAP &mdash; and needs its own authorization</h2>
-  <p>Respiratory assist devices (bi-level PAP, HCPCS <code>E0470</code>/<code>E0471</code> depending on backup-rate capability) are governed by a separate policy: <b>LCD L33800, Respiratory Assist Devices</b>, from the same two DME MACs, effective 06/09/2025. RAD coverage applies to patients who fail CPAP therapy, who have OSA with a hypoventilation component, or who have a separate qualifying diagnosis such as severe COPD with hypercapnia or a restrictive thoracic disorder &mdash; it is not simply "CPAP didn't work, try the next device."</p>
+  <h2>When a bi-level RAD device replaces CPAP, and needs its own authorization</h2>
+  <p>Respiratory assist devices (bi-level PAP, HCPCS <code>E0470</code>/<code>E0471</code> depending on backup-rate capability) are governed by a separate policy: <b>LCD L33800, Respiratory Assist Devices</b>, from the same two DME MACs, effective 06/09/2025. RAD coverage applies to patients who fail CPAP therapy, who have OSA with a hypoventilation component, or who have a separate qualifying diagnosis such as severe COPD with hypercapnia or a restrictive thoracic disorder, it is not simply "CPAP didn't work, try the next device."</p>
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Because L33718 and L33800 are two separate LCDs, an existing CPAP prior authorization does not carry over to a RAD device. Treat the switch as a new order from scratch: new qualifying documentation against L33800's criteria, a new Standard Written Order naming the RAD device specifically, and a new PA submission &mdash; not an amendment request against the old CPAP authorization number.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Because L33718 and L33800 are two separate LCDs, an existing CPAP prior authorization does not carry over to a RAD device. Treat the switch as a new order from scratch: new qualifying documentation against L33800's criteria, a new Standard Written Order naming the RAD device specifically, and a new PA submission, not an amendment request against the old CPAP authorization number.</p></div>
   </div>
 
   <h2>Oxygen therapy: Group I vs. Group II and the modifier that proves it</h2>
@@ -249,12 +304,12 @@
       <caption>Oxygen qualifying tiers under LCD L33797.</caption>
       <thead><tr><th scope="col">Group</th><th scope="col">Qualifying result</th><th scope="col">Additional requirement</th><th scope="col">Claim modifier</th></tr></thead>
       <tbody>
-        <tr><td>Group I</td><td>Arterial PaO<sub>2</sub> &le;55 mmHg, or O<sub>2</sub> saturation &le;88%</td><td>None &mdash; the result alone qualifies</td><td><code>N1</code></td></tr>
+        <tr><td>Group I</td><td>Arterial PaO<sub>2</sub> &le;55 mmHg, or O<sub>2</sub> saturation &le;88%</td><td>None, the result alone qualifies</td><td><code>N1</code></td></tr>
         <tr><td>Group II</td><td>PaO<sub>2</sub> 56&ndash;59 mmHg, or O<sub>2</sub> saturation of 89%</td><td>Plus one of: dependent edema suggesting heart failure, P pulmonale on EKG, hematocrit &ge;56%, or documented cor pulmonale/pulmonary hypertension</td><td><code>N2</code></td></tr>
       </tbody>
     </table>
   </div>
-  <p>The qualifying test itself has to be done at the testing condition the equipment is ordered for &mdash; rest, exercise, or sleep &mdash; and a result drawn during exertion doesn't automatically support a rest-only order or vice versa. A face-to-face visit with the treating practitioner within the 30 days prior to the initial certification is required, along with documentation that alternative, non-oxygen treatment measures were tried or specifically considered and found clinically insufficient. Applying the N1 modifier to a Group II result, or omitting the second qualifying factor a Group II claim needs beyond the blood-gas number, are both common, avoidable coding-level denials rather than genuine coverage disputes.</p>
+  <p>The qualifying test itself has to be done at the testing condition the equipment is ordered for, rest, exercise, or sleep, and a result drawn during exertion doesn't automatically support a rest-only order or vice versa. A face-to-face visit with the treating practitioner within the 30 days prior to the initial certification is required, along with documentation that alternative, non-oxygen treatment measures were tried or specifically considered and found clinically insufficient. Applying the N1 modifier to a Group II result, or omitting the second qualifying factor a Group II claim needs beyond the blood-gas number, are both common, avoidable coding-level denials rather than genuine coverage disputes.</p>
   <p>Equipment HCPCS follows the delivery method actually ordered, and stationary and portable components are billed as distinct codes rather than one system:</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -273,10 +328,10 @@
   <p>Group II coverage carries its own continuation checkpoint, separate from CPAP's: a beneficiary who initially qualified under Group II needs to be re-evaluated and retested between the 61st and 90th day of therapy for coverage to continue past that window. Group I doesn't carry the same automatic retest requirement. Treating Group I and Group II as interchangeable for follow-up scheduling purposes is how a Group II patient's oxygen quietly lapses at day 91.</p>
 
   <h2>The CPAP re-evaluation: one requirement, two parts</h2>
-  <p>Continued CPAP coverage past the initial trial hinges on a single encounter between the 31st and 91st day of therapy that has to do two things at once: the treating practitioner documents that the patient's OSA symptoms have improved, and that same visit reviews the objective adherence data pulled from the device &mdash; use on at least 70% of nights, at least 4 hours per night, across a consecutive 30-day period within the first 90 days. Both elements need to trace to the same encounter. A compliance report faxed over on its own, with no accompanying visit note describing symptomatic improvement, satisfies the data half of the requirement and leaves the clinical half unaddressed &mdash; and payers that scrutinize CPAP continuation claims are checking for both.</p>
+  <p>Continued CPAP coverage past the initial trial hinges on a single encounter between the 31st and 91st day of therapy that has to do two things at once: the treating practitioner documents that the patient's OSA symptoms have improved, and that same visit reviews the objective adherence data pulled from the device, use on at least 70% of nights, at least 4 hours per night, across a consecutive 30-day period within the first 90 days. Both elements need to trace to the same encounter. A compliance report faxed over on its own, with no accompanying visit note describing symptomatic improvement, satisfies the data half of the requirement and leaves the clinical half unaddressed, and payers that scrutinize CPAP continuation claims are checking for both.</p>
 
   <h2>Accessory resupply: the quiet volume denial</h2>
-  <p>Mask and tubing resupply generates far more line-item denials than the initial device authorization, because it's high-volume, low-dollar-per-claim, and easy to automate past the point of compliance. DME MAC guidance publishes maximum replacement frequencies per accessory &mdash; these are ceilings tied to actual patient need and contact, not an entitlement to auto-ship on a calendar:</p>
+  <p>Mask and tubing resupply generates far more line-item denials than the initial device authorization, because it's high-volume, low-dollar-per-claim, and easy to automate past the point of compliance. DME MAC guidance publishes maximum replacement frequencies per accessory, these are ceilings tied to actual patient need and contact, not an entitlement to auto-ship on a calendar:</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Typical maximum PAP accessory replacement frequency. ⚠️ Secondary-sourced from published DME MAC supplier guidance; confirm current frequency and any quantity limits against your jurisdiction's DME MAC fee schedule before setting an automated resupply cadence.</caption>
@@ -289,19 +344,19 @@
       </tbody>
     </table>
   </div>
-  <p>A resupply denial almost never means the patient stopped needing the item &mdash; it means the claim shipped ahead of the documented need date, or without the patient contact that CMS requires suppliers to log before each resupply shipment. Build the contact log into the resupply workflow itself; reconstructing it after a post-payment audit request rarely produces a usable record.</p>
+  <p>A resupply denial almost never means the patient stopped needing the item, it means the claim shipped ahead of the documented need date, or without the patient contact that CMS requires suppliers to log before each resupply shipment. Build the contact log into the resupply workflow itself; reconstructing it after a post-payment audit request rarely produces a usable record.</p>
 
   <h2>Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Name the specific symptom or comorbidity in the note whenever a CPAP AHI/RDI result falls in the 5&ndash;14 range.</li>
-      <li>Confirm PA is submitted and approved for E0601 and E1390 before equipment ships &mdash; both are on the federal Required PA Master List.</li>
+      <li>Confirm PA is submitted and approved for E0601 and E1390 before equipment ships, both are on the federal Required PA Master List.</li>
       <li>Schedule the day-31-to-91 CPAP visit to capture symptom improvement and the compliance download in one encounter.</li>
-      <li>Flag Group II oxygen patients for the day-61-to-90 retest separately from the CPAP compliance calendar &mdash; they're different clocks.</li>
+      <li>Flag Group II oxygen patients for the day-61-to-90 retest separately from the CPAP compliance calendar, they're different clocks.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Don't</div><ul>
-      <li>Don't assume a CPAP prior authorization carries over when a patient is switched to a RAD device &mdash; L33718 and L33800 are separate policies.</li>
-      <li>Don't submit a compliance download alone as the day-31-to-91 re-evaluation &mdash; it needs a visit note documenting symptom improvement alongside it.</li>
+      <li>Don't assume a CPAP prior authorization carries over when a patient is switched to a RAD device, L33718 and L33800 are separate policies.</li>
+      <li>Don't submit a compliance download alone as the day-31-to-91 re-evaluation, it needs a visit note documenting symptom improvement alongside it.</li>
       <li>Don't apply modifier N1 to a Group II oxygen result, or bill Group II without the second qualifying factor.</li>
       <li>Don't auto-ship accessory resupply on a calendar without a logged patient contact confirming continued need.</li>
     </ul></div>
@@ -324,7 +379,7 @@
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -337,62 +392,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>
