@@ -359,7 +359,7 @@
           '</div>' +
           '<div class="quote-meta">' +
             '<div class="quote-result"><b>' + escapeHtml(r.resultValue) + '</b><span>' + escapeHtml(r.resultLabel) + '</span></div>' +
-            '<figcaption>&mdash; ' + escapeHtml(r.name) + '<span>' + escapeHtml(r.role) + '</span></figcaption>' +
+            '<figcaption>' + escapeHtml(r.name) + '<span>' + escapeHtml(r.role) + '</span></figcaption>' +
           '</div>' +
         '</figure>'
       );
