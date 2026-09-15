@@ -366,7 +366,7 @@
     }
 
     var arrow = function (dir) {
-      // Drawn chevron, not a unicode glyph — glyph arrows inherit the body
+      // Drawn chevron, not a unicode glyph, glyph arrows inherit the body
       // face and sit off-centre in a round button.
       var d = dir === 'prev' ? 'M15 18l-6-6 6-6' : 'M9 18l6-6-6-6';
       return '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
@@ -508,7 +508,7 @@
         if (field.required && !val) { fail(requiredMsg(field)); return; }
         if (!val) return;
         if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val)) {
-          fail('That email looks incomplete — check for a missing @ or domain.'); return;
+          fail('That email looks incomplete, check for a missing @ or domain.'); return;
         }
         if (field.minLength > 0 && val.length < field.minLength) {
           fail('Add a little more detail (at least ' + field.minLength + ' characters).'); return;
@@ -537,7 +537,7 @@
       if (field.required && !val) { showError(field, requiredMsg(field)); return; }
       if (!val) return;
       if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val)) {
-        showError(field, 'That email looks incomplete — check for a missing @ or domain.'); return;
+        showError(field, 'That email looks incomplete, check for a missing @ or domain.'); return;
       }
       if (field.minLength > 0 && val.length < field.minLength) {
         showError(field, 'Add a little more detail (at least ' + field.minLength + ' characters).'); return;
@@ -585,7 +585,7 @@
       }).finally(function () {
         if (btn) { btn.disabled = false; btn.textContent = btnLabel; }
         // A Turnstile token is single-use. Without this reset a visitor who
-        // hits a validation error can never successfully submit — the retry
+        // hits a validation error can never successfully submit, the retry
         // sends a spent token and is refused, which looks like a broken form.
         if (window.turnstile) { try { window.turnstile.reset(); } catch (e) {} }
       });

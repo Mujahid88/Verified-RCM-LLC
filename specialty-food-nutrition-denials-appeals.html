@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Nutrition and Dietetics Claim Denials and Appeals | Verified RCM">
 <meta name="twitter:description" content="Nutrition and dietetics denial patterns explained: missing diagnosis, incident-to mismatch on G0447/G0473, MNT/DSMT same-date bundling, expired referrals, hour-cap overage, and appeal language.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Nutrition and Dietetics","item":"https://www.verifiedrcm.com/specialty-food-nutrition.html"},{"@type":"ListItem","position":4,"name":"Nutrition and dietetics denials and appeals: the recurring patterns and the fix.","item":"https://www.verifiedrcm.com/specialty-food-nutrition-denials-appeals.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is a nutrition denial for missing diagnosis ever worth appealing?","acceptedAnswer":{"@type":"Answer","text":"Only if a qualifying diagnosis genuinely exists in the chart and simply wasn't on the claim line, or was coded to the wrong specificity — for example N18.6/Z99.2 submitted alone when the patient's actual pre-dialysis CKD stage would have supported MNT. In that case, correct the diagnosis and resubmit rather than filing a formal appeal; most MACs treat a diagnosis correction as a replacement claim, not a redetermination. If the diagnosis on the chart genuinely isn't diabetes or qualifying renal disease as defined at 42 CFR 410.130, there's no argument that reverses the denial — appealing it wastes staff time that's better spent on claims that are actually winnable."}},{"@type":"Question","name":"Can we appeal a denial for units billed over the MNT or DSMT hour cap?","acceptedAnswer":{"@type":"Answer","text":"Yes, but only if a treating physician documented a change in medical condition, diagnosis, or treatment regimen and ordered the additional hours during that episode of care, per the exception at 42 CFR 410.132(b)(5). The appeal has to cite that specific regulation and attach the physician's order — a general statement that the patient \"needed more counseling\" doesn't meet the standard. Without a qualifying physician order on file, units billed past the 3-hour initial-year or 2-hour subsequent-year MNT cap, or the 10-hour initial-year DSMT cap, generally aren't recoverable."}},{"@type":"Question","name":"Why did our G0447 obesity counseling claim deny even though the patient qualified clinically?","acceptedAnswer":{"@type":"Answer","text":"The most common cause isn't medical necessity — it's provider status. G0447 and G0473 are payable when furnished by a qualified primary care physician or NPP, and when a registered dietitian delivers the counseling it has to be billed incident-to that supervising provider's NPI, in a non-facility primary care setting, with direct supervision documented. A claim billed under the RD's own NPI instead denies for provider ineligibility regardless of how well the BMI and visit-schedule documentation supports medical necessity. Rebill under the correct supervising provider's NPI with incident-to requirements documented rather than appealing the medical necessity, which was never the actual problem."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is a nutrition denial for missing diagnosis ever worth appealing?","acceptedAnswer":{"@type":"Answer","text":"Only if a qualifying diagnosis genuinely exists in the chart and simply wasn't on the claim line, or was coded to the wrong specificity, for example N18.6/Z99.2 submitted alone when the patient's actual pre-dialysis CKD stage would have supported MNT. In that case, correct the diagnosis and resubmit rather than filing a formal appeal; most MACs treat a diagnosis correction as a replacement claim, not a redetermination. If the diagnosis on the chart genuinely isn't diabetes or qualifying renal disease as defined at 42 CFR 410.130, there's no argument that reverses the denial, appealing it wastes staff time that's better spent on claims that are actually winnable."}},{"@type":"Question","name":"Can we appeal a denial for units billed over the MNT or DSMT hour cap?","acceptedAnswer":{"@type":"Answer","text":"Yes, but only if a treating physician documented a change in medical condition, diagnosis, or treatment regimen and ordered the additional hours during that episode of care, per the exception at 42 CFR 410.132(b)(5). The appeal has to cite that specific regulation and attach the physician's order, a general statement that the patient \"needed more counseling\" doesn't meet the standard. Without a qualifying physician order on file, units billed past the 3-hour initial-year or 2-hour subsequent-year MNT cap, or the 10-hour initial-year DSMT cap, generally aren't recoverable."}},{"@type":"Question","name":"Why did our G0447 obesity counseling claim deny even though the patient qualified clinically?","acceptedAnswer":{"@type":"Answer","text":"The most common cause isn't medical necessity, it's provider status. G0447 and G0473 are payable when furnished by a qualified primary care physician or NPP, and when a registered dietitian delivers the counseling it has to be billed incident-to that supervising provider's NPI, in a non-facility primary care setting, with direct supervision documented. A claim billed under the RD's own NPI instead denies for provider ineligibility regardless of how well the BMI and visit-schedule documentation supports medical necessity. Rebill under the correct supervising provider's NPI with incident-to requirements documented rather than appealing the medical necessity, which was never the actual problem."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 25 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 25 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-food-nutrition.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>the full nutrition and dietetics billing and coding guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract plate divided into radiating wedge lines from a center point, representing food and nutrition">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-food-nutrition.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>the full nutrition and dietetics billing and coding guide</a>
+      <h1>Nutrition and dietetics denials and appeals: the recurring patterns and the fix.</h1>
+      <p class="lede">Most nutrition and dietetics denials aren't billing mistakes in the way a wrong CPT code is a mistake, they're coverage restrictions and provider-status rules that look like bundling edits until you check the actual source. Appealing the wrong bucket wastes staff hours on a claim that was never winnable, and skipping the appeal on a claim that genuinely was winnable leaves real revenue on the table. This guide walks through the six denial patterns that account for most of this specialty's write-offs, the CARC/RARC codes each one typically carries, and the appeal or correction language to use for each.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-food-nutrition.html">nutrition and dietetics billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract plate divided into radiating wedge lines from a center point, representing food and nutrition">
   <circle cx="240" cy="240" r="132" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="240" cy="240" r="86" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M240,240 L240,108" fill="none" stroke="var(--muted)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -181,60 +237,59 @@
   <path d="M240,240 L154,157" fill="none" stroke="var(--cat-behavioral)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="240" cy="240" r="5" fill="var(--cat-behavioral)"/>
 </svg></figure>
-  <h1>Nutrition and dietetics denials and appeals: the recurring patterns and the fix.</h1>
-  <p class="lede">Most nutrition and dietetics denials aren't billing mistakes in the way a wrong CPT code is a mistake &mdash; they're coverage restrictions and provider-status rules that look like bundling edits until you check the actual source. Appealing the wrong bucket wastes staff hours on a claim that was never winnable, and skipping the appeal on a claim that genuinely was winnable leaves real revenue on the table. This guide walks through the six denial patterns that account for most of this specialty's write-offs, the CARC/RARC codes each one typically carries, and the appeal or correction language to use for each.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-food-nutrition.html">nutrition and dietetics billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Sort the denial before you touch it.</b> Coverage restriction, provider-status mismatch, and correctable billing error each need a completely different response &mdash; treating all three as "appeal it" wastes the most staff time in this specialty.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Same-date MNT/DSMT denials and incident-to mismatches are not appealable on the merits.</b> Both are corrections, not appeals &mdash; reschedule the date or rebill under the right NPI.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The one denial type worth a real appeal &mdash; units past the hour cap &mdash; has a specific citation.</b> 42 CFR 410.132(b)(5) requires a physician-documented order for additional hours; without it on file, the appeal has nothing to stand on.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Sort the denial before you touch it.</b> Coverage restriction, provider-status mismatch, and correctable billing error each need a completely different response, treating all three as "appeal it" wastes the most staff time in this specialty.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Same-date MNT/DSMT denials and incident-to mismatches are not appealable on the merits.</b> Both are corrections, not appeals, reschedule the date or rebill under the right NPI.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The one denial type worth a real appeal, units past the hour cap, has a specific citation.</b> 42 CFR 410.132(b)(5) requires a physician-documented order for additional hours; without it on file, the appeal has nothing to stand on.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Every pattern here is preventable at intake, not at the denial queue.</b> Diagnosis, referral date, NPI selection, and hours-used-to-date are all knowable before the claim goes out.</span></li>
     </ul>
   </section>
 
   <h2>Sort the denial first: three buckets, three different responses</h2>
-  <p>Before working any nutrition denial, decide which of three buckets it falls into, because the wrong response burns staff time without recovering anything. <b>Coverage restrictions</b> &mdash; a diagnosis that doesn't meet 42 CFR 410.130's definition, an NCD 180.1 same-date rule, an hour cap without a qualifying order &mdash; are federal policy, not claim errors, and most aren't appealable at all. <b>Provider-status mismatches</b> &mdash; incident-to billed under the wrong NPI, a service billed before enrollment or accreditation was active &mdash; are correctable by rebilling, not arguable by appeal. <b>Genuine billing errors</b> &mdash; a diagnosis that qualifies but wasn't on the claim line, a referral that was current but not on file at submission &mdash; are the ones a resubmission or a real appeal can actually fix. The six patterns below map to those three buckets; know which bucket you're in before you draft anything.</p>
+  <p>Before working any nutrition denial, decide which of three buckets it falls into, because the wrong response burns staff time without recovering anything. <b>Coverage restrictions</b>, a diagnosis that doesn't meet 42 CFR 410.130's definition, an NCD 180.1 same-date rule, an hour cap without a qualifying order, are federal policy, not claim errors, and most aren't appealable at all. <b>Provider-status mismatches</b>, incident-to billed under the wrong NPI, a service billed before enrollment or accreditation was active, are correctable by rebilling, not arguable by appeal. <b>Genuine billing errors</b>, a diagnosis that qualifies but wasn't on the claim line, a referral that was current but not on file at submission, are the ones a resubmission or a real appeal can actually fix. The six patterns below map to those three buckets; know which bucket you're in before you draft anything.</p>
 
   <h2>1. Missing or non-covered diagnosis</h2>
-  <p>This is the highest-volume denial in the specialty because Medicare's MNT benefit recognizes exactly two diagnosis categories &mdash; diabetes and qualifying renal disease as defined at 42 CFR 410.130 &mdash; and nothing else, regardless of how clinically appropriate the counseling was. It shows two different faces on the remittance depending on where it fires: a front-end claim edit that rejects the line entirely for lacking any diagnosis, versus a processed claim denied for medical necessity because the diagnosis present doesn't qualify.</p>
+  <p>This is the highest-volume denial in the specialty because Medicare's MNT benefit recognizes exactly two diagnosis categories, diabetes and qualifying renal disease as defined at 42 CFR 410.130, and nothing else, regardless of how clinically appropriate the counseling was. It shows two different faces on the remittance depending on where it fires: a front-end claim edit that rejects the line entirely for lacking any diagnosis, versus a processed claim denied for medical necessity because the diagnosis present doesn't qualify.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Missing/non-covered diagnosis: typical CARC/RARC pairing and response.</caption>
       <thead><tr><th scope="col">Failure mode</th><th scope="col">Typical CARC / RARC</th><th scope="col">Response</th></tr></thead>
       <tbody>
-        <tr><td>No diagnosis on the MNT claim line at all</td><td><code>CO-16</code> (lacks information) with RARC <code>M76</code> (missing/incomplete/invalid diagnosis)</td><td>Correction &mdash; resubmit with the diagnosis attached, not an appeal</td></tr>
-        <tr><td>Diagnosis present but doesn't meet 42 CFR 410.130's definition</td><td><code>CO-50</code> (not medically necessary) with RARC <code>N115</code> (based on an NCD)</td><td>Appealable only if a qualifying diagnosis exists in the chart and was miscoded or omitted &mdash; otherwise not appealable</td></tr>
+        <tr><td>No diagnosis on the MNT claim line at all</td><td><code>CO-16</code> (lacks information) with RARC <code>M76</code> (missing/incomplete/invalid diagnosis)</td><td>Correction, resubmit with the diagnosis attached, not an appeal</td></tr>
+        <tr><td>Diagnosis present but doesn't meet 42 CFR 410.130's definition</td><td><code>CO-50</code> (not medically necessary) with RARC <code>N115</code> (based on an NCD)</td><td>Appealable only if a qualifying diagnosis exists in the chart and was miscoded or omitted, otherwise not appealable</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The N18.6/Z99.2 trap is worth naming specifically: a precisely coded ESRD-on-dialysis diagnosis is exactly the diagnosis that <i>excludes</i> a patient from MNT under the regulation's dialysis exclusion, not the one that supports it. A biller who sees a specific, well-documented renal code on the claim and assumes specificity alone should satisfy medical necessity is walking into a CO-50 that was correct. Appeal language, when the chart genuinely supports it: <i>"The claim was denied under CO-50/N115 for lack of a qualifying diagnosis. The patient's chart documents [E11.22 / N18.4 / Z94.0, as applicable], which meets the definition of qualifying renal disease under 42 CFR 410.130 as [chronic renal insufficiency / post-transplant status within 36 months]. Please reprocess with the attached diagnosis and supporting documentation."</i> ⚠️ Billing-industry reporting describes a hard claim edit effective August 3, 2026 that denies MNT claims on 97802, 97803, G0270, and G0271 outright when no diagnosis is attached &mdash; this build could not confirm that edit against a CMS transmittal or MAC bulletin directly, so verify it against your own MAC's published guidance before treating it as settled, though the front-end prevention step is identical either way.</p>
+  <p>The N18.6/Z99.2 trap is worth naming specifically: a precisely coded ESRD-on-dialysis diagnosis is exactly the diagnosis that <i>excludes</i> a patient from MNT under the regulation's dialysis exclusion, not the one that supports it. A biller who sees a specific, well-documented renal code on the claim and assumes specificity alone should satisfy medical necessity is walking into a CO-50 that was correct. Appeal language, when the chart genuinely supports it: <i>"The claim was denied under CO-50/N115 for lack of a qualifying diagnosis. The patient's chart documents [E11.22 / N18.4 / Z94.0, as applicable], which meets the definition of qualifying renal disease under 42 CFR 410.130 as [chronic renal insufficiency / post-transplant status within 36 months]. Please reprocess with the attached diagnosis and supporting documentation."</i> ⚠️ Billing-industry reporting describes a hard claim edit effective August 3, 2026 that denies MNT claims on 97802, 97803, G0270, and G0271 outright when no diagnosis is attached, this build could not confirm that edit against a CMS transmittal or MAC bulletin directly, so verify it against your own MAC's published guidance before treating it as settled, though the front-end prevention step is identical either way.</p>
 
   <h2>2. Incident-to mismatch on G0447/G0473</h2>
-  <p>Obesity IBT is the specialty's one benefit that runs incident-to in the direction most RDN billers aren't used to. NCD 210.12 names the qualified furnishing provider as a primary care physician or NPP, not a registered dietitian, so when an RD delivers the counseling it has to be billed under the supervising physician or NPP's NPI, in a non-facility primary care setting, with direct supervision and an established plan of care documented. Billing G0447 or G0473 under the RD's own NPI &mdash; the same reflex that's correct for MNT two sections over &mdash; denies for provider ineligibility, and it denies regardless of how well the BMI and visit-schedule documentation otherwise supports the claim.</p>
-  <p>Typical CARC: <code>CO-8</code> (procedure code inconsistent with the provider type/specialty billed), sometimes paired with RARC <code>N95</code> (this provider type may not bill this service), or <code>CO-B7</code> (provider not certified/eligible to be paid for this service on this date) when the payer's system frames it as an eligibility issue rather than a specialty mismatch. Neither is appealable as billed. The fix is a rebill under the correct supervising provider's NPI with the incident-to elements &mdash; direct supervision, established plan of care, active physician involvement &mdash; documented in the note, not an appeal letter arguing the medical necessity that was never actually in dispute.</p>
+  <p>Obesity IBT is the specialty's one benefit that runs incident-to in the direction most RDN billers aren't used to. NCD 210.12 names the qualified furnishing provider as a primary care physician or NPP, not a registered dietitian, so when an RD delivers the counseling it has to be billed under the supervising physician or NPP's NPI, in a non-facility primary care setting, with direct supervision and an established plan of care documented. Billing G0447 or G0473 under the RD's own NPI, the same reflex that's correct for MNT two sections over, denies for provider ineligibility, and it denies regardless of how well the BMI and visit-schedule documentation otherwise supports the claim.</p>
+  <p>Typical CARC: <code>CO-8</code> (procedure code inconsistent with the provider type/specialty billed), sometimes paired with RARC <code>N95</code> (this provider type may not bill this service), or <code>CO-B7</code> (provider not certified/eligible to be paid for this service on this date) when the payer's system frames it as an eligibility issue rather than a specialty mismatch. Neither is appealable as billed. The fix is a rebill under the correct supervising provider's NPI with the incident-to elements, direct supervision, established plan of care, active physician involvement, documented in the note, not an appeal letter arguing the medical necessity that was never actually in dispute.</p>
 
   <h2>3. MNT/DSMT same-date bundling</h2>
-  <p>NCD 180.1 permits Medicare to pay both MNT and DSMT, initial and subsequent year, without reducing either benefit's hours &mdash; on the condition that the two are not furnished on the same calendar date for the same patient. This is coverage policy written into the NCD itself, not an NCCI Procedure-to-Procedure edit, which matters because it means there is no modifier indicator to check and no override modifier that reopens it.</p>
-  <p>Typical CARC: <code>CO-97</code> (benefit included in the payment/allowance for another service already adjudicated), commonly paired with RARC <code>N115</code> (based on an NCD) when the payer's remittance correctly signals the coverage basis, though some payer systems return a bare CO-97 without the NCD-specific RARC, which is exactly what causes billers to treat it like an ordinary bundling edit. It isn't one. Do not append 59 or an X-modifier to force the second claim through &mdash; there's no documentation that overrides an NCD restriction, and repeated attempts to unbundle it are a pattern payers flag. The only fix is scheduling MNT and DSMT on separate calendar dates going forward; the same-date claim itself is a write-off, not an appeal.</p>
+  <p>NCD 180.1 permits Medicare to pay both MNT and DSMT, initial and subsequent year, without reducing either benefit's hours, on the condition that the two are not furnished on the same calendar date for the same patient. This is coverage policy written into the NCD itself, not an NCCI Procedure-to-Procedure edit, which matters because it means there is no modifier indicator to check and no override modifier that reopens it.</p>
+  <p>Typical CARC: <code>CO-97</code> (benefit included in the payment/allowance for another service already adjudicated), commonly paired with RARC <code>N115</code> (based on an NCD) when the payer's remittance correctly signals the coverage basis, though some payer systems return a bare CO-97 without the NCD-specific RARC, which is exactly what causes billers to treat it like an ordinary bundling edit. It isn't one. Do not append 59 or an X-modifier to force the second claim through, there's no documentation that overrides an NCD restriction, and repeated attempts to unbundle it are a pattern payers flag. The only fix is scheduling MNT and DSMT on separate calendar dates going forward; the same-date claim itself is a write-off, not an appeal.</p>
 
   <h2>4. Expired or disqualified referral</h2>
-  <p>MNT referrals expire annually on a calendar-year basis regardless of when in the year the original referral was written, and they have to come from a physician as defined at Section 1861(r)(1) of the Social Security Act &mdash; an NP or PA referral, however clinically appropriate, does not satisfy the requirement since the January 1, 2022 regulatory alignment of 42 CFR 410.130 and 410.132 with the statute.</p>
+  <p>MNT referrals expire annually on a calendar-year basis regardless of when in the year the original referral was written, and they have to come from a physician as defined at Section 1861(r)(1) of the Social Security Act, an NP or PA referral, however clinically appropriate, does not satisfy the requirement since the January 1, 2022 regulatory alignment of 42 CFR 410.130 and 410.132 with the statute.</p>
   <ul class="check-list">
-    <li><span class="warn">1</span><span><b>Referral genuinely expired at time of service.</b> Typical CARC <code>CO-16</code> with RARC <code>N286</code> (missing/incomplete/invalid referring provider identifier), sometimes <code>CO-50</code> if the payer routes it through medical necessity instead. Not appealable for dates of service before a new referral was obtained &mdash; get a current physician referral and rebill from that date forward only.</span></li>
-    <li><span class="check">2</span><span><b>Referral was current but wasn't on file or wasn't transmitted with the claim.</b> Same CARC/RARC pairing, but this is a documentation gap, not a coverage gap &mdash; resubmit with the referral attached rather than treating it as unrecoverable.</span></li>
-    <li><span class="warn">3</span><span><b>Referral came from an NP or PA.</b> Not a timing problem &mdash; it never qualified. CO-50 territory, not appealable; a physician has to issue a new referral before the benefit is billable at all.</span></li>
+    <li><span class="warn">1</span><span><b>Referral genuinely expired at time of service.</b> Typical CARC <code>CO-16</code> with RARC <code>N286</code> (missing/incomplete/invalid referring provider identifier), sometimes <code>CO-50</code> if the payer routes it through medical necessity instead. Not appealable for dates of service before a new referral was obtained, get a current physician referral and rebill from that date forward only.</span></li>
+    <li><span class="check">2</span><span><b>Referral was current but wasn't on file or wasn't transmitted with the claim.</b> Same CARC/RARC pairing, but this is a documentation gap, not a coverage gap, resubmit with the referral attached rather than treating it as unrecoverable.</span></li>
+    <li><span class="warn">3</span><span><b>Referral came from an NP or PA.</b> Not a timing problem, it never qualified. CO-50 territory, not appealable; a physician has to issue a new referral before the benefit is billable at all.</span></li>
   </ul>
 
   <h2>5. Units billed over the NCD hour cap</h2>
   <p>MNT caps at 3 hours in the initial year and 2 hours in subsequent years; DSMT caps at 10 hours initial year (with only 1 of those 10 payable as individual training) and 2 hours in follow-up years. Typical CARC: <code>CO-119</code> (benefit maximum for this time period or occurrence has been reached).</p>
-  <p>This is the one denial pattern in this specialty genuinely worth a formal appeal, and it has a specific citation to hang it on: the exception at 42 CFR 410.132(b)(5) covers additional hours beyond the cap when the treating physician determines a change in medical condition, diagnosis, or treatment regimen requires it, and orders the additional hours during that episode of care. Appeal language: <i>"The claim was denied under CO-119 for units exceeding the annual MNT/DSMT hour cap. Per 42 CFR 410.132(b)(5), additional hours are covered when a treating physician documents a change in medical condition, diagnosis, or treatment regimen and orders the additional MNT. The attached physician order dated [date] documents [the specific change] and supports the additional units billed. Please reprocess with the attached order."</i> Without that order on file, the units aren't recoverable &mdash; confirm the order exists before staff time goes into the appeal, not after.</p>
+  <p>This is the one denial pattern in this specialty genuinely worth a formal appeal, and it has a specific citation to hang it on: the exception at 42 CFR 410.132(b)(5) covers additional hours beyond the cap when the treating physician determines a change in medical condition, diagnosis, or treatment regimen requires it, and orders the additional hours during that episode of care. Appeal language: <i>"The claim was denied under CO-119 for units exceeding the annual MNT/DSMT hour cap. Per 42 CFR 410.132(b)(5), additional hours are covered when a treating physician documents a change in medical condition, diagnosis, or treatment regimen and orders the additional MNT. The attached physician order dated [date] documents [the specific change] and supports the additional units billed. Please reprocess with the attached order."</i> Without that order on file, the units aren't recoverable, confirm the order exists before staff time goes into the appeal, not after.</p>
 
   <h2>6. Credentialing and accreditation gaps</h2>
   <p>A claim submitted before an RDN's Medicare enrollment (CMS-855I) was active, or before a DSMT program's ADA-ERP or ADCES-DEAP accreditation was in place, cannot be paid regardless of how clinically appropriate the service was. Typical CARC: <code>CO-B7</code> (provider not certified/eligible to be paid for this procedure/service on this date of service).</p>
-  <p>This is not appealable under any circumstance a claim's own facts can support, because the defect is that the billing entity wasn't eligible to bill on that date, not that the service was wrong. The only prevention is holding claims until enrollment or accreditation confirmation is in hand &mdash; not submitting speculatively and hoping the effective date lands before the claim processes. If a program is mid-accreditation, track the expected effective date and hold DSMT claims until it's confirmed active rather than banking on a retroactive allowance that may not exist for your specific MAC.</p>
+  <p>This is not appealable under any circumstance a claim's own facts can support, because the defect is that the billing entity wasn't eligible to bill on that date, not that the service was wrong. The only prevention is holding claims until enrollment or accreditation confirmation is in hand, not submitting speculatively and hoping the effective date lands before the claim processes. If a program is mid-accreditation, track the expected effective date and hold DSMT claims until it's confirmed active rather than banking on a retroactive allowance that may not exist for your specific MAC.</p>
 
   <h2>Quick reference: denial, CARC/RARC, and whether it's appealable</h2>
   <div class="data-table-wrap">
@@ -242,19 +297,19 @@
       <caption>All six patterns at a glance.</caption>
       <thead><tr><th scope="col">Denial pattern</th><th scope="col">Typical CARC / RARC</th><th scope="col">Appealable?</th></tr></thead>
       <tbody>
-        <tr><td>Missing diagnosis (front-end reject)</td><td><code>CO-16</code> / <code>M76</code></td><td>No &mdash; resubmit with diagnosis</td></tr>
+        <tr><td>Missing diagnosis (front-end reject)</td><td><code>CO-16</code> / <code>M76</code></td><td>No, resubmit with diagnosis</td></tr>
         <tr><td>Non-covered diagnosis (processed)</td><td><code>CO-50</code> / <code>N115</code></td><td>Only if a qualifying diagnosis was omitted or miscoded</td></tr>
-        <tr><td>Incident-to mismatch, IBT</td><td><code>CO-8</code> or <code>CO-B7</code> / <code>N95</code></td><td>No &mdash; rebill under correct NPI</td></tr>
-        <tr><td>Same-date MNT/DSMT</td><td><code>CO-97</code> / <code>N115</code></td><td>No &mdash; reschedule going forward</td></tr>
+        <tr><td>Incident-to mismatch, IBT</td><td><code>CO-8</code> or <code>CO-B7</code> / <code>N95</code></td><td>No, rebill under correct NPI</td></tr>
+        <tr><td>Same-date MNT/DSMT</td><td><code>CO-97</code> / <code>N115</code></td><td>No, reschedule going forward</td></tr>
         <tr><td>Expired/disqualified referral</td><td><code>CO-16</code> or <code>CO-50</code> / <code>N286</code></td><td>Only for dates after a current referral is obtained</td></tr>
-        <tr><td>Units over the hour cap</td><td><code>CO-119</code></td><td>Yes &mdash; with a 42 CFR 410.132(b)(5) physician order on file</td></tr>
-        <tr><td>Credentialing/accreditation gap</td><td><code>CO-B7</code></td><td>No &mdash; hold claims until confirmed active</td></tr>
+        <tr><td>Units over the hour cap</td><td><code>CO-119</code></td><td>Yes, with a 42 CFR 410.132(b)(5) physician order on file</td></tr>
+        <tr><td>Credentialing/accreditation gap</td><td><code>CO-B7</code></td><td>No, hold claims until confirmed active</td></tr>
       </tbody>
     </table>
   </div>
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Of the six patterns above, only one &mdash; units past the hour cap &mdash; has a real appeal path most of the time. The other five are corrections: fix the diagnosis, fix the NPI, fix the date, fix the referral, or hold the claim until credentialing is active. Building an intake checklist that catches all five before the claim goes out prevents more denied revenue than any appeal-writing effort ever recovers after the fact.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Of the six patterns above, only one, units past the hour cap, has a real appeal path most of the time. The other five are corrections: fix the diagnosis, fix the NPI, fix the date, fix the referral, or hold the claim until credentialing is active. Building an intake checklist that catches all five before the claim goes out prevents more denied revenue than any appeal-writing effort ever recovers after the fact.</p></div>
   </div>
 
   <h2>Do and don't</h2>
@@ -266,7 +321,7 @@
       <li>Track referral renewal dates on a calendar-year cycle, not a rolling 12-month-from-original-date cycle.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Don't</div><ul>
-      <li>Don't append 59 or an X-modifier to a same-date MNT/DSMT denial &mdash; there's no documentation that overrides an NCD restriction.</li>
+      <li>Don't append 59 or an X-modifier to a same-date MNT/DSMT denial, there's no documentation that overrides an NCD restriction.</li>
       <li>Don't appeal an incident-to mismatch instead of rebilling under the correct NPI.</li>
       <li>Don't treat a specific ESRD/dialysis diagnosis as automatically supporting MNT medical necessity.</li>
       <li>Don't submit DSMT claims speculatively ahead of confirmed accreditation effective dates.</li>
@@ -283,14 +338,14 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Is a nutrition denial for missing diagnosis ever worth appealing?</summary><p>Only if a qualifying diagnosis genuinely exists in the chart and simply wasn't on the claim line, or was coded to the wrong specificity &mdash; for example N18.6/Z99.2 submitted alone when the patient's actual pre-dialysis CKD stage would have supported MNT. In that case, correct the diagnosis and resubmit rather than filing a formal appeal; most MACs treat a diagnosis correction as a replacement claim, not a redetermination. If the diagnosis on the chart genuinely isn't diabetes or qualifying renal disease as defined at 42 CFR 410.130, there's no argument that reverses the denial &mdash; appealing it wastes staff time that's better spent on claims that are actually winnable.</p></details>
-    <details class="faq-item"><summary>Can we appeal a denial for units billed over the MNT or DSMT hour cap?</summary><p>Yes, but only if a treating physician documented a change in medical condition, diagnosis, or treatment regimen and ordered the additional hours during that episode of care, per the exception at 42 CFR 410.132(b)(5). The appeal has to cite that specific regulation and attach the physician's order &mdash; a general statement that the patient "needed more counseling" doesn't meet the standard. Without a qualifying physician order on file, units billed past the 3-hour initial-year or 2-hour subsequent-year MNT cap, or the 10-hour initial-year DSMT cap, generally aren't recoverable.</p></details>
-    <details class="faq-item"><summary>Why did our G0447 obesity counseling claim deny even though the patient qualified clinically?</summary><p>The most common cause isn't medical necessity &mdash; it's provider status. G0447 and G0473 are payable when furnished by a qualified primary care physician or NPP, and when a registered dietitian delivers the counseling it has to be billed incident-to that supervising provider's NPI, in a non-facility primary care setting, with direct supervision documented. A claim billed under the RD's own NPI instead denies for provider ineligibility regardless of how well the BMI and visit-schedule documentation supports medical necessity. Rebill under the correct supervising provider's NPI with incident-to requirements documented rather than appealing the medical necessity, which was never the actual problem.</p></details>
+    <details class="faq-item"><summary>Is a nutrition denial for missing diagnosis ever worth appealing?</summary><p>Only if a qualifying diagnosis genuinely exists in the chart and simply wasn't on the claim line, or was coded to the wrong specificity, for example N18.6/Z99.2 submitted alone when the patient's actual pre-dialysis CKD stage would have supported MNT. In that case, correct the diagnosis and resubmit rather than filing a formal appeal; most MACs treat a diagnosis correction as a replacement claim, not a redetermination. If the diagnosis on the chart genuinely isn't diabetes or qualifying renal disease as defined at 42 CFR 410.130, there's no argument that reverses the denial, appealing it wastes staff time that's better spent on claims that are actually winnable.</p></details>
+    <details class="faq-item"><summary>Can we appeal a denial for units billed over the MNT or DSMT hour cap?</summary><p>Yes, but only if a treating physician documented a change in medical condition, diagnosis, or treatment regimen and ordered the additional hours during that episode of care, per the exception at 42 CFR 410.132(b)(5). The appeal has to cite that specific regulation and attach the physician's order, a general statement that the patient "needed more counseling" doesn't meet the standard. Without a qualifying physician order on file, units billed past the 3-hour initial-year or 2-hour subsequent-year MNT cap, or the 10-hour initial-year DSMT cap, generally aren't recoverable.</p></details>
+    <details class="faq-item"><summary>Why did our G0447 obesity counseling claim deny even though the patient qualified clinically?</summary><p>The most common cause isn't medical necessity, it's provider status. G0447 and G0473 are payable when furnished by a qualified primary care physician or NPP, and when a registered dietitian delivers the counseling it has to be billed incident-to that supervising provider's NPI, in a non-facility primary care setting, with direct supervision documented. A claim billed under the RD's own NPI instead denies for provider ineligibility regardless of how well the BMI and visit-schedule documentation supports medical necessity. Rebill under the correct supervising provider's NPI with incident-to requirements documented rather than appealing the medical necessity, which was never the actual problem.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -303,62 +358,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>

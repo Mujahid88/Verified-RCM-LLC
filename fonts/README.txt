@@ -1,22 +1,4 @@
-Drop self-hosted font files here (optional).
-
-The site currently uses Archivo with a system-ui fallback and loads NO external
-font files, so it has zero third-party requests.
-
-To self-host Archivo:
-1. Download the .woff2 files (e.g. from https://fonts.google.com/specimen/Archivo).
-2. Place them in this folder.
-3. Add to the top of css/style.css:
-
-   @font-face {
-     font-family: "Archivo";
-     src: url("../fonts/Archivo-Regular.woff2") format("woff2");
-     font-weight: 400;
-     font-display: swap;
-   }
-   @font-face {
-     font-family: "Archivo";
-     src: url("../fonts/Archivo-Bold.woff2") format("woff2");
-     font-weight: 700 800;
-     font-display: swap;
-   }
+Self-hosted fonts for the Lake design system (latin subsets, woff2):
+- Quicksand-700-latin.woff2: display face, headings only
+- NunitoSans-Variable-latin.woff2: body and UI, weights 200 to 1000
+Both are open source (SIL OFL) from Google Fonts. No third-party font requests are made.

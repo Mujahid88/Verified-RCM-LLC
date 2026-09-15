@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="ICD-10 Coding for Chiropractic Claims: The Two-Diagnosis Rule | Verified RCM">
 <meta name="twitter:description" content="Chiropractic ICD-10 coding: the Medicare two-diagnosis rule, the full M99.00-M99.19 subluxation region table, the M99.9 under-coding red flag, and the over-coding trap that fails audit.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 25 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 25 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-chiropractic.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete chiropractic guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a spine formed from aligned vertebral segments, with one segment highlighted as the point of alignment">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-chiropractic.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete chiropractic guide</a>
+      <h1>ICD-10 coding for chiropractic claims: the two-diagnosis rule.</h1>
+      <p class="lede">Every Medicare chiropractic claim runs on two diagnosis codes working together, not one, a primary subluxation code that names the region, and a secondary code that states the actual clinical reason manipulation was necessary that date. Get either half wrong and the claim fails, in one of two different ways: an unspecified or missing piece that reads as insufficient documentation, or an over-specific code the note doesn't actually support. This guide is the full crosswalk: every region code in both subluxation series, the secondary pairings that hold up, and the two traps that sit on either side of the rule.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-chiropractic.html">chiropractic billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a spine formed from aligned vertebral segments, with one segment highlighted as the point of alignment">
   <path d="M 244 100 C 260 140, 220 160, 232 200 C 244 240, 256 260, 244 300 C 236 330, 220 350, 236 380" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 
   <line x1="232" y1="105" x2="260" y2="105" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round"/>
@@ -188,34 +244,33 @@
   <line x1="210" y1="345" x2="238" y2="345" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
   <line x1="218" y1="375" x2="246" y2="375" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round"/>
 </svg></figure>
-  <h1>ICD-10 coding for chiropractic claims: the two-diagnosis rule.</h1>
-  <p class="lede">Every Medicare chiropractic claim runs on two diagnosis codes working together, not one &mdash; a primary subluxation code that names the region, and a secondary code that states the actual clinical reason manipulation was necessary that date. Get either half wrong and the claim fails, in one of two different ways: an unspecified or missing piece that reads as insufficient documentation, or an over-specific code the note doesn't actually support. This guide is the full crosswalk: every region code in both subluxation series, the secondary pairings that hold up, and the two traps that sit on either side of the rule.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-chiropractic.html">chiropractic billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Every Medicare chiropractic claim needs a primary subluxation code plus a secondary condition code &mdash; not one or the other.</b> The primary code alone doesn't establish medical necessity; the secondary code is what does.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Every Medicare chiropractic claim needs a primary subluxation code plus a secondary condition code, not one or the other.</b> The primary code alone doesn't establish medical necessity; the secondary code is what does.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>M99.00 through M99.05 and M99.10 through M99.19 are both verified billable</b> for the six spinal and cranial regions Medicare's chiropractic benefit covers, confirmed live against the FY2026 ICD-10-CM code set.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>M99.9 is a red flag, not a shortcut,</b> whenever the PART exam actually names a region &mdash; which is nearly every visit in a properly documented chiropractic practice.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Over-specifying is just as risky as under-coding.</b> A highly specific secondary code the note doesn't actually support &mdash; like an imaging-confirmed diagnosis with no imaging in the chart &mdash; can pay initially and still fail on audit.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>M99.9 is a red flag, not a shortcut,</b> whenever the PART exam actually names a region, which is nearly every visit in a properly documented chiropractic practice.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Over-specifying is just as risky as under-coding.</b> A highly specific secondary code the note doesn't actually support, like an imaging-confirmed diagnosis with no imaging in the chart, can pay initially and still fail on audit.</span></li>
     </ul>
   </section>
 
   <h2>The two-diagnosis rule, in full</h2>
   <p>Under the MAC chiropractic billing and coding articles that govern Medicare payment (WPS <code>A56273</code>, CGS <code>A56455</code>, Palmetto GBA <code>A56616</code>, Wellpoint Federal <code>A57889</code>), a chiropractic claim establishes medical necessity through two diagnosis codes working together, each doing a different job:</p>
   <ol>
-    <li><b>A primary nonallopathic lesion/subluxation code</b> &mdash; from the M99.00&ndash;M99.05 series (segmental and somatic dysfunction) or the M99.10&ndash;M99.19 series (subluxation complex, vertebral) &mdash; identifying the spinal region where the subluxation was found.</li>
-    <li><b>A secondary ICD-10 code</b> identifying the neuromusculoskeletal condition the subluxation is causing &mdash; the clinical reason manipulation was medically necessary at that visit, not just where the subluxation happens to sit.</li>
+    <li><b>A primary nonallopathic lesion/subluxation code</b>, from the M99.00&ndash;M99.05 series (segmental and somatic dysfunction) or the M99.10&ndash;M99.19 series (subluxation complex, vertebral), identifying the spinal region where the subluxation was found.</li>
+    <li><b>A secondary ICD-10 code</b> identifying the neuromusculoskeletal condition the subluxation is causing, the clinical reason manipulation was medically necessary at that visit, not just where the subluxation happens to sit.</li>
   </ol>
-  <p>The logic behind requiring both: the primary code by itself only says where a biomechanical finding was located. It doesn't say what that finding is doing to the patient, or why treating it matters clinically. A payer reviewing a claim with only a primary code has no stated reason manipulation was reasonable and necessary that date &mdash; and &ldquo;reasonable and necessary&rdquo; is the exact standard Medicare medical necessity review is built around. The secondary code closes that gap by naming the actual condition &mdash; low back pain, cervicalgia, a documented sprain &mdash; that the PART findings and the treatment plan are addressing.</p>
+  <p>The logic behind requiring both: the primary code by itself only says where a biomechanical finding was located. It doesn't say what that finding is doing to the patient, or why treating it matters clinically. A payer reviewing a claim with only a primary code has no stated reason manipulation was reasonable and necessary that date, and &ldquo;reasonable and necessary&rdquo; is the exact standard Medicare medical necessity review is built around. The secondary code closes that gap by naming the actual condition, low back pain, cervicalgia, a documented sprain, that the PART findings and the treatment plan are addressing.</p>
 
   <h2>The primary code: full region reference</h2>
-  <p>Both series cover the same six regions and are treated as functionally interchangeable by most MAC articles for establishing the primary subluxation diagnosis &mdash; the distinction between &ldquo;segmental and somatic dysfunction&rdquo; and &ldquo;subluxation complex, vertebral&rdquo; is a documentation-convention difference more than a coverage one, though your specific MAC's article language should be the final word for your jurisdiction. All twelve codes below were verified live against the current (FY2026) ICD-10-CM code set and confirmed billable for HIPAA transactions.</p>
+  <p>Both series cover the same six regions and are treated as functionally interchangeable by most MAC articles for establishing the primary subluxation diagnosis, the distinction between &ldquo;segmental and somatic dysfunction&rdquo; and &ldquo;subluxation complex, vertebral&rdquo; is a documentation-convention difference more than a coverage one, though your specific MAC's article language should be the final word for your jurisdiction. All twelve codes below were verified live against the current (FY2026) ICD-10-CM code set and confirmed billable for HIPAA transactions.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Primary subluxation codes by region, both series, verified billable in the current ICD-10-CM code set.</caption>
-      <thead><tr><th scope="col">Region</th><th scope="col">M99.0x &mdash; segmental/somatic dysfunction</th><th scope="col">M99.1x &mdash; subluxation complex (vertebral)</th></tr></thead>
+      <thead><tr><th scope="col">Region</th><th scope="col">M99.0x, segmental/somatic dysfunction</th><th scope="col">M99.1x, subluxation complex (vertebral)</th></tr></thead>
       <tbody>
         <tr><td>Head</td><td><code>M99.00</code></td><td><code>M99.10</code></td></tr>
         <tr><td>Cervical</td><td><code>M99.01</code></td><td><code>M99.11</code></td></tr>
@@ -226,11 +281,11 @@
       </tbody>
     </table>
   </div>
-  <p>These six regions are the ones that map to Medicare's chiropractic benefit and to the CMT code family (98940&ndash;98942 bill by how many of these regions were treated). Both series extend further &mdash; M99.06/M99.16 (lower extremity), M99.07/M99.17 (upper extremity), M99.08/M99.18 (rib cage), and M99.09/M99.19 (abdomen and other regions) are also verified billable, but they describe extraspinal findings, which fall under 98943 and are statutorily excluded from the Medicare chiropractic benefit regardless of medical necessity. They're relevant to a chiropractic chart, but not to a Medicare-payable CMT claim &mdash; know the distinction before selecting a primary code on a claim you intend to bill to Medicare.</p>
-  <p>Only one primary code is billed per claim, matched to the region(s) the CMT code covers. A claim billing 98941 (3&ndash;4 regions) should carry a primary code &mdash; or, where a payer's edit logic requires region-specific reporting, primary codes &mdash; consistent with the regions the note documents as positive, not just the regions physically touched during the adjustment.</p>
+  <p>These six regions are the ones that map to Medicare's chiropractic benefit and to the CMT code family (98940&ndash;98942 bill by how many of these regions were treated). Both series extend further, M99.06/M99.16 (lower extremity), M99.07/M99.17 (upper extremity), M99.08/M99.18 (rib cage), and M99.09/M99.19 (abdomen and other regions) are also verified billable, but they describe extraspinal findings, which fall under 98943 and are statutorily excluded from the Medicare chiropractic benefit regardless of medical necessity. They're relevant to a chiropractic chart, but not to a Medicare-payable CMT claim, know the distinction before selecting a primary code on a claim you intend to bill to Medicare.</p>
+  <p>Only one primary code is billed per claim, matched to the region(s) the CMT code covers. A claim billing 98941 (3&ndash;4 regions) should carry a primary code, or, where a payer's edit logic requires region-specific reporting, primary codes, consistent with the regions the note documents as positive, not just the regions physically touched during the adjustment.</p>
 
   <h2>The secondary code: what the medical necessity argument actually rests on</h2>
-  <p>The secondary code is where a chiropractic claim either holds up or falls apart on medical necessity review, because it's the only place on the claim that states the clinical reason treatment happened. It has to match the region and the clinical picture the note describes &mdash; not a generic musculoskeletal code chosen out of habit.</p>
+  <p>The secondary code is where a chiropractic claim either holds up or falls apart on medical necessity review, because it's the only place on the claim that states the clinical reason treatment happened. It has to match the region and the clinical picture the note describes, not a generic musculoskeletal code chosen out of habit.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Common secondary diagnosis pairings by presentation, all verified billable in the current ICD-10-CM code set.</caption>
@@ -249,15 +304,15 @@
       </tbody>
     </table>
   </div>
-  <p>Two things decide whether a secondary code is right, and neither is optional: it has to match the region the primary code and the note both point to, and it has to be exactly as specific as the documentation supports &mdash; no more, no less. A note that documents lumbar PART findings and describes axial low back pain with no imaging in the chart supports M54.50, not M54.51; a note that references a specific MRI-confirmed endplate finding supports M54.51 directly.</p>
+  <p>Two things decide whether a secondary code is right, and neither is optional: it has to match the region the primary code and the note both point to, and it has to be exactly as specific as the documentation supports, no more, no less. A note that documents lumbar PART findings and describes axial low back pain with no imaging in the chart supports M54.50, not M54.51; a note that references a specific MRI-confirmed endplate finding supports M54.51 directly.</p>
 
   <h2>The M99.9 under-coding red flag</h2>
-  <p><code>M99.9</code> (biomechanical lesion, unspecified) is verified billable and exists in the current code set for the rare case where a finding genuinely can't be localized to a specific region. In a chiropractic practice running a real PART exam at every visit, that case should be rare &mdash; the exam is built around region-specific findings by design. If the note documents cervical asymmetry and a cervical range-of-motion restriction, the claim should carry M99.01 or M99.11, not M99.9.</p>
-  <p>The pattern that draws attention on a coding-accuracy review is exactly this: a claim history where M99.9 appears repeatedly, or appears on a claim where the note plainly names a region. It reads as either a documentation shortcut (the PART exam was done but not translated into a specific code) or an actual documentation gap (the PART exam wasn't specific enough to support a region code at all) &mdash; and payers can't tell which from the claim alone, so both read as a problem. Either way, it's a signal worth fixing before a payer flags it, not after.</p>
+  <p><code>M99.9</code> (biomechanical lesion, unspecified) is verified billable and exists in the current code set for the rare case where a finding genuinely can't be localized to a specific region. In a chiropractic practice running a real PART exam at every visit, that case should be rare, the exam is built around region-specific findings by design. If the note documents cervical asymmetry and a cervical range-of-motion restriction, the claim should carry M99.01 or M99.11, not M99.9.</p>
+  <p>The pattern that draws attention on a coding-accuracy review is exactly this: a claim history where M99.9 appears repeatedly, or appears on a claim where the note plainly names a region. It reads as either a documentation shortcut (the PART exam was done but not translated into a specific code) or an actual documentation gap (the PART exam wasn't specific enough to support a region code at all), and payers can't tell which from the claim alone, so both read as a problem. Either way, it's a signal worth fixing before a payer flags it, not after.</p>
 
   <h2>The over-coding trap</h2>
-  <p>The opposite failure mode gets less attention but is just as costly. Billing a highly specific secondary code &mdash; one that implies a particular diagnostic finding, like an imaging-confirmed source of pain &mdash; when the note doesn't actually document that finding is a claim that can pay cleanly on first submission and still fail an audit months later, because nothing about specificity mismatches trips an automated edit the way a missing code does.</p>
-  <p>The clearest example in chiropractic practice: <code>M54.51</code> (vertebrogenic low back pain) specifically implies imaging-confirmed vertebral endplate changes as the pain source. Billing it because it's &ldquo;more specific&rdquo; or because a template defaults to it, with no imaging referenced anywhere in the chart, creates a gap between what the code claims and what the record supports. On review, that gap reads the same as any other unsupported code &mdash; the fact that it was more specific rather than less specific doesn't protect it. The safer default whenever imaging hasn't actually been reviewed and cited in the note is <code>M54.50</code> (unspecified) or <code>M54.59</code> (other specified, when the note describes a mechanism or source that isn't imaging-based), moving to M54.51 only once the imaging finding is actually in the chart and referenced in the assessment.</p>
+  <p>The opposite failure mode gets less attention but is just as costly. Billing a highly specific secondary code, one that implies a particular diagnostic finding, like an imaging-confirmed source of pain, when the note doesn't actually document that finding is a claim that can pay cleanly on first submission and still fail an audit months later, because nothing about specificity mismatches trips an automated edit the way a missing code does.</p>
+  <p>The clearest example in chiropractic practice: <code>M54.51</code> (vertebrogenic low back pain) specifically implies imaging-confirmed vertebral endplate changes as the pain source. Billing it because it's &ldquo;more specific&rdquo; or because a template defaults to it, with no imaging referenced anywhere in the chart, creates a gap between what the code claims and what the record supports. On review, that gap reads the same as any other unsupported code, the fact that it was more specific rather than less specific doesn't protect it. The safer default whenever imaging hasn't actually been reviewed and cited in the note is <code>M54.50</code> (unspecified) or <code>M54.59</code> (other specified, when the note describes a mechanism or source that isn't imaging-based), moving to M54.51 only once the imaging finding is actually in the chart and referenced in the assessment.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Do</div><ul>
       <li>Match the primary code's region to the region(s) the PART exam and the CMT code actually cover.</li>
@@ -269,7 +324,7 @@
       <li>Bill a primary subluxation code with no secondary diagnosis at all.</li>
       <li>Default to M99.9 when the PART exam actually names a specific region.</li>
       <li>Bill an imaging-implied code like M54.51 without an imaging finding referenced in the note.</li>
-      <li>Bill an extraspinal M99.06&ndash;M99.09/M99.16&ndash;M99.19 code as the primary diagnosis on a Medicare CMT claim &mdash; those regions fall under 98943, which Medicare excludes entirely.</li>
+      <li>Bill an extraspinal M99.06&ndash;M99.09/M99.16&ndash;M99.19 code as the primary diagnosis on a Medicare CMT claim, those regions fall under 98943, which Medicare excludes entirely.</li>
     </ul></div>
   </div>
   <div class="protip">
@@ -279,9 +334,9 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Can we bill a chiropractic claim to Medicare with only the subluxation code?</summary><p>Not defensibly. The primary subluxation code (M99.00-M99.05 or M99.10-M99.19) tells the payer where the subluxation is, but it does not state why manipulation was medically necessary on that date of service &mdash; that's the secondary code's job. A claim with only a primary code leaves the medical necessity argument incomplete, and it is one of the fastest routes to a CO-50 denial. Every Medicare chiropractic claim needs both codes working together.</p></details>
-    <details class="faq-item"><summary>Is M99.9 ever an acceptable primary diagnosis?</summary><p>It's a valid, billable code, but it's a documentation-specificity red flag whenever the exam actually identifies a region &mdash; and in chiropractic practice, the PART exam almost always does. If the note documents cervical PART findings, the claim should carry M99.01 or M99.11, not M99.9. Reserve M99.9 for the rare case where the documentation genuinely can't localize the finding to a specific region, and expect it to draw more scrutiny than a region-specific code.</p></details>
-    <details class="faq-item"><summary>Do the M99.0x and M99.1x series mean different things, or can we use either one?</summary><p>They describe the same clinical concept from two different framing conventions &mdash; segmental and somatic dysfunction (M99.0x) versus subluxation complex, vertebral (M99.1x) &mdash; and most MAC chiropractic articles treat them as functionally interchangeable for establishing the primary diagnosis. The distinction is largely documentation style rather than a coverage difference, but confirm your specific MAC's article language, since some contractors phrase their guidance around one series more than the other, and consistency within your own practice's coding pattern matters more than which series you pick.</p></details>
+    <details class="faq-item"><summary>Can we bill a chiropractic claim to Medicare with only the subluxation code?</summary><p>Not defensibly. The primary subluxation code (M99.00-M99.05 or M99.10-M99.19) tells the payer where the subluxation is, but it does not state why manipulation was medically necessary on that date of service, that's the secondary code's job. A claim with only a primary code leaves the medical necessity argument incomplete, and it is one of the fastest routes to a CO-50 denial. Every Medicare chiropractic claim needs both codes working together.</p></details>
+    <details class="faq-item"><summary>Is M99.9 ever an acceptable primary diagnosis?</summary><p>It's a valid, billable code, but it's a documentation-specificity red flag whenever the exam actually identifies a region, and in chiropractic practice, the PART exam almost always does. If the note documents cervical PART findings, the claim should carry M99.01 or M99.11, not M99.9. Reserve M99.9 for the rare case where the documentation genuinely can't localize the finding to a specific region, and expect it to draw more scrutiny than a region-specific code.</p></details>
+    <details class="faq-item"><summary>Do the M99.0x and M99.1x series mean different things, or can we use either one?</summary><p>They describe the same clinical concept from two different framing conventions, segmental and somatic dysfunction (M99.0x) versus subluxation complex, vertebral (M99.1x), and most MAC chiropractic articles treat them as functionally interchangeable for establishing the primary diagnosis. The distinction is largely documentation style rather than a coverage difference, but confirm your specific MAC's article language, since some contractors phrase their guidance around one series more than the other, and consistency within your own practice's coding pattern matters more than which series you pick.</p></details>
   </div>
 
   <div class="cta-band">
@@ -294,7 +349,7 @@
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -307,62 +362,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>

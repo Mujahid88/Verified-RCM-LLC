@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Rheumatology Biologic J-Code Crosswalk: HCPCS to Diagnosis | Verified RCM">
 <meta name="twitter:description" content="Rheumatology biologic J-code crosswalk: seven biologics matched to HCPCS J-code, administration code, and the specific ICD-10-CM diagnosis each covers.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Rheumatology","item":"https://www.verifiedrcm.com/specialty-rheumatology.html"},{"@type":"ListItem","position":4,"name":"Rheumatology biologic J-code crosswalk: HCPCS to diagnosis","item":"https://www.verifiedrcm.com/specialty-rheumatology-biologic-jcode-crosswalk.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the ICD-10 code on a biologic infusion claim have to match the drug's FDA label exactly?","acceptedAnswer":{"@type":"Answer","text":"It has to fall within the drug's FDA-labeled indications and, separately, within whatever diagnosis list the payer's coverage policy or LCD names for that drug — the two aren't always identical, and a payer can cover a narrower set of diagnoses than the FDA label allows. Billing rituximab for an off-label rheumatologic use, for instance, is far more likely to trigger a CO-50 medical-necessity denial than billing it for RA, GPA, or MPA, even though the drug itself is administered identically either way."}},{"@type":"Question","name":"What's the ICD-10 coding difference between certolizumab for ankylosing spondylitis and for non-radiographic axial spondyloarthritis?","acceptedAnswer":{"@type":"Answer","text":"Established ankylosing spondylitis is coded M45.0 through M45.9 by spinal region, while non-radiographic axial spondyloarthritis — disease with objective inflammation but without the sacroiliac joint damage that defines radiographic AS — has its own separate family, M45.A0 through M45.AB. Certolizumab pegol is FDA-labeled for both, but a payer's coverage policy for the nr-axSpA indication specifically checks for an M45.A code; billing the general M45.9 unspecified-AS code instead doesn't satisfy that check even when the clinical picture is genuinely non-radiographic."}},{"@type":"Question","name":"Can rituximab be billed under the same rheumatoid arthritis diagnosis code used for other biologics?","acceptedAnswer":{"@type":"Answer","text":"Only when RA is actually the indication being treated. Rituximab also carries an FDA-labeled indication for ANCA-associated vasculitis — granulomatosis with polyangiitis (M31.30 without renal involvement, M31.31 with renal involvement) and microscopic polyangiitis (M31.7) — and a claim for either of those has to carry the vasculitis diagnosis, not the practice's usual RA code for rituximab. Defaulting every rituximab claim to an RA code regardless of the actual indication is a documented pattern payers' systems flag."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the ICD-10 code on a biologic infusion claim have to match the drug's FDA label exactly?","acceptedAnswer":{"@type":"Answer","text":"It has to fall within the drug's FDA-labeled indications and, separately, within whatever diagnosis list the payer's coverage policy or LCD names for that drug, the two aren't always identical, and a payer can cover a narrower set of diagnoses than the FDA label allows. Billing rituximab for an off-label rheumatologic use, for instance, is far more likely to trigger a CO-50 medical-necessity denial than billing it for RA, GPA, or MPA, even though the drug itself is administered identically either way."}},{"@type":"Question","name":"What's the ICD-10 coding difference between certolizumab for ankylosing spondylitis and for non-radiographic axial spondyloarthritis?","acceptedAnswer":{"@type":"Answer","text":"Established ankylosing spondylitis is coded M45.0 through M45.9 by spinal region, while non-radiographic axial spondyloarthritis, disease with objective inflammation but without the sacroiliac joint damage that defines radiographic AS, has its own separate family, M45.A0 through M45.AB. Certolizumab pegol is FDA-labeled for both, but a payer's coverage policy for the nr-axSpA indication specifically checks for an M45.A code; billing the general M45.9 unspecified-AS code instead doesn't satisfy that check even when the clinical picture is genuinely non-radiographic."}},{"@type":"Question","name":"Can rituximab be billed under the same rheumatoid arthritis diagnosis code used for other biologics?","acceptedAnswer":{"@type":"Answer","text":"Only when RA is actually the indication being treated. Rituximab also carries an FDA-labeled indication for ANCA-associated vasculitis, granulomatosis with polyangiitis (M31.30 without renal involvement, M31.31 with renal involvement) and microscopic polyangiitis (M31.7), and a claim for either of those has to carry the vasculitis diagnosis, not the practice's usual RA code for rituximab. Defaulting every rituximab claim to an RA code regardless of the actual indication is a documented pattern payers' systems flag."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 25 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 25 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-rheumatology.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete rheumatology billing and coding guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a joint hinge with orbiting markers representing rheumatology">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-rheumatology.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete rheumatology billing and coding guide</a>
+      <h1>Rheumatology biologic J-code crosswalk: HCPCS to diagnosis.</h1>
+      <p class="lede">A biologic infusion claim can carry the right J-code, the right units, and a clean JW or JZ modifier and still deny, because the diagnosis code doesn't sit inside what the drug is actually FDA-labeled and payer-covered to treat. This guide crosswalks seven rheumatology biologics carrying real revenue: the HCPCS J-code, the administration-code family each one actually belongs to, and the specific ICD-10-CM subcode each labeled indication maps to, going past the five-drug summary in our main guide to cover the giant cell arteritis, ANCA vasculitis, and non-radiographic axial spondyloarthritis indications most crosswalks skip.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-rheumatology.html">rheumatology billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a joint hinge with orbiting markers representing rheumatology">
   <!-- upper limb segment -->
   <path d="M150,140 L232,220" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
   <!-- lower limb segment -->
@@ -196,54 +252,53 @@
   <circle cx="276" cy="266" r="3.5" fill="var(--cat-medical)" />
   <circle cx="188" cy="196" r="3" stroke="var(--cat-medical)" stroke-width="2" fill="none" />
 </svg></figure>
-  <h1>Rheumatology biologic J-code crosswalk: HCPCS to diagnosis.</h1>
-  <p class="lede">A biologic infusion claim can carry the right J-code, the right units, and a clean JW or JZ modifier and still deny &mdash; because the diagnosis code doesn't sit inside what the drug is actually FDA-labeled and payer-covered to treat. This guide crosswalks seven rheumatology biologics carrying real revenue: the HCPCS J-code, the administration-code family each one actually belongs to, and the specific ICD-10-CM subcode each labeled indication maps to &mdash; going past the five-drug summary in our main guide to cover the giant cell arteritis, ANCA vasculitis, and non-radiographic axial spondyloarthritis indications most crosswalks skip.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-rheumatology.html">rheumatology billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Seven biologics, not five.</b> This crosswalk adds tocilizumab-for-GCA (M31.5/M31.6), rituximab-for-vasculitis (M31.30/M31.31, M31.7), and certolizumab's non-radiographic axial spondyloarthritis indication &mdash; none of which appear in the five-drug RA/SLE table in our main rheumatology guide.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Certolizumab pegol is a subcutaneous injection, not an infusion.</b> Billing J0717 under 96365/96366 instead of 96372 is a specific, avoidable administration-code error &mdash; the code's own descriptor says as much.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Ankylosing spondylitis and non-radiographic axial spondyloarthritis are different ICD-10 families</b> &mdash; M45.0&ndash;M45.9 versus M45.A0&ndash;M45.AB &mdash; and using the wrong one fails a payer's coverage check even when the clinical picture is correct.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Seven biologics, not five.</b> This crosswalk adds tocilizumab-for-GCA (M31.5/M31.6), rituximab-for-vasculitis (M31.30/M31.31, M31.7), and certolizumab's non-radiographic axial spondyloarthritis indication, none of which appear in the five-drug RA/SLE table in our main rheumatology guide.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Certolizumab pegol is a subcutaneous injection, not an infusion.</b> Billing J0717 under 96365/96366 instead of 96372 is a specific, avoidable administration-code error, the code's own descriptor says as much.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Ankylosing spondylitis and non-radiographic axial spondyloarthritis are different ICD-10 families</b>, M45.0&ndash;M45.9 versus M45.A0&ndash;M45.AB, and using the wrong one fails a payer's coverage check even when the clinical picture is correct.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Units, waste, and diagnosis all trace back to the same encounter.</b> The HCPCS unit size, the dose actually given, and the JW/JZ line have to reconcile against the same drug-and-diagnosis pairing, or the claim breaks somewhere.</span></li>
     </ul>
   </section>
 
   <h2>Why the diagnosis line is the real audit target</h2>
-  <p>A payer's claims engine checks the J-code against the administered drug's NDC automatically, and a missing JW or JZ modifier kicks an unprocessable claim back within days &mdash; both are mechanical checks that fire regardless of clinical judgment. The diagnosis-to-drug match is different: it's a coverage decision, not a data-validation rule, and it's where CO-50 medical-necessity denials concentrate on biologic claims specifically. A claim can be flawless on units and modifiers and still deny because the diagnosis code doesn't sit inside the drug's FDA label, or inside the specific MAC's LCD-covered diagnosis list for that drug. Building the crosswalk once, per biologic, and checking every claim against it before submission is materially cheaper than working a CO-50 denial after the fact.</p>
+  <p>A payer's claims engine checks the J-code against the administered drug's NDC automatically, and a missing JW or JZ modifier kicks an unprocessable claim back within days, both are mechanical checks that fire regardless of clinical judgment. The diagnosis-to-drug match is different: it's a coverage decision, not a data-validation rule, and it's where CO-50 medical-necessity denials concentrate on biologic claims specifically. A claim can be flawless on units and modifiers and still deny because the diagnosis code doesn't sit inside the drug's FDA label, or inside the specific MAC's LCD-covered diagnosis list for that drug. Building the crosswalk once, per biologic, and checking every claim against it before submission is materially cheaper than working a CO-50 denial after the fact.</p>
 
   <h2>The seven-biologic HCPCS-to-diagnosis crosswalk</h2>
-  <p>Five of these seven &mdash; infliximab, rituximab, tocilizumab, abatacept, and belimumab &mdash; appear in our main rheumatology guide's crosswalk table under their most common RA and SLE indications. This table adds golimumab and certolizumab pegol, and extends all seven to the indications outside RA and SLE a rheumatology practice is most likely to also bill: giant cell arteritis, ANCA-associated vasculitis, and axial spondyloarthritis in both its radiographic and non-radiographic forms.</p>
+  <p>Five of these seven, infliximab, rituximab, tocilizumab, abatacept, and belimumab, appear in our main rheumatology guide's crosswalk table under their most common RA and SLE indications. This table adds golimumab and certolizumab pegol, and extends all seven to the indications outside RA and SLE a rheumatology practice is most likely to also bill: giant cell arteritis, ANCA-associated vasculitis, and axial spondyloarthritis in both its radiographic and non-radiographic forms.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Seven rheumatology biologics: J-code, administration code family, FDA-labeled rheumatologic indications, and the ICD-10-CM family each maps to. ICD-10-CM codes verified live against the FY2026 code set; HCPCS J-codes checked against current secondary billing references (no CPT/HCPCS connector is available to re-verify against the primary AMA/CMS source).</caption>
       <thead><tr><th scope="col">Biologic</th><th scope="col">HCPCS J-code</th><th scope="col">Administration</th><th scope="col">Rheum indication</th><th scope="col">Primary ICD-10-CM</th></tr></thead>
       <tbody>
-        <tr><td>Infliximab</td><td><code>J1745</code> &mdash; 10 mg</td><td>Non-chemo infusion: 96365/96366</td><td>RA &middot; PsA &middot; AS</td><td>M05.79/M06.9 &middot; L40.50&ndash;L40.59 &middot; M45.0&ndash;M45.9</td></tr>
-        <tr><td>Rituximab</td><td><code>J9312</code> &mdash; 10 mg</td><td>Chemo/complex infusion: 96413/96415</td><td>RA (post-TNF) &middot; GPA &middot; MPA</td><td>M05.79/M06.9 &middot; M31.30/M31.31 &middot; M31.7</td></tr>
-        <tr><td>Tocilizumab</td><td><code>J3262</code> &mdash; 1 mg</td><td>Non-chemo infusion: 96365/96366</td><td>RA &middot; GCA &middot; polyarticular/systemic JIA</td><td>M05.79/M06.9 &middot; M31.5/M31.6 &middot; M08.2x/M08.4x</td></tr>
-        <tr><td>Abatacept</td><td><code>J0129</code> &mdash; 10 mg</td><td>Non-chemo infusion: 96365/96366</td><td>RA &middot; PsA &middot; polyarticular JIA</td><td>M05.79/M06.9 &middot; L40.50&ndash;L40.59 &middot; M08.4x</td></tr>
-        <tr><td>Belimumab</td><td><code>J0490</code> &mdash; 10 mg</td><td>Non-chemo infusion: 96365/96366</td><td>SLE &middot; lupus nephritis</td><td>M32.10 &middot; M32.14/M32.15</td></tr>
-        <tr><td>Golimumab (IV)</td><td><code>J1602</code> &mdash; 1 mg</td><td>Non-chemo infusion: 96365/96366</td><td>RA &middot; PsA &middot; AS</td><td>M05.79/M06.9 &middot; L40.50&ndash;L40.59 &middot; M45.0&ndash;M45.9</td></tr>
-        <tr><td>Certolizumab pegol</td><td><code>J0717</code> &mdash; 1 mg</td><td>SC injection: 96372, not an infusion code</td><td>RA &middot; PsA &middot; AS &middot; non-radiographic axial SpA</td><td>M05.79/M06.9 &middot; L40.50&ndash;L40.59 &middot; M45.0&ndash;M45.9 &middot; M45.A0&ndash;M45.AB</td></tr>
+        <tr><td>Infliximab</td><td><code>J1745</code>, 10 mg</td><td>Non-chemo infusion: 96365/96366</td><td>RA &middot; PsA &middot; AS</td><td>M05.79/M06.9 &middot; L40.50&ndash;L40.59 &middot; M45.0&ndash;M45.9</td></tr>
+        <tr><td>Rituximab</td><td><code>J9312</code>, 10 mg</td><td>Chemo/complex infusion: 96413/96415</td><td>RA (post-TNF) &middot; GPA &middot; MPA</td><td>M05.79/M06.9 &middot; M31.30/M31.31 &middot; M31.7</td></tr>
+        <tr><td>Tocilizumab</td><td><code>J3262</code>, 1 mg</td><td>Non-chemo infusion: 96365/96366</td><td>RA &middot; GCA &middot; polyarticular/systemic JIA</td><td>M05.79/M06.9 &middot; M31.5/M31.6 &middot; M08.2x/M08.4x</td></tr>
+        <tr><td>Abatacept</td><td><code>J0129</code>, 10 mg</td><td>Non-chemo infusion: 96365/96366</td><td>RA &middot; PsA &middot; polyarticular JIA</td><td>M05.79/M06.9 &middot; L40.50&ndash;L40.59 &middot; M08.4x</td></tr>
+        <tr><td>Belimumab</td><td><code>J0490</code>, 10 mg</td><td>Non-chemo infusion: 96365/96366</td><td>SLE &middot; lupus nephritis</td><td>M32.10 &middot; M32.14/M32.15</td></tr>
+        <tr><td>Golimumab (IV)</td><td><code>J1602</code>, 1 mg</td><td>Non-chemo infusion: 96365/96366</td><td>RA &middot; PsA &middot; AS</td><td>M05.79/M06.9 &middot; L40.50&ndash;L40.59 &middot; M45.0&ndash;M45.9</td></tr>
+        <tr><td>Certolizumab pegol</td><td><code>J0717</code>, 1 mg</td><td>SC injection: 96372, not an infusion code</td><td>RA &middot; PsA &middot; AS &middot; non-radiographic axial SpA</td><td>M05.79/M06.9 &middot; L40.50&ndash;L40.59 &middot; M45.0&ndash;M45.9 &middot; M45.A0&ndash;M45.AB</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Certolizumab pegol (Cimzia) has no IV formulation &mdash; it's given as a subcutaneous injection, in-office or self-administered. J0717's own code descriptor limits it to when the drug is administered under the direct supervision of a physician, not when it's self-administered, meaning the code applies to the in-office scenario billed with 96372 and never alongside an infusion administration code. Crosswalking it into 96365/96366 because it sits next to infusion biologics on the same fee schedule is one of the more specific, avoidable errors in rheumatology J-code billing.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Certolizumab pegol (Cimzia) has no IV formulation, it's given as a subcutaneous injection, in-office or self-administered. J0717's own code descriptor limits it to when the drug is administered under the direct supervision of a physician, not when it's self-administered, meaning the code applies to the in-office scenario billed with 96372 and never alongside an infusion administration code. Crosswalking it into 96365/96366 because it sits next to infusion biologics on the same fee schedule is one of the more specific, avoidable errors in rheumatology J-code billing.</p></div>
   </div>
 
   <h2>ICD-10 specificity inside each indication</h2>
-  <p>The drug-to-diagnosis match isn't satisfied by billing any code from the right family &mdash; several of these indications have a specific-versus-unspecified split that a payer's coverage policy or step-therapy edit checks directly.</p>
+  <p>The drug-to-diagnosis match isn't satisfied by billing any code from the right family, several of these indications have a specific-versus-unspecified split that a payer's coverage policy or step-therapy edit checks directly.</p>
   <ul class="check-list">
-    <li><span class="check">RA</span><span><b>Seropositive versus seronegative.</b> Already covered in depth in our ICD-10 specificity guide for rheumatology &mdash; M05 for confirmed RF- or anti-CCP-positive disease, M06 for seronegative and unspecified presentations. It applies to every RA indication in the table above, not just infliximab.</span></li>
+    <li><span class="check">RA</span><span><b>Seropositive versus seronegative.</b> Already covered in depth in our ICD-10 specificity guide for rheumatology, M05 for confirmed RF- or anti-CCP-positive disease, M06 for seronegative and unspecified presentations. It applies to every RA indication in the table above, not just infliximab.</span></li>
     <li><span class="check">AS</span><span><b>Radiographic AS versus non-radiographic axial SpA.</b> M45.0&ndash;M45.9 covers established AS by spinal region. M45.A0&ndash;M45.AB is a separate family for disease with objective inflammation but without the sacroiliac joint damage that defines radiographic AS. Certolizumab pegol is labeled for both; a payer's nr-axSpA-specific coverage policy checks for an M45.A code specifically, and M45.9 (unspecified AS) doesn't satisfy it even when the picture is genuinely non-radiographic.</span></li>
-    <li><span class="check">GCA</span><span><b>M31.5 versus M31.6.</b> M31.5 reports giant cell arteritis with polymyalgia rheumatica; M31.6 reports GCA without that overlap. Code to whichever the chart documents &mdash; a tocilizumab claim for GCA should carry one of these, not a generic vasculitis code.</span></li>
+    <li><span class="check">GCA</span><span><b>M31.5 versus M31.6.</b> M31.5 reports giant cell arteritis with polymyalgia rheumatica; M31.6 reports GCA without that overlap. Code to whichever the chart documents, a tocilizumab claim for GCA should carry one of these, not a generic vasculitis code.</span></li>
     <li><span class="check">GPA/MPA</span><span><b>A different family from RA entirely.</b> Rituximab's ANCA-associated vasculitis indication uses M31.30 (granulomatosis with polyangiitis, without renal involvement) or M31.31 (with renal involvement), and M31.7 for microscopic polyangiitis. Billing a vasculitis-indication rituximab claim under an RA code because the practice's usual rituximab claims are RA is a mismatch a payer's system flags immediately.</span></li>
-    <li><span class="check">SLE</span><span><b>Organ involvement, not just M32.10.</b> Also covered in the ICD-10 specificity guide &mdash; the specific M32.1x subcodes (M32.14 glomerular disease, M32.15 tubulo-interstitial nephropathy) are what support belimumab's lupus nephritis indication, where M32.10 alone does not.</span></li>
+    <li><span class="check">SLE</span><span><b>Organ involvement, not just M32.10.</b> Also covered in the ICD-10 specificity guide, the specific M32.1x subcodes (M32.14 glomerular disease, M32.15 tubulo-interstitial nephropathy) are what support belimumab's lupus nephritis indication, where M32.10 alone does not.</span></li>
   </ul>
 
   <h2>Units and waste have to trace back to the same diagnosis-driven dose</h2>
@@ -254,11 +309,11 @@
       <thead><tr><th scope="col">Drug and vial</th><th scope="col">Dose given</th><th scope="col">Administered units</th><th scope="col">Waste line</th></tr></thead>
       <tbody>
         <tr><td>Golimumab (Simponi Aria), 50 mg vial = 50 units of <code>J1602</code></td><td>2 mg/kg for an 80 kg patient = 160 mg</td><td>160 units on the administered line</td><td>None if vial count is ordered to match the dose; any content left over from the last vial opened is JW waste on its own line</td></tr>
-        <tr><td>Certolizumab pegol, 200 mg prefilled syringe = 200 units of <code>J0717</code></td><td>Standard loading dose, 400 mg (two syringes)</td><td>400 units on the administered line</td><td>JZ &mdash; a prefilled syringe is fully administered by design, so document JZ rather than omitting the modifier</td></tr>
+        <tr><td>Certolizumab pegol, 200 mg prefilled syringe = 200 units of <code>J0717</code></td><td>Standard loading dose, 400 mg (two syringes)</td><td>400 units on the administered line</td><td>JZ, a prefilled syringe is fully administered by design, so document JZ rather than omitting the modifier</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The mechanics of JW and JZ themselves &mdash; mandatory since October 1, 2023, and the reason a missing modifier returns a single-dose-container claim as unprocessable rather than denied &mdash; are covered in full in our rheumatology infusion billing guide, with sequential-versus-concurrent infusion scenarios and start/stop-time documentation.</p>
+  <p>The mechanics of JW and JZ themselves, mandatory since October 1, 2023, and the reason a missing modifier returns a single-dose-container claim as unprocessable rather than denied, are covered in full in our rheumatology infusion billing guide, with sequential-versus-concurrent infusion scenarios and start/stop-time documentation.</p>
 
   <h2>Do and don't</h2>
   <div class="dodont">
@@ -271,7 +326,7 @@
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Don't</div><ul>
       <li>Don't default a rituximab claim to an RA diagnosis code when the indication being treated is GPA or MPA.</li>
       <li>Don't bill GCA under a generic vasculitis code when M31.5 or M31.6 is a closer match to the chart.</li>
-      <li>Don't assume golimumab's IV and subcutaneous formulations share billing logic &mdash; J1602 is IV-specific by its own code descriptor.</li>
+      <li>Don't assume golimumab's IV and subcutaneous formulations share billing logic, J1602 is IV-specific by its own code descriptor.</li>
       <li>Don't submit a J-code line without the NDC segment; a correct code and diagnosis can still deny on a missing or mis-formatted NDC.</li>
     </ul></div>
   </div>
@@ -286,14 +341,14 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Does the ICD-10 code on a biologic infusion claim have to match the drug's FDA label exactly?</summary><p>It has to fall within the drug's FDA-labeled indications and, separately, within whatever diagnosis list the payer's coverage policy or LCD names for that drug &mdash; the two aren't always identical, and a payer can cover a narrower set of diagnoses than the FDA label allows. Billing rituximab for an off-label rheumatologic use, for instance, is far more likely to trigger a CO-50 medical-necessity denial than billing it for RA, GPA, or MPA, even though the drug itself is administered identically either way.</p></details>
-    <details class="faq-item"><summary>What's the ICD-10 coding difference between certolizumab for ankylosing spondylitis and for non-radiographic axial spondyloarthritis?</summary><p>Established ankylosing spondylitis is coded M45.0 through M45.9 by spinal region, while non-radiographic axial spondyloarthritis &mdash; disease with objective inflammation but without the sacroiliac joint damage that defines radiographic AS &mdash; has its own separate family, M45.A0 through M45.AB. Certolizumab pegol is FDA-labeled for both, but a payer's coverage policy for the nr-axSpA indication specifically checks for an M45.A code; billing the general M45.9 unspecified-AS code instead doesn't satisfy that check even when the clinical picture is genuinely non-radiographic.</p></details>
-    <details class="faq-item"><summary>Can rituximab be billed under the same rheumatoid arthritis diagnosis code used for other biologics?</summary><p>Only when RA is actually the indication being treated. Rituximab also carries an FDA-labeled indication for ANCA-associated vasculitis &mdash; granulomatosis with polyangiitis (M31.30 without renal involvement, M31.31 with renal involvement) and microscopic polyangiitis (M31.7) &mdash; and a claim for either of those has to carry the vasculitis diagnosis, not the practice's usual RA code for rituximab. Defaulting every rituximab claim to an RA code regardless of the actual indication is a documented pattern payers' systems flag.</p></details>
+    <details class="faq-item"><summary>Does the ICD-10 code on a biologic infusion claim have to match the drug's FDA label exactly?</summary><p>It has to fall within the drug's FDA-labeled indications and, separately, within whatever diagnosis list the payer's coverage policy or LCD names for that drug, the two aren't always identical, and a payer can cover a narrower set of diagnoses than the FDA label allows. Billing rituximab for an off-label rheumatologic use, for instance, is far more likely to trigger a CO-50 medical-necessity denial than billing it for RA, GPA, or MPA, even though the drug itself is administered identically either way.</p></details>
+    <details class="faq-item"><summary>What's the ICD-10 coding difference between certolizumab for ankylosing spondylitis and for non-radiographic axial spondyloarthritis?</summary><p>Established ankylosing spondylitis is coded M45.0 through M45.9 by spinal region, while non-radiographic axial spondyloarthritis, disease with objective inflammation but without the sacroiliac joint damage that defines radiographic AS, has its own separate family, M45.A0 through M45.AB. Certolizumab pegol is FDA-labeled for both, but a payer's coverage policy for the nr-axSpA indication specifically checks for an M45.A code; billing the general M45.9 unspecified-AS code instead doesn't satisfy that check even when the clinical picture is genuinely non-radiographic.</p></details>
+    <details class="faq-item"><summary>Can rituximab be billed under the same rheumatoid arthritis diagnosis code used for other biologics?</summary><p>Only when RA is actually the indication being treated. Rituximab also carries an FDA-labeled indication for ANCA-associated vasculitis, granulomatosis with polyangiitis (M31.30 without renal involvement, M31.31 with renal involvement) and microscopic polyangiitis (M31.7), and a claim for either of those has to carry the vasculitis diagnosis, not the practice's usual RA code for rituximab. Defaulting every rituximab claim to an RA code regardless of the actual indication is a documented pattern payers' systems flag.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -306,62 +361,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>
