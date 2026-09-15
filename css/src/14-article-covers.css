@@ -1,0 +1,91 @@
+/* ============================================================
+   Article Covers
+   ------------------------------------------------------------
+   SVG cover art for the 49 pillar topics (25 specialties + 6
+   credentialing payers + 6 billing-process pillars + 2 practice-
+   management pillars + 10 standalone growth/resource pages).
+   Cluster/spoke articles reuse their pillar's cover file.
+
+   This is the one place on the site that departs from pure
+   monochrome (see 00-tokens-and-base.css's palette history) — a
+   deliberate, confirmed exception, not a drift back to color. Each
+   of the 12 content categories (Primary care, Medical, Surgical,
+   Dental, Behavioral, Therapy, Medical billing, Credentialing,
+   Practice resources, Practice management & licensing, Medical
+   coding, Practice growth) gets one muted accent, evenly spaced
+   30° apart around the hue wheel at a fixed saturation/lightness
+   formula (38% / 42% light, 45% / 68% dark) — so the palette reads
+   as one considered system, not arbitrary color picking. Want to
+   retune a category's hue? Edit its --cat-* pair below (light value
+   first, dark override in the [data-theme="dark"] block) — keep the
+   same S/L formula for any hue you add so new categories stay
+   consistent with the rest.
+
+   .article-cover is the hero placement (top of a pillar/spoke page,
+   after the breadcrumb, before the h1). .card-cover is the banner
+   thumbnail used on specialties.html's spec-card grid. .row-cover is
+   the compact icon-sized version used on services.html's spec-row
+   list. All three just size/frame the same SVG file differently —
+   the SVG itself never changes between placements.
+   Part of the css/src/ split — this file is concatenated into css/style.css by
+   css/build.js. Do not edit css/style.css directly; edit this file and re-run
+   "node css/build.js".
+   ============================================================ */
+
+:root{
+  --cat-medical:hsl(0,38%,42%);
+  --cat-primary-care:hsl(30,38%,42%);
+  --cat-practice-growth:hsl(60,38%,38%);
+  --cat-medical-coding:hsl(90,32%,38%);
+  --cat-therapy:hsl(120,32%,38%);
+  --cat-dental:hsl(150,34%,38%);
+  --cat-practice-mgmt:hsl(180,34%,38%);
+  --cat-surgical:hsl(210,38%,44%);
+  --cat-medical-billing:hsl(240,34%,50%);
+  --cat-behavioral:hsl(270,32%,48%);
+  --cat-credentialing:hsl(300,32%,42%);
+  --cat-practice-resources:hsl(330,36%,44%);
+}
+[data-theme="dark"]{
+  --cat-medical:hsl(0,45%,68%);
+  --cat-primary-care:hsl(30,45%,68%);
+  --cat-practice-growth:hsl(60,40%,62%);
+  --cat-medical-coding:hsl(90,38%,62%);
+  --cat-therapy:hsl(120,38%,64%);
+  --cat-dental:hsl(150,40%,62%);
+  --cat-practice-mgmt:hsl(180,40%,64%);
+  --cat-surgical:hsl(210,45%,72%);
+  --cat-medical-billing:hsl(240,45%,76%);
+  --cat-behavioral:hsl(270,42%,76%);
+  --cat-credentialing:hsl(300,40%,72%);
+  --cat-practice-resources:hsl(330,42%,72%);
+}
+
+/* ---------- hero placement (article page) ---------- */
+.article-cover{
+  margin:0 0 32px;border-radius:var(--radius-lg);overflow:hidden;
+  border:1px solid var(--color-line);background:var(--color-surface);
+  aspect-ratio:21/8;max-height:280px;
+}
+.article-cover svg{width:100%;height:100%;display:block}
+@media (max-width:700px){
+  .article-cover{aspect-ratio:16/9;max-height:200px;margin-bottom:24px}
+}
+
+/* ---------- card thumbnail (specialties.html grid) ---------- */
+.spec-card{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.card-cover{
+  aspect-ratio:16/10;min-height:0;flex:0 0 auto;overflow:hidden;
+  border-bottom:1px solid var(--color-line);background:var(--color-surface);
+}
+.card-cover svg{width:100%;height:100%;display:block}
+.spec-card-body{padding:24px 24px 28px;display:flex;flex-direction:column;flex:1;min-height:0}
+.spec-card-body .link-cta{margin-top:auto;padding-top:12px}
+
+/* ---------- compact row icon (services.html spec-row list) ---------- */
+.row-cover{
+  flex:0 0 auto;width:44px;height:44px;min-height:0;border-radius:var(--radius-sm);
+  overflow:hidden;border:1px solid var(--color-line);background:var(--color-surface);
+}
+.row-cover svg{width:100%;height:100%;display:block}
+.spec-row{display:flex;align-items:center;gap:14px}

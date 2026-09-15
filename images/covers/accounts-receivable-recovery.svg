@@ -1,0 +1,12 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line art of an upward-trending recovery line rising through gridlines to an accented endpoint, representing accounts receivable recovery">
+  <line x1="150" y1="330" x2="150" y2="150" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="150" y1="330" x2="360" y2="330" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="150" y1="276" x2="330" y2="276" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+  <line x1="150" y1="222" x2="330" y2="222" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+  <path d="M168,308 C205,300 220,255 250,240 C280,225 300,205 322,178" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M168,308 L204,318" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="204" cy="292" r="4" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <circle cx="258" cy="248" r="4" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <path d="M296,178 L322,178 L322,204" fill="none" stroke="var(--cat-medical-billing)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="322" cy="178" r="9" fill="var(--cat-medical-billing)"/>
+</svg>

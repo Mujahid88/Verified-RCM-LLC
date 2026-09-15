@@ -1,0 +1,12 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a speech bubble with a small accent dot orbiting it, representing social media management">
+  <ellipse cx="240" cy="215" rx="140" ry="95" fill="none" stroke="var(--muted)" stroke-width="1.5" />
+  <rect x="270" y="112" width="104" height="66" rx="20" fill="none" stroke="var(--muted)" stroke-width="2" />
+  <rect x="138" y="150" width="200" height="128" rx="28" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linejoin="round" />
+  <path d="M176,276 L160,310 L208,277" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  <line x1="168" y1="194" x2="248" y2="194" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" />
+  <line x1="168" y1="216" x2="284" y2="216" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" />
+  <line x1="168" y1="238" x2="222" y2="238" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" />
+  <circle cx="288" cy="126" r="3" fill="var(--muted)" />
+  <circle cx="347" cy="154" r="16" fill="none" stroke="var(--cat-practice-growth)" stroke-width="2" />
+  <circle cx="347" cy="154" r="7" fill="var(--cat-practice-growth)" />
+</svg>

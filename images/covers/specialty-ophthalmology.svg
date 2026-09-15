@@ -1,0 +1,11 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of concentric circles forming a minimal eye and iris, representing ophthalmology">
+  <path d="M100,240 Q240,148 380,240" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100,240 Q240,332 380,240" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="240" cy="240" r="78" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="240" cy="240" r="54" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="240" cy="240" r="30" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="240" cy="240" r="14" fill="none" stroke="var(--cat-medical)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="240" cy="240" r="5" fill="var(--cat-medical)" stroke="none"/>
+  <path d="M118,236 Q100,240 118,244" fill="none" stroke="var(--muted)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M362,236 Q380,240 362,244" fill="none" stroke="var(--muted)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

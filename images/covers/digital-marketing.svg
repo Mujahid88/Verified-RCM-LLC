@@ -1,0 +1,12 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Concentric arcs radiating outward from a single point, evoking a broadcast signal for digital marketing">
+  <line x1="170" y1="280" x2="226.4" y2="124.95" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="170" y1="280" x2="332.5" y2="308.65" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+
+  <path d="M182.0,247.1 A35,35 0 0,1 204.5,286.1" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M193.9,214.2 A70,70 0 0,1 238.9,292.2" fill="none" stroke="var(--cat-practice-growth)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M209.3,171.9 A115,115 0 0,1 283.25,299.96" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M226.4,124.95 A165,165 0 0,1 332.5,308.65" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="170" cy="280" r="6" fill="var(--cat-practice-growth)"/>
+  <circle cx="338.9" cy="182.5" r="5" fill="var(--cat-practice-growth)"/>
+</svg>

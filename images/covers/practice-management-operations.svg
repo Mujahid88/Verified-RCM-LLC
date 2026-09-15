@@ -1,0 +1,24 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dashboard gauge with a needle pointing into a highlighted zone, representing practice management operations">
+  <!-- base line -->
+  <line x1="100" y1="336" x2="380" y2="336" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- main gauge arc -->
+  <path d="M115,320 A125,125 0 0 1 365,320" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- accent highlighted zone on the gauge -->
+  <path d="M262,197 A125,125 0 0 1 336,240" fill="none" stroke="var(--cat-practice-mgmt)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- tick marks -->
+  <line x1="100" y1="320" x2="115" y2="320" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="141" y1="221" x2="152" y2="232" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="240" y1="180" x2="240" y2="195" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="339" y1="221" x2="328" y2="232" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="380" y1="320" x2="365" y2="320" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- needle -->
+  <line x1="240" y1="320" x2="295" y2="225" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="295" cy="225" r="4" fill="var(--cat-practice-mgmt)"/>
+
+  <!-- pivot -->
+  <circle cx="240" cy="320" r="9" fill="none" stroke="var(--color-text)" stroke-width="2.5"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a certificate seal with ribbon tails, representing practice licensing">
+  <!-- outer seal ring: accent -->
+  <circle cx="240" cy="190" r="65" fill="none" stroke="var(--cat-practice-mgmt)" stroke-width="3"/>
+
+  <!-- inner seal ring: primary -->
+  <circle cx="240" cy="190" r="48" fill="none" stroke="var(--color-text)" stroke-width="2"/>
+
+  <!-- radiating tick marks around seal: secondary -->
+  <line x1="308" y1="190" x2="316" y2="190" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="298.9" y1="224" x2="305.8" y2="228" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="274" y1="248.9" x2="278" y2="255.8" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="240" y1="258" x2="240" y2="266" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="206" y1="248.9" x2="202" y2="255.8" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="181.1" y1="224" x2="174.2" y2="228" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="172" y1="190" x2="164" y2="190" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="181.1" y1="156" x2="174.2" y2="152" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="206" y1="131.1" x2="202" y2="124.2" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="240" y1="122" x2="240" y2="114" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="274" y1="131.1" x2="278" y2="124.2" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="298.9" y1="156" x2="305.8" y2="152" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- ribbon tails hanging from seal: primary, swallowtail notch -->
+  <path d="M 212,250 L 196,350 L 210,332 L 224,346" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 268,250 L 284,350 L 270,332 L 256,346" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- center accent dot -->
+  <circle cx="240" cy="190" r="4" fill="var(--cat-practice-mgmt)"/>
+</svg>

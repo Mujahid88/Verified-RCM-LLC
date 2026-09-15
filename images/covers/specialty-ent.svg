@@ -1,0 +1,6 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art for ENT and otolaryngology: a small spiral, a gentle arc, and a straight line">
+  <path d="M190,205 L189.2,212.2 L179.2,215.1 L170,205 L175.8,189.1 L195.8,186.2 L210,205 L199.2,229.5 L169.2,232.4 L150,205" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M140,320 Q240,268 340,320" fill="none" stroke="var(--muted)" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M300,150 L235,262" fill="none" stroke="var(--cat-surgical)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="300" cy="150" r="4.5" fill="var(--cat-surgical)"/>
+</svg>

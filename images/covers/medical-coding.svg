@@ -1,0 +1,17 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of two facing bracket forms symbolizing medical coding and classification">
+  <path d="M 205 135 C 150 170 150 310 205 345" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 275 135 C 330 170 330 310 275 345" fill="none" stroke="var(--cat-medical-coding)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <line x1="118" y1="172" x2="144" y2="172" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="110" y1="240" x2="146" y2="240" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="118" y1="308" x2="144" y2="308" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+
+  <line x1="362" y1="172" x2="336" y2="172" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="370" y1="240" x2="334" y2="240" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="362" y1="308" x2="336" y2="308" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+
+  <circle cx="240" cy="240" r="7" fill="none" stroke="var(--muted)" stroke-width="2"/>
+
+  <circle cx="275" cy="135" r="4" fill="var(--cat-medical-coding)"/>
+  <circle cx="275" cy="345" r="4" fill="var(--cat-medical-coding)"/>
+</svg>

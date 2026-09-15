@@ -1,0 +1,15 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Magnifying glass with an upward-trending ranking arc, representing healthcare SEO growth">
+  <circle cx="185" cy="205" r="82" fill="none" stroke="var(--color-text)" stroke-width="3.5" />
+  <circle cx="185" cy="205" r="58" fill="none" stroke="var(--muted)" stroke-width="1.5" />
+  <line x1="240" y1="260" x2="330" y2="350" stroke="var(--color-text)" stroke-width="4" stroke-linecap="round" />
+
+  <path d="M 120 300 C 165 300, 165 230, 210 230 S 255 150, 300 150" fill="none" stroke="var(--cat-practice-growth)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 282 140 L 300 150 L 296 170" fill="none" stroke="var(--cat-practice-growth)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+  <circle cx="120" cy="300" r="4" fill="var(--cat-practice-growth)" stroke="none" />
+
+  <path d="M 150 230 A 40 40 0 0 1 185 190" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" />
+  <line x1="90" y1="120" x2="130" y2="120" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" />
+  <line x1="360" y1="370" x2="392" y2="370" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" />
+  <circle cx="360" cy="230" r="3" fill="var(--muted)" stroke="none" />
+</svg>

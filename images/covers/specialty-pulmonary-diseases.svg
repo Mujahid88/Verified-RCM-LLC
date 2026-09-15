@@ -1,0 +1,32 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a branching bronchial tree, representing pulmonary and respiratory diseases">
+  <path d="M150,120 C90,180 80,300 140,380" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M330,120 C390,180 400,300 340,380" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M240,110 L240,192" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M240,192 Q210,215 190,252" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M240,192 Q270,215 290,252" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M190,252 Q168,278 150,302" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M190,252 Q202,282 210,312" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290,252 Q278,282 270,312" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290,252 Q312,278 330,302" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M150,302 Q138,322 130,342" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150,302 Q158,325 165,347" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M210,312 Q202,332 195,352" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M210,312 Q218,330 226,348" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M270,312 Q262,330 254,348" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M270,312 Q278,332 285,352" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M330,302 Q322,325 315,347" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M330,302 Q342,322 350,342" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M130,342 Q122,358 118,372" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M195,352 Q190,366 188,378" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M285,352 Q290,366 293,378" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M350,342 Q358,358 362,372" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="130" cy="342" r="4.5" fill="var(--cat-medical)"/>
+  <circle cx="226" cy="348" r="4.5" fill="var(--cat-medical)"/>
+  <circle cx="350" cy="342" r="4.5" fill="var(--cat-medical)"/>
+</svg>
