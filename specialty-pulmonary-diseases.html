@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Pulmonary Medicine Billing and Coding: The Complete 2026 Guide | Verified RCM">
 <meta name="twitter:description" content="PFT, sleep study, and bronchoscopy coding with real NCCI indicator values, MAC-specific LCDs, ICD-10 specificity, and denial-to-appeal pairing.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Pulmonary Medicine","item":"https://www.verifiedrcm.com/specialty-pulmonary-diseases.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do our PFT claims deny even though the test itself was performed correctly?","acceptedAnswer":{"@type":"Answer","text":"The single most common PFT denial has nothing to do with the test equipment or the technician's work — it's a missing or incomplete physician interpretation and report. Every PFT code, whether it's spirometry, lung volumes, or DLCO, requires a signed interpretive statement addressing the pattern (obstructive, restrictive, mixed), severity, and comparison to prior studies where available. A tracing sitting in the chart without that narrative is billed but not supportable on audit, and it denies as CO-16 (missing information) or gets recouped later even if it initially paid."}},{"@type":"Question","name":"Can we bill 94010 and 94060 for the same patient on the same day?","acceptedAnswer":{"@type":"Answer","text":"No. 94060 already includes a baseline spirometry maneuver plus a second set of maneuvers after bronchodilator administration, so it supersedes 94010 rather than stacking with it. If the physician ordered a pre/post bronchodilator study, bill 94060 alone. Billing 94010 in addition to 94060 for the same encounter is a duplicate service, not two separate tests, and payers bundle it accordingly."}},{"@type":"Question","name":"Why does Medicare deny our home sleep apnea test claims when we bill the CPT sleep study codes?","acceptedAnswer":{"@type":"Answer","text":"Medicare requires HCPCS Level II codes — G0398, G0399, or G0400, selected by the type of portable monitor used — for every home sleep apnea test, regardless of how the device manufacturer or the sleep lab's own documentation describes it. Submitting the commercial-payer CPT codes 95800, 95801, or 95806 to Medicare triggers an automatic denial because those codes aren't recognized for HST on a Medicare claim; only traditional in-lab polysomnography uses the CPT 95808/95810/95811 family with Medicare."}},{"@type":"Question","name":"What's the difference between a bundling denial and a prior-authorization device-mismatch denial on a CPAP claim?","acceptedAnswer":{"@type":"Answer","text":"They need completely different fixes. A bundling denial (CO-97) means a component of the CPAP claim was billed separately when it should have been included in another code — the fix is a coding correction. A PA device-mismatch denial means the equipment actually dispensed doesn't match what the prior authorization approved — wrong HCPCS code, wrong feature set, or a supplier substitution the payer never authorized. That's not something a clinical appeal fixes; it needs a corrected or amended authorization from the ordering physician's office before the claim can be resubmitted."}},{"@type":"Question","name":"Do we need modifier 59 or an X-modifier when billing bronchoscopy with biopsy?","acceptedAnswer":{"@type":"Answer","text":"It depends entirely on which pair of codes you're billing and that pair's NCCI modifier indicator. Diagnostic bronchoscopy (31622) billed with a biopsy code like 31623 or 31625 carries a modifier indicator of 0 — no modifier overrides that edit, because the diagnostic exam is inherent to the biopsy procedure and 31622 simply isn't separately payable that day. A modifier only has a chance of working on a pair whose indicator is 1, and only when the operative note documents genuinely distinct anatomic sites, such as separate, non-contiguous lobes."}},{"@type":"Question","name":"Why does an unspecified COPD or asthma code trigger a denial when the diagnosis seems obvious from the chart?","acceptedAnswer":{"@type":"Answer","text":"Medicare LCDs and commercial coverage policies for advanced pulmonary testing and biologic therapy publish the specific diagnosis codes that support medical necessity, and J44.9 or J45.909 frequently aren't on that list even when the clinical picture is unambiguous. The fix is documentation specificity at the point of care: severity classification for asthma (mild intermittent through severe persistent), exacerbation status, and for COPD, whether an acute lower respiratory infection or acute exacerbation is present. An unspecified code isn't wrong, but it's the version of the diagnosis least likely to clear a coverage edit."}},{"@type":"Question","name":"How many minutes of critical care time do we need before we can bill both 99291 and 99292?","acceptedAnswer":{"@type":"Answer","text":"99291 covers the first 30 to 74 minutes of cumulative critical care time in a calendar day; under 30 minutes doesn't support 99291 at all and should be billed as an appropriate E/M service instead. 99292 is only added once total time reaches 75 minutes, and one unit of 99292 covers the range from 75 through 104 minutes. Past 104 minutes, add one more unit of 99292 for each additional 30-minute increment. Time has to be physician or qualified practitioner time devoted exclusively to that one critically ill patient, documented with start and stop times or total minutes."}},{"@type":"Question","name":"Which MAC's sleep study coverage article applies to our practice if we see patients in more than one state?","acceptedAnswer":{"@type":"Answer","text":"The article that governs a claim is determined by the Medicare Administrative Contractor with jurisdiction over the rendering provider's practice location for that date of service, not the patient's home state or the billing address. A multi-state pulmonology group needs to map every practice location to its MAC — CGS, Noridian, WPS, First Coast, and Palmetto GBA each publish their own current polysomnography billing-and-coding article — and route claims and prior documentation checks through the correct article for the site where the study was actually performed or interpreted."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do our PFT claims deny even though the test itself was performed correctly?","acceptedAnswer":{"@type":"Answer","text":"The single most common PFT denial has nothing to do with the test equipment or the technician's work, it's a missing or incomplete physician interpretation and report. Every PFT code, whether it's spirometry, lung volumes, or DLCO, requires a signed interpretive statement addressing the pattern (obstructive, restrictive, mixed), severity, and comparison to prior studies where available. A tracing sitting in the chart without that narrative is billed but not supportable on audit, and it denies as CO-16 (missing information) or gets recouped later even if it initially paid."}},{"@type":"Question","name":"Can we bill 94010 and 94060 for the same patient on the same day?","acceptedAnswer":{"@type":"Answer","text":"No. 94060 already includes a baseline spirometry maneuver plus a second set of maneuvers after bronchodilator administration, so it supersedes 94010 rather than stacking with it. If the physician ordered a pre/post bronchodilator study, bill 94060 alone. Billing 94010 in addition to 94060 for the same encounter is a duplicate service, not two separate tests, and payers bundle it accordingly."}},{"@type":"Question","name":"Why does Medicare deny our home sleep apnea test claims when we bill the CPT sleep study codes?","acceptedAnswer":{"@type":"Answer","text":"Medicare requires HCPCS Level II codes, G0398, G0399, or G0400, selected by the type of portable monitor used, for every home sleep apnea test, regardless of how the device manufacturer or the sleep lab's own documentation describes it. Submitting the commercial-payer CPT codes 95800, 95801, or 95806 to Medicare triggers an automatic denial because those codes aren't recognized for HST on a Medicare claim; only traditional in-lab polysomnography uses the CPT 95808/95810/95811 family with Medicare."}},{"@type":"Question","name":"What's the difference between a bundling denial and a prior-authorization device-mismatch denial on a CPAP claim?","acceptedAnswer":{"@type":"Answer","text":"They need completely different fixes. A bundling denial (CO-97) means a component of the CPAP claim was billed separately when it should have been included in another code, the fix is a coding correction. A PA device-mismatch denial means the equipment actually dispensed doesn't match what the prior authorization approved, wrong HCPCS code, wrong feature set, or a supplier substitution the payer never authorized. That's not something a clinical appeal fixes; it needs a corrected or amended authorization from the ordering physician's office before the claim can be resubmitted."}},{"@type":"Question","name":"Do we need modifier 59 or an X-modifier when billing bronchoscopy with biopsy?","acceptedAnswer":{"@type":"Answer","text":"It depends entirely on which pair of codes you're billing and that pair's NCCI modifier indicator. Diagnostic bronchoscopy (31622) billed with a biopsy code like 31623 or 31625 carries a modifier indicator of 0, no modifier overrides that edit, because the diagnostic exam is inherent to the biopsy procedure and 31622 simply isn't separately payable that day. A modifier only has a chance of working on a pair whose indicator is 1, and only when the operative note documents genuinely distinct anatomic sites, such as separate, non-contiguous lobes."}},{"@type":"Question","name":"Why does an unspecified COPD or asthma code trigger a denial when the diagnosis seems obvious from the chart?","acceptedAnswer":{"@type":"Answer","text":"Medicare LCDs and commercial coverage policies for advanced pulmonary testing and biologic therapy publish the specific diagnosis codes that support medical necessity, and J44.9 or J45.909 frequently aren't on that list even when the clinical picture is unambiguous. The fix is documentation specificity at the point of care: severity classification for asthma (mild intermittent through severe persistent), exacerbation status, and for COPD, whether an acute lower respiratory infection or acute exacerbation is present. An unspecified code isn't wrong, but it's the version of the diagnosis least likely to clear a coverage edit."}},{"@type":"Question","name":"How many minutes of critical care time do we need before we can bill both 99291 and 99292?","acceptedAnswer":{"@type":"Answer","text":"99291 covers the first 30 to 74 minutes of cumulative critical care time in a calendar day; under 30 minutes doesn't support 99291 at all and should be billed as an appropriate E/M service instead. 99292 is only added once total time reaches 75 minutes, and one unit of 99292 covers the range from 75 through 104 minutes. Past 104 minutes, add one more unit of 99292 for each additional 30-minute increment. Time has to be physician or qualified practitioner time devoted exclusively to that one critically ill patient, documented with start and stop times or total minutes."}},{"@type":"Question","name":"Which MAC's sleep study coverage article applies to our practice if we see patients in more than one state?","acceptedAnswer":{"@type":"Answer","text":"The article that governs a claim is determined by the Medicare Administrative Contractor with jurisdiction over the rendering provider's practice location for that date of service, not the patient's home state or the billing address. A multi-state pulmonology group needs to map every practice location to its MAC, CGS, Noridian, WPS, First Coast, and Palmetto GBA each publish their own current polysomnography billing-and-coding article, and route claims and prior documentation checks through the correct article for the site where the study was actually performed or interpreted."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 25 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 25 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialties.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>All specialties</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a branching bronchial tree, representing pulmonary and respiratory diseases">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialties.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>All specialties</a>
+      <h1>Pulmonary Medicine Billing and Coding: The Complete 2026 Guide</h1>
+      <p class="lede">Pulmonology denies at roughly 18% industry-wide, against a clean-claim target of 95% or higher, and prior authorization alone accounts for close to 30% of that volume, driven by CPAP, oxygen, and biologic asthma therapy. This guide covers the full revenue cycle: real NCCI indicator values instead of a generic "check your edits," MAC-specific sleep study and spirometry articles named by document number, ICD-10 specificity that actually drives coverage (COPD-asthma overlap, asthma severity-plus-exacerbation, sleep apnea subtypes), and denial-to-appeal pairing keyed to the exact reason a claim came back.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Updated August 2026</span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a branching bronchial tree, representing pulmonary and respiratory diseases">
   <path d="M150,120 C90,180 80,300 140,380" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M330,120 C390,180 400,300 340,380" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 
@@ -202,9 +258,9 @@
   <circle cx="226" cy="348" r="4.5" fill="var(--cat-medical)"/>
   <circle cx="350" cy="342" r="4.5" fill="var(--cat-medical)"/>
 </svg></figure>
-  <h1>Pulmonary Medicine Billing and Coding: The Complete 2026 Guide</h1>
-  <p class="lede">Pulmonology denies at roughly 18% industry-wide &mdash; against a clean-claim target of 95% or higher &mdash; and prior authorization alone accounts for close to 30% of that volume, driven by CPAP, oxygen, and biologic asthma therapy. This guide covers the full revenue cycle: real NCCI indicator values instead of a generic "check your edits," MAC-specific sleep study and spirometry articles named by document number, ICD-10 specificity that actually drives coverage (COPD-asthma overlap, asthma severity-plus-exacerbation, sleep apnea subtypes), and denial-to-appeal pairing keyed to the exact reason a claim came back.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Updated August 2026</span></div>
+  </div>
+</header>
+<article class="wrap article">
   <figure class="pillar-diagram">
     <svg viewBox="0 0 720 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pd-title"><title id="pd-title">Encounter → Code & document → Claim submitted → Payer adjudication → Paid or denied</title><line class="pillar-diagram-line" x1="70" y1="42" x2="650" y2="42"></line><circle class="pillar-diagram-node-ring" cx="70" cy="42" r="26"></circle><circle class="pillar-diagram-node-fill" cx="70" cy="42" r="20"></circle><text class="pillar-diagram-num" x="70" y="46" text-anchor="middle">1</text><text class="pillar-diagram-label" x="70" y="80" text-anchor="middle">Encounter</text><circle class="pillar-diagram-node-ring" cx="215" cy="42" r="26"></circle><circle class="pillar-diagram-node-fill" cx="215" cy="42" r="20"></circle><text class="pillar-diagram-num" x="215" y="46" text-anchor="middle">2</text><text class="pillar-diagram-label" x="215" y="80" text-anchor="middle">Code & document</text><circle class="pillar-diagram-node-ring" cx="360" cy="42" r="26"></circle><circle class="pillar-diagram-node-fill" cx="360" cy="42" r="20"></circle><text class="pillar-diagram-num" x="360" y="46" text-anchor="middle">3</text><text class="pillar-diagram-label" x="360" y="80" text-anchor="middle">Claim submitted</text><circle class="pillar-diagram-node-ring" cx="505" cy="42" r="26"></circle><circle class="pillar-diagram-node-fill" cx="505" cy="42" r="20"></circle><text class="pillar-diagram-num" x="505" y="46" text-anchor="middle">4</text><text class="pillar-diagram-label" x="505" y="80" text-anchor="middle">Payer adjudication</text><circle class="pillar-diagram-node-ring" cx="650" cy="42" r="26"></circle><circle class="pillar-diagram-node-fill" cx="650" cy="42" r="20"></circle><text class="pillar-diagram-num" x="650" y="46" text-anchor="middle">5</text><text class="pillar-diagram-label" x="650" y="80" text-anchor="middle">Paid or denied</text></svg>
     <figcaption class="payer-contact-note" style="margin-top:14px;text-align:center">The billing lifecycle this guide covers, from the visit to the remittance.</figcaption>
@@ -213,34 +269,34 @@
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>31622 is column-2 to 31623 and 31625 with a modifier indicator of 0.</b> No modifier bypasses it &mdash; diagnostic bronchoscopy is inherent to a biopsy performed the same session, full stop. Competitor guides name the edit category and stop there; the indicator value is what actually decides whether an appeal is worth writing.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Five different MACs publish five separately dated polysomnography articles</b> &mdash; CGS A57049, Noridian A57697, WPS A56903, First Coast A57496, and Palmetto A56995/L36593 &mdash; and "check your LCD" is meaningless without naming which one governs your practice location.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>31622 is column-2 to 31623 and 31625 with a modifier indicator of 0.</b> No modifier bypasses it, diagnostic bronchoscopy is inherent to a biopsy performed the same session, full stop. Competitor guides name the edit category and stop there; the indicator value is what actually decides whether an appeal is worth writing.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Five different MACs publish five separately dated polysomnography articles</b>, CGS A57049, Noridian A57697, WPS A56903, First Coast A57496, and Palmetto A56995/L36593, and "check your LCD" is meaningless without naming which one governs your practice location.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Medicare requires HCPCS G0398&ndash;G0400 for home sleep testing, never the CPT sleep-study codes.</b> Submitting 95800, 95801, or 95806 to Medicare denies automatically regardless of clinical accuracy.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A CPAP compliance denial and a PA device-mismatch denial need entirely different appeals.</b> One needs a 30-day, 70%-of-nights, 4-hour-per-night download; the other needs a corrected authorization, not a clinical argument. Conflating them wastes the appeal window on both.</span></li>
     </ul>
   </section>
 
   <h2>Pulmonary medicine billing at a glance</h2>
-  <p>Pulmonology stacks four structural problems that most other specialties face separately: a diagnostic-testing code family with no single "complete study" code, so every PFT component has to be reported and interpreted on its own; a sleep-testing world split between commercial CPT codes and Medicare-mandated HCPCS G-codes that aren't interchangeable; dense NCCI bundling around bronchoscopy where the modifier indicator &mdash; not just the existence of an edit &mdash; decides whether an appeal is possible; and prior authorization that gates nearly every high-cost service in the specialty, from CPAP to biologic asthma therapy. The pulmonology denial rate runs around 18% by industry reporting, well above the 5&ndash;10% median most specialties see, and prior authorization denials alone account for close to 30% of that volume &mdash; both figures are secondary-sourced (Medscape Physician Compensation Report data as aggregated by industry billing analysts), not a CMS-published statistic, so treat them as directional rather than a number to cite in a payer negotiation.</p>
+  <p>Pulmonology stacks four structural problems that most other specialties face separately: a diagnostic-testing code family with no single "complete study" code, so every PFT component has to be reported and interpreted on its own; a sleep-testing world split between commercial CPT codes and Medicare-mandated HCPCS G-codes that aren't interchangeable; dense NCCI bundling around bronchoscopy where the modifier indicator, not just the existence of an edit, decides whether an appeal is possible; and prior authorization that gates nearly every high-cost service in the specialty, from CPAP to biologic asthma therapy. The pulmonology denial rate runs around 18% by industry reporting, well above the 5&ndash;10% median most specialties see, and prior authorization denials alone account for close to 30% of that volume, both figures are secondary-sourced (Medscape Physician Compensation Report data as aggregated by industry billing analysts), not a CMS-published statistic, so treat them as directional rather than a number to cite in a payer negotiation.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>The 15 highest-volume pulmonology CPT/HCPCS codes and the billing rule that governs each. Full detail on every family is in the linked spoke guides below.</caption>
       <thead><tr><th scope="col">Code</th><th scope="col">Service</th><th scope="col">One-line billing rule</th></tr></thead>
       <tbody>
-        <tr><td><code>94010</code></td><td>Spirometry, baseline only</td><td>Never bill same session as 94060 &mdash; 94060 already includes it</td></tr>
+        <tr><td><code>94010</code></td><td>Spirometry, baseline only</td><td>Never bill same session as 94060, 94060 already includes it</td></tr>
         <tr><td><code>94060</code></td><td>Spirometry, pre- and post-bronchodilator</td><td>Supersedes 94010 when bronchodilator response is being assessed</td></tr>
-        <tr><td><code>94726</code>&ndash;<code>94729</code></td><td>Lung volumes (plethysmography/gas dilution), airway resistance, DLCO</td><td>No single "complete PFT" code &mdash; report each component actually performed, each needs its own interpretation</td></tr>
-        <tr><td><code>95800/95801/95806</code></td><td>Commercial-payer unattended sleep study (HST) codes</td><td>Never submit to Medicare &mdash; use G0398&ndash;G0400 instead</td></tr>
-        <tr><td><code>95808/95810/95811</code></td><td>In-lab polysomnography (attended)</td><td>95811 alone covers a split-night study &mdash; don't also bill 95810</td></tr>
+        <tr><td><code>94726</code>&ndash;<code>94729</code></td><td>Lung volumes (plethysmography/gas dilution), airway resistance, DLCO</td><td>No single "complete PFT" code, report each component actually performed, each needs its own interpretation</td></tr>
+        <tr><td><code>95800/95801/95806</code></td><td>Commercial-payer unattended sleep study (HST) codes</td><td>Never submit to Medicare, use G0398&ndash;G0400 instead</td></tr>
+        <tr><td><code>95808/95810/95811</code></td><td>In-lab polysomnography (attended)</td><td>95811 alone covers a split-night study, don't also bill 95810</td></tr>
         <tr><td><code>G0398</code>&ndash;<code>G0400</code></td><td>Medicare HST by monitor type (II/III/IV)</td><td>Mandatory HCPCS substitution for Medicare HST claims</td></tr>
-        <tr><td><code>31622</code>&ndash;<code>31654</code></td><td>Bronchoscopy family: diagnostic, biopsy, EBUS, navigation, thermoplasty, stent, valve</td><td>31622 bundles into 31623/31625 with modifier indicator 0 &mdash; no bypass</td></tr>
-        <tr><td><code>32554/32555</code></td><td>Thoracentesis without/with imaging guidance</td><td>32555's guidance is bundled &mdash; never bill 76942 separately; 32554 without imaging invites a medical-necessity denial</td></tr>
-        <tr><td><code>94002</code>&ndash;<code>94004</code></td><td>Ventilator management: initial day / subsequent day / nursing facility</td><td>Mutually exclusive same-day codes &mdash; pick one per date of service</td></tr>
+        <tr><td><code>31622</code>&ndash;<code>31654</code></td><td>Bronchoscopy family: diagnostic, biopsy, EBUS, navigation, thermoplasty, stent, valve</td><td>31622 bundles into 31623/31625 with modifier indicator 0, no bypass</td></tr>
+        <tr><td><code>32554/32555</code></td><td>Thoracentesis without/with imaging guidance</td><td>32555's guidance is bundled, never bill 76942 separately; 32554 without imaging invites a medical-necessity denial</td></tr>
+        <tr><td><code>94002</code>&ndash;<code>94004</code></td><td>Ventilator management: initial day / subsequent day / nursing facility</td><td>Mutually exclusive same-day codes, pick one per date of service</td></tr>
         <tr><td><code>99291/99292</code></td><td>Critical care, first 30&ndash;74 min / each additional 30 min</td><td>Supersedes vent management billing when time and acuity qualify; 99292 needs 75+ cumulative minutes</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The pattern across nearly every denial category in this specialty: the claim was clinically appropriate, but the code, the modifier, or the diagnosis specificity didn't match what the payer's coverage policy or bundling edit actually requires. That gap is fixable at order entry and documentation time &mdash; it's rarely a coding-team judgment call once the rule is known.</p>
+  <p>The pattern across nearly every denial category in this specialty: the claim was clinically appropriate, but the code, the modifier, or the diagnosis specificity didn't match what the payer's coverage policy or bundling edit actually requires. That gap is fixable at order entry and documentation time, it's rarely a coding-team judgment call once the rule is known.</p>
 
   <h2>What changed recently in pulmonary medicine billing</h2>
   <p>Sleep testing coverage is MAC-specific and the articles that govern it turn over on their own schedules throughout the year, which means "current" has a different answer depending on which contractor has jurisdiction over your practice location. As of this publish date, the confirmed current polysomnography billing-and-coding articles are:</p>
@@ -253,18 +309,18 @@
         <tr><td><code>A57697</code></td><td>Noridian Healthcare Solutions</td><td>09/11/2025 (superseded prior version <code>A57698</code>, retired same date)</td><td><code>L36861</code> (superseded <code>L34040</code>)</td></tr>
         <tr><td><code>A56903</code></td><td>WPS Insurance Corporation</td><td>06/26/2025</td><td><code>L36839</code></td></tr>
         <tr><td><code>A57496</code></td><td>First Coast Service Options</td><td>05/16/2024</td><td><code>L33405</code></td></tr>
-        <tr><td><code>A56995</code></td><td>Palmetto GBA</td><td>03/07/2024</td><td><code>L36593</code> (LCD eff. 03/20/2025) &mdash; plus companion article <code>A55958</code>, accreditation and credentialing requirements</td></tr>
+        <tr><td><code>A56995</code></td><td>Palmetto GBA</td><td>03/07/2024</td><td><code>L36593</code> (LCD eff. 03/20/2025), plus companion article <code>A55958</code>, accreditation and credentialing requirements</td></tr>
       </tbody>
     </table>
   </div>
   <p>The Noridian update is the one worth flagging operationally: A57697 replaced A57698 on 09/11/2025, and any scrubber rule or order-set reference still pointing at the retired article number needs updating, even though the substantive coverage criteria carried forward largely intact. CGS also republished its article and companion LCD (A57049/L36902) with an effective date of 03/05/2026, so confirm you're citing the current version rather than an older cached copy in a payer policy binder.</p>
-  <p>Outside sleep testing, CGS Administrators separately maintains <b>A56808, Billing and Coding: Transtelephonic Spirometry</b>, effective 10/02/2025 &mdash; a narrower article covering remote spirometry monitoring for patients who can't come into the office, distinct from the standard in-office spirometry codes and worth knowing by name if your practice does any home-monitoring spirometry work in CGS's jurisdiction.</p>
+  <p>Outside sleep testing, CGS Administrators separately maintains <b>A56808, Billing and Coding: Transtelephonic Spirometry</b>, effective 10/02/2025, a narrower article covering remote spirometry monitoring for patients who can't come into the office, distinct from the standard in-office spirometry codes and worth knowing by name if your practice does any home-monitoring spirometry work in CGS's jurisdiction.</p>
   <p>⚠️ On the CPT/HCPCS side: this build did not identify a structural overhaul to the PFT, bronchoscopy, or sleep-testing code families comparable to what interventional cardiology saw in 2026. The core code sets referenced throughout this guide (94010&ndash;94729, 95800&ndash;95811, G0398&ndash;G0400, 31622&ndash;31654, 32554/32555, 94002&ndash;94004) were not independently re-verified against the AMA CPT Editorial Panel's 2026 published changes during this build, since there is no CPT connector available and CMS's own code-change pages returned access errors to automated retrieval. If your practice has seen a specific 2026 pulmonology CPT deletion or addition not reflected here, verify it against your current CPT Professional edition or AAPC's code-change bulletin before updating a charge master.</p>
 
   <h2>E/M coding and modifier 25 in the pulmonology visit</h2>
-  <p>Established-patient office visits (99212&ndash;99215) are leveled on either total time or medical decision making under the 2021+ E/M guidelines &mdash; fully satisfying either pathway supports the code, and the two are never combined. In pulmonology, data complexity is where MDM leveling most often gets under-documented: ordering and independently reviewing a spirometry tracing, a chest CT, or an outside sleep study report each count toward the data-complexity element, but only when the note shows the physician actually reviewed and interpreted the data, not just referenced that it exists. A 99214 typically needs 30&ndash;39 minutes of total time (face-to-face plus same-day chart review, ordering, and documentation) or moderate MDM; 99215 needs 40&ndash;54 minutes or high MDM. Titrating a patient's home oxygen prescription, escalating a biologic asthma regimen, or managing an acute COPD exacerbation with a same-day medication change routinely supports 99215-level MDM even when the visit itself runs short &mdash; the note has to capture the risk and complexity that was actually present, not just the time spent.</p>
+  <p>Established-patient office visits (99212&ndash;99215) are leveled on either total time or medical decision making under the 2021+ E/M guidelines, fully satisfying either pathway supports the code, and the two are never combined. In pulmonology, data complexity is where MDM leveling most often gets under-documented: ordering and independently reviewing a spirometry tracing, a chest CT, or an outside sleep study report each count toward the data-complexity element, but only when the note shows the physician actually reviewed and interpreted the data, not just referenced that it exists. A 99214 typically needs 30&ndash;39 minutes of total time (face-to-face plus same-day chart review, ordering, and documentation) or moderate MDM; 99215 needs 40&ndash;54 minutes or high MDM. Titrating a patient's home oxygen prescription, escalating a biologic asthma regimen, or managing an acute COPD exacerbation with a same-day medication change routinely supports 99215-level MDM even when the visit itself runs short, the note has to capture the risk and complexity that was actually present, not just the time spent.</p>
   <p>Prolonged services add-on code 99417 (or 99418 in a facility setting) applies once total time on a 99215-level visit exceeds the code's time threshold by 15 minutes or more, billed in 15-minute increments beyond that threshold. It requires the base E/M to already be leveled on time, not MDM, and the prolonged time has to be face-to-face or non-face-to-face time on the same date, clearly separated from any other billed service.</p>
-  <p>Modifier 25 is the recurring flashpoint whenever an E/M is billed the same day as spirometry or another PFT component. The documentation test is whether the E/M represents a significant, separately identifiable service beyond the work inherent to ordering and overseeing the diagnostic test itself &mdash; a physician reviewing a new patient's overall respiratory complaint, examining the patient, and making a broader treatment decision (adjusting inhaler therapy, ordering imaging, discussing smoking cessation) clears that bar; a visit whose entire content is "patient came in for spirometry, physician reviewed the result" generally does not, because interpreting the study is already compensated through the PFT code itself. Payers that scrutinize modifier 25 heavily in pulmonology are looking specifically for a chief complaint, exam, and plan that stand on their own apart from the test order. The full time-vs-MDM decision tree and worked leveling examples for the specialty, plus the parallel rules for modifier 26/TC, 59, and 52, are covered in the dedicated modifiers section below.</p>
+  <p>Modifier 25 is the recurring flashpoint whenever an E/M is billed the same day as spirometry or another PFT component. The documentation test is whether the E/M represents a significant, separately identifiable service beyond the work inherent to ordering and overseeing the diagnostic test itself, a physician reviewing a new patient's overall respiratory complaint, examining the patient, and making a broader treatment decision (adjusting inhaler therapy, ordering imaging, discussing smoking cessation) clears that bar; a visit whose entire content is "patient came in for spirometry, physician reviewed the result" generally does not, because interpreting the study is already compensated through the PFT code itself. Payers that scrutinize modifier 25 heavily in pulmonology are looking specifically for a chief complaint, exam, and plan that stand on their own apart from the test order. The full time-vs-MDM decision tree and worked leveling examples for the specialty, plus the parallel rules for modifier 26/TC, 59, and 52, are covered in the dedicated modifiers section below.</p>
 
   <h2>Pulmonary function testing: spirometry, lung volumes, DLCO</h2>
   <p>There is no single "complete PFT" CPT code. Each component of a pulmonary function evaluation is billed separately, based on what was actually performed and interpreted, and the family breaks down as follows.</p>
@@ -273,19 +329,19 @@
       <caption>Core PFT code family and the component logic that governs each.</caption>
       <thead><tr><th scope="col">Code</th><th scope="col">Service</th><th scope="col">Billing note</th></tr></thead>
       <tbody>
-        <tr><td><code>94010</code></td><td>Spirometry, baseline only</td><td>Never bill with 94060 same session &mdash; 94060 already includes a baseline maneuver plus post-bronchodilator maneuvers</td></tr>
+        <tr><td><code>94010</code></td><td>Spirometry, baseline only</td><td>Never bill with 94060 same session, 94060 already includes a baseline maneuver plus post-bronchodilator maneuvers</td></tr>
         <tr><td><code>94060</code></td><td>Spirometry, pre- and post-bronchodilator</td><td>Use when bronchodilator reversibility is being assessed; supersedes 94010, doesn't stack with it</td></tr>
         <tr><td><code>94726</code></td><td>Plethysmography for lung volumes and airway resistance</td><td>Body-box method; distinct from gas-dilution lung volumes</td></tr>
-        <tr><td><code>94727</code></td><td>Gas dilution or washout for lung volumes (e.g., helium dilution, nitrogen washout)</td><td>Alternative method to plethysmography &mdash; report whichever was actually performed, not both for the same lung-volume measurement</td></tr>
+        <tr><td><code>94727</code></td><td>Gas dilution or washout for lung volumes (e.g., helium dilution, nitrogen washout)</td><td>Alternative method to plethysmography, report whichever was actually performed, not both for the same lung-volume measurement</td></tr>
         <tr><td><code>94728</code></td><td>Airway resistance by oscillometry</td><td>Distinct technique from plethysmographic airway resistance captured under 94726</td></tr>
-        <tr><td><code>94729</code></td><td>Diffusing capacity (DLCO)</td><td>Add-on-style code to spirometry/lung-volume codes in practice &mdash; report alongside the base study actually performed, not standalone</td></tr>
+        <tr><td><code>94729</code></td><td>Diffusing capacity (DLCO)</td><td>Add-on-style code to spirometry/lung-volume codes in practice, report alongside the base study actually performed, not standalone</td></tr>
       </tbody>
     </table>
   </div>
   <p>Full code-by-code detail, including which combinations are typically ordered together clinically and the documentation each interpretation needs, is in <a href="specialty-pulmonary-diseases-pulmonary-function-testing.html">our PFT billing guide covering 94010, 94060, and the lung volume codes</a>.</p>
-  <p><b>Technical/professional split.</b> Like most diagnostic testing, PFT codes carry a technical component (equipment, supplies, technologist time) and a professional component (physician interpretation and report), split with modifiers TC and 26 respectively. Bill the code without a modifier only when the same entity owns the equipment, employs the technologist, and performs the interpretation. A hospital-based pulmonologist reading a PFT tracing acquired on hospital equipment bills 26 only; the hospital bills TC for the technical side. Before defaulting to a component split, check the code's PC/TC indicator in the Medicare Physician Fee Schedule &mdash; not every PFT code carries a split (some are professional-component-only or technical-only by definition), and billing 26 on a code that doesn't support a component split denies outright.</p>
-  <p><b>The interpretation-and-report requirement is the single most common PFT denial reason.</b> A tracing without a signed physician interpretation addressing the pattern (obstructive, restrictive, mixed), severity grading, and comparison to any prior study on file is billed but not supportable &mdash; auditors and payers alike treat the interpretation as the service being paid for, not the raw data acquisition. This shows up as a CO-16 (missing information) denial when caught at claim submission, or as a post-payment recoupment when it's caught later. Build the interpretation requirement into your chart-closing workflow so a PFT claim can't go out the door without a completed, signed report attached.</p>
-  <p>For remote and home-based spirometry monitoring specifically, CGS Administrators publishes a dedicated article &mdash; <b>A56808, Billing and Coding: Transtelephonic Spirometry</b>, effective 10/02/2025 &mdash; covering the documentation and frequency requirements for patients whose spirometry is performed outside the office and transmitted for interpretation. If your practice does this kind of monitoring in CGS's jurisdiction, that article, not the standard in-office PFT rules, governs the claim.</p>
+  <p><b>Technical/professional split.</b> Like most diagnostic testing, PFT codes carry a technical component (equipment, supplies, technologist time) and a professional component (physician interpretation and report), split with modifiers TC and 26 respectively. Bill the code without a modifier only when the same entity owns the equipment, employs the technologist, and performs the interpretation. A hospital-based pulmonologist reading a PFT tracing acquired on hospital equipment bills 26 only; the hospital bills TC for the technical side. Before defaulting to a component split, check the code's PC/TC indicator in the Medicare Physician Fee Schedule, not every PFT code carries a split (some are professional-component-only or technical-only by definition), and billing 26 on a code that doesn't support a component split denies outright.</p>
+  <p><b>The interpretation-and-report requirement is the single most common PFT denial reason.</b> A tracing without a signed physician interpretation addressing the pattern (obstructive, restrictive, mixed), severity grading, and comparison to any prior study on file is billed but not supportable, auditors and payers alike treat the interpretation as the service being paid for, not the raw data acquisition. This shows up as a CO-16 (missing information) denial when caught at claim submission, or as a post-payment recoupment when it's caught later. Build the interpretation requirement into your chart-closing workflow so a PFT claim can't go out the door without a completed, signed report attached.</p>
+  <p>For remote and home-based spirometry monitoring specifically, CGS Administrators publishes a dedicated article, <b>A56808, Billing and Coding: Transtelephonic Spirometry</b>, effective 10/02/2025, covering the documentation and frequency requirements for patients whose spirometry is performed outside the office and transmitted for interpretation. If your practice does this kind of monitoring in CGS's jurisdiction, that article, not the standard in-office PFT rules, governs the claim.</p>
 
   <h2>Sleep study and home sleep apnea testing coding</h2>
   <p>Sleep testing splits into three separate code families that get conflated constantly, and Medicare's rules diverge sharply from commercial payers' on which family applies.</p>
@@ -294,23 +350,23 @@
       <caption>Sleep study code families by setting and payer type.</caption>
       <thead><tr><th scope="col">Code family</th><th scope="col">Setting</th><th scope="col">Payer</th><th scope="col">Note</th></tr></thead>
       <tbody>
-        <tr><td><code>95808, 95810, 95811</code></td><td>In-lab, facility-based, attended polysomnography</td><td>All payers, including Medicare</td><td>95811 alone covers a split-night study (diagnostic + CPAP titration in one night) &mdash; it's inclusive of 95810, don't bill both for the same night</td></tr>
+        <tr><td><code>95808, 95810, 95811</code></td><td>In-lab, facility-based, attended polysomnography</td><td>All payers, including Medicare</td><td>95811 alone covers a split-night study (diagnostic + CPAP titration in one night), it's inclusive of 95810, don't bill both for the same night</td></tr>
         <tr><td><code>95800, 95801, 95806</code></td><td>Unattended home sleep testing (HST)</td><td>Commercial payers only</td><td>Requires a minimum 6-hour continuous recording; append modifier 52 (reduced services) if the recording falls short of 6 hours but is still clinically usable</td></tr>
         <tr><td><code>G0398, G0399, G0400</code></td><td>Unattended home sleep testing (HST)</td><td>Medicare (mandatory substitution for the CPT HST codes)</td><td>Selected by monitor type: G0398 (Type II, 7+ channels), G0399 (Type III, 4+ channels), G0400 (Type IV, 3+ channels)</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Submitting a CPT HST code (95800/95801/95806) to Medicare triggers an automatic denial regardless of clinical accuracy &mdash; Medicare simply doesn't recognize those codes for home sleep testing and requires the HCPCS G-code substitution instead. This is one of the most preventable denial patterns in the specialty because it's entirely a code-selection issue, not a coverage dispute: the fix is a payer-aware charge rule, not an appeal. In-lab polysomnography requires the study to be performed at a facility-based sleep lab meeting accreditation standards; it is not billable for a study run in a patient's home, regardless of which monitor or channel count was used. Full code selection logic, the CPT-versus-HCPCS decision tree by payer, and worked examples are in <a href="specialty-pulmonary-diseases-sleep-study-coding.html">our sleep study and home sleep apnea test coding guide</a>, covering CPT versus the HCPCS G-codes in depth.</p>
-  <p><b>MAC-specific coverage articles.</b> Because sleep testing coverage is local, not national, the article that governs a given claim depends on the MAC with jurisdiction over the rendering provider's practice location for that date of service &mdash; not the patient's home state. The five confirmed current articles:</p>
+  <p>Submitting a CPT HST code (95800/95801/95806) to Medicare triggers an automatic denial regardless of clinical accuracy, Medicare simply doesn't recognize those codes for home sleep testing and requires the HCPCS G-code substitution instead. This is one of the most preventable denial patterns in the specialty because it's entirely a code-selection issue, not a coverage dispute: the fix is a payer-aware charge rule, not an appeal. In-lab polysomnography requires the study to be performed at a facility-based sleep lab meeting accreditation standards; it is not billable for a study run in a patient's home, regardless of which monitor or channel count was used. Full code selection logic, the CPT-versus-HCPCS decision tree by payer, and worked examples are in <a href="specialty-pulmonary-diseases-sleep-study-coding.html">our sleep study and home sleep apnea test coding guide</a>, covering CPT versus the HCPCS G-codes in depth.</p>
+  <p><b>MAC-specific coverage articles.</b> Because sleep testing coverage is local, not national, the article that governs a given claim depends on the MAC with jurisdiction over the rendering provider's practice location for that date of service, not the patient's home state. The five confirmed current articles:</p>
   <ul class="check-list">
-    <li><span class="check">1</span><span><b>CGS Administrators &mdash; A57049</b> (LCD L36902), effective 03/05/2026.</span></li>
-    <li><span class="check">2</span><span><b>Noridian Healthcare Solutions &mdash; A57697</b> (LCD L36861), effective 09/11/2025, superseding the retired A57698/L34040.</span></li>
-    <li><span class="check">3</span><span><b>WPS Insurance Corporation &mdash; A56903</b> (LCD L36839), effective 06/26/2025.</span></li>
-    <li><span class="check">4</span><span><b>First Coast Service Options &mdash; A57496</b> (LCD L33405), effective 05/16/2024.</span></li>
-    <li><span class="check">5</span><span><b>Palmetto GBA &mdash; A56995</b> (LCD L36593, effective 03/20/2025), plus a separate companion article, <b>A55958</b>, covering accreditation and credentialing requirements for polysomnography specifically &mdash; a layer most other MACs fold into the main article rather than publishing separately.</span></li>
+    <li><span class="check">1</span><span><b>CGS Administrators, A57049</b> (LCD L36902), effective 03/05/2026.</span></li>
+    <li><span class="check">2</span><span><b>Noridian Healthcare Solutions, A57697</b> (LCD L36861), effective 09/11/2025, superseding the retired A57698/L34040.</span></li>
+    <li><span class="check">3</span><span><b>WPS Insurance Corporation, A56903</b> (LCD L36839), effective 06/26/2025.</span></li>
+    <li><span class="check">4</span><span><b>First Coast Service Options, A57496</b> (LCD L33405), effective 05/16/2024.</span></li>
+    <li><span class="check">5</span><span><b>Palmetto GBA, A56995</b> (LCD L36593, effective 03/20/2025), plus a separate companion article, <b>A55958</b>, covering accreditation and credentialing requirements for polysomnography specifically, a layer most other MACs fold into the main article rather than publishing separately.</span></li>
   </ul>
-  <p>⚠️ These article IDs, contractor names, and effective dates were confirmed live against the CMS Coverage Database via the CMS Coverage MCP connector during this build. The full covered-diagnosis lists, frequency limits, and testing-protocol requirements inside each article's body text were not independently re-verified line-by-line here, since the connector returns document metadata rather than full article text for local articles &mdash; pull the specific article's full text from the Medicare Coverage Database before finalizing an order-set or prior-authorization rule against it.</p>
-  <p>The facility accreditation and credentialing layer &mdash; who's allowed to perform and interpret the study, and what accreditation the sleep lab itself needs &mdash; is where Palmetto's jurisdiction diverges most visibly from the others by publishing it as a standalone article; the practical accreditation and credentialing requirements, plus a jurisdiction-by-jurisdiction comparison, are worth reviewing before opening a new sleep lab location.</p>
+  <p>⚠️ These article IDs, contractor names, and effective dates were confirmed live against the CMS Coverage Database via the CMS Coverage MCP connector during this build. The full covered-diagnosis lists, frequency limits, and testing-protocol requirements inside each article's body text were not independently re-verified line-by-line here, since the connector returns document metadata rather than full article text for local articles, pull the specific article's full text from the Medicare Coverage Database before finalizing an order-set or prior-authorization rule against it.</p>
+  <p>The facility accreditation and credentialing layer, who's allowed to perform and interpret the study, and what accreditation the sleep lab itself needs, is where Palmetto's jurisdiction diverges most visibly from the others by publishing it as a standalone article; the practical accreditation and credentialing requirements, plus a jurisdiction-by-jurisdiction comparison, are worth reviewing before opening a new sleep lab location.</p>
 
   <h2>Bronchoscopy and pleural procedure coding</h2>
   <p>The bronchoscopy family (31622&ndash;31654) covers everything from a basic diagnostic exam through EBUS, navigation bronchoscopy, thermoplasty, stent placement, and endobronchial valve placement, and it carries the densest NCCI bundling of any pulmonology code family.</p>
@@ -330,9 +386,9 @@
       </tbody>
     </table>
   </div>
-  <p><b>The core NCCI relationship: 31622 is column-2 to 31623 and 31625, with a modifier indicator of 0.</b> That means when a biopsy or brushing is performed at the same session as the diagnostic exam that necessarily preceded it, the diagnostic bronchoscopy (31622) is not separately payable &mdash; and because the indicator is 0, no modifier, however well-documented, changes that outcome. This is the exact indicator value that generic "bronchoscopy bundles with biopsy" guidance never states, and it's the difference between telling a coder not to bother appealing versus letting staff burn time on an unwinnable claim. Separately, secondary industry-billing sources describe 31622 as also inclusive with 31628, 31629, 31630, and 31631 under the same non-bypassable logic when performed at the same session &mdash; consistent with the general principle that a diagnostic bronchoscopy is bundled into any more extensive bronchoscopic procedure performed the same encounter.</p>
-  <p>31625/31652/31653 carry their own set of interactions: EBUS-guided sampling of lymph node stations (31652/31653) is billed once per session based on the total number of stations sampled (one or two vs. three or more), not once per station, and billing both codes for the same encounter is a duplicate rather than two distinct services. A modifier 59 or the specific X-modifier (most often XS, separate structure) is only supportable when the operative note documents that a second, genuinely distinct procedure targeted a separate, non-contiguous anatomic site &mdash; a different lobe, a different lung, or a structure outside the lymph node stations already captured by the EBUS codes &mdash; and even then, only where the underlying pair's modifier indicator is 1, not 0. Full bundling logic across the entire 31622&ndash;31654 range, plus the modifier decision tree for each pair, is in <a href="specialty-pulmonary-diseases-bronchoscopy-coding.html">our bronchoscopy coding and NCCI bundling guide covering 31622 through 31654</a>.</p>
-  <p><b>Pleural procedures: 32554 versus 32555.</b> 32554 reports thoracentesis without imaging guidance; 32555 reports it with imaging guidance, and the guidance work &mdash; performing and interpreting the ultrasound &mdash; is bundled into 32555's value. Reporting 76942 (ultrasound guidance) separately alongside 32555 is a direct NCCI Policy Manual violation (Chapter 9's general rule that radiologic guidance integral to another procedure isn't separately reportable) and denies. The less obvious trap runs the other direction: billing 32554 without imaging, when current standard of care for thoracentesis is image-guided placement, can itself draw a medical-necessity denial or a payer inquiry, because performing the procedure blind is increasingly treated as below the expected standard outside a genuine emergency where imaging isn't available. Document the clinical reason whenever 32554 is billed instead of 32555.</p>
+  <p><b>The core NCCI relationship: 31622 is column-2 to 31623 and 31625, with a modifier indicator of 0.</b> That means when a biopsy or brushing is performed at the same session as the diagnostic exam that necessarily preceded it, the diagnostic bronchoscopy (31622) is not separately payable, and because the indicator is 0, no modifier, however well-documented, changes that outcome. This is the exact indicator value that generic "bronchoscopy bundles with biopsy" guidance never states, and it's the difference between telling a coder not to bother appealing versus letting staff burn time on an unwinnable claim. Separately, secondary industry-billing sources describe 31622 as also inclusive with 31628, 31629, 31630, and 31631 under the same non-bypassable logic when performed at the same session, consistent with the general principle that a diagnostic bronchoscopy is bundled into any more extensive bronchoscopic procedure performed the same encounter.</p>
+  <p>31625/31652/31653 carry their own set of interactions: EBUS-guided sampling of lymph node stations (31652/31653) is billed once per session based on the total number of stations sampled (one or two vs. three or more), not once per station, and billing both codes for the same encounter is a duplicate rather than two distinct services. A modifier 59 or the specific X-modifier (most often XS, separate structure) is only supportable when the operative note documents that a second, genuinely distinct procedure targeted a separate, non-contiguous anatomic site, a different lobe, a different lung, or a structure outside the lymph node stations already captured by the EBUS codes, and even then, only where the underlying pair's modifier indicator is 1, not 0. Full bundling logic across the entire 31622&ndash;31654 range, plus the modifier decision tree for each pair, is in <a href="specialty-pulmonary-diseases-bronchoscopy-coding.html">our bronchoscopy coding and NCCI bundling guide covering 31622 through 31654</a>.</p>
+  <p><b>Pleural procedures: 32554 versus 32555.</b> 32554 reports thoracentesis without imaging guidance; 32555 reports it with imaging guidance, and the guidance work, performing and interpreting the ultrasound, is bundled into 32555's value. Reporting 76942 (ultrasound guidance) separately alongside 32555 is a direct NCCI Policy Manual violation (Chapter 9's general rule that radiologic guidance integral to another procedure isn't separately reportable) and denies. The less obvious trap runs the other direction: billing 32554 without imaging, when current standard of care for thoracentesis is image-guided placement, can itself draw a medical-necessity denial or a payer inquiry, because performing the procedure blind is increasingly treated as below the expected standard outside a genuine emergency where imaging isn't available. Document the clinical reason whenever 32554 is billed instead of 32555.</p>
 
   <h2>Ventilator management and critical care time billing</h2>
   <p>Ventilator management codes are mutually exclusive on the same date of service and split by setting and visit sequence, not by complexity.</p>
@@ -347,14 +403,14 @@
       </tbody>
     </table>
   </div>
-  <p>Only one of these applies per date of service per patient &mdash; billing more than one for the same day is a duplicate, not two separately payable services covering different aspects of vent management.</p>
-  <p><b>When critical care supersedes vent management billing.</b> If the physician's time and the patient's acuity meet critical care criteria &mdash; a critical illness or injury that acutely impairs one or more vital organ systems, with a high probability of imminent or life-threatening deterioration &mdash; 99291/99292 replaces 94002&ndash;94004 rather than stacking with it; ventilator management is considered part of the critical care service when critical care criteria are met and shouldn't be billed separately alongside it. The distinction is clinical, not a coder's choice: a stable, chronically ventilated nursing-facility patient supports 94004; a patient in acute respiratory failure requiring minute-to-minute physician management supports critical care instead.</p>
+  <p>Only one of these applies per date of service per patient, billing more than one for the same day is a duplicate, not two separately payable services covering different aspects of vent management.</p>
+  <p><b>When critical care supersedes vent management billing.</b> If the physician's time and the patient's acuity meet critical care criteria, a critical illness or injury that acutely impairs one or more vital organ systems, with a high probability of imminent or life-threatening deterioration, 99291/99292 replaces 94002&ndash;94004 rather than stacking with it; ventilator management is considered part of the critical care service when critical care criteria are met and shouldn't be billed separately alongside it. The distinction is clinical, not a coder's choice: a stable, chronically ventilated nursing-facility patient supports 94004; a patient in acute respiratory failure requiring minute-to-minute physician management supports critical care instead.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Medicare's critical care time thresholds for 99291/99292 in a calendar day, per patient.</caption>
       <thead><tr><th scope="col">Cumulative time</th><th scope="col">Billing</th></tr></thead>
       <tbody>
-        <tr><td>Under 30 minutes</td><td>Not billable as critical care &mdash; use the appropriate E/M code instead</td></tr>
+        <tr><td>Under 30 minutes</td><td>Not billable as critical care, use the appropriate E/M code instead</td></tr>
         <tr><td>30&ndash;74 minutes</td><td><code>99291</code> &times;1</td></tr>
         <tr><td>75&ndash;104 minutes</td><td><code>99291</code> &times;1 + <code>99292</code> &times;1</td></tr>
         <tr><td>105&ndash;134 minutes</td><td><code>99291</code> &times;1 + <code>99292</code> &times;2</td></tr>
@@ -362,7 +418,7 @@
       </tbody>
     </table>
   </div>
-  <p>Time must be spent by the physician or qualified practitioner exclusively devoted to that one critically ill patient &mdash; time spent on other patients, or activities that could be performed by staff, doesn't count, and the record needs start/stop times or a clearly stated total to support the units billed. <b>Same-group, same-specialty limit:</b> 99291 is billable once per patient per calendar day across physicians of the same group and specialty; a second physician in the same group and specialty covering the same patient later the same day reports additional time as 99292, not a second 99291. <b>Different-specialty co-management</b> is a genuine exception: a pulmonologist managing respiratory failure and a cardiologist separately managing acute heart failure on the same critically ill patient, same day, can each independently bill critical care for their own distinct organ-system management, provided each physician's documentation stands on its own and doesn't overlap in time or scope with the other's. Full worked scenarios, including the vent-management-versus-critical-care decision tree, are in <a href="specialty-pulmonary-diseases-critical-care-ventilator-billing.html">our ventilator management and critical care time billing guide for pulmonology</a>.</p>
+  <p>Time must be spent by the physician or qualified practitioner exclusively devoted to that one critically ill patient, time spent on other patients, or activities that could be performed by staff, doesn't count, and the record needs start/stop times or a clearly stated total to support the units billed. <b>Same-group, same-specialty limit:</b> 99291 is billable once per patient per calendar day across physicians of the same group and specialty; a second physician in the same group and specialty covering the same patient later the same day reports additional time as 99292, not a second 99291. <b>Different-specialty co-management</b> is a genuine exception: a pulmonologist managing respiratory failure and a cardiologist separately managing acute heart failure on the same critically ill patient, same day, can each independently bill critical care for their own distinct organ-system management, provided each physician's documentation stands on its own and doesn't overlap in time or scope with the other's. Full worked scenarios, including the vent-management-versus-critical-care decision tree, are in <a href="specialty-pulmonary-diseases-critical-care-ventilator-billing.html">our ventilator management and critical care time billing guide for pulmonology</a>.</p>
 
   <h2>ICD-10-CM specificity for pulmonary diagnoses</h2>
   <p>Pulmonology's medical necessity turns on diagnosis specificity as much as cardiology's does, and three areas carry almost all of the volume: COPD, asthma, and sleep apnea subtype.</p>
@@ -375,13 +431,13 @@
         <tr><td><code>J44.0</code></td><td>COPD with (acute) lower respiratory infection</td></tr>
         <tr><td><code>J44.1</code></td><td>COPD with (acute) exacerbation</td></tr>
         <tr><td><code>J44.89</code></td><td>Other specified COPD</td></tr>
-        <tr><td><code>J44.9</code></td><td>COPD, unspecified &mdash; avoid as primary where a more specific option applies</td></tr>
+        <tr><td><code>J44.9</code></td><td>COPD, unspecified, avoid as primary where a more specific option applies</td></tr>
       </tbody>
     </table>
   </div>
-  <p>COPD and asthma can and should be coded together when a patient's chart genuinely documents both conditions separately &mdash; this is the overlap pattern (sometimes referred to clinically as asthma-COPD overlap, consistent with GOLD 2026 guidance recognizing it as a distinct clinical phenotype). The coding mechanics support this: category J44 carries an Excludes2 note relative to J45, not an Excludes1 &mdash; and that distinction matters, because Excludes1 means the two conditions cannot be coded together under any circumstance, while Excludes2 means the excluded condition is not part of the category but the patient can have both, and both can be coded together when documented separately. In practice, that means a chart showing a documented COPD diagnosis and a documented, separately assessed asthma diagnosis supports billing both J44.x and the applicable J45.x code on the same claim, rather than forcing a single diagnosis to stand in for a genuinely mixed clinical picture.</p>
+  <p>COPD and asthma can and should be coded together when a patient's chart genuinely documents both conditions separately, this is the overlap pattern (sometimes referred to clinically as asthma-COPD overlap, consistent with GOLD 2026 guidance recognizing it as a distinct clinical phenotype). The coding mechanics support this: category J44 carries an Excludes2 note relative to J45, not an Excludes1, and that distinction matters, because Excludes1 means the two conditions cannot be coded together under any circumstance, while Excludes2 means the excluded condition is not part of the category but the patient can have both, and both can be coded together when documented separately. In practice, that means a chart showing a documented COPD diagnosis and a documented, separately assessed asthma diagnosis supports billing both J44.x and the applicable J45.x code on the same claim, rather than forcing a single diagnosis to stand in for a genuinely mixed clinical picture.</p>
   <h3>Asthma severity-plus-exacerbation code structure</h3>
-  <p>Asthma coding is not just J45.909 (unspecified asthma, uncomplicated) with the specifics filled in later &mdash; the code structure itself encodes both severity and current status, and both are extractable straight from a properly documented visit.</p>
+  <p>Asthma coding is not just J45.909 (unspecified asthma, uncomplicated) with the specifics filled in later, the code structure itself encodes both severity and current status, and both are extractable straight from a properly documented visit.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Asthma severity-and-status code structure, verified live against the FY2026 ICD-10-CM code set.</caption>
@@ -395,7 +451,7 @@
       </tbody>
     </table>
   </div>
-  <p>Severity classification (intermittent vs. the three persistent tiers) reflects the patient's baseline disease control, not the acuity of today's visit &mdash; it should already be established in the chart from prior assessments and carried forward, not reassessed from scratch every encounter. Exacerbation and status asthmaticus, by contrast, describe the current encounter: an exacerbation is a worsening episode; status asthmaticus is a severe, treatment-resistant episode that fails to respond to usual bronchodilator therapy. Reporting unspecified severity (J45.9xx) when a severity classification is already documented elsewhere in the chart, or reporting "uncomplicated" when the visit note describes an active exacerbation, both trigger specificity denials against payer policies that require the severity-plus-status combination for coverage of advanced testing or biologic therapy. Full crosswalks and documentation templates for capturing severity and status correctly at the point of care are in <a href="specialty-pulmonary-diseases-copd-asthma-icd10.html">our ICD-10 coding guide for COPD, asthma, and overlap syndrome</a>.</p>
+  <p>Severity classification (intermittent vs. the three persistent tiers) reflects the patient's baseline disease control, not the acuity of today's visit, it should already be established in the chart from prior assessments and carried forward, not reassessed from scratch every encounter. Exacerbation and status asthmaticus, by contrast, describe the current encounter: an exacerbation is a worsening episode; status asthmaticus is a severe, treatment-resistant episode that fails to respond to usual bronchodilator therapy. Reporting unspecified severity (J45.9xx) when a severity classification is already documented elsewhere in the chart, or reporting "uncomplicated" when the visit note describes an active exacerbation, both trigger specificity denials against payer policies that require the severity-plus-status combination for coverage of advanced testing or biologic therapy. Full crosswalks and documentation templates for capturing severity and status correctly at the point of care are in <a href="specialty-pulmonary-diseases-copd-asthma-icd10.html">our ICD-10 coding guide for COPD, asthma, and overlap syndrome</a>.</p>
   <h3>Sleep apnea subtype differentiation</h3>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -405,17 +461,17 @@
         <tr><td><code>G47.33</code></td><td>Obstructive sleep apnea (adult) (pediatric)</td></tr>
         <tr><td><code>G47.31</code></td><td>Primary central sleep apnea</td></tr>
         <tr><td><code>G47.37</code></td><td>Central sleep apnea in conditions classified elsewhere (e.g., opioid-induced or heart-failure-associated central apnea, coded with the underlying condition)</td></tr>
-        <tr><td><code>G47.30</code></td><td>Sleep apnea, unspecified &mdash; avoid as primary where the study result supports a subtype</td></tr>
+        <tr><td><code>G47.30</code></td><td>Sleep apnea, unspecified, avoid as primary where the study result supports a subtype</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Subtype drives medical necessity for the test type itself, not just for treatment: obstructive sleep apnea is the pattern home sleep apnea testing is validated to detect, while suspected central or complex/mixed apnea (a patient with cardiac disease, opioid use, or a prior non-diagnostic HST) is the clinical scenario that typically requires in-lab, attended polysomnography rather than an unattended home test, because HST devices are far less reliable at distinguishing central events from obstructive ones. A pre-test diagnosis of unspecified sleep apnea (G47.30) supports ordering a study at all, but once results are in hand, the subtype code should follow the study finding &mdash; billing follow-up visits and any CPAP or oxygen therapy orders against the specific, confirmed subtype rather than carrying the unspecified code forward indefinitely.</p>
+  <p>Subtype drives medical necessity for the test type itself, not just for treatment: obstructive sleep apnea is the pattern home sleep apnea testing is validated to detect, while suspected central or complex/mixed apnea (a patient with cardiac disease, opioid use, or a prior non-diagnostic HST) is the clinical scenario that typically requires in-lab, attended polysomnography rather than an unattended home test, because HST devices are far less reliable at distinguishing central events from obstructive ones. A pre-test diagnosis of unspecified sleep apnea (G47.30) supports ordering a study at all, but once results are in hand, the subtype code should follow the study finding, billing follow-up visits and any CPAP or oxygen therapy orders against the specific, confirmed subtype rather than carrying the unspecified code forward indefinitely.</p>
 
   <h2>Modifiers pulmonology billers actually use</h2>
   <p>Five modifiers cover nearly every pulmonology-specific scenario, and each maps to a different structural reason a claim needs one.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>26 / TC</div><ul>
-      <li>Component split for PFT and diagnostic imaging interpretation in shared facility settings &mdash; 26 for interpretation only, TC for equipment and technologist time.</li>
+      <li>Component split for PFT and diagnostic imaging interpretation in shared facility settings, 26 for interpretation only, TC for equipment and technologist time.</li>
       <li>Check the code's PC/TC indicator in the Medicare Physician Fee Schedule before appending either; not every code in the PFT family supports a split.</li>
     </ul></div>
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>25</div><ul>
@@ -423,7 +479,7 @@
       <li>A visit whose entire content is reviewing the test result rarely clears this bar on its own.</li>
     </ul></div>
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>59 / XE, XS, XP, XU</div><ul>
-      <li>Bronchoscopy bundling exceptions &mdash; only where the underlying pair's modifier indicator is 1 (never 0), and the note documents a genuinely distinct site, structure, encounter, or practitioner.</li>
+      <li>Bronchoscopy bundling exceptions, only where the underlying pair's modifier indicator is 1 (never 0), and the note documents a genuinely distinct site, structure, encounter, or practitioner.</li>
       <li>XS (separate structure) covers most defensible bronchoscopy unbundling, since it's usually a separate lobe or lung.</li>
     </ul></div>
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>52</div><ul>
@@ -431,7 +487,7 @@
       <li>Applies to the commercial CPT HST codes (95800/95801/95806); Medicare's HCPCS G-codes follow Medicare's own frequency and duration documentation rather than modifier 52.</li>
     </ul></div>
   </div>
-  <p>Modifier 76 (repeat procedure, same physician, same day) shows up in pulmonology mainly for a technically inadequate PFT or sleep study repeated the same day &mdash; the repeat has to be clinically justified and distinct from simply disliking the first result, with the note stating why the original study wasn't usable. The complete modifier reference for the specialty, including a decision tree for each modifier above and the E/M-and-modifier-25 interaction covered earlier, is in <a href="specialty-pulmonary-diseases-modifiers.html">our pulmonology modifiers guide: 25, 26/TC, 59, and 52 explained</a>.</p>
+  <p>Modifier 76 (repeat procedure, same physician, same day) shows up in pulmonology mainly for a technically inadequate PFT or sleep study repeated the same day, the repeat has to be clinically justified and distinct from simply disliking the first result, with the note stating why the original study wasn't usable. The complete modifier reference for the specialty, including a decision tree for each modifier above and the E/M-and-modifier-25 interaction covered earlier, is in <a href="specialty-pulmonary-diseases-modifiers.html">our pulmonology modifiers guide: 25, 26/TC, 59, and 52 explained</a>.</p>
 
   <h2>NCCI edits, MUE limits, and bundling traps</h2>
   <p>This is where pulmonology billing gets decided, and it's the section competitor guides in this niche consistently skip past with a generic "check the NCCI edits" line. Two values control whether a bundled or capped code is billable at all.</p>
@@ -446,63 +502,63 @@
       <caption>The specialty's highest-value NCCI pairs and bundling relationships.</caption>
       <thead><tr><th scope="col">Pair / relationship</th><th scope="col">What it means</th></tr></thead>
       <tbody>
-        <tr><td><code>94010</code> with <code>94060</code>, same session</td><td>94060 already includes a baseline spirometry maneuver &mdash; billing 94010 alongside it the same encounter is a duplicate, not two distinct services</td></tr>
-        <tr><td><code>31622</code> &rarr; <code>31623</code> / <code>31625</code></td><td>Modifier indicator <b>0</b> &mdash; diagnostic bronchoscopy is inherent to a biopsy or brushing the same session; not separately payable under any modifier</td></tr>
-        <tr><td><code>31623</code> / <code>31652</code> / <code>31653</code></td><td>Mutual exclusions within the same session &mdash; billed based on which distinct procedure and, for EBUS, which lymph-node-station count actually applies, not stacked together for the same anatomic target</td></tr>
-        <tr><td><code>32555</code>'s bundled imaging guidance</td><td>76942 (ultrasound guidance) is never separately billable alongside 32555 &mdash; the guidance work is part of 32555's value under NCCI Policy Manual Chapter 9</td></tr>
+        <tr><td><code>94010</code> with <code>94060</code>, same session</td><td>94060 already includes a baseline spirometry maneuver, billing 94010 alongside it the same encounter is a duplicate, not two distinct services</td></tr>
+        <tr><td><code>31622</code> &rarr; <code>31623</code> / <code>31625</code></td><td>Modifier indicator <b>0</b>, diagnostic bronchoscopy is inherent to a biopsy or brushing the same session; not separately payable under any modifier</td></tr>
+        <tr><td><code>31623</code> / <code>31652</code> / <code>31653</code></td><td>Mutual exclusions within the same session, billed based on which distinct procedure and, for EBUS, which lymph-node-station count actually applies, not stacked together for the same anatomic target</td></tr>
+        <tr><td><code>32555</code>'s bundled imaging guidance</td><td>76942 (ultrasound guidance) is never separately billable alongside 32555, the guidance work is part of 32555's value under NCCI Policy Manual Chapter 9</td></tr>
       </tbody>
     </table>
   </div>
   <p>⚠️ The 31622&rarr;31623/31625 modifier-indicator-0 relationship and the 32555/76942 bundling rule are each corroborated by secondary billing-industry sources (AAPC coding guidance, NCCI Policy Manual Chapter 9 commentary) reviewed during this build; this build could not open CMS's primary NCCI PTP Edits file or the Medicare Coverage Database's downloadable edit tables directly to re-confirm the exact current-quarter indicator values against the source (CMS's site returned access errors to automated fetch attempts). Verify the current value for any pair in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before building it into a scrubber rule, since these values change quarterly.</p>
-  <p><b>MUE limits.</b> Secondary billing sources consistently describe a Medically Unlikely Edit of 1 unit per date of service on <code>94726</code> (plethysmography for lung volumes) &mdash; consistent with the fact that a lung volume measurement by a given method is a single study per encounter, not a per-attempt billable unit. ⚠️ The current MUE value for <code>94726</code>, and the corresponding value for <code>94729</code> (DLCO), could not be independently confirmed against CMS's primary MUE files during this build; 94729 functions as an add-on-style code reported alongside a base spirometry or lung-volume code rather than standalone, and its own unit cap should be confirmed in the CMS MUE Lookup Tool by procedure code before relying on a specific number operationally. Point your team to the CMS MUE Lookup Tool by name rather than a cached figure, since MUE tables update quarterly alongside the NCCI edit files.</p>
+  <p><b>MUE limits.</b> Secondary billing sources consistently describe a Medically Unlikely Edit of 1 unit per date of service on <code>94726</code> (plethysmography for lung volumes), consistent with the fact that a lung volume measurement by a given method is a single study per encounter, not a per-attempt billable unit. ⚠️ The current MUE value for <code>94726</code>, and the corresponding value for <code>94729</code> (DLCO), could not be independently confirmed against CMS's primary MUE files during this build; 94729 functions as an add-on-style code reported alongside a base spirometry or lung-volume code rather than standalone, and its own unit cap should be confirmed in the CMS MUE Lookup Tool by procedure code before relying on a specific number operationally. Point your team to the CMS MUE Lookup Tool by name rather than a cached figure, since MUE tables update quarterly alongside the NCCI edit files.</p>
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Before writing any bronchoscopy bundling appeal, look up the modifier indicator for the specific pair first. If it comes back 0 &mdash; and 31622 against 31623/31625 always will &mdash; stop. There is no documentation, however strong, that reverses a 0 indicator; the staff time is better spent on the claims that are actually winnable.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Before writing any bronchoscopy bundling appeal, look up the modifier indicator for the specific pair first. If it comes back 0, and 31622 against 31623/31625 always will, stop. There is no documentation, however strong, that reverses a 0 indicator; the staff time is better spent on the claims that are actually winnable.</p></div>
   </div>
 
   <h2>Top pulmonology denials and how to appeal them</h2>
-  <p>Denial-to-appeal pairing only works when the appeal argument is matched to the actual reason the claim came back &mdash; a bundling denial, a PA mismatch, and a compliance-data gap each need a completely different fix, and sending the wrong one wastes the appeal window.</p>
+  <p>Denial-to-appeal pairing only works when the appeal argument is matched to the actual reason the claim came back, a bundling denial, a PA mismatch, and a compliance-data gap each need a completely different fix, and sending the wrong one wastes the appeal window.</p>
   <div class="data-table-wrap">
     <table class="data-table">
-      <caption>Pulmonology's recurring denials, why each fires, and the specific fix &mdash; not just the reason.</caption>
+      <caption>Pulmonology's recurring denials, why each fires, and the specific fix, not just the reason.</caption>
       <thead><tr><th scope="col">Denial</th><th scope="col">Why it fires</th><th scope="col">Fix / appeal argument</th></tr></thead>
       <tbody>
-        <tr><td><b>Missing PFT interpretation</b><br>CO-16</td><td>Tracing billed without a signed physician interpretation addressing pattern, severity, and comparison to prior study</td><td>Not appealable as billed &mdash; obtain and attach the completed interpretation, then resubmit. Prevent by blocking chart closure until the interpretation is signed.</td></tr>
-        <tr><td><b>Bronchoscopy bundling denial</b><br>CO-97</td><td>31622 billed alongside 31623/31625 same session &mdash; modifier indicator 0, not separately payable</td><td>Not appealable if the pair's indicator is 0 &mdash; confirm the indicator before writing anything. If a genuinely distinct second procedure occurred at a separate, non-contiguous site under a code pair with indicator 1, appeal with the operative note documenting the separate structure and the correct X-modifier.</td></tr>
-        <tr><td><b>CPAP compliance-data denial</b></td><td>Payer requires proof of adherence before continuing coverage past the initial trial and the download wasn't submitted or didn't meet the threshold</td><td>Submit the compliance download directly: minimum 70% of nights with at least 4 hours of use, across a consecutive 30-day period within the first 90 days of therapy. A partial or late download doesn't meet the standard &mdash; don't submit until the full 30-day window and threshold are met.</td></tr>
-        <tr><td><b>PA device-mismatch denial</b></td><td>Equipment or HCPCS code actually dispensed doesn't match what the prior authorization approved</td><td>Not a clinical appeal &mdash; request a corrected or amended authorization from the ordering physician's office reflecting the equipment actually supplied, then resubmit. A clinical-necessity letter doesn't fix a mismatched authorization number or device code.</td></tr>
-        <tr><td><b>Sleep study medical-necessity denial</b></td><td>Order alone submitted as justification, without a comprehensive sleep evaluation supporting the specific test type ordered</td><td>Appeal with the full sleep evaluation note &mdash; symptoms, exam findings (e.g., BMI, neck circumference, comorbidities), and the clinical reasoning for HST versus in-lab &mdash; not just the order. Prevent by requiring the evaluation note to exist before the study is scheduled.</td></tr>
-        <tr><td><b>HST billed to Medicare on CPT codes</b></td><td>95800/95801/95806 submitted instead of the required G0398&ndash;G0400 HCPCS substitution</td><td>Not appealable as a coverage dispute &mdash; correct the code to the appropriate HCPCS G-code by monitor type and resubmit. Prevent with a payer-aware charge rule that blocks the CPT codes from ever reaching a Medicare claim.</td></tr>
+        <tr><td><b>Missing PFT interpretation</b><br>CO-16</td><td>Tracing billed without a signed physician interpretation addressing pattern, severity, and comparison to prior study</td><td>Not appealable as billed, obtain and attach the completed interpretation, then resubmit. Prevent by blocking chart closure until the interpretation is signed.</td></tr>
+        <tr><td><b>Bronchoscopy bundling denial</b><br>CO-97</td><td>31622 billed alongside 31623/31625 same session, modifier indicator 0, not separately payable</td><td>Not appealable if the pair's indicator is 0, confirm the indicator before writing anything. If a genuinely distinct second procedure occurred at a separate, non-contiguous site under a code pair with indicator 1, appeal with the operative note documenting the separate structure and the correct X-modifier.</td></tr>
+        <tr><td><b>CPAP compliance-data denial</b></td><td>Payer requires proof of adherence before continuing coverage past the initial trial and the download wasn't submitted or didn't meet the threshold</td><td>Submit the compliance download directly: minimum 70% of nights with at least 4 hours of use, across a consecutive 30-day period within the first 90 days of therapy. A partial or late download doesn't meet the standard, don't submit until the full 30-day window and threshold are met.</td></tr>
+        <tr><td><b>PA device-mismatch denial</b></td><td>Equipment or HCPCS code actually dispensed doesn't match what the prior authorization approved</td><td>Not a clinical appeal, request a corrected or amended authorization from the ordering physician's office reflecting the equipment actually supplied, then resubmit. A clinical-necessity letter doesn't fix a mismatched authorization number or device code.</td></tr>
+        <tr><td><b>Sleep study medical-necessity denial</b></td><td>Order alone submitted as justification, without a comprehensive sleep evaluation supporting the specific test type ordered</td><td>Appeal with the full sleep evaluation note, symptoms, exam findings (e.g., BMI, neck circumference, comorbidities), and the clinical reasoning for HST versus in-lab, not just the order. Prevent by requiring the evaluation note to exist before the study is scheduled.</td></tr>
+        <tr><td><b>HST billed to Medicare on CPT codes</b></td><td>95800/95801/95806 submitted instead of the required G0398&ndash;G0400 HCPCS substitution</td><td>Not appealable as a coverage dispute, correct the code to the appropriate HCPCS G-code by monitor type and resubmit. Prevent with a payer-aware charge rule that blocks the CPT codes from ever reaching a Medicare claim.</td></tr>
       </tbody>
     </table>
   </div>
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Appeal letter language, by denial type</div><p>For a compliance-data denial: "Attached is the CPAP compliance report covering [30-day range], showing usage on [X] of 30 nights (≥70%) at a mean of [X] hours per night (≥4 hours), meeting the payer's continuation-of-coverage criteria." For a bundling denial where the indicator genuinely supports an override: "CPT [code] was performed at [distinct anatomic site], separate and non-contiguous from the site addressed by CPT [column-1 code], as documented in the operative note dated [date]; modifier XS is appended to reflect this separate structure, consistent with NCCI modifier indicator 1 for this code pair." Never send either letter for the wrong denial reason &mdash; a compliance letter doesn't answer a bundling denial, and a bundling argument doesn't answer a PA mismatch.</p></div>
+    <div><div class="protip-label">Appeal letter language, by denial type</div><p>For a compliance-data denial: "Attached is the CPAP compliance report covering [30-day range], showing usage on [X] of 30 nights (≥70%) at a mean of [X] hours per night (≥4 hours), meeting the payer's continuation-of-coverage criteria." For a bundling denial where the indicator genuinely supports an override: "CPT [code] was performed at [distinct anatomic site], separate and non-contiguous from the site addressed by CPT [column-1 code], as documented in the operative note dated [date]; modifier XS is appended to reflect this separate structure, consistent with NCCI modifier indicator 1 for this code pair." Never send either letter for the wrong denial reason, a compliance letter doesn't answer a bundling denial, and a bundling argument doesn't answer a PA mismatch.</p></div>
   </div>
   <p>Full appeal-letter structures for every denial pattern above, plus additional device- and payer-specific scenarios not covered in this summary, are in <a href="specialty-pulmonary-diseases-denials-appeals.html">our guide to top pulmonology claim denials and how to appeal them</a>.</p>
 
   <h2>Payer and coverage nuances beyond Medicare</h2>
-  <p>Medicare Advantage plans frequently diverge from traditional Medicare's sleep-testing preference even while operating under the same underlying benefit: many MA plans push home sleep apnea testing more aggressively than traditional Medicare's coverage articles require, using it as the default first-line study and requiring documented HST failure or a specific comorbidity (significant cardiopulmonary disease, suspected central or complex apnea, chronic opioid use) before authorizing in-lab polysomnography. That's a utilization-management overlay on top of, not a replacement for, the underlying Medicare coverage criteria &mdash; the MAC's article still defines what's covered, but the MA plan's prior-auth process decides which test gets authorized first.</p>
-  <p>Commercial payers commonly layer sleep-lab accreditation requirements on top of what CMS's articles specify, sometimes requiring accreditation from a specific body (the American Academy of Sleep Medicine is the most commonly required) even where the governing MAC's article accepts a broader set of accrediting organizations, and sometimes requiring accreditation that CMS's coverage criteria don't address for HST at all. Treat a commercial payer's provider manual and medical policy as the controlling document for that payer's claims &mdash; a Medicare LCD is context, not the answer, for a non-Medicare claim.</p>
-  <p><b>Multi-state jurisdiction tracking.</b> Because sleep testing coverage is local, a practice with locations spanning more than one MAC jurisdiction needs an explicit map from practice location to governing article, not a single "our LCD" reference used across every site. The practical workflow: list every practice and sleep-lab location, identify the MAC with Part B jurisdiction over each (CGS, Noridian, WPS, First Coast, and Palmetto GBA between them cover a large share of the country's pulmonology practices), pull that MAC's current polysomnography article number and effective date, and route order-set coverage checks and prior documentation requirements through the article matching the location where the study is actually performed or interpreted &mdash; not the location of the billing office or the patient's home address. Revisit the map whenever a MAC republishes its article, since effective dates and article numbers do change, as the Noridian A57697-for-A57698 transition on 09/11/2025 shows.</p>
+  <p>Medicare Advantage plans frequently diverge from traditional Medicare's sleep-testing preference even while operating under the same underlying benefit: many MA plans push home sleep apnea testing more aggressively than traditional Medicare's coverage articles require, using it as the default first-line study and requiring documented HST failure or a specific comorbidity (significant cardiopulmonary disease, suspected central or complex apnea, chronic opioid use) before authorizing in-lab polysomnography. That's a utilization-management overlay on top of, not a replacement for, the underlying Medicare coverage criteria, the MAC's article still defines what's covered, but the MA plan's prior-auth process decides which test gets authorized first.</p>
+  <p>Commercial payers commonly layer sleep-lab accreditation requirements on top of what CMS's articles specify, sometimes requiring accreditation from a specific body (the American Academy of Sleep Medicine is the most commonly required) even where the governing MAC's article accepts a broader set of accrediting organizations, and sometimes requiring accreditation that CMS's coverage criteria don't address for HST at all. Treat a commercial payer's provider manual and medical policy as the controlling document for that payer's claims, a Medicare LCD is context, not the answer, for a non-Medicare claim.</p>
+  <p><b>Multi-state jurisdiction tracking.</b> Because sleep testing coverage is local, a practice with locations spanning more than one MAC jurisdiction needs an explicit map from practice location to governing article, not a single "our LCD" reference used across every site. The practical workflow: list every practice and sleep-lab location, identify the MAC with Part B jurisdiction over each (CGS, Noridian, WPS, First Coast, and Palmetto GBA between them cover a large share of the country's pulmonology practices), pull that MAC's current polysomnography article number and effective date, and route order-set coverage checks and prior documentation requirements through the article matching the location where the study is actually performed or interpreted, not the location of the billing office or the patient's home address. Revisit the map whenever a MAC republishes its article, since effective dates and article numbers do change, as the Noridian A57697-for-A57698 transition on 09/11/2025 shows.</p>
 
   <h2>Prior authorization for CPAP, oxygen, and biologics</h2>
   <p>Prior authorization gates nearly every high-cost service in pulmonology, and it's the single largest driver of the specialty's elevated denial rate. Getting ahead of it means building the chart before the PA request goes out, not scrambling to backfill it after a denial.</p>
   <h3>CPAP (HCPCS E0601)</h3>
-  <p>CPAP prior authorization typically follows a structured trial-then-compliance-audit pattern: an initial authorization covers a defined trial period (commonly 90 days), during which the patient uses the device and the supplier or practice collects usage data from the machine's onboard compliance tracking. Continuation of coverage past the trial period requires demonstrating adherence &mdash; the standard threshold is a minimum of 70% of nights with at least 4 hours of use, measured across a consecutive 30-day period that falls within the initial 90-day trial window. Falling short of that threshold, or failing to submit the compliance data at all, is one of the most common and most preventable denial patterns in the specialty; it isn't a clinical judgment call, it's a data-submission requirement.</p>
+  <p>CPAP prior authorization typically follows a structured trial-then-compliance-audit pattern: an initial authorization covers a defined trial period (commonly 90 days), during which the patient uses the device and the supplier or practice collects usage data from the machine's onboard compliance tracking. Continuation of coverage past the trial period requires demonstrating adherence, the standard threshold is a minimum of 70% of nights with at least 4 hours of use, measured across a consecutive 30-day period that falls within the initial 90-day trial window. Falling short of that threshold, or failing to submit the compliance data at all, is one of the most common and most preventable denial patterns in the specialty; it isn't a clinical judgment call, it's a data-submission requirement.</p>
   <h3>Oxygen therapy</h3>
-  <p>Home oxygen requires a Certificate of Medical Necessity (CMN) documenting the qualifying test result (arterial blood gas or pulse oximetry at rest, during exercise, or during sleep, per the payer's specific protocol), the prescribed flow rate and duration of use, and a diagnosis supporting chronic hypoxemia. The CMN has to be completed and signed before the equipment is dispensed in most payer workflows, and re-certification at defined intervals is common for long-term oxygen therapy &mdash; missing a re-certification deadline is a frequent, entirely avoidable cause of a therapy that was previously covered suddenly denying.</p>
+  <p>Home oxygen requires a Certificate of Medical Necessity (CMN) documenting the qualifying test result (arterial blood gas or pulse oximetry at rest, during exercise, or during sleep, per the payer's specific protocol), the prescribed flow rate and duration of use, and a diagnosis supporting chronic hypoxemia. The CMN has to be completed and signed before the equipment is dispensed in most payer workflows, and re-certification at defined intervals is common for long-term oxygen therapy, missing a re-certification deadline is a frequent, entirely avoidable cause of a therapy that was previously covered suddenly denying.</p>
   <h3>Biologic asthma therapy</h3>
   <p>Biologic therapy for severe eosinophilic or allergic asthma (targeting IL-5, IL-4/IL-13, IgE, or related pathways depending on the specific agent) carries prior authorization requirements that stack with specialty pharmacy's own intake process: the payer's PA typically requires documented severe persistent asthma (tying directly back to the J45.5x severity coding covered earlier), a specific eosinophil count or IgE level threshold depending on the agent, a defined trial-and-failure history on standard controller therapy, and exacerbation frequency over a lookback period. Specialty pharmacy then runs its own separate benefits-verification and PA process before dispensing, which means the same clinical documentation often has to satisfy two distinct authorization workflows rather than one.</p>
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">What has to be in the chart before the PA request goes out</div><p>For CPAP: a comprehensive sleep evaluation note, the diagnostic study result with subtype (G47.33/G47.31/G47.37), and a plan explicitly ordering CPAP as treatment. For oxygen: the qualifying test result at the correct testing condition (rest/exercise/sleep) and a diagnosis supporting chronic hypoxemia. For biologics: severity-coded asthma diagnosis (J45.5x), the specific biomarker threshold the agent's coverage policy requires, and a documented trial-and-failure history on standard therapy. Every one of these is something the payer will ask for eventually &mdash; assembling it before submission, rather than after a denial, is the entire difference between a clean PA and a 30% denial rate.</p></div>
+    <div><div class="protip-label">What has to be in the chart before the PA request goes out</div><p>For CPAP: a comprehensive sleep evaluation note, the diagnostic study result with subtype (G47.33/G47.31/G47.37), and a plan explicitly ordering CPAP as treatment. For oxygen: the qualifying test result at the correct testing condition (rest/exercise/sleep) and a diagnosis supporting chronic hypoxemia. For biologics: severity-coded asthma diagnosis (J45.5x), the specific biomarker threshold the agent's coverage policy requires, and a documented trial-and-failure history on standard therapy. Every one of these is something the payer will ask for eventually, assembling it before submission, rather than after a denial, is the entire difference between a clean PA and a 30% denial rate.</p></div>
   </div>
   <p>Full CMN documentation requirements, the 90-day CPAP compliance audit workflow with sample tracking templates, and the biologic PA stacking sequence with specialty pharmacy are in <a href="specialty-pulmonary-diseases-cpap-oxygen-prior-auth.html">our CPAP and oxygen therapy prior authorization guide: avoiding the 30% denial rate</a>.</p>
 
   <h2>Get your pulmonology claims paid the first time</h2>
-  <p>Almost every recurring denial pattern in this guide traces back to the same root cause: the claim was clinically correct, but the code, the modifier, the diagnosis specificity, or the prior authorization didn't match what the payer's actual policy requires &mdash; not a generic description of that policy, but the specific MAC article, the specific NCCI indicator, the specific ICD-10 code structure. Competitor guides in this space name the categories; getting paid requires the values inside them. Build order sets around the correct MAC article for each practice location, block PFT claims from leaving the building without a signed interpretation, route Medicare HST claims through the HCPCS G-codes automatically, and assemble PA documentation before the request goes out rather than after the denial lands.</p>
+  <p>Almost every recurring denial pattern in this guide traces back to the same root cause: the claim was clinically correct, but the code, the modifier, the diagnosis specificity, or the prior authorization didn't match what the payer's actual policy requires, not a generic description of that policy, but the specific MAC article, the specific NCCI indicator, the specific ICD-10 code structure. Competitor guides in this space name the categories; getting paid requires the values inside them. Build order sets around the correct MAC article for each practice location, block PFT claims from leaving the building without a signed interpretation, route Medicare HST claims through the HCPCS G-codes automatically, and assemble PA documentation before the request goes out rather than after the denial lands.</p>
   <div class="cta-band">
     <div>
       <h3>Billing pulmonary medicine and losing revenue to denials?</h3>
@@ -513,23 +569,23 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Why do our PFT claims deny even though the test itself was performed correctly?</summary><p>The single most common PFT denial has nothing to do with the test equipment or the technician's work &mdash; it's a missing or incomplete physician interpretation and report. Every PFT code, whether it's spirometry, lung volumes, or DLCO, requires a signed interpretive statement addressing the pattern (obstructive, restrictive, mixed), severity, and comparison to prior studies where available. A tracing sitting in the chart without that narrative is billed but not supportable on audit, and it denies as CO-16 (missing information) or gets recouped later even if it initially paid.</p></details>
+    <details class="faq-item"><summary>Why do our PFT claims deny even though the test itself was performed correctly?</summary><p>The single most common PFT denial has nothing to do with the test equipment or the technician's work, it's a missing or incomplete physician interpretation and report. Every PFT code, whether it's spirometry, lung volumes, or DLCO, requires a signed interpretive statement addressing the pattern (obstructive, restrictive, mixed), severity, and comparison to prior studies where available. A tracing sitting in the chart without that narrative is billed but not supportable on audit, and it denies as CO-16 (missing information) or gets recouped later even if it initially paid.</p></details>
     <details class="faq-item"><summary>Can we bill 94010 and 94060 for the same patient on the same day?</summary><p>No. 94060 already includes a baseline spirometry maneuver plus a second set of maneuvers after bronchodilator administration, so it supersedes 94010 rather than stacking with it. If the physician ordered a pre/post bronchodilator study, bill 94060 alone. Billing 94010 in addition to 94060 for the same encounter is a duplicate service, not two separate tests, and payers bundle it accordingly.</p></details>
-    <details class="faq-item"><summary>Why does Medicare deny our home sleep apnea test claims when we bill the CPT sleep study codes?</summary><p>Medicare requires HCPCS Level II codes &mdash; G0398, G0399, or G0400, selected by the type of portable monitor used &mdash; for every home sleep apnea test, regardless of how the device manufacturer or the sleep lab's own documentation describes it. Submitting the commercial-payer CPT codes 95800, 95801, or 95806 to Medicare triggers an automatic denial because those codes aren't recognized for HST on a Medicare claim; only traditional in-lab polysomnography uses the CPT 95808/95810/95811 family with Medicare.</p></details>
-    <details class="faq-item"><summary>What's the difference between a bundling denial and a prior-authorization device-mismatch denial on a CPAP claim?</summary><p>They need completely different fixes. A bundling denial (CO-97) means a component of the CPAP claim was billed separately when it should have been included in another code &mdash; the fix is a coding correction. A PA device-mismatch denial means the equipment actually dispensed doesn't match what the prior authorization approved &mdash; wrong HCPCS code, wrong feature set, or a supplier substitution the payer never authorized. That's not something a clinical appeal fixes; it needs a corrected or amended authorization from the ordering physician's office before the claim can be resubmitted.</p></details>
-    <details class="faq-item"><summary>Do we need modifier 59 or an X-modifier when billing bronchoscopy with biopsy?</summary><p>It depends entirely on which pair of codes you're billing and that pair's NCCI modifier indicator. Diagnostic bronchoscopy (31622) billed with a biopsy code like 31623 or 31625 carries a modifier indicator of 0 &mdash; no modifier overrides that edit, because the diagnostic exam is inherent to the biopsy procedure and 31622 simply isn't separately payable that day. A modifier only has a chance of working on a pair whose indicator is 1, and only when the operative note documents genuinely distinct anatomic sites, such as separate, non-contiguous lobes.</p></details>
+    <details class="faq-item"><summary>Why does Medicare deny our home sleep apnea test claims when we bill the CPT sleep study codes?</summary><p>Medicare requires HCPCS Level II codes, G0398, G0399, or G0400, selected by the type of portable monitor used, for every home sleep apnea test, regardless of how the device manufacturer or the sleep lab's own documentation describes it. Submitting the commercial-payer CPT codes 95800, 95801, or 95806 to Medicare triggers an automatic denial because those codes aren't recognized for HST on a Medicare claim; only traditional in-lab polysomnography uses the CPT 95808/95810/95811 family with Medicare.</p></details>
+    <details class="faq-item"><summary>What's the difference between a bundling denial and a prior-authorization device-mismatch denial on a CPAP claim?</summary><p>They need completely different fixes. A bundling denial (CO-97) means a component of the CPAP claim was billed separately when it should have been included in another code, the fix is a coding correction. A PA device-mismatch denial means the equipment actually dispensed doesn't match what the prior authorization approved, wrong HCPCS code, wrong feature set, or a supplier substitution the payer never authorized. That's not something a clinical appeal fixes; it needs a corrected or amended authorization from the ordering physician's office before the claim can be resubmitted.</p></details>
+    <details class="faq-item"><summary>Do we need modifier 59 or an X-modifier when billing bronchoscopy with biopsy?</summary><p>It depends entirely on which pair of codes you're billing and that pair's NCCI modifier indicator. Diagnostic bronchoscopy (31622) billed with a biopsy code like 31623 or 31625 carries a modifier indicator of 0, no modifier overrides that edit, because the diagnostic exam is inherent to the biopsy procedure and 31622 simply isn't separately payable that day. A modifier only has a chance of working on a pair whose indicator is 1, and only when the operative note documents genuinely distinct anatomic sites, such as separate, non-contiguous lobes.</p></details>
     <details class="faq-item"><summary>Why does an unspecified COPD or asthma code trigger a denial when the diagnosis seems obvious from the chart?</summary><p>Medicare LCDs and commercial coverage policies for advanced pulmonary testing and biologic therapy publish the specific diagnosis codes that support medical necessity, and J44.9 or J45.909 frequently aren't on that list even when the clinical picture is unambiguous. The fix is documentation specificity at the point of care: severity classification for asthma (mild intermittent through severe persistent), exacerbation status, and for COPD, whether an acute lower respiratory infection or acute exacerbation is present. An unspecified code isn't wrong, but it's the version of the diagnosis least likely to clear a coverage edit.</p></details>
     <details class="faq-item"><summary>How many minutes of critical care time do we need before we can bill both 99291 and 99292?</summary><p>99291 covers the first 30 to 74 minutes of cumulative critical care time in a calendar day; under 30 minutes doesn't support 99291 at all and should be billed as an appropriate E/M service instead. 99292 is only added once total time reaches 75 minutes, and one unit of 99292 covers the range from 75 through 104 minutes. Past 104 minutes, add one more unit of 99292 for each additional 30-minute increment. Time has to be physician or qualified practitioner time devoted exclusively to that one critically ill patient, documented with start and stop times or total minutes.</p></details>
-    <details class="faq-item"><summary>Which MAC's sleep study coverage article applies to our practice if we see patients in more than one state?</summary><p>The article that governs a claim is determined by the Medicare Administrative Contractor with jurisdiction over the rendering provider's practice location for that date of service, not the patient's home state or the billing address. A multi-state pulmonology group needs to map every practice location to its MAC &mdash; CGS, Noridian, WPS, First Coast, and Palmetto GBA each publish their own current polysomnography billing-and-coding article &mdash; and route claims and prior documentation checks through the correct article for the site where the study was actually performed or interpreted.</p></details>
+    <details class="faq-item"><summary>Which MAC's sleep study coverage article applies to our practice if we see patients in more than one state?</summary><p>The article that governs a claim is determined by the Medicare Administrative Contractor with jurisdiction over the rendering provider's practice location for that date of service, not the patient's home state or the billing address. A multi-state pulmonology group needs to map every practice location to its MAC, CGS, Noridian, WPS, First Coast, and Palmetto GBA each publish their own current polysomnography billing-and-coding article, and route claims and prior documentation checks through the correct article for the site where the study was actually performed or interpreted.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
   <h2>Sources and verification</h2>
-  <p>ICD-10-CM codes for the COPD family (J44.0, J44.1, J44.89, J44.9), the full asthma severity-and-status grid (J45.20&ndash;J45.52, J45.901/.902/.909), and the sleep apnea subtype family (G47.30, G47.31, G47.33, G47.37) were looked up and validated live against the FY2026 ICD-10-CM code set via the ICD-10 MCP connector; all are confirmed billable for HIPAA transactions. Medicare local coverage article IDs, contractor names, effective and retirement dates for polysomnography (CGS A57049/L36902, Noridian A57697/L36861 superseding A57698/L34040, WPS A56903/L36839, First Coast A57496/L33405, Palmetto A56995/L36593 plus companion article A55958) and for transtelephonic spirometry (CGS A56808) were retrieved live from the CMS Coverage Database via the CMS Coverage MCP connector. The full covered-diagnosis lists and testing-protocol text inside each article were not independently re-verified line-by-line, since the connector returns document metadata rather than full article bodies for local articles &mdash; pull each article's full text from the Medicare Coverage Database before finalizing an order-set rule against it. NCCI modifier-indicator values (31622&rarr;31623/31625 at indicator 0; the 94010/94060 same-session relationship; the 32555/76942 bundled-imaging rule) and the MUE value cited for 94726 are corroborated by secondary billing-industry sources (AAPC coding guidance, NCCI Policy Manual Chapter 9) reviewed via web search during this build; this build could not open CMS's primary NCCI PTP Edits file or MUE tables directly to re-confirm current-quarter values, since CMS's direct-fetch pages returned access errors to automated retrieval &mdash; verify current values in the CMS NCCI PTP Edits Lookup Tool and MUE Lookup Tool before relying on them operationally, and flagged inline wherever cited. The 18% pulmonology denial-rate figure and the ~30% prior-authorization denial-rate figure are secondary-sourced (Medscape Physician Compensation Report data as aggregated by industry billing analysts), not a CMS-published statistic, and are marked as such in the text. No Medicare Physician Fee Schedule dollar amounts are published in this guide; PFS rates are locality-specific and change annually, so check the CMS PFS Look-Up Tool for your own locality and year. This guide reflects the FY2026 ICD-10-CM code set and was published 2026-08-28.</p>
+  <p>ICD-10-CM codes for the COPD family (J44.0, J44.1, J44.89, J44.9), the full asthma severity-and-status grid (J45.20&ndash;J45.52, J45.901/.902/.909), and the sleep apnea subtype family (G47.30, G47.31, G47.33, G47.37) were looked up and validated live against the FY2026 ICD-10-CM code set via the ICD-10 MCP connector; all are confirmed billable for HIPAA transactions. Medicare local coverage article IDs, contractor names, effective and retirement dates for polysomnography (CGS A57049/L36902, Noridian A57697/L36861 superseding A57698/L34040, WPS A56903/L36839, First Coast A57496/L33405, Palmetto A56995/L36593 plus companion article A55958) and for transtelephonic spirometry (CGS A56808) were retrieved live from the CMS Coverage Database via the CMS Coverage MCP connector. The full covered-diagnosis lists and testing-protocol text inside each article were not independently re-verified line-by-line, since the connector returns document metadata rather than full article bodies for local articles, pull each article's full text from the Medicare Coverage Database before finalizing an order-set rule against it. NCCI modifier-indicator values (31622&rarr;31623/31625 at indicator 0; the 94010/94060 same-session relationship; the 32555/76942 bundled-imaging rule) and the MUE value cited for 94726 are corroborated by secondary billing-industry sources (AAPC coding guidance, NCCI Policy Manual Chapter 9) reviewed via web search during this build; this build could not open CMS's primary NCCI PTP Edits file or MUE tables directly to re-confirm current-quarter values, since CMS's direct-fetch pages returned access errors to automated retrieval, verify current values in the CMS NCCI PTP Edits Lookup Tool and MUE Lookup Tool before relying on them operationally, and flagged inline wherever cited. The 18% pulmonology denial-rate figure and the ~30% prior-authorization denial-rate figure are secondary-sourced (Medscape Physician Compensation Report data as aggregated by industry billing analysts), not a CMS-published statistic, and are marked as such in the text. No Medicare Physician Fee Schedule dollar amounts are published in this guide; PFS rates are locality-specific and change annually, so check the CMS PFS Look-Up Tool for your own locality and year. This guide reflects the FY2026 ICD-10-CM code set and was published 2026-08-28.</p>
 
   <h2>Related resources</h2>
   <ul class="related-list">
@@ -547,62 +603,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>
