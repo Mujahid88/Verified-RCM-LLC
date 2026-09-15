@@ -7,6 +7,26 @@ or served as plain static files.
 
 ---
 
+## 0. Home page redesign, phase 1 (2026-09-15) — READ THIS FIRST
+
+`index.html` now uses a **new design system** ported from the Belleville Lake
+Pediatrics site: `css/lake.css` (hand-written, standalone, NOT built by
+`css/build.js`), `js/lake.js` (accessible mobile drawer), self-hosted
+Quicksand 700 + Nunito Sans (variable) in `fonts/`, licensed stock photography in
+`images/home/` (Unsplash, license-free), and an inline SVG "claim river" hero
+scene. Black type on white; all colour lives in pastel section bands, accent
+tiles, buttons and artwork. Light theme only — the dark-mode toggle was dropped
+on the home page on purpose.
+
+Every other page still loads `css/style.css` (the monochrome system below).
+The plan is to roll `lake.css` out to the shared header/footer and the interior
+templates next; until then the two systems coexist and the interior docs below
+still apply to them. `js/main.js` is still loaded by the home page for search,
+the reviews slider, counters and the cookie banner; `lake.css` styles those
+class names itself.
+
+---
+
 ## 1. Structure
 
 ```
