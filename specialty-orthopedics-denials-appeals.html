@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Orthopedic Denials and Appeals: CARC Codes and Winning Arguments | Verified RCM">
 <meta name="twitter:description" content="Orthopedic claim denials explained: CO-50 medical necessity, CO-97 bundling, CO-4 modifier errors, and CO-197/CO-15 prior-auth denials under WISeR, with the appeal argument for each.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Orthopedics","item":"https://www.verifiedrcm.com/specialty-orthopedics.html"},{"@type":"ListItem","position":4,"name":"Orthopedic Denials and Appeals: CARC Codes and Winning Arguments","item":"https://www.verifiedrcm.com/specialty-orthopedics-denials-appeals.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why did our joint replacement claim deny CO-50 even though the surgery was clearly needed?","acceptedAnswer":{"@type":"Answer","text":"Almost always because the chart doesn't document a completed trial of conservative treatment before the covering MAC's Total Joint Arthroplasty LCD threshold is met, or because the diagnosis on the claim is unspecified osteoarthritis rather than a laterality- and type-specific code. The surgery being clinically correct doesn't matter to the payer's automated medical-necessity check if the chart doesn't show the specific documentation the LCD requires. The fix is confirming which MAC's LCD applies to your claim and pulling its conservative-care threshold before scheduling the surgery, not after the denial arrives."}},{"@type":"Question","name":"Is a CO-97 bundling denial always appealable?","acceptedAnswer":{"@type":"Answer","text":"No, and checking before you appeal saves the staff hour. The NCCI modifier indicator attached to the specific code pair decides it: an indicator of 0 means the second code is never separately payable, no matter how well documented the claim is, and there is no appeal argument that changes that. An indicator of 1 means an appeal is possible, but only with documentation showing the second service was genuinely distinct — a different anatomic site, a different compartment, or a separate session. Confirm the indicator for the specific pair before drafting the letter."}},{"@type":"Question","name":"What's the difference between a CO-197 and a CO-15 denial under the WISeR prior-authorization model?","acceptedAnswer":{"@type":"Answer","text":"CO-197 means no prior authorization was requested or obtained at all before the procedure was billed. CO-15 means an authorization exists but the number on the claim is missing, invalid, or doesn't match the billed procedure, date, or provider. The distinction changes what happens next: a CO-197 denial is rarely reversible after the fact if authorization genuinely wasn't secured, while a CO-15 denial is often a correction — resubmit the claim with the correct authorization number attached rather than filing a formal appeal."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why did our joint replacement claim deny CO-50 even though the surgery was clearly needed?","acceptedAnswer":{"@type":"Answer","text":"Almost always because the chart doesn't document a completed trial of conservative treatment before the covering MAC's Total Joint Arthroplasty LCD threshold is met, or because the diagnosis on the claim is unspecified osteoarthritis rather than a laterality- and type-specific code. The surgery being clinically correct doesn't matter to the payer's automated medical-necessity check if the chart doesn't show the specific documentation the LCD requires. The fix is confirming which MAC's LCD applies to your claim and pulling its conservative-care threshold before scheduling the surgery, not after the denial arrives."}},{"@type":"Question","name":"Is a CO-97 bundling denial always appealable?","acceptedAnswer":{"@type":"Answer","text":"No, and checking before you appeal saves the staff hour. The NCCI modifier indicator attached to the specific code pair decides it: an indicator of 0 means the second code is never separately payable, no matter how well documented the claim is, and there is no appeal argument that changes that. An indicator of 1 means an appeal is possible, but only with documentation showing the second service was genuinely distinct, a different anatomic site, a different compartment, or a separate session. Confirm the indicator for the specific pair before drafting the letter."}},{"@type":"Question","name":"What's the difference between a CO-197 and a CO-15 denial under the WISeR prior-authorization model?","acceptedAnswer":{"@type":"Answer","text":"CO-197 means no prior authorization was requested or obtained at all before the procedure was billed. CO-15 means an authorization exists but the number on the claim is missing, invalid, or doesn't match the billed procedure, date, or provider. The distinction changes what happens next: a CO-197 denial is rarely reversible after the fact if authorization genuinely wasn't secured, while a CO-15 denial is often a correction, resubmit the claim with the correct authorization number attached rather than filing a formal appeal."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 25 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 25 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-orthopedics.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our orthopedics billing and coding guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a joint hinge, two angled bone segments meeting at a pivot, representing orthopedics">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-orthopedics.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our orthopedics billing and coding guide</a>
+      <h1>Orthopedic denials and appeals: CARC codes and the arguments that actually win.</h1>
+      <p class="lede">Four denial codes account for most of orthopedics' recoverable revenue loss, and each one needs a different response, a rebill, a documented appeal citing a specific policy, or a straight resubmission. Treating all four the same way, or writing a generic "medical necessity" appeal without naming the LCD or edit behind the denial, is why so many orthopedic appeals fail on claims that were actually correct. This guide pairs each denial with the specific policy or edit to cite and the exact argument that gets it reversed, or tells you when it can't be, so staff time goes to the claims that are actually winnable.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-orthopedics.html">orthopedics billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a joint hinge, two angled bone segments meeting at a pivot, representing orthopedics">
   <!-- outer decorative range-of-motion arc -->
   <path d="M 151.4 207.5 A 85 85 0 0 1 298.6 207.5" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="1 9"/>
   <!-- inner range-of-motion arc -->
@@ -196,22 +252,21 @@
   <circle cx="225" cy="250" r="16" fill="none" stroke="var(--cat-surgical)" stroke-width="2.5"/>
   <circle cx="225" cy="250" r="3.5" fill="var(--cat-surgical)"/>
 </svg></figure>
-  <h1>Orthopedic denials and appeals: CARC codes and the arguments that actually win.</h1>
-  <p class="lede">Four denial codes account for most of orthopedics' recoverable revenue loss, and each one needs a different response &mdash; a rebill, a documented appeal citing a specific policy, or a straight resubmission. Treating all four the same way, or writing a generic "medical necessity" appeal without naming the LCD or edit behind the denial, is why so many orthopedic appeals fail on claims that were actually correct. This guide pairs each denial with the specific policy or edit to cite and the exact argument that gets it reversed &mdash; or tells you when it can't be, so staff time goes to the claims that are actually winnable.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-orthopedics.html">orthopedics billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>CO-50 is almost always a documentation gap, not a coding error.</b> The chart needs a completed conservative-treatment trial and a laterality- and type-specific diagnosis before an arthroplasty or fusion claim clears the covering MAC's LCD threshold.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>CO-97 is appealable only when the pair's NCCI modifier indicator is 1, not 0.</b> Confirm the indicator before drafting the letter &mdash; an indicator-0 pair has no appeal argument that reverses it.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>CO-97 is appealable only when the pair's NCCI modifier indicator is 1, not 0.</b> Confirm the indicator before drafting the letter, an indicator-0 pair has no appeal argument that reverses it.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>CO-4 is a modifier problem, not a medical-necessity problem.</b> LT/RT/50 missing or invalid is a rebill with the correct modifier, almost never a formal appeal.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>CO-197/CO-15 prior-authorization denials are the fastest-growing category</b> under CMS's WISeR model, live since January 1, 2026 in six states. Verify authorization before the procedure &mdash; there's rarely a path back once the claim is billed without one.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>CO-197/CO-15 prior-authorization denials are the fastest-growing category</b> under CMS's WISeR model, live since January 1, 2026 in six states. Verify authorization before the procedure, there's rarely a path back once the claim is billed without one.</span></li>
     </ul>
   </section>
 
   <h2>Why orthopedic denials cluster around four codes</h2>
-  <p>Orthopedic claims fail for the same handful of reasons repeatedly: the chart doesn't document enough conservative treatment to clear a coverage threshold, a bundled code was billed alongside its Column 1 pair, a required modifier was missing, or authorization wasn't secured before the procedure. Each requires a genuinely different response, and applying the wrong one &mdash; appealing a claim that just needs a rebill, or rebilling one that needed authorization secured before the fact &mdash; wastes staff time without recovering anything.</p>
+  <p>Orthopedic claims fail for the same handful of reasons repeatedly: the chart doesn't document enough conservative treatment to clear a coverage threshold, a bundled code was billed alongside its Column 1 pair, a required modifier was missing, or authorization wasn't secured before the procedure. Each requires a genuinely different response, and applying the wrong one, appealing a claim that just needs a rebill, or rebilling one that needed authorization secured before the fact, wastes staff time without recovering anything.</p>
 
   <h2>CO-50: not medically necessary</h2>
   <p>This fires when the diagnosis or documentation on the claim doesn't clear the covering payer's medical-necessity threshold for the procedure billed. In orthopedics it shows up most on total joint arthroplasty and spinal fusion, where Medicare Administrative Contractors publish an explicit conservative-treatment threshold as part of their Local Coverage Determination, and an unspecified diagnosis or an incomplete conservative-care trial in the chart fails that check even when the surgery itself was clinically sound.</p>
@@ -228,28 +283,28 @@
       </tbody>
     </table>
   </div>
-  <p>Find your practice's MAC first, then pull that MAC's specific LCD &mdash; not a generic search result &mdash; and attach it by article number in the appeal. A generic appeal citing "medical necessity" with no policy named almost never succeeds; one that quotes the specific LCD article, states the conservative-treatment trial and duration the chart documents, and attaches the laterality/type diagnosis code the LCD requires has a real shot. ⚠️ This build confirmed the article IDs, MACs, and effective dates above directly against the CMS Coverage Database; the specific conservative-care visit counts, durations, and modality thresholds inside each article were not independently re-verified here, because CMS's article pages blocked automated retrieval during this build &mdash; pull the specific article text for your appeal rather than assuming the threshold, since each MAC's LCD sets its own.</p>
-  <p>Arthroscopy and meniscus repair carry a related but structurally different CO-50 risk: this build's search of the CMS Coverage Database found no dedicated national or local Medicare coverage article specifically governing knee arthroscopy medical necessity, so a CO-50 denial on an arthroscopy claim is more often driven by a commercial payer's own medical policy than by a Medicare LCD. The appeal argument is the same in structure &mdash; cite the specific payer's medical policy document by name and number, not a generic reference to "medical necessity" &mdash; but confirm whether you're arguing against a Medicare LCD or a commercial policy before drafting the letter, because the two have different appeal pathways and deadlines.</p>
+  <p>Find your practice's MAC first, then pull that MAC's specific LCD, not a generic search result, and attach it by article number in the appeal. A generic appeal citing "medical necessity" with no policy named almost never succeeds; one that quotes the specific LCD article, states the conservative-treatment trial and duration the chart documents, and attaches the laterality/type diagnosis code the LCD requires has a real shot. ⚠️ This build confirmed the article IDs, MACs, and effective dates above directly against the CMS Coverage Database; the specific conservative-care visit counts, durations, and modality thresholds inside each article were not independently re-verified here, because CMS's article pages blocked automated retrieval during this build, pull the specific article text for your appeal rather than assuming the threshold, since each MAC's LCD sets its own.</p>
+  <p>Arthroscopy and meniscus repair carry a related but structurally different CO-50 risk: this build's search of the CMS Coverage Database found no dedicated national or local Medicare coverage article specifically governing knee arthroscopy medical necessity, so a CO-50 denial on an arthroscopy claim is more often driven by a commercial payer's own medical policy than by a Medicare LCD. The appeal argument is the same in structure, cite the specific payer's medical policy document by name and number, not a generic reference to "medical necessity", but confirm whether you're arguing against a Medicare LCD or a commercial policy before drafting the letter, because the two have different appeal pathways and deadlines.</p>
 
   <h2>CO-97: bundled into another service</h2>
   <p>This fires when the billed code is a Column 2 component of another code already paid on the same claim under the National Correct Coding Initiative. Whether it's appealable at all depends entirely on the pair's NCCI modifier indicator, not on how well the claim is documented.</p>
   <ul class="check-list">
-    <li><span class="warn">0</span><span><b>Never bypassable.</b> No modifier, however well-documented, overrides it. If the pair carries a 0, the second code simply isn't separately payable &mdash; don't spend an appeal on it.</span></li>
-    <li><span class="check">1</span><span><b>Bypassable with documentation.</b> An NCCI-associated modifier (59 or the specific X-modifier) can override the edit, but only where the record shows the second service was genuinely distinct &mdash; a different anatomic site, a different compartment, or a separate session.</span></li>
+    <li><span class="warn">0</span><span><b>Never bypassable.</b> No modifier, however well-documented, overrides it. If the pair carries a 0, the second code simply isn't separately payable, don't spend an appeal on it.</span></li>
+    <li><span class="check">1</span><span><b>Bypassable with documentation.</b> An NCCI-associated modifier (59 or the specific X-modifier) can override the edit, but only where the record shows the second service was genuinely distinct, a different anatomic site, a different compartment, or a separate session.</span></li>
     <li><span class="check">9</span><span><b>Edit deleted.</b> The pair no longer applies going forward.</span></li>
   </ul>
-  <p>Where this shows up most in orthopedics: chondroplasty billed alongside a meniscectomy in the same knee compartment, hardware removal billed alongside the fixation or arthroplasty procedure at the same anatomic site, and a joint injection billed the same day as an arthroscopy on that same joint. In every case, the appeal argument has to start with the indicator, not the clinical story &mdash; if the indicator is 0, the clinical story doesn't matter, because no modifier changes the outcome. If the indicator is 1, the appeal needs the operative note stating explicitly that the second procedure was at a different site or compartment, not a restatement of why both procedures were medically necessary in general.</p>
-  <p>⚠️ <b>On specificity:</b> the modifier-indicator values described above for specific orthopedic code pairs reflect consistent billing-industry and coding-education sourcing, but this build could not open CMS's primary NCCI PTP Edits file directly to confirm the exact indicator digit for each pair &mdash; CMS's site returned an access error to automated fetch attempts made while researching this page. Verify the current indicator for your specific pair in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before citing it in an appeal, because these values change quarterly.</p>
+  <p>Where this shows up most in orthopedics: chondroplasty billed alongside a meniscectomy in the same knee compartment, hardware removal billed alongside the fixation or arthroplasty procedure at the same anatomic site, and a joint injection billed the same day as an arthroscopy on that same joint. In every case, the appeal argument has to start with the indicator, not the clinical story, if the indicator is 0, the clinical story doesn't matter, because no modifier changes the outcome. If the indicator is 1, the appeal needs the operative note stating explicitly that the second procedure was at a different site or compartment, not a restatement of why both procedures were medically necessary in general.</p>
+  <p>⚠️ <b>On specificity:</b> the modifier-indicator values described above for specific orthopedic code pairs reflect consistent billing-industry and coding-education sourcing, but this build could not open CMS's primary NCCI PTP Edits file directly to confirm the exact indicator digit for each pair, CMS's site returned an access error to automated fetch attempts made while researching this page. Verify the current indicator for your specific pair in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before citing it in an appeal, because these values change quarterly.</p>
 
   <h2>CO-4: modifier missing or invalid</h2>
-  <p>This fires when a required modifier is absent or doesn't match the procedure billed &mdash; in orthopedics, almost always a missing LT, RT, or 50 on a laterality-eligible code, or a missing override modifier (59/XS) on a second procedure that needed one to clear an NCCI edit. This is a correction, not an appeal, in nearly every case: rebill with the correct modifier attached rather than filing a formal dispute. The exception is a claim where the correct modifier was genuinely submitted but the payer's system failed to process it &mdash; that's worth a call to the payer before a rebill, since resubmitting an already-correct claim can trigger a duplicate-claim rejection instead of a correction.</p>
+  <p>This fires when a required modifier is absent or doesn't match the procedure billed, in orthopedics, almost always a missing LT, RT, or 50 on a laterality-eligible code, or a missing override modifier (59/XS) on a second procedure that needed one to clear an NCCI edit. This is a correction, not an appeal, in nearly every case: rebill with the correct modifier attached rather than filing a formal dispute. The exception is a claim where the correct modifier was genuinely submitted but the payer's system failed to process it, that's worth a call to the payer before a rebill, since resubmitting an already-correct claim can trigger a duplicate-claim rejection instead of a correction.</p>
 
   <h2>CO-197 / CO-15: prior authorization missing or invalid</h2>
   <p>These two get confused because they look similar on a remit, but they mean different things and call for different responses. <b>CO-197</b> means no authorization was requested or obtained at all before the claim was billed. <b>CO-15</b> means an authorization exists somewhere in the system, but the number on the claim is missing, invalid, or doesn't match the billed procedure, date of service, or rendering provider.</p>
-  <p>This distinction has grown sharply more relevant in 2026: CMS's WISeR model (Wasteful and Inappropriate Service Reduction) brought prior authorization to traditional fee-for-service Medicare for the first time, effective January 1, 2026, in six states &mdash; Arizona, New Jersey, Ohio, Oklahoma, Texas, and Washington &mdash; covering 17 procedures including spinal fusion and epidural injections. A claim for one of those procedures billed in one of those states without a secured authorization is squarely CO-197 territory; a claim billed with an authorization number that doesn't match the actual procedure or date is CO-15.</p>
+  <p>This distinction has grown sharply more relevant in 2026: CMS's WISeR model (Wasteful and Inappropriate Service Reduction) brought prior authorization to traditional fee-for-service Medicare for the first time, effective January 1, 2026, in six states, Arizona, New Jersey, Ohio, Oklahoma, Texas, and Washington, covering 17 procedures including spinal fusion and epidural injections. A claim for one of those procedures billed in one of those states without a secured authorization is squarely CO-197 territory; a claim billed with an authorization number that doesn't match the actual procedure or date is CO-15.</p>
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Before treating a CO-197 or CO-15 denial as an appeal, check whether authorization was actually obtained. If it was and the claim just has the wrong number attached, that's a corrected claim, not an appeal, and it moves much faster. If authorization genuinely wasn't secured before the procedure, a formal appeal after the fact rarely succeeds &mdash; the fix has to happen before the next procedure, not after this one's denial.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Before treating a CO-197 or CO-15 denial as an appeal, check whether authorization was actually obtained. If it was and the claim just has the wrong number attached, that's a corrected claim, not an appeal, and it moves much faster. If authorization genuinely wasn't secured before the procedure, a formal appeal after the fact rarely succeeds, the fix has to happen before the next procedure, not after this one's denial.</p></div>
   </div>
   <p>Full detail on the WISeR model's covered procedures, the six live states, and how to build authorization verification into scheduling is in <a href="specialty-orthopedics-prior-authorization.html">our prior authorization guide for orthopedic and spine procedures</a>.</p>
 
@@ -262,9 +317,9 @@
       <tbody>
         <tr><td><b>CO-50</b><br>Arthroplasty</td><td>Missing conservative-treatment documentation or unspecified diagnosis ahead of a Total Joint Arthroplasty LCD threshold</td><td>The covering MAC's specific TJA LCD by article number (e.g., <code>L40232</code>, <code>L39911</code>, <code>L36039</code>, or <code>L33456</code>)</td><td>Attach the documented PT/injection/medication trial and the laterality- and type-specific diagnosis the chart supports; quote the LCD's own conservative-care language</td></tr>
         <tr><td><b>CO-50</b><br>Spinal fusion</td><td>Missing documented neurogenic claudication, instability, or failed conservative care ahead of the fusion LCD threshold</td><td><code>L37848</code>, Palmetto GBA</td><td>Attach imaging findings, the specific stenosis/spondylolisthesis diagnosis with required 6th character, and the documented conservative-care trial</td></tr>
-        <tr><td><b>CO-97</b><br>Bundled service</td><td>Code is a Column 2 component of a code already paid on the claim</td><td>The NCCI modifier indicator for the specific pair (verify in the CMS PTP Edits Lookup Tool)</td><td>Only appeal if the indicator is 1, not 0 &mdash; then document the second service as a genuinely distinct site, compartment, or session</td></tr>
-        <tr><td><b>CO-4</b><br>Modifier missing</td><td>LT/RT/50 or a required override modifier absent or invalid</td><td>N/A &mdash; not an appeal</td><td>Rebill with the correct modifier attached; call the payer first only if the correct modifier was already submitted</td></tr>
-        <tr><td><b>CO-197</b><br>No authorization</td><td>Procedure billed without a prior authorization on file, often a WISeR-covered procedure in one of the six live states</td><td>N/A in most cases &mdash; rarely reversible after billing</td><td>Confirm no authorization exists anywhere in the payer's system before conceding; otherwise, prevent by verifying authorization before scheduling next time</td></tr>
+        <tr><td><b>CO-97</b><br>Bundled service</td><td>Code is a Column 2 component of a code already paid on the claim</td><td>The NCCI modifier indicator for the specific pair (verify in the CMS PTP Edits Lookup Tool)</td><td>Only appeal if the indicator is 1, not 0, then document the second service as a genuinely distinct site, compartment, or session</td></tr>
+        <tr><td><b>CO-4</b><br>Modifier missing</td><td>LT/RT/50 or a required override modifier absent or invalid</td><td>N/A, not an appeal</td><td>Rebill with the correct modifier attached; call the payer first only if the correct modifier was already submitted</td></tr>
+        <tr><td><b>CO-197</b><br>No authorization</td><td>Procedure billed without a prior authorization on file, often a WISeR-covered procedure in one of the six live states</td><td>N/A in most cases, rarely reversible after billing</td><td>Confirm no authorization exists anywhere in the payer's system before conceding; otherwise, prevent by verifying authorization before scheduling next time</td></tr>
         <tr><td><b>CO-15</b><br>Invalid authorization</td><td>Authorization exists but the number, date, or procedure on the claim doesn't match it</td><td>The authorization confirmation number and its approved procedure/date</td><td>Resubmit as a corrected claim with the matching authorization number rather than filing a formal appeal</td></tr>
       </tbody>
     </table>
@@ -281,13 +336,13 @@
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Why did our joint replacement claim deny CO-50 even though the surgery was clearly needed?</summary><p>Almost always because the chart doesn't document a completed trial of conservative treatment before the covering MAC's Total Joint Arthroplasty LCD threshold is met, or because the diagnosis on the claim is unspecified osteoarthritis rather than a laterality- and type-specific code. The surgery being clinically correct doesn't matter to the payer's automated medical-necessity check if the chart doesn't show the specific documentation the LCD requires. The fix is confirming which MAC's LCD applies to your claim and pulling its conservative-care threshold before scheduling the surgery, not after the denial arrives.</p></details>
-    <details class="faq-item"><summary>Is a CO-97 bundling denial always appealable?</summary><p>No, and checking before you appeal saves the staff hour. The NCCI modifier indicator attached to the specific code pair decides it: an indicator of 0 means the second code is never separately payable, no matter how well documented the claim is, and there is no appeal argument that changes that. An indicator of 1 means an appeal is possible, but only with documentation showing the second service was genuinely distinct &mdash; a different anatomic site, a different compartment, or a separate session. Confirm the indicator for the specific pair before drafting the letter.</p></details>
-    <details class="faq-item"><summary>What's the difference between a CO-197 and a CO-15 denial under the WISeR prior-authorization model?</summary><p>CO-197 means no prior authorization was requested or obtained at all before the procedure was billed. CO-15 means an authorization exists but the number on the claim is missing, invalid, or doesn't match the billed procedure, date, or provider. The distinction changes what happens next: a CO-197 denial is rarely reversible after the fact if authorization genuinely wasn't secured, while a CO-15 denial is often a correction &mdash; resubmit the claim with the correct authorization number attached rather than filing a formal appeal.</p></details>
+    <details class="faq-item"><summary>Is a CO-97 bundling denial always appealable?</summary><p>No, and checking before you appeal saves the staff hour. The NCCI modifier indicator attached to the specific code pair decides it: an indicator of 0 means the second code is never separately payable, no matter how well documented the claim is, and there is no appeal argument that changes that. An indicator of 1 means an appeal is possible, but only with documentation showing the second service was genuinely distinct, a different anatomic site, a different compartment, or a separate session. Confirm the indicator for the specific pair before drafting the letter.</p></details>
+    <details class="faq-item"><summary>What's the difference between a CO-197 and a CO-15 denial under the WISeR prior-authorization model?</summary><p>CO-197 means no prior authorization was requested or obtained at all before the procedure was billed. CO-15 means an authorization exists but the number on the claim is missing, invalid, or doesn't match the billed procedure, date, or provider. The distinction changes what happens next: a CO-197 denial is rarely reversible after the fact if authorization genuinely wasn't secured, while a CO-15 denial is often a correction, resubmit the claim with the correct authorization number attached rather than filing a formal appeal.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -300,62 +355,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>
