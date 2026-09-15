@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Allergy Testing Immunotherapy Billing for ENT Practices | Verified RCM">
 <meta name="twitter:description" content="Allergy testing immunotherapy billing: 95004 unit counting and the 80-test MUE, 95165 aliquot units and the 30-unit MUE, same-day documentation, and 95115-95117.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"ENT (Otolaryngology)","item":"https://www.verifiedrcm.com/specialty-ent.html"},{"@type":"ListItem","position":4,"name":"Allergy Testing and Immunotherapy Billing for ENT Practices","item":"https://www.verifiedrcm.com/specialty-ent-allergy-testing-immunotherapy.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many units of 95004 can we bill per patient per day?","acceptedAnswer":{"@type":"Answer","text":"Each unit of 95004 reports one percutaneous test to one allergen, so a panel of 60 antigens is billed as 60 units on that date. Medicare's Medically Unlikely Edit caps 95004 at 80 units per date of service; units billed above that threshold deny automatically. Count the panel before submission rather than after the denial, and confirm whether the payer requires prior authorization once a panel approaches that ceiling."}},{"@type":"Question","name":"Can we bill 95004 and 95165 on the same date without triggering a bundling denial?","acceptedAnswer":{"@type":"Answer","text":"Yes, but only when the documentation shows the extract preparation was driven by that day's test results, not billed as a routine same-visit combination. The note needs to connect the two: which antigens tested positive, and that the extract prepared reflects those specific results. Billing 95165 as a default add-on to every testing visit regardless of what the results showed is the pattern that draws a bundling denial and, on repetition, payer-level scrutiny."}},{"@type":"Question","name":"Do we need modifier support to bill 95115 or 95117 alongside 95165 the same day?","acceptedAnswer":{"@type":"Answer","text":"Most payers expect an injection administration code (95115 for a single injection, 95117 for two or more) billed the same day as extract preparation (95165) to carry a modifier or clear documentation showing the administration was a distinct service from the preparation work — without it, the claim is frequently read as the same visit's antigen-supply work billed twice under two different codes. Confirm the specific payer's edit before billing both same-day without modifier support."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many units of 95004 can we bill per patient per day?","acceptedAnswer":{"@type":"Answer","text":"Each unit of 95004 reports one percutaneous test to one allergen, so a panel of 60 antigens is billed as 60 units on that date. Medicare's Medically Unlikely Edit caps 95004 at 80 units per date of service; units billed above that threshold deny automatically. Count the panel before submission rather than after the denial, and confirm whether the payer requires prior authorization once a panel approaches that ceiling."}},{"@type":"Question","name":"Can we bill 95004 and 95165 on the same date without triggering a bundling denial?","acceptedAnswer":{"@type":"Answer","text":"Yes, but only when the documentation shows the extract preparation was driven by that day's test results, not billed as a routine same-visit combination. The note needs to connect the two: which antigens tested positive, and that the extract prepared reflects those specific results. Billing 95165 as a default add-on to every testing visit regardless of what the results showed is the pattern that draws a bundling denial and, on repetition, payer-level scrutiny."}},{"@type":"Question","name":"Do we need modifier support to bill 95115 or 95117 alongside 95165 the same day?","acceptedAnswer":{"@type":"Answer","text":"Most payers expect an injection administration code (95115 for a single injection, 95117 for two or more) billed the same day as extract preparation (95165) to carry a modifier or clear documentation showing the administration was a distinct service from the preparation work, without it, the claim is frequently read as the same visit's antigen-supply work billed twice under two different codes. Confirm the specific payer's edit before billing both same-day without modifier support."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,152 +52,205 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 25 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 25 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 25 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-ent.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete ENT guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art for ENT and otolaryngology: a small spiral, a gentle arc, and a straight line">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-ent.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete ENT guide</a>
+      <h1>Allergy testing and immunotherapy billing for ENT practices.</h1>
+      <p class="lede">Allergy testing immunotherapy billing runs on unit math that's easy to get wrong at scale: percutaneous testing counted test-by-test against an 80-test daily cap, and extract preparation counted by the 1&nbsp;cc aliquot against a 30-unit daily cap and a 10-dose vial limit that doesn't move regardless of how the vial is actually drawn down. Layer in same-day documentation requirements between testing and extract preparation, injection administration codes that need their own modifier support, and prior-auth variance on large panels, and this is one of ENT's highest-volume, highest-denial-risk ancillary services. This guide covers all of it with the specific numbers, not general caution.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-ent.html">ENT billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art for ENT and otolaryngology: a small spiral, a gentle arc, and a straight line">
   <path d="M190,205 L189.2,212.2 L179.2,215.1 L170,205 L175.8,189.1 L195.8,186.2 L210,205 L199.2,229.5 L169.2,232.4 L150,205" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M140,320 Q240,268 340,320" fill="none" stroke="var(--muted)" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M300,150 L235,262" fill="none" stroke="var(--cat-surgical)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="300" cy="150" r="4.5" fill="var(--cat-surgical)"/>
 </svg></figure>
-  <h1>Allergy testing and immunotherapy billing for ENT practices.</h1>
-  <p class="lede">Allergy testing immunotherapy billing runs on unit math that's easy to get wrong at scale: percutaneous testing counted test-by-test against an 80-test daily cap, and extract preparation counted by the 1&nbsp;cc aliquot against a 30-unit daily cap and a 10-dose vial limit that doesn't move regardless of how the vial is actually drawn down. Layer in same-day documentation requirements between testing and extract preparation, injection administration codes that need their own modifier support, and prior-auth variance on large panels, and this is one of ENT's highest-volume, highest-denial-risk ancillary services. This guide covers all of it with the specific numbers, not general caution.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-ent.html">ENT billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>95004 is billed one unit per antigen tested, capped at 80 units per day by Medicare's MUE.</b> Count the panel before submission &mdash; a 90-antigen panel doesn't just risk denial on the excess, it can flag the whole claim.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>95165 is billed per 1&nbsp;cc aliquot, capped at 30 units per day, with Medicare limiting billable doses to 10 per 10&nbsp;cc maintenance vial</b> &mdash; regardless of how many actual draws come out of it.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>95004 and 95165 same-day is defensible only when the note shows the results driving the extract</b> &mdash; not a routine same-visit pairing billed by default.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>95115/95117 billed same-day as 95165 without modifier support is a common, avoidable denial pattern</b> &mdash; administration and preparation are distinct services and the claim needs to say so.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>95004 is billed one unit per antigen tested, capped at 80 units per day by Medicare's MUE.</b> Count the panel before submission, a 90-antigen panel doesn't just risk denial on the excess, it can flag the whole claim.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>95165 is billed per 1&nbsp;cc aliquot, capped at 30 units per day, with Medicare limiting billable doses to 10 per 10&nbsp;cc maintenance vial</b>, regardless of how many actual draws come out of it.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>95004 and 95165 same-day is defensible only when the note shows the results driving the extract</b>, not a routine same-visit pairing billed by default.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>95115/95117 billed same-day as 95165 without modifier support is a common, avoidable denial pattern</b>, administration and preparation are distinct services and the claim needs to say so.</span></li>
     </ul>
   </section>
 
   <h2>Percutaneous testing: 95004 unit counting and the MUE</h2>
-  <p>95004 reports a single percutaneous (scratch, prick, or puncture) test to one allergen, with results read and recorded. Each antigen tested is one unit &mdash; a standard regional panel of 40 to 60 antigens is billed as 40 to 60 units of 95004 on that date, and a comprehensive panel that pushes past 80 antigens runs directly into Medicare's Medically Unlikely Edit for the code, which caps it at 80 units per date of service. Units billed above that threshold deny automatically; recovering them requires an appeal with documentation of medical necessity for the extended panel, not a routine resubmission.</p>
+  <p>95004 reports a single percutaneous (scratch, prick, or puncture) test to one allergen, with results read and recorded. Each antigen tested is one unit, a standard regional panel of 40 to 60 antigens is billed as 40 to 60 units of 95004 on that date, and a comprehensive panel that pushes past 80 antigens runs directly into Medicare's Medically Unlikely Edit for the code, which caps it at 80 units per date of service. Units billed above that threshold deny automatically; recovering them requires an appeal with documentation of medical necessity for the extended panel, not a routine resubmission.</p>
   <p>The operational fix is upstream: count the panel before it's ordered, not after the claim denies. A practice running the same broad regional panel on every new allergy patient by default is the one most likely to trip the 80-unit cap repeatedly, and repeated MUE denials on the same code are exactly the pattern that draws payer-level review of the whole allergy service line.</p>
 
   <h2>Allergen extract preparation: 95165 aliquot units and the vial cap</h2>
-  <p>95165 covers the professional work of preparing and providing allergen immunotherapy extract, and it's billed per 1&nbsp;cc dose &mdash; the unit definition CMS clarified effective 2021, after considerable confusion in the years before about whether a unit meant a dose, a vial, or a draw. That clarification is what makes the vial math predictable: a standard 10&nbsp;cc maintenance vial is capped at 10 billable units of 95165 regardless of how many actual injections or draws are eventually taken from that vial over the course of a treatment course.</p>
+  <p>95165 covers the professional work of preparing and providing allergen immunotherapy extract, and it's billed per 1&nbsp;cc dose, the unit definition CMS clarified effective 2021, after considerable confusion in the years before about whether a unit meant a dose, a vial, or a draw. That clarification is what makes the vial math predictable: a standard 10&nbsp;cc maintenance vial is capped at 10 billable units of 95165 regardless of how many actual injections or draws are eventually taken from that vial over the course of a treatment course.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>95165 unit and cap math.</caption>
@@ -212,11 +267,11 @@
   <p>Run the vial math at the point of extract preparation, not at claim submission: multiply the number of maintenance vials mixed by 10, and that's the ceiling for units billable off that batch regardless of how the practice's own dosing schedule actually draws it down. A multi-vial mix for a patient on a heavy antigen load can legitimately approach the 30-unit daily MUE; a single-vial refill should never be anywhere close to it, and if it is, that's a unit-counting error to catch before the claim goes out, not after.</p>
 
   <h2>Billing 95004 and 95165 same-day without a bundling denial</h2>
-  <p>These two codes cover genuinely different work &mdash; testing to identify sensitivities, and preparing extract for treatment &mdash; but payers scrutinize them billed together on the same date because the routine version of that pairing (test today, prep the standard extract today regardless of result) looks like double-billing one visit's antigen work under two codes.</p>
+  <p>These two codes cover genuinely different work, testing to identify sensitivities, and preparing extract for treatment, but payers scrutinize them billed together on the same date because the routine version of that pairing (test today, prep the standard extract today regardless of result) looks like double-billing one visit's antigen work under two codes.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Defensible same-day pairing</div><ul>
       <li>The note documents which specific antigens tested positive that day.</li>
-      <li>The extract prepared (95165) is explicitly tied to those results &mdash; the antigen list in the extract matches what the day's testing actually found.</li>
+      <li>The extract prepared (95165) is explicitly tied to those results, the antigen list in the extract matches what the day's testing actually found.</li>
       <li>The record shows a clinical decision connecting the two: testing informed what got mixed, not a standing protocol.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>Denial-prone same-day pairing</div><ul>
@@ -228,14 +283,14 @@
   <p>The distinction a payer is checking for is causation, not proximity: did the test result actually drive what got prepared, or did both simply happen to occur in the same visit. Document the antigen-to-extract link explicitly in the note rather than relying on the fact that both services occurred that day to imply it.</p>
 
   <h2>Immunotherapy injection administration: 95115&ndash;95117</h2>
-  <p>95115 reports allergen immunotherapy injection administration for a single injection; 95117 reports administration of two or more injections in the same visit. These are administration codes &mdash; they report the clinical act of giving the injection and monitoring the patient, distinct from 95165's extract-preparation work. Billing 95115 or 95117 alongside 95165 on the same date is common in practices that both prepare and administer their own extract, but most payers expect that pairing to carry a modifier or otherwise-clear documentation distinguishing the administration encounter from the preparation work, because without it the claim reads as the same antigen-supply service billed twice under two different code families.</p>
+  <p>95115 reports allergen immunotherapy injection administration for a single injection; 95117 reports administration of two or more injections in the same visit. These are administration codes, they report the clinical act of giving the injection and monitoring the patient, distinct from 95165's extract-preparation work. Billing 95115 or 95117 alongside 95165 on the same date is common in practices that both prepare and administer their own extract, but most payers expect that pairing to carry a modifier or otherwise-clear documentation distinguishing the administration encounter from the preparation work, because without it the claim reads as the same antigen-supply service billed twice under two different code families.</p>
   <p>Confirm your specific payer's edit before submitting the pair routinely; some accept 95115/95117 with 95165 without a modifier when the claim structure otherwise makes the split clear, while others deny on the pairing by default absent one. This is a scrubber-rule question worth resolving payer by payer rather than assuming uniform treatment across your mix.</p>
 
   <h2>Prior authorization variance on large allergy panels</h2>
   <p>Commercial payers vary meaningfully in whether and when a large percutaneous panel or an extensive multi-allergen immunotherapy build-up needs prior authorization, and the threshold isn't uniform across plans the way the Medicare MUE numbers are. A panel that clears one payer's medical policy without a prior-auth request can trigger one with another payer at a similar antigen count, and the difference is usually the payer's own internal test-count or cost threshold rather than anything in the clinical picture. Verify authorization requirements against the specific payer's current medical policy before scheduling an extensive panel, particularly for a new allergy patient where the full antigen count isn't yet known at the time of scheduling.</p>
 
   <h2>ICD-10 specificity for allergic rhinitis</h2>
-  <p>Diagnosis specificity supports both the testing and the immunotherapy claim, and the J30 family carries real specificity beyond the unspecified code many practices default to &mdash; all confirmed billable for HIPAA transactions against the FY2026 ICD-10-CM set.</p>
+  <p>Diagnosis specificity supports both the testing and the immunotherapy claim, and the J30 family carries real specificity beyond the unspecified code many practices default to, all confirmed billable for HIPAA transactions against the FY2026 ICD-10-CM set.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Allergic rhinitis ICD-10-CM specificity, FY2026.</caption>
@@ -246,11 +301,11 @@
         <tr><td><code>J30.5</code></td><td>Allergic rhinitis due to food</td></tr>
         <tr><td><code>J30.81</code></td><td>Allergic rhinitis due to animal (cat, dog) hair and dander</td></tr>
         <tr><td><code>J30.89</code></td><td>Other allergic rhinitis</td></tr>
-        <tr><td><code>J30.9</code></td><td>Allergic rhinitis, unspecified &mdash; avoid as primary when the testing results identify the specific trigger category</td></tr>
+        <tr><td><code>J30.9</code></td><td>Allergic rhinitis, unspecified, avoid as primary when the testing results identify the specific trigger category</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Once percutaneous testing identifies the trigger, code to the specific category the results support &mdash; pollen, animal dander, food &mdash; rather than defaulting back to J30.9 on the immunotherapy claim after a specific diagnosis was already established at the testing visit. The pattern of testing to a specific allergen and then billing ongoing immunotherapy under an unspecified code is inconsistent on its face and is the kind of gap a payer's records request catches immediately.</p>
+  <p>Once percutaneous testing identifies the trigger, code to the specific category the results support, pollen, animal dander, food, rather than defaulting back to J30.9 on the immunotherapy claim after a specific diagnosis was already established at the testing visit. The pattern of testing to a specific allergen and then billing ongoing immunotherapy under an unspecified code is inconsistent on its face and is the kind of gap a payer's records request catches immediately.</p>
 
   <h2>Payer and coverage nuances</h2>
   <p>Medicare coverage for both allergy testing and allergen immunotherapy is set by MAC-specific local coverage documents, not a single national policy, and several MACs maintain separate documents for testing versus immunotherapy specifically.</p>
@@ -273,7 +328,7 @@
       </tbody>
     </table>
   </div>
-  <p>Find your practice's MAC first, then pull that specific document's covered-diagnosis and unit-limit language before finalizing an order-set rule &mdash; note that several MACs, including Palmetto GBA and Noridian, retired and reissued their AIT/SCIT documents in late 2025 and again in 2026, so confirm you're referencing the current version rather than an archived one. ⚠️ This build confirmed the document IDs, contractor names, and effective dates above directly against the CMS Coverage Database; the full covered-diagnosis lists and unit-limit language inside each document were not independently re-verified here (CMS's document pages blocked automated retrieval during this build), so pull the specific document text yourself before building a coverage rule against it.</p>
+  <p>Find your practice's MAC first, then pull that specific document's covered-diagnosis and unit-limit language before finalizing an order-set rule, note that several MACs, including Palmetto GBA and Noridian, retired and reissued their AIT/SCIT documents in late 2025 and again in 2026, so confirm you're referencing the current version rather than an archived one. ⚠️ This build confirmed the document IDs, contractor names, and effective dates above directly against the CMS Coverage Database; the full covered-diagnosis lists and unit-limit language inside each document were not independently re-verified here (CMS's document pages blocked automated retrieval during this build), so pull the specific document text yourself before building a coverage rule against it.</p>
 
   <h2>Do and don't</h2>
   <div class="dodont">
@@ -303,12 +358,12 @@
   <div class="faq-list">
     <details class="faq-item"><summary>How many units of 95004 can we bill per patient per day?</summary><p>Each unit of 95004 reports one percutaneous test to one allergen, so a panel of 60 antigens is billed as 60 units on that date. Medicare's Medically Unlikely Edit caps 95004 at 80 units per date of service; units billed above that threshold deny automatically. Count the panel before submission rather than after the denial, and confirm whether the payer requires prior authorization once a panel approaches that ceiling.</p></details>
     <details class="faq-item"><summary>Can we bill 95004 and 95165 on the same date without triggering a bundling denial?</summary><p>Yes, but only when the documentation shows the extract preparation was driven by that day's test results, not billed as a routine same-visit combination. The note needs to connect the two: which antigens tested positive, and that the extract prepared reflects those specific results. Billing 95165 as a default add-on to every testing visit regardless of what the results showed is the pattern that draws a bundling denial and, on repetition, payer-level scrutiny.</p></details>
-    <details class="faq-item"><summary>Do we need modifier support to bill 95115 or 95117 alongside 95165 the same day?</summary><p>Most payers expect an injection administration code (95115 for a single injection, 95117 for two or more) billed the same day as extract preparation (95165) to carry a modifier or clear documentation showing the administration was a distinct service from the preparation work &mdash; without it, the claim is frequently read as the same visit's antigen-supply work billed twice under two different codes. Confirm the specific payer's edit before billing both same-day without modifier support.</p></details>
+    <details class="faq-item"><summary>Do we need modifier support to bill 95115 or 95117 alongside 95165 the same day?</summary><p>Most payers expect an injection administration code (95115 for a single injection, 95117 for two or more) billed the same day as extract preparation (95165) to carry a modifier or clear documentation showing the administration was a distinct service from the preparation work, without it, the claim is frequently read as the same visit's antigen-supply work billed twice under two different codes. Confirm the specific payer's edit before billing both same-day without modifier support.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -321,62 +376,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>
