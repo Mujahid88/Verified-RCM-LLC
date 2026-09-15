@@ -1,0 +1,11 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a straight surgical incision crossed by suture stitch marks, representing general surgery">
+  <path d="M120,410 A210,210 0 0,1 405,155" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
+  <line x1="169.3" y1="296.5" x2="191.7" y2="316.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="203.3" y1="258.5" x2="225.7" y2="278.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="237.3" y1="220.5" x2="259.7" y2="240.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="271.3" y1="182.5" x2="293.7" y2="202.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="296.8" y1="154" x2="319.2" y2="174" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" />
+  <line x1="155" y1="335" x2="325" y2="145" stroke="var(--cat-surgical)" stroke-width="3.5" stroke-linecap="round" />
+  <circle cx="155" cy="335" r="4" fill="var(--cat-surgical)" />
+  <circle cx="325" cy="145" r="4" fill="var(--cat-surgical)" />
+</svg>

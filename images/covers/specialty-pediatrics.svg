@@ -1,0 +1,13 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a rising growth curve marking a pediatric development milestone">
+  <path d="M120 300 Q 200 300 240 250 Q 290 190 360 150" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M110 200 L 110 320 L 370 320" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M110 260 L 340 260" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+  <path d="M110 225 L 355 225" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+  <path d="M150 320 L 150 300" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M195 320 L 195 288" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M240 320 L 240 250" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M285 320 L 285 205" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M330 320 L 330 168" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="285" cy="203" r="7" fill="var(--cat-primary-care)"/>
+  <path d="M285 175 Q 300 160 320 158" fill="none" stroke="var(--cat-primary-care)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

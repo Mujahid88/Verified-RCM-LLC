@@ -1,0 +1,28 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line art illustration of an open book, symbolizing a medical billing and RCM glossary">
+  <!-- spine -->
+  <line x1="240" y1="148" x2="240" y2="332" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- outer page covers -->
+  <path d="M240,148 Q112,238 240,332" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M240,148 Q368,238 240,332" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- inner page edges -->
+  <path d="M240,176 Q172,240 240,304" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M240,176 Q308,240 240,304" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- abstract text lines, left page -->
+  <path d="M197,218 L214,214" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M193,242 L212,238" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M197,266 L214,263" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- abstract text lines, right page -->
+  <path d="M283,214 L300,218" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M268,238 L287,242" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M266,263 L283,266" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- accent bookmark ribbon -->
+  <path d="M231,148 L231,213 L240,202 L249,213 L249,148" fill="none" stroke="var(--cat-practice-resources)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- accent anchor point at base of spine -->
+  <circle cx="240" cy="330" r="4" fill="var(--cat-practice-resources)"/>
+</svg>

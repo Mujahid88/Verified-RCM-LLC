@@ -1,0 +1,34 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of parallel flow lines passing through a filtering mesh, symbolizing nephrology and renal filtration">
+  <path d="M 70 240 A 170 170 0 0 1 410 240" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M 410 240 A 170 170 0 0 1 70 240" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+
+  <line x1="78" y1="150" x2="188" y2="150" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="292" y1="150" x2="402" y2="150" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+
+  <line x1="78" y1="190" x2="188" y2="190" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="292" y1="190" x2="402" y2="190" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <line x1="78" y1="240" x2="188" y2="240" stroke="var(--cat-medical)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="292" y1="240" x2="402" y2="240" stroke="var(--cat-medical)" stroke-width="3" stroke-linecap="round"/>
+
+  <line x1="78" y1="290" x2="188" y2="290" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="292" y1="290" x2="402" y2="290" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <line x1="78" y1="330" x2="188" y2="330" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="292" y1="330" x2="402" y2="330" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+
+  <rect x="188" y="118" width="104" height="244" rx="14" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <line x1="212" y1="130" x2="212" y2="350" stroke="var(--muted)" stroke-width="1.5"/>
+  <line x1="240" y1="130" x2="240" y2="350" stroke="var(--muted)" stroke-width="1.5"/>
+  <line x1="268" y1="130" x2="268" y2="350" stroke="var(--muted)" stroke-width="1.5"/>
+
+  <line x1="196" y1="150" x2="284" y2="150" stroke="var(--muted)" stroke-width="1.5"/>
+  <line x1="196" y1="190" x2="284" y2="190" stroke="var(--muted)" stroke-width="1.5"/>
+  <line x1="196" y1="240" x2="284" y2="240" stroke="var(--muted)" stroke-width="1.5"/>
+  <line x1="196" y1="290" x2="284" y2="290" stroke="var(--muted)" stroke-width="1.5"/>
+  <line x1="196" y1="330" x2="284" y2="330" stroke="var(--muted)" stroke-width="1.5"/>
+
+  <circle cx="240" cy="190" r="4" fill="var(--cat-medical)"/>
+  <circle cx="268" cy="290" r="4" fill="var(--cat-medical)"/>
+</svg>

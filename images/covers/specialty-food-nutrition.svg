@@ -1,0 +1,11 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract plate divided into radiating wedge lines from a center point, representing food and nutrition">
+  <circle cx="240" cy="240" r="132" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="240" cy="240" r="86" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M240,240 L240,108" fill="none" stroke="var(--muted)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M240,240 L353,175" fill="none" stroke="var(--muted)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M240,240 L353,305" fill="none" stroke="var(--muted)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M240,240 L240,372" fill="none" stroke="var(--muted)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M240,240 L127,305" fill="none" stroke="var(--muted)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M240,240 L154,157" fill="none" stroke="var(--cat-behavioral)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="240" cy="240" r="5" fill="var(--cat-behavioral)"/>
+</svg>

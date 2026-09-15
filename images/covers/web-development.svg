@@ -1,0 +1,11 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a browser window with a code bracket symbol representing web development">
+  <rect x="110" y="130" width="260" height="220" rx="14" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="110" y1="172" x2="370" y2="172" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="134" cy="151" r="5" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <circle cx="154" cy="151" r="5" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <circle cx="174" cy="151" r="5" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <line x1="140" y1="198" x2="300" y2="198" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="140" y1="220" x2="256" y2="220" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M182,284 L158,310 L182,336" fill="none" stroke="var(--cat-practice-growth)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M258,284 L282,310 L258,336" fill="none" stroke="var(--cat-practice-growth)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

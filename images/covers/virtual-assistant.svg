@@ -1,0 +1,19 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a headset, representing virtual assistant support">
+  <!-- secondary headband silhouette -->
+  <path d="M150,172 Q240,92 330,192" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- secondary ear-cup rings -->
+  <circle cx="150" cy="172" r="11" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <circle cx="330" cy="192" r="11" fill="none" stroke="var(--muted)" stroke-width="2"/>
+
+  <!-- primary: two curved segments meeting at a point (the headset motif) -->
+  <path d="M150,172 C172,232 212,270 245,290" fill="none" stroke="var(--color-text)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M330,192 C300,242 270,272 245,290" fill="none" stroke="var(--color-text)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- secondary soft voice-wave arcs near the mic tip -->
+  <path d="M222,306 Q214,320 224,332" fill="none" stroke="var(--muted)" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M266,304 Q276,317 267,330" fill="none" stroke="var(--muted)" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- accent: the meeting point -->
+  <circle cx="245" cy="290" r="6.5" fill="var(--cat-practice-growth)"/>
+</svg>

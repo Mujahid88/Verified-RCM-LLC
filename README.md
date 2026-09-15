@@ -84,9 +84,24 @@ or served as plain static files.
 │                                     css/style.css. No other build step exists on this
 │                                     site; this is the only one, and it's optional to run
 │                                     until you've actually edited a css/src/ file (2026-09-08)
+├── css/build-covers.js              node css/build-covers.js — inlines each pillar's SVG
+│                                     cover (images/covers/*.svg) into every article, spoke,
+│                                     and directory-card page. Re-run after adding/editing a
+│                                     cover file or a new article page; idempotent, safe to
+│                                     re-run (skips anything already wired) (2026-09-14)
 ├── js/main.js                       Nav, filters, reveal/counter animation, form handling
 ├── fonts/                           Self-hosted woff2 (see Fonts below)
 ├── images/                          Licensed photography, .jpg + .webp per image
+├── images/covers/                   49 hand-designed SVG cover illustrations, one per
+│                                     pillar topic (25 specialties + 6 credentialing payers
+│                                     + 6 billing-process pillars + 2 practice-management
+│                                     pillars + 10 standalone growth/resource pages) —
+│                                     abstract monochrome line art, each with 1-3 elements
+│                                     in that topic's category accent color (see
+│                                     css/src/14-article-covers.css for the palette). Spoke
+│                                     articles reuse their pillar's cover; edit the source
+│                                     .svg here, then re-run css/build-covers.js to
+│                                     propagate — don't hand-edit the inlined copy in a page
 └── worker/                          Cloudflare Worker: the contact form backend
     ├── contact-form.js
     └── wrangler.jsonc
@@ -107,6 +122,14 @@ one — the file's own comments carry the ratios and the reasoning. Don't change
 without reading those comments first; several of them exist specifically because an
 earlier change silently broke AA contrast. After editing, run `node css/build.js` to
 regenerate css/style.css — the file every page actually loads.
+
+**One deliberate exception to monochrome**: the 49 article covers (`images/covers/`,
+§ above) each carry 1-3 elements in a muted category accent color, defined in
+`css/src/14-article-covers.css` as 12 `--cat-*` custom properties, evenly spaced 30°
+around the hue wheel at a fixed saturation/lightness formula. This was a considered,
+confirmed reintroduction of color — not drift — made after flagging the site's
+monochrome history to the user (2026-09-14). Every other surface on the site stays
+strictly grayscale; don't let a cover's accent leak into surrounding chrome.
 
 Radii are intentionally small (10/16/20px) to match **SAMS**, the same company's
 practice-management product at `sams.verifiedrcm.com` — the two products cross-link

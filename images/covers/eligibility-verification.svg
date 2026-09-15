@@ -1,0 +1,9 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line art of an ID card with a checkmark badge, representing patient eligibility verification">
+  <rect x="120" y="170" width="200" height="140" rx="14" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="170" cy="216" r="20" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="205" y1="206" x2="292" y2="206" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="205" y1="226" x2="272" y2="226" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="140" y1="282" x2="300" y2="282" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="332" cy="188" r="34" fill="none" stroke="var(--cat-medical-billing)" stroke-width="3"/>
+  <path d="M317,188 L328,199 L349,175" fill="none" stroke="var(--cat-medical-billing)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

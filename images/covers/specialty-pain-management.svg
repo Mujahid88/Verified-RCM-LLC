@@ -1,0 +1,25 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of nerve pathways radiating outward from a central point, representing pain management">
+  <path d="M305.8,216.1 A70,70 0 0 1 227.8,308.9" stroke="var(--muted)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+
+  <path d="M240,240 Q170,250 118.8,310" stroke="var(--muted)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <circle cx="118.8" cy="310" r="3.5" stroke="var(--muted)" stroke-width="1.5" fill="none"/>
+
+  <path d="M240,240 L199.9,90.3" stroke="var(--muted)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M217.9,157.7 L190,130" stroke="var(--muted)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+  <path d="M217.9,157.7 L245,120" stroke="var(--muted)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+  <circle cx="199.9" cy="90.3" r="3.5" stroke="var(--muted)" stroke-width="1.5" fill="none"/>
+
+  <path d="M240,240 Q320,190 365.6,167.5" stroke="var(--muted)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <circle cx="365.6" cy="167.5" r="3.5" stroke="var(--muted)" stroke-width="1.5" fill="none"/>
+
+  <path d="M240,240 L278.8,384.9" stroke="var(--color-text)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="278.8" cy="384.9" r="5" stroke="var(--color-text)" stroke-width="2" fill="none"/>
+
+  <path d="M240,240 L109.6,205.1" stroke="var(--color-text)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="109.6" cy="205.1" r="5" stroke="var(--color-text)" stroke-width="2" fill="none"/>
+
+  <path d="M240,240 L395,240" stroke="var(--cat-medical)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="395" cy="240" r="4" fill="var(--cat-medical)"/>
+
+  <circle cx="240" cy="240" r="6" fill="var(--cat-medical)"/>
+</svg>

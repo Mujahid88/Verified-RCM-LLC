@@ -1,0 +1,8 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of layered arcs and a heartbeat pulse line, symbolizing internal medicine and ongoing whole-body primary care">
+  <path d="M100,360 A190,190 0 0,1 380,360" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M130,360 A160,160 0 0,1 350,360" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M160,360 A125,125 0 0,1 320,360" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150,210 L190,210 L205,180 L220,235 L235,190 L250,210 L330,210" fill="none" stroke="var(--cat-primary-care)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="150" cy="210" r="4" fill="var(--cat-primary-care)"/>
+  <circle cx="330" cy="210" r="4" fill="var(--cat-primary-care)"/>
+</svg>
