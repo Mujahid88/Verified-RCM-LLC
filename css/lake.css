@@ -1035,3 +1035,29 @@ div.cta-band .btn:hover { background: #F5B21A; border-color: #F5B21A; }
 .nav-main a.nav-link.is-current { color: var(--hull); background: var(--mist); }
 .article { padding-bottom: 40px; }
 .page-head .service-head .stat-card { background: var(--glass-strong); -webkit-backdrop-filter: blur(var(--blur)); backdrop-filter: blur(var(--blur)); border: 1px solid var(--glass-edge); }
+
+/* ==========================================================================
+   28. Footer artwork (2026-09-17)
+   --------------------------------------------------------------------------
+   The footer now sits on the same mist band, sun, clouds and dots as the page
+   headers, with the wave running along its top edge (flipped, so the white
+   page above rolls down into the mist). Pure CSS: no page markup changed.
+   ========================================================================== */
+.site-footer {
+  position: relative; isolation: isolate; overflow: hidden;
+  background: var(--mist) var(--page-art) center bottom / cover no-repeat;
+  border-top: 0; padding-top: 110px;
+}
+.site-footer::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 72px; z-index: 0; pointer-events: none;
+  transform: scaleY(-1);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 96' preserveAspectRatio='none'%3E%3Cpath fill='%2363C6F0' opacity='.48' d='M0 40 C 180 10, 300 70, 480 45 S 800 15, 960 45 S 1300 80, 1440 35 V96 H0Z'/%3E%3Cpath fill='%230E86C8' opacity='.3' d='M0 60 C 200 30, 340 85, 520 60 S 860 30, 1040 62 S 1320 90, 1440 55 V96 H0Z'/%3E%3Cpath fill='%23fff' d='M0 78 C 220 52, 380 96, 560 76 S 900 50, 1080 78 S 1340 100, 1440 70 V96 H0Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+}
+.site-footer > .shell { position: relative; z-index: 1; }
+.site-footer .foot-grid > :first-child {
+  background: var(--glass-strong); -webkit-backdrop-filter: blur(var(--blur)); backdrop-filter: blur(var(--blur));
+  border: 1px solid var(--glass-edge); border-radius: var(--radius); padding: 22px 24px; box-shadow: var(--glass-shadow);
+}
+.foot-bottom { border-top-color: rgba(11,59,94,.14); }
+.foot-grid a:hover { color: var(--hull); }
+@media (max-width: 860px) { .site-footer::before { height: 48px; } .site-footer { padding-top: 80px; } }
