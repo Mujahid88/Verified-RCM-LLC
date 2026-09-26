@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Oncology J-Code Billing and Drug Waste: JW and JZ Modifiers Explained | Verified RCM</title>
+<meta name="description" content="JW and JZ modifier rules for oncology J-code drug waste: CMS's mandatory zero-waste attestation, single- vs. multi-dose vial rules, and a worked billing example.">
+<link rel="canonical" href="https://www.verifiedrcm.com/specialty-oncology-jcode-drug-waste-billing.html">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oncology J-Code Billing and Drug Waste: JW and JZ Modifiers Explained | Verified RCM">
+<meta property="og:description" content="JW and JZ modifier rules for oncology J-code drug waste: CMS's mandatory zero-waste attestation, single- vs. multi-dose vial rules, and a worked billing example.">
+<meta property="og:url" content="https://www.verifiedrcm.com/specialty-oncology-jcode-drug-waste-billing.html">
+<meta property="og:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<meta property="og:site_name" content="Verified RCM">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Oncology J-Code Billing and Drug Waste: JW and JZ Modifiers Explained | Verified RCM">
+<meta name="twitter:description" content="JW and JZ modifier rules for oncology J-code drug waste: CMS's mandatory zero-waste attestation, single- vs. multi-dose vial rules, and a worked billing example.">
+<meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Oncology J-Code Billing and Drug Waste: JW and JZ Modifiers Explained","description":"JW and JZ modifier rules for oncology J-code drug waste: CMS's mandatory zero-waste attestation, single- vs. multi-dose vial rules, and a worked billing example.","image":"https://www.verifiedrcm.com/images/og-cover.jpg","author":{"@type":"Person","name":"Phares A., MD","honorificSuffix":"MD","jobTitle":"Physiotherapist","hasCredential":[{"@type":"EducationalOccupationalCredential","credentialCategory":"degree","name":"Doctor of Medicine (MD)"},{"@type":"EducationalOccupationalCredential","credentialCategory":"certification","name":"Certified Professional Coder (CPC)","recognizedBy":{"@type":"Organization","name":"AAPC"}}]},"publisher":{"@type":"Organization","name":"Verified RCM","logo":{"@type":"ImageObject","url":"https://www.verifiedrcm.com/images/logo.jpg"}},"datePublished":"2026-09-26","dateModified":"2026-09-26","about":{"@type":"MedicalSpecialty","name":"Oncology"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.verifiedrcm.com/specialty-oncology-jcode-drug-waste-billing.html"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Oncology","item":"https://www.verifiedrcm.com/specialty-oncology.html"},{"@type":"ListItem","position":4,"name":"Oncology J-code billing and drug waste: JW and JZ modifiers explained","item":"https://www.verifiedrcm.com/specialty-oncology-jcode-drug-waste-billing.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What happens if a claim for a single-dose vial drug is missing both the JW and JZ modifier?","acceptedAnswer":{"@type":"Answer","text":"Since July 1, 2023, every Part B claim line billing a separately payable drug from a single-dose container must carry either JW (some amount was discarded) or JZ (nothing was discarded). Medicare began auditing compliance that same date, and effective October 1, 2023, MACs return claims missing both modifiers on an applicable line as unprocessable — not a standard denial you appeal, but a rejected claim you have to correct and resubmit before it's adjudicated at all."}},{"@type":"Question","name":"Do the JW and JZ modifiers apply to drugs from multi-use vials?","acceptedAnswer":{"@type":"Answer","text":"No. JW and JZ apply only to single-dose (single-use) containers. A multi-dose vial is FDA-labeled and formulated with a preservative specifically so it can be entered multiple times for multiple patients, so Medicare does not recognize leftover volume in it as separately payable waste at all — there's no modifier that makes it billable. Appending JW to a multi-dose vial's residual amount doesn't get it paid; it reads as a coding error on review."}},{"@type":"Question","name":"When exactly did the JZ modifier become mandatory, and why did CMS add it?","acceptedAnswer":{"@type":"Answer","text":"JZ was available for optional reporting on claims with dates of service on or after January 1, 2023, then became mandatory for dates of service on or after July 1, 2023, on every single-dose-container drug line with zero discarded amount. CMS added it because omitting JW was ambiguous — it could mean zero waste or simply a provider that hadn't reported waste — which undermined the discarded-drug data CMS needed from the Infrastructure Investment and Jobs Act's manufacturer drug-waste-refund provision. JZ forces an affirmative attestation either way, closing that gap."}},{"@type":"Question","name":"How do you handle JW modifier units when the administered dose doesn't divide evenly into the J-code's billing increment?","acceptedAnswer":{"@type":"Answer","text":"Because HCPCS units must be whole numbers, an administered dose that falls between billing increments is generally rounded up to the next whole unit on the administration line, with the remaining whole units on the vial billed separately under JW. The clinical record should still document the actual milligrams administered and discarded, even though the billed unit split may not match that raw math exactly once rounding is applied — confirm your MAC's current billing-and-coding article for the exact rounding convention it expects before relying on this for a specific claim."}}]}
+</script>
+<!-- Google tag (gtag.js) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'granted'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QSPSLHV2"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-M6QSPSLHV2');
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="nav-wrap">
+  <div class="nav-bar" id="navBar">
+    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Verified RCM</a>
+      <div class="nav-item-mega">
+      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
+      <div class="nav-mega">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Billing</div>
+          <a href="eligibility-verification.html">Eligibility Verification</a>
+          <a href="prior-auth.html">Prior Authorization</a>
+          <a href="claims-scrubbing.html">Claims Submission</a>
+          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
+          <a href="denials-management.html">Denials Management</a>
+          <a href="accounts-receivable-recovery.html">AR Recovery</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical Coding</div>
+          <a href="medical-coding.html">Coding Overview</a>
+          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
+          <a href="specialty-cardiology.html">Cardiology Coding</a>
+          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Credentialing</div>
+          <a href="credentialing-medicare.html">Medicare</a>
+          <a href="credentialing-medicaid.html">Medicaid</a>
+          <a href="credentialing-bcbs.html">BCBS</a>
+          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+          <a href="credentialing-aetna.html">Aetna</a>
+          <a href="credentialing-cigna.html">Cigna</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Practice Growth</div>
+          <a href="digital-marketing.html">Digital Marketing</a>
+          <a href="seo-services.html">Healthcare SEO</a>
+          <a href="google-business-profile.html">Google Business Profile</a>
+          <a href="social-media-management.html">Social Media</a>
+          <a href="web-development.html">Web Development</a>
+          <a href="virtual-assistant.html">Virtual Assistants</a>
+        </div>
+      </div>
+    </div>
+      <div class="nav-item-mega">
+      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
+      <div class="nav-mega">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Primary care</div>
+          <a href="specialty-internal-medicine.html">Internal Medicine</a>
+          <a href="specialty-family-medicine.html">Family Medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-urgent-care.html">Urgent Care</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Medical</div>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-neurology.html">Neurology</a>
+          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
+          <a href="specialty-nephrology.html">Nephrology</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Surgical</div>
+          <a href="specialty-orthopedics.html">Orthopedics</a>
+          <a href="specialty-general-surgery.html">General Surgery</a>
+          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Therapy &amp; more</div>
+          <a href="specialty-physical-therapy.html">Physical Therapy</a>
+          <a href="specialty-mental-health.html">Mental Health</a>
+          <a href="specialty-dental-care.html">Dental Care</a>
+          <a href="specialties.html" class="see-all">See all 27 specialty guides &rarr;</a>
+        </div>
+      </div>
+    </div>
+      <div class="nav-item-mega">
+      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
+      <div class="nav-mega nav-mega-2col">
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Practice resources</div>
+          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
+          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
+          <a href="switching-billing-companies.html">Switching Billing Companies</a>
+        </div>
+        <div class="nav-mega-col">
+          <div class="nav-mega-col-title">Latest articles</div>
+          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
+          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
+          <a href="blog.html" class="see-all">See all articles &rarr;</a>
+        </div>
+      </div>
+    </div>
+      <a href="about.html" class="nav-link active">About us</a>
+    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
+    </nav>
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+    <div class="nav-spacer"></div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
+    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Verified RCM</a>
+    <a href="services.html">Services</a>
+    <a href="specialties.html">Specialties</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About us</a>
+  <a href="https://sams.verifiedrcm.com">SAMS</a>
+  </div>
+</div>
+<main id="main">
+<article class="wrap article">
+  <a href="specialty-oncology.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete oncology guide</a>
+  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an infusion drip with a radiating cellular structure at the drop point">
+  <!-- drip chamber -->
+  <circle cx="240" cy="138" r="26" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- primary drip line/tube -->
+  <path d="M240,164 L240,356" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- secondary parallel tube contour -->
+  <path d="M258,182 L258,330" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- radiating molecular/cellular lines from the drop node -->
+  <path d="M240,240 L292,208" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M240,240 L302,258" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M240,240 L268,296" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M240,240 L186,268" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M240,240 L178,214" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- molecular node markers -->
+  <circle cx="292" cy="208" r="4" fill="none" stroke="var(--muted)" stroke-width="2" />
+  <circle cx="268" cy="296" r="3.5" fill="none" stroke="var(--muted)" stroke-width="2" />
+  <circle cx="186" cy="268" r="4" fill="none" stroke="var(--muted)" stroke-width="2" />
+  <circle cx="178" cy="214" r="3" fill="none" stroke="var(--muted)" stroke-width="1.5" />
+  <circle cx="302" cy="258" r="4" fill="none" stroke="var(--cat-medical)" stroke-width="2" />
+
+  <!-- the infusion drop node (accent) -->
+  <circle cx="240" cy="240" r="8" fill="var(--cat-medical)" />
+
+  <!-- secondary smaller drip further down the line -->
+  <circle cx="240" cy="322" r="3.5" fill="none" stroke="var(--muted)" stroke-width="1.5" />
+</svg></figure>
+  <h1>Oncology J-code billing and drug waste: JW and JZ modifiers explained.</h1>
+  <p class="lede">Almost every infused oncology drug leaves something behind in the vial, and Medicare has built an entire modifier system around that leftover milligram. This guide covers why HCPCS J-code billing units guarantee waste on single-dose vials, what the JW modifier has to document to survive review, why the JZ modifier is no longer optional on a zero-waste claim, where multi-use vials fall outside both rules entirely, and a full worked example showing the unit math a coder actually has to produce.</p>
+  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-oncology.html">oncology billing and coding guide</a></span></div>
+
+  <section class="takeaways" aria-label="Key takeaways">
+    <h2>Key takeaways</h2>
+    <ul>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>J-code billing units rarely match a vial's actual size.</b> A drug billed "per 10 mg" out of a 100 mg or 420 mg single-dose vial almost never divides evenly against a body-surface-area or weight-based dose &mdash; the waste is built into the packaging, not a sign of a documentation problem by itself.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>JW reports what was discarded; JZ has been mandatory since July 1, 2023.</b> Every Part B line for a separately payable drug from a single-dose container now needs one of the two &mdash; there is no longer a legitimate "neither" option.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Claims missing both modifiers on an applicable line have been returned as unprocessable since October 1, 2023</b> &mdash; a rejection to fix and resubmit, not a denial to appeal.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Multi-use vials never take JW or JZ.</b> Leftover volume in a multi-dose vial isn't separately payable waste at all under Medicare policy, so applying either modifier to it is a coding error, not a reimbursement opportunity.</span></li>
+    </ul>
+  </section>
+
+  <h2>Why J-code billing units make drug waste unavoidable</h2>
+  <p>HCPCS J-codes bill in fixed increments &mdash; "per 10 mg," "per 1 mg" &mdash; that CMS assigns independently of how any manufacturer packages the drug. Single-dose (single-use) vials come in a small number of fixed sizes for formulation and stability reasons, while the actual dose ordered is almost always calculated from the patient's body-surface-area or weight. The two numbers meeting evenly is the exception, not the rule, which is exactly why CMS built a modifier system around the leftover rather than pretending it wouldn't happen.</p>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <caption>Common oncology infusion drugs, their HCPCS billing unit, and the single-dose vial sizes most practices stock. Confirm current vial sizes and NDCs against the specific product label on file &mdash; manufacturers and biosimilar entrants change presentations.</caption>
+      <thead><tr><th scope="col">Drug</th><th scope="col">HCPCS code</th><th scope="col">Billing unit</th><th scope="col">Common single-dose vial sizes</th></tr></thead>
+      <tbody>
+        <tr><td>Pemetrexed</td><td>J9305</td><td>10 mg</td><td>100 mg, 500 mg</td></tr>
+        <tr><td>Rituximab (and biosimilars)</td><td>J9312</td><td>10 mg</td><td>100 mg/10 mL, 500 mg/50 mL</td></tr>
+        <tr><td>Bevacizumab (and biosimilars)</td><td>J9035</td><td>10 mg</td><td>100 mg/4 mL, 400 mg/16 mL</td></tr>
+        <tr><td>Pertuzumab</td><td>J9306</td><td>1 mg</td><td>420 mg/14 mL</td></tr>
+        <tr><td>Trastuzumab (excludes biosimilar)</td><td>J9355</td><td>10 mg</td><td>150 mg single-dose (also sold as a 420 mg multi-dose presentation &mdash; see the single-dose vs. multi-use section below)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Notice that a body-surface-area dose of, say, 78 mg against a 100 mg vial billed per 10 mg leaves 22 mg on the table before anyone opens a second vial. That gap is the waste JW and JZ exist to account for &mdash; and since July 2023, Medicare requires an explicit answer on every applicable claim line about whether that gap happened.</p>
+  <p>Manufacturers don't size vials around Medicare's billing unit because they can't &mdash; a single-dose vial's fill volume is locked in during FDA approval as part of the drug's formulation and stability data, and adding more sizes to chase every possible BSA-based dose would multiply manufacturing lines, lot testing, and shelf-life studies for a fraction of a milligram of savings. The result is a small, fixed menu of vial sizes meeting an effectively continuous range of ordered doses, and the mismatch between them is what shows up on the claim as JW-reportable waste. That's also why "just order the exact vial size" isn't a real fix for most infusion drugs the way it can be for a fixed-dose immunotherapy agent dosed at a flat milligram amount regardless of body size.</p>
+
+  <h2>The JW modifier: reporting discarded drug from a single-dose vial</h2>
+  <p>JW is defined as "drug amount discarded/not administered to any patient." It applies only when a single-dose or single-use container genuinely has leftover drug that could not be given to this patient or saved for another one, and it's reported on its own claim line, using the same HCPCS code as the administered dose, with units reflecting the amount discarded rather than administered.</p>
+  <p>CMS requires the discarded amount to be documented in the medical record, but does not mandate a specific documentation format &mdash; the requirement is that the record supports the number on the claim (CMS JW and JZ Modifier FAQs; MAC Billing and Coding: JW and JZ Modifier Billing Guidelines articles, e.g. former article A55932, retired 09/25/2025 and superseded by a current-numbered article &mdash; confirm the live article number for your MAC through the Medicare Coverage Database rather than an old bookmark). In practice, a note that survives review shows three things:</p>
+  <ul class="check-list">
+    <li><span class="check">1</span><span><b>The dose actually administered</b>, in milligrams, not just "full vial given" or "per protocol."</span></li>
+    <li><span class="check">2</span><span><b>The amount discarded</b>, in milligrams, and that it was not administered to any patient &mdash; the single-dose vial's remaining contents were not split, saved, or redrawn for a second patient.</span></li>
+    <li><span class="check">3</span><span><b>The two numbers reconciling to the vial's total labeled content.</b> A JW line that doesn't add up to a real vial size on the invoice is one of the first things a MAC post-payment review checks.</span></li>
+    <li><span class="check">4</span><span><b>Confirmation the discarded amount wasn't repurposed.</b> Many infusion suites build this into the nursing waste-attestation step already required for controlled-substance and hazardous-drug disposal, which is a convenient place to also capture the JW documentation instead of creating a second, separate workflow.</span></li>
+  </ul>
+  <p>None of this requires special software to satisfy. A dated line in the infusion note &mdash; drug, vial size, dose administered, amount discarded, and a statement that the discarded amount was not used for another patient &mdash; is enough for CMS's stated documentation standard. What actually fails review is silence: a chart that says the drug was given without ever stating how much came out of the vial in the first place.</p>
+  <p>Unit math adds one more wrinkle. HCPCS units have to be whole numbers, so when the administered dose doesn't land on a clean multiple of the billing increment, the convention widely documented by MACs and specialty billing guidance is to round the administered line up to the next whole unit, then bill whatever units remain on the vial under JW. A commonly cited illustration: a 305 mg bevacizumab dose against a 10 mg billing unit rounds up to 31 units administered; on a 400 mg (40-unit) vial, the remaining 9 units go on the JW line. ⚠️ This rounding convention is well corroborated across MAC and specialty-society billing guidance, but this build could not cleanly re-extract the exact wording from CMS's own JW and JZ Modifier FAQ PDF (the automated fetch returned garbled text from the document's layout) &mdash; verify the precise rounding instruction your MAC applies before using it on a specific claim.</p>
+
+  <h2>The JZ modifier: CMS's mandatory zero-waste attestation</h2>
+  <p>JZ is defined as "zero drug amount discarded/not administered to any patient." Where JW reports that waste happened, JZ affirmatively reports that it didn't &mdash; and since 2023, one of the two is required on every applicable line, not just whichever one happens to apply.</p>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <caption>JZ modifier rollout timeline for Medicare Part B claims (CMS JW and JZ Modifier FAQs; MLN Matters MM13056).</caption>
+      <thead><tr><th scope="col">Date</th><th scope="col">What changed</th></tr></thead>
+      <tbody>
+        <tr><td>January 1, 2017</td><td>JW modifier reporting becomes required for discarded amounts from single-dose containers.</td></tr>
+        <tr><td>January 1, 2023</td><td>JZ modifier becomes available for optional reporting on zero-waste single-dose-container claims.</td></tr>
+        <tr><td>July 1, 2023</td><td>JZ becomes <b>mandatory</b> on every single-dose-container claim line with zero discarded amount; MACs begin auditing JW/JZ compliance.</td></tr>
+        <tr><td>October 1, 2023</td><td>Claims for single-dose-container drugs missing both JW and JZ may be returned to the provider as unprocessable.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The push behind JZ wasn't cosmetic. The Infrastructure Investment and Jobs Act (2021) added a Medicare Part B drug-waste-accountability provision requiring manufacturers to refund CMS a rebate on discarded amounts of certain single-source drugs and biologicals that exceed a set percentage of total billed units in a quarter. That refund calculation depends on accurate national discard data, and a missing JW modifier was structurally ambiguous &mdash; it could mean zero waste, or it could mean a provider simply hadn't reported waste that happened. JZ removes the ambiguity by forcing an affirmative statement either way, on every line, every time.</p>
+  <p>⚠️ MAC-specific "Billing and Coding: JW and JZ Modifier Billing Guidelines" articles get renumbered and retired as CMS revises coverage-database content (former article A55932 shows a retirement date of 09/25/2025 in the Medicare Coverage Database). The underlying JW/JZ policy is unchanged, but always pull the currently active article number for your specific MAC rather than citing an old one in an appeal or a compliance policy.</p>
+  <p>There's a practical reason this data matters beyond compliance optics: the discarded-drug refund is calculated per manufacturer, per drug, per calendar quarter, using the JW-reported units divided into the total units billed for that drug across all Part B claims nationally. A practice that under-reports JW because staff quietly round waste down to avoid "looking wasteful" isn't protecting anyone &mdash; it's just feeding CMS's refund formula bad data while still absorbing the same actual drug cost. Accurate JW and JZ reporting doesn't cost the practice anything it wasn't already going to spend on the vial; it's the only way the manufacturer rebate mechanism sees the waste that already happened.</p>
+
+  <h2>Single-dose vials vs. multi-use vials: where JW and JZ do (and don't) apply</h2>
+  <p>The single most common way practices misuse these modifiers isn't a math error &mdash; it's applying them to the wrong kind of vial. JW and JZ exist only for single-dose (single-use) containers. A multi-dose vial is FDA-labeled to be entered multiple times, contains an antimicrobial preservative that makes that safe, and is meant to serve more than one patient before its beyond-use date. Medicare's position follows from that design: leftover volume in a multi-dose vial isn't separately payable waste, full stop, because the vial isn't supposed to be emptied into a single patient in the first place.</p>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <caption>Single-dose vs. multi-use vial rules for JW and JZ reporting.</caption>
+      <thead><tr><th scope="col"></th><th scope="col">Single-dose / single-use vial</th><th scope="col">Multi-use (multi-dose) vial</th></tr></thead>
+      <tbody>
+        <tr><td>Preservative</td><td>None &mdash; FDA-labeled for one entry, one patient</td><td>Contains an antimicrobial preservative, labeled for repeat entry</td></tr>
+        <tr><td>JW modifier</td><td>Required on the discarded-amount line when there is leftover drug</td><td>Does not apply &mdash; leftover volume is not separately payable</td></tr>
+        <tr><td>JZ modifier</td><td>Required on the administered line when there is zero leftover</td><td>Does not apply</td></tr>
+        <tr><td>What gets billed</td><td>Administered amount, plus discarded amount if any, up to the full vial</td><td>Only the amount actually administered to that patient</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Trastuzumab is the drug that trips practices up most, because both presentations exist on the market under related NDCs: a 150 mg single-dose, preservative-free vial and a 420 mg multi-dose vial containing a preservative. The billing rule doesn't follow the drug &mdash; it follows which specific vial is on the shelf. Confirm the NDC actually pulled for that infusion before deciding whether JW/JZ apply at all, not just before deciding which one to use.</p>
+  <p>The logic behind excluding multi-use vials isn't a technicality &mdash; it's the same reasoning that makes the preservative necessary in the first place. A multi-dose vial is formulated and tested specifically to remain sterile across repeated needle entries over its labeled in-use period, precisely so a practice can draw partial doses for several patients from one vial without discarding anything between them. Treating the volume left in it after one patient's dose as "waste" would misdescribe how the product is meant to be used, and paying for it as waste would effectively pay twice for the same milliliters once a second patient's dose is drawn from the same vial later. Single-dose vials carry no such protection &mdash; USP &lt;797&gt; and the product labeling require whatever isn't used within the same session to be discarded, which is precisely why Medicare is willing to pay for that portion as legitimate, unavoidable waste instead.</p>
+
+  <div class="protip">
+    <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
+    <div><div class="protip-label">Pro tip</div><p>Put the discarded-milligram field directly in the infusion nursing documentation template, not just the coder's worksheet. The person who actually draws the dose and discards the remainder is the only one who knows the real number in the moment; a coder reconstructing it from a vague "administered per protocol" note weeks later is guessing, and a guess is what a post-payment review is built to catch.</p></div>
+  </div>
+
+  <h2>Worked example: units, modifiers, and documentation for a 100 mg vial</h2>
+  <p>Pemetrexed (J9305, billed per 10 mg) ships in a preservative-free, single-dose 100 mg vial. A patient's body-surface-area calculation orders 78 mg IV.</p>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <caption>Worked billing example: pemetrexed, 100 mg single-dose vial, 78 mg ordered and administered.</caption>
+      <thead><tr><th scope="col">Step</th><th scope="col">Value</th></tr></thead>
+      <tbody>
+        <tr><td>Vial size</td><td>100 mg = 10 billable units at 10 mg/unit</td></tr>
+        <tr><td>Dose ordered and administered</td><td>78 mg</td></tr>
+        <tr><td>Amount discarded (documented in the record)</td><td>22 mg &mdash; not administered to any patient</td></tr>
+        <tr><td>J9305 line 1 (administered)</td><td>8 units, no modifier &mdash; 78 mg rounds up to the next whole 10 mg unit for billing purposes</td></tr>
+        <tr><td>J9305 line 2 (discarded)</td><td>2 units, modifier <b>JW</b> &mdash; the remaining units on the vial</td></tr>
+        <tr><td>Reconciliation check</td><td>8 units + 2 units = 10 units = full 100 mg vial</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Documentation language that supports this claim: <i>"Pemetrexed 100 mg single-dose vial, NDC and lot on file. Dose ordered 78 mg IV per BSA calculation. Full vial reconstituted; 78 mg administered via infusion. Remaining 22 mg discarded per single-dose vial policy; not administered to any patient, not saved."</i> ⚠️ The 8-unit/2-unit split above follows the standard whole-unit rounding convention described in the JW section; some MACs or auditors may expect the raw discarded milligrams (22 mg) called out explicitly in the note even though the billed JW units come out to a 20 mg equivalent once rounding is applied &mdash; document the actual administered and discarded milligrams regardless of how the units land, so the two are never in conflict on paper.</p>
+  <p>If instead the entire 100 mg had been administered with nothing left over, the correct claim is a single J9305 line at 10 units with modifier <b>JZ</b> attached &mdash; not simply an unmodified line, since an unmodified single-dose-vial line is exactly what gets returned as unprocessable post-mandate.</p>
+
+  <div class="dodont">
+    <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
+      <li>Attach JZ to every zero-waste single-dose-vial line, every time, since it's been mandatory since July 1, 2023 &mdash; not just when a payer's edit flags the claim.</li>
+      <li>Document milligrams administered and milligrams discarded contemporaneously, not reconstructed later from a general infusion note.</li>
+      <li>Reconcile administered-plus-discarded units to a real vial size actually on the invoice before the claim goes out.</li>
+    </ul></div>
+    <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Don't</div><ul>
+      <li>Leave both modifiers off a single-dose-vial line &mdash; it's an unprocessable claim since October 1, 2023, not a payer preference.</li>
+      <li>Append JW to leftover volume from a multi-use, preservative-containing vial &mdash; it isn't separately payable regardless of the modifier.</li>
+      <li>Bill JW units that don't add up to any vial size the practice actually stocks; that mismatch is a standard post-payment audit target.</li>
+    </ul></div>
+  </div>
+
+  <div class="cta-band">
+    <div>
+      <h3>Losing revenue to J-code waste and modifier rejections?</h3>
+      <p>We'll audit your infusion claims for JW/JZ compliance, flag the lines getting returned as unprocessable, and show what accurate discard documentation would recover.</p>
+    </div>
+    <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>What happens if a claim for a single-dose vial drug is missing both the JW and JZ modifier?</summary><p>Since July 1, 2023, every Part B claim line billing a separately payable drug from a single-dose container must carry either JW (some amount was discarded) or JZ (nothing was discarded). Medicare began auditing compliance that same date, and effective October 1, 2023, MACs return claims missing both modifiers on an applicable line as unprocessable &mdash; not a standard denial you appeal, but a rejected claim you have to correct and resubmit before it's adjudicated at all.</p></details>
+    <details class="faq-item"><summary>Do the JW and JZ modifiers apply to drugs from multi-use vials?</summary><p>No. JW and JZ apply only to single-dose (single-use) containers. A multi-dose vial is FDA-labeled and formulated with a preservative specifically so it can be entered multiple times for multiple patients, so Medicare does not recognize leftover volume in it as separately payable waste at all &mdash; there's no modifier that makes it billable. Appending JW to a multi-dose vial's residual amount doesn't get it paid; it reads as a coding error on review.</p></details>
+    <details class="faq-item"><summary>When exactly did the JZ modifier become mandatory, and why did CMS add it?</summary><p>JZ was available for optional reporting on claims with dates of service on or after January 1, 2023, then became mandatory for dates of service on or after July 1, 2023, on every single-dose-container drug line with zero discarded amount. CMS added it because omitting JW was ambiguous &mdash; it could mean zero waste or simply a provider that hadn't reported waste &mdash; which undermined the discarded-drug data CMS needed from the Infrastructure Investment and Jobs Act's manufacturer drug-waste-refund provision. JZ forces an affirmative attestation either way, closing that gap.</p></details>
+    <details class="faq-item"><summary>How do you handle JW modifier units when the administered dose doesn't divide evenly into the J-code's billing increment?</summary><p>Because HCPCS units must be whole numbers, an administered dose that falls between billing increments is generally rounded up to the next whole unit on the administration line, with the remaining whole units on the vial billed separately under JW. The clinical record should still document the actual milligrams administered and discarded, even though the billed unit split may not match that raw math exactly once rounding is applied &mdash; confirm your MAC's current billing-and-coding article for the exact rounding convention it expects before relying on this for a specific claim.</p></details>
+  </div>
+
+  <div class="content-disclaimer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+  </div>
+
+  <h2>Related resources</h2>
+  <ul class="related-list">
+    <li><a href="specialty-oncology.html">Oncology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="specialty-oncology-chemo-infusion-hierarchy-coding.html">Chemotherapy administration coding: infusion sequencing and 96409&ndash;96417 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="specialty-oncology-prior-authorization.html">Oncology prior authorization and step therapy for IV chemotherapy <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="specialty-oncology-icd10-specificity.html">ICD-10 coding for oncology: primary vs. secondary site and staging <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="specialty-oncology-denials-appeals.html">Oncology claim denials and appeals: CO-50, CO-97, CO-197 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+  </ul>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-card">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
+          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        </div>
+        <div class="footer-actions">
+          <div class="footer-action">
+            <div class="footer-action-label">Book a consultation</div>
+            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
+            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
+            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
+          </div>
+          <div class="footer-action">
+            <div class="footer-action-label">Rate your experience</div>
+            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
+            <!-- TrustBox widget - Review Collector -->
+            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
+            <!-- End TrustBox widget -->
+          </div>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 27 specialties</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+        <nav class="footer-legal" aria-label="Legal">
+          <a href="privacy.html">Privacy policy</a>
+          <a href="terms.html">Terms of service</a>
+          <a href="hipaa-notice.html">HIPAA notice</a>
+          <a href="about.html#faq">FAQs</a>
+          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+        </nav>
+        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
+  <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+  </div>
+</div>
+<!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<!-- End TrustBox script -->
+<script src="js/main.js"></script>
+</body>
+</html>
