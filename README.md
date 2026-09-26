@@ -1,7 +1,7 @@
 # Verified RCM — website
 
 The marketing site for Verified RCM LLC, a US medical billing / revenue cycle management
-company. 348 HTML pages, one stylesheet, one script file, plus a small Cloudflare Worker
+company. 358 HTML pages, one stylesheet, one script file, plus a small Cloudflare Worker
 for the contact form. No frontend build step — every page can still be opened directly
 or served as plain static files.
 
@@ -16,11 +16,12 @@ or served as plain static files.
 ├── services.html                    Services overview
 ├── service-*.html                   3 core service detail pages
 ├── specialties.html                 Specialty directory (filterable)
-├── specialty-*.html                 25 specialty pillar pages (17 original + orthopedics,
+├── specialty-*.html                 26 specialty pillar pages (17 original + orthopedics,
 │                                     dermatology, gastroenterology, OB/GYN, urology, ENT,
-│                                     general surgery, vascular surgery), each ~2,500-4,500
-│                                     words, verified against live ICD-10/CMS Coverage data
-├── specialty-{slug}-*.html          206 cluster ("spoke") articles supporting the 25
+│                                     general surgery, vascular surgery, podiatry (2026-09-26)),
+│                                     each ~2,500-17,500 words, verified against live
+│                                     ICD-10/CMS Coverage data
+├── specialty-{slug}-*.html          214 cluster ("spoke") articles supporting the 26
 │                                     pillars (modifiers, denials/appeals, NCCI/MUE or
 │                                     bundling, E/M, top procedure families, ICD-10
 │                                     specificity, prior auth, and specialty-specific
@@ -68,7 +69,7 @@ or served as plain static files.
 │                                     spokes (staffing, healthcare accounting, HIPAA,
 │                                     KPI reporting, EHR selection, multi-location
 │                                     scaling) (2026-08-30)
-├── sitemap.xml                      340 URLs, kept in sync with the page count
+├── sitemap.xml                      349 URLs, kept in sync with the page count
 ├── robots.txt
 ├── css/style.css                    GENERATED — every page's <link> still points here,
 │                                     but don't hand-edit it. Built from css/src/*.css by
