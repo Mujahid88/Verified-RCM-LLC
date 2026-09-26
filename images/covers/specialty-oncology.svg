@@ -1,0 +1,30 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an infusion drip with a radiating cellular structure at the drop point">
+  <!-- drip chamber -->
+  <circle cx="240" cy="138" r="26" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- primary drip line/tube -->
+  <path d="M240,164 L240,356" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- secondary parallel tube contour -->
+  <path d="M258,182 L258,330" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- radiating molecular/cellular lines from the drop node -->
+  <path d="M240,240 L292,208" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M240,240 L302,258" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M240,240 L268,296" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M240,240 L186,268" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M240,240 L178,214" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- molecular node markers -->
+  <circle cx="292" cy="208" r="4" fill="none" stroke="var(--muted)" stroke-width="2" />
+  <circle cx="268" cy="296" r="3.5" fill="none" stroke="var(--muted)" stroke-width="2" />
+  <circle cx="186" cy="268" r="4" fill="none" stroke="var(--muted)" stroke-width="2" />
+  <circle cx="178" cy="214" r="3" fill="none" stroke="var(--muted)" stroke-width="1.5" />
+  <circle cx="302" cy="258" r="4" fill="none" stroke="var(--cat-medical)" stroke-width="2" />
+
+  <!-- the infusion drop node (accent) -->
+  <circle cx="240" cy="240" r="8" fill="var(--cat-medical)" />
+
+  <!-- secondary smaller drip further down the line -->
+  <circle cx="240" cy="322" r="3.5" fill="none" stroke="var(--muted)" stroke-width="1.5" />
+</svg>
