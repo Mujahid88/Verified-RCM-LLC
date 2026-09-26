@@ -1,0 +1,21 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a gently arched curve with radiating tick marks at one end and an accented joint point, representing podiatry">
+  <!-- secondary echo arcs suggesting the arch's range -->
+  <path d="M 122 330 Q 240 224 358 322" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="1 9"/>
+  <path d="M 136 348 Q 240 252 344 340" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="1 9"/>
+
+  <!-- secondary support line beneath the arch -->
+  <path d="M 140 317 Q 240 214 340 308" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- primary arch line, a foot's arch profile reduced to a single curve -->
+  <path d="M 130 310 Q 240 180 350 300" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- radiating tick marks suggesting toes -->
+  <path d="M 354 296 L 386 286" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 356 302 L 390 300" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 356 309 L 388 316" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 353 316 L 382 328" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- accent marking the heel/joint pressure point -->
+  <circle cx="130" cy="310" r="14" fill="none" stroke="var(--cat-surgical)" stroke-width="2.5"/>
+  <circle cx="130" cy="310" r="3.5" fill="var(--cat-surgical)"/>
+</svg>
