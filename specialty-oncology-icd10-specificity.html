@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Oncology ICD-10 Coding: Neoplasm Specificity, Laterality, and Sequencing | Verified RCM">
 <meta name="twitter:description" content="Oncology ICD-10 coding: laterality-specific primary malignancy codes (C50, C34, C18), the C77-C79 metastatic-to-history transition, Z51.11/Z51.12 sequencing, and D37-D48 uncertain-behavior codes.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 30 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 30 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 30 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-oncology.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete oncology guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an infusion drip with a radiating cellular structure at the drop point">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-oncology.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete oncology guide</a>
+      <h1>Oncology ICD-10 coding: neoplasm specificity, laterality, and sequencing.</h1>
+      <p class="lede">Oncology denials rarely start with the wrong drug or the wrong CPT code, they start with the diagnosis line. A missing laterality digit, a malignant code billed after the tumor is gone, or a chemotherapy encounter coded with the neoplasm listed first instead of second are three of the most common, entirely preventable reasons an oncology claim comes back. This guide covers primary malignancy coding by site with laterality, the C77&ndash;C79 secondary-neoplasm rules and exactly when a treated primary becomes a Z85 history code instead, the Z51.11/Z51.12 sequencing rule for chemotherapy and immunotherapy encounters, and when a D37&ndash;D48 uncertain-behavior code is the correct answer instead of a malignant one.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-oncology.html">oncology billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an infusion drip with a radiating cellular structure at the drop point">
   <!-- drip chamber -->
   <circle cx="240" cy="138" r="26" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 
@@ -200,15 +256,14 @@
   <!-- secondary smaller drip further down the line -->
   <circle cx="240" cy="322" r="3.5" fill="none" stroke="var(--muted)" stroke-width="1.5" />
 </svg></figure>
-  <h1>Oncology ICD-10 coding: neoplasm specificity, laterality, and sequencing.</h1>
-  <p class="lede">Oncology denials rarely start with the wrong drug or the wrong CPT code &mdash; they start with the diagnosis line. A missing laterality digit, a malignant code billed after the tumor is gone, or a chemotherapy encounter coded with the neoplasm listed first instead of second are three of the most common, entirely preventable reasons an oncology claim comes back. This guide covers primary malignancy coding by site with laterality, the C77&ndash;C79 secondary-neoplasm rules and exactly when a treated primary becomes a Z85 history code instead, the Z51.11/Z51.12 sequencing rule for chemotherapy and immunotherapy encounters, and when a D37&ndash;D48 uncertain-behavior code is the correct answer instead of a malignant one.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-oncology.html">oncology billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Laterality is billable, not optional, on breast and lung primaries.</b> C50 (breast) and C34 (lung/bronchus) both carry right, left, and unspecified sixth characters &mdash; verified live against the FY2026 ICD-10-CM code set &mdash; and an unspecified-side code where the pathology names a side is a specificity gap payers can catch automatically.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A treated primary only becomes a Z85 history code once it's gone and nothing is still being done about it.</b> If any treatment is still directed at the primary site &mdash; including adjuvant therapy &mdash; it's coded as an active malignancy, not history, regardless of how the patient is described clinically.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Laterality is billable, not optional, on breast and lung primaries.</b> C50 (breast) and C34 (lung/bronchus) both carry right, left, and unspecified sixth characters, verified live against the FY2026 ICD-10-CM code set, and an unspecified-side code where the pathology names a side is a specificity gap payers can catch automatically.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A treated primary only becomes a Z85 history code once it's gone and nothing is still being done about it.</b> If any treatment is still directed at the primary site, including adjuvant therapy, it's coded as an active malignancy, not history, regardless of how the patient is described clinically.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Z51.11 or Z51.12 leads the claim when the visit is chiefly for drug administration.</b> The malignancy code is secondary. Since FY2024 the guideline word changed from "solely" to "chiefly," widening when the Z51 code can be sequenced first.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>D37&ndash;D48 uncertain-behavior codes require a pathology report that actually says "uncertain behavior."</b> They are not a stand-in for an unworked-up or unspecified malignancy, and one of the two most common oncology diagnosis denials is exactly this substitution.</span></li>
     </ul>
@@ -221,14 +276,14 @@
       <caption>Primary malignancy coding by site, verified against the FY2026 ICD-10-CM code set. All codes below confirmed billable for HIPAA transactions.</caption>
       <thead><tr><th scope="col">Site</th><th scope="col">Category header</th><th scope="col">Laterality axis?</th><th scope="col">Example billable codes</th></tr></thead>
       <tbody>
-        <tr><td>Breast</td><td><code>C50</code> Malignant neoplasm of breast</td><td>Yes &mdash; right/left/unspecified, plus separate female/male branches</td><td><code>C50.911</code> unsp site, right female breast &middot; <code>C50.912</code> unsp site, left female breast &middot; <code>C50.919</code> unsp site, unspecified female breast &middot; <code>C50.A1</code>/<code>C50.A2</code> inflammatory carcinoma, right/left</td></tr>
-        <tr><td>Bronchus and lung</td><td><code>C34</code> Malignant neoplasm of bronchus and lung</td><td>Yes &mdash; right/left/unspecified at the sixth character</td><td><code>C34.11</code> upper lobe, right &middot; <code>C34.12</code> upper lobe, left &middot; <code>C34.31</code> lower lobe, right &middot; <code>C34.90</code> unspecified part, unspecified bronchus/lung</td></tr>
-        <tr><td>Colon</td><td><code>C18</code> Malignant neoplasm of colon</td><td>No laterality axis &mdash; specificity is by segment instead</td><td><code>C18.0</code> cecum &middot; <code>C18.2</code> ascending colon &middot; <code>C18.7</code> sigmoid colon &middot; <code>C18.9</code> colon, unspecified (avoid as primary when a segment is documented)</td></tr>
+        <tr><td>Breast</td><td><code>C50</code> Malignant neoplasm of breast</td><td>Yes, right/left/unspecified, plus separate female/male branches</td><td><code>C50.911</code> unsp site, right female breast &middot; <code>C50.912</code> unsp site, left female breast &middot; <code>C50.919</code> unsp site, unspecified female breast &middot; <code>C50.A1</code>/<code>C50.A2</code> inflammatory carcinoma, right/left</td></tr>
+        <tr><td>Bronchus and lung</td><td><code>C34</code> Malignant neoplasm of bronchus and lung</td><td>Yes, right/left/unspecified at the sixth character</td><td><code>C34.11</code> upper lobe, right &middot; <code>C34.12</code> upper lobe, left &middot; <code>C34.31</code> lower lobe, right &middot; <code>C34.90</code> unspecified part, unspecified bronchus/lung</td></tr>
+        <tr><td>Colon</td><td><code>C18</code> Malignant neoplasm of colon</td><td>No laterality axis, specificity is by segment instead</td><td><code>C18.0</code> cecum &middot; <code>C18.2</code> ascending colon &middot; <code>C18.7</code> sigmoid colon &middot; <code>C18.9</code> colon, unspecified (avoid as primary when a segment is documented)</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The pattern to take from this table: not every neoplasm category has a laterality dimension, and assuming one does (or doesn't) without checking the specific category is how specificity errors happen in both directions. Breast and lung both split at the sixth character into right, left, and unspecified &mdash; and breast further splits by quadrant (upper-outer, upper-inner, lower-outer, lower-inner, central, axillary tail, and overlapping) before laterality is even applied, which is 86 total codes in the C50 category alone. Colon has no side to document at all; a coder reaching for laterality on a colon primary is solving a problem that category doesn't have, while missing that the real specificity axis there is the bowel segment. The operative note or pathology report is the source for both: the surgeon's or pathologist's stated side and site, not an assumption carried over from the referral.</p>
-  <p>Unspecified-site and unspecified-laterality codes exist in every category above and are billable &mdash; <code>C50.919</code> and <code>C34.90</code> both validate as HIPAA-billable &mdash; but billable is not the same as defensible. A payer's claims-edit logic increasingly flags an unspecified-side breast or lung code against a claim that also carries a laterality-specific CPT or HCPCS code (a right mastectomy, a left lobectomy) as an internal inconsistency worth a medical-record request, even when it doesn't hard-deny outright. The fix is upstream of coding: the pathology report and operative note need to state the side and site in the first place, and the coder needs to read past the referral diagnosis to the actual specimen report before finalizing the code.</p>
+  <p>The pattern to take from this table: not every neoplasm category has a laterality dimension, and assuming one does (or doesn't) without checking the specific category is how specificity errors happen in both directions. Breast and lung both split at the sixth character into right, left, and unspecified, and breast further splits by quadrant (upper-outer, upper-inner, lower-outer, lower-inner, central, axillary tail, and overlapping) before laterality is even applied, which is 86 total codes in the C50 category alone. Colon has no side to document at all; a coder reaching for laterality on a colon primary is solving a problem that category doesn't have, while missing that the real specificity axis there is the bowel segment. The operative note or pathology report is the source for both: the surgeon's or pathologist's stated side and site, not an assumption carried over from the referral.</p>
+  <p>Unspecified-site and unspecified-laterality codes exist in every category above and are billable, <code>C50.919</code> and <code>C34.90</code> both validate as HIPAA-billable, but billable is not the same as defensible. A payer's claims-edit logic increasingly flags an unspecified-side breast or lung code against a claim that also carries a laterality-specific CPT or HCPCS code (a right mastectomy, a left lobectomy) as an internal inconsistency worth a medical-record request, even when it doesn't hard-deny outright. The fix is upstream of coding: the pathology report and operative note need to state the side and site in the first place, and the coder needs to read past the referral diagnosis to the actual specimen report before finalizing the code.</p>
 
   <h2>Secondary and metastatic neoplasm coding, and when the primary becomes "history of"</h2>
   <p>Metastatic disease coding is where oncology claims most often go wrong, because it requires tracking two separate facts at once: where the cancer started, and where it currently is or has been treated. ICD-10-CM handles this with a dedicated secondary-neoplasm chapter, C77&ndash;C79, that exists specifically to code a metastasis independently of its primary.</p>
@@ -243,32 +298,32 @@
       </tbody>
     </table>
   </div>
-  <p>A metastasis is always coded from these categories regardless of the primary's own histology &mdash; a breast primary that has spread to bone is coded as the breast primary plus <code>C79.51</code>, not as a bone primary. Sequencing depends on what the encounter is actually for: if the visit addresses the primary and secondary sites together, or the primary is the chief concern, the primary is sequenced first with the metastatic code(s) as additional diagnoses. If the encounter's treatment is directed specifically at the metastatic site &mdash; a bone-directed radiation course for a known osseous metastasis, for example &mdash; the secondary-site code is sequenced first, with the primary (or its Z85 history code, if it qualifies) as an additional diagnosis. Getting this backward is a documentation-support problem as much as a coding one: the sequencing has to match what the note says the visit was for, not a default habit.</p>
+  <p>A metastasis is always coded from these categories regardless of the primary's own histology, a breast primary that has spread to bone is coded as the breast primary plus <code>C79.51</code>, not as a bone primary. Sequencing depends on what the encounter is actually for: if the visit addresses the primary and secondary sites together, or the primary is the chief concern, the primary is sequenced first with the metastatic code(s) as additional diagnoses. If the encounter's treatment is directed specifically at the metastatic site, a bone-directed radiation course for a known osseous metastasis, for example, the secondary-site code is sequenced first, with the primary (or its Z85 history code, if it qualifies) as an additional diagnosis. Getting this backward is a documentation-support problem as much as a coding one: the sequencing has to match what the note says the visit was for, not a default habit.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Code as active primary when</div><ul>
-      <li>Any treatment &mdash; surgical, medical, or radiation, including adjuvant therapy &mdash; is still directed at the primary site, or the primary has not been fully excised or eradicated.</li>
+      <li>Any treatment, surgical, medical, or radiation, including adjuvant therapy, is still directed at the primary site, or the primary has not been fully excised or eradicated.</li>
       <li>There is any current evidence of the primary malignancy, even if the patient is also receiving treatment for a metastasis elsewhere.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>Switch to Z85 "history of" only when</div><ul>
-      <li>The primary has been surgically removed or otherwise eradicated, <b>and</b> no further treatment is directed to that site, <b>and</b> there is no evidence of any existing primary malignancy there. All three conditions have to be true at once &mdash; a Z85 code used while any one of them isn't true is a coding error that understates disease burden, not a documentation shortcut.</li>
-      <li>If disease later recurs, extends, or is found to have spread, the history code is dropped for an active recurrence or secondary-site code &mdash; a Z85 code and an active malignancy code for the same site are never both correct at the same time.</li>
+      <li>The primary has been surgically removed or otherwise eradicated, <b>and</b> no further treatment is directed to that site, <b>and</b> there is no evidence of any existing primary malignancy there. All three conditions have to be true at once, a Z85 code used while any one of them isn't true is a coding error that understates disease burden, not a documentation shortcut.</li>
+      <li>If disease later recurs, extends, or is found to have spread, the history code is dropped for an active recurrence or secondary-site code, a Z85 code and an active malignancy code for the same site are never both correct at the same time.</li>
     </ul></div>
   </div>
-  <p>The category to know for "history of" coding is <code>Z85</code>, Personal history of malignant neoplasm, which we confirmed is organized by the primary's original site rather than as one generic code. <code>Z85.3</code> (personal history of malignant neoplasm of breast) and <code>Z85.118</code> (personal history of other malignant neoplasm of bronchus and lung) both validate as billable; note that the three-character site headers under Z85 (like <code>Z85.11</code>, bronchus and lung generally) are category headers only and are not themselves billable &mdash; the claim needs the fourth- or fifth-character child code that specifies carcinoid versus other histology.</p>
+  <p>The category to know for "history of" coding is <code>Z85</code>, Personal history of malignant neoplasm, which we confirmed is organized by the primary's original site rather than as one generic code. <code>Z85.3</code> (personal history of malignant neoplasm of breast) and <code>Z85.118</code> (personal history of other malignant neoplasm of bronchus and lung) both validate as billable; note that the three-character site headers under Z85 (like <code>Z85.11</code>, bronchus and lung generally) are category headers only and are not themselves billable, the claim needs the fourth- or fifth-character child code that specifies carcinoid versus other histology.</p>
 
   <h2>Sequencing chemotherapy and immunotherapy encounters</h2>
   <p>This is the single most common sequencing error our reviewers see on oncology infusion claims: the malignancy code billed first, with the Z51 encounter code (if used at all) listed second or omitted. The rule runs the other way for treatment-administration visits.</p>
   <p>When the reason for the encounter is chiefly the administration of chemotherapy, immunotherapy, or radiation therapy to treat a malignancy, the applicable Z51 code is sequenced as the first-listed diagnosis, and the malignancy being treated is reported as a secondary diagnosis. The two codes at issue for drug administration:</p>
   <ul class="check-list">
-    <li><span class="check">1</span><span><b><code>Z51.11</code> &mdash; Encounter for antineoplastic chemotherapy.</b> First-listed when the visit is chiefly for chemotherapy infusion or injection, with the treated malignancy (or its C77&ndash;C79 metastatic code, if that's the site being treated) reported second.</span></li>
-    <li><span class="check">2</span><span><b><code>Z51.12</code> &mdash; Encounter for antineoplastic immunotherapy.</b> Same first-listed logic, for checkpoint inhibitors, monoclonal antibodies, and other immunotherapy agents administered for an oncologic indication.</span></li>
+    <li><span class="check">1</span><span><b><code>Z51.11</code>, Encounter for antineoplastic chemotherapy.</b> First-listed when the visit is chiefly for chemotherapy infusion or injection, with the treated malignancy (or its C77&ndash;C79 metastatic code, if that's the site being treated) reported second.</span></li>
+    <li><span class="check">2</span><span><b><code>Z51.12</code>, Encounter for antineoplastic immunotherapy.</b> Same first-listed logic, for checkpoint inhibitors, monoclonal antibodies, and other immunotherapy agents administered for an oncologic indication.</span></li>
   </ul>
   <p>Both codes validated live as HIPAA-billable against the FY2026 code set. A meaningful wording change took effect with the FY2024 ICD-10-CM Official Guidelines and remains current: the guideline previously required the encounter to be "solely" for chemotherapy administration before Z51.11 could lead, which excluded a visit where anything else was also addressed. That word was replaced with "chiefly," which means Z51.11 or Z51.12 can still be sequenced first as long as drug administration was the main reason for the visit, even if the clinician also manages an unrelated or related condition at the same encounter. Practices whose coding staff or scrubber rules still encode the older "solely" standard are under-using the Z51 codes on visits that now qualify.</p>
   <p>⚠️ This sequencing rule is stated with confidence based on the FY2026 ICD-10-CM Official Guidelines for Coding and Reporting (Section I.C.2.e, chemotherapy/immunotherapy for treatment of neoplasm) as summarized consistently across multiple current coding-education sources reviewed for this build (AAPC Knowledge Center and Healthicity's ICD-10 guideline series, among others); the CMS-hosted guideline PDF itself could not be parsed directly during this build (the retrieved file returned as unreadable binary rather than extractable text), so the exact guideline wording was not confirmed against the primary CMS/NCHS document character-for-character. Pull the current FY guidelines PDF directly and confirm Section I.C.2.e before finalizing a coding policy or scrubber rule against this rule.</p>
-  <p>One more sequencing wrinkle worth flagging: this Z51-first rule applies specifically to encounters for administering treatment. A visit for a surgical procedure to treat the malignancy, or an E/M visit to manage a treatment complication rather than to administer treatment, follows different sequencing logic &mdash; the malignancy (or the complication code, per the guidelines on complications of care) leads instead. Don't apply the Z51-first rule reflexively to every oncology encounter; it's specific to the chemotherapy/immunotherapy/radiation administration visit itself.</p>
+  <p>One more sequencing wrinkle worth flagging: this Z51-first rule applies specifically to encounters for administering treatment. A visit for a surgical procedure to treat the malignancy, or an E/M visit to manage a treatment complication rather than to administer treatment, follows different sequencing logic, the malignancy (or the complication code, per the guidelines on complications of care) leads instead. Don't apply the Z51-first rule reflexively to every oncology encounter; it's specific to the chemotherapy/immunotherapy/radiation administration visit itself.</p>
 
   <h2>Neoplasm of uncertain behavior: when D37&ndash;D48 is the right answer</h2>
-  <p>Categories D37 through D48 cover neoplasms of uncertain behavior &mdash; a distinct clinical category from malignant, benign, or unspecified, and one of the most consistently misused code ranges in oncology billing.</p>
+  <p>Categories D37 through D48 cover neoplasms of uncertain behavior, a distinct clinical category from malignant, benign, or unspecified, and one of the most consistently misused code ranges in oncology billing.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Neoplasm of uncertain behavior, selected categories verified against the FY2026 ICD-10-CM code set. All codes below confirmed billable for HIPAA transactions.</caption>
@@ -279,7 +334,7 @@
       </tbody>
     </table>
   </div>
-  <p>"Uncertain behavior" is a pathology finding, not a coder's judgment call and not a synonym for "not yet worked up." The code applies only when the pathology report itself documents that the tumor's behavior &mdash; whether it will act as benign or malignant &mdash; could not be determined at the time of examination, which happens with certain borderline ovarian tumors, some neuroendocrine neoplasms, and comparable diagnostically ambiguous specimens. It is never appropriate to use a D37&ndash;D48 code in place of an unspecified malignant code simply because the encounter note doesn't yet specify histology, and it is never appropriate to carry a D37&ndash;D48 code forward once a definitive diagnosis (malignant or benign) has been confirmed on final pathology &mdash; the definitive code replaces it going forward, on subsequent encounters, not alongside it.</p>
+  <p>"Uncertain behavior" is a pathology finding, not a coder's judgment call and not a synonym for "not yet worked up." The code applies only when the pathology report itself documents that the tumor's behavior, whether it will act as benign or malignant, could not be determined at the time of examination, which happens with certain borderline ovarian tumors, some neuroendocrine neoplasms, and comparable diagnostically ambiguous specimens. It is never appropriate to use a D37&ndash;D48 code in place of an unspecified malignant code simply because the encounter note doesn't yet specify histology, and it is never appropriate to carry a D37&ndash;D48 code forward once a definitive diagnosis (malignant or benign) has been confirmed on final pathology, the definitive code replaces it going forward, on subsequent encounters, not alongside it.</p>
   <p>This distinction matters for medical necessity as much as for accuracy: a payer's coverage policy for a diagnostic procedure often lists malignant neoplasm codes as a covered indication and treats an uncertain-behavior code differently, so substituting one for the other in either direction can produce a medical-necessity denial that has nothing to do with whether the service itself was appropriate.</p>
 
   <h2>Procedure-to-diagnosis crosswalk</h2>
@@ -289,20 +344,20 @@
       <caption>Common oncology service types and the correct primary-diagnosis pattern.</caption>
       <thead><tr><th scope="col">Service or encounter type</th><th scope="col">Correct primary diagnosis pattern</th></tr></thead>
       <tbody>
-        <tr><td>Initial diagnostic biopsy, mass of unconfirmed histology</td><td>Symptom or mass code (e.g., a screening/diagnostic finding code) until pathology returns &mdash; never a malignant code assigned before confirmation, and never a D37&ndash;D48 code unless pathology specifically states uncertain behavior</td></tr>
+        <tr><td>Initial diagnostic biopsy, mass of unconfirmed histology</td><td>Symptom or mass code (e.g., a screening/diagnostic finding code) until pathology returns, never a malignant code assigned before confirmation, and never a D37&ndash;D48 code unless pathology specifically states uncertain behavior</td></tr>
         <tr><td>Surgical resection of a confirmed primary tumor</td><td>The site- and laterality-specific malignant primary code (e.g., <code>C50.211</code>, <code>C34.31</code>) as first-listed, reflecting active disease at time of surgery</td></tr>
         <tr><td>Chemotherapy or immunotherapy infusion visit</td><td><code>Z51.11</code> or <code>Z51.12</code> first-listed, with the treated malignancy or metastatic site code(s) as secondary</td></tr>
-        <tr><td>Radiation therapy administration visit</td><td><code>Z51.0</code> (encounter for antineoplastic radiation therapy) first-listed, malignancy as secondary &mdash; same logic as the chemo/immunotherapy codes above</td></tr>
-        <tr><td>Surveillance visit, no evidence of disease, primary previously treated</td><td>The applicable <code>Z85</code> personal-history code, plus any relevant surveillance/aftercare Z code the payer's policy requires &mdash; not the original malignant code</td></tr>
+        <tr><td>Radiation therapy administration visit</td><td><code>Z51.0</code> (encounter for antineoplastic radiation therapy) first-listed, malignancy as secondary, same logic as the chemo/immunotherapy codes above</td></tr>
+        <tr><td>Surveillance visit, no evidence of disease, primary previously treated</td><td>The applicable <code>Z85</code> personal-history code, plus any relevant surveillance/aftercare Z code the payer's policy requires, not the original malignant code</td></tr>
         <tr><td>Treatment visit directed at a known metastatic site, primary previously treated and no longer active</td><td>The <code>C77</code>&ndash;<code>C79</code> secondary-site code first-listed, the <code>Z85</code> history code as additional, since the primary itself is no longer being treated</td></tr>
-        <tr><td>E/M visit for a treatment-related complication (e.g., chemotherapy-induced neutropenia)</td><td>The complication code first-listed per the guidelines on complications of care, with the malignancy or Z51 status as secondary &mdash; not a routine Z51 administration code, since no drug is being given at this visit</td></tr>
+        <tr><td>E/M visit for a treatment-related complication (e.g., chemotherapy-induced neutropenia)</td><td>The complication code first-listed per the guidelines on complications of care, with the malignancy or Z51 status as secondary, not a routine Z51 administration code, since no drug is being given at this visit</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Ask one question before finalizing any oncology diagnosis line: "what is today's visit actually for?" If it's drug administration, Z51 leads. If it's treatment of a known metastasis, the secondary-site code leads. If nothing is being done to the primary anymore and there's no evidence of it, the primary becomes history, not an active code. The service being billed on the claim almost always tells you the correct sequencing &mdash; the error usually comes from defaulting to whatever diagnosis code was used last visit instead of rechecking it against today's actual encounter.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Ask one question before finalizing any oncology diagnosis line: "what is today's visit actually for?" If it's drug administration, Z51 leads. If it's treatment of a known metastasis, the secondary-site code leads. If nothing is being done to the primary anymore and there's no evidence of it, the primary becomes history, not an active code. The service being billed on the claim almost always tells you the correct sequencing, the error usually comes from defaulting to whatever diagnosis code was used last visit instead of rechecking it against today's actual encounter.</p></div>
   </div>
 
   <h2>The most common denial: surveillance coded as active, or active coded as surveillance</h2>
@@ -313,11 +368,11 @@
       <thead><tr><th scope="col">Error pattern</th><th scope="col">Why it fires</th><th scope="col">Fix</th></tr></thead>
       <tbody>
         <tr><td>Active malignant code billed on a true surveillance visit</td><td>The primary was fully treated months or years ago and the visit is a follow-up scan or labs with no evidence of disease, but the original active <code>C</code>-code is still on the chart and gets carried onto the claim by habit</td><td>Confirm eradication status at each surveillance visit; switch to the matching <code>Z85</code> code once all three "history of" conditions are actually met, and use the appropriate surveillance/screening code, not the original malignancy code, going forward</td></tr>
-        <tr><td>Z85 history code billed while treatment is still active</td><td>A biller defaults to "history of" once a patient is described as being in a maintenance or surveillance phase of therapy colloquially, even though a treatment (adjuvant therapy, ongoing monitoring for a known residual, etc.) is still directed at that site</td><td>Confirm with the treating oncologist's note whether treatment toward that specific site is ongoing before switching to a history code &mdash; the clinical language ("doing well," "stable") is not the test; the treatment plan is</td></tr>
+        <tr><td>Z85 history code billed while treatment is still active</td><td>A biller defaults to "history of" once a patient is described as being in a maintenance or surveillance phase of therapy colloquially, even though a treatment (adjuvant therapy, ongoing monitoring for a known residual, etc.) is still directed at that site</td><td>Confirm with the treating oncologist's note whether treatment toward that specific site is ongoing before switching to a history code, the clinical language ("doing well," "stable") is not the test; the treatment plan is</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Both versions produce the same downstream problem from opposite directions: an active code that should be history overstates ongoing disease and can trigger a medical-necessity mismatch against a service that a surveillance-only policy wouldn't cover the same way; a history code that should be active understates disease burden and can misrepresent medical necessity for a service that requires evidence of active malignancy to be covered at all. Neither is a coder's guess to make from the visit type alone &mdash; both require confirming, encounter by encounter, exactly what the treatment plan says is happening to the primary site right now.</p>
+  <p>Both versions produce the same downstream problem from opposite directions: an active code that should be history overstates ongoing disease and can trigger a medical-necessity mismatch against a service that a surveillance-only policy wouldn't cover the same way; a history code that should be active understates disease burden and can misrepresent medical necessity for a service that requires evidence of active malignancy to be covered at all. Neither is a coder's guess to make from the visit type alone, both require confirming, encounter by encounter, exactly what the treatment plan says is happening to the primary site right now.</p>
 
   <div class="cta-band">
     <div>
@@ -337,11 +392,11 @@
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; all CPT code descriptions are the property of the AMA, and codes here are paraphrased, not reproduced from the CPT Professional edition &mdash; confirm exact descriptors there. ICD-10-CM codes and official coding guidelines change, including annual code-set updates each October 1. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, the current-year code sets, or a current review of the ICD-10-CM Official Guidelines for Coding and Reporting before you rely on a sequencing rule operationally.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; all CPT code descriptions are the property of the AMA, and codes here are paraphrased, not reproduced from the CPT Professional edition, confirm exact descriptors there. ICD-10-CM codes and official coding guidelines change, including annual code-set updates each October 1. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, the current-year code sets, or a current review of the ICD-10-CM Official Guidelines for Coding and Reporting before you rely on a sequencing rule operationally.</p>
   </div>
 
   <h2>Sources and verification</h2>
-  <p>ICD-10-CM codes cited in this guide &mdash; including the C50 breast, C34 bronchus/lung, and C18 colon primary-malignancy families, the C77, C78, and C79 secondary-neoplasm families, the Z85 personal-history-of-malignancy family, Z51.11 and Z51.12, and the D37 and D48 uncertain-behavior families &mdash; were validated live against the FY2026 ICD-10-CM code set, with billability for HIPAA transactions confirmed for every code presented in a table. The Z51.11/Z51.12 first-listed sequencing rule and the "solely" to "chiefly" wording change (effective FY2024 and current in FY2026) are stated based on the FY2026 ICD-10-CM Official Guidelines for Coding and Reporting, Section I.C.2.e, as corroborated across multiple current coding-education sources; the CMS-hosted guidelines PDF itself returned as unparseable binary during this build and its exact wording was not independently re-confirmed character-for-character, so this rule is flagged inline for a direct guideline check before it's built into a scrubber rule or coding policy. The primary-versus-secondary sequencing rule for metastatic-site-directed treatment, and the eradication/no-further-treatment/no-evidence-of-disease test for Z85 eligibility, are likewise stated based on Section I.C.2 as corroborated across current secondary sources rather than confirmed against CMS's own PDF directly. No CPT, HCPCS, NCCI, or MUE values are published in this guide.</p>
+  <p>ICD-10-CM codes cited in this guide, including the C50 breast, C34 bronchus/lung, and C18 colon primary-malignancy families, the C77, C78, and C79 secondary-neoplasm families, the Z85 personal-history-of-malignancy family, Z51.11 and Z51.12, and the D37 and D48 uncertain-behavior families, were validated live against the FY2026 ICD-10-CM code set, with billability for HIPAA transactions confirmed for every code presented in a table. The Z51.11/Z51.12 first-listed sequencing rule and the "solely" to "chiefly" wording change (effective FY2024 and current in FY2026) are stated based on the FY2026 ICD-10-CM Official Guidelines for Coding and Reporting, Section I.C.2.e, as corroborated across multiple current coding-education sources; the CMS-hosted guidelines PDF itself returned as unparseable binary during this build and its exact wording was not independently re-confirmed character-for-character, so this rule is flagged inline for a direct guideline check before it's built into a scrubber rule or coding policy. The primary-versus-secondary sequencing rule for metastatic-site-directed treatment, and the eradication/no-further-treatment/no-evidence-of-disease test for Z85 eligibility, are likewise stated based on Section I.C.2 as corroborated across current secondary sources rather than confirmed against CMS's own PDF directly. No CPT, HCPCS, NCCI, or MUE values are published in this guide.</p>
 
   <h2>Related resources</h2>
   <ul class="related-list">
@@ -354,62 +409,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 30 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>

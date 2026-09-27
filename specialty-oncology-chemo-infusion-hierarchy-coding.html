@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Chemotherapy Infusion Hierarchy Coding: Initial, Sequential, and Concurrent Explained | Verified RCM">
 <meta name="twitter:description" content="The CMS/NCCI chemo infusion hierarchy for 96401-96417: which drug wins the 'initial' code, how 96368 concurrent infusion works, and the sequencing error that denies mixed-therapy claims.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Oncology","item":"https://www.verifiedrcm.com/specialty-oncology.html"},{"@type":"ListItem","position":4,"name":"Chemotherapy infusion hierarchy coding: initial, sequential, and concurrent explained","item":"https://www.verifiedrcm.com/specialty-oncology-chemo-infusion-hierarchy-coding.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can two different infusions both be billed as \"initial\" in the same chemotherapy encounter?","acceptedAnswer":{"@type":"Answer","text":"Almost never. CMS's National Correct Coding Initiative names 96360, 96365, 96374, 96409, and 96413 as the \"initial\" service codes, and for a single patient encounter only one of them may be reported unless it is medically reasonable and necessary that the drug or substance administrations occur at separate intravenous access sites — a second, distinct line placed for a documented clinical reason, not administrative convenience. In that specific case, the second initial code is reported with an NCCI Procedure-to-Procedure-associated modifier. Two lumens of the same double-lumen catheter still count as one vascular access site, so running two drugs through the two lumens does not qualify for a second initial code."}},{"@type":"Question","name":"If hydration was started before the chemotherapy drug that day, does hydration get the initial code?","acceptedAnswer":{"@type":"Answer","text":"No. The initial code is chosen by the administration hierarchy — chemotherapy and other highly complex drug or biologic agents outrank therapeutic, prophylactic, or diagnostic infusions, which outrank hydration — not by the order the drugs actually ran through the line. If a chemotherapy agent was given anywhere in that encounter, it takes the initial code (typically 96413 for an IV infusion or 96409 for an IV push) regardless of whether the hydration bag was hung first. The hydration then reports as a sequential or additional-hour service, or in many cases is not separately billable at all if it was incidental to the chemotherapy."}},{"@type":"Question","name":"How many units of the concurrent infusion code can be billed if three drugs are running through the same line at once?","acceptedAnswer":{"@type":"Answer","text":"One. CPT code 96368 (concurrent infusion) is reported with a maximum of one unit of service per patient encounter regardless of how many drugs are actually infusing at the same time or how long the concurrent infusion lasts. Three antiemetics running concurrently with a chemotherapy infusion still support only a single unit of 96368 — the code captures the concurrent administration event, not each individual drug in it. Hydration running concurrently with chemotherapy is not separately reportable at all, even under 96368."}},{"@type":"Question","name":"How much extra infusion time is needed to bill an additional hour with 96415?","acceptedAnswer":{"@type":"Answer","text":"Under the time-unit convention used across the infusion and chemotherapy add-on codes, a unit is earned once the additional time clears the midpoint of the next hour — in practice, about 31 minutes past the prior hour mark. An infusion timed at 1 hour 15 minutes bills only the initial code; one timed at 1 hour 31 minutes or more supports the additional-hour add-on. Confirm this against your CPT Professional edition and any payer-specific rounding policy before building it into a charge master, since a small number of payers publish their own variation on the rule."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can two different infusions both be billed as \"initial\" in the same chemotherapy encounter?","acceptedAnswer":{"@type":"Answer","text":"Almost never. CMS's National Correct Coding Initiative names 96360, 96365, 96374, 96409, and 96413 as the \"initial\" service codes, and for a single patient encounter only one of them may be reported unless it is medically reasonable and necessary that the drug or substance administrations occur at separate intravenous access sites, a second, distinct line placed for a documented clinical reason, not administrative convenience. In that specific case, the second initial code is reported with an NCCI Procedure-to-Procedure-associated modifier. Two lumens of the same double-lumen catheter still count as one vascular access site, so running two drugs through the two lumens does not qualify for a second initial code."}},{"@type":"Question","name":"If hydration was started before the chemotherapy drug that day, does hydration get the initial code?","acceptedAnswer":{"@type":"Answer","text":"No. The initial code is chosen by the administration hierarchy, chemotherapy and other highly complex drug or biologic agents outrank therapeutic, prophylactic, or diagnostic infusions, which outrank hydration, not by the order the drugs actually ran through the line. If a chemotherapy agent was given anywhere in that encounter, it takes the initial code (typically 96413 for an IV infusion or 96409 for an IV push) regardless of whether the hydration bag was hung first. The hydration then reports as a sequential or additional-hour service, or in many cases is not separately billable at all if it was incidental to the chemotherapy."}},{"@type":"Question","name":"How many units of the concurrent infusion code can be billed if three drugs are running through the same line at once?","acceptedAnswer":{"@type":"Answer","text":"One. CPT code 96368 (concurrent infusion) is reported with a maximum of one unit of service per patient encounter regardless of how many drugs are actually infusing at the same time or how long the concurrent infusion lasts. Three antiemetics running concurrently with a chemotherapy infusion still support only a single unit of 96368, the code captures the concurrent administration event, not each individual drug in it. Hydration running concurrently with chemotherapy is not separately reportable at all, even under 96368."}},{"@type":"Question","name":"How much extra infusion time is needed to bill an additional hour with 96415?","acceptedAnswer":{"@type":"Answer","text":"Under the time-unit convention used across the infusion and chemotherapy add-on codes, a unit is earned once the additional time clears the midpoint of the next hour, in practice, about 31 minutes past the prior hour mark. An infusion timed at 1 hour 15 minutes bills only the initial code; one timed at 1 hour 31 minutes or more supports the additional-hour add-on. Confirm this against your CPT Professional edition and any payer-specific rounding policy before building it into a charge master, since a small number of payers publish their own variation on the rule."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 30 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 30 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 30 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-oncology.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete oncology guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an infusion drip with a radiating cellular structure at the drop point">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-oncology.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete oncology guide</a>
+      <h1>Chemotherapy infusion hierarchy coding: initial, sequential, and concurrent explained.</h1>
+      <p class="lede">One rule causes more denials in oncology billing than any modifier, NCCI edit, or medical-necessity policy combined: only one service per chemotherapy encounter can be billed as "initial," and it has to come from the highest tier of drug actually given, not the first drug that ran through the line. Get the hierarchy wrong and the claim doesn't just underpay, it denies or draws a post-payment review. This guide walks the full 96401&ndash;96417 code family, the concurrent-infusion rule that caps a chemo suite's busiest hour at one add-on code, the sequencing error that causes most of these denials, and a full worked example with the correct code string.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-oncology.html">oncology billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an infusion drip with a radiating cellular structure at the drop point">
   <!-- drip chamber -->
   <circle cx="240" cy="138" r="26" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 
@@ -200,36 +256,35 @@
   <!-- secondary smaller drip further down the line -->
   <circle cx="240" cy="322" r="3.5" fill="none" stroke="var(--muted)" stroke-width="1.5" />
 </svg></figure>
-  <h1>Chemotherapy infusion hierarchy coding: initial, sequential, and concurrent explained.</h1>
-  <p class="lede">One rule causes more denials in oncology billing than any modifier, NCCI edit, or medical-necessity policy combined: only one service per chemotherapy encounter can be billed as "initial," and it has to come from the highest tier of drug actually given &mdash; not the first drug that ran through the line. Get the hierarchy wrong and the claim doesn't just underpay, it denies or draws a post-payment review. This guide walks the full 96401&ndash;96417 code family, the concurrent-infusion rule that caps a chemo suite's busiest hour at one add-on code, the sequencing error that causes most of these denials, and a full worked example with the correct code string.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-oncology.html">oncology billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Only one code per encounter can be "initial."</b> CMS names 96360, 96365, 96374, 96409, and 96413 as the initial service codes and permits just one per patient encounter unless drug administrations occur at separate, medically necessary IV access sites (NCCI Policy Manual, Chapter XI, Section N.1, effective 1/1/2025).</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The hierarchy is chemotherapy/complex biologic &gt; therapeutic-prophylactic-diagnostic infusion &gt; hydration &mdash; by drug tier, not by administration order.</b> A chemotherapy agent given last in the visit still takes the initial code over a hydration bag hung first.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The hierarchy is chemotherapy/complex biologic &gt; therapeutic-prophylactic-diagnostic infusion &gt; hydration, by drug tier, not by administration order.</b> A chemotherapy agent given last in the visit still takes the initial code over a hydration bag hung first.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>96368 (concurrent infusion) caps at one unit per encounter</b> no matter how many drugs are running through the line at the same time, and hydration concurrent with chemotherapy is never separately billable at all (NCCI Chapter XI, Sections B.6 and N.6).</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The single most common denial trigger:</b> billing hydration or a non-chemo infusion as "initial" because it happened to run first, when a true chemotherapeutic agent was also administered that encounter.</span></li>
     </ul>
   </section>
 
   <h2>The hierarchy that decides which code is "initial"</h2>
-  <p>Every chemotherapy encounter that mixes more than one type of drug &mdash; hydration, an antiemetic or other non-chemo therapeutic agent, and the chemotherapy or complex biologic itself &mdash; runs into the same coding question: which service gets billed as "initial," and which become add-ons? CPT and CMS answer it with a fixed three-tier hierarchy that has nothing to do with the order the drugs were actually hung.</p>
+  <p>Every chemotherapy encounter that mixes more than one type of drug, hydration, an antiemetic or other non-chemo therapeutic agent, and the chemotherapy or complex biologic itself, runs into the same coding question: which service gets billed as "initial," and which become add-ons? CPT and CMS answer it with a fixed three-tier hierarchy that has nothing to do with the order the drugs were actually hung.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Administration hierarchy for infusion, injection, and chemotherapy services. Highest tier present in the encounter wins the "initial" code, regardless of when it was administered.</caption>
       <thead><tr><th scope="col">Tier</th><th scope="col">Category</th><th scope="col">Representative "initial" codes</th></tr></thead>
       <tbody>
-        <tr><td>1 &mdash; highest</td><td>Chemotherapy and other highly complex drug or biologic agent administration</td><td>96409 (IV push) &middot; 96413 (IV infusion)</td></tr>
+        <tr><td>1, highest</td><td>Chemotherapy and other highly complex drug or biologic agent administration</td><td>96409 (IV push) &middot; 96413 (IV infusion)</td></tr>
         <tr><td>2</td><td>Therapeutic, prophylactic, or diagnostic infusion/injection of non-chemotherapy drugs</td><td>96365 (IV infusion) &middot; 96374 (IV push)</td></tr>
-        <tr><td>3 &mdash; lowest</td><td>Hydration</td><td>96360 (IV infusion)</td></tr>
+        <tr><td>3, lowest</td><td>Hydration</td><td>96360 (IV infusion)</td></tr>
       </tbody>
     </table>
   </div>
-  <p>CMS's National Correct Coding Initiative Policy Manual states the rule directly: codes 96360, 96365, 96374, 96409, and 96413 describe "initial" service codes, and for a single patient encounter only one of them may be reported &mdash; unless it is medically reasonable and necessary that the drug or substance administrations occur at separate intravenous access sites, in which case the second initial code is reported with an NCCI Procedure-to-Procedure-associated modifier (NCCI Policy Manual, Chapter XI, Section N.1 / Section B.2, effective 1/1/2025). The manual closes a related loophole explicitly: if both lumina of a double-lumen catheter are used for two different substances, that is still a single vascular access site, so only one initial code may be reported &mdash; not one per lumen (NCCI Chapter XI, Section B.3).</p>
-  <p>In practice, that means the highest tier present in the encounter always claims the initial code slot. If a patient receives hydration, an antiemetic infusion, and an IV chemotherapy agent in the same visit through the same line, the chemotherapy is billed as initial (96413) even if it was the third thing given that day. The hydration and the antiemetic infusion drop down to sequential or additional-hour add-on codes &mdash; or, in the case of hydration that was purely incidental to the chemotherapy, become not separately billable at all.</p>
-  <p>The separate-access-site exception is real but narrow. It requires a documented medical reason &mdash; a specific incompatibility, an extravasation risk, a protocol requirement &mdash; for two lines rather than one. "It was more convenient to start a second line" does not meet that bar, and payers that see two initial codes on the same claim without a modifier and without chart support will deny the second one outright.</p>
+  <p>CMS's National Correct Coding Initiative Policy Manual states the rule directly: codes 96360, 96365, 96374, 96409, and 96413 describe "initial" service codes, and for a single patient encounter only one of them may be reported, unless it is medically reasonable and necessary that the drug or substance administrations occur at separate intravenous access sites, in which case the second initial code is reported with an NCCI Procedure-to-Procedure-associated modifier (NCCI Policy Manual, Chapter XI, Section N.1 / Section B.2, effective 1/1/2025). The manual closes a related loophole explicitly: if both lumina of a double-lumen catheter are used for two different substances, that is still a single vascular access site, so only one initial code may be reported, not one per lumen (NCCI Chapter XI, Section B.3).</p>
+  <p>In practice, that means the highest tier present in the encounter always claims the initial code slot. If a patient receives hydration, an antiemetic infusion, and an IV chemotherapy agent in the same visit through the same line, the chemotherapy is billed as initial (96413) even if it was the third thing given that day. The hydration and the antiemetic infusion drop down to sequential or additional-hour add-on codes, or, in the case of hydration that was purely incidental to the chemotherapy, become not separately billable at all.</p>
+  <p>The separate-access-site exception is real but narrow. It requires a documented medical reason, a specific incompatibility, an extravasation risk, a protocol requirement, for two lines rather than one. "It was more convenient to start a second line" does not meet that bar, and payers that see two initial codes on the same claim without a modifier and without chart support will deny the second one outright.</p>
 
   <h2>The chemotherapy administration code family, code by code</h2>
   <p>CPT organizes chemotherapy and other highly complex drug or biologic agent administration in the 96401&ndash;96425 range. The seven codes that matter for almost every infusion-suite encounter are below; descriptors are paraphrased per AMA CPT copyright and should be confirmed against your current CPT Professional edition before use in a charge master.</p>
@@ -238,34 +293,34 @@
       <caption>Core chemotherapy administration codes, 96401&ndash;96417. CPT is copyright AMA; descriptors here are paraphrased, not reproduced verbatim.</caption>
       <thead><tr><th scope="col">Code</th><th scope="col">Paraphrased descriptor</th><th scope="col">Type</th><th scope="col">Notes</th></tr></thead>
       <tbody>
-        <tr><td>96401</td><td>Chemotherapy administration, subcutaneous or intramuscular; non-hormonal anti-neoplastic agent</td><td>Stand-alone</td><td>Use 96402 instead if the SQ/IM agent is a hormonal anti-neoplastic &mdash; a frequent mix-up.</td></tr>
+        <tr><td>96401</td><td>Chemotherapy administration, subcutaneous or intramuscular; non-hormonal anti-neoplastic agent</td><td>Stand-alone</td><td>Use 96402 instead if the SQ/IM agent is a hormonal anti-neoplastic, a frequent mix-up.</td></tr>
         <tr><td>96409</td><td>Chemotherapy administration, intravenous push technique; single or initial substance/drug</td><td>Initial</td><td>Use when the total chemo push is 15 minutes or less; a longer push that clears the infusion threshold reclassifies as 96413.</td></tr>
         <tr><td>96411</td><td>Chemotherapy administration, intravenous push technique; each additional substance/drug</td><td>Add-on</td><td>Reported once for each additional chemo drug pushed, separate from 96409.</td></tr>
-        <tr><td>96413</td><td>Chemotherapy administration, intravenous infusion technique; up to 1 hour, single or initial substance/drug</td><td>Initial</td><td>The default "initial" code whenever an IV chemo infusion is given &mdash; wins the hierarchy over 96360/96365/96374 whenever chemo is present.</td></tr>
+        <tr><td>96413</td><td>Chemotherapy administration, intravenous infusion technique; up to 1 hour, single or initial substance/drug</td><td>Initial</td><td>The default "initial" code whenever an IV chemo infusion is given, wins the hierarchy over 96360/96365/96374 whenever chemo is present.</td></tr>
         <tr><td>96415</td><td>Chemotherapy administration, intravenous infusion technique; each additional hour</td><td>Add-on</td><td>Time-based; see the units section below for the rounding rule.</td></tr>
         <tr><td>96416</td><td>Chemotherapy administration, intravenous infusion technique; initiation of prolonged infusion (more than 8 hours), requiring use of a portable or implantable pump</td><td>Stand-alone</td><td>Includes the initial pump fill; 96521/96522 (pump refill/maintenance) shall not be reported with 96416 on the day it's used (NCCI Chapter XI, Section N.5).</td></tr>
         <tr><td>96417</td><td>Chemotherapy administration, intravenous infusion technique; each additional sequential infusion (different substance/drug), up to 1 hour</td><td>Add-on</td><td>Reported once per additional chemo drug infused sequentially through the same line after the initial service.</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Two distinctions inside this family cause more coding errors than the hierarchy itself. First, 96409 versus 96413: a chemotherapy IV push under roughly 15 minutes stays a push (96409); once it runs long enough to function as an infusion, it reclassifies to 96413. Second, 96401 versus 96402: 96401 covers a non-hormonal anti-neoplastic given subcutaneously or intramuscularly, while a hormonal anti-neoplastic agent given the same way is 96402 &mdash; verify the drug class before defaulting to 96401 for every SQ/IM chemo injection.</p>
+  <p>Two distinctions inside this family cause more coding errors than the hierarchy itself. First, 96409 versus 96413: a chemotherapy IV push under roughly 15 minutes stays a push (96409); once it runs long enough to function as an infusion, it reclassifies to 96413. Second, 96401 versus 96402: 96401 covers a non-hormonal anti-neoplastic given subcutaneously or intramuscularly, while a hormonal anti-neoplastic agent given the same way is 96402, verify the drug class before defaulting to 96401 for every SQ/IM chemo injection.</p>
   <p>96416 deserves its own note because it is frequently miscoded as a same-day repeat. It describes the initiation of a prolonged infusion requiring a portable or implantable pump and includes the initial pump fill and setup; if a claim bills 96416 a second time for the same patient receiving the same chemotherapy drug that was already set up and running, most payers deny the second claim as not medically necessary unless the drug itself changed.</p>
 
   <h2>Concurrent infusion: one code, no matter how many drugs</h2>
-  <p>A concurrent infusion is two or more drugs running through the same IV line at the same time &mdash; as opposed to a sequential infusion, where one substance finishes before the next begins. Concurrent administration of an antiemetic or other non-chemotherapeutic drug alongside an IV chemotherapy infusion is billed with CPT 96368 (concurrent infusion), and CMS is explicit about the ceiling on it: 96368 may be reported with a maximum of one unit of service per patient encounter regardless of the number of concurrently infused drugs or the length of time for the concurrent infusion (NCCI Policy Manual, Chapter XI, Section N.6, effective 1/1/2025).</p>
-  <p>That single sentence resolves a coding question that comes up constantly in busy infusion suites: three antiemetics bagged together and running alongside the chemotherapy infusion still support exactly one unit of 96368 &mdash; not three. The code captures the concurrent administration event itself, not a per-drug count. Multiple substances mixed into a single bag are a different scenario entirely and are treated as one infusion, not a concurrent one, so 96368 doesn't apply to a compounded mixture at all.</p>
+  <p>A concurrent infusion is two or more drugs running through the same IV line at the same time, as opposed to a sequential infusion, where one substance finishes before the next begins. Concurrent administration of an antiemetic or other non-chemotherapeutic drug alongside an IV chemotherapy infusion is billed with CPT 96368 (concurrent infusion), and CMS is explicit about the ceiling on it: 96368 may be reported with a maximum of one unit of service per patient encounter regardless of the number of concurrently infused drugs or the length of time for the concurrent infusion (NCCI Policy Manual, Chapter XI, Section N.6, effective 1/1/2025).</p>
+  <p>That single sentence resolves a coding question that comes up constantly in busy infusion suites: three antiemetics bagged together and running alongside the chemotherapy infusion still support exactly one unit of 96368, not three. The code captures the concurrent administration event itself, not a per-drug count. Multiple substances mixed into a single bag are a different scenario entirely and are treated as one infusion, not a concurrent one, so 96368 doesn't apply to a compounded mixture at all.</p>
   <p>Hydration is carved out of this rule in the opposite direction: hydration running concurrently with chemotherapy or any other drug administration is not separately reportable under any code, including 96368 (NCCI Chapter XI, Sections B.6 and N.6). The logic is that fluid running alongside another drug administration is either incidental to keeping the line open or integral to the primary medication's own administration requirements, not a distinct billable service.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Billable concurrent scenario</div><ul>
       <li>An antiemetic or other non-chemotherapeutic drug infusing through the same line at the same time as the chemotherapy agent: one unit of 96368, regardless of how many non-chemo drugs are in that concurrent run.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Not billable, ever</div><ul>
-      <li>Hydration running concurrently with chemotherapy or any other drug administration &mdash; not separately reportable under 96368 or any other code, no matter how medically reasonable the fluid was.</li>
+      <li>Hydration running concurrently with chemotherapy or any other drug administration, not separately reportable under 96368 or any other code, no matter how medically reasonable the fluid was.</li>
     </ul></div>
   </div>
 
   <h2>The sequencing error that denies almost every mixed-therapy visit</h2>
-  <p>The single most common chemotherapy infusion coding error is billing the drug that happened to run first &mdash; usually hydration, sometimes a pre-medication infusion &mdash; as the "initial" service, when a true chemotherapy or other highly complex drug or biologic agent was also given that encounter. Payers' claims-editing systems check the hierarchy automatically: if the initial code on the claim comes from a lower tier while a higher-tier drug administration code also appears on the same date of service, the claim denies or is flagged for post-payment review, because the initial code selection contradicted CMS's own hierarchy rule regardless of what actually happened first in the treatment room.</p>
+  <p>The single most common chemotherapy infusion coding error is billing the drug that happened to run first, usually hydration, sometimes a pre-medication infusion, as the "initial" service, when a true chemotherapy or other highly complex drug or biologic agent was also given that encounter. Payers' claims-editing systems check the hierarchy automatically: if the initial code on the claim comes from a lower tier while a higher-tier drug administration code also appears on the same date of service, the claim denies or is flagged for post-payment review, because the initial code selection contradicted CMS's own hierarchy rule regardless of what actually happened first in the treatment room.</p>
   <p>The decision tree below covers the scenarios that come up most often in a chemotherapy infusion suite.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -275,7 +330,7 @@
         <tr><td>Hydration only, no chemo or other drug given that visit</td><td>96360</td><td>Hydration is the only tier present, so it takes the initial slot by default.</td></tr>
         <tr><td>Hydration, then a non-chemo therapeutic infusion (e.g., an antiemetic given as its own infusion, not chemo), no chemo agent that day</td><td>96365 (therapeutic infusion)</td><td>Therapeutic/prophylactic/diagnostic tier outranks hydration; hydration drops to a sequential or additional-hour add-on if separately billable.</td></tr>
         <tr><td>Hydration first, IV chemotherapy agent given later the same visit</td><td>96413</td><td>Chemotherapy is the highest tier present; it always wins the initial code regardless of administration order.</td></tr>
-        <tr><td>Non-chemo therapeutic infusion first, IV chemotherapy agent given later</td><td>96413</td><td>Same rule &mdash; chemo outranks therapeutic/prophylactic/diagnostic infusion no matter which was administered first.</td></tr>
+        <tr><td>Non-chemo therapeutic infusion first, IV chemotherapy agent given later</td><td>96413</td><td>Same rule, chemo outranks therapeutic/prophylactic/diagnostic infusion no matter which was administered first.</td></tr>
         <tr><td>Two chemotherapy agents infused one after the other through the same line</td><td>96413 for the first, 96417 for the second</td><td>Only one initial code per encounter; the second chemo drug is billed as an additional sequential infusion, not a second initial.</td></tr>
         <tr><td>Chemotherapy agent given by IV push (under ~15 min), then a separate chemo agent infused</td><td>96409 for the push, 96413 or 96417 for the infusion per hierarchy timing</td><td>Push and infusion are both chemo-tier; sequencing between them follows CPT's push-versus-infusion and initial-versus-sequential rules, not a re-application of the cross-tier hierarchy.</td></tr>
         <tr><td>Chemotherapy given at one IV site, a second unrelated drug medically required at a separate documented IV site</td><td>96413 at each site, second appended with an NCCI PTP-associated modifier</td><td>The separate-access-site exception permits two initial codes only when supported by documented medical necessity, not convenience.</td></tr>
@@ -284,12 +339,12 @@
   </div>
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Build the charge-capture template so the chemotherapy or complex biologic administration code is always entered first, before hydration or any non-chemo infusion, regardless of the order the nursing flowsheet lists them. Coders working straight down a flowsheet in chronological order are the most common source of this error &mdash; the hierarchy is about drug class, not chart order, and a template that forces the chemo line first removes the temptation to code in administration sequence.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Build the charge-capture template so the chemotherapy or complex biologic administration code is always entered first, before hydration or any non-chemo infusion, regardless of the order the nursing flowsheet lists them. Coders working straight down a flowsheet in chronological order are the most common source of this error, the hierarchy is about drug class, not chart order, and a template that forces the chemo line first removes the temptation to code in administration sequence.</p></div>
   </div>
 
   <h2>Counting units on the additional-hour add-ons</h2>
-  <p>96415 (each additional hour of chemotherapy infusion) and its non-chemo counterparts (96361 for hydration, 96366 for therapeutic/prophylactic/diagnostic infusion) are time-based add-on codes, and the unit-counting rule is where a second wave of denials happens &mdash; usually from rounding an infusion time up too aggressively.</p>
-  <p>The convention used across these time-based infusion codes is the same midpoint rule CPT applies broadly to timed services: a unit for the additional-hour add-on is earned once the extra time clears roughly the midpoint of the next hour &mdash; in practice, about 31 minutes past the prior hour mark. An infusion that runs 1 hour 15 minutes bills only the initial code (96413), because the extra 15 minutes doesn't reach the 31-minute threshold. An infusion that runs 1 hour 31 minutes or longer supports one unit of 96415; one that runs past 2 hours 31 minutes supports two units, and so on.</p>
+  <p>96415 (each additional hour of chemotherapy infusion) and its non-chemo counterparts (96361 for hydration, 96366 for therapeutic/prophylactic/diagnostic infusion) are time-based add-on codes, and the unit-counting rule is where a second wave of denials happens, usually from rounding an infusion time up too aggressively.</p>
+  <p>The convention used across these time-based infusion codes is the same midpoint rule CPT applies broadly to timed services: a unit for the additional-hour add-on is earned once the extra time clears roughly the midpoint of the next hour, in practice, about 31 minutes past the prior hour mark. An infusion that runs 1 hour 15 minutes bills only the initial code (96413), because the extra 15 minutes doesn't reach the 31-minute threshold. An infusion that runs 1 hour 31 minutes or longer supports one unit of 96415; one that runs past 2 hours 31 minutes supports two units, and so on.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Unit counting for 96413 + 96415 by total chemotherapy IV infusion time.</caption>
@@ -306,7 +361,7 @@
 
   <h2>Worked example: hydration, therapeutic infusion, and chemotherapy in one visit</h2>
   <p>A patient arrives for a scheduled chemotherapy cycle. The nurse starts a peripheral IV and, in this order, administers: 45 minutes of hydration to help with pre-treatment renal protection, then a 30-minute infusion of a non-chemotherapy antiemetic drug given as its own separate infusion (not concurrent with anything), then a 1-hour-45-minute infusion of an IV chemotherapy agent, with a second antiemetic running concurrently through the same line during the chemo infusion.</p>
-  <p>Coded strictly by administration order, this visit would look like: 96360 (hydration, initial) &rarr; 96366 (therapeutic infusion, additional hour... but there's no initial therapeutic code yet) &mdash; and the sequencing already breaks down, because chronological coding assumes each drug can claim its own "initial" status. Applying the hierarchy instead:</p>
+  <p>Coded strictly by administration order, this visit would look like: 96360 (hydration, initial) &rarr; 96366 (therapeutic infusion, additional hour... but there's no initial therapeutic code yet), and the sequencing already breaks down, because chronological coding assumes each drug can claim its own "initial" status. Applying the hierarchy instead:</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Correct code sequence for the worked example, applied by hierarchy rather than administration order.</caption>
@@ -315,12 +370,12 @@
         <tr><td>IV chemotherapy infusion, first 1 hour</td><td>96413 &times; 1</td><td>Chemotherapy is the highest tier present in the encounter, so it takes the initial code regardless of being administered last.</td></tr>
         <tr><td>IV chemotherapy infusion, remaining 45 minutes</td><td>96415 &times; 1</td><td>45 minutes past the first hour clears the ~31-minute midpoint threshold for one additional-hour unit.</td></tr>
         <tr><td>Antiemetic infusion, given sequentially before chemo (not concurrent)</td><td>96367 &times; 1</td><td>A separate, non-chemo drug infused sequentially after the encounter's initial service reports as an additional sequential infusion, regardless of which drug holds the initial code.</td></tr>
-        <tr><td>Hydration, given first, sequential to the chemo initial</td><td>96361 &times; 1 (if medically necessary and separately documented)</td><td>Hydration reports as a sequential/additional service to whichever code is initial &mdash; it cannot itself be initial once a higher-tier drug is present in the encounter.</td></tr>
+        <tr><td>Hydration, given first, sequential to the chemo initial</td><td>96361 &times; 1 (if medically necessary and separately documented)</td><td>Hydration reports as a sequential/additional service to whichever code is initial, it cannot itself be initial once a higher-tier drug is present in the encounter.</td></tr>
         <tr><td>Second antiemetic, running concurrently with the chemo infusion</td><td>96368 &times; 1</td><td>Concurrent infusion caps at one unit per encounter regardless of how many drugs run concurrently.</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Two things about this sequence are easy to miss. First, the hydration and the sequential antiemetic infusion are billed as sequential/additional services to the chemotherapy initial code, not as their own independent "initial" services &mdash; even though, chronologically, they happened before the chemo did. Second, whether the hydration is separately billable at all still depends on medical necessity and documentation: if its sole purpose was to keep the line patent or it was integral to the chemotherapy drug's own administration requirements, it is incidental and not separately reportable, hierarchy aside (NCCI Chapter XI, Section B.5). Confirm the clinical indication for the hydration is charted independently of the chemotherapy order before billing it.</p>
+  <p>Two things about this sequence are easy to miss. First, the hydration and the sequential antiemetic infusion are billed as sequential/additional services to the chemotherapy initial code, not as their own independent "initial" services, even though, chronologically, they happened before the chemo did. Second, whether the hydration is separately billable at all still depends on medical necessity and documentation: if its sole purpose was to keep the line patent or it was integral to the chemotherapy drug's own administration requirements, it is incidental and not separately reportable, hierarchy aside (NCCI Chapter XI, Section B.5). Confirm the clinical indication for the hydration is charted independently of the chemotherapy order before billing it.</p>
 
   <div class="cta-band">
     <div>
@@ -332,15 +387,15 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Can two different infusions both be billed as "initial" in the same chemotherapy encounter?</summary><p>Almost never. CMS's National Correct Coding Initiative names 96360, 96365, 96374, 96409, and 96413 as the "initial" service codes, and for a single patient encounter only one of them may be reported unless it is medically reasonable and necessary that the drug or substance administrations occur at separate intravenous access sites &mdash; a second, distinct line placed for a documented clinical reason, not administrative convenience. In that specific case, the second initial code is reported with an NCCI Procedure-to-Procedure-associated modifier. Two lumens of the same double-lumen catheter still count as one vascular access site, so running two drugs through the two lumens does not qualify for a second initial code.</p></details>
-    <details class="faq-item"><summary>If hydration was started before the chemotherapy drug that day, does hydration get the initial code?</summary><p>No. The initial code is chosen by the administration hierarchy &mdash; chemotherapy and other highly complex drug or biologic agents outrank therapeutic, prophylactic, or diagnostic infusions, which outrank hydration &mdash; not by the order the drugs actually ran through the line. If a chemotherapy agent was given anywhere in that encounter, it takes the initial code (typically 96413 for an IV infusion or 96409 for an IV push) regardless of whether the hydration bag was hung first. The hydration then reports as a sequential or additional-hour service, or in many cases is not separately billable at all if it was incidental to the chemotherapy.</p></details>
-    <details class="faq-item"><summary>How many units of the concurrent infusion code can be billed if three drugs are running through the same line at once?</summary><p>One. CPT code 96368 (concurrent infusion) is reported with a maximum of one unit of service per patient encounter regardless of how many drugs are actually infusing at the same time or how long the concurrent infusion lasts. Three antiemetics running concurrently with a chemotherapy infusion still support only a single unit of 96368 &mdash; the code captures the concurrent administration event, not each individual drug in it. Hydration running concurrently with chemotherapy is not separately reportable at all, even under 96368.</p></details>
-    <details class="faq-item"><summary>How much extra infusion time is needed to bill an additional hour with 96415?</summary><p>Under the time-unit convention used across the infusion and chemotherapy add-on codes, a unit is earned once the additional time clears the midpoint of the next hour &mdash; in practice, about 31 minutes past the prior hour mark. An infusion timed at 1 hour 15 minutes bills only the initial code; one timed at 1 hour 31 minutes or more supports the additional-hour add-on. Confirm this against your CPT Professional edition and any payer-specific rounding policy before building it into a charge master, since a small number of payers publish their own variation on the rule.</p></details>
+    <details class="faq-item"><summary>Can two different infusions both be billed as "initial" in the same chemotherapy encounter?</summary><p>Almost never. CMS's National Correct Coding Initiative names 96360, 96365, 96374, 96409, and 96413 as the "initial" service codes, and for a single patient encounter only one of them may be reported unless it is medically reasonable and necessary that the drug or substance administrations occur at separate intravenous access sites, a second, distinct line placed for a documented clinical reason, not administrative convenience. In that specific case, the second initial code is reported with an NCCI Procedure-to-Procedure-associated modifier. Two lumens of the same double-lumen catheter still count as one vascular access site, so running two drugs through the two lumens does not qualify for a second initial code.</p></details>
+    <details class="faq-item"><summary>If hydration was started before the chemotherapy drug that day, does hydration get the initial code?</summary><p>No. The initial code is chosen by the administration hierarchy, chemotherapy and other highly complex drug or biologic agents outrank therapeutic, prophylactic, or diagnostic infusions, which outrank hydration, not by the order the drugs actually ran through the line. If a chemotherapy agent was given anywhere in that encounter, it takes the initial code (typically 96413 for an IV infusion or 96409 for an IV push) regardless of whether the hydration bag was hung first. The hydration then reports as a sequential or additional-hour service, or in many cases is not separately billable at all if it was incidental to the chemotherapy.</p></details>
+    <details class="faq-item"><summary>How many units of the concurrent infusion code can be billed if three drugs are running through the same line at once?</summary><p>One. CPT code 96368 (concurrent infusion) is reported with a maximum of one unit of service per patient encounter regardless of how many drugs are actually infusing at the same time or how long the concurrent infusion lasts. Three antiemetics running concurrently with a chemotherapy infusion still support only a single unit of 96368, the code captures the concurrent administration event, not each individual drug in it. Hydration running concurrently with chemotherapy is not separately reportable at all, even under 96368.</p></details>
+    <details class="faq-item"><summary>How much extra infusion time is needed to bill an additional hour with 96415?</summary><p>Under the time-unit convention used across the infusion and chemotherapy add-on codes, a unit is earned once the additional time clears the midpoint of the next hour, in practice, about 31 minutes past the prior hour mark. An infusion timed at 1 hour 15 minutes bills only the initial code; one timed at 1 hour 31 minutes or more supports the additional-hour add-on. Confirm this against your CPT Professional edition and any payer-specific rounding policy before building it into a charge master, since a small number of payers publish their own variation on the rule.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and the CMS National Correct Coding Initiative Policy Manual in effect as of 1/1/2025 &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and the CMS National Correct Coding Initiative Policy Manual in effect as of 1/1/2025, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -354,62 +409,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 30 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>

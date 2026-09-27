@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Radiation Therapy Billing: Technical vs. Professional Component Coding | Verified RCM">
 <meta name="twitter:description" content="Radiation therapy billing after the January 2026 CPT overhaul: the 26/TC split by site of service, the new 77402/77407/77412 delivery tiers, 77387 image guidance, and the 77427 treatment-management clock.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 30 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 30 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 30 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-oncology.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete oncology guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an infusion drip with a radiating cellular structure at the drop point">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-oncology.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete oncology guide</a>
+      <h1>Radiation therapy billing: technical vs. professional component coding.</h1>
+      <p class="lede">A course of radiation therapy generates more distinct billable steps than almost anything else in oncology, a clinical plan, a dosimetric plan, a delivery code for every fraction, an image-guidance code, and a weekly management code, and every one of them can split into a technical half and a professional half depending on who owns the linear accelerator. Then, effective January 1, 2026, CMS and the AMA rebuilt the entire delivery-code family from the ground up. This guide covers the 26/TC split by site of service, the planning codes, what actually happened to delivery coding in 2026, and the treatment-management frequency rule that generates one of the most common denials in the specialty.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-oncology.html">oncology billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an infusion drip with a radiating cellular structure at the drop point">
   <!-- drip chamber -->
   <circle cx="240" cy="138" r="26" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 
@@ -200,42 +256,41 @@
   <!-- secondary smaller drip further down the line -->
   <circle cx="240" cy="322" r="3.5" fill="none" stroke="var(--muted)" stroke-width="1.5" />
 </svg></figure>
-  <h1>Radiation therapy billing: technical vs. professional component coding.</h1>
-  <p class="lede">A course of radiation therapy generates more distinct billable steps than almost anything else in oncology &mdash; a clinical plan, a dosimetric plan, a delivery code for every fraction, an image-guidance code, and a weekly management code &mdash; and every one of them can split into a technical half and a professional half depending on who owns the linear accelerator. Then, effective January 1, 2026, CMS and the AMA rebuilt the entire delivery-code family from the ground up. This guide covers the 26/TC split by site of service, the planning codes, what actually happened to delivery coding in 2026, and the treatment-management frequency rule that generates one of the most common denials in the specialty.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-oncology.html">oncology billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Who bills what turns on ownership, not technique.</b> A freestanding center that owns its own linear accelerator and employs its physicians bills globally. A hospital-based department splits the claim: the facility bills the technical component with modifier TC, the radiation oncologist bills the professional component with modifier 26.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Radiation treatment delivery coding was rebuilt on January 1, 2026.</b> CPT 77385 and 77386 (IMRT delivery) and CPT 77014 were deleted, along with the seventeen Medicare G-codes (G6001-G6017) that had stood in for conventional delivery since 2015. Delivery is now three complexity tiers &mdash; 77402, 77407, 77412 &mdash; regardless of whether the technique is 2D, 3D-CRT, IMRT, or VMAT.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Image guidance now lives in one code, 77387</b>, with its technical value folded into the delivery codes' payment &mdash; a hospital-based radiation oncologist bills 77387 with modifier 26 only; there's no separate technical charge to append to it anymore.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>CPT 77427 covers five delivered fractions per unit</b>, not one calendar week &mdash; billing it on a weekly cadence regardless of how many fractions were actually given that week is one of the most common denial triggers in radiation oncology billing.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Radiation treatment delivery coding was rebuilt on January 1, 2026.</b> CPT 77385 and 77386 (IMRT delivery) and CPT 77014 were deleted, along with the seventeen Medicare G-codes (G6001-G6017) that had stood in for conventional delivery since 2015. Delivery is now three complexity tiers, 77402, 77407, 77412, regardless of whether the technique is 2D, 3D-CRT, IMRT, or VMAT.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Image guidance now lives in one code, 77387</b>, with its technical value folded into the delivery codes' payment, a hospital-based radiation oncologist bills 77387 with modifier 26 only; there's no separate technical charge to append to it anymore.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>CPT 77427 covers five delivered fractions per unit</b>, not one calendar week, billing it on a weekly cadence regardless of how many fractions were actually given that week is one of the most common denial triggers in radiation oncology billing.</span></li>
     </ul>
   </section>
 
   <h2>Who bills what: the technical/professional split by site of service</h2>
-  <p>Radiation therapy is one of the clearest examples in all of medical billing of a service with a genuine, separately valued technical component (the equipment, the physics support, the therapists, the facility overhead) and professional component (the physician's planning, supervision, and interpretation). Whether that split shows up on a claim at all depends entirely on who owns the equipment and who employs the treating physician &mdash; not on the diagnosis, the technique, or the payer.</p>
+  <p>Radiation therapy is one of the clearest examples in all of medical billing of a service with a genuine, separately valued technical component (the equipment, the physics support, the therapists, the facility overhead) and professional component (the physician's planning, supervision, and interpretation). Whether that split shows up on a claim at all depends entirely on who owns the equipment and who employs the treating physician, not on the diagnosis, the technique, or the payer.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>How technical and professional components are billed by practice arrangement.</caption>
       <thead><tr><th scope="col">Arrangement</th><th scope="col">Who bills the technical component</th><th scope="col">Who bills the professional component</th></tr></thead>
       <tbody>
-        <tr><td>Freestanding radiation center, physicians employed by the same entity that owns the linac</td><td>Same entity &mdash; billed globally, no PC/TC modifier</td><td>Same entity &mdash; billed globally, no PC/TC modifier</td></tr>
+        <tr><td>Freestanding radiation center, physicians employed by the same entity that owns the linac</td><td>Same entity, billed globally, no PC/TC modifier</td><td>Same entity, billed globally, no PC/TC modifier</td></tr>
         <tr><td>Hospital-based radiation oncology department, physicians independently billing</td><td>Hospital, modifier <b>TC</b></td><td>Radiation oncology group, modifier <b>26</b></td></tr>
         <tr><td>Physician group contracts to treat at a hospital- or health-system-owned vault</td><td>Facility that owns the equipment, modifier <b>TC</b></td><td>Physician group, modifier <b>26</b></td></tr>
-        <tr><td>Physician-owned equipment inside a physician-owned freestanding suite (IDTF-style)</td><td>Same entity &mdash; billed globally</td><td>Same entity &mdash; billed globally</td></tr>
+        <tr><td>Physician-owned equipment inside a physician-owned freestanding suite (IDTF-style)</td><td>Same entity, billed globally</td><td>Same entity, billed globally</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The trap is the third row. A radiation oncology group that staffs a hospital's vault under a professional-services agreement doesn't suddenly get to bill globally just because its physicians are the only clinical staff on site &mdash; the hospital still owns the linear accelerator, the maintenance contract, and the therapists' facility-side employment, so the hospital bills TC and the physician group bills 26. Billing the global, unmodified code from the physician side in that arrangement submits a claim for a technical component the group didn't actually incur, and it duplicates whatever the hospital separately billed for the same date of service &mdash; a pattern payers' post-payment audit teams specifically watch for in radiation oncology because the dollar amounts per claim are large enough to make the audit worth running.</p>
-  <p>This split applies uniformly across every code family below &mdash; planning, delivery, image guidance, and treatment management can each carry their own TC/26 designation, and a hospital-based radiation oncology group typically appends modifier 26 to nearly every line on its claim, while the hospital's chargemaster carries the TC-modified equivalent for the same date of service.</p>
+  <p>The trap is the third row. A radiation oncology group that staffs a hospital's vault under a professional-services agreement doesn't suddenly get to bill globally just because its physicians are the only clinical staff on site, the hospital still owns the linear accelerator, the maintenance contract, and the therapists' facility-side employment, so the hospital bills TC and the physician group bills 26. Billing the global, unmodified code from the physician side in that arrangement submits a claim for a technical component the group didn't actually incur, and it duplicates whatever the hospital separately billed for the same date of service, a pattern payers' post-payment audit teams specifically watch for in radiation oncology because the dollar amounts per claim are large enough to make the audit worth running.</p>
+  <p>This split applies uniformly across every code family below, planning, delivery, image guidance, and treatment management can each carry their own TC/26 designation, and a hospital-based radiation oncology group typically appends modifier 26 to nearly every line on its claim, while the hospital's chargemaster carries the TC-modified equivalent for the same date of service.</p>
 
   <h2>Treatment planning: the clinical plan and the dosimetric plan are two different things</h2>
   <p>Radiation oncology has two planning steps that get confused constantly, including inside billing offices: <b>clinical treatment planning</b> (CPT 77261-77263), which is the physician's professional work of integrating the diagnosis, staging, and overall treatment intent into a plan of therapy, and the <b>dosimetric plan</b> (CPT 77295 for 3D-CRT, CPT 77301 for IMRT), which is the technical/physics work of actually calculating the beam arrangement, isodose distribution, and dose-volume histogram. They represent different steps in the process of care and are billed separately when both are genuinely performed.</p>
   <div class="data-table-wrap">
     <table class="data-table">
-      <caption>Clinical treatment planning complexity levels (CPT 77261-77263), paraphrased from the CPT descriptor structure &mdash; confirm exact language against your CPT Professional edition.</caption>
+      <caption>Clinical treatment planning complexity levels (CPT 77261-77263), paraphrased from the CPT descriptor structure, confirm exact language against your CPT Professional edition.</caption>
       <thead><tr><th scope="col">Code</th><th scope="col">Complexity</th><th scope="col">What typically drives this level</th></tr></thead>
       <tbody>
         <tr><td>77261</td><td>Simple</td><td>A single treatment area, encompassed in a single port or simple parallel-opposed ports, with simple or no blocking</td></tr>
@@ -244,12 +299,12 @@
       </tbody>
     </table>
   </div>
-  <p>Clinical treatment planning is professional-only and billed once per course of therapy, regardless of how many fractions follow. A course treated with IMRT almost always supports 77263, since IMRT planning inherently involves multiple beam angles, dose constraints to nearby organs at risk, and (usually) more than one treatment area consideration &mdash; but the level is justified by the documented planning complexity, not by the fact that the technique is IMRT.</p>
-  <p>The dosimetric plan is a separate line: CPT 77295 (3-dimensional radiotherapy plan, including dose-volume histograms) applies to a 3D-CRT course; CPT 77301 (IMRT plan, including dose-volume histograms for target and critical-structure dose specifications) applies when the course is planned as IMRT or VMAT. Only one of the two is billed per plan &mdash; a course doesn't get both a 3D-CRT plan and an IMRT plan for the same target volume. CPT 77300 (basic radiation dosimetry calculation) is billed separately, as many times as the calculation is actually performed during the course &mdash; typically one to six times depending on complexity, not once per fraction.</p>
+  <p>Clinical treatment planning is professional-only and billed once per course of therapy, regardless of how many fractions follow. A course treated with IMRT almost always supports 77263, since IMRT planning inherently involves multiple beam angles, dose constraints to nearby organs at risk, and (usually) more than one treatment area consideration, but the level is justified by the documented planning complexity, not by the fact that the technique is IMRT.</p>
+  <p>The dosimetric plan is a separate line: CPT 77295 (3-dimensional radiotherapy plan, including dose-volume histograms) applies to a 3D-CRT course; CPT 77301 (IMRT plan, including dose-volume histograms for target and critical-structure dose specifications) applies when the course is planned as IMRT or VMAT. Only one of the two is billed per plan, a course doesn't get both a 3D-CRT plan and an IMRT plan for the same target volume. CPT 77300 (basic radiation dosimetry calculation) is billed separately, as many times as the calculation is actually performed during the course, typically one to six times depending on complexity, not once per fraction.</p>
 
   <h2>Simulation-aided field setting: why it rarely shows up as its own line anymore</h2>
-  <p>Simulation used to be billed as its own step under CPT 77280 (simple), 77285 (intermediate), and 77290 (complex) &mdash; imaging and marking the treatment fields before the beam data is finalized. Those codes still exist in CPT, but for the majority of modern courses they never appear on the claim as a separate line, because CMS treats them as inclusive to CPT 77301 (IMRT plan) whenever simulation is performed as part of developing that IMRT plan &mdash; whether it happens on the same date of service or a different one. Local coverage guidance from multiple Medicare Administrative Contractors applies this bundling within a defined window around the IMRT plan date (commonly 30 days before or after) for the same group and the same patient (Billing and Coding Guidelines for Radiation Oncology Including IMRT, L34652, and consistent with payer-published bundling notices such as Blue Cross NC's July 2021 radiation oncology bundling update).</p>
-  <p>The practical effect: on an IMRT course, simulation work is baked into the value of 77301, not billed separately, and a billing office that tries to add 77285 or 77290 alongside 77301 for the same planning episode is submitting a line that's going to deny as bundled far more often than it pays. Simulation codes remain separately billable mainly on conventional 3D-CRT courses where no IMRT plan is being developed &mdash; and even then, check the applicable LCD, since coverage and bundling policy is MAC-specific.</p>
+  <p>Simulation used to be billed as its own step under CPT 77280 (simple), 77285 (intermediate), and 77290 (complex), imaging and marking the treatment fields before the beam data is finalized. Those codes still exist in CPT, but for the majority of modern courses they never appear on the claim as a separate line, because CMS treats them as inclusive to CPT 77301 (IMRT plan) whenever simulation is performed as part of developing that IMRT plan, whether it happens on the same date of service or a different one. Local coverage guidance from multiple Medicare Administrative Contractors applies this bundling within a defined window around the IMRT plan date (commonly 30 days before or after) for the same group and the same patient (Billing and Coding Guidelines for Radiation Oncology Including IMRT, L34652, and consistent with payer-published bundling notices such as Blue Cross NC's July 2021 radiation oncology bundling update).</p>
+  <p>The practical effect: on an IMRT course, simulation work is baked into the value of 77301, not billed separately, and a billing office that tries to add 77285 or 77290 alongside 77301 for the same planning episode is submitting a line that's going to deny as bundled far more often than it pays. Simulation codes remain separately billable mainly on conventional 3D-CRT courses where no IMRT plan is being developed, and even then, check the applicable LCD, since coverage and bundling policy is MAC-specific.</p>
 
   <h2>How radiation treatment delivery was rebuilt for 2026</h2>
   <p>This is the change that affects every radiation oncology claim written in 2026, and it's worth understanding as a redesign rather than a routine annual code update. Through 2025, delivery coding ran on two parallel tracks: IMRT delivery under CPT 77385 (simple) and 77386 (complex), and conventional (3D-CRT, 2D, electron) delivery under a set of Medicare-specific G-codes (G6001-G6017) that CMS had issued back in 2015 specifically because Medicare declined to adopt that year's CPT restructuring of 77401/77402/77407/77412. Image guidance during delivery was billed separately as CPT 77387, a companion add-on code.</p>
@@ -259,16 +314,16 @@
       <caption>Radiation treatment delivery codes, before and after the January 1, 2026 CPT restructuring.</caption>
       <thead><tr><th scope="col">Through 2025</th><th scope="col">Effective 2026</th><th scope="col">What decides the tier now</th></tr></thead>
       <tbody>
-        <tr><td>G6003-G6015 (conventional, simple, by MeV) / 77402 (rarely used by Medicare)</td><td><b>77402</b> &mdash; Level 1</td><td>Simple 2D or electron beam delivery, including a single en face electron field or multiple non-abutting electron fields</td></tr>
-        <tr><td>77385 (IMRT, simple) / mid-tier G-codes (intermediate conventional)</td><td><b>77407</b> &mdash; Level 2</td><td>3D-CRT or IMRT/VMAT delivered to a single isocenter, no active motion management</td></tr>
-        <tr><td>77386 (IMRT, complex) / highest-tier G-codes (complex conventional)</td><td><b>77412</b> &mdash; Level 3</td><td>Multiple isocenters (any technique), active motion management (e.g., gating, tracking), or mixed photon-electron/total skin electron therapy &mdash; any one criterion alone qualifies</td></tr>
+        <tr><td>G6003-G6015 (conventional, simple, by MeV) / 77402 (rarely used by Medicare)</td><td><b>77402</b>, Level 1</td><td>Simple 2D or electron beam delivery, including a single en face electron field or multiple non-abutting electron fields</td></tr>
+        <tr><td>77385 (IMRT, simple) / mid-tier G-codes (intermediate conventional)</td><td><b>77407</b>, Level 2</td><td>3D-CRT or IMRT/VMAT delivered to a single isocenter, no active motion management</td></tr>
+        <tr><td>77386 (IMRT, complex) / highest-tier G-codes (complex conventional)</td><td><b>77412</b>, Level 3</td><td>Multiple isocenters (any technique), active motion management (e.g., gating, tracking), or mixed photon-electron/total skin electron therapy, any one criterion alone qualifies</td></tr>
         <tr><td>77401 (superficial/orthovoltage)</td><td><b>77436-77439</b> (new Surface Radiation Therapy section)</td><td>Superficial and orthovoltage delivery moved to its own code family, used mainly for non-melanoma skin cancer</td></tr>
-        <tr><td>77387 (IGRT, companion code, billed with modifier as needed)</td><td><b>77387</b> &mdash; redefined</td><td>Now the professional component of all forms of image guidance (not including motion management); the technical value is folded into the payment for 77402/77407/77412</td></tr>
+        <tr><td>77387 (IGRT, companion code, billed with modifier as needed)</td><td><b>77387</b>, redefined</td><td>Now the professional component of all forms of image guidance (not including motion management); the technical value is folded into the payment for 77402/77407/77412</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Two consequences follow directly from this table. First, the delivery tier no longer tracks the technique name a practice is used to charging by &mdash; a VMAT plan delivered to a single isocenter with no gating is a 77407, the same tier as a comparably simple 3D-CRT plan, even though for a decade those were billed under entirely different code families with different values. Second, 77387 changed shape: before 2026 it was billed as its own line with whatever modifier matched the setting; from 2026 forward, the code represents professional work only, so a hospital-based radiation oncologist appends modifier 26 to 77387 and the hospital does not separately bill a technical component for image guidance at all &mdash; that value now sits inside the practice-expense payment for the delivery code itself.</p>
-  <p>⚠️ The scale of the reimbursement impact is still being litigated in the trade press rather than settled in a single CMS document: ASTRO's own member survey (reported via ASTROnews and covered by outlets including AJMC and Oncology News Central through 2026) found a majority of responding physicians reporting double-digit percentage cuts, and industry reporting describes payers being slow to reprice commercial contracts to the new three-tier structure, which some sources describe as producing higher denial and downcode rates on Level 3 (77412) claims specifically. Those figures come from survey and trade-press reporting, not a CMS claims database this build queried directly &mdash; treat the direction (higher scrutiny on 77412) as well corroborated and the specific percentages as reported-but-not-independently-verified.</p>
+  <p>Two consequences follow directly from this table. First, the delivery tier no longer tracks the technique name a practice is used to charging by, a VMAT plan delivered to a single isocenter with no gating is a 77407, the same tier as a comparably simple 3D-CRT plan, even though for a decade those were billed under entirely different code families with different values. Second, 77387 changed shape: before 2026 it was billed as its own line with whatever modifier matched the setting; from 2026 forward, the code represents professional work only, so a hospital-based radiation oncologist appends modifier 26 to 77387 and the hospital does not separately bill a technical component for image guidance at all, that value now sits inside the practice-expense payment for the delivery code itself.</p>
+  <p>⚠️ The scale of the reimbursement impact is still being litigated in the trade press rather than settled in a single CMS document: ASTRO's own member survey (reported via ASTROnews and covered by outlets including AJMC and Oncology News Central through 2026) found a majority of responding physicians reporting double-digit percentage cuts, and industry reporting describes payers being slow to reprice commercial contracts to the new three-tier structure, which some sources describe as producing higher denial and downcode rates on Level 3 (77412) claims specifically. Those figures come from survey and trade-press reporting, not a CMS claims database this build queried directly, treat the direction (higher scrutiny on 77412) as well corroborated and the specific percentages as reported-but-not-independently-verified.</p>
 
   <h2>Special procedures, image-guided add-ons, and the treatment-management clock</h2>
   <p>Two code families round out a typical course: special treatment procedures for cases that don't fit routine external-beam delivery, and the weekly management code that pays the radiation oncologist for overseeing the course as it runs.</p>
@@ -277,12 +332,12 @@
       <caption>Special radiation treatment procedure codes.</caption>
       <thead><tr><th scope="col">Code</th><th scope="col">What it covers</th></tr></thead>
       <tbody>
-        <tr><td>77469</td><td>Management of the complete course of intraoperative radiation treatment (IORT) &mdash; radiation delivered directly to an exposed tumor bed during surgery. Covers only the IORT management itself, not any separate E/M furnished outside that session.</td></tr>
-        <tr><td>77470</td><td>Special treatment procedure &mdash; additional physician work and management effort for situations such as hyperfractionation, total body irradiation, per-oral or endocavitary treatment, intraoperative cone use, or courses combining external beam with brachytherapy or stereotactic radiosurgery under a single management plan.</td></tr>
+        <tr><td>77469</td><td>Management of the complete course of intraoperative radiation treatment (IORT), radiation delivered directly to an exposed tumor bed during surgery. Covers only the IORT management itself, not any separate E/M furnished outside that session.</td></tr>
+        <tr><td>77470</td><td>Special treatment procedure, additional physician work and management effort for situations such as hyperfractionation, total body irradiation, per-oral or endocavitary treatment, intraoperative cone use, or courses combining external beam with brachytherapy or stereotactic radiosurgery under a single management plan.</td></tr>
       </tbody>
     </table>
   </div>
-  <p>⚠️ This build's search of current CPT-restructuring coverage did not surface any indication that 77469 or 77470 were part of the January 2026 delivery-code overhaul &mdash; the changes described above concentrated on 77385/77386/77401/77402/77407/77412/77014/77387 and the G6001-G6017 series. Current secondary sources (AAPC/Codify code pages) describe 77469 and 77470 with the same scope outlined here, but this wasn't independently confirmed against a CMS-published 2026 CPT crosswalk; verify current status and valuation for these two codes in your CPT Professional edition and current Physician Fee Schedule before billing.</p>
+  <p>⚠️ This build's search of current CPT-restructuring coverage did not surface any indication that 77469 or 77470 were part of the January 2026 delivery-code overhaul, the changes described above concentrated on 77385/77386/77401/77402/77407/77412/77014/77387 and the G6001-G6017 series. Current secondary sources (AAPC/Codify code pages) describe 77469 and 77470 with the same scope outlined here, but this wasn't independently confirmed against a CMS-published 2026 CPT crosswalk; verify current status and valuation for these two codes in your CPT Professional edition and current Physician Fee Schedule before billing.</p>
   <p>Treatment management is where most of the physician's ongoing billing during a course actually lives. CPT 77427 (radiation treatment management) is reported once per five delivered fractions, regardless of how many calendar days or weeks that takes, and requires at least one face-to-face visit with the radiation oncologist within that block of five. A final week landing on three or four leftover fractions still supports one additional unit of 77427; a course that ends with only one or two leftover fractions generally doesn't support a separate management unit for that fragment by itself. A short course consisting of only one or two fractions in total is a different code, 77431, not a fractional unit of 77427.</p>
 
   <h3>Worked example: a 25-fraction IMRT course with weekly management</h3>
@@ -296,12 +351,12 @@
         <tr><td>IMRT dosimetric plan</td><td>77301-26</td><td>Once (simulation-aided field setting bundled in)</td></tr>
         <tr><td>Basic dosimetry calculation</td><td>77300-26</td><td>As performed, typically 1-6 times across the course</td></tr>
         <tr><td>Treatment delivery, single isocenter, no motion management</td><td>77407-26</td><td>Once per fraction &times; 25</td></tr>
-        <tr><td>Image guidance (daily positioning imaging)</td><td>77387-26</td><td>Once per fraction &times; 25 (professional component only &mdash; technical value sits inside the hospital's 77407-TC)</td></tr>
+        <tr><td>Image guidance (daily positioning imaging)</td><td>77387-26</td><td>Once per fraction &times; 25 (professional component only, technical value sits inside the hospital's 77407-TC)</td></tr>
         <tr><td>Radiation treatment management</td><td>77427-26</td><td>5 units (25 fractions &divide; 5 fractions per unit)</td></tr>
       </tbody>
     </table>
   </div>
-  <p>If the same course had used respiratory gating or a fiducial-tracking system for the isocenter, delivery would move to 77412 instead of 77407 for every fraction affected, because active motion management alone is sufficient to qualify for the top tier under the 2026 structure &mdash; it doesn't need multiple isocenters as well.</p>
+  <p>If the same course had used respiratory gating or a fiducial-tracking system for the isocenter, delivery would move to 77412 instead of 77407 for every fraction affected, because active motion management alone is sufficient to qualify for the top tier under the 2026 structure, it doesn't need multiple isocenters as well.</p>
 
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Bills clean</div><ul>
@@ -309,8 +364,8 @@
       <li>77427 is tallied against delivered fractions in blocks of five, with a documented face-to-face visit inside each block, not against calendar weeks.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Denies or gets recouped</div><ul>
-      <li>Physician group bills the global (unmodified) delivery and guidance codes when the linac and technical staff belong to the hospital &mdash; this is billing for a technical component that was never incurred, and it duplicates the hospital's own claim for the same date of service.</li>
-      <li>77427 billed once per calendar week regardless of fraction count, or a 2026 claim still carrying 77385, 77386, or a G6001-G6017 code &mdash; both patterns are now routine, predictable denials rather than edge cases.</li>
+      <li>Physician group bills the global (unmodified) delivery and guidance codes when the linac and technical staff belong to the hospital, this is billing for a technical component that was never incurred, and it duplicates the hospital's own claim for the same date of service.</li>
+      <li>77427 billed once per calendar week regardless of fraction count, or a 2026 claim still carrying 77385, 77386, or a G6001-G6017 code, both patterns are now routine, predictable denials rather than edge cases.</li>
     </ul></div>
   </div>
 
@@ -332,7 +387,7 @@
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates &mdash; and 2026 was an unusually large one for radiation oncology specifically. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates, and 2026 was an unusually large one for radiation oncology specifically. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -345,62 +400,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 30 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>

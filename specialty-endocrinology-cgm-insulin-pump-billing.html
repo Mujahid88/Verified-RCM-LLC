@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="CGM and Insulin Pump Billing: DME vs. Pharmacy Benefit Explained | Verified RCM">
 <meta name="twitter:description" content="CGM and insulin pump billing: the Medicare Part B DME criteria under LCD L33822, E0784 pump supply codes, the Omnipod Part D exception, and a device-by-device pathway decision table.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Endocrinology","item":"https://www.verifiedrcm.com/specialty-endocrinology.html"},{"@type":"ListItem","position":4,"name":"CGM and insulin pump billing: DME vs. pharmacy benefit","item":"https://www.verifiedrcm.com/specialty-endocrinology-cgm-insulin-pump-billing.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Medicare ever cover a CGM under Part D instead of Part B?","acceptedAnswer":{"@type":"Answer","text":"No. Under traditional Medicare, a therapeutic CGM (Dexcom, FreeStyle Libre, Medtronic Guardian) is covered exclusively as durable medical equipment under Part B, per LCD L33822 and its Policy Article A52464 — there is no Part D pathway for the CGM device or its sensors and transmitters. The device-versus-drug split that puts some insulin pumps on Part D doesn't apply to CGM hardware; if a Medicare Advantage or standalone Part D plan tries to route a CGM claim through the pharmacy benefit, that's a plan-specific administrative choice layered on top of the underlying Part B benefit category, not a change to what Original Medicare covers."}},{"@type":"Question","name":"Why does Omnipod bill differently from other insulin pumps?","acceptedAnswer":{"@type":"Answer","text":"Because it has no durable, reusable component. E0784 and the DME benefit exist for equipment a patient uses repeatedly — a tubed pump like a Tandem or Medtronic device is billed, and often rented, as durable equipment for exactly that reason. Omnipod's pod is disposable and replaced every few days with nothing durable left behind, so CMS made Omnipod available through the Medicare Part D pharmacy benefit instead of Part B DME. A claim for Omnipod submitted under E0784 will be denied — it has to go through the pharmacy benefit as a prescription, not through a DME supplier as equipment."}},{"@type":"Question","name":"What's the difference between adjunctive and non-adjunctive CGM billing?","acceptedAnswer":{"@type":"Answer","text":"Adjunctive CGMs (billed E2102, with supply allowance A4238) require the patient to confirm a glucose reading with a fingerstick blood glucose test before making a treatment decision like an insulin dose; non-adjunctive CGMs (billed E2103, with supply allowance A4239) are accurate enough to support treatment decisions on their own. Most CGMs Medicare covers today are non-adjunctive and bill under E2103/A4239. The distinction also drives the KF modifier: it's required on every E2102/A4238 claim because adjunctive systems are FDA Class III, and it's required on an E2103/A4239 claim only when that specific device is also FDA Class III — check the specific model against the PDAC's Product Classification List rather than assuming by code alone."}},{"@type":"Question","name":"Can a physician practice bill CGM codes without DME supplier enrollment?","acceptedAnswer":{"@type":"Answer","text":"No. E2102, E2103, E0784, and their supply codes are DMEPOS codes, and Medicare will only pay them to a billing entity enrolled as a DME supplier — a separate enrollment track from a physician's standard Part B enrollment, requiring its own CMS-855S application to a National Provider Enrollment (NPE) contractor, a $50,000 surety bond per NPI, and accreditation by a CMS-approved accreditation organization. A practice that isn't enrolled this way can prescribe a CGM or pump, but it has to route the order to a contracted DME supplier or pharmacy to bill it — attempting to bill these codes under the practice's regular group NPI results in an enrollment-mismatch denial, not a coverage denial."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Medicare ever cover a CGM under Part D instead of Part B?","acceptedAnswer":{"@type":"Answer","text":"No. Under traditional Medicare, a therapeutic CGM (Dexcom, FreeStyle Libre, Medtronic Guardian) is covered exclusively as durable medical equipment under Part B, per LCD L33822 and its Policy Article A52464, there is no Part D pathway for the CGM device or its sensors and transmitters. The device-versus-drug split that puts some insulin pumps on Part D doesn't apply to CGM hardware; if a Medicare Advantage or standalone Part D plan tries to route a CGM claim through the pharmacy benefit, that's a plan-specific administrative choice layered on top of the underlying Part B benefit category, not a change to what Original Medicare covers."}},{"@type":"Question","name":"Why does Omnipod bill differently from other insulin pumps?","acceptedAnswer":{"@type":"Answer","text":"Because it has no durable, reusable component. E0784 and the DME benefit exist for equipment a patient uses repeatedly, a tubed pump like a Tandem or Medtronic device is billed, and often rented, as durable equipment for exactly that reason. Omnipod's pod is disposable and replaced every few days with nothing durable left behind, so CMS made Omnipod available through the Medicare Part D pharmacy benefit instead of Part B DME. A claim for Omnipod submitted under E0784 will be denied, it has to go through the pharmacy benefit as a prescription, not through a DME supplier as equipment."}},{"@type":"Question","name":"What's the difference between adjunctive and non-adjunctive CGM billing?","acceptedAnswer":{"@type":"Answer","text":"Adjunctive CGMs (billed E2102, with supply allowance A4238) require the patient to confirm a glucose reading with a fingerstick blood glucose test before making a treatment decision like an insulin dose; non-adjunctive CGMs (billed E2103, with supply allowance A4239) are accurate enough to support treatment decisions on their own. Most CGMs Medicare covers today are non-adjunctive and bill under E2103/A4239. The distinction also drives the KF modifier: it's required on every E2102/A4238 claim because adjunctive systems are FDA Class III, and it's required on an E2103/A4239 claim only when that specific device is also FDA Class III, check the specific model against the PDAC's Product Classification List rather than assuming by code alone."}},{"@type":"Question","name":"Can a physician practice bill CGM codes without DME supplier enrollment?","acceptedAnswer":{"@type":"Answer","text":"No. E2102, E2103, E0784, and their supply codes are DMEPOS codes, and Medicare will only pay them to a billing entity enrolled as a DME supplier, a separate enrollment track from a physician's standard Part B enrollment, requiring its own CMS-855S application to a National Provider Enrollment (NPE) contractor, a $50,000 surety bond per NPI, and accreditation by a CMS-approved accreditation organization. A practice that isn't enrolled this way can prescribe a CGM or pump, but it has to route the order to a contracted DME supplier or pharmacy to bill it, attempting to bill these codes under the practice's regular group NPI results in an enrollment-mismatch denial, not a coverage denial."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 30 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 30 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 30 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-endocrinology.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete endocrinology guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an undulating glucose-level waveform with an accented peak beside a symmetric butterfly-shaped loop suggesting the thyroid gland">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-endocrinology.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete endocrinology guide</a>
+      <h1>CGM and insulin pump billing: DME vs. pharmacy benefit explained.</h1>
+      <p class="lede">Before a CGM or insulin pump claim is ever checked for medical necessity, it has to land on the right benefit line, and endocrinology practices lose more of these claims to a wrong benefit or a missing enrollment credential than to a documentation gap. This guide covers the Medicare Part B DME criteria under LCD L33822, the DME supplier enrollment that has to exist before E2102/E2103 or E0784 can be billed at all, the pump supply codes that actually get paid, the Omnipod exception that proves the DME-versus-pharmacy split is real, and a device-by-device decision table for routing a new patient correctly the first time.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-endocrinology.html">endocrinology billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an undulating glucose-level waveform with an accented peak beside a symmetric butterfly-shaped loop suggesting the thyroid gland">
   <line x1="70" y1="305" x2="410" y2="305" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
 
   <path d="M 70,275 C 110,260 140,260 170,275 C 200,290 230,290 260,275 C 290,260 320,260 350,275 C 380,290 400,290 410,285" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
@@ -184,25 +240,24 @@
   <path d="M 240,350 C 275,325 300,335 302,360 C 304,385 275,400 240,372" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="240" cy="361" r="4" fill="var(--cat-medical)"/>
 </svg></figure>
-  <h1>CGM and insulin pump billing: DME vs. pharmacy benefit explained.</h1>
-  <p class="lede">Before a CGM or insulin pump claim is ever checked for medical necessity, it has to land on the right benefit line &mdash; and endocrinology practices lose more of these claims to a wrong benefit or a missing enrollment credential than to a documentation gap. This guide covers the Medicare Part B DME criteria under LCD L33822, the DME supplier enrollment that has to exist before E2102/E2103 or E0784 can be billed at all, the pump supply codes that actually get paid, the Omnipod exception that proves the DME-versus-pharmacy split is real, and a device-by-device decision table for routing a new patient correctly the first time.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-endocrinology.html">endocrinology billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The same drug class splits across two benefits based on hardware, not diagnosis.</b> A tubed insulin pump and a therapeutic CGM bill under Medicare Part B as durable medical equipment (DME); Omnipod, which has no reusable component, bills under Part D as a pharmacy benefit &mdash; and a claim filed on the wrong side gets an enrollment-mismatch rejection, not a medical-necessity review.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>CGM coverage under LCD L33822 turns on one of two documented pathways</b> &mdash; the patient is insulin-treated, or has a dated history of problematic hypoglycemia (recurrent level 2 events under 54 mg/dL, or one level 3 event needing third-party assistance) &mdash; not a general note that control is poor.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>E2102, E2103, E0784, and their supply codes cannot be billed under a physician's standard Part B enrollment.</b> They require a separate DME supplier enrollment &mdash; CMS-855S, a $50,000 surety bond, and accreditation &mdash; whether that's the practice itself or a contracted DME supplier the order gets routed to.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Hybrid closed-loop systems have to clear two LCDs, not one.</b> A pump-integrated CGM (E0784 billed with E2102 or E2103) requires the patient to independently satisfy both the infusion pump LCD and the glucose monitor LCD &mdash; qualifying for the pump doesn't automatically qualify the CGM component, or the reverse.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The same drug class splits across two benefits based on hardware, not diagnosis.</b> A tubed insulin pump and a therapeutic CGM bill under Medicare Part B as durable medical equipment (DME); Omnipod, which has no reusable component, bills under Part D as a pharmacy benefit, and a claim filed on the wrong side gets an enrollment-mismatch rejection, not a medical-necessity review.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>CGM coverage under LCD L33822 turns on one of two documented pathways</b>, the patient is insulin-treated, or has a dated history of problematic hypoglycemia (recurrent level 2 events under 54 mg/dL, or one level 3 event needing third-party assistance), not a general note that control is poor.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>E2102, E2103, E0784, and their supply codes cannot be billed under a physician's standard Part B enrollment.</b> They require a separate DME supplier enrollment, CMS-855S, a $50,000 surety bond, and accreditation, whether that's the practice itself or a contracted DME supplier the order gets routed to.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Hybrid closed-loop systems have to clear two LCDs, not one.</b> A pump-integrated CGM (E0784 billed with E2102 or E2103) requires the patient to independently satisfy both the infusion pump LCD and the glucose monitor LCD, qualifying for the pump doesn't automatically qualify the CGM component, or the reverse.</span></li>
     </ul>
   </section>
 
-  <h2>Same drug class, two benefit categories &mdash; why the split exists</h2>
-  <p>The fact that decides which benefit a diabetes device bills under isn't the diagnosis, the payer, or even the brand &mdash; it's whether the device has a durable, reusable piece of hardware that a supplier dispenses as equipment. Medicare's Part B benefit covers durable medical equipment: items built to be used repeatedly, maintained, and eventually replaced. Part D covers drugs and the delivery devices that don't survive past a single use cycle. Most of the time that split tracks intuition &mdash; a reusable pump or a CGM receiver is equipment, a vial of insulin is a drug. The trap is that some of the newest, most commonly prescribed diabetes technology sits exactly on that line.</p>
-  <p>Under traditional Medicare, a therapeutic CGM &mdash; Dexcom, FreeStyle Libre, Medtronic Guardian &mdash; is covered only as DME under Part B, governed by LCD L33822, <i>Glucose Monitors</i> (CGS Administrators and Noridian Healthcare Solutions, the two DME MACs, effective 10/01/2024) and its companion Policy Article A52464, <i>Glucose Monitor &ndash; Policy Article</i> (effective 02/18/2025). There is no Part D pathway for the CGM device itself. Tubed insulin pumps are the same story: Tandem and Medtronic pumps are durable, reusable hardware, billed under Part B DME as E0784 per LCD L33794, <i>External Infusion Pumps</i> (same two DME MACs, effective 07/01/2026).</p>
-  <p>Omnipod breaks that pattern on purpose, not by accident. Its pod has no reusable component &mdash; it's worn for a few days and discarded &mdash; so it doesn't meet the durability test that defines Part B DME. CMS instead made Omnipod available through the Medicare Part D pharmacy benefit: it's dispensed with a prescription, typically through a pharmacy, and billed as a pharmacy claim rather than a DME claim. Submit an Omnipod claim under E0784 and it will be denied outright, not down-coded &mdash; it's the wrong benefit category entirely, and no modifier fixes that.</p>
-  <p>Commercial and Medicaid plans complicate this further, because unlike traditional Medicare's fixed rule, many of them route the same CGM model through either benefit depending on where it's dispensed: filled at a retail pharmacy, it typically runs through the pharmacy benefit with pharmacy-style cost-sharing; ordered through a contracted DME supplier, it typically runs through the medical/DME benefit instead. ⚠️ That dual-pathway behavior is well documented across payer and manufacturer coverage pages but is plan-specific administrative design rather than a fixed CMS rule, and this build could not independently confirm it against a specific commercial payer's provider manual &mdash; verify the routing for each plan before assuming last month's patient's benefit pathway applies to this month's.</p>
+  <h2>Same drug class, two benefit categories, why the split exists</h2>
+  <p>The fact that decides which benefit a diabetes device bills under isn't the diagnosis, the payer, or even the brand, it's whether the device has a durable, reusable piece of hardware that a supplier dispenses as equipment. Medicare's Part B benefit covers durable medical equipment: items built to be used repeatedly, maintained, and eventually replaced. Part D covers drugs and the delivery devices that don't survive past a single use cycle. Most of the time that split tracks intuition, a reusable pump or a CGM receiver is equipment, a vial of insulin is a drug. The trap is that some of the newest, most commonly prescribed diabetes technology sits exactly on that line.</p>
+  <p>Under traditional Medicare, a therapeutic CGM, Dexcom, FreeStyle Libre, Medtronic Guardian, is covered only as DME under Part B, governed by LCD L33822, <i>Glucose Monitors</i> (CGS Administrators and Noridian Healthcare Solutions, the two DME MACs, effective 10/01/2024) and its companion Policy Article A52464, <i>Glucose Monitor &ndash; Policy Article</i> (effective 02/18/2025). There is no Part D pathway for the CGM device itself. Tubed insulin pumps are the same story: Tandem and Medtronic pumps are durable, reusable hardware, billed under Part B DME as E0784 per LCD L33794, <i>External Infusion Pumps</i> (same two DME MACs, effective 07/01/2026).</p>
+  <p>Omnipod breaks that pattern on purpose, not by accident. Its pod has no reusable component, it's worn for a few days and discarded, so it doesn't meet the durability test that defines Part B DME. CMS instead made Omnipod available through the Medicare Part D pharmacy benefit: it's dispensed with a prescription, typically through a pharmacy, and billed as a pharmacy claim rather than a DME claim. Submit an Omnipod claim under E0784 and it will be denied outright, not down-coded, it's the wrong benefit category entirely, and no modifier fixes that.</p>
+  <p>Commercial and Medicaid plans complicate this further, because unlike traditional Medicare's fixed rule, many of them route the same CGM model through either benefit depending on where it's dispensed: filled at a retail pharmacy, it typically runs through the pharmacy benefit with pharmacy-style cost-sharing; ordered through a contracted DME supplier, it typically runs through the medical/DME benefit instead. ⚠️ That dual-pathway behavior is well documented across payer and manufacturer coverage pages but is plan-specific administrative design rather than a fixed CMS rule, and this build could not independently confirm it against a specific commercial payer's provider manual, verify the routing for each plan before assuming last month's patient's benefit pathway applies to this month's.</p>
 
   <h2>Medicare Part B CGM coverage criteria (LCD L33822)</h2>
   <p>A CGM claim survives review on two things: which of two documented clinical pathways the patient falls into, and whether the visit history proves it. There's no pathway for "the practitioner thinks continuous monitoring would help."</p>
@@ -212,58 +267,58 @@
       <thead><tr><th scope="col">Requirement</th><th scope="col">What has to be on the chart</th></tr></thead>
       <tbody>
         <tr><td>Diagnosis</td><td>Diabetes mellitus, documented with an applicable ICD-10 code.</td></tr>
-        <tr><td>Clinical pathway 1 &mdash; insulin-treated</td><td>Beneficiary is being treated with insulin (any regimen).</td></tr>
-        <tr><td>Clinical pathway 2 &mdash; problematic hypoglycemia</td><td>Not insulin-treated, but has recurrent (more than one) level 2 hypoglycemic events &mdash; glucose under 54 mg/dL &mdash; despite multiple attempts to adjust medication or dosage, <i>or</i> a documented history of at least one level 3 hypoglycemic event requiring third-party assistance to treat.</td></tr>
+        <tr><td>Clinical pathway 1, insulin-treated</td><td>Beneficiary is being treated with insulin (any regimen).</td></tr>
+        <tr><td>Clinical pathway 2, problematic hypoglycemia</td><td>Not insulin-treated, but has recurrent (more than one) level 2 hypoglycemic events, glucose under 54 mg/dL, despite multiple attempts to adjust medication or dosage, <i>or</i> a documented history of at least one level 3 hypoglycemic event requiring third-party assistance to treat.</td></tr>
         <tr><td>Pre-order visit</td><td>An in-person or Medicare-approved telehealth visit within the 6 months before the CGM is ordered, evaluating diabetes control and confirming the above criteria.</td></tr>
         <tr><td>Training</td><td>Documented, appropriate training in device use, evidenced by the prescription itself.</td></tr>
-        <tr><td>Ongoing coverage</td><td>A follow-up in-person or telehealth visit every 6 months documenting adherence to the CGM regimen and the diabetes treatment plan &mdash; this is what keeps the supply allowance paying past the first few months.</td></tr>
+        <tr><td>Ongoing coverage</td><td>A follow-up in-person or telehealth visit every 6 months documenting adherence to the CGM regimen and the diabetes treatment plan, this is what keeps the supply allowance paying past the first few months.</td></tr>
       </tbody>
     </table>
   </div>
-  <p>"Disease remains poorly controlled" is a weaker submission than a dated, scored event. A level 2 hypoglycemic event needs the glucose value and the date; a level 3 event needs what happened and who intervened. The same discipline that makes a rheumatology biologic authorization survive review &mdash; a named event with a date attached, not an adjective &mdash; applies here.</p>
+  <p>"Disease remains poorly controlled" is a weaker submission than a dated, scored event. A level 2 hypoglycemic event needs the glucose value and the date; a level 3 event needs what happened and who intervened. The same discipline that makes a rheumatology biologic authorization survive review, a named event with a date attached, not an adjective, applies here.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>CGM and glucose monitor HCPCS codes under Policy Article A52464.</caption>
       <thead><tr><th scope="col">Code</th><th scope="col">What it covers</th><th scope="col">Notes</th></tr></thead>
       <tbody>
-        <tr><td>E2102</td><td>Adjunctive CGM device or receiver &mdash; requires a fingerstick confirmation before treatment decisions</td><td>FDA Class III; billed with modifier KF on every claim</td></tr>
-        <tr><td>E2103</td><td>Non-adjunctive CGM device or receiver &mdash; accurate enough to support insulin dosing decisions on its own</td><td>Most CGM systems Medicare covers today fall here; KF only if that specific model is also FDA Class III</td></tr>
+        <tr><td>E2102</td><td>Adjunctive CGM device or receiver, requires a fingerstick confirmation before treatment decisions</td><td>FDA Class III; billed with modifier KF on every claim</td></tr>
+        <tr><td>E2103</td><td>Non-adjunctive CGM device or receiver, accurate enough to support insulin dosing decisions on its own</td><td>Most CGM systems Medicare covers today fall here; KF only if that specific model is also FDA Class III</td></tr>
         <tr><td>A4238</td><td>Supply allowance, adjunctive CGM (sensors, transmitter)</td><td>Billed monthly</td></tr>
         <tr><td>A4239</td><td>Supply allowance, non-adjunctive CGM (includes any BGM back-up supplies)</td><td>One unit per 30 days, or up to 3 units per 90-day billing cycle</td></tr>
         <tr><td>K0553 / K0554</td><td>Legacy non-adjunctive CGM device and supply codes</td><td>Replaced by E2103/A4239 for dates of service after 12/31/2022</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Every CGM claim also carries modifiers that tell the DME MAC which pathway and which device class it's looking at: <b>KX</b> when the beneficiary is insulin-treated, <b>KS</b> when the beneficiary qualifies through the problematic-hypoglycemia pathway instead, <b>CG</b> once all of the LCD's coverage requirements are met, and <b>KF</b> when the specific device is FDA Class III. Missing or mismatched modifiers &mdash; KX on a patient who's actually on the hypoglycemia pathway, or no CG line at all &mdash; are a documented, frequent cause of CGM claim rejection independent of whether the underlying clinical picture actually supports coverage.</p>
-  <p>⚠️ Medicare will not pay the CGM supply allowance at all if the beneficiary never displays glucose data on a DME-classified receiver or an insulin pump classified as DME &mdash; reading a CGM only through a smartphone app, with no DME receiver ever in use, does not meet the benefit category definition. This detail is reported consistently across payer and manufacturer coverage summaries; confirm current wording directly against the LCD or Policy Article before building it into a scrubber rule, since it is exactly the kind of requirement that shifts with an LCD revision.</p>
+  <p>Every CGM claim also carries modifiers that tell the DME MAC which pathway and which device class it's looking at: <b>KX</b> when the beneficiary is insulin-treated, <b>KS</b> when the beneficiary qualifies through the problematic-hypoglycemia pathway instead, <b>CG</b> once all of the LCD's coverage requirements are met, and <b>KF</b> when the specific device is FDA Class III. Missing or mismatched modifiers, KX on a patient who's actually on the hypoglycemia pathway, or no CG line at all, are a documented, frequent cause of CGM claim rejection independent of whether the underlying clinical picture actually supports coverage.</p>
+  <p>⚠️ Medicare will not pay the CGM supply allowance at all if the beneficiary never displays glucose data on a DME-classified receiver or an insulin pump classified as DME, reading a CGM only through a smartphone app, with no DME receiver ever in use, does not meet the benefit category definition. This detail is reported consistently across payer and manufacturer coverage summaries; confirm current wording directly against the LCD or Policy Article before building it into a scrubber rule, since it is exactly the kind of requirement that shifts with an LCD revision.</p>
 
-  <h2>The DME supplier enrollment requirement &mdash; you can't just bill these codes</h2>
-  <p>E2102, E2103, E0784, and every supply code that goes with them are DMEPOS codes, and Medicare pays DMEPOS codes only to a billing entity enrolled as a DME supplier &mdash; a distinct enrollment track from a physician group's standard Part B enrollment, with its own paperwork, its own contractor, and its own cost of entry.</p>
+  <h2>The DME supplier enrollment requirement, you can't just bill these codes</h2>
+  <p>E2102, E2103, E0784, and every supply code that goes with them are DMEPOS codes, and Medicare pays DMEPOS codes only to a billing entity enrolled as a DME supplier, a distinct enrollment track from a physician group's standard Part B enrollment, with its own paperwork, its own contractor, and its own cost of entry.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>A separate application, a separate contractor.</b> DMEPOS enrollment runs through the CMS-855S application, submitted to a National Provider Enrollment (NPE) DMEPOS contractor rather than the practice's regular Medicare Administrative Contractor. The National Supplier Clearinghouse that used to process these was replaced by the NPE East/West contractor structure effective November 7, 2022.</span></li>
-    <li><span class="check">2</span><span><b>A $50,000 surety bond per NPI</b> is required before the enrollment can be activated &mdash; a cost and underwriting step that has no equivalent in standard physician enrollment.</span></li>
+    <li><span class="check">2</span><span><b>A $50,000 surety bond per NPI</b> is required before the enrollment can be activated, a cost and underwriting step that has no equivalent in standard physician enrollment.</span></li>
     <li><span class="check">3</span><span><b>Accreditation by a CMS-approved accreditation organization</b> covering the specific DMEPOS product categories the supplier intends to bill, plus a physical storefront meeting DMEPOS supplier standards.</span></li>
-    <li><span class="check">4</span><span><b>PDAC coding verification for the specific device model.</b> A given CGM or pump model has to appear on the Pricing, Data Analysis and Coding contractor's Product Classification List under the code the supplier intends to bill &mdash; billing E2103 for a model the PDAC has classified differently is a coding error independent of the patient's clinical eligibility.</span></li>
+    <li><span class="check">4</span><span><b>PDAC coding verification for the specific device model.</b> A given CGM or pump model has to appear on the Pricing, Data Analysis and Coding contractor's Product Classification List under the code the supplier intends to bill, billing E2103 for a model the PDAC has classified differently is a coding error independent of the patient's clinical eligibility.</span></li>
   </ul>
-  <p>The practical consequence for an endocrinology practice: prescribing a CGM or pump doesn't require any of this, but billing for it does. A practice that wants to dispense and bill in-house has to complete DME supplier enrollment as its own undertaking, separate from and in addition to its physician group enrollment. A practice that doesn't want to carry that overhead routes the order to a contracted, already-enrolled DME supplier or pharmacy instead &mdash; the prescription and the clinical documentation still originate with the practice, but the DMEPOS claim itself is billed by the enrolled entity. Attempting to bill E2102, E2103, or E0784 under a physician group's regular NPI without DME supplier status produces an enrollment-mismatch denial that has nothing to do with whether the patient qualifies clinically.</p>
+  <p>The practical consequence for an endocrinology practice: prescribing a CGM or pump doesn't require any of this, but billing for it does. A practice that wants to dispense and bill in-house has to complete DME supplier enrollment as its own undertaking, separate from and in addition to its physician group enrollment. A practice that doesn't want to carry that overhead routes the order to a contracted, already-enrolled DME supplier or pharmacy instead, the prescription and the clinical documentation still originate with the practice, but the DMEPOS claim itself is billed by the enrolled entity. Attempting to bill E2102, E2103, or E0784 under a physician group's regular NPI without DME supplier status produces an enrollment-mismatch denial that has nothing to do with whether the patient qualifies clinically.</p>
 
   <h2>Insulin pump billing: E0784, the supply codes, and the Omnipod exception</h2>
-  <p>E0784 covers a durable, tubed external ambulatory insulin infusion pump &mdash; the kind a patient wears and refills, as opposed to wears and discards. Coverage under LCD L33794 requires clearing two separate hurdles: confirming the diagnosis is genuinely insulin-dependent, and confirming conventional multiple-daily-injection therapy was tried and documented first.</p>
+  <p>E0784 covers a durable, tubed external ambulatory insulin infusion pump, the kind a patient wears and refills, as opposed to wears and discards. Coverage under LCD L33794 requires clearing two separate hurdles: confirming the diagnosis is genuinely insulin-dependent, and confirming conventional multiple-daily-injection therapy was tried and documented first.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Core E0784 (external insulin infusion pump) coverage criteria under LCD L33794.</caption>
       <thead><tr><th scope="col">Requirement</th><th scope="col">What has to be on the chart</th></tr></thead>
       <tbody>
-        <tr><td>Insulin-dependence confirmation</td><td>C-peptide level &le;110% of the lower limit of normal (or &le;200% of the lower limit of normal if renal insufficiency is present), drawn when fasting blood glucose is &le;225 mg/dL to avoid a falsely low reading from glucose toxicity &mdash; or documented positive beta-cell autoantibodies.</td></tr>
+        <tr><td>Insulin-dependence confirmation</td><td>C-peptide level &le;110% of the lower limit of normal (or &le;200% of the lower limit of normal if renal insufficiency is present), drawn when fasting blood glucose is &le;225 mg/dL to avoid a falsely low reading from glucose toxicity, or documented positive beta-cell autoantibodies.</td></tr>
         <tr><td>Prior glycemic control</td><td>HbA1c greater than 7% documented before pump initiation, despite optimized therapy.</td></tr>
         <tr><td>Prior injection therapy</td><td>At least 3 insulin injections per day for the 6 months immediately before the pump is ordered.</td></tr>
         <tr><td>Prior self-monitoring</td><td>Blood glucose testing averaging at least 4 times per day over the 2 months immediately before the pump is ordered.</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Pump supplies are billed with two codes, and only two: <b>A4224</b>, the all-inclusive weekly maintenance-supply allowance (cannulas, needles, dressings, infusion set) excluding the reservoir, and <b>A4225</b>, the sterile syringe-type reservoir or cartridge, billed per unit. Both are payable only in combination with E0784. A claim for A4224 or A4225 linked to any pump other than E0784 is denied as an incorrect coding combination &mdash; a rule CMS made explicit effective January 1, 2017 specifically because these supply codes were being attached to the wrong pump type.</p>
-  <p>Hybrid closed-loop and sensor-augmented systems &mdash; a pump that adjusts insulin dosing off its own integrated CGM &mdash; don't get a combined code. They're billed as E0784 plus whichever CGM code matches the integrated sensor's classification: <b>E0784 + E2103</b> when the integrated sensor is non-adjunctive, or <b>E0784 + E2102</b> for systems with adjunctive receiver functionality integrated into the pump (for dates of service on or after April 1, 2022). Both halves of that combination carry their own coverage test &mdash; the beneficiary has to independently satisfy the pump criteria above <i>and</i> the CGM criteria under LCD L33822. A patient who clearly qualifies for the pump on injection and HbA1c history but hasn't yet documented the insulin-use-or-hypoglycemia pathway for the CGM half can have the pump line pay while the CGM line denies, on the same claim, for the same device.</p>
-  <p>Omnipod sits outside this entire framework by design. Because it has no durable, reusable hardware, CMS made it available through the Medicare Part D pharmacy benefit rather than Part B DME &mdash; it's dispensed with a prescription, commonly through a pharmacy, and never billed as E0784. A practice used to routing every insulin pump order through its DME supplier will send an Omnipod order down the wrong pipeline entirely if it applies that same reflex, and the claim comes back denied not for a documentation gap but because the benefit category is wrong from the first line.</p>
+  <p>Pump supplies are billed with two codes, and only two: <b>A4224</b>, the all-inclusive weekly maintenance-supply allowance (cannulas, needles, dressings, infusion set) excluding the reservoir, and <b>A4225</b>, the sterile syringe-type reservoir or cartridge, billed per unit. Both are payable only in combination with E0784. A claim for A4224 or A4225 linked to any pump other than E0784 is denied as an incorrect coding combination, a rule CMS made explicit effective January 1, 2017 specifically because these supply codes were being attached to the wrong pump type.</p>
+  <p>Hybrid closed-loop and sensor-augmented systems, a pump that adjusts insulin dosing off its own integrated CGM, don't get a combined code. They're billed as E0784 plus whichever CGM code matches the integrated sensor's classification: <b>E0784 + E2103</b> when the integrated sensor is non-adjunctive, or <b>E0784 + E2102</b> for systems with adjunctive receiver functionality integrated into the pump (for dates of service on or after April 1, 2022). Both halves of that combination carry their own coverage test, the beneficiary has to independently satisfy the pump criteria above <i>and</i> the CGM criteria under LCD L33822. A patient who clearly qualifies for the pump on injection and HbA1c history but hasn't yet documented the insulin-use-or-hypoglycemia pathway for the CGM half can have the pump line pay while the CGM line denies, on the same claim, for the same device.</p>
+  <p>Omnipod sits outside this entire framework by design. Because it has no durable, reusable hardware, CMS made it available through the Medicare Part D pharmacy benefit rather than Part B DME, it's dispensed with a prescription, commonly through a pharmacy, and never billed as E0784. A practice used to routing every insulin pump order through its DME supplier will send an Omnipod order down the wrong pipeline entirely if it applies that same reflex, and the claim comes back denied not for a documentation gap but because the benefit category is wrong from the first line.</p>
 
   <h2>Decision table: device, pathway, and what to check before billing</h2>
   <div class="data-table-wrap">
@@ -271,29 +326,29 @@
       <caption>CGM and insulin pump devices by correct benefit pathway and the billing consideration that matters most.</caption>
       <thead><tr><th scope="col">Device or system</th><th scope="col">Benefit pathway</th><th scope="col">Billing consideration</th></tr></thead>
       <tbody>
-        <tr><td>Tubed insulin pump (Tandem, Medtronic)</td><td>Medicare Part B DME &mdash; E0784 + A4224/A4225</td><td>Requires C-peptide/autoantibody, HbA1c, and injection-history documentation; DME supplier enrollment required to bill</td></tr>
-        <tr><td>Omnipod (tubeless, disposable pod)</td><td>Medicare Part D &mdash; pharmacy benefit</td><td>Prescription-based, typically pharmacy-dispensed; never billed as E0784; no DME supplier enrollment needed for the dispensing entity</td></tr>
-        <tr><td>Standalone therapeutic CGM (Dexcom, Libre reader, Medtronic Guardian)</td><td>Medicare Part B DME &mdash; E2103 (or E2102 if adjunctive) + A4239/A4238</td><td>Insulin-treated (KX) or problematic-hypoglycemia (KS) pathway must be documented and dated; 6-month follow-up required to sustain the supply allowance</td></tr>
-        <tr><td>CGM read only via smartphone app, no DME receiver ever used</td><td>Not covered under the Medicare DME benefit</td><td>Supply allowance is denied per LCD L33822 regardless of clinical picture &mdash; a DME-classified receiver or pump has to be in active use</td></tr>
-        <tr><td>Hybrid closed-loop, tubed pump (e.g., pump with integrated non-adjunctive or adjunctive CGM)</td><td>Medicare Part B DME &mdash; E0784 + E2103 or E0784 + E2102</td><td>Pump LCD and CGM LCD criteria are evaluated independently; one half can pay while the other denies</td></tr>
-        <tr><td>Hybrid closed-loop, tubeless pump (Omnipod 5)</td><td>Medicare Part D &mdash; pharmacy benefit</td><td>Follows the Omnipod pathway, not the DME dual-LCD framework; confirm current formulary and prior-authorization terms with the specific Part D plan</td></tr>
-        <tr><td>Commercial/Medicaid CGM, pharmacy-dispensed</td><td>Plan-specific &mdash; commonly the pharmacy benefit</td><td>⚠️ Verify with the specific payer; not a CMS-defined rule outside Medicare</td></tr>
-        <tr><td>Commercial/Medicaid CGM, DME-supplier-dispensed</td><td>Plan-specific &mdash; commonly the medical/DME benefit</td><td>⚠️ Verify with the specific payer; dispensing channel and benefit routing can move independently of the device model</td></tr>
+        <tr><td>Tubed insulin pump (Tandem, Medtronic)</td><td>Medicare Part B DME, E0784 + A4224/A4225</td><td>Requires C-peptide/autoantibody, HbA1c, and injection-history documentation; DME supplier enrollment required to bill</td></tr>
+        <tr><td>Omnipod (tubeless, disposable pod)</td><td>Medicare Part D, pharmacy benefit</td><td>Prescription-based, typically pharmacy-dispensed; never billed as E0784; no DME supplier enrollment needed for the dispensing entity</td></tr>
+        <tr><td>Standalone therapeutic CGM (Dexcom, Libre reader, Medtronic Guardian)</td><td>Medicare Part B DME, E2103 (or E2102 if adjunctive) + A4239/A4238</td><td>Insulin-treated (KX) or problematic-hypoglycemia (KS) pathway must be documented and dated; 6-month follow-up required to sustain the supply allowance</td></tr>
+        <tr><td>CGM read only via smartphone app, no DME receiver ever used</td><td>Not covered under the Medicare DME benefit</td><td>Supply allowance is denied per LCD L33822 regardless of clinical picture, a DME-classified receiver or pump has to be in active use</td></tr>
+        <tr><td>Hybrid closed-loop, tubed pump (e.g., pump with integrated non-adjunctive or adjunctive CGM)</td><td>Medicare Part B DME, E0784 + E2103 or E0784 + E2102</td><td>Pump LCD and CGM LCD criteria are evaluated independently; one half can pay while the other denies</td></tr>
+        <tr><td>Hybrid closed-loop, tubeless pump (Omnipod 5)</td><td>Medicare Part D, pharmacy benefit</td><td>Follows the Omnipod pathway, not the DME dual-LCD framework; confirm current formulary and prior-authorization terms with the specific Part D plan</td></tr>
+        <tr><td>Commercial/Medicaid CGM, pharmacy-dispensed</td><td>Plan-specific, commonly the pharmacy benefit</td><td>⚠️ Verify with the specific payer; not a CMS-defined rule outside Medicare</td></tr>
+        <tr><td>Commercial/Medicaid CGM, DME-supplier-dispensed</td><td>Plan-specific, commonly the medical/DME benefit</td><td>⚠️ Verify with the specific payer; dispensing channel and benefit routing can move independently of the device model</td></tr>
       </tbody>
     </table>
   </div>
 
   <h2>Where these claims actually die</h2>
-  <p>The single most common denial pattern on CGM and pump claims isn't a medical-necessity determination at all &mdash; it's an administrative mismatch that never reaches clinical review.</p>
+  <p>The single most common denial pattern on CGM and pump claims isn't a medical-necessity determination at all, it's an administrative mismatch that never reaches clinical review.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Check before submitting</div><ul>
-      <li>Confirm which benefit the specific device and specific plan route through before the claim is built &mdash; a benefit-eligibility check, not an assumption carried over from the last patient.</li>
+      <li>Confirm which benefit the specific device and specific plan route through before the claim is built, a benefit-eligibility check, not an assumption carried over from the last patient.</li>
       <li>Confirm the CGM pathway (insulin-treated vs. problematic hypoglycemia) is documented with a dated, scored event, and that KX or KS matches it.</li>
       <li>Confirm the billing entity's DME supplier enrollment and PDAC classification cover the exact device model before it ships.</li>
       <li>For hybrid closed-loop systems, confirm both the pump criteria and the CGM criteria independently, not just one.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Common mistakes</div><ul>
-      <li>Billing E0784 for Omnipod, or routing a tubed pump order through a pharmacy benefit &mdash; both are wrong-benefit denials, not appealable coverage disputes.</li>
+      <li>Billing E0784 for Omnipod, or routing a tubed pump order through a pharmacy benefit, both are wrong-benefit denials, not appealable coverage disputes.</li>
       <li>Submitting a CGM claim with a narrative like "poor control" instead of a dated level 2 or level 3 hypoglycemic event.</li>
       <li>Billing DMEPOS codes under a group NPI that only carries standard Part B physician enrollment.</li>
       <li>Assuming a hybrid closed-loop system's pump approval automatically covers its integrated CGM component.</li>
@@ -303,9 +358,9 @@
   <h2>Worked example: routing a new CGM patient correctly</h2>
   <p>A patient with type 2 diabetes, not on insulin, presents with a documented emergency-department visit for hypoglycemia requiring glucagon administered by a family member. The practice wants to start a CGM. Here's the pathway determination, in order:</p>
   <ul class="check-list">
-    <li><span class="check">1</span><span><b>Confirm the payer.</b> Traditional Medicare means the CGM device itself is always Part B DME &mdash; there's no Part D branch to consider for the hardware. A Medicare Advantage or commercial plan means calling to confirm whether this specific plan routes this specific device through pharmacy or medical/DME before anything is ordered.</span></li>
-    <li><span class="check">2</span><span><b>Identify the clinical pathway.</b> This patient isn't insulin-treated, so the insulin pathway (KX) doesn't apply. The ED visit requiring third-party glucagon administration is a level 3 hypoglycemic event &mdash; that satisfies the problematic-hypoglycemia pathway (KS) on its own, with no requirement to also show a failed medication adjustment first, the way the recurrent-level-2 route does.</span></li>
-    <li><span class="check">3</span><span><b>Document the qualifying visit.</b> An in-person or telehealth visit within 6 months of ordering the device, with the ED event, the date, and the diabetes treatment plan clearly stated &mdash; not just referenced.</span></li>
+    <li><span class="check">1</span><span><b>Confirm the payer.</b> Traditional Medicare means the CGM device itself is always Part B DME, there's no Part D branch to consider for the hardware. A Medicare Advantage or commercial plan means calling to confirm whether this specific plan routes this specific device through pharmacy or medical/DME before anything is ordered.</span></li>
+    <li><span class="check">2</span><span><b>Identify the clinical pathway.</b> This patient isn't insulin-treated, so the insulin pathway (KX) doesn't apply. The ED visit requiring third-party glucagon administration is a level 3 hypoglycemic event, that satisfies the problematic-hypoglycemia pathway (KS) on its own, with no requirement to also show a failed medication adjustment first, the way the recurrent-level-2 route does.</span></li>
+    <li><span class="check">3</span><span><b>Document the qualifying visit.</b> An in-person or telehealth visit within 6 months of ordering the device, with the ED event, the date, and the diabetes treatment plan clearly stated, not just referenced.</span></li>
     <li><span class="check">4</span><span><b>Confirm the billing entity.</b> If the practice is not an enrolled, accredited DME supplier, the order routes to one that is, with the practice's documentation traveling with it.</span></li>
     <li><span class="check">5</span><span><b>Select the code and modifiers.</b> Most current CGM models are non-adjunctive: E2103 for the device, A4239 for the supply allowance, KS instead of KX, CG once all LCD criteria are confirmed met, and KF only if the PDAC's Product Classification List shows that specific model as FDA Class III.</span></li>
     <li><span class="check">6</span><span><b>Calendar the 6-month follow-up</b> before the first supply shipment goes out, since a missed adherence visit is what turns a paid initial claim into a denied continuation.</span></li>
@@ -321,15 +376,15 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Does Medicare ever cover a CGM under Part D instead of Part B?</summary><p>No. Under traditional Medicare, a therapeutic CGM (Dexcom, FreeStyle Libre, Medtronic Guardian) is covered exclusively as durable medical equipment under Part B, per LCD L33822 and its Policy Article A52464 &mdash; there is no Part D pathway for the CGM device or its sensors and transmitters. The device-versus-drug split that puts some insulin pumps on Part D doesn't apply to CGM hardware; if a Medicare Advantage or standalone Part D plan tries to route a CGM claim through the pharmacy benefit, that's a plan-specific administrative choice layered on top of the underlying Part B benefit category, not a change to what Original Medicare covers.</p></details>
-    <details class="faq-item"><summary>Why does Omnipod bill differently from other insulin pumps?</summary><p>Because it has no durable, reusable component. E0784 and the DME benefit exist for equipment a patient uses repeatedly &mdash; a tubed pump like a Tandem or Medtronic device is billed, and often rented, as durable equipment for exactly that reason. Omnipod's pod is disposable and replaced every few days with nothing durable left behind, so CMS made Omnipod available through the Medicare Part D pharmacy benefit instead of Part B DME. A claim for Omnipod submitted under E0784 will be denied &mdash; it has to go through the pharmacy benefit as a prescription, not through a DME supplier as equipment.</p></details>
-    <details class="faq-item"><summary>What's the difference between adjunctive and non-adjunctive CGM billing?</summary><p>Adjunctive CGMs (billed E2102, with supply allowance A4238) require the patient to confirm a glucose reading with a fingerstick blood glucose test before making a treatment decision like an insulin dose; non-adjunctive CGMs (billed E2103, with supply allowance A4239) are accurate enough to support treatment decisions on their own. Most CGMs Medicare covers today are non-adjunctive and bill under E2103/A4239. The distinction also drives the KF modifier: it's required on every E2102/A4238 claim because adjunctive systems are FDA Class III, and it's required on an E2103/A4239 claim only when that specific device is also FDA Class III &mdash; check the specific model against the PDAC's Product Classification List rather than assuming by code alone.</p></details>
-    <details class="faq-item"><summary>Can a physician practice bill CGM codes without DME supplier enrollment?</summary><p>No. E2102, E2103, E0784, and their supply codes are DMEPOS codes, and Medicare will only pay them to a billing entity enrolled as a DME supplier &mdash; a separate enrollment track from a physician's standard Part B enrollment, requiring its own CMS-855S application to a National Provider Enrollment (NPE) contractor, a $50,000 surety bond per NPI, and accreditation by a CMS-approved accreditation organization. A practice that isn't enrolled this way can prescribe a CGM or pump, but it has to route the order to a contracted DME supplier or pharmacy to bill it &mdash; attempting to bill these codes under the practice's regular group NPI results in an enrollment-mismatch denial, not a coverage denial.</p></details>
+    <details class="faq-item"><summary>Does Medicare ever cover a CGM under Part D instead of Part B?</summary><p>No. Under traditional Medicare, a therapeutic CGM (Dexcom, FreeStyle Libre, Medtronic Guardian) is covered exclusively as durable medical equipment under Part B, per LCD L33822 and its Policy Article A52464, there is no Part D pathway for the CGM device or its sensors and transmitters. The device-versus-drug split that puts some insulin pumps on Part D doesn't apply to CGM hardware; if a Medicare Advantage or standalone Part D plan tries to route a CGM claim through the pharmacy benefit, that's a plan-specific administrative choice layered on top of the underlying Part B benefit category, not a change to what Original Medicare covers.</p></details>
+    <details class="faq-item"><summary>Why does Omnipod bill differently from other insulin pumps?</summary><p>Because it has no durable, reusable component. E0784 and the DME benefit exist for equipment a patient uses repeatedly, a tubed pump like a Tandem or Medtronic device is billed, and often rented, as durable equipment for exactly that reason. Omnipod's pod is disposable and replaced every few days with nothing durable left behind, so CMS made Omnipod available through the Medicare Part D pharmacy benefit instead of Part B DME. A claim for Omnipod submitted under E0784 will be denied, it has to go through the pharmacy benefit as a prescription, not through a DME supplier as equipment.</p></details>
+    <details class="faq-item"><summary>What's the difference between adjunctive and non-adjunctive CGM billing?</summary><p>Adjunctive CGMs (billed E2102, with supply allowance A4238) require the patient to confirm a glucose reading with a fingerstick blood glucose test before making a treatment decision like an insulin dose; non-adjunctive CGMs (billed E2103, with supply allowance A4239) are accurate enough to support treatment decisions on their own. Most CGMs Medicare covers today are non-adjunctive and bill under E2103/A4239. The distinction also drives the KF modifier: it's required on every E2102/A4238 claim because adjunctive systems are FDA Class III, and it's required on an E2103/A4239 claim only when that specific device is also FDA Class III, check the specific model against the PDAC's Product Classification List rather than assuming by code alone.</p></details>
+    <details class="faq-item"><summary>Can a physician practice bill CGM codes without DME supplier enrollment?</summary><p>No. E2102, E2103, E0784, and their supply codes are DMEPOS codes, and Medicare will only pay them to a billing entity enrolled as a DME supplier, a separate enrollment track from a physician's standard Part B enrollment, requiring its own CMS-855S application to a National Provider Enrollment (NPE) contractor, a $50,000 surety bond per NPI, and accreditation by a CMS-approved accreditation organization. A practice that isn't enrolled this way can prescribe a CGM or pump, but it has to route the order to a contracted DME supplier or pharmacy to bill it, attempting to bill these codes under the practice's regular group NPI results in an enrollment-mismatch denial, not a coverage denial.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. HCPCS codes, LCD coverage criteria, DMEPOS enrollment requirements, and payer-specific benefit routing change, including annual code-set updates. This page reflects standard industry practice and the DME MAC coverage policy in effect at the time of writing &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current version of the applicable LCD. Confirm requirements against your specific payer mix and MAC jurisdiction before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. HCPCS codes, LCD coverage criteria, DMEPOS enrollment requirements, and payer-specific benefit routing change, including annual code-set updates. This page reflects standard industry practice and the DME MAC coverage policy in effect at the time of writing, it is not a substitute for your own compliance review, your current payer contracts, or the current version of the applicable LCD. Confirm requirements against your specific payer mix and MAC jurisdiction before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -342,62 +397,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 30 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>

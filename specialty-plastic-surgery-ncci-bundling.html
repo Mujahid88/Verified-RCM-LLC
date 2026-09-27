@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Plastic Surgery NCCI Edits and MUE Limits: Bundling Rules Explained | Verified RCM">
 <meta name="twitter:description" content="Plastic surgery NCCI edits and MUE limits: closure bundling into excision, flap, and graft codes, PTP edits vs. the Multiple Procedure Payment Reduction, and global-period revision rules explained.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Plastic Surgery","item":"https://www.verifiedrcm.com/specialty-plastic-surgery.html"},{"@type":"ListItem","position":4,"name":"NCCI edits and bundling","item":"https://www.verifiedrcm.com/specialty-plastic-surgery-ncci-bundling.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is simple closure ever separately billable with an excision, flap, or graft code in plastic surgery?","acceptedAnswer":{"@type":"Answer","text":"No. A single-layer, simple closure is bundled into every excision, adjacent tissue transfer, and skin graft code's own valuation — that's a CPT surgical-package rule, not a bypassable NCCI edit, so no modifier changes it. Intermediate (12031-12057) or complex (13100-13153) closure can be separately reportable, but only when the primary code's own descriptor doesn't already fold that complexity in. Adjacent tissue transfer codes (14000-14302) are the exception that trips people up: CPT does not allow any repair code, simple through complex, alongside them, because the flap or rearrangement itself is the closure."}},{"@type":"Question","name":"Is the payment reduction on a second procedure in the same operative session — like a breast reconstruction stage plus a symmetry procedure — an NCCI edit we can appeal?","acceptedAnswer":{"@type":"Answer","text":"Usually not, and appealing it as one wastes staff time. Medicare's multiple-procedure payment reduction, which pays the highest-valued procedure at 100% and ranks the rest down (typically 50% for the second through fifth), is a separate payment mechanism from the NCCI Procedure-to-Procedure edit file. It has no modifier indicator to look up and no bypass modifier, because it isn't disallowing the second procedure — it's adjusting the payment amount for genuinely separate, correctly reported services performed the same session. A true NCCI PTP edit between two codes is a different question entirely, with its own indicator."}},{"@type":"Question","name":"Can we bill a scar revision separately during the 90-day global period of the original reconstruction?","acceptedAnswer":{"@type":"Answer","text":"Depends entirely on why the revision is happening, and this is a global-surgery-package question, not an NCCI PTP question. A revision planned at the time of the original operation, or clearly staged as part of the reconstruction, reports with modifier 58 and its own payment. An unplanned return to the operating room to treat a complication of the original surgery reports with modifier 78, typically at a reduced intraoperative-only rate, and doesn't reset the global clock. A procedure addressing a genuinely new, unrelated problem reports with modifier 79 and starts its own global period. Billing a revision with no modifier during an active global period, or with 59 instead of the correct global-period modifier, denies as included in the original procedure regardless of medical necessity."}},{"@type":"Question","name":"Does the anesthesiologist's or facility's billing create an NCCI problem on the surgeon's own claim?","acceptedAnswer":{"@type":"Answer","text":"No, for two separate reasons. First, anesthesia and facility charges are billed on entirely separate claims by separate billing entities — they don't share a claim with the surgeon's CPT codes, so they can't trigger a Procedure-to-Procedure edit against them. Second, the one place NCCI does touch anesthesia is a Policy Manual rule, not a PTP pair: a surgeon generally cannot separately report an anesthesia service (CPT 00100-01999) for a procedure they are also performing. That's a restriction on the surgeon reporting anesthesia codes for their own case, not a bundling edit against the anesthesiologist's independent claim."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is simple closure ever separately billable with an excision, flap, or graft code in plastic surgery?","acceptedAnswer":{"@type":"Answer","text":"No. A single-layer, simple closure is bundled into every excision, adjacent tissue transfer, and skin graft code's own valuation, that's a CPT surgical-package rule, not a bypassable NCCI edit, so no modifier changes it. Intermediate (12031-12057) or complex (13100-13153) closure can be separately reportable, but only when the primary code's own descriptor doesn't already fold that complexity in. Adjacent tissue transfer codes (14000-14302) are the exception that trips people up: CPT does not allow any repair code, simple through complex, alongside them, because the flap or rearrangement itself is the closure."}},{"@type":"Question","name":"Is the payment reduction on a second procedure in the same operative session, like a breast reconstruction stage plus a symmetry procedure, an NCCI edit we can appeal?","acceptedAnswer":{"@type":"Answer","text":"Usually not, and appealing it as one wastes staff time. Medicare's multiple-procedure payment reduction, which pays the highest-valued procedure at 100% and ranks the rest down (typically 50% for the second through fifth), is a separate payment mechanism from the NCCI Procedure-to-Procedure edit file. It has no modifier indicator to look up and no bypass modifier, because it isn't disallowing the second procedure, it's adjusting the payment amount for genuinely separate, correctly reported services performed the same session. A true NCCI PTP edit between two codes is a different question entirely, with its own indicator."}},{"@type":"Question","name":"Can we bill a scar revision separately during the 90-day global period of the original reconstruction?","acceptedAnswer":{"@type":"Answer","text":"Depends entirely on why the revision is happening, and this is a global-surgery-package question, not an NCCI PTP question. A revision planned at the time of the original operation, or clearly staged as part of the reconstruction, reports with modifier 58 and its own payment. An unplanned return to the operating room to treat a complication of the original surgery reports with modifier 78, typically at a reduced intraoperative-only rate, and doesn't reset the global clock. A procedure addressing a genuinely new, unrelated problem reports with modifier 79 and starts its own global period. Billing a revision with no modifier during an active global period, or with 59 instead of the correct global-period modifier, denies as included in the original procedure regardless of medical necessity."}},{"@type":"Question","name":"Does the anesthesiologist's or facility's billing create an NCCI problem on the surgeon's own claim?","acceptedAnswer":{"@type":"Answer","text":"No, for two separate reasons. First, anesthesia and facility charges are billed on entirely separate claims by separate billing entities, they don't share a claim with the surgeon's CPT codes, so they can't trigger a Procedure-to-Procedure edit against them. Second, the one place NCCI does touch anesthesia is a Policy Manual rule, not a PTP pair: a surgeon generally cannot separately report an anesthesia service (CPT 00100-01999) for a procedure they are also performing. That's a restriction on the surgeon reporting anesthesia codes for their own case, not a bundling edit against the anesthesiologist's independent claim."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 30 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 30 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 30 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-plastic-surgery.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete plastic surgery guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of two mirrored curved forms meeting at a central sutured seam, representing plastic and reconstructive surgery">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-plastic-surgery.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete plastic surgery guide</a>
+      <h1>Plastic surgery NCCI edits and bundling: the complete guide.</h1>
+      <p class="lede">Plastic surgery bundling denials cluster around a handful of recurring fights: whether a closure is really separate from the flap or excision that created the wound, whether a second procedure in the same session is a genuine NCCI edit or a completely different payment-reduction mechanism, and whether a revision belongs to the original operation's global period or stands on its own. This guide works through all four, closure bundling, multi-procedure sessions, global-period revisions, and the anesthesia/facility distinction, with the modifier-indicator and MAI framework you need before deciding whether a denial is worth appealing.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-plastic-surgery.html">NCCI edits and bundling guide for plastic surgery</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of two mirrored curved forms meeting at a central sutured seam, representing plastic and reconstructive surgery">
   <path d="M165,90 C95,175 95,305 165,390" fill="none" stroke="var(--muted)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
   <path d="M320,95 C395,170 390,310 315,385" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
   <path d="M195,110 C140,170 140,310 195,370" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
@@ -184,92 +240,91 @@
   <circle cx="240" cy="130" r="4" fill="var(--cat-surgical)" />
   <circle cx="240" cy="350" r="4" fill="var(--cat-surgical)" />
 </svg></figure>
-  <h1>Plastic surgery NCCI edits and bundling: the complete guide.</h1>
-  <p class="lede">Plastic surgery bundling denials cluster around a handful of recurring fights: whether a closure is really separate from the flap or excision that created the wound, whether a second procedure in the same session is a genuine NCCI edit or a completely different payment-reduction mechanism, and whether a revision belongs to the original operation's global period or stands on its own. This guide works through all four &mdash; closure bundling, multi-procedure sessions, global-period revisions, and the anesthesia/facility distinction &mdash; with the modifier-indicator and MAI framework you need before deciding whether a denial is worth appealing.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-plastic-surgery.html">NCCI edits and bundling guide for plastic surgery</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Simple closure is never separately billable with the procedure that created the wound.</b> That's a CPT surgical-package rule built into every excision, flap, and graft code's own valuation &mdash; not an NCCI edit with a modifier to appeal around.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A reduced payment on a second same-session procedure often isn't an NCCI edit at all.</b> The Multiple Procedure Payment Reduction is a separate mechanism with no modifier indicator and no bypass modifier &mdash; confusing it with a PTP edit leads to appeals that were never appealable in the first place.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A revision inside the 90-day global period needs modifier 58, 78, or 79 &mdash; not 59.</b> The global surgery package, not the NCCI PTP file, decides whether that revision is separately payable.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Check the modifier indicator, then the MAI, before writing any bundling appeal.</b> Indicator 0 and MAI 2 both mean stop &mdash; and both are quarterly-changing CMS values, not something to memorize once.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Simple closure is never separately billable with the procedure that created the wound.</b> That's a CPT surgical-package rule built into every excision, flap, and graft code's own valuation, not an NCCI edit with a modifier to appeal around.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A reduced payment on a second same-session procedure often isn't an NCCI edit at all.</b> The Multiple Procedure Payment Reduction is a separate mechanism with no modifier indicator and no bypass modifier, confusing it with a PTP edit leads to appeals that were never appealable in the first place.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A revision inside the 90-day global period needs modifier 58, 78, or 79, not 59.</b> The global surgery package, not the NCCI PTP file, decides whether that revision is separately payable.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Check the modifier indicator, then the MAI, before writing any bundling appeal.</b> Indicator 0 and MAI 2 both mean stop, and both are quarterly-changing CMS values, not something to memorize once.</span></li>
     </ul>
   </section>
 
   <h2>The two indicators that decide every bundling fight</h2>
-  <p>Two CMS-published values control whether a plastic surgery code pair or a unit-capped code is billable at all, and neither is something you infer from how the operative note reads &mdash; both are specific, quarterly-updated values attached to the exact codes on the claim.</p>
+  <p>Two CMS-published values control whether a plastic surgery code pair or a unit-capped code is billable at all, and neither is something you infer from how the operative note reads, both are specific, quarterly-updated values attached to the exact codes on the claim.</p>
   <p><b>The NCCI Procedure-to-Procedure modifier indicator</b>, attached to a Column 1/Column 2 code pair:</p>
   <ul class="check-list">
-    <li><span class="warn">0</span><span><b>Never bypassable.</b> The Column 2 code is not separately payable under any circumstances &mdash; no modifier, however well the operative note documents a distinct site or session, changes that.</span></li>
-    <li><span class="check">1</span><span><b>Bypassable with documentation.</b> An NCCI-associated modifier (59 or the specific X{EPSU} modifier) can override the edit, but only when the record genuinely shows the second service was separate &mdash; a different lesion, a different anatomic site, a distinct session.</span></li>
+    <li><span class="warn">0</span><span><b>Never bypassable.</b> The Column 2 code is not separately payable under any circumstances, no modifier, however well the operative note documents a distinct site or session, changes that.</span></li>
+    <li><span class="check">1</span><span><b>Bypassable with documentation.</b> An NCCI-associated modifier (59 or the specific X{EPSU} modifier) can override the edit, but only when the record genuinely shows the second service was separate, a different lesion, a different anatomic site, a distinct session.</span></li>
     <li><span class="check">9</span><span><b>Edit deleted.</b> The pair no longer applies; don't build a scrubber rule around a stale indicator value from an old edit file.</span></li>
   </ul>
   <p><b>The MUE Adjudication Indicator (MAI)</b>, attached to a per-code, per-day unit cap:</p>
   <ul class="check-list">
-    <li><span class="check">1</span><span><b>Claim-line edit.</b> Units above the cap deny that line, but a genuinely repeated service &mdash; multiple lesions excised, for instance &mdash; can often be split across lines with the correct modifier and still pay.</span></li>
-    <li><span class="warn">2</span><span><b>Absolute, date-of-service edit.</b> CMS treats exceeding it as clinically implausible for that code, based on anatomy or the code's own definition. There's no appeal path &mdash; confirm the MAI before staff spend time writing one.</span></li>
+    <li><span class="check">1</span><span><b>Claim-line edit.</b> Units above the cap deny that line, but a genuinely repeated service, multiple lesions excised, for instance, can often be split across lines with the correct modifier and still pay.</span></li>
+    <li><span class="warn">2</span><span><b>Absolute, date-of-service edit.</b> CMS treats exceeding it as clinically implausible for that code, based on anatomy or the code's own definition. There's no appeal path, confirm the MAI before staff spend time writing one.</span></li>
     <li><span class="check">3</span><span><b>Appealable, date-of-service edit.</b> A real path exists when documentation shows the excess units reflect genuinely distinct, medically necessary work, and a MAC may pay units above the value on appeal.</span></li>
   </ul>
-  <p>⚠️ This build could not retrieve the specific NCCI PTP modifier indicator or MUE/MAI value for any individual plastic surgery code pair directly from CMS's primary edit files during research (the NCCI PTP and MUE files are large, quarterly-refreshed downloads, not a queryable API, and general web search doesn't surface a single pair's current indicator reliably). The structural rules in the sections below hold independent of those values &mdash; they follow from CPT's own code descriptors and surgical-package conventions, not from a Column 1/Column 2 lookup. Wherever a specific indicator or MAI value would matter to a scrubber rule, it's flagged below; confirm the current value in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> or the current MUE table before building it into a permanent rule, since both refresh every quarter and a value that was accurate last quarter can be deleted or changed the next.</p>
+  <p>⚠️ This build could not retrieve the specific NCCI PTP modifier indicator or MUE/MAI value for any individual plastic surgery code pair directly from CMS's primary edit files during research (the NCCI PTP and MUE files are large, quarterly-refreshed downloads, not a queryable API, and general web search doesn't surface a single pair's current indicator reliably). The structural rules in the sections below hold independent of those values, they follow from CPT's own code descriptors and surgical-package conventions, not from a Column 1/Column 2 lookup. Wherever a specific indicator or MAI value would matter to a scrubber rule, it's flagged below; confirm the current value in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> or the current MUE table before building it into a permanent rule, since both refresh every quarter and a value that was accurate last quarter can be deleted or changed the next.</p>
 
   <h2>Closure codes bundled into the primary excision or reconstruction procedure</h2>
-  <p>This is the bundling question plastic surgery runs into more than any other specialty, because closure complexity is often the clinical reason the case was referred to a plastic surgeon in the first place &mdash; and it's frequently misfiled as an NCCI question when it's really a CPT surgical-package rule that applies whether or not the pair even appears in the PTP file.</p>
-  <p>The baseline rule: a simple, single-layer closure is included in the work value of the procedure that created the defect. That holds for a straightforward lesion excision (11400&ndash;11646), and it holds just as firmly for the reconstructive codes plastic surgery bills constantly. Intermediate repair (12031&ndash;12057) and complex repair (13100&ndash;13153) can be separately reportable, but only when the primary code's own descriptor doesn't already fold that level of closure in &mdash; and several of the codes plastic surgeons use most, adjacent tissue transfer and skin grafting, fold in more than people expect.</p>
+  <p>This is the bundling question plastic surgery runs into more than any other specialty, because closure complexity is often the clinical reason the case was referred to a plastic surgeon in the first place, and it's frequently misfiled as an NCCI question when it's really a CPT surgical-package rule that applies whether or not the pair even appears in the PTP file.</p>
+  <p>The baseline rule: a simple, single-layer closure is included in the work value of the procedure that created the defect. That holds for a straightforward lesion excision (11400&ndash;11646), and it holds just as firmly for the reconstructive codes plastic surgery bills constantly. Intermediate repair (12031&ndash;12057) and complex repair (13100&ndash;13153) can be separately reportable, but only when the primary code's own descriptor doesn't already fold that level of closure in, and several of the codes plastic surgeons use most, adjacent tissue transfer and skin grafting, fold in more than people expect.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Closure bundling by plastic surgery procedure type. "Bundled" means no repair code of any complexity is separately reportable with that primary code.</caption>
       <thead><tr><th scope="col">Primary procedure</th><th scope="col">Simple (one-layer) closure</th><th scope="col">Intermediate/complex closure</th></tr></thead>
       <tbody>
-        <tr><td>Lesion excision, benign/malignant (<code>11400&ndash;11646</code>)</td><td>Bundled &mdash; never separately billable</td><td>Separately billable with <code>12031&ndash;12057</code> or <code>13100&ndash;13153</code> when the repair genuinely exceeds simple closure</td></tr>
-        <tr><td>Adjacent tissue transfer/rearrangement &mdash; Z-plasty, W-plasty, V-Y, rotation or advancement flap (<code>14000&ndash;14302</code>)</td><td>Bundled &mdash; the flap is the closure</td><td>Bundled. CPT does not permit any repair code, simple through complex, alongside these codes; the excision that created the defect is bundled in as well.</td></tr>
-        <tr><td>Split- or full-thickness skin graft, recipient site (<code>15100&ndash;15278</code>)</td><td>Bundled &mdash; graft take is inherent to the code</td><td>Not applicable to the recipient site under the graft code itself</td></tr>
-        <tr><td>Skin graft donor site closure</td><td>Bundled if closed in a single layer</td><td>⚠️ Separately billable with <code>12031&ndash;12057</code>/<code>13100&ndash;13153</code> when the donor site itself needed intermediate or complex closure &mdash; confirm the current CPT parenthetical note for the specific graft code before billing, since not every graft code's instructional note reads identically</td></tr>
+        <tr><td>Lesion excision, benign/malignant (<code>11400&ndash;11646</code>)</td><td>Bundled, never separately billable</td><td>Separately billable with <code>12031&ndash;12057</code> or <code>13100&ndash;13153</code> when the repair genuinely exceeds simple closure</td></tr>
+        <tr><td>Adjacent tissue transfer/rearrangement, Z-plasty, W-plasty, V-Y, rotation or advancement flap (<code>14000&ndash;14302</code>)</td><td>Bundled, the flap is the closure</td><td>Bundled. CPT does not permit any repair code, simple through complex, alongside these codes; the excision that created the defect is bundled in as well.</td></tr>
+        <tr><td>Split- or full-thickness skin graft, recipient site (<code>15100&ndash;15278</code>)</td><td>Bundled, graft take is inherent to the code</td><td>Not applicable to the recipient site under the graft code itself</td></tr>
+        <tr><td>Skin graft donor site closure</td><td>Bundled if closed in a single layer</td><td>⚠️ Separately billable with <code>12031&ndash;12057</code>/<code>13100&ndash;13153</code> when the donor site itself needed intermediate or complex closure, confirm the current CPT parenthetical note for the specific graft code before billing, since not every graft code's instructional note reads identically</td></tr>
         <tr><td>Free flap/microvascular reconstruction (<code>15756&ndash;15758</code>)</td><td>Bundled at both the flap and donor sites for simple closure</td><td>⚠️ Separate reporting of donor-site complex closure is sometimes appropriate depending on donor site and payer policy; verify against the specific code's parenthetical and payer LCD before billing</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The adjacent tissue transfer row is the one that costs practices money in both directions. Some coders under-bill by assuming a Z-plasty or rotation flap needs an add-on repair code the way an excision might; it doesn't, because the code descriptor for 14000&ndash;14302 already represents the excision of the defect and its closure through the flap technique itself &mdash; billing an excision code or any repair code alongside it double-bills a single service. Others over-bill by billing the lesion excision that preceded the flap as its own line; that excision is included in the adjacent tissue transfer code whenever the two are performed as one planned procedure, regardless of whether the excision and the flap technically happened in sequence during the same operative session.</p>
-  <p>Skin graft donor sites work differently, and it's worth pulling the specific graft code's own parenthetical note rather than assuming one rule covers every graft code, because CPT's donor-site closure language isn't uniform across the 15002&ndash;15278 series. The safe default: a single-layer donor-site closure is never separately billable, and only a documented intermediate or complex donor-site repair &mdash; more suturing, more than one layer, genuinely more work than a simple closure &mdash; supports a separate repair line, and even then only when the specific graft code's guidance permits it.</p>
+  <p>The adjacent tissue transfer row is the one that costs practices money in both directions. Some coders under-bill by assuming a Z-plasty or rotation flap needs an add-on repair code the way an excision might; it doesn't, because the code descriptor for 14000&ndash;14302 already represents the excision of the defect and its closure through the flap technique itself, billing an excision code or any repair code alongside it double-bills a single service. Others over-bill by billing the lesion excision that preceded the flap as its own line; that excision is included in the adjacent tissue transfer code whenever the two are performed as one planned procedure, regardless of whether the excision and the flap technically happened in sequence during the same operative session.</p>
+  <p>Skin graft donor sites work differently, and it's worth pulling the specific graft code's own parenthetical note rather than assuming one rule covers every graft code, because CPT's donor-site closure language isn't uniform across the 15002&ndash;15278 series. The safe default: a single-layer donor-site closure is never separately billable, and only a documented intermediate or complex donor-site repair, more suturing, more than one layer, genuinely more work than a simple closure, supports a separate repair line, and even then only when the specific graft code's guidance permits it.</p>
 
   <h2>Multiple procedures, same session: NCCI PTP edit vs. Multiple Procedure Payment Reduction</h2>
-  <p>Plastic surgery routinely performs more than one billable procedure in a single operative session &mdash; a breast reconstruction stage alongside a contralateral symmetry procedure, a panniculectomy alongside abdominal-wall work, staged flap procedures in the same visit &mdash; and two entirely different Medicare mechanisms can reduce or deny the second line. Treating them as the same thing is the single most common reason a genuinely appealable line never gets appealed, and a genuinely non-appealable line gets an appeal letter written for it anyway.</p>
-  <p><b>A true NCCI PTP edit</b> is a Column 1/Column 2 pair with a modifier indicator attached. If the indicator is 0, the second code isn't payable no matter what; if it's 1, the pair can be unbundled with a modifier and documentation showing genuine separateness (different breast, different structure, different medically necessary reason). ⚠️ This build could not confirm the current modifier indicator for any specific breast reconstruction/symmetry-procedure pair (for example, a mastopexy or reduction mammaplasty code billed alongside an implant or flap reconstruction code) against CMS's live PTP file &mdash; some payer and coding-reference sources describe certain symmetry-procedure codes as already included within specific reconstruction code descriptors by CPT's own parenthetical instructions, which is a coding-selection question rather than a PTP edit, similar to the adjacent-tissue-transfer pattern above. Confirm both the CPT parenthetical for the specific codes involved and the current PTP indicator before billing or appealing a specific pair.</p>
-  <p><b>The Multiple Procedure Payment Reduction</b> is a different mechanism entirely, and it has no modifier indicator and no bypass modifier because it isn't disallowing anything &mdash; it's a payment-amount adjustment applied to correctly reported, genuinely separate procedures performed the same session by the same surgeon. Under Medicare's standard multiple-surgery payment rules, the highest-valued procedure pays at 100% of the fee schedule amount and subsequent procedures rank down from there (typically 50% for the second through fifth procedure, by report beyond that). A panniculectomy (<code>15830</code>) performed alongside separately reportable work in the same session, or a breast reconstruction stage genuinely billed alongside a distinct, separately payable procedure, can be subject to this ranked reduction on the lower-valued code without any NCCI edit being involved at all. Appealing a reduced-but-paid second-procedure line as though it were an NCCI denial wastes the appeal on a mechanism that was never disallowing the service &mdash; it was paying it, just at the ranked rate the multiple-surgery rules require.</p>
-  <p>Panniculectomy and abdominoplasty-adjacent work is worth calling out specifically because the coding relationship is well-documented and the payer-coverage relationship is not. CPT <code>+15847</code> (abdominoplasty component &mdash; umbilical transposition, fascial plication, or both) is an add-on code reported with <code>15830</code> and cannot stand alone. Where NCCI does create a genuine PTP pair is between <code>15830</code> and certain abdominal-wall hernia repair codes performed the same session; when both are medically necessary and distinct, modifier 59 on the appropriate code is what makes the pair separately payable, not a symmetry or payment-reduction argument. Separately, and this is a coverage question rather than a bundling question: most payers treat the abdominoplasty component itself as cosmetic even when it's performed at the same operation as a medically necessary panniculectomy, so 15830 may be covered while 15847 is denied on medical-necessity grounds regardless of how the NCCI and MPPR questions resolve. Confirm the patient's specific coverage policy before assuming 15847 will pay even when correctly coded and correctly modified.</p>
+  <p>Plastic surgery routinely performs more than one billable procedure in a single operative session, a breast reconstruction stage alongside a contralateral symmetry procedure, a panniculectomy alongside abdominal-wall work, staged flap procedures in the same visit, and two entirely different Medicare mechanisms can reduce or deny the second line. Treating them as the same thing is the single most common reason a genuinely appealable line never gets appealed, and a genuinely non-appealable line gets an appeal letter written for it anyway.</p>
+  <p><b>A true NCCI PTP edit</b> is a Column 1/Column 2 pair with a modifier indicator attached. If the indicator is 0, the second code isn't payable no matter what; if it's 1, the pair can be unbundled with a modifier and documentation showing genuine separateness (different breast, different structure, different medically necessary reason). ⚠️ This build could not confirm the current modifier indicator for any specific breast reconstruction/symmetry-procedure pair (for example, a mastopexy or reduction mammaplasty code billed alongside an implant or flap reconstruction code) against CMS's live PTP file, some payer and coding-reference sources describe certain symmetry-procedure codes as already included within specific reconstruction code descriptors by CPT's own parenthetical instructions, which is a coding-selection question rather than a PTP edit, similar to the adjacent-tissue-transfer pattern above. Confirm both the CPT parenthetical for the specific codes involved and the current PTP indicator before billing or appealing a specific pair.</p>
+  <p><b>The Multiple Procedure Payment Reduction</b> is a different mechanism entirely, and it has no modifier indicator and no bypass modifier because it isn't disallowing anything, it's a payment-amount adjustment applied to correctly reported, genuinely separate procedures performed the same session by the same surgeon. Under Medicare's standard multiple-surgery payment rules, the highest-valued procedure pays at 100% of the fee schedule amount and subsequent procedures rank down from there (typically 50% for the second through fifth procedure, by report beyond that). A panniculectomy (<code>15830</code>) performed alongside separately reportable work in the same session, or a breast reconstruction stage genuinely billed alongside a distinct, separately payable procedure, can be subject to this ranked reduction on the lower-valued code without any NCCI edit being involved at all. Appealing a reduced-but-paid second-procedure line as though it were an NCCI denial wastes the appeal on a mechanism that was never disallowing the service, it was paying it, just at the ranked rate the multiple-surgery rules require.</p>
+  <p>Panniculectomy and abdominoplasty-adjacent work is worth calling out specifically because the coding relationship is well-documented and the payer-coverage relationship is not. CPT <code>+15847</code> (abdominoplasty component, umbilical transposition, fascial plication, or both) is an add-on code reported with <code>15830</code> and cannot stand alone. Where NCCI does create a genuine PTP pair is between <code>15830</code> and certain abdominal-wall hernia repair codes performed the same session; when both are medically necessary and distinct, modifier 59 on the appropriate code is what makes the pair separately payable, not a symmetry or payment-reduction argument. Separately, and this is a coverage question rather than a bundling question: most payers treat the abdominoplasty component itself as cosmetic even when it's performed at the same operation as a medically necessary panniculectomy, so 15830 may be covered while 15847 is denied on medical-necessity grounds regardless of how the NCCI and MPPR questions resolve. Confirm the patient's specific coverage policy before assuming 15847 will pay even when correctly coded and correctly modified.</p>
 
   <h2>Revision and scar-repair procedures: global period vs. genuinely new problem</h2>
-  <p>A revision or scar-repair procedure performed after the index reconstruction runs on the global surgery package, not the NCCI PTP file &mdash; and the modifier that makes it payable depends entirely on why the revision is happening, not on how it's coded.</p>
+  <p>A revision or scar-repair procedure performed after the index reconstruction runs on the global surgery package, not the NCCI PTP file, and the modifier that makes it payable depends entirely on why the revision is happening, not on how it's coded.</p>
   <ul class="check-list">
-    <li><span class="check">58</span><span><b>Staged or planned procedure, same physician, during the postoperative period.</b> A revision anticipated at the time of the original operation &mdash; a planned second stage of a multi-stage reconstruction, for example &mdash; reports with modifier 58 and its own separate payment; it doesn't reset against the original procedure's global period.</span></li>
-    <li><span class="warn">78</span><span><b>Unplanned return to the operating room for a related complication.</b> Treating a complication of the index surgery &mdash; a hematoma evacuation, a flap compromise requiring return to the OR &mdash; reports with modifier 78, typically reimbursed at the intraoperative-services-only portion of the fee, and it does not restart the original global period.</span></li>
-    <li><span class="check">79</span><span><b>Unrelated procedure during the postoperative period.</b> A genuinely new, distinct problem &mdash; not a complication or a planned stage of the original work &mdash; reports with modifier 79, pays on its own terms at the full rate, and starts its own new global period.</span></li>
+    <li><span class="check">58</span><span><b>Staged or planned procedure, same physician, during the postoperative period.</b> A revision anticipated at the time of the original operation, a planned second stage of a multi-stage reconstruction, for example, reports with modifier 58 and its own separate payment; it doesn't reset against the original procedure's global period.</span></li>
+    <li><span class="warn">78</span><span><b>Unplanned return to the operating room for a related complication.</b> Treating a complication of the index surgery, a hematoma evacuation, a flap compromise requiring return to the OR, reports with modifier 78, typically reimbursed at the intraoperative-services-only portion of the fee, and it does not restart the original global period.</span></li>
+    <li><span class="check">79</span><span><b>Unrelated procedure during the postoperative period.</b> A genuinely new, distinct problem, not a complication or a planned stage of the original work, reports with modifier 79, pays on its own terms at the full rate, and starts its own new global period.</span></li>
   </ul>
-  <p>The recurring documentation failure is billing a revision with modifier 59 instead of 58/78/79, or with no modifier at all, while a global period is still active. Modifier 59 answers a completely different question &mdash; "these two codes on today's claim describe genuinely separate services" &mdash; and does nothing to establish why a procedure performed inside another procedure's global period should be separately payable at all. A scar revision billed with 59 during an active 90-day global period denies as included in the original surgery regardless of medical necessity, because the claims system is checking against the global surgery package, not a PTP pair. The fix is documentation that maps cleanly onto one of the three modifiers above: was this planned, is it treating a complication of the same surgery, or is it addressing something genuinely new. Notes that blend those three rationales together are the ones that get denied and then lose the appeal too.</p>
+  <p>The recurring documentation failure is billing a revision with modifier 59 instead of 58/78/79, or with no modifier at all, while a global period is still active. Modifier 59 answers a completely different question, "these two codes on today's claim describe genuinely separate services", and does nothing to establish why a procedure performed inside another procedure's global period should be separately payable at all. A scar revision billed with 59 during an active 90-day global period denies as included in the original surgery regardless of medical necessity, because the claims system is checking against the global surgery package, not a PTP pair. The fix is documentation that maps cleanly onto one of the three modifiers above: was this planned, is it treating a complication of the same surgery, or is it addressing something genuinely new. Notes that blend those three rationales together are the ones that get denied and then lose the appeal too.</p>
 
   <h2>Anesthesia and facility billing: a different claim, not a surgeon PTP issue</h2>
-  <p>Anesthesia and facility charges don't create an NCCI Procedure-to-Procedure problem on the surgeon's own claim, for a structural reason that's easy to lose track of when a denial letter references "bundling": they're billed on separate claims by separate billing entities entirely. The anesthesiologist or CRNA bills anesthesia time-based codes (the 00100&ndash;01999 series) under their own NPI; the facility bills its own claim for the OR, supplies, and recovery; the surgeon's claim carries only the surgical CPT codes. A PTP edit pair requires both codes to appear on the same claim by the same provider for the same beneficiary on the same date &mdash; anesthesia and facility codes structurally never meet that condition against the surgeon's own CPT codes, so there's no PTP pair to check an indicator for.</p>
-  <p>The one place anesthesia and surgical billing genuinely interact is a Policy Manual restriction, not a PTP edit: a surgeon generally cannot separately report an anesthesia code for a procedure they are personally performing, since the work of administering anesthesia for one's own case isn't a separately billable service distinct from the surgery itself. That's a restriction on what the surgeon can report under their own NPI, not a bundling relationship between the surgeon's claim and the anesthesiologist's independent claim. If a rheumatology- or orthopedics-style scrubber alert fires on an anesthesia code appearing alongside a surgical CPT code, the first question is whose claim it's actually on &mdash; a same-claim anesthesia code from the operating surgeon is the Policy Manual issue above, while a claim denial referencing the anesthesiologist's separate bill is virtually never an NCCI question on the surgeon's side at all.</p>
+  <p>Anesthesia and facility charges don't create an NCCI Procedure-to-Procedure problem on the surgeon's own claim, for a structural reason that's easy to lose track of when a denial letter references "bundling": they're billed on separate claims by separate billing entities entirely. The anesthesiologist or CRNA bills anesthesia time-based codes (the 00100&ndash;01999 series) under their own NPI; the facility bills its own claim for the OR, supplies, and recovery; the surgeon's claim carries only the surgical CPT codes. A PTP edit pair requires both codes to appear on the same claim by the same provider for the same beneficiary on the same date, anesthesia and facility codes structurally never meet that condition against the surgeon's own CPT codes, so there's no PTP pair to check an indicator for.</p>
+  <p>The one place anesthesia and surgical billing genuinely interact is a Policy Manual restriction, not a PTP edit: a surgeon generally cannot separately report an anesthesia code for a procedure they are personally performing, since the work of administering anesthesia for one's own case isn't a separately billable service distinct from the surgery itself. That's a restriction on what the surgeon can report under their own NPI, not a bundling relationship between the surgeon's claim and the anesthesiologist's independent claim. If a rheumatology- or orthopedics-style scrubber alert fires on an anesthesia code appearing alongside a surgical CPT code, the first question is whose claim it's actually on, a same-claim anesthesia code from the operating surgeon is the Policy Manual issue above, while a claim denial referencing the anesthesiologist's separate bill is virtually never an NCCI question on the surgeon's side at all.</p>
 
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Check whether a "bundling" denial is a coding-selection error (a repair code with adjacent tissue transfer, a symmetry code already in a reconstruction descriptor) before assuming it's a Column 1/Column 2 edit.</li>
-      <li>Distinguish a genuine NCCI PTP edit from the Multiple Procedure Payment Reduction before writing any appeal &mdash; only the first has an indicator and a bypass modifier.</li>
+      <li>Distinguish a genuine NCCI PTP edit from the Multiple Procedure Payment Reduction before writing any appeal, only the first has an indicator and a bypass modifier.</li>
       <li>Match the revision modifier (58/78/79) to the actual clinical reason for the return, not to whatever gets the claim to pay.</li>
       <li>Confirm the modifier indicator and MAI in the current CMS files before building either into a standing scrubber rule.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Don't</div><ul>
-      <li>Don't bill any repair code, simple through complex, alongside an adjacent tissue transfer code &mdash; the flap technique is the closure.</li>
+      <li>Don't bill any repair code, simple through complex, alongside an adjacent tissue transfer code, the flap technique is the closure.</li>
       <li>Don't append modifier 59 to a revision inside an active global period hoping it substitutes for 58, 78, or 79.</li>
-      <li>Don't appeal a ranked-down multiple-surgery payment as though it were an NCCI denial &mdash; there's no indicator to cite because there's no PTP pair.</li>
+      <li>Don't appeal a ranked-down multiple-surgery payment as though it were an NCCI denial, there's no indicator to cite because there's no PTP pair.</li>
       <li>Don't assume 15847 pays just because 15830 was correctly coded and modified; verify medical-necessity coverage for the abdominoplasty component separately.</li>
     </ul></div>
   </div>
 
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Before routing a plastic surgery bundling denial to appeals, sort it into one of three buckets first: a coding-selection error (wrong code combination given what CPT's own descriptors already include), a payment-mechanism question (MPPR ranking rather than a PTP denial), or a global-period question (wrong or missing revision modifier). Only a fourth bucket &mdash; a true Column 1/Column 2 pair with a bypassable indicator and documentation to support it &mdash; is worth an appeal letter citing an NCCI indicator. Sorting first saves the appeals queue for the fights that can actually be won.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Before routing a plastic surgery bundling denial to appeals, sort it into one of three buckets first: a coding-selection error (wrong code combination given what CPT's own descriptors already include), a payment-mechanism question (MPPR ranking rather than a PTP denial), or a global-period question (wrong or missing revision modifier). Only a fourth bucket, a true Column 1/Column 2 pair with a bypassable indicator and documentation to support it, is worth an appeal letter citing an NCCI indicator. Sorting first saves the appeals queue for the fights that can actually be won.</p></div>
   </div>
 
   <div class="cta-band">
@@ -282,15 +337,15 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Is simple closure ever separately billable with an excision, flap, or graft code in plastic surgery?</summary><p>No. A single-layer, simple closure is bundled into every excision, adjacent tissue transfer, and skin graft code's own valuation &mdash; that's a CPT surgical-package rule, not a bypassable NCCI edit, so no modifier changes it. Intermediate (12031-12057) or complex (13100-13153) closure can be separately reportable, but only when the primary code's own descriptor doesn't already fold that complexity in. Adjacent tissue transfer codes (14000-14302) are the exception that trips people up: CPT does not allow any repair code, simple through complex, alongside them, because the flap or rearrangement itself is the closure.</p></details>
-    <details class="faq-item"><summary>Is the payment reduction on a second procedure in the same operative session &mdash; like a breast reconstruction stage plus a symmetry procedure &mdash; an NCCI edit we can appeal?</summary><p>Usually not, and appealing it as one wastes staff time. Medicare's multiple-procedure payment reduction, which pays the highest-valued procedure at 100% and ranks the rest down (typically 50% for the second through fifth), is a separate payment mechanism from the NCCI Procedure-to-Procedure edit file. It has no modifier indicator to look up and no bypass modifier, because it isn't disallowing the second procedure &mdash; it's adjusting the payment amount for genuinely separate, correctly reported services performed the same session. A true NCCI PTP edit between two codes is a different question entirely, with its own indicator.</p></details>
+    <details class="faq-item"><summary>Is simple closure ever separately billable with an excision, flap, or graft code in plastic surgery?</summary><p>No. A single-layer, simple closure is bundled into every excision, adjacent tissue transfer, and skin graft code's own valuation, that's a CPT surgical-package rule, not a bypassable NCCI edit, so no modifier changes it. Intermediate (12031-12057) or complex (13100-13153) closure can be separately reportable, but only when the primary code's own descriptor doesn't already fold that complexity in. Adjacent tissue transfer codes (14000-14302) are the exception that trips people up: CPT does not allow any repair code, simple through complex, alongside them, because the flap or rearrangement itself is the closure.</p></details>
+    <details class="faq-item"><summary>Is the payment reduction on a second procedure in the same operative session, like a breast reconstruction stage plus a symmetry procedure, an NCCI edit we can appeal?</summary><p>Usually not, and appealing it as one wastes staff time. Medicare's multiple-procedure payment reduction, which pays the highest-valued procedure at 100% and ranks the rest down (typically 50% for the second through fifth), is a separate payment mechanism from the NCCI Procedure-to-Procedure edit file. It has no modifier indicator to look up and no bypass modifier, because it isn't disallowing the second procedure, it's adjusting the payment amount for genuinely separate, correctly reported services performed the same session. A true NCCI PTP edit between two codes is a different question entirely, with its own indicator.</p></details>
     <details class="faq-item"><summary>Can we bill a scar revision separately during the 90-day global period of the original reconstruction?</summary><p>Depends entirely on why the revision is happening, and this is a global-surgery-package question, not an NCCI PTP question. A revision planned at the time of the original operation, or clearly staged as part of the reconstruction, reports with modifier 58 and its own payment. An unplanned return to the operating room to treat a complication of the original surgery reports with modifier 78, typically at a reduced intraoperative-only rate, and doesn't reset the global clock. A procedure addressing a genuinely new, unrelated problem reports with modifier 79 and starts its own global period. Billing a revision with no modifier during an active global period, or with 59 instead of the correct global-period modifier, denies as included in the original procedure regardless of medical necessity.</p></details>
-    <details class="faq-item"><summary>Does the anesthesiologist's or facility's billing create an NCCI problem on the surgeon's own claim?</summary><p>No, for two separate reasons. First, anesthesia and facility charges are billed on entirely separate claims by separate billing entities &mdash; they don't share a claim with the surgeon's CPT codes, so they can't trigger a Procedure-to-Procedure edit against them. Second, the one place NCCI does touch anesthesia is a Policy Manual rule, not a PTP pair: a surgeon generally cannot separately report an anesthesia service (CPT 00100-01999) for a procedure they are also performing. That's a restriction on the surgeon reporting anesthesia codes for their own case, not a bundling edit against the anesthesiologist's independent claim.</p></details>
+    <details class="faq-item"><summary>Does the anesthesiologist's or facility's billing create an NCCI problem on the surgeon's own claim?</summary><p>No, for two separate reasons. First, anesthesia and facility charges are billed on entirely separate claims by separate billing entities, they don't share a claim with the surgeon's CPT codes, so they can't trigger a Procedure-to-Procedure edit against them. Second, the one place NCCI does touch anesthesia is a Policy Manual rule, not a PTP pair: a surgeon generally cannot separately report an anesthesia service (CPT 00100-01999) for a procedure they are also performing. That's a restriction on the surgeon reporting anesthesia codes for their own case, not a bundling edit against the anesthesiologist's independent claim.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates and quarterly NCCI/MUE revisions. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Items flagged with ⚠️ above could not be independently confirmed against a live CMS source during this build; confirm them in the CMS NCCI PTP Edits Lookup Tool, the current MUE table, or your CPT Professional edition before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates and quarterly NCCI/MUE revisions. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Items flagged with ⚠️ above could not be independently confirmed against a live CMS source during this build; confirm them in the CMS NCCI PTP Edits Lookup Tool, the current MUE table, or your CPT Professional edition before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -303,62 +358,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 30 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>
