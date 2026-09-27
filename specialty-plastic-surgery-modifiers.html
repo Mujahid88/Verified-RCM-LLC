@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Plastic Surgery Billing Modifiers: 22, 58, 78, 79, and More Explained | Verified RCM">
 <meta name="twitter:description" content="A complete plastic surgery modifier reference: 22 for increased procedural services, 58/78/79 for staged and global-period claims, 50 for bilateral work, 51's real payer logic, 59/X-modifiers, and GA/GY/GZ for the cosmetic-versus-reconstructive gray zone.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Plastic Surgery","item":"https://www.verifiedrcm.com/specialty-plastic-surgery.html"},{"@type":"ListItem","position":4,"name":"Modifiers","item":"https://www.verifiedrcm.com/specialty-plastic-surgery-modifiers.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does modifier 22 guarantee extra payment?","acceptedAnswer":{"@type":"Answer","text":"No. Modifier 22 flags the claim for manual review — it doesn't trigger an automatic percentage add-on the way modifier 50 does. The payer's reviewer reads the operative note, decides whether the documented additional work (extra time, unusual anatomy, excessive blood loss, a specific complicating factor) genuinely exceeds the code's typical work, and then decides whether and how much extra to pay, if anything. Some claims process with no additional documentation request at all if the payer's system flags 22 for automatic denial pending records, so submit the operative note with the claim rather than waiting for one to be requested."}},{"@type":"Question","name":"What's the difference between modifier GA and modifier GZ?","acceptedAnswer":{"@type":"Answer","text":"Both flag a service Medicare is expected to deny as not reasonable and necessary, but they report opposite compliance outcomes. GA means you issued the mandatory Advance Beneficiary Notice before the service and have it on file — if Medicare denies the claim, you can bill the patient the allowed amount. GZ means you expected the denial but never obtained the ABN. That's a compliance miss, not a billing option: the modifier makes the gap explicit on the claim, Medicare denies it, and you cannot bill the patient — the practice absorbs the cost."}},{"@type":"Question","name":"Do we need modifier 51 on Medicare claims when a patient has multiple plastic surgery procedures the same session?","acceptedAnswer":{"@type":"Answer","text":"Not for Medicare. Medicare's claims processing system has hard-coded logic that ranks the procedures on the claim by physician fee schedule value and applies the multiple-surgery reduction — 100% of the highest-valued procedure, 50% of each additional one subject to the reduction — regardless of whether modifier 51 is appended, and several Medicare Administrative Contractors explicitly instruct providers not to add it. Commercial payers are a different story: some claims-editing software still expects 51 on the secondary procedure to trigger its own reduction logic correctly, so check each payer's reimbursement policy rather than assuming Medicare's rule applies everywhere."}},{"@type":"Question","name":"Can we use modifier 79 instead of 58 for a planned second stage of breast reconstruction?","acceptedAnswer":{"@type":"Answer","text":"No — 79 is for a procedure unrelated to the original surgery, and a planned second stage of the same reconstruction is the opposite of that. Exchanging a tissue expander for a permanent implant, or revising a flap as part of the reconstruction plan documented at the time of the first surgery, is related and either planned or more extensive than the original procedure, which is exactly what modifier 58 describes. Reaching for 79 on a staged reconstruction case usually reflects a misunderstanding of the distinction rather than a coding choice the documentation actually supports, and it can draw scrutiny because it implies an unrelated diagnosis that the record won't back up."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does modifier 22 guarantee extra payment?","acceptedAnswer":{"@type":"Answer","text":"No. Modifier 22 flags the claim for manual review, it doesn't trigger an automatic percentage add-on the way modifier 50 does. The payer's reviewer reads the operative note, decides whether the documented additional work (extra time, unusual anatomy, excessive blood loss, a specific complicating factor) genuinely exceeds the code's typical work, and then decides whether and how much extra to pay, if anything. Some claims process with no additional documentation request at all if the payer's system flags 22 for automatic denial pending records, so submit the operative note with the claim rather than waiting for one to be requested."}},{"@type":"Question","name":"What's the difference between modifier GA and modifier GZ?","acceptedAnswer":{"@type":"Answer","text":"Both flag a service Medicare is expected to deny as not reasonable and necessary, but they report opposite compliance outcomes. GA means you issued the mandatory Advance Beneficiary Notice before the service and have it on file, if Medicare denies the claim, you can bill the patient the allowed amount. GZ means you expected the denial but never obtained the ABN. That's a compliance miss, not a billing option: the modifier makes the gap explicit on the claim, Medicare denies it, and you cannot bill the patient, the practice absorbs the cost."}},{"@type":"Question","name":"Do we need modifier 51 on Medicare claims when a patient has multiple plastic surgery procedures the same session?","acceptedAnswer":{"@type":"Answer","text":"Not for Medicare. Medicare's claims processing system has hard-coded logic that ranks the procedures on the claim by physician fee schedule value and applies the multiple-surgery reduction, 100% of the highest-valued procedure, 50% of each additional one subject to the reduction, regardless of whether modifier 51 is appended, and several Medicare Administrative Contractors explicitly instruct providers not to add it. Commercial payers are a different story: some claims-editing software still expects 51 on the secondary procedure to trigger its own reduction logic correctly, so check each payer's reimbursement policy rather than assuming Medicare's rule applies everywhere."}},{"@type":"Question","name":"Can we use modifier 79 instead of 58 for a planned second stage of breast reconstruction?","acceptedAnswer":{"@type":"Answer","text":"No, 79 is for a procedure unrelated to the original surgery, and a planned second stage of the same reconstruction is the opposite of that. Exchanging a tissue expander for a permanent implant, or revising a flap as part of the reconstruction plan documented at the time of the first surgery, is related and either planned or more extensive than the original procedure, which is exactly what modifier 58 describes. Reaching for 79 on a staged reconstruction case usually reflects a misunderstanding of the distinction rather than a coding choice the documentation actually supports, and it can draw scrutiny because it implies an unrelated diagnosis that the record won't back up."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 30 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 30 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 30 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-plastic-surgery.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete plastic surgery guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of two mirrored curved forms meeting at a central sutured seam, representing plastic and reconstructive surgery">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-plastic-surgery.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete plastic surgery guide</a>
+      <h1>Plastic surgery modifiers: 22, 58, 78, 79, 50, 51, 59, and GA/GY/GZ explained.</h1>
+      <p class="lede">Plastic surgery bills more like three specialties stacked on top of each other: reconstructive work with genuine medical necessity, staged procedures that run for months, and a cosmetic side that Medicare and most commercial plans exclude by definition. The modifiers are what tell the payer which situation it's looking at, and getting one wrong doesn't just risk a denial, on a bilateral or multi-procedure claim it can quietly cut the payment in half without anyone noticing until the reconciliation. This is the complete modifier reference for the specialty, with the documentation standard, the actual payer logic, and the error each one invites.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-plastic-surgery.html">plastic surgery billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of two mirrored curved forms meeting at a central sutured seam, representing plastic and reconstructive surgery">
   <path d="M165,90 C95,175 95,305 165,390" fill="none" stroke="var(--muted)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
   <path d="M320,95 C395,170 390,310 315,385" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
   <path d="M195,110 C140,170 140,310 195,370" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
@@ -184,26 +240,25 @@
   <circle cx="240" cy="130" r="4" fill="var(--cat-surgical)" />
   <circle cx="240" cy="350" r="4" fill="var(--cat-surgical)" />
 </svg></figure>
-  <h1>Plastic surgery modifiers: 22, 58, 78, 79, 50, 51, 59, and GA/GY/GZ explained.</h1>
-  <p class="lede">Plastic surgery bills more like three specialties stacked on top of each other: reconstructive work with genuine medical necessity, staged procedures that run for months, and a cosmetic side that Medicare and most commercial plans exclude by definition. The modifiers are what tell the payer which situation it's looking at, and getting one wrong doesn't just risk a denial &mdash; on a bilateral or multi-procedure claim it can quietly cut the payment in half without anyone noticing until the reconciliation. This is the complete modifier reference for the specialty, with the documentation standard, the actual payer logic, and the error each one invites.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-plastic-surgery.html">plastic surgery billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Modifier 22 needs numbers, not adjectives.</b> "Difficult dissection" doesn't move a reviewer &mdash; extra minutes, estimated blood loss, and the specific anatomic complication do.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>58, 78, and 79 are mutually exclusive</b> and each one prices the claim differently &mdash; one of them pays intraoperative-only, the other two don't.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Medicare doesn't need modifier 51</b> to apply its multiple-procedure reduction &mdash; but plenty of commercial claims-editing software still does, so payer-by-payer verification matters more than the "rule."</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Modifier 22 needs numbers, not adjectives.</b> "Difficult dissection" doesn't move a reviewer, extra minutes, estimated blood loss, and the specific anatomic complication do.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>58, 78, and 79 are mutually exclusive</b> and each one prices the claim differently, one of them pays intraoperative-only, the other two don't.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Medicare doesn't need modifier 51</b> to apply its multiple-procedure reduction, but plenty of commercial claims-editing software still does, so payer-by-payer verification matters more than the "rule."</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>GA, GY, and GZ report three different compliance outcomes</b> on the cosmetic-versus-reconstructive line, and only one of them lets you collect from the patient after a denial.</span></li>
     </ul>
   </section>
 
   <h2>Why modifiers decide the outcome of every plastic surgery claim</h2>
-  <p>No two plastic surgery claims look alike for the same reason: the same CPT code can describe a covered, medically necessary reconstruction or an excluded cosmetic procedure, depending entirely on the clinical story behind it. Add in how often the specialty stages a reconstruction across several encounters &mdash; expander placement, then exchange for a permanent implant, then a revision &mdash; and how routinely it operates bilaterally, and a claim ends up carrying most of its meaning in modifiers rather than in the code itself. A payer's adjudication system reads the modifier first and the operative note only if something looks wrong, so an incorrect modifier doesn't usually get caught until the underpayment shows up in a reconciliation report weeks later.</p>
+  <p>No two plastic surgery claims look alike for the same reason: the same CPT code can describe a covered, medically necessary reconstruction or an excluded cosmetic procedure, depending entirely on the clinical story behind it. Add in how often the specialty stages a reconstruction across several encounters, expander placement, then exchange for a permanent implant, then a revision, and how routinely it operates bilaterally, and a claim ends up carrying most of its meaning in modifiers rather than in the code itself. A payer's adjudication system reads the modifier first and the operative note only if something looks wrong, so an incorrect modifier doesn't usually get caught until the underpayment shows up in a reconciliation report weeks later.</p>
 
   <h2>Modifier 22: increased procedural services in complex reconstruction</h2>
-  <p>Modifier 22 reports that a procedure required substantially more work than the code typically describes &mdash; and in plastic surgery, where revision reconstruction, high-BMI panniculectomies, and flap procedures with unexpected vascular findings are routine, it's one of the most reached-for modifiers in the specialty. It's also one of the most heavily scrutinized, because payers see it used reflexively on cases that were simply long, not genuinely atypical.</p>
-  <p>The documentation standard is specific: the operative note has to support both that substantial additional work occurred and the reason for it &mdash; increased intensity, added time, unusual technical difficulty, the severity of the patient's condition, or excessive physical and mental effort. A general statement that the case was "difficult" doesn't meet that bar. What does: the additional operative time in minutes compared to the typical case, estimated blood loss in mL when it was clinically significant, and the specific anatomic finding that caused the extra work &mdash; dense scar tissue from a prior mastectomy complicating a flap dissection, an unexpected vascular anomaly requiring a different pedicle, or the extent of undermining required in a panniculectomy on a patient with a significantly elevated BMI. Some Medicare Administrative Contractors now require the operative and progress notes to be submitted with the claim at the time of billing rather than waiting for an additional documentation request, so treat the note as part of the claim, not a backup in case of an audit.</p>
+  <p>Modifier 22 reports that a procedure required substantially more work than the code typically describes, and in plastic surgery, where revision reconstruction, high-BMI panniculectomies, and flap procedures with unexpected vascular findings are routine, it's one of the most reached-for modifiers in the specialty. It's also one of the most heavily scrutinized, because payers see it used reflexively on cases that were simply long, not genuinely atypical.</p>
+  <p>The documentation standard is specific: the operative note has to support both that substantial additional work occurred and the reason for it, increased intensity, added time, unusual technical difficulty, the severity of the patient's condition, or excessive physical and mental effort. A general statement that the case was "difficult" doesn't meet that bar. What does: the additional operative time in minutes compared to the typical case, estimated blood loss in mL when it was clinically significant, and the specific anatomic finding that caused the extra work, dense scar tissue from a prior mastectomy complicating a flap dissection, an unexpected vascular anomaly requiring a different pedicle, or the extent of undermining required in a panniculectomy on a patient with a significantly elevated BMI. Some Medicare Administrative Contractors now require the operative and progress notes to be submitted with the claim at the time of billing rather than waiting for an additional documentation request, so treat the note as part of the claim, not a backup in case of an audit.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Documentation that supports 22</div><ul>
       <li>"Procedure required an additional 45 minutes beyond the typical operative time due to dense adhesions from the patient's prior mastectomy, complicating flap dissection."</li>
@@ -213,80 +268,80 @@
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>Documentation that doesn't</div><ul>
       <li>"Case was more difficult than usual" with no quantification.</li>
       <li>Appending 22 because the case ran long for scheduling reasons unrelated to surgical complexity.</li>
-      <li>Reusing boilerplate language across multiple 22 claims &mdash; payers pattern-match this quickly.</li>
+      <li>Reusing boilerplate language across multiple 22 claims, payers pattern-match this quickly.</li>
     </ul></div>
   </div>
-  <p>Reimbursement for modifier 22 isn't a fixed add-on the way a bilateral procedure's 150% is. There's no standard fee-schedule percentage for it; instead, it routes to manual review, and the payer decides whether &mdash; and how much &mdash; to pay above the standard allowable based on what the note supports. ⚠️ Some claims are held or initially denied pending records rather than paid provisionally, and how much extra a given payer typically allows varies enough by payer and contract that it isn't safe to state as a universal figure here; check your own claims history or the payer's reimbursement policy for a realistic expectation.</p>
+  <p>Reimbursement for modifier 22 isn't a fixed add-on the way a bilateral procedure's 150% is. There's no standard fee-schedule percentage for it; instead, it routes to manual review, and the payer decides whether, and how much, to pay above the standard allowable based on what the note supports. ⚠️ Some claims are held or initially denied pending records rather than paid provisionally, and how much extra a given payer typically allows varies enough by payer and contract that it isn't safe to state as a universal figure here; check your own claims history or the payer's reimbursement policy for a realistic expectation.</p>
 
   <h2>Modifiers 58, 78, and 79: staged and global-period billing at a glance</h2>
-  <p>Reconstructive plastic surgery is staged by design &mdash; a tissue expander goes in, then months later gets exchanged for a permanent implant; a flap gets revised as a planned second step; a rhinoplasty gets a secondary refinement. Most of these major procedures carry a 90-day global period, and modifiers 58, 78, and 79 are how a second procedure inside that window gets billed correctly. They're mutually exclusive &mdash; only one applies to a given line &mdash; and each one changes what the claim actually pays, not just how it's coded.</p>
+  <p>Reconstructive plastic surgery is staged by design, a tissue expander goes in, then months later gets exchanged for a permanent implant; a flap gets revised as a planned second step; a rhinoplasty gets a secondary refinement. Most of these major procedures carry a 90-day global period, and modifiers 58, 78, and 79 are how a second procedure inside that window gets billed correctly. They're mutually exclusive, only one applies to a given line, and each one changes what the claim actually pays, not just how it's coded.</p>
   <div class="dodont">
-    <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Modifier 58 &mdash; staged or related</div><ul>
+    <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Modifier 58, staged or related</div><ul>
       <li>The follow-on procedure was planned at the time of the original surgery, is more extensive than the original, or is therapy following a diagnostic procedure.</li>
       <li>Example: expander-to-implant exchange planned from the first operative note.</li>
       <li>Opens a new global period; generally no payment reduction.</li>
     </ul></div>
-    <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Modifier 79 &mdash; unrelated</div><ul>
-      <li>Same surgeon, same global period window, but a procedure with nothing clinically to do with the first &mdash; usually a different diagnosis entirely.</li>
+    <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Modifier 79, unrelated</div><ul>
+      <li>Same surgeon, same global period window, but a procedure with nothing clinically to do with the first, usually a different diagnosis entirely.</li>
       <li>Example: a hand surgery patient in the global period for a flexor tendon repair returns for an unrelated facial lesion excision.</li>
       <li>Opens a new global period; reimbursed at 100% of the allowed amount.</li>
     </ul></div>
   </div>
-  <p><b>Modifier 78</b> covers the case those two don't: an unplanned return to the operating room for a complication of the original procedure &mdash; a hematoma evacuation after a facelift, or re-exploration of a flap for vascular compromise. It does not open a new global period, and it pays only the intraoperative portion of the fee schedule value &mdash; commonly on the order of 70&ndash;80% of the full allowable, depending on how that code's presurgical, intraoperative, and postsurgical work is split &mdash; since the pre- and post-op work is still covered under the original global package. Confusing 78 for 58 on an unplanned complication return is an expensive mix-up: it misstates what happened clinically and changes what the claim is entitled to be paid.</p>
+  <p><b>Modifier 78</b> covers the case those two don't: an unplanned return to the operating room for a complication of the original procedure, a hematoma evacuation after a facelift, or re-exploration of a flap for vascular compromise. It does not open a new global period, and it pays only the intraoperative portion of the fee schedule value, commonly on the order of 70&ndash;80% of the full allowable, depending on how that code's presurgical, intraoperative, and postsurgical work is split, since the pre- and post-op work is still covered under the original global package. Confusing 78 for 58 on an unplanned complication return is an expensive mix-up: it misstates what happened clinically and changes what the claim is entitled to be paid.</p>
   <p>This page gives you the modifier logic in one place; for the full walkthrough of global-period timelines on staged breast reconstruction, how 58/78/79 interact with multiple-procedure reductions on the same claim, and worked billing examples, see our dedicated guide: <a href="specialty-plastic-surgery-global-period-multiple-procedure-billing.html">Global Period and Multiple-Procedure Billing for Plastic Surgery</a>.</p>
 
   <h2>Modifier 50: bilateral procedures</h2>
-  <p>Bilateral work is routine in this specialty &mdash; bilateral breast reduction or augmentation, bilateral blepharoplasty, bilateral otoplasty &mdash; and modifier 50 reports both sides on one claim line rather than as two separate procedures. Whether it changes payment depends on the code's bilateral surgery indicator on the Medicare Physician Fee Schedule: an indicator of 1 means the 150% bilateral adjustment applies (100% for the first side, 50% for the second); an indicator of 3, covering some bilateral diagnostic and radiology codes, means each side can pay up to 100% independently; and some codes are already written as inherently bilateral in their own descriptor, where modifier 50 doesn't apply at all. Check the indicator before assuming 150% is what a given code pays.</p>
+  <p>Bilateral work is routine in this specialty, bilateral breast reduction or augmentation, bilateral blepharoplasty, bilateral otoplasty, and modifier 50 reports both sides on one claim line rather than as two separate procedures. Whether it changes payment depends on the code's bilateral surgery indicator on the Medicare Physician Fee Schedule: an indicator of 1 means the 150% bilateral adjustment applies (100% for the first side, 50% for the second); an indicator of 3, covering some bilateral diagnostic and radiology codes, means each side can pay up to 100% independently; and some codes are already written as inherently bilateral in their own descriptor, where modifier 50 doesn't apply at all. Check the indicator before assuming 150% is what a given code pays.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Modifier 50 billing convention by claim type.</caption>
       <thead><tr><th scope="col">Claim type</th><th scope="col">How to bill it</th></tr></thead>
       <tbody>
         <tr><td>Professional claim, Medicare, indicator 1</td><td>One line, modifier 50, 1 unit; billed charge should reflect both sides</td></tr>
-        <tr><td>Professional claim, two separate lines with 50 on each</td><td>Incorrect &mdash; double-reports the procedure</td></tr>
+        <tr><td>Professional claim, two separate lines with 50 on each</td><td>Incorrect, double-reports the procedure</td></tr>
         <tr><td>Ambulatory surgical center, Medicare</td><td>Two lines with RT and LT; modifier 50 is not used on Medicare ASC claims</td></tr>
-        <tr><td>Bilateral diagnostic/radiology code, indicator 3</td><td>Each side may pay up to 100% independently &mdash; the 150% bilateral adjustment does not apply</td></tr>
+        <tr><td>Bilateral diagnostic/radiology code, indicator 3</td><td>Each side may pay up to 100% independently, the 150% bilateral adjustment does not apply</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The most common error isn't leaving 50 off &mdash; it's duplicating the modifier across two lines, which most claims-editing logic denies as a duplicate, or defaulting to RT/LT on a professional Medicare claim where 50 was correct. Both route the claim into a manual correction queue instead of paying clean the first time.</p>
+  <p>The most common error isn't leaving 50 off, it's duplicating the modifier across two lines, which most claims-editing logic denies as a duplicate, or defaulting to RT/LT on a professional Medicare claim where 50 was correct. Both route the claim into a manual correction queue instead of paying clean the first time.</p>
 
   <h2>Modifier 51 versus how payers actually apply the multiple-procedure reduction</h2>
   <p>The textbook definition of modifier 51 is straightforward: append it to the second and subsequent procedures performed in the same session so the payer applies its multiple-procedure payment reduction. In practice, whether appending it does anything depends entirely on which payer is reading the claim.</p>
-  <p><b>Medicare doesn't need it.</b> The Medicare Physician Fee Schedule's multiple-surgery payment logic is hard-coded into the claims processing system: it automatically ranks every surgical procedure on the claim by fee schedule value, pays 100% of the highest-valued one, and applies the standard reduction &mdash; commonly 50% &mdash; to each additional procedure subject to the rule, regardless of whether modifier 51 appears on the claim at all. Several Medicare Administrative Contractors explicitly instruct providers not to append it for that reason. Plastic surgery also has codes carrying "modifier 51 exempt" status in CMS's own relative value files, so appending 51 (or expecting the reduction) on one of those is its own error. ⚠️ Check each code's specific status on the current National Physician Fee Schedule Relative Value File before assuming it's subject to the standard reduction.</p>
-  <p><b>Commercial payers vary.</b> A meaningful share of commercial claims-editing software still relies on modifier 51 being present to correctly flag the secondary procedure, and some payer reimbursement policies still instruct providers to append it. ⚠️ This differs enough by payer that a blanket rule isn't reliable &mdash; confirm the specific payer's current policy rather than applying Medicare's logic everywhere. This matters more here than in most specialties because combination cases are the norm &mdash; abdominoplasty with liposuction, blepharoplasty with a brow lift, augmentation with mastopexy &mdash; and getting the secondary-procedure designation wrong either strips a legitimate payment or invites a reduction on a code that was exempt from it.</p>
+  <p><b>Medicare doesn't need it.</b> The Medicare Physician Fee Schedule's multiple-surgery payment logic is hard-coded into the claims processing system: it automatically ranks every surgical procedure on the claim by fee schedule value, pays 100% of the highest-valued one, and applies the standard reduction, commonly 50%, to each additional procedure subject to the rule, regardless of whether modifier 51 appears on the claim at all. Several Medicare Administrative Contractors explicitly instruct providers not to append it for that reason. Plastic surgery also has codes carrying "modifier 51 exempt" status in CMS's own relative value files, so appending 51 (or expecting the reduction) on one of those is its own error. ⚠️ Check each code's specific status on the current National Physician Fee Schedule Relative Value File before assuming it's subject to the standard reduction.</p>
+  <p><b>Commercial payers vary.</b> A meaningful share of commercial claims-editing software still relies on modifier 51 being present to correctly flag the secondary procedure, and some payer reimbursement policies still instruct providers to append it. ⚠️ This differs enough by payer that a blanket rule isn't reliable, confirm the specific payer's current policy rather than applying Medicare's logic everywhere. This matters more here than in most specialties because combination cases are the norm, abdominoplasty with liposuction, blepharoplasty with a brow lift, augmentation with mastopexy, and getting the secondary-procedure designation wrong either strips a legitimate payment or invites a reduction on a code that was exempt from it.</p>
 
   <h2>Modifier 59 and the X-modifiers: genuinely distinct procedures, same session</h2>
-  <p>These override an NCCI bundling edit, but only where the edit's own modifier indicator allows an override &mdash; an indicator of 0 means no modifier changes the outcome, so check that before reaching for either one. Where an override is possible, CMS guidance and most payer policy prefer the specific X-modifier over generic 59, because it states the reason for the distinction directly on the claim rather than leaving it to be inferred:</p>
+  <p>These override an NCCI bundling edit, but only where the edit's own modifier indicator allows an override, an indicator of 0 means no modifier changes the outcome, so check that before reaching for either one. Where an override is possible, CMS guidance and most payer policy prefer the specific X-modifier over generic 59, because it states the reason for the distinction directly on the claim rather than leaving it to be inferred:</p>
   <ul class="check-list">
     <li><span class="check">XE</span><span><b>Separate encounter.</b> A distinct service performed during a separate patient encounter on the same day.</span></li>
-    <li><span class="check">XS</span><span><b>Separate structure.</b> The one that covers most defensible unbundling in this specialty &mdash; a genuinely separate anatomic site, such as liposuction of the abdomen billed alongside a flap harvested from a different donor site, or a breast procedure combined with an unrelated skin lesion excision elsewhere on the body.</span></li>
+    <li><span class="check">XS</span><span><b>Separate structure.</b> The one that covers most defensible unbundling in this specialty, a genuinely separate anatomic site, such as liposuction of the abdomen billed alongside a flap harvested from a different donor site, or a breast procedure combined with an unrelated skin lesion excision elsewhere on the body.</span></li>
     <li><span class="check">XP</span><span><b>Separate practitioner.</b> A distinct service performed by a different practitioner in the same session.</span></li>
     <li><span class="check">XU</span><span><b>Unusual non-overlapping service.</b> The rarest of the four; use only when none of the other three, or a plain description of "distinct," fits better.</span></li>
   </ul>
-  <p>Use 59 itself only when the distinction is real but doesn't map cleanly onto one of the four X-modifiers. The operative note has to independently support the separation &mdash; a different site, session, or practitioner &mdash; documented at the time of surgery, not reconstructed afterward to answer a denial. High append rates for 59 without that support are a reliably audited pattern, and plastic surgery's frequent combination cases make it tempting to reach for 59 as a default rather than confirming the edit actually allows an override.</p>
+  <p>Use 59 itself only when the distinction is real but doesn't map cleanly onto one of the four X-modifiers. The operative note has to independently support the separation, a different site, session, or practitioner, documented at the time of surgery, not reconstructed afterward to answer a denial. High append rates for 59 without that support are a reliably audited pattern, and plastic surgery's frequent combination cases make it tempting to reach for 59 as a default rather than confirming the edit actually allows an override.</p>
 
   <h2>GA, GY, and GZ: modifiers for the cosmetic-versus-reconstructive gray zone</h2>
-  <p>No specialty lives on the coverage line the way plastic surgery does. Cosmetic surgery reshapes normal structures to change appearance and is statutorily excluded from Medicare; reconstructive surgery restores function or corrects a deformity caused by a congenital defect, trauma, infection, tumor, or disease, and is covered when medical necessity is documented. The same CPT code can sit on either side of that line depending on the clinical indication &mdash; a blepharoplasty for a documented visual field obstruction is reconstructive; the same procedure for eyelid appearance alone is cosmetic. Local coverage articles addressing cosmetic and reconstructive surgery exist across MAC jurisdictions and lay out the documentation each carrier expects. ⚠️ These are jurisdiction-specific &mdash; confirm the applicable LCD and billing-and-coding article for your MAC, since not every contractor requires identical documentation.</p>
+  <p>No specialty lives on the coverage line the way plastic surgery does. Cosmetic surgery reshapes normal structures to change appearance and is statutorily excluded from Medicare; reconstructive surgery restores function or corrects a deformity caused by a congenital defect, trauma, infection, tumor, or disease, and is covered when medical necessity is documented. The same CPT code can sit on either side of that line depending on the clinical indication, a blepharoplasty for a documented visual field obstruction is reconstructive; the same procedure for eyelid appearance alone is cosmetic. Local coverage articles addressing cosmetic and reconstructive surgery exist across MAC jurisdictions and lay out the documentation each carrier expects. ⚠️ These are jurisdiction-specific, confirm the applicable LCD and billing-and-coding article for your MAC, since not every contractor requires identical documentation.</p>
   <p>GA, GY, and GZ report three different outcomes on that line, and they are not interchangeable:</p>
   <div class="dodont">
-    <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>GA &mdash; ABN on file</div><ul>
-      <li>Use when the service is usually covered but you expect this specific instance to be denied for lack of medical necessity &mdash; a symptomatic breast reduction where the documented tissue resection may fall short of the payer's threshold, for example.</li>
+    <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>GA, ABN on file</div><ul>
+      <li>Use when the service is usually covered but you expect this specific instance to be denied for lack of medical necessity, a symptomatic breast reduction where the documented tissue resection may fall short of the payer's threshold, for example.</li>
       <li>A mandatory ABN was signed before the procedure and is on file.</li>
       <li>If Medicare denies the claim, the patient can be billed.</li>
     </ul></div>
-    <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>GY &mdash; statutorily excluded</div><ul>
-      <li>Use when the service is categorically excluded from Medicare benefits &mdash; a facelift or cosmetic upper blepharoplasty with no functional indication.</li>
+    <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>GY, statutorily excluded</div><ul>
+      <li>Use when the service is categorically excluded from Medicare benefits, a facelift or cosmetic upper blepharoplasty with no functional indication.</li>
       <li>The claim is filed to generate a denial for secondary insurance or the patient's own records, not in expectation of payment.</li>
       <li>The patient is liable regardless of an ABN, since the exclusion is statutory rather than a medical-necessity judgment call.</li>
     </ul></div>
   </div>
-  <p><b>GZ is the one to avoid, not choose.</b> It reports the same expected denial as GA &mdash; not reasonable and necessary &mdash; but without an ABN having been obtained first. That's a missed compliance step, not a billing strategy: the claim denies and the practice cannot bill the patient for it. If your intake process is working, GZ shouldn't appear on your claims at all; if it does, treat it as a signal to fix the ABN workflow rather than a routine modifier choice. Given how often plastic surgery's coverage status is genuinely uncertain at scheduling &mdash; a reduction mammaplasty, a functional rhinoplasty, a borderline blepharoplasty &mdash; a clean GA on a properly executed ABN is almost always the available fallback.</p>
+  <p><b>GZ is the one to avoid, not choose.</b> It reports the same expected denial as GA, not reasonable and necessary, but without an ABN having been obtained first. That's a missed compliance step, not a billing strategy: the claim denies and the practice cannot bill the patient for it. If your intake process is working, GZ shouldn't appear on your claims at all; if it does, treat it as a signal to fix the ABN workflow rather than a routine modifier choice. Given how often plastic surgery's coverage status is genuinely uncertain at scheduling, a reduction mammaplasty, a functional rhinoplasty, a borderline blepharoplasty, a clean GA on a properly executed ABN is almost always the available fallback.</p>
 
   <h2>Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
-      <li>Quantify modifier 22 with time, blood loss, and the specific anatomic finding &mdash; never a general "difficult case" statement.</li>
+      <li>Quantify modifier 22 with time, blood loss, and the specific anatomic finding, never a general "difficult case" statement.</li>
       <li>Check each code's bilateral surgery indicator before assuming modifier 50 pays at 150%.</li>
       <li>Issue an ABN and use GA whenever a procedure's coverage status is genuinely uncertain at the time of scheduling.</li>
       <li>Verify modifier 51's requirement payer by payer rather than assuming Medicare's logic applies everywhere.</li>
@@ -294,7 +349,7 @@
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Don't</div><ul>
       <li>Don't confuse modifier 78 (unplanned complication return, intraoperative-only payment) with modifier 58 (planned staged procedure).</li>
       <li>Don't bill two lines with modifier 50 duplicated on each line.</li>
-      <li>Don't let a GZ appear on a claim where the coverage ambiguity was foreseeable &mdash; it means the ABN step was missed.</li>
+      <li>Don't let a GZ appear on a claim where the coverage ambiguity was foreseeable, it means the ABN step was missed.</li>
       <li>Don't use 59 or an X-modifier to clear a bundling edit whose indicator doesn't allow an override in the first place.</li>
     </ul></div>
   </div>
@@ -305,16 +360,16 @@
       <caption>Every modifier covered in this guide, at a glance.</caption>
       <thead><tr><th scope="col">Modifier</th><th scope="col">What it means</th><th scope="col">When to use it</th><th scope="col">Common error</th></tr></thead>
       <tbody>
-        <tr><td><code>22</code></td><td>Increased procedural services</td><td>The documented work substantially exceeds the code's typical scope &mdash; extra time, unusual anatomy, excessive blood loss</td><td>Appending it with a vague "difficult case" note instead of quantified detail</td></tr>
+        <tr><td><code>22</code></td><td>Increased procedural services</td><td>The documented work substantially exceeds the code's typical scope, extra time, unusual anatomy, excessive blood loss</td><td>Appending it with a vague "difficult case" note instead of quantified detail</td></tr>
         <tr><td><code>50</code></td><td>Bilateral procedure</td><td>Same procedure performed on both sides in one session, on a code with a bilateral indicator of 1</td><td>Billing two lines with 50 on each, or using RT/LT when 50 was the correct convention</td></tr>
         <tr><td><code>51</code></td><td>Multiple procedures</td><td>Secondary and subsequent procedures in the same session, per the specific payer's requirement</td><td>Assuming Medicare needs it, or appending it to a modifier-51-exempt code</td></tr>
         <tr><td><code>58</code></td><td>Staged or related procedure</td><td>A planned, more extensive, or therapy-following-diagnostic procedure during the global period, same physician</td><td>Using 79 instead when the procedure was actually planned or related</td></tr>
-        <tr><td><code>59 / XE / XS / XP / XU</code></td><td>Distinct procedural service</td><td>Overrides an NCCI edit for a genuinely separate site, session, structure, or practitioner &mdash; only where the edit indicator allows it</td><td>Using it routinely to clear an edit without documented separation, or on an indicator-0 edit pair</td></tr>
+        <tr><td><code>59 / XE / XS / XP / XU</code></td><td>Distinct procedural service</td><td>Overrides an NCCI edit for a genuinely separate site, session, structure, or practitioner, only where the edit indicator allows it</td><td>Using it routinely to clear an edit without documented separation, or on an indicator-0 edit pair</td></tr>
         <tr><td><code>78</code></td><td>Unplanned return to the operating room</td><td>An unplanned complication of the original procedure requiring a return to the OR, same physician, during the global period</td><td>Confusing it with 58, which changes both the clinical story and the payment</td></tr>
         <tr><td><code>79</code></td><td>Unrelated procedure during the global period</td><td>A procedure with no clinical relationship to the original surgery, same physician, during the global period</td><td>Using it for a planned staged procedure that is actually related (should be 58)</td></tr>
         <tr><td><code>GA</code></td><td>ABN on file, denial expected</td><td>Coverage is uncertain and a mandatory ABN was signed before the service</td><td>Skipping the ABN and defaulting to GZ instead</td></tr>
-        <tr><td><code>GY</code></td><td>Statutorily excluded</td><td>The service is categorically non-covered (e.g., clearly cosmetic) &mdash; filed for denial, not payment</td><td>Treating it as interchangeable with GA when the service isn't actually statutorily excluded</td></tr>
-        <tr><td><code>GZ</code></td><td>Expected denial, no ABN obtained</td><td>Never a deliberate choice &mdash; reports that an ABN should have been issued but wasn't</td><td>Letting it appear on foreseeable cosmetic-versus-reconstructive claims instead of fixing the ABN workflow</td></tr>
+        <tr><td><code>GY</code></td><td>Statutorily excluded</td><td>The service is categorically non-covered (e.g., clearly cosmetic), filed for denial, not payment</td><td>Treating it as interchangeable with GA when the service isn't actually statutorily excluded</td></tr>
+        <tr><td><code>GZ</code></td><td>Expected denial, no ABN obtained</td><td>Never a deliberate choice, reports that an ABN should have been issued but wasn't</td><td>Letting it appear on foreseeable cosmetic-versus-reconstructive claims instead of fixing the ABN workflow</td></tr>
       </tbody>
     </table>
   </div>
@@ -329,15 +384,15 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Does modifier 22 guarantee extra payment?</summary><p>No. Modifier 22 flags the claim for manual review &mdash; it doesn't trigger an automatic percentage add-on the way modifier 50 does. The payer's reviewer reads the operative note, decides whether the documented additional work (extra time, unusual anatomy, excessive blood loss, a specific complicating factor) genuinely exceeds the code's typical work, and then decides whether and how much extra to pay, if anything. Some claims are held or initially denied pending records rather than paid provisionally, so submit the operative note with the claim rather than waiting for one to be requested.</p></details>
-    <details class="faq-item"><summary>What's the difference between modifier GA and modifier GZ?</summary><p>Both flag a service Medicare is expected to deny as not reasonable and necessary, but they report opposite compliance outcomes. GA means you issued the mandatory Advance Beneficiary Notice before the service and have it on file &mdash; if Medicare denies the claim, you can bill the patient the allowed amount. GZ means you expected the denial but never obtained the ABN. That's a compliance miss, not a billing option: the modifier makes the gap explicit on the claim, Medicare denies it, and you cannot bill the patient &mdash; the practice absorbs the cost.</p></details>
-    <details class="faq-item"><summary>Do we need modifier 51 on Medicare claims when a patient has multiple plastic surgery procedures the same session?</summary><p>Not for Medicare. Medicare's claims processing system has hard-coded logic that ranks the procedures on the claim by physician fee schedule value and applies the multiple-surgery reduction &mdash; 100% of the highest-valued procedure, 50% of each additional one subject to the reduction &mdash; regardless of whether modifier 51 is appended, and several Medicare Administrative Contractors explicitly instruct providers not to add it. Commercial payers are a different story: some claims-editing software still expects 51 on the secondary procedure to trigger its own reduction logic correctly, so check each payer's reimbursement policy rather than assuming Medicare's rule applies everywhere.</p></details>
-    <details class="faq-item"><summary>Can we use modifier 79 instead of 58 for a planned second stage of breast reconstruction?</summary><p>No &mdash; 79 is for a procedure unrelated to the original surgery, and a planned second stage of the same reconstruction is the opposite of that. Exchanging a tissue expander for a permanent implant, or revising a flap as part of the reconstruction plan documented at the time of the first surgery, is related and either planned or more extensive than the original procedure, which is exactly what modifier 58 describes. Reaching for 79 on a staged reconstruction case usually reflects a misunderstanding of the distinction rather than a coding choice the documentation actually supports, and it can draw scrutiny because it implies an unrelated diagnosis that the record won't back up.</p></details>
+    <details class="faq-item"><summary>Does modifier 22 guarantee extra payment?</summary><p>No. Modifier 22 flags the claim for manual review, it doesn't trigger an automatic percentage add-on the way modifier 50 does. The payer's reviewer reads the operative note, decides whether the documented additional work (extra time, unusual anatomy, excessive blood loss, a specific complicating factor) genuinely exceeds the code's typical work, and then decides whether and how much extra to pay, if anything. Some claims are held or initially denied pending records rather than paid provisionally, so submit the operative note with the claim rather than waiting for one to be requested.</p></details>
+    <details class="faq-item"><summary>What's the difference between modifier GA and modifier GZ?</summary><p>Both flag a service Medicare is expected to deny as not reasonable and necessary, but they report opposite compliance outcomes. GA means you issued the mandatory Advance Beneficiary Notice before the service and have it on file, if Medicare denies the claim, you can bill the patient the allowed amount. GZ means you expected the denial but never obtained the ABN. That's a compliance miss, not a billing option: the modifier makes the gap explicit on the claim, Medicare denies it, and you cannot bill the patient, the practice absorbs the cost.</p></details>
+    <details class="faq-item"><summary>Do we need modifier 51 on Medicare claims when a patient has multiple plastic surgery procedures the same session?</summary><p>Not for Medicare. Medicare's claims processing system has hard-coded logic that ranks the procedures on the claim by physician fee schedule value and applies the multiple-surgery reduction, 100% of the highest-valued procedure, 50% of each additional one subject to the reduction, regardless of whether modifier 51 is appended, and several Medicare Administrative Contractors explicitly instruct providers not to add it. Commercial payers are a different story: some claims-editing software still expects 51 on the secondary procedure to trigger its own reduction logic correctly, so check each payer's reimbursement policy rather than assuming Medicare's rule applies everywhere.</p></details>
+    <details class="faq-item"><summary>Can we use modifier 79 instead of 58 for a planned second stage of breast reconstruction?</summary><p>No, 79 is for a procedure unrelated to the original surgery, and a planned second stage of the same reconstruction is the opposite of that. Exchanging a tissue expander for a permanent implant, or revising a flap as part of the reconstruction plan documented at the time of the first surgery, is related and either planned or more extensive than the original procedure, which is exactly what modifier 58 describes. Reaching for 79 on a staged reconstruction case usually reflects a misunderstanding of the distinction rather than a coding choice the documentation actually supports, and it can draw scrutiny because it implies an unrelated diagnosis that the record won't back up.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. Modifier rules, payer reimbursement policy, bilateral and multiple-procedure indicators, and cosmetic-versus-reconstructive coverage determinations vary by payer, by Medicare Administrative Contractor jurisdiction, and over time. This page reflects standard industry practice and is provided for general education &mdash; confirm requirements against your specific payer mix, the current Medicare Physician Fee Schedule indicators, and the applicable local coverage article before submitting claims. Items marked &#9888;&#65039; could not be confirmed as a universal figure or rule and should be checked against your own payer contracts.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. Modifier rules, payer reimbursement policy, bilateral and multiple-procedure indicators, and cosmetic-versus-reconstructive coverage determinations vary by payer, by Medicare Administrative Contractor jurisdiction, and over time. This page reflects standard industry practice and is provided for general education, confirm requirements against your specific payer mix, the current Medicare Physician Fee Schedule indicators, and the applicable local coverage article before submitting claims. Items marked &#9888;&#65039; could not be confirmed as a universal figure or rule and should be checked against your own payer contracts.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -345,67 +400,56 @@
     <li><a href="specialty-plastic-surgery.html">Plastic surgery billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-plastic-surgery-global-period-multiple-procedure-billing.html">Global period and multiple-procedure billing for plastic surgery <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="medical-coding.html">Medical coding overview <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
-    <li><a href="specialties.html">All 29 specialty guides <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+    <li><a href="specialties.html">All 30 specialty guides <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-plastic-surgery.html">Plastic surgery</a></li><li><a href="specialties.html">All 30 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>

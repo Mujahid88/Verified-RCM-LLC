@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Endocrinology Billing Modifiers: 25, KX, GA, and More Explained | Verified RCM">
 <meta name="twitter:description" content="Endocrinology billing modifiers explained: 25 and 24 on thyroid/parathyroid procedure days, KX for CGM and insulin pump coverage attestation, GA/GY/GZ for ABN scenarios, 59/X-modifiers, and RT/LT laterality.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Endocrinology","item":"https://www.verifiedrcm.com/specialty-endocrinology.html"},{"@type":"ListItem","position":4,"name":"Modifiers","item":"https://www.verifiedrcm.com/specialty-endocrinology-modifiers.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between KX and GA on a CGM or insulin pump claim?","acceptedAnswer":{"@type":"Answer","text":"KX attests that every coverage criterion in the applicable DME LCD is met and documented in your files — it's how you tell Medicare the item is covered. GA does close to the opposite: it reports that you have a signed Advance Beneficiary Notice on file because you expect Medicare to deny the claim as not medically necessary, which shifts financial liability to the patient instead of the supplier. You'd never append both to the same line — KX says \"this meets criteria,\" GA says \"we don't think it does, and the patient has been told.\""}},{"@type":"Question","name":"Do we need modifier 25 on the E/M visit the same day as a thyroid FNA biopsy?","acceptedAnswer":{"@type":"Answer","text":"If the visit includes a significant, separately identifiable evaluation — working up a new thyroid nodule, reviewing unrelated symptoms, or making the medical-necessity decision that leads to the biopsy in a way that goes beyond the exam bundled into the procedure — yes, append 25 and make sure the note documents that separate work distinctly from the procedure note. Ultrasound-guided and non-guided FNA codes (10005–10021) carry an XXX global indicator rather than a 000-day global, so the global-surgery concept doesn't formally apply the way it does to a 090-day thyroidectomy, but payers still expect the E/M to stand on its own documentation before they'll pay it separately."}},{"@type":"Question","name":"When does modifier 24 apply instead of 25 in endocrinology billing?","acceptedAnswer":{"@type":"Answer","text":"24 is for an unrelated E/M furnished during the post-operative period of a major procedure — in endocrinology, that's most often the 90-day global period following a thyroidectomy, thyroid lobectomy, or parathyroidectomy. A hyperthyroid patient's unrelated diabetes follow-up six weeks after a thyroidectomy is a 24. An E/M billed on the same day as the surgery itself, or during a minor procedure's global period, is 25 territory instead — the two modifiers answer different questions (timing relative to a major global period versus same-day with a minor one) and aren't interchangeable."}},{"@type":"Question","name":"Do we need RT or LT on thyroid, parathyroid, or adrenal procedure claims?","acceptedAnswer":{"@type":"Answer","text":"For adrenalectomy specifically, yes — Medicare's laterality-modifier policy rejects claims for a unilateral adrenalectomy that don't carry RT or LT, since the adrenal glands are a paired structure and the payer needs to know which one was removed; a bilateral procedure gets modifier 50 instead. For a unilateral thyroid lobectomy or a focused single-side parathyroid exploration, appending RT/LT isn't universally mandatory the way it is for adrenalectomy, but it removes any ambiguity when the operative note, the claim, and a later re-operation on the opposite side all need to line up — and several payers request it regardless."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between KX and GA on a CGM or insulin pump claim?","acceptedAnswer":{"@type":"Answer","text":"KX attests that every coverage criterion in the applicable DME LCD is met and documented in your files, it's how you tell Medicare the item is covered. GA does close to the opposite: it reports that you have a signed Advance Beneficiary Notice on file because you expect Medicare to deny the claim as not medically necessary, which shifts financial liability to the patient instead of the supplier. You'd never append both to the same line, KX says \"this meets criteria,\" GA says \"we don't think it does, and the patient has been told.\""}},{"@type":"Question","name":"Do we need modifier 25 on the E/M visit the same day as a thyroid FNA biopsy?","acceptedAnswer":{"@type":"Answer","text":"If the visit includes a significant, separately identifiable evaluation, working up a new thyroid nodule, reviewing unrelated symptoms, or making the medical-necessity decision that leads to the biopsy in a way that goes beyond the exam bundled into the procedure, yes, append 25 and make sure the note documents that separate work distinctly from the procedure note. Ultrasound-guided and non-guided FNA codes (10005–10021) carry an XXX global indicator rather than a 000-day global, so the global-surgery concept doesn't formally apply the way it does to a 090-day thyroidectomy, but payers still expect the E/M to stand on its own documentation before they'll pay it separately."}},{"@type":"Question","name":"When does modifier 24 apply instead of 25 in endocrinology billing?","acceptedAnswer":{"@type":"Answer","text":"24 is for an unrelated E/M furnished during the post-operative period of a major procedure, in endocrinology, that's most often the 90-day global period following a thyroidectomy, thyroid lobectomy, or parathyroidectomy. A hyperthyroid patient's unrelated diabetes follow-up six weeks after a thyroidectomy is a 24. An E/M billed on the same day as the surgery itself, or during a minor procedure's global period, is 25 territory instead, the two modifiers answer different questions (timing relative to a major global period versus same-day with a minor one) and aren't interchangeable."}},{"@type":"Question","name":"Do we need RT or LT on thyroid, parathyroid, or adrenal procedure claims?","acceptedAnswer":{"@type":"Answer","text":"For adrenalectomy specifically, yes, Medicare's laterality-modifier policy rejects claims for a unilateral adrenalectomy that don't carry RT or LT, since the adrenal glands are a paired structure and the payer needs to know which one was removed; a bilateral procedure gets modifier 50 instead. For a unilateral thyroid lobectomy or a focused single-side parathyroid exploration, appending RT/LT isn't universally mandatory the way it is for adrenalectomy, but it removes any ambiguity when the operative note, the claim, and a later re-operation on the opposite side all need to line up, and several payers request it regardless."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 30 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 30 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 30 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-endocrinology.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete endocrinology guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an undulating glucose-level waveform with an accented peak beside a symmetric butterfly-shaped loop suggesting the thyroid gland">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-endocrinology.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete endocrinology guide</a>
+      <h1>Endocrinology modifiers: 25, 24, KX, GA/GY/GZ, 59/X-modifiers, and RT/LT explained.</h1>
+      <p class="lede">Endocrinology billing sits at an unusual intersection: same-day E/M decisions around thyroid and parathyroid procedures, recurring durable medical equipment claims for CGMs and insulin pumps that live or die on a single attestation modifier, and a steady stream of ABN paperwork for devices that may not meet Medicare's coverage bar. Almost none of that gets resolved by the CPT code alone, it's the modifier that tells the payer what actually happened and why it should pay. This guide covers every modifier that carries real weight in endocrinology billing, with the specific claim scenario each one is built for.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-endocrinology.html">endocrinology billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an undulating glucose-level waveform with an accented peak beside a symmetric butterfly-shaped loop suggesting the thyroid gland">
   <line x1="70" y1="305" x2="410" y2="305" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
 
   <path d="M 70,275 C 110,260 140,260 170,275 C 200,290 230,290 260,275 C 290,260 320,260 350,275 C 380,290 400,290 410,285" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
@@ -184,76 +240,75 @@
   <path d="M 240,350 C 275,325 300,335 302,360 C 304,385 275,400 240,372" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="240" cy="361" r="4" fill="var(--cat-medical)"/>
 </svg></figure>
-  <h1>Endocrinology modifiers: 25, 24, KX, GA/GY/GZ, 59/X-modifiers, and RT/LT explained.</h1>
-  <p class="lede">Endocrinology billing sits at an unusual intersection: same-day E/M decisions around thyroid and parathyroid procedures, recurring durable medical equipment claims for CGMs and insulin pumps that live or die on a single attestation modifier, and a steady stream of ABN paperwork for devices that may not meet Medicare's coverage bar. Almost none of that gets resolved by the CPT code alone &mdash; it's the modifier that tells the payer what actually happened and why it should pay. This guide covers every modifier that carries real weight in endocrinology billing, with the specific claim scenario each one is built for.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-endocrinology.html">endocrinology billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>KX is an attestation, not a formality.</b> It tells the DME MAC's claims-processing system that every LCD coverage criterion for a CGM or insulin pump is met and documented &mdash; leave it off, and the claim is built to reject or deny on the technical merits alone, before anyone even looks at medical necessity.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>24 and 25 answer different questions.</b> 25 is same-day with a minor procedure; 24 is unrelated care during a major procedure's 90-day global &mdash; and thyroidectomy, thyroid lobectomy, and parathyroidectomy all carry that 90-day global.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>GA, GY, and GZ report three different liability outcomes</b> on a CGM or pump claim that might not meet coverage criteria &mdash; who gets billed if Medicare denies depends entirely on which one is on the claim.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>KX is an attestation, not a formality.</b> It tells the DME MAC's claims-processing system that every LCD coverage criterion for a CGM or insulin pump is met and documented, leave it off, and the claim is built to reject or deny on the technical merits alone, before anyone even looks at medical necessity.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>24 and 25 answer different questions.</b> 25 is same-day with a minor procedure; 24 is unrelated care during a major procedure's 90-day global, and thyroidectomy, thyroid lobectomy, and parathyroidectomy all carry that 90-day global.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>GA, GY, and GZ report three different liability outcomes</b> on a CGM or pump claim that might not meet coverage criteria, who gets billed if Medicare denies depends entirely on which one is on the claim.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>RT/LT isn't optional on adrenalectomy claims.</b> Medicare's laterality-modifier policy rejects a unilateral adrenalectomy claim outright without one.</span></li>
     </ul>
   </section>
 
   <h2>Why modifiers carry so much weight here</h2>
-  <p>Most endocrinology revenue runs through two very different billing patterns, and modifiers are what keep them from colliding. On one side sits procedural work &mdash; thyroid FNA biopsies, core needle biopsies, thyroidectomies, parathyroidectomies, adrenalectomies &mdash; where the modifier communicates timing relative to a global period and, for paired organs, which side was treated. On the other sits recurring DME billing for continuous glucose monitors and insulin pumps, where the modifier isn't describing the service at all; it's attesting, claim after claim, that a Local Coverage Determination's criteria are still being met. Get the procedural modifiers wrong and a claim usually denies outright, which at least lands in a work queue. Get the DME attestation modifiers wrong and the claim can reject before it's even adjudicated, or the practice ends up holding liability for a supply Medicare was never going to pay for.</p>
+  <p>Most endocrinology revenue runs through two very different billing patterns, and modifiers are what keep them from colliding. On one side sits procedural work, thyroid FNA biopsies, core needle biopsies, thyroidectomies, parathyroidectomies, adrenalectomies, where the modifier communicates timing relative to a global period and, for paired organs, which side was treated. On the other sits recurring DME billing for continuous glucose monitors and insulin pumps, where the modifier isn't describing the service at all; it's attesting, claim after claim, that a Local Coverage Determination's criteria are still being met. Get the procedural modifiers wrong and a claim usually denies outright, which at least lands in a work queue. Get the DME attestation modifiers wrong and the claim can reject before it's even adjudicated, or the practice ends up holding liability for a supply Medicare was never going to pay for.</p>
   <p>For the biopsy-day and procedure-day scenarios covered here in overview, see our dedicated <a href="specialty-endocrinology-thyroid-biopsy-coding.html">thyroid biopsy coding guide</a>. For the DME side, see our <a href="specialty-endocrinology-cgm-insulin-pump-billing.html">CGM and insulin pump billing guide</a>, which covers the full HCPCS code set and supply-replacement cadence these modifiers attach to.</p>
 
   <h2>Modifier 25: significant, separately identifiable E/M on a procedure day</h2>
   <p>Modifier 25 reports an E/M service that is significant and separately identifiable from the work already bundled into a minor procedure performed the same day by the same physician. The documentation standard is specific: the note has to show that the evaluation went beyond the usual pre- and post-procedure work already priced into the procedure code, and the procedure note and the E/M note need to be distinguishable from each other in the chart, not blended into one narrative.</p>
-  <p>In endocrinology, the clearest example is a new or worsening thyroid nodule visit that results in a same-day fine needle aspiration or core needle biopsy. The core needle biopsy code (60100) carries a 000-day global period, which is the minor-procedure category modifier 25 is built for. The FNA family (10005&ndash;10012 with imaging guidance, 10021 without) is coded with an XXX global indicator instead &mdash; meaning the global-surgery framework doesn't formally apply to it the way it does a 000- or 090-day code. That distinction matters for how you think about the claim, but it doesn't change the practical expectation: if the visit includes real evaluation and management work &mdash; new symptoms, a differential that isn't limited to the nodule, medication management for a separate endocrine condition &mdash; document it as its own service and append 25 to the E/M line so the payer can see it wasn't just the pre-biopsy check-in.</p>
+  <p>In endocrinology, the clearest example is a new or worsening thyroid nodule visit that results in a same-day fine needle aspiration or core needle biopsy. The core needle biopsy code (60100) carries a 000-day global period, which is the minor-procedure category modifier 25 is built for. The FNA family (10005&ndash;10012 with imaging guidance, 10021 without) is coded with an XXX global indicator instead, meaning the global-surgery framework doesn't formally apply to it the way it does a 000- or 090-day code. That distinction matters for how you think about the claim, but it doesn't change the practical expectation: if the visit includes real evaluation and management work, new symptoms, a differential that isn't limited to the nodule, medication management for a separate endocrine condition, document it as its own service and append 25 to the E/M line so the payer can see it wasn't just the pre-biopsy check-in.</p>
   <p>What doesn't qualify: a visit where the entire encounter is the decision to biopsy and the biopsy itself, with no evaluation beyond what any biopsy requires. Billing an E/M with 25 on every biopsy day regardless of what happened in the room is one of the more commonly audited patterns in procedural specialties, precisely because it's easy to default to and hard to defend chart by chart.</p>
 
   <h2>24 versus 25: the global-period decision</h2>
-  <p>These two get confused constantly in endocrinology because the specialty runs both procedure types side by side &mdash; minor biopsies with no or a short global period, and major thyroid, parathyroid, and adrenal surgery with a 90-day global. Thyroidectomy (60240) and thyroid lobectomy (60220) each carry a 90-day global period, as does parathyroidectomy or parathyroid exploration (60500). Any E/M furnished by the operating physician during that 90-day window has to be sorted correctly, because billing it wrong either loses reimbursement the practice is entitled to or bills for something already bundled into the global fee.</p>
+  <p>These two get confused constantly in endocrinology because the specialty runs both procedure types side by side, minor biopsies with no or a short global period, and major thyroid, parathyroid, and adrenal surgery with a 90-day global. Thyroidectomy (60240) and thyroid lobectomy (60220) each carry a 90-day global period, as does parathyroidectomy or parathyroid exploration (60500). Any E/M furnished by the operating physician during that 90-day window has to be sorted correctly, because billing it wrong either loses reimbursement the practice is entitled to or bills for something already bundled into the global fee.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Modifier 24</div><ul>
       <li>Unrelated E/M by the same physician <b>during</b> the 90-day post-operative period of a thyroidectomy, thyroid lobectomy, or parathyroidectomy.</li>
-      <li>Example: a post-thyroidectomy patient's unrelated Type 2 diabetes management visit, five weeks after surgery &mdash; unrelated to the thyroid procedure, billable with 24 attached.</li>
+      <li>Example: a post-thyroidectomy patient's unrelated Type 2 diabetes management visit, five weeks after surgery, unrelated to the thyroid procedure, billable with 24 attached.</li>
     </ul></div>
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Modifier 25</div><ul>
-      <li>Significant, separately identifiable E/M on the <b>same day</b> as a minor procedure (000-day global, like the 60100 core needle biopsy) &mdash; or a service outside global surgery rules entirely.</li>
+      <li>Significant, separately identifiable E/M on the <b>same day</b> as a minor procedure (000-day global, like the 60100 core needle biopsy), or a service outside global surgery rules entirely.</li>
       <li>Never appropriate on an E/M billed the same day as the thyroidectomy, lobectomy, or parathyroidectomy itself.</li>
     </ul></div>
   </div>
   <p>The distinction is timing, not relatedness: same-day-with-a-minor-procedure is 25, unrelated-and-inside-the-post-op-window-of-a-major-procedure is 24. A hypothyroidism medication check three weeks after a total thyroidectomy, unrelated to the surgical site, is a textbook 24. The same visit billed the same day as the thyroidectomy itself would not be billable as a separate E/M at all in most circumstances, because it's the pre-operative evaluation the global fee already covers.</p>
 
   <h2>KX: the DME coverage attestation that decides whether the claim survives</h2>
-  <p>KX doesn't describe a service the way most modifiers do &mdash; it's a compliance flag. Appending KX to a DME claim line tells the contractor that every coverage criterion listed in that item's Local Coverage Determination has been met and that supporting documentation is on file, ready to produce if the DME MAC asks for it. In endocrinology, that shows up on two recurring claim types: continuous glucose monitors and insulin pumps.</p>
+  <p>KX doesn't describe a service the way most modifiers do, it's a compliance flag. Appending KX to a DME claim line tells the contractor that every coverage criterion listed in that item's Local Coverage Determination has been met and that supporting documentation is on file, ready to produce if the DME MAC asks for it. In endocrinology, that shows up on two recurring claim types: continuous glucose monitors and insulin pumps.</p>
   <p>For CGM billing (device code E2103 and the monthly supply allowance A4239), insulin-treatment status is reported by a KX/KS pairing: KX when the beneficiary is insulin-treated, KS when non-insulin-treated but otherwise meeting CGM coverage criteria such as a documented history of problematic hypoglycemia. KX must not be used for a beneficiary treated exclusively with oral hypoglycemic agents. A separate CG modifier is layered on top to attest that all five coverage requirements in the glucose monitor LCD are satisfied; CG and KX/KS answer different questions on the same claim and both are typically required <em>(LCD L33822, Glucose Monitors; Article A52464, Glucose Monitor Policy Article)</em>.</p>
-  <p>For insulin pump billing (E0784 and its infusion supplies), CMS guidance is direct: suppliers add KX to the pump, drug, and supply lines only when every criterion in the external infusion pump LCD's coverage section is actually met &mdash; documented insulinopenia via fasting C-peptide testing or beta-cell autoantibody positivity, a multiple-daily-injection regimen that failed to control glucose, a signed written order prior to delivery, a training record, and evaluation by the treating practitioner at least every three months to support continued coverage <em>(LCD L33794, External Infusion Pumps; Article A52507, External Infusion Pumps Policy Article)</em>.</p>
-  <p>Why omitting KX causes an automatic denial rather than a review: DME MAC claims systems look for the modifier as the supplier's checkbox-level attestation before the claim is even routed for a medical-necessity determination. CMS's own glucose-monitor guidance makes the mechanism explicit for a related modifier on adjunctive CGM claims &mdash; a claim line submitted without the required modifier is rejected outright as missing information, not pended for review. The same automated logic is why a CGM or pump claim missing KX doesn't get quietly underpaid the way a missing procedural modifier might; it's built to be stopped at the systems level before a human looks at the chart.</p>
+  <p>For insulin pump billing (E0784 and its infusion supplies), CMS guidance is direct: suppliers add KX to the pump, drug, and supply lines only when every criterion in the external infusion pump LCD's coverage section is actually met, documented insulinopenia via fasting C-peptide testing or beta-cell autoantibody positivity, a multiple-daily-injection regimen that failed to control glucose, a signed written order prior to delivery, a training record, and evaluation by the treating practitioner at least every three months to support continued coverage <em>(LCD L33794, External Infusion Pumps; Article A52507, External Infusion Pumps Policy Article)</em>.</p>
+  <p>Why omitting KX causes an automatic denial rather than a review: DME MAC claims systems look for the modifier as the supplier's checkbox-level attestation before the claim is even routed for a medical-necessity determination. CMS's own glucose-monitor guidance makes the mechanism explicit for a related modifier on adjunctive CGM claims, a claim line submitted without the required modifier is rejected outright as missing information, not pended for review. The same automated logic is why a CGM or pump claim missing KX doesn't get quietly underpaid the way a missing procedural modifier might; it's built to be stopped at the systems level before a human looks at the chart.</p>
 
   <h2>GA, GY, GZ: when a CGM or pump may not meet coverage criteria</h2>
   <p>These three ABN-related modifiers report what happened when a supplier believed, before submitting the claim, that Medicare might not pay for a CGM, insulin pump, or related DME item as medically necessary. They report three different liability outcomes, and mixing them up shifts real financial risk from the payer to either the patient or the practice.</p>
   <ul class="check-list">
-    <li><span class="check">GA</span><span><b>Waiver of liability on file.</b> A signed Advance Beneficiary Notice is on record because the supplier expects a medical-necessity denial. If Medicare denies, the patient can be billed &mdash; that's the entire purpose of getting the ABN signed before the device goes out the door.</span></li>
-    <li><span class="check">GY</span><span><b>Statutory exclusion.</b> The item doesn't meet Medicare's benefit definition at all &mdash; not a coverage-criteria failure but a categorical exclusion. No ABN is required for most statutory exclusions, though DMEPOS items carry their own notice nuances worth checking against current guidance before assuming none is needed.</span></li>
-    <li><span class="check">GZ</span><span><b>Expected denial, no ABN obtained.</b> The supplier expects Medicare to deny the item as not reasonable and necessary but never got a signed ABN. The denial falls on the supplier &mdash; the patient cannot be billed, which makes GZ the modifier that costs the practice money rather than protecting it.</span></li>
+    <li><span class="check">GA</span><span><b>Waiver of liability on file.</b> A signed Advance Beneficiary Notice is on record because the supplier expects a medical-necessity denial. If Medicare denies, the patient can be billed, that's the entire purpose of getting the ABN signed before the device goes out the door.</span></li>
+    <li><span class="check">GY</span><span><b>Statutory exclusion.</b> The item doesn't meet Medicare's benefit definition at all, not a coverage-criteria failure but a categorical exclusion. No ABN is required for most statutory exclusions, though DMEPOS items carry their own notice nuances worth checking against current guidance before assuming none is needed.</span></li>
+    <li><span class="check">GZ</span><span><b>Expected denial, no ABN obtained.</b> The supplier expects Medicare to deny the item as not reasonable and necessary but never got a signed ABN. The denial falls on the supplier, the patient cannot be billed, which makes GZ the modifier that costs the practice money rather than protecting it.</span></li>
   </ul>
-  <p>In practice, the CGM and insulin pump LCDs give a concrete trigger for all three: a patient who wants a CGM but doesn't clearly meet the insulin-treated or problematic-hypoglycemia pathway, or a pump candidate who hasn't completed the required trial of multiple daily injections. In either case, the front-office workflow protects the revenue &mdash; get the ABN signed and itemized before the device ships whenever coverage is genuinely in question, so the claim can carry GA instead of GZ if Medicare denies it. A device sent out on the assumption that "it usually gets covered," without an ABN and without KX/CG support in the chart, is what turns into an uncollectible GZ write-off.</p>
+  <p>In practice, the CGM and insulin pump LCDs give a concrete trigger for all three: a patient who wants a CGM but doesn't clearly meet the insulin-treated or problematic-hypoglycemia pathway, or a pump candidate who hasn't completed the required trial of multiple daily injections. In either case, the front-office workflow protects the revenue, get the ABN signed and itemized before the device ships whenever coverage is genuinely in question, so the claim can carry GA instead of GZ if Medicare denies it. A device sent out on the assumption that "it usually gets covered," without an ABN and without KX/CG support in the chart, is what turns into an uncollectible GZ write-off.</p>
 
   <h2>59 and the X-modifiers: genuinely distinct procedures</h2>
-  <p>These override an NCCI procedure-to-procedure bundling edit &mdash; but only where the edit's modifier indicator actually allows an override. An indicator of 0 means no modifier changes the outcome, so check the edit before reaching for any of these. Where an override is possible, CMS guidance and most payer policy prefer the specific X-modifier over generic 59, because it states the reason for the split directly on the claim: XE for a separate encounter, XS for a separate structure or organ, XP for a separate practitioner, and XU for a rare non-overlapping service that doesn't fit the other three.</p>
-  <p>The pattern that shows up most in endocrinology is ultrasound guidance paired with a biopsy. CMS treats the radiologic guidance code (76942) as billable once per patient encounter, not once per lesion or per needle pass, so appending 59 or XS to force a second unit of 76942 when only one encounter occurred isn't defensible. Where a genuine distinction exists &mdash; guidance and biopsy performed on separate, distinct anatomic structures during the same session, such as a thyroid nodule biopsy and a separate parathyroid lesion biopsy &mdash; XS documents why the two are billed as distinct rather than bundled. The same logic applies to same-day biopsies of two anatomically separate thyroid nodules reported as separate lines: the distinction has to be real and documented at the time of service, not reconstructed after a denial. Reflexive use of 59 to force a bundled pair through, without a documented distinct site or session behind it, is one of the most reliably audited patterns across every procedural specialty.</p>
+  <p>These override an NCCI procedure-to-procedure bundling edit, but only where the edit's modifier indicator actually allows an override. An indicator of 0 means no modifier changes the outcome, so check the edit before reaching for any of these. Where an override is possible, CMS guidance and most payer policy prefer the specific X-modifier over generic 59, because it states the reason for the split directly on the claim: XE for a separate encounter, XS for a separate structure or organ, XP for a separate practitioner, and XU for a rare non-overlapping service that doesn't fit the other three.</p>
+  <p>The pattern that shows up most in endocrinology is ultrasound guidance paired with a biopsy. CMS treats the radiologic guidance code (76942) as billable once per patient encounter, not once per lesion or per needle pass, so appending 59 or XS to force a second unit of 76942 when only one encounter occurred isn't defensible. Where a genuine distinction exists, guidance and biopsy performed on separate, distinct anatomic structures during the same session, such as a thyroid nodule biopsy and a separate parathyroid lesion biopsy, XS documents why the two are billed as distinct rather than bundled. The same logic applies to same-day biopsies of two anatomically separate thyroid nodules reported as separate lines: the distinction has to be real and documented at the time of service, not reconstructed after a denial. Reflexive use of 59 to force a bundled pair through, without a documented distinct site or session behind it, is one of the most reliably audited patterns across every procedural specialty.</p>
 
   <h2>RT and LT: laterality on paired-organ procedures</h2>
-  <p>Endocrinology bills several procedures on organs that come in pairs or distinct lobes, and the laterality modifier is what tells the payer which side was actually treated. The requirement is strictest for adrenalectomy: Medicare's laterality-modifier policy rejects a claim for a unilateral adrenalectomy (60540, or its laparoscopic equivalent) that doesn't carry RT or LT, because the adrenal glands are a paired structure and the payer has no other way to know which one came out. A genuinely bilateral adrenalectomy is reported with modifier 50 instead, and some payers prefer the code listed twice with RT and LT appended separately rather than modifier 50 &mdash; check the specific payer's laterality policy before assuming one format works everywhere.</p>
+  <p>Endocrinology bills several procedures on organs that come in pairs or distinct lobes, and the laterality modifier is what tells the payer which side was actually treated. The requirement is strictest for adrenalectomy: Medicare's laterality-modifier policy rejects a claim for a unilateral adrenalectomy (60540, or its laparoscopic equivalent) that doesn't carry RT or LT, because the adrenal glands are a paired structure and the payer has no other way to know which one came out. A genuinely bilateral adrenalectomy is reported with modifier 50 instead, and some payers prefer the code listed twice with RT and LT appended separately rather than modifier 50, check the specific payer's laterality policy before assuming one format works everywhere.</p>
   <p>Thyroid lobectomy and focused unilateral parathyroid exploration don't carry the same hard rejection rule, but appending RT or LT is still worth doing as standard practice. It removes ambiguity if the patient later needs a completion thyroidectomy or a contralateral parathyroid exploration, it keeps the operative note and the claim aligned, and a number of commercial payers request it even where Medicare's edit doesn't strictly force the issue. Treat it the way you'd treat any documentation habit that costs nothing on a clean claim and prevents a real problem on a re-operation claim six months later.</p>
 
   <h2>Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
-      <li>Confirm every CGM and pump coverage criterion is documented before appending KX &mdash; and keep that documentation on file, not just referenced.</li>
+      <li>Confirm every CGM and pump coverage criterion is documented before appending KX, and keep that documentation on file, not just referenced.</li>
       <li>Get the ABN signed and itemized before a CGM or pump ships whenever coverage is genuinely in question, so a denial carries GA instead of an uncollectible GZ.</li>
       <li>Prefer the specific X-modifier over generic 59 wherever it applies, and check the NCCI modifier indicator first.</li>
       <li>Append RT/LT on every unilateral adrenalectomy claim, and default to it on thyroid lobectomy and focused parathyroid exploration too.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Don't</div><ul>
-      <li>Don't append KX to a CGM or pump claim as a routine habit &mdash; it's an attestation, and an unsupported one is exactly what a DME MAC audit is built to catch.</li>
+      <li>Don't append KX to a CGM or pump claim as a routine habit, it's an attestation, and an unsupported one is exactly what a DME MAC audit is built to catch.</li>
       <li>Don't ship a CGM or pump on the assumption coverage "usually goes through" without a signed ABN backing it up.</li>
       <li>Don't append modifier 25 to every biopsy-day E/M regardless of what the note actually documents.</li>
       <li>Don't bill an E/M the same day as the thyroidectomy or parathyroidectomy itself as if it were separately payable.</li>
@@ -274,14 +329,14 @@
       <caption>Every modifier covered above, what it means, when to use it, and the error that costs practices money.</caption>
       <thead><tr><th scope="col">Modifier</th><th scope="col">What it means</th><th scope="col">When to use it</th><th scope="col">Common error</th></tr></thead>
       <tbody>
-        <tr><td><code>25</code></td><td>Significant, separately identifiable E/M on the day of a minor procedure.</td><td>Same-day visit that includes real evaluation beyond the biopsy's own pre/post work &mdash; e.g., a thyroid nodule work-up with a same-day core needle biopsy (60100, 000-day global).</td><td>Appending it to every biopsy-day visit regardless of documented content.</td></tr>
+        <tr><td><code>25</code></td><td>Significant, separately identifiable E/M on the day of a minor procedure.</td><td>Same-day visit that includes real evaluation beyond the biopsy's own pre/post work, e.g., a thyroid nodule work-up with a same-day core needle biopsy (60100, 000-day global).</td><td>Appending it to every biopsy-day visit regardless of documented content.</td></tr>
         <tr><td><code>24</code></td><td>Unrelated E/M during a major procedure's post-operative global period.</td><td>Unrelated visit within the 90-day global of a thyroidectomy (60240), thyroid lobectomy (60220), or parathyroidectomy (60500).</td><td>Confusing it with 25, or billing a related visit as unrelated to slip past the global period.</td></tr>
         <tr><td><code>KX</code></td><td>Attests that all DME LCD coverage criteria are met and documented.</td><td>Every CGM (E2103/A4239) or insulin pump (E0784) claim where coverage criteria are genuinely satisfied; paired with KS for non-insulin-treated CGM patients and CG for full LCD-criteria attestation.</td><td>Omitting it and triggering an automatic rejection/denial, or appending it without the supporting documentation on file.</td></tr>
         <tr><td><code>GA</code></td><td>Signed ABN on file; expects a medical-necessity denial.</td><td>CGM or pump ordered when coverage criteria are questionable and the patient has been notified and signed the ABN in advance.</td><td>Skipping the ABN conversation and defaulting to GZ liability after the fact.</td></tr>
         <tr><td><code>GY</code></td><td>Statutory exclusion; item doesn't meet Medicare's benefit definition.</td><td>An item categorically outside Medicare's covered benefit, distinct from a coverage-criteria failure.</td><td>Using it interchangeably with GA or GZ when the real issue is a coverage-criteria gap, not a categorical exclusion.</td></tr>
-        <tr><td><code>GZ</code></td><td>Expected denial as not reasonable/necessary; no ABN obtained.</td><td>Only when a supplier failed to get an ABN before delivering an item they expected wouldn't be covered.</td><td>Ending up here by default because the ABN conversation never happened &mdash; the patient can't be billed, so the practice absorbs the cost.</td></tr>
+        <tr><td><code>GZ</code></td><td>Expected denial as not reasonable/necessary; no ABN obtained.</td><td>Only when a supplier failed to get an ABN before delivering an item they expected wouldn't be covered.</td><td>Ending up here by default because the ABN conversation never happened, the patient can't be billed, so the practice absorbs the cost.</td></tr>
         <tr><td><code>59</code></td><td>Generic distinct-procedural-service override for an NCCI edit.</td><td>Only when the distinction is real and doesn't map cleanly to one of the four X-modifiers, and the edit's indicator allows an override.</td><td>Reflexive use to force a bundled pair (like duplicate 76942 guidance units) through without a documented distinct site or session.</td></tr>
-        <tr><td><code>XE / XS / XP / XU</code></td><td>Specific reasons for a distinct procedural service &mdash; separate encounter, structure, practitioner, or unusual non-overlapping service.</td><td>XS is the one that shows up most: separate, distinct anatomic structures biopsied in the same session (e.g., a thyroid nodule and a separate parathyroid lesion).</td><td>Defaulting to generic 59 when a specific X-modifier actually fits, or using XS for the same structure biopsied twice.</td></tr>
+        <tr><td><code>XE / XS / XP / XU</code></td><td>Specific reasons for a distinct procedural service, separate encounter, structure, practitioner, or unusual non-overlapping service.</td><td>XS is the one that shows up most: separate, distinct anatomic structures biopsied in the same session (e.g., a thyroid nodule and a separate parathyroid lesion).</td><td>Defaulting to generic 59 when a specific X-modifier actually fits, or using XS for the same structure biopsied twice.</td></tr>
         <tr><td><code>RT / LT</code></td><td>Identifies which side of a paired organ was treated.</td><td>Required on unilateral adrenalectomy (60540) claims; recommended on thyroid lobectomy and focused unilateral parathyroid exploration.</td><td>Omitting it on adrenalectomy, which Medicare's laterality policy rejects outright.</td></tr>
         <tr><td><code>50</code></td><td>Bilateral procedure performed in the same session.</td><td>A genuinely bilateral adrenalectomy, or any bilateral paired-organ procedure the payer prices at 150% under its bilateral policy.</td><td>Using it when a payer instead wants the code listed twice with RT and LT appended separately.</td></tr>
       </tbody>
@@ -290,15 +345,15 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>What's the difference between KX and GA on a CGM or insulin pump claim?</summary><p>KX attests that every coverage criterion in the applicable DME LCD is met and documented in your files &mdash; it's how you tell Medicare the item is covered. GA does close to the opposite: it reports that you have a signed Advance Beneficiary Notice on file because you expect Medicare to deny the claim as not medically necessary, which shifts financial liability to the patient instead of the supplier. You'd never append both to the same line &mdash; KX says "this meets criteria," GA says "we don't think it does, and the patient has been told."</p></details>
-    <details class="faq-item"><summary>Do we need modifier 25 on the E/M visit the same day as a thyroid FNA biopsy?</summary><p>If the visit includes a significant, separately identifiable evaluation &mdash; working up a new thyroid nodule, reviewing unrelated symptoms, or making the medical-necessity decision that leads to the biopsy in a way that goes beyond the exam bundled into the procedure &mdash; yes, append 25 and make sure the note documents that separate work distinctly from the procedure note. Ultrasound-guided and non-guided FNA codes (10005&ndash;10021) carry an XXX global indicator rather than a 000-day global, so the global-surgery concept doesn't formally apply the way it does to a 090-day thyroidectomy, but payers still expect the E/M to stand on its own documentation before they'll pay it separately.</p></details>
-    <details class="faq-item"><summary>When does modifier 24 apply instead of 25 in endocrinology billing?</summary><p>24 is for an unrelated E/M furnished during the post-operative period of a major procedure &mdash; in endocrinology, that's most often the 90-day global period following a thyroidectomy, thyroid lobectomy, or parathyroidectomy. A hyperthyroid patient's unrelated diabetes follow-up six weeks after a thyroidectomy is a 24. An E/M billed on the same day as the surgery itself, or during a minor procedure's global period, is 25 territory instead &mdash; the two modifiers answer different questions (timing relative to a major global period versus same-day with a minor one) and aren't interchangeable.</p></details>
-    <details class="faq-item"><summary>Do we need RT or LT on thyroid, parathyroid, or adrenal procedure claims?</summary><p>For adrenalectomy specifically, yes &mdash; Medicare's laterality-modifier policy rejects claims for a unilateral adrenalectomy that don't carry RT or LT, since the adrenal glands are a paired structure and the payer needs to know which one was removed; a bilateral procedure gets modifier 50 instead. For a unilateral thyroid lobectomy or a focused single-side parathyroid exploration, appending RT/LT isn't universally mandatory the way it is for adrenalectomy, but it removes any ambiguity when the operative note, the claim, and a later re-operation on the opposite side all need to line up &mdash; and several payers request it regardless.</p></details>
+    <details class="faq-item"><summary>What's the difference between KX and GA on a CGM or insulin pump claim?</summary><p>KX attests that every coverage criterion in the applicable DME LCD is met and documented in your files, it's how you tell Medicare the item is covered. GA does close to the opposite: it reports that you have a signed Advance Beneficiary Notice on file because you expect Medicare to deny the claim as not medically necessary, which shifts financial liability to the patient instead of the supplier. You'd never append both to the same line, KX says "this meets criteria," GA says "we don't think it does, and the patient has been told."</p></details>
+    <details class="faq-item"><summary>Do we need modifier 25 on the E/M visit the same day as a thyroid FNA biopsy?</summary><p>If the visit includes a significant, separately identifiable evaluation, working up a new thyroid nodule, reviewing unrelated symptoms, or making the medical-necessity decision that leads to the biopsy in a way that goes beyond the exam bundled into the procedure, yes, append 25 and make sure the note documents that separate work distinctly from the procedure note. Ultrasound-guided and non-guided FNA codes (10005&ndash;10021) carry an XXX global indicator rather than a 000-day global, so the global-surgery concept doesn't formally apply the way it does to a 090-day thyroidectomy, but payers still expect the E/M to stand on its own documentation before they'll pay it separately.</p></details>
+    <details class="faq-item"><summary>When does modifier 24 apply instead of 25 in endocrinology billing?</summary><p>24 is for an unrelated E/M furnished during the post-operative period of a major procedure, in endocrinology, that's most often the 90-day global period following a thyroidectomy, thyroid lobectomy, or parathyroidectomy. A hyperthyroid patient's unrelated diabetes follow-up six weeks after a thyroidectomy is a 24. An E/M billed on the same day as the surgery itself, or during a minor procedure's global period, is 25 territory instead, the two modifiers answer different questions (timing relative to a major global period versus same-day with a minor one) and aren't interchangeable.</p></details>
+    <details class="faq-item"><summary>Do we need RT or LT on thyroid, parathyroid, or adrenal procedure claims?</summary><p>For adrenalectomy specifically, yes, Medicare's laterality-modifier policy rejects claims for a unilateral adrenalectomy that don't carry RT or LT, since the adrenal glands are a paired structure and the payer needs to know which one was removed; a bilateral procedure gets modifier 50 instead. For a unilateral thyroid lobectomy or a focused single-side parathyroid exploration, appending RT/LT isn't universally mandatory the way it is for adrenalectomy, but it removes any ambiguity when the operative note, the claim, and a later re-operation on the opposite side all need to line up, and several payers request it regardless.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. Modifier rules, LCD coverage criteria, and NCCI edit pairs change, including periodic LCD and quarterly bundling-edit revisions, and DME LCDs are contractor-specific &mdash; confirm the current LCD and policy article for your jurisdiction before relying on the KX/KS/CG guidance above. This page reflects standard industry practice and is provided for general education &mdash; confirm requirements against your specific payer mix and the current LCD and NCCI edit files before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. Modifier rules, LCD coverage criteria, and NCCI edit pairs change, including periodic LCD and quarterly bundling-edit revisions, and DME LCDs are contractor-specific, confirm the current LCD and policy article for your jurisdiction before relying on the KX/KS/CG guidance above. This page reflects standard industry practice and is provided for general education, confirm requirements against your specific payer mix and the current LCD and NCCI edit files before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -311,62 +366,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 30 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>

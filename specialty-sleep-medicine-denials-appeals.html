@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Sleep Medicine Claim Denials and Appeals: Wrong Code Set, CPAP Compliance | Verified RCM">
 <meta name="twitter:description" content="Sleep medicine denial fixes: HSAT CPT-vs-G-code mismatches (CO-16), CO-50 medical necessity, split-night bundling (CO-97), repeat-study frequency denials, and the KX modifier for CPAP compliance.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Sleep Medicine","item":"https://www.verifiedrcm.com/specialty-sleep-medicine.html"},{"@type":"ListItem","position":4,"name":"Sleep medicine claim denials and appeals","item":"https://www.verifiedrcm.com/specialty-sleep-medicine-denials-appeals.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does Medicare deny a home sleep apnea test billed with CPT code 95806?","acceptedAnswer":{"@type":"Answer","text":"Because Medicare DME MACs don't recognize CPT 95806, 95800, or 95801 for a home sleep apnea test at all — they require the equivalent HCPCS G-code instead: G0398 for a Type II monitor (7 or more channels), G0399 for a Type III monitor (4 or more channels, the most commonly billed code and the Medicare equivalent of CPT 95806), or G0400 for a Type IV monitor (3 or more channels). Submitting the CPT code to a Medicare DME MAC typically comes back CO-16 with remark code N56, meaning the procedure code isn't valid for the service billed. Since the test itself and its documentation are usually fine, the fix is a corrected resubmission with the matching G-code, not a medical-necessity appeal."}},{"@type":"Question","name":"What documentation prevents a CO-50 medical-necessity denial on a diagnostic sleep study?","acceptedAnswer":{"@type":"Answer","text":"The order has to show the qualifying signs, symptoms, and comorbidities your payer's coverage policy lists — typically habitual loud snoring, witnessed apneas or gasping, excessive daytime sleepiness, or a comorbidity such as treatment-resistant hypertension, atrial fibrillation, or a high STOP-BANG or Epworth score — documented before the test is ordered, with the corresponding ICD-10 code linked on the claim. A study ordered on a chart that only says \"rule out sleep apnea\" without a documented indication is the single most common way this denial happens, because the payer has nothing on the claim tying the test to a covered indication."}},{"@type":"Question","name":"Can a full diagnostic sleep study and a full CPAP titration be billed as two separate codes for the same night?","acceptedAnswer":{"@type":"Answer","text":"No. When a diagnostic study and a CPAP titration happen on the same night, the correct code is 95811 alone — it's defined to include the diagnostic portion, and 95810 and 95811 are a mutually exclusive NCCI procedure-to-procedure edit pair for the same date of service. Billing both codes for one split night gets the second one denied CO-97 as included in the payment for the other. The appeal, when it's actually correct to split the studies into two separate visits, is proving in the record that the diagnostic and titration portions happened on two distinct calendar nights, not one continuous recording."}},{"@type":"Question","name":"When is the KX modifier required on a continued CPAP rental claim, and what does it certify?","acceptedAnswer":{"@type":"Answer","text":"The KX modifier certifies that the documentation in the supplier's file supports the coverage criteria in the payer's PAP policy for that billing period. For the first through third months of therapy, it certifies the initial coverage criteria were met. From the fourth month's claim onward, it certifies both the initial criteria and the continued-coverage criteria — objective evidence, usually a compliance download, showing PAP use of 4 or more hours per night on at least 70% of nights during a consecutive 30-day period assessed between day 31 and day 91 of therapy. Appending KX without that compliance data on file, or omitting it when it's required, is what triggers the denial; the fix is pulling the download before the claim goes out, not after."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does Medicare deny a home sleep apnea test billed with CPT code 95806?","acceptedAnswer":{"@type":"Answer","text":"Because Medicare DME MACs don't recognize CPT 95806, 95800, or 95801 for a home sleep apnea test at all, they require the equivalent HCPCS G-code instead: G0398 for a Type II monitor (7 or more channels), G0399 for a Type III monitor (4 or more channels, the most commonly billed code and the Medicare equivalent of CPT 95806), or G0400 for a Type IV monitor (3 or more channels). Submitting the CPT code to a Medicare DME MAC typically comes back CO-16 with remark code N56, meaning the procedure code isn't valid for the service billed. Since the test itself and its documentation are usually fine, the fix is a corrected resubmission with the matching G-code, not a medical-necessity appeal."}},{"@type":"Question","name":"What documentation prevents a CO-50 medical-necessity denial on a diagnostic sleep study?","acceptedAnswer":{"@type":"Answer","text":"The order has to show the qualifying signs, symptoms, and comorbidities your payer's coverage policy lists, typically habitual loud snoring, witnessed apneas or gasping, excessive daytime sleepiness, or a comorbidity such as treatment-resistant hypertension, atrial fibrillation, or a high STOP-BANG or Epworth score, documented before the test is ordered, with the corresponding ICD-10 code linked on the claim. A study ordered on a chart that only says \"rule out sleep apnea\" without a documented indication is the single most common way this denial happens, because the payer has nothing on the claim tying the test to a covered indication."}},{"@type":"Question","name":"Can a full diagnostic sleep study and a full CPAP titration be billed as two separate codes for the same night?","acceptedAnswer":{"@type":"Answer","text":"No. When a diagnostic study and a CPAP titration happen on the same night, the correct code is 95811 alone, it's defined to include the diagnostic portion, and 95810 and 95811 are a mutually exclusive NCCI procedure-to-procedure edit pair for the same date of service. Billing both codes for one split night gets the second one denied CO-97 as included in the payment for the other. The appeal, when it's actually correct to split the studies into two separate visits, is proving in the record that the diagnostic and titration portions happened on two distinct calendar nights, not one continuous recording."}},{"@type":"Question","name":"When is the KX modifier required on a continued CPAP rental claim, and what does it certify?","acceptedAnswer":{"@type":"Answer","text":"The KX modifier certifies that the documentation in the supplier's file supports the coverage criteria in the payer's PAP policy for that billing period. For the first through third months of therapy, it certifies the initial coverage criteria were met. From the fourth month's claim onward, it certifies both the initial criteria and the continued-coverage criteria, objective evidence, usually a compliance download, showing PAP use of 4 or more hours per night on at least 70% of nights during a consecutive 30-day period assessed between day 31 and day 91 of therapy. Appending KX without that compliance data on file, or omitting it when it's required, is what triggers the denial; the fix is pulling the download before the claim goes out, not after."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 30 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 30 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 30 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-sleep-medicine.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete sleep medicine guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a slow undulating sleep-wave line beside a crescent moon arc, representing sleep medicine">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-sleep-medicine.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete sleep medicine guide</a>
+      <h1>Sleep medicine claim denials and appeals: wrong code set, CPAP compliance.</h1>
+      <p class="lede">Sleep medicine denials cluster around a small set of repeat offenders: a home sleep test billed with the wrong code set for the payer, a titration study that never proves the patient still needs the device, a split night billed as two full studies instead of one, and a CPAP rental line missing the modifier that certifies compliance. Almost none of these need a true medical-necessity appeal, they need the claim corrected against the rule that actually governs it. This guide covers the six denials that account for most sleep lab and DME write-offs, the appeal or correction argument for each, and a worked resubmission letter for the most common one: the CPT-versus-G-code mismatch on a home sleep apnea test.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-sleep-medicine.html">sleep medicine billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a slow undulating sleep-wave line beside a crescent moon arc, representing sleep medicine">
   <path d="M40,230 C80,220 100,240 130,225 C160,210 180,225 210,215 C240,205 260,225 290,215 C320,205 350,225 380,215 C410,205 430,220 440,215" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M40,355 C100,335 140,335 180,355 C220,375 260,375 300,355 C340,335 380,335 440,355" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M350,160 A54,54 0 1,1 291.3,101.3 A42,42 0 0,0 350,160 Z" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -178,23 +234,22 @@
   <path d="M235,305 C245,290 250,200 255,165 C260,200 270,290 285,305" fill="none" stroke="var(--cat-medical)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="255" cy="165" r="4.5" fill="var(--cat-medical)"/>
 </svg></figure>
-  <h1>Sleep medicine claim denials and appeals: wrong code set, CPAP compliance.</h1>
-  <p class="lede">Sleep medicine denials cluster around a small set of repeat offenders: a home sleep test billed with the wrong code set for the payer, a titration study that never proves the patient still needs the device, a split night billed as two full studies instead of one, and a CPAP rental line missing the modifier that certifies compliance. Almost none of these need a true medical-necessity appeal &mdash; they need the claim corrected against the rule that actually governs it. This guide covers the six denials that account for most sleep lab and DME write-offs, the appeal or correction argument for each, and a worked resubmission letter for the most common one: the CPT-versus-G-code mismatch on a home sleep apnea test.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-sleep-medicine.html">sleep medicine billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Medicare doesn't accept the CPT codes for a home sleep apnea test at all.</b> DME MACs require the HCPCS G-code that matches the monitor type &mdash; G0398, G0399, or G0400 &mdash; and CPT 95800/95801/95806 on a Medicare claim comes back CO-16 with remark N56, not a coverage denial.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Medicare doesn't accept the CPT codes for a home sleep apnea test at all.</b> DME MACs require the HCPCS G-code that matches the monitor type, G0398, G0399, or G0400, and CPT 95800/95801/95806 on a Medicare claim comes back CO-16 with remark N56, not a coverage denial.</span></li>
       <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A split-night study bills as 95811 alone, never 95810 plus 95811.</b> The two codes are a mutually exclusive NCCI pair for the same date of service, and the second code denies CO-97 as included in the first.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The KX modifier on a CPAP rental claim is a documentation certification, not a formality.</b> From the fourth month of therapy on, it certifies a compliance download on file showing PAP use &ge;4 hours/night on &ge;70% of nights across a consecutive 30-day window &mdash; missing that data behind the modifier is the denial, not the modifier itself.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Repeat sleep studies need a stated clinical reason, not just a new order.</b> Substantial weight change, an insufficient clinical response, symptom recurrence after an initial good result, or re-qualification after a failed PAP trial are the accepted triggers &mdash; "repeat study" alone reads as a frequency violation.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>The KX modifier on a CPAP rental claim is a documentation certification, not a formality.</b> From the fourth month of therapy on, it certifies a compliance download on file showing PAP use &ge;4 hours/night on &ge;70% of nights across a consecutive 30-day window, missing that data behind the modifier is the denial, not the modifier itself.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Repeat sleep studies need a stated clinical reason, not just a new order.</b> Substantial weight change, an insufficient clinical response, symptom recurrence after an initial good result, or re-qualification after a failed PAP trial are the accepted triggers, "repeat study" alone reads as a frequency violation.</span></li>
     </ul>
   </section>
 
   <h2>Why sleep medicine denials are mostly rulebook mismatches, not coverage fights</h2>
-  <p>Sleep medicine sits across three billing systems at once, and most of its denials come from applying the wrong one rather than from a payer genuinely disputing medical necessity. A facility-based polysomnogram or titration study bills as a professional/technical service under the medical benefit. A home sleep apnea test (HSAT) bills under the same benefit but uses a completely different code set depending on the payer &mdash; CPT for most commercial plans, HCPCS G-codes for Medicare DME MACs. And the CPAP device itself, once it goes home with the patient, moves into the durable medical equipment (DME) benefit, with its own capped-rental billing cycle, its own modifier rules, and its own compliance-documentation clock that runs independently of anything the sleep lab already submitted.</p>
-  <p>That three-way split is exactly where denials concentrate. A biller who's used to submitting CPT codes for a commercial HSAT sends the same code set to a Medicare DME MAC and gets an automatic rejection that looks like a coding error but is really a payer-identification error. A sleep lab that documents a split-night study correctly still loses the second code to a bundling edit if it bills both halves separately. A DME supplier with a fully compliant patient still gets denied if the KX modifier goes out before the compliance download is pulled and filed. None of these are medical-necessity disputes in the usual sense &mdash; they're claims built against the wrong rule, which means most of them get fixed by resubmission or a short, specific letter rather than a lengthy appeal.</p>
+  <p>Sleep medicine sits across three billing systems at once, and most of its denials come from applying the wrong one rather than from a payer genuinely disputing medical necessity. A facility-based polysomnogram or titration study bills as a professional/technical service under the medical benefit. A home sleep apnea test (HSAT) bills under the same benefit but uses a completely different code set depending on the payer, CPT for most commercial plans, HCPCS G-codes for Medicare DME MACs. And the CPAP device itself, once it goes home with the patient, moves into the durable medical equipment (DME) benefit, with its own capped-rental billing cycle, its own modifier rules, and its own compliance-documentation clock that runs independently of anything the sleep lab already submitted.</p>
+  <p>That three-way split is exactly where denials concentrate. A biller who's used to submitting CPT codes for a commercial HSAT sends the same code set to a Medicare DME MAC and gets an automatic rejection that looks like a coding error but is really a payer-identification error. A sleep lab that documents a split-night study correctly still loses the second code to a bundling edit if it bills both halves separately. A DME supplier with a fully compliant patient still gets denied if the KX modifier goes out before the compliance download is pulled and filed. None of these are medical-necessity disputes in the usual sense, they're claims built against the wrong rule, which means most of them get fixed by resubmission or a short, specific letter rather than a lengthy appeal.</p>
 
   <h2>The six denials that account for most sleep medicine write-offs</h2>
   <p>The table below lists each denial with its actual CARC, why it fires, the argument that gets it overturned or corrected, and the upstream fix that keeps it from recurring.</p>
@@ -204,39 +259,39 @@
       <thead><tr><th scope="col">Denial</th><th scope="col">Why it fires</th><th scope="col">Appeal / correction argument</th><th scope="col">Prevention</th></tr></thead>
       <tbody>
         <tr>
-          <td><b>CO-16</b> (with remark N56) &mdash; wrong code set for a home sleep test</td>
+          <td><b>CO-16</b> (with remark N56), wrong code set for a home sleep test</td>
           <td>CPT 95800, 95801, or 95806 submitted to a Medicare DME MAC instead of the required G-code, or a G-code sent to a commercial payer that only recognizes CPT for HSAT.</td>
-          <td>Not an appeal &mdash; a corrected resubmission. The test performed and its documentation are unchanged; only the code was wrong for that payer's code set.</td>
+          <td>Not an appeal, a corrected resubmission. The test performed and its documentation are unchanged; only the code was wrong for that payer's code set.</td>
           <td>Confirm the payer type before coding: Medicare DME MAC always gets G0398/G0399/G0400 by channel count, never the CPT equivalents. Build the code choice into the scheduling or intake step, not billing.</td>
         </tr>
         <tr>
-          <td><b>CO-50</b> &mdash; diagnostic sleep study, no qualifying indication</td>
+          <td><b>CO-50</b>, diagnostic sleep study, no qualifying indication</td>
           <td>The study was ordered and billed without a documented qualifying sign, symptom, or comorbidity on the chart, or without the matching ICD-10 code linked on the claim.</td>
           <td>If the indication was documented but not coded correctly, appeal with the chart note showing the qualifying finding (witnessed apneas, excessive daytime sleepiness, treatment-resistant hypertension, a high STOP-BANG score) and the corrected diagnosis pointer.</td>
           <td>Build the qualifying indication into the order itself, not just the encounter note, and confirm the ICD-10 code on the claim traces directly to that documented finding.</td>
         </tr>
         <tr>
-          <td><b>CO-50</b> &mdash; CPAP continued without compliance documentation</td>
-          <td>A continued-coverage claim (month 4 onward) went out without objective adherence evidence on file &mdash; the payer's PAP policy treats ongoing coverage as conditional on proof of use, not just a working device.</td>
+          <td><b>CO-50</b>, CPAP continued without compliance documentation</td>
+          <td>A continued-coverage claim (month 4 onward) went out without objective adherence evidence on file, the payer's PAP policy treats ongoing coverage as conditional on proof of use, not just a working device.</td>
           <td>If the compliance download exists but wasn't submitted, appeal with the download showing &ge;4 hours/night on &ge;70% of nights during the required 30-day window, dated within the day-31-to-day-91 assessment period.</td>
           <td>Pull and file the compliance download before the fourth month's claim goes out, not after a denial forces a look-back.</td>
         </tr>
         <tr>
-          <td><b>CO-97</b> &mdash; full diagnostic and full titration billed separately for a split night</td>
+          <td><b>CO-97</b>, full diagnostic and full titration billed separately for a split night</td>
           <td>95810 and 95811 both submitted for the same date of service instead of 95811 alone; the codes are a mutually exclusive NCCI procedure-to-procedure pair because 95811 already includes the diagnostic portion.</td>
-          <td>Correction, not appeal, when it really was one continuous night: drop 95810 and rebill 95811 alone for the full study. A true appeal applies only if the diagnostic and titration portions happened on two separate calendar nights &mdash; then the record has to show that split explicitly.</td>
+          <td>Correction, not appeal, when it really was one continuous night: drop 95810 and rebill 95811 alone for the full study. A true appeal applies only if the diagnostic and titration portions happened on two separate calendar nights, then the record has to show that split explicitly.</td>
           <td>Confirm at coding time whether the sleep tech's note describes one continuous overnight recording (95811 only) or two distinct nights (95810 for night one, 95811 for night two) before either code goes on a claim.</td>
         </tr>
         <tr>
-          <td><b>CO-151</b> &mdash; repeat sleep study exceeds frequency</td>
-          <td>A second polysomnogram or additional HSAT was billed without documentation tying it to an accepted reason for repeating the test &mdash; the payer reads the claim as exceeding the number of studies its policy allows without justification.</td>
+          <td><b>CO-151</b>, repeat sleep study exceeds frequency</td>
+          <td>A second polysomnogram or additional HSAT was billed without documentation tying it to an accepted reason for repeating the test, the payer reads the claim as exceeding the number of studies its policy allows without justification.</td>
           <td>Appeal with the specific clinical trigger documented in the chart: substantial weight gain or loss since the last study, an insufficient clinical response to the current therapy, symptom recurrence after a prior good response, or re-qualification following a failed PAP trial requiring a repeat facility-based study.</td>
-          <td>State the repeat-study reason in the order itself in the payer's own terms, not just "repeat sleep study" &mdash; the reviewer is checking for one of a short list of accepted triggers.</td>
+          <td>State the repeat-study reason in the order itself in the payer's own terms, not just "repeat sleep study", the reviewer is checking for one of a short list of accepted triggers.</td>
         </tr>
         <tr>
-          <td><b>CO-4</b> &mdash; KX modifier missing on continued CPAP rental</td>
+          <td><b>CO-4</b>, KX modifier missing on continued CPAP rental</td>
           <td>A continued-coverage rental claim (month 4 and beyond) was submitted without the KX modifier the payer's PAP policy requires once both initial and continued coverage criteria must be certified.</td>
-          <td>Correction if the compliance criteria were actually met: add KX and resubmit with the supporting download in the file. Not correctable if the compliance data doesn't support it &mdash; billing KX without the evidence behind it isn't a documentation gap to fix, it's a claim that shouldn't go out that way.</td>
+          <td>Correction if the compliance criteria were actually met: add KX and resubmit with the supporting download in the file. Not correctable if the compliance data doesn't support it, billing KX without the evidence behind it isn't a documentation gap to fix, it's a claim that shouldn't go out that way.</td>
           <td>Build a claim-scrubber rule that blocks a month-4-or-later PAP rental line from submitting without both the KX modifier and a compliance download dated inside the required window.</td>
         </tr>
       </tbody>
@@ -245,23 +300,23 @@
 
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Read the CARC before deciding how to fight it. A CO-16/N56 denial and a CO-50 denial look similar on an aging report &mdash; both show up as unpaid sleep study claims &mdash; but one needs a corrected code on a resubmission and the other needs a clinical appeal with chart documentation. Routing a code-set mismatch into the appeals queue instead of the same-day correction queue is one of the most common ways sleep lab AR ages past the point it should.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Read the CARC before deciding how to fight it. A CO-16/N56 denial and a CO-50 denial look similar on an aging report, both show up as unpaid sleep study claims, but one needs a corrected code on a resubmission and the other needs a clinical appeal with chart documentation. Routing a code-set mismatch into the appeals queue instead of the same-day correction queue is one of the most common ways sleep lab AR ages past the point it should.</p></div>
   </div>
 
   <h2>The HSAT code-set mismatch, in detail</h2>
-  <p>This is the single highest-volume sleep medicine denial because it isn't a judgment call &mdash; it's a lookup table problem that gets skipped under volume. Medicare DME MACs classify a home sleep apnea test by the number of channels the monitor records, and assign a HCPCS G-code accordingly instead of recognizing the CPT unattended-study codes most commercial payers use.</p>
+  <p>This is the single highest-volume sleep medicine denial because it isn't a judgment call, it's a lookup table problem that gets skipped under volume. Medicare DME MACs classify a home sleep apnea test by the number of channels the monitor records, and assign a HCPCS G-code accordingly instead of recognizing the CPT unattended-study codes most commercial payers use.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Home sleep apnea test code sets: commercial CPT versus Medicare HCPCS G-code, by monitor type.</caption>
       <thead><tr><th scope="col">Monitor type</th><th scope="col">Commercial CPT (payer-dependent)</th><th scope="col">Medicare HCPCS G-code</th></tr></thead>
       <tbody>
-        <tr><td>Type II (7+ channels, includes EEG)</td><td>95800 &mdash; unattended, heart rate, oxygen saturation, respiratory analysis, sleep time</td><td>G0398</td></tr>
-        <tr><td>Type III (4+ channels, no EEG)</td><td>95806 &mdash; unattended, heart rate, oxygen saturation, respiratory airflow and effort</td><td>G0399 &mdash; the most commonly billed HSAT code under Medicare</td></tr>
-        <tr><td>Type IV (3+ channels, minimum airflow/oximetry)</td><td>95801 &mdash; unattended, heart rate, oxygen saturation, respiratory analysis, no sleep time</td><td>G0400</td></tr>
+        <tr><td>Type II (7+ channels, includes EEG)</td><td>95800, unattended, heart rate, oxygen saturation, respiratory analysis, sleep time</td><td>G0398</td></tr>
+        <tr><td>Type III (4+ channels, no EEG)</td><td>95806, unattended, heart rate, oxygen saturation, respiratory airflow and effort</td><td>G0399, the most commonly billed HSAT code under Medicare</td></tr>
+        <tr><td>Type IV (3+ channels, minimum airflow/oximetry)</td><td>95801, unattended, heart rate, oxygen saturation, respiratory analysis, no sleep time</td><td>G0400</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The practical rule: confirm whether the claim is going to a Medicare DME MAC before the code is chosen, not after a denial. Some commercial payers also accept G-codes and some Medicare Advantage plans process CPT correctly through their own claims systems, so this isn't a universal Medicare-versus-commercial split &mdash; it's a per-payer setting that has to be confirmed and stored against that payer in the practice management system, the same way a payer's timely-filing limit or claim-form preference would be.</p>
+  <p>The practical rule: confirm whether the claim is going to a Medicare DME MAC before the code is chosen, not after a denial. Some commercial payers also accept G-codes and some Medicare Advantage plans process CPT correctly through their own claims systems, so this isn't a universal Medicare-versus-commercial split, it's a per-payer setting that has to be confirmed and stored against that payer in the practice management system, the same way a payer's timely-filing limit or claim-form preference would be.</p>
 
   <h2>Split-night billing: one code, one continuous study</h2>
   <div class="dodont">
@@ -269,13 +324,13 @@
       <li>Diagnostic portion followed by CPAP or bi-level titration in the same overnight session bills as 95811 alone. The code's own definition already includes the diagnostic portion, so there's nothing left for 95810 to describe on that date of service.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Two separate calendar nights</div><ul>
-      <li>A diagnostic study on one date of service and a titration on a later date bills as 95810 for the first night and 95811 for the second &mdash; but the chart has to show them as genuinely distinct sessions, not one recording split across midnight or a technician's shorthand for a single continuous study.</li>
+      <li>A diagnostic study on one date of service and a titration on a later date bills as 95810 for the first night and 95811 for the second, but the chart has to show them as genuinely distinct sessions, not one recording split across midnight or a technician's shorthand for a single continuous study.</li>
     </ul></div>
   </div>
-  <p>Sleep labs generally follow the American Academy of Sleep Medicine's split-night criteria when deciding whether to convert a diagnostic study into a same-night titration: an apnea-hypopnea index of at least 40 confirmed over a minimum of two hours of diagnostic recording, or an AHI of 20&ndash;40 supported by clinical judgment. ⚠️ That AASM threshold is a clinical protocol standard, not a universal CMS billing rule &mdash; check the specific split-night language in your MAC's polysomnography LCD and any commercial payer's sleep-study medical policy before treating it as the coding trigger, since a payer can require its own documentation of the conversion decision independent of the AASM criteria.</p>
+  <p>Sleep labs generally follow the American Academy of Sleep Medicine's split-night criteria when deciding whether to convert a diagnostic study into a same-night titration: an apnea-hypopnea index of at least 40 confirmed over a minimum of two hours of diagnostic recording, or an AHI of 20&ndash;40 supported by clinical judgment. ⚠️ That AASM threshold is a clinical protocol standard, not a universal CMS billing rule, check the specific split-night language in your MAC's polysomnography LCD and any commercial payer's sleep-study medical policy before treating it as the coding trigger, since a payer can require its own documentation of the conversion decision independent of the AASM criteria.</p>
 
   <h2>A worked resubmission: HSAT denied for the wrong code set</h2>
-  <p>Because a CPT-versus-G-code mismatch usually means the test and its documentation were correct all along, this isn't framed as a clinical appeal &mdash; it's a corrected-claim cover letter that tells the payer exactly what changed and why the original service still stands.</p>
+  <p>Because a CPT-versus-G-code mismatch usually means the test and its documentation were correct all along, this isn't framed as a clinical appeal, it's a corrected-claim cover letter that tells the payer exactly what changed and why the original service still stands.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Skeleton: corrected-claim letter for a home sleep apnea test denied CO-16/N56 for the wrong code set.</caption>
@@ -289,7 +344,7 @@
       </tbody>
     </table>
   </div>
-  <p>Keep this letter short. A reviewer processing a corrected claim is looking to confirm the code now matches their system's expected set, not to re-adjudicate medical necessity that was never in question &mdash; a letter padded with clinical justification for a denial that was never about clinical justification slows the reprocessing down rather than speeding it up.</p>
+  <p>Keep this letter short. A reviewer processing a corrected claim is looking to confirm the code now matches their system's expected set, not to re-adjudicate medical necessity that was never in question, a letter padded with clinical justification for a denial that was never about clinical justification slows the reprocessing down rather than speeding it up.</p>
 
   <div class="cta-band">
     <div>
@@ -301,15 +356,15 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Why does Medicare deny a home sleep apnea test billed with CPT code 95806?</summary><p>Because Medicare DME MACs don't recognize CPT 95806, 95800, or 95801 for a home sleep apnea test at all &mdash; they require the equivalent HCPCS G-code instead: G0398 for a Type II monitor (7 or more channels), G0399 for a Type III monitor (4 or more channels, the most commonly billed code and the Medicare equivalent of CPT 95806), or G0400 for a Type IV monitor (3 or more channels). Submitting the CPT code to a Medicare DME MAC typically comes back CO-16 with remark code N56, meaning the procedure code isn't valid for the service billed. Since the test itself and its documentation are usually fine, the fix is a corrected resubmission with the matching G-code, not a medical-necessity appeal.</p></details>
-    <details class="faq-item"><summary>What documentation prevents a CO-50 medical-necessity denial on a diagnostic sleep study?</summary><p>The order has to show the qualifying signs, symptoms, and comorbidities your payer's coverage policy lists &mdash; typically habitual loud snoring, witnessed apneas or gasping, excessive daytime sleepiness, or a comorbidity such as treatment-resistant hypertension, atrial fibrillation, or a high STOP-BANG or Epworth score &mdash; documented before the test is ordered, with the corresponding ICD-10 code linked on the claim. A study ordered on a chart that only says "rule out sleep apnea" without a documented indication is the single most common way this denial happens, because the payer has nothing on the claim tying the test to a covered indication.</p></details>
-    <details class="faq-item"><summary>Can a full diagnostic sleep study and a full CPAP titration be billed as two separate codes for the same night?</summary><p>No. When a diagnostic study and a CPAP titration happen on the same night, the correct code is 95811 alone &mdash; it's defined to include the diagnostic portion, and 95810 and 95811 are a mutually exclusive NCCI procedure-to-procedure edit pair for the same date of service. Billing both codes for one split night gets the second one denied CO-97 as included in the payment for the other. The appeal, when it's actually correct to split the studies into two separate visits, is proving in the record that the diagnostic and titration portions happened on two distinct calendar nights, not one continuous recording.</p></details>
-    <details class="faq-item"><summary>When is the KX modifier required on a continued CPAP rental claim, and what does it certify?</summary><p>The KX modifier certifies that the documentation in the supplier's file supports the coverage criteria in the payer's PAP policy for that billing period. For the first through third months of therapy, it certifies the initial coverage criteria were met. From the fourth month's claim onward, it certifies both the initial criteria and the continued-coverage criteria &mdash; objective evidence, usually a compliance download, showing PAP use of 4 or more hours per night on at least 70% of nights during a consecutive 30-day period assessed between day 31 and day 91 of therapy. Appending KX without that compliance data on file, or omitting it when it's required, is what triggers the denial; the fix is pulling the download before the claim goes out, not after.</p></details>
+    <details class="faq-item"><summary>Why does Medicare deny a home sleep apnea test billed with CPT code 95806?</summary><p>Because Medicare DME MACs don't recognize CPT 95806, 95800, or 95801 for a home sleep apnea test at all, they require the equivalent HCPCS G-code instead: G0398 for a Type II monitor (7 or more channels), G0399 for a Type III monitor (4 or more channels, the most commonly billed code and the Medicare equivalent of CPT 95806), or G0400 for a Type IV monitor (3 or more channels). Submitting the CPT code to a Medicare DME MAC typically comes back CO-16 with remark code N56, meaning the procedure code isn't valid for the service billed. Since the test itself and its documentation are usually fine, the fix is a corrected resubmission with the matching G-code, not a medical-necessity appeal.</p></details>
+    <details class="faq-item"><summary>What documentation prevents a CO-50 medical-necessity denial on a diagnostic sleep study?</summary><p>The order has to show the qualifying signs, symptoms, and comorbidities your payer's coverage policy lists, typically habitual loud snoring, witnessed apneas or gasping, excessive daytime sleepiness, or a comorbidity such as treatment-resistant hypertension, atrial fibrillation, or a high STOP-BANG or Epworth score, documented before the test is ordered, with the corresponding ICD-10 code linked on the claim. A study ordered on a chart that only says "rule out sleep apnea" without a documented indication is the single most common way this denial happens, because the payer has nothing on the claim tying the test to a covered indication.</p></details>
+    <details class="faq-item"><summary>Can a full diagnostic sleep study and a full CPAP titration be billed as two separate codes for the same night?</summary><p>No. When a diagnostic study and a CPAP titration happen on the same night, the correct code is 95811 alone, it's defined to include the diagnostic portion, and 95810 and 95811 are a mutually exclusive NCCI procedure-to-procedure edit pair for the same date of service. Billing both codes for one split night gets the second one denied CO-97 as included in the payment for the other. The appeal, when it's actually correct to split the studies into two separate visits, is proving in the record that the diagnostic and titration portions happened on two distinct calendar nights, not one continuous recording.</p></details>
+    <details class="faq-item"><summary>When is the KX modifier required on a continued CPAP rental claim, and what does it certify?</summary><p>The KX modifier certifies that the documentation in the supplier's file supports the coverage criteria in the payer's PAP policy for that billing period. For the first through third months of therapy, it certifies the initial coverage criteria were met. From the fourth month's claim onward, it certifies both the initial criteria and the continued-coverage criteria, objective evidence, usually a compliance download, showing PAP use of 4 or more hours per night on at least 70% of nights during a consecutive 30-day period assessed between day 31 and day 91 of therapy. Appending KX without that compliance data on file, or omitting it when it's required, is what triggers the denial; the fix is pulling the download before the claim goes out, not after.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, NCCI edits, and payer-specific rules for code sets and modifiers change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets and LCDs in your jurisdiction. Confirm requirements against your specific payer mix and MAC before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, NCCI edits, and payer-specific rules for code sets and modifiers change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets and LCDs in your jurisdiction. Confirm requirements against your specific payer mix and MAC before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -323,62 +378,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 30 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>

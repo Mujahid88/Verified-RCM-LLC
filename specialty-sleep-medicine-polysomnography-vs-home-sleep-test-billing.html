@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Polysomnography vs. Home Sleep Apnea Test Billing: G-Codes vs. CPT | Verified RCM">
 <meta name="twitter:description" content="CPT 95810 requires a facility-based sleep lab. Medicare requires HCPCS G0398-G0400 for home sleep apnea tests, not CPT, and HSATs can't diagnose narcolepsy or REM sleep behavior disorder.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Sleep Medicine","item":"https://www.verifiedrcm.com/specialty-sleep-medicine.html"},{"@type":"ListItem","position":4,"name":"Polysomnography vs. home sleep apnea test billing: G-codes vs. CPT","item":"https://www.verifiedrcm.com/specialty-sleep-medicine-polysomnography-vs-home-sleep-test-billing.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does Medicare deny CPT 95800, 95801, and 95806 for a home sleep apnea test?","acceptedAnswer":{"@type":"Answer","text":"Because Medicare doesn't recognize those CPT codes for home testing at all — it requires HCPCS Level II codes G0398, G0399, or G0400 instead, matched to the portable monitor's channel count. This isn't a medical-necessity judgment the claim fails on review; it's a code-set mismatch that the claims-processing system rejects automatically, the same way billing a deleted code would. The fix is resubmission with the correct G-code, not an appeal arguing the test was needed."}},{"@type":"Question","name":"What's the actual difference between G0398, G0399, and G0400?","acceptedAnswer":{"@type":"Answer","text":"Channel count and content, tied to the AASM's portable monitor type classification. G0398 covers a Type II monitor recording a minimum of 7 channels, including EEG, EOG, EMG, ECG or heart rate, airflow, respiratory effort, and oxygen saturation. G0399 covers a Type III monitor recording a minimum of 4 channels: two respiratory movement or airflow channels, one ECG or heart rate channel, and one oxygen saturation channel — this is the code billed for the large majority of home sleep apnea tests. G0400 covers a Type IV monitor recording a minimum of 3 channels, typically oximetry plus one or two additional signals. Code to what the device actually recorded that night, not its marketed capability."}},{"@type":"Question","name":"Can a home sleep apnea test diagnose narcolepsy or REM sleep behavior disorder?","acceptedAnswer":{"@type":"Answer","text":"No. The Type III and Type IV monitors billed as G0399, G0400, or the CPT home-testing codes don't record EEG, EOG, or chin EMG, so they can't stage sleep — and sleep staging is what a narcolepsy, REM sleep behavior disorder, or periodic limb movement disorder workup runs on. Those diagnoses route to attended, facility-based polysomnography (95808 or 95810), and a suspected narcolepsy workup adds next-day multiple sleep latency testing (95805). Ordering or billing a home-test code against one of these diagnoses is a medical-necessity mismatch before it's ever a coding question."}},{"@type":"Question","name":"Do all non-Medicare payers accept the CPT codes for home sleep testing?","acceptedAnswer":{"@type":"Answer","text":"No, and that's the assumption that causes denials. Most commercial payers accept CPT 95800, 95801, and 95806 for home sleep apnea testing, but a real minority of commercial plans and some state Medicaid programs crosswalk their own policy to Medicare's methodology and require the G-codes instead. Medicare Advantage plans split further still — some mirror traditional Medicare's G-code mandate, others accept the CPT equivalents. Confirm the specific payer's current medical policy before the first claim goes out; claims history from a different payer doesn't transfer."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does Medicare deny CPT 95800, 95801, and 95806 for a home sleep apnea test?","acceptedAnswer":{"@type":"Answer","text":"Because Medicare doesn't recognize those CPT codes for home testing at all, it requires HCPCS Level II codes G0398, G0399, or G0400 instead, matched to the portable monitor's channel count. This isn't a medical-necessity judgment the claim fails on review; it's a code-set mismatch that the claims-processing system rejects automatically, the same way billing a deleted code would. The fix is resubmission with the correct G-code, not an appeal arguing the test was needed."}},{"@type":"Question","name":"What's the actual difference between G0398, G0399, and G0400?","acceptedAnswer":{"@type":"Answer","text":"Channel count and content, tied to the AASM's portable monitor type classification. G0398 covers a Type II monitor recording a minimum of 7 channels, including EEG, EOG, EMG, ECG or heart rate, airflow, respiratory effort, and oxygen saturation. G0399 covers a Type III monitor recording a minimum of 4 channels: two respiratory movement or airflow channels, one ECG or heart rate channel, and one oxygen saturation channel, this is the code billed for the large majority of home sleep apnea tests. G0400 covers a Type IV monitor recording a minimum of 3 channels, typically oximetry plus one or two additional signals. Code to what the device actually recorded that night, not its marketed capability."}},{"@type":"Question","name":"Can a home sleep apnea test diagnose narcolepsy or REM sleep behavior disorder?","acceptedAnswer":{"@type":"Answer","text":"No. The Type III and Type IV monitors billed as G0399, G0400, or the CPT home-testing codes don't record EEG, EOG, or chin EMG, so they can't stage sleep, and sleep staging is what a narcolepsy, REM sleep behavior disorder, or periodic limb movement disorder workup runs on. Those diagnoses route to attended, facility-based polysomnography (95808 or 95810), and a suspected narcolepsy workup adds next-day multiple sleep latency testing (95805). Ordering or billing a home-test code against one of these diagnoses is a medical-necessity mismatch before it's ever a coding question."}},{"@type":"Question","name":"Do all non-Medicare payers accept the CPT codes for home sleep testing?","acceptedAnswer":{"@type":"Answer","text":"No, and that's the assumption that causes denials. Most commercial payers accept CPT 95800, 95801, and 95806 for home sleep apnea testing, but a real minority of commercial plans and some state Medicaid programs crosswalk their own policy to Medicare's methodology and require the G-codes instead. Medicare Advantage plans split further still, some mirror traditional Medicare's G-code mandate, others accept the CPT equivalents. Confirm the specific payer's current medical policy before the first claim goes out; claims history from a different payer doesn't transfer."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 30 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 30 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 30 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-sleep-medicine.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete sleep medicine guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a slow undulating sleep-wave line beside a crescent moon arc, representing sleep medicine">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-sleep-medicine.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete sleep medicine guide</a>
+      <h1>Polysomnography vs. home sleep apnea test billing: G-codes vs. CPT.</h1>
+      <p class="lede">Sleep medicine's costliest coding mistake isn't a modifier or a bundling edit, it's submitting the wrong code family for where the test happened and who's paying for it. Medicare requires HCPCS G0398, G0399, or G0400 for a home sleep apnea test and rejects the equivalent CPT codes outright. CPT 95810 in-lab polysomnography is barred from anywhere but a facility-based sleep lab. And neither code set can paper over what a home test is structurally unable to do: diagnose narcolepsy, REM sleep behavior disorder, or periodic limb movement disorder. This guide walks through both code families, the payer-by-payer decision rule, and the clinical limitation that turns a coding question into a medical-necessity one.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-sleep-medicine.html">sleep medicine billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a slow undulating sleep-wave line beside a crescent moon arc, representing sleep medicine">
   <path d="M40,230 C80,220 100,240 130,225 C160,210 180,225 210,215 C240,205 260,225 290,215 C320,205 350,225 380,215 C410,205 430,220 440,215" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M40,355 C100,335 140,335 180,355 C220,375 260,375 300,355 C340,335 380,335 440,355" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M350,160 A54,54 0 1,1 291.3,101.3 A42,42 0 0,0 350,160 Z" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -178,70 +234,69 @@
   <path d="M235,305 C245,290 250,200 255,165 C260,200 270,290 285,305" fill="none" stroke="var(--cat-medical)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="255" cy="165" r="4.5" fill="var(--cat-medical)"/>
 </svg></figure>
-  <h1>Polysomnography vs. home sleep apnea test billing: G-codes vs. CPT.</h1>
-  <p class="lede">Sleep medicine's costliest coding mistake isn't a modifier or a bundling edit &mdash; it's submitting the wrong code family for where the test happened and who's paying for it. Medicare requires HCPCS G0398, G0399, or G0400 for a home sleep apnea test and rejects the equivalent CPT codes outright. CPT 95810 in-lab polysomnography is barred from anywhere but a facility-based sleep lab. And neither code set can paper over what a home test is structurally unable to do: diagnose narcolepsy, REM sleep behavior disorder, or periodic limb movement disorder. This guide walks through both code families, the payer-by-payer decision rule, and the clinical limitation that turns a coding question into a medical-necessity one.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-sleep-medicine.html">sleep medicine billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>CPT 95810 is an in-lab-only code.</b> Medicare's coverage articles require that polysomnography be performed in a facility-based sleep laboratory, not the home or a mobile unit &mdash; a site-of-service mismatch, not something a modifier fixes.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Medicare requires the HCPCS G-codes for home testing, full stop.</b> Submitting CPT 95800, 95801, or 95806 to Medicare instead of G0398, G0399, or G0400 triggers an automatic denial &mdash; a code-set edit, not a coverage review.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Non-Medicare payers split.</b> Most accept the CPT home-testing codes, but a real minority &mdash; commercial plans and some Medicaid programs &mdash; crosswalk to the G-codes instead. Confirm per payer before the claim goes out.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A home sleep test can't diagnose narcolepsy, REM sleep behavior disorder, or PLMD.</b> Those monitors don't record EEG or stage sleep &mdash; ordering (or coding) one against those diagnoses is a medical-necessity mismatch before it's a billing problem.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>CPT 95810 is an in-lab-only code.</b> Medicare's coverage articles require that polysomnography be performed in a facility-based sleep laboratory, not the home or a mobile unit, a site-of-service mismatch, not something a modifier fixes.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Medicare requires the HCPCS G-codes for home testing, full stop.</b> Submitting CPT 95800, 95801, or 95806 to Medicare instead of G0398, G0399, or G0400 triggers an automatic denial, a code-set edit, not a coverage review.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Non-Medicare payers split.</b> Most accept the CPT home-testing codes, but a real minority, commercial plans and some Medicaid programs, crosswalk to the G-codes instead. Confirm per payer before the claim goes out.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A home sleep test can't diagnose narcolepsy, REM sleep behavior disorder, or PLMD.</b> Those monitors don't record EEG or stage sleep, ordering (or coding) one against those diagnoses is a medical-necessity mismatch before it's a billing problem.</span></li>
     </ul>
   </section>
 
   <h2>Where the test happens decides which code family applies</h2>
-  <p>Every sleep study code in Medicare's coverage policy sorts into one of two buckets before anything else about the patient matters: attended, facility-based polysomnography, or unattended, portable home testing. That split isn't cosmetic &mdash; it's the first fork in a decision tree that determines which code set is even eligible, before a payer's own preference for CPT versus HCPCS enters the picture at all.</p>
+  <p>Every sleep study code in Medicare's coverage policy sorts into one of two buckets before anything else about the patient matters: attended, facility-based polysomnography, or unattended, portable home testing. That split isn't cosmetic, it's the first fork in a decision tree that determines which code set is even eligible, before a payer's own preference for CPT versus HCPCS enters the picture at all.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>The first fork: setting determines the eligible code pool, not the payer.</caption>
       <thead><tr><th scope="col">Where the test happened</th><th scope="col">Eligible codes</th><th scope="col">Governed by</th></tr></thead>
       <tbody>
-        <tr><td>Facility-based sleep lab, technologist-attended</td><td>95808, 95810, 95811 (CPT)</td><td>Facility-only requirement &mdash; never billable for a home or mobile study</td></tr>
-        <tr><td>Home, unattended, patient self-applies the device</td><td>G0398 / G0399 / G0400 (HCPCS) <em>or</em> 95800 / 95801 / 95806 (CPT), depending on payer</td><td>Payer-specific mandate &mdash; this is the fork that causes most denials</td></tr>
+        <tr><td>Facility-based sleep lab, technologist-attended</td><td>95808, 95810, 95811 (CPT)</td><td>Facility-only requirement, never billable for a home or mobile study</td></tr>
+        <tr><td>Home, unattended, patient self-applies the device</td><td>G0398 / G0399 / G0400 (HCPCS) <em>or</em> 95800 / 95801 / 95806 (CPT), depending on payer</td><td>Payer-specific mandate, this is the fork that causes most denials</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The facility-versus-home fork is nearly universal across payers and rarely disputed. The second fork &mdash; which code set a given payer wants for the home test &mdash; is where claims actually go wrong, because it isn't consistent across the industry and can't be assumed from one payer's rule to the next. The rest of this guide works through both forks, then the clinical fork underneath them both: whether a home test was ever the right test to order.</p>
+  <p>The facility-versus-home fork is nearly universal across payers and rarely disputed. The second fork, which code set a given payer wants for the home test, is where claims actually go wrong, because it isn't consistent across the industry and can't be assumed from one payer's rule to the next. The rest of this guide works through both forks, then the clinical fork underneath them both: whether a home test was ever the right test to order.</p>
 
   <h2>CPT 95810: attended polysomnography, and why it can't leave the lab</h2>
-  <p>CPT 95810 describes polysomnography of at least six hours, with continuous, simultaneous recording of sleep staging (EEG, EOG, submental EMG) plus four or more additional physiologic parameters &mdash; typically airflow, respiratory effort, oxygen saturation, ECG or heart rate, and limb movement. Its companion code, 95808, covers the same attended structure with sleep staging plus one to three additional parameters; 95811 adds CPAP or bilevel titration to the same in-lab framework, including split-night studies.</p>
-  <p>What all three share, and what makes this section short: Medicare's local coverage articles state the requirement in unambiguous terms. Per Noridian's coverage article on polysomnography and other sleep studies (Article A57697, effective 09/11/2025), documentation must confirm that polysomnography billed under 95808, 95810, or 95811 <b>"was performed in a facility based sleep study laboratory and not in the home or a mobile facility."</b> Every Medicare Administrative Contractor's version of this article carries the same restriction &mdash; it isn't jurisdiction-specific variation, it's a national norm implemented locally.</p>
-  <p>The reason isn't arbitrary. Attended in-lab PSG requires a technologist physically present through the night to correct a dislodged electrode, distinguish a genuine arousal from a sensor artifact, and &mdash; when the study is a split-night protocol &mdash; make a real-time clinical call to initiate CPAP titration once obstructive sleep apnea is confirmed. None of that is possible on hardware the patient applies alone in a bedroom. A claim for 95810 or 95811 with a place-of-service code indicating the patient's home, or with a chart note describing a portable monitor rather than a lab visit, is a documentation red flag independent of whether the sleep disorder itself was real and severe &mdash; the claim fails on where the test happened, not on medical necessity.</p>
+  <p>CPT 95810 describes polysomnography of at least six hours, with continuous, simultaneous recording of sleep staging (EEG, EOG, submental EMG) plus four or more additional physiologic parameters, typically airflow, respiratory effort, oxygen saturation, ECG or heart rate, and limb movement. Its companion code, 95808, covers the same attended structure with sleep staging plus one to three additional parameters; 95811 adds CPAP or bilevel titration to the same in-lab framework, including split-night studies.</p>
+  <p>What all three share, and what makes this section short: Medicare's local coverage articles state the requirement in unambiguous terms. Per Noridian's coverage article on polysomnography and other sleep studies (Article A57697, effective 09/11/2025), documentation must confirm that polysomnography billed under 95808, 95810, or 95811 <b>"was performed in a facility based sleep study laboratory and not in the home or a mobile facility."</b> Every Medicare Administrative Contractor's version of this article carries the same restriction, it isn't jurisdiction-specific variation, it's a national norm implemented locally.</p>
+  <p>The reason isn't arbitrary. Attended in-lab PSG requires a technologist physically present through the night to correct a dislodged electrode, distinguish a genuine arousal from a sensor artifact, and, when the study is a split-night protocol, make a real-time clinical call to initiate CPAP titration once obstructive sleep apnea is confirmed. None of that is possible on hardware the patient applies alone in a bedroom. A claim for 95810 or 95811 with a place-of-service code indicating the patient's home, or with a chart note describing a portable monitor rather than a lab visit, is a documentation red flag independent of whether the sleep disorder itself was real and severe, the claim fails on where the test happened, not on medical necessity.</p>
 
   <h2>Home sleep apnea testing for Medicare: the mandatory G-codes</h2>
-  <p>Home sleep apnea testing (HSAT) is where Medicare made a deliberate coding choice that trips up practices new to sleep billing: rather than accepting the AMA's CPT valuation for unattended home testing, CMS created its own HCPCS Level II codes and requires them exclusively for Medicare beneficiaries. The three codes map to the American Academy of Sleep Medicine's portable-monitor type classification, and the distinction between them is channel count and content &mdash; not device brand, not price point, not what the DME supplier calls it in a catalog.</p>
+  <p>Home sleep apnea testing (HSAT) is where Medicare made a deliberate coding choice that trips up practices new to sleep billing: rather than accepting the AMA's CPT valuation for unattended home testing, CMS created its own HCPCS Level II codes and requires them exclusively for Medicare beneficiaries. The three codes map to the American Academy of Sleep Medicine's portable-monitor type classification, and the distinction between them is channel count and content, not device brand, not price point, not what the DME supplier calls it in a catalog.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>HCPCS G-codes for Medicare home sleep apnea testing, by AASM portable monitor type.</caption>
       <thead><tr><th scope="col">Code</th><th scope="col">Monitor type</th><th scope="col">Minimum channel requirement</th></tr></thead>
       <tbody>
         <tr><td><code>G0398</code></td><td>Type II</td><td>7 channels: EEG, EOG, EMG, ECG/heart rate, airflow, respiratory effort, and oxygen saturation</td></tr>
-        <tr><td><code>G0399</code></td><td>Type III</td><td>4 channels: 2 respiratory movement/airflow channels, 1 ECG/heart rate channel, and 1 oxygen saturation channel &mdash; the code billed for the large majority of Medicare home sleep tests</td></tr>
-        <tr><td><code>G0400</code></td><td>Type IV</td><td>Minimum 3 channels &mdash; the simplest, most commonly deployed device category, typically oximetry plus one or two additional signals</td></tr>
+        <tr><td><code>G0399</code></td><td>Type III</td><td>4 channels: 2 respiratory movement/airflow channels, 1 ECG/heart rate channel, and 1 oxygen saturation channel, the code billed for the large majority of Medicare home sleep tests</td></tr>
+        <tr><td><code>G0400</code></td><td>Type IV</td><td>Minimum 3 channels, the simplest, most commonly deployed device category, typically oximetry plus one or two additional signals</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Medicare's coverage articles are explicit that these three codes &mdash; not their CPT counterparts &mdash; are the only acceptable billing path for a home test furnished to a Medicare beneficiary, performed with a Medicare-approved device and ordered for a patient with a documented comprehensive sleep evaluation and a high pretest probability of moderate to severe obstructive sleep apnea. Submitting CPT 95800, 95801, or 95806 to a Medicare Administrative Contractor for that same service will not route to a medical-necessity reviewer at all &mdash; it fails at the code-edit level, the same mechanical rejection a deleted or invalid code would trigger, because those CPT codes simply aren't in Medicare's accepted code set for this service. The correction is a clean resubmission with the matching G-code, not an appeal built around clinical justification the claim never needed to establish. Match the specific G-code to the channels the device actually recorded on the night of the study, confirmed against its own specification sheet rather than assumed from its marketed monitor class &mdash; a device that drops a channel mid-study effectively produced a lower-type record for that encounter, and coding to the nominal rating instead of the actual output is a gap an audit finds even though the claim paid.</p>
+  <p>Medicare's coverage articles are explicit that these three codes, not their CPT counterparts, are the only acceptable billing path for a home test furnished to a Medicare beneficiary, performed with a Medicare-approved device and ordered for a patient with a documented comprehensive sleep evaluation and a high pretest probability of moderate to severe obstructive sleep apnea. Submitting CPT 95800, 95801, or 95806 to a Medicare Administrative Contractor for that same service will not route to a medical-necessity reviewer at all, it fails at the code-edit level, the same mechanical rejection a deleted or invalid code would trigger, because those CPT codes simply aren't in Medicare's accepted code set for this service. The correction is a clean resubmission with the matching G-code, not an appeal built around clinical justification the claim never needed to establish. Match the specific G-code to the channels the device actually recorded on the night of the study, confirmed against its own specification sheet rather than assumed from its marketed monitor class, a device that drops a channel mid-study effectively produced a lower-type record for that encounter, and coding to the nominal rating instead of the actual output is a gap an audit finds even though the claim paid.</p>
 
-  <h2>Non-Medicare payers: CPT 95800, 95801, 95806 &mdash; and why you can't assume</h2>
-  <p>Outside traditional Medicare, most commercial payers stayed with the AMA's CPT structure for home sleep testing rather than adopting CMS's HCPCS codes. The three CPT home-testing codes differ from each other in exactly the parameters they capture, not in setting &mdash; all three are unattended and all three can be billed for a study performed at home.</p>
+  <h2>Non-Medicare payers: CPT 95800, 95801, 95806, and why you can't assume</h2>
+  <p>Outside traditional Medicare, most commercial payers stayed with the AMA's CPT structure for home sleep testing rather than adopting CMS's HCPCS codes. The three CPT home-testing codes differ from each other in exactly the parameters they capture, not in setting, all three are unattended and all three can be billed for a study performed at home.</p>
   <div class="data-table-wrap">
     <table class="data-table">
-      <caption>CPT home sleep testing codes. Descriptions paraphrased &mdash; confirm exact language against your current CPT Professional edition before building a charge master entry.</caption>
+      <caption>CPT home sleep testing codes. Descriptions paraphrased, confirm exact language against your current CPT Professional edition before building a charge master entry.</caption>
       <thead><tr><th scope="col">Code</th><th scope="col">What it captures</th><th scope="col">Distinguishing feature</th></tr></thead>
       <tbody>
         <tr><td><code>95800</code></td><td>Unattended recording of heart rate, oxygen saturation, respiratory analysis (e.g., airflow or peripheral arterial tone), and sleep time</td><td>The only one of the three that includes a sleep-time component</td></tr>
-        <tr><td><code>95801</code></td><td>Unattended recording of a minimum of heart rate, oxygen saturation, and respiratory analysis &mdash; no sleep-time requirement</td><td>The narrowest parameter set of the three; commonly used for peripheral arterial tone-based devices</td></tr>
+        <tr><td><code>95801</code></td><td>Unattended recording of a minimum of heart rate, oxygen saturation, and respiratory analysis, no sleep-time requirement</td><td>The narrowest parameter set of the three; commonly used for peripheral arterial tone-based devices</td></tr>
         <tr><td><code>95806</code></td><td>Unattended recording of heart rate, oxygen saturation, respiratory airflow, and respiratory effort (e.g., thoracoabdominal movement)</td><td>Matches a Type III portable monitor's typical output; the most frequently billed of the three commercially</td></tr>
       </tbody>
     </table>
   </div>
-  <p>None of the three CPT home-testing codes involves EEG-based sleep staging &mdash; that distinction, not the setting, is what actually separates every home-testing code (CPT or HCPCS) from true polysomnography. The distinction among 95800, 95801, and 95806 themselves is purely which parameters the device recorded: pick the code that matches what the device actually captured that night, not the diagnosis being ruled out.</p>
-  <p>The assumption that causes denials here isn't about which codes exist &mdash; it's assuming CPT applies just because the payer isn't Medicare. Some commercial payers and a number of state Medicaid programs crosswalk their own home-testing policy to Medicare's methodology and require the same G-codes rather than the CPT set, and Medicare Advantage plans split further still: some carry over traditional Medicare's G-code mandate as a utilization-management overlay, others accept the CPT equivalents. There is no default that holds across the industry. The only reliable workflow is checking the specific payer's current medical policy bulletin before the first claim for that payer goes out &mdash; not inferring it from what a different payer accepted last quarter, and not assuming a Medicare Advantage plan automatically follows fee-for-service Medicare's rule just because CMS regulates the plan.</p>
-  <p>⚠️ One more date worth building into a 2026-into-2027 workflow: the AMA CPT Editorial Panel approved deleting 95800, 95801, and 95806 effective January 1, 2027, replacing them with a new complexity-tiered family of six codes. All three remain fully billable for any 2026 date of service, and this build did not attempt to re-verify final code numbers or the crosswalk decision every payer will make for 2027 &mdash; that transition, along with modifier 52's 6-hour threshold on these codes and the CPT sleep-study family in full, is covered in depth in our <a href="specialty-pulmonary-diseases-sleep-study-coding.html">sleep study and HSAT coding guide</a>. Revisit payer-specific code selection again once the new family takes effect.</p>
+  <p>None of the three CPT home-testing codes involves EEG-based sleep staging, that distinction, not the setting, is what actually separates every home-testing code (CPT or HCPCS) from true polysomnography. The distinction among 95800, 95801, and 95806 themselves is purely which parameters the device recorded: pick the code that matches what the device actually captured that night, not the diagnosis being ruled out.</p>
+  <p>The assumption that causes denials here isn't about which codes exist, it's assuming CPT applies just because the payer isn't Medicare. Some commercial payers and a number of state Medicaid programs crosswalk their own home-testing policy to Medicare's methodology and require the same G-codes rather than the CPT set, and Medicare Advantage plans split further still: some carry over traditional Medicare's G-code mandate as a utilization-management overlay, others accept the CPT equivalents. There is no default that holds across the industry. The only reliable workflow is checking the specific payer's current medical policy bulletin before the first claim for that payer goes out, not inferring it from what a different payer accepted last quarter, and not assuming a Medicare Advantage plan automatically follows fee-for-service Medicare's rule just because CMS regulates the plan.</p>
+  <p>⚠️ One more date worth building into a 2026-into-2027 workflow: the AMA CPT Editorial Panel approved deleting 95800, 95801, and 95806 effective January 1, 2027, replacing them with a new complexity-tiered family of six codes. All three remain fully billable for any 2026 date of service, and this build did not attempt to re-verify final code numbers or the crosswalk decision every payer will make for 2027, that transition, along with modifier 52's 6-hour threshold on these codes and the CPT sleep-study family in full, is covered in depth in our <a href="specialty-pulmonary-diseases-sleep-study-coding.html">sleep study and HSAT coding guide</a>. Revisit payer-specific code selection again once the new family takes effect.</p>
 
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
@@ -250,39 +305,39 @@
       <li>Treat a facility-based study and a home study as two different code pools before ever asking which specific code within a pool applies.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Don't</div><ul>
-      <li>Don't submit CPT 95800, 95801, or 95806 to Medicare under any circumstance &mdash; the G-code substitution is mandatory, not a preference.</li>
+      <li>Don't submit CPT 95800, 95801, or 95806 to Medicare under any circumstance, the G-code substitution is mandatory, not a preference.</li>
       <li>Don't assume a Medicare Advantage or commercial plan follows Medicare's G-code rule just because it's regulated by CMS or isn't Medicare fee-for-service.</li>
       <li>Don't bill 95808, 95810, or 95811 for a study that took place anywhere but a facility-based sleep lab.</li>
     </ul></div>
   </div>
 
   <h2>Payer decision table: confirm before you submit</h2>
-  <p>Reduced to a single reference, this is the check to run before a home sleep test claim leaves the building &mdash; and the reason it has to be a per-payer check, not a rule memorized once and applied everywhere.</p>
+  <p>Reduced to a single reference, this is the check to run before a home sleep test claim leaves the building, and the reason it has to be a per-payer check, not a rule memorized once and applied everywhere.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Home sleep apnea testing: code set by payer type.</caption>
       <thead><tr><th scope="col">Payer</th><th scope="col">Correct code set</th><th scope="col">What to verify</th></tr></thead>
       <tbody>
-        <tr><td>Traditional Medicare (Part B)</td><td>G0398 / G0399 / G0400 only</td><td>Nothing to verify &mdash; this is fixed. CPT equivalents deny automatically.</td></tr>
-        <tr><td>Medicare Advantage</td><td>Plan-dependent</td><td>Whether the plan mirrors Medicare's G-code mandate or accepts CPT &mdash; confirm per plan, not per CMS regulation.</td></tr>
+        <tr><td>Traditional Medicare (Part B)</td><td>G0398 / G0399 / G0400 only</td><td>Nothing to verify, this is fixed. CPT equivalents deny automatically.</td></tr>
+        <tr><td>Medicare Advantage</td><td>Plan-dependent</td><td>Whether the plan mirrors Medicare's G-code mandate or accepts CPT, confirm per plan, not per CMS regulation.</td></tr>
         <tr><td>Commercial payers (most)</td><td>CPT 95800 / 95801 / 95806</td><td>Whether this specific payer is the minority that crosswalks to G-codes instead.</td></tr>
-        <tr><td>Medicaid (state programs)</td><td>State-specific</td><td>Some states crosswalk to G-codes, others follow CPT &mdash; check the current state plan directly.</td></tr>
+        <tr><td>Medicaid (state programs)</td><td>State-specific</td><td>Some states crosswalk to G-codes, others follow CPT, check the current state plan directly.</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The denial pattern to watch for either direction is the same shape: a code-set mismatch shows up as an automatic rejection with no reference to medical necessity, coverage criteria, or documentation quality at all &mdash; because the system never got far enough to evaluate any of that. If a home-testing claim denies immediately with no request for records and no reviewer notes, check the code set against the specific payer's policy before assuming the denial is about the test itself.</p>
+  <p>The denial pattern to watch for either direction is the same shape: a code-set mismatch shows up as an automatic rejection with no reference to medical necessity, coverage criteria, or documentation quality at all, because the system never got far enough to evaluate any of that. If a home-testing claim denies immediately with no request for records and no reviewer notes, check the code set against the specific payer's policy before assuming the denial is about the test itself.</p>
 
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Build the payer's code-set requirement into the front-end eligibility and order-entry workflow, not into a coder's memory. A field on the sleep study order that captures "payer requires: CPT / HCPCS G-code / unconfirmed &mdash; verify" catches the mismatch before the study is even scheduled, which is cheaper than catching it after a denial and a resubmission cycle.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Build the payer's code-set requirement into the front-end eligibility and order-entry workflow, not into a coder's memory. A field on the sleep study order that captures "payer requires: CPT / HCPCS G-code / unconfirmed, verify" catches the mismatch before the study is even scheduled, which is cheaper than catching it after a denial and a resubmission cycle.</p></div>
   </div>
 
   <h2>The clinical limitation that turns a coding choice into a medical-necessity problem</h2>
   <p>Everything above assumes the home test was clinically appropriate in the first place. It frequently isn't, and the reason is structural, not a documentation gap that better paperwork can fix.</p>
-  <p>The overwhelming majority of home sleep tests use Type III or Type IV portable monitors &mdash; billed as G0399 or G0400, or as CPT 95801 or 95806 &mdash; recording three to four channels of cardiorespiratory data: airflow or respiratory effort, oxygen saturation, and heart rate. None of that is EEG, EOG, or chin EMG, and without those three signals a study cannot stage sleep &mdash; it cannot distinguish REM from non-REM, cannot detect an arousal from the EEG record, and cannot establish sleep onset or sleep architecture at all. A Type II monitor (G0398) nominally adds an EEG channel to its seven-channel minimum, but it remains unattended, is rarely deployed in routine practice, and its automated, unattended staging isn't treated as equivalent to technologist-scored, attended in-lab polysomnography for diagnosing a central nervous system sleep disorder.</p>
-  <p>That gap matters because narcolepsy, REM sleep behavior disorder, and periodic limb movement disorder are diagnosed from exactly the data a home test doesn't collect. Narcolepsy requires overnight PSG followed by a next-day multiple sleep latency test (MSLT, CPT 95805) to document abnormally short sleep latency and early-onset REM periods &mdash; both readings that depend on EEG-based staging. REM sleep behavior disorder is defined by the loss of normal muscle atonia during REM sleep, visible only on EMG channels correlated against EEG-confirmed REM periods, ideally with synchronized video to document the enactment behavior itself. Periodic limb movement disorder is scored from anterior tibialis EMG channels correlated against the same staged sleep record, distinguishing pathological periodic movements from the incidental leg twitches every home cardiorespiratory-only device is blind to. An attended technologist also does work an algorithm can't: correcting a dislodged EEG lead mid-study, distinguishing a genuine cortical arousal from a movement artifact, and applying AASM scoring rules that assume real-time observation. None of that is available from a device the patient applied alone in a bedroom.</p>
-  <p>Medicare's own coverage policy reflects this split by diagnosis, not just by setting. Per Noridian's coverage determination (LCD L36861) and its companion billing article (A57697), multiple sleep latency testing (95805) is the code tied to hypersomnia and narcolepsy workups; general polysomnography codes (95782, 95807, 95808, and 95810) carry the broader coverage that includes periodic limb movement disorder, parasomnias, and REM sleep behavior disorder; and the home-testing codes &mdash; CPT 95800/95801/95806 and HCPCS G0398&ndash;G0400 alike &mdash; are approved specifically for hypersomnia and obstructive sleep apnea, not for the central-nervous-system-based disorders above. A home test ordered against a working diagnosis of narcolepsy or REM sleep behavior disorder isn't just clinically inadequate &mdash; it's coding a service against a diagnosis the payer's own policy doesn't recognize that code as answering, which is a medical-necessity mismatch that exists on the order sheet before the claim is ever built.</p>
-  <p>The practical takeaway for a practice's intake and ordering workflow: when the differential includes narcolepsy, REM sleep behavior disorder, restless legs with suspected PLMD, sleepwalking, or another parasomnia in addition to suspected obstructive sleep apnea, a home test is the wrong first test regardless of how strongly the patient prefers to avoid an overnight lab visit or how much faster scheduling a home device is. Route that patient to attended, facility-based polysomnography from the start, and document the differential driving that choice &mdash; it protects the claim and, more importantly, it's the only path that can actually answer the clinical question being asked.</p>
+  <p>The overwhelming majority of home sleep tests use Type III or Type IV portable monitors, billed as G0399 or G0400, or as CPT 95801 or 95806, recording three to four channels of cardiorespiratory data: airflow or respiratory effort, oxygen saturation, and heart rate. None of that is EEG, EOG, or chin EMG, and without those three signals a study cannot stage sleep, it cannot distinguish REM from non-REM, cannot detect an arousal from the EEG record, and cannot establish sleep onset or sleep architecture at all. A Type II monitor (G0398) nominally adds an EEG channel to its seven-channel minimum, but it remains unattended, is rarely deployed in routine practice, and its automated, unattended staging isn't treated as equivalent to technologist-scored, attended in-lab polysomnography for diagnosing a central nervous system sleep disorder.</p>
+  <p>That gap matters because narcolepsy, REM sleep behavior disorder, and periodic limb movement disorder are diagnosed from exactly the data a home test doesn't collect. Narcolepsy requires overnight PSG followed by a next-day multiple sleep latency test (MSLT, CPT 95805) to document abnormally short sleep latency and early-onset REM periods, both readings that depend on EEG-based staging. REM sleep behavior disorder is defined by the loss of normal muscle atonia during REM sleep, visible only on EMG channels correlated against EEG-confirmed REM periods, ideally with synchronized video to document the enactment behavior itself. Periodic limb movement disorder is scored from anterior tibialis EMG channels correlated against the same staged sleep record, distinguishing pathological periodic movements from the incidental leg twitches every home cardiorespiratory-only device is blind to. An attended technologist also does work an algorithm can't: correcting a dislodged EEG lead mid-study, distinguishing a genuine cortical arousal from a movement artifact, and applying AASM scoring rules that assume real-time observation. None of that is available from a device the patient applied alone in a bedroom.</p>
+  <p>Medicare's own coverage policy reflects this split by diagnosis, not just by setting. Per Noridian's coverage determination (LCD L36861) and its companion billing article (A57697), multiple sleep latency testing (95805) is the code tied to hypersomnia and narcolepsy workups; general polysomnography codes (95782, 95807, 95808, and 95810) carry the broader coverage that includes periodic limb movement disorder, parasomnias, and REM sleep behavior disorder; and the home-testing codes, CPT 95800/95801/95806 and HCPCS G0398&ndash;G0400 alike, are approved specifically for hypersomnia and obstructive sleep apnea, not for the central-nervous-system-based disorders above. A home test ordered against a working diagnosis of narcolepsy or REM sleep behavior disorder isn't just clinically inadequate, it's coding a service against a diagnosis the payer's own policy doesn't recognize that code as answering, which is a medical-necessity mismatch that exists on the order sheet before the claim is ever built.</p>
+  <p>The practical takeaway for a practice's intake and ordering workflow: when the differential includes narcolepsy, REM sleep behavior disorder, restless legs with suspected PLMD, sleepwalking, or another parasomnia in addition to suspected obstructive sleep apnea, a home test is the wrong first test regardless of how strongly the patient prefers to avoid an overnight lab visit or how much faster scheduling a home device is. Route that patient to attended, facility-based polysomnography from the start, and document the differential driving that choice, it protects the claim and, more importantly, it's the only path that can actually answer the clinical question being asked.</p>
 
   <div class="cta-band">
     <div>
@@ -294,15 +349,15 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Why does Medicare deny CPT 95800, 95801, and 95806 for a home sleep apnea test?</summary><p>Because Medicare doesn't recognize those CPT codes for home testing at all &mdash; it requires HCPCS Level II codes G0398, G0399, or G0400 instead, matched to the portable monitor's channel count. This isn't a medical-necessity judgment the claim fails on review; it's a code-set mismatch that the claims-processing system rejects automatically, the same way billing a deleted code would. The fix is resubmission with the correct G-code, not an appeal arguing the test was needed.</p></details>
-    <details class="faq-item"><summary>What's the actual difference between G0398, G0399, and G0400?</summary><p>Channel count and content, tied to the AASM's portable monitor type classification. G0398 covers a Type II monitor recording a minimum of 7 channels, including EEG, EOG, EMG, ECG or heart rate, airflow, respiratory effort, and oxygen saturation. G0399 covers a Type III monitor recording a minimum of 4 channels: two respiratory movement or airflow channels, one ECG or heart rate channel, and one oxygen saturation channel &mdash; this is the code billed for the large majority of home sleep apnea tests. G0400 covers a Type IV monitor recording a minimum of 3 channels, typically oximetry plus one or two additional signals. Code to what the device actually recorded that night, not its marketed capability.</p></details>
-    <details class="faq-item"><summary>Can a home sleep apnea test diagnose narcolepsy or REM sleep behavior disorder?</summary><p>No. The Type III and Type IV monitors billed as G0399, G0400, or the CPT home-testing codes don't record EEG, EOG, or chin EMG, so they can't stage sleep &mdash; and sleep staging is what a narcolepsy, REM sleep behavior disorder, or periodic limb movement disorder workup runs on. Those diagnoses route to attended, facility-based polysomnography (95808 or 95810), and a suspected narcolepsy workup adds next-day multiple sleep latency testing (95805). Ordering or billing a home-test code against one of these diagnoses is a medical-necessity mismatch before it's ever a coding question.</p></details>
-    <details class="faq-item"><summary>Do all non-Medicare payers accept the CPT codes for home sleep testing?</summary><p>No, and that's the assumption that causes denials. Most commercial payers accept CPT 95800, 95801, and 95806 for home sleep apnea testing, but a real minority of commercial plans and some state Medicaid programs crosswalk their own policy to Medicare's methodology and require the G-codes instead. Medicare Advantage plans split further still &mdash; some mirror traditional Medicare's G-code mandate, others accept the CPT equivalents. Confirm the specific payer's current medical policy before the first claim goes out; claims history from a different payer doesn't transfer.</p></details>
+    <details class="faq-item"><summary>Why does Medicare deny CPT 95800, 95801, and 95806 for a home sleep apnea test?</summary><p>Because Medicare doesn't recognize those CPT codes for home testing at all, it requires HCPCS Level II codes G0398, G0399, or G0400 instead, matched to the portable monitor's channel count. This isn't a medical-necessity judgment the claim fails on review; it's a code-set mismatch that the claims-processing system rejects automatically, the same way billing a deleted code would. The fix is resubmission with the correct G-code, not an appeal arguing the test was needed.</p></details>
+    <details class="faq-item"><summary>What's the actual difference between G0398, G0399, and G0400?</summary><p>Channel count and content, tied to the AASM's portable monitor type classification. G0398 covers a Type II monitor recording a minimum of 7 channels, including EEG, EOG, EMG, ECG or heart rate, airflow, respiratory effort, and oxygen saturation. G0399 covers a Type III monitor recording a minimum of 4 channels: two respiratory movement or airflow channels, one ECG or heart rate channel, and one oxygen saturation channel, this is the code billed for the large majority of home sleep apnea tests. G0400 covers a Type IV monitor recording a minimum of 3 channels, typically oximetry plus one or two additional signals. Code to what the device actually recorded that night, not its marketed capability.</p></details>
+    <details class="faq-item"><summary>Can a home sleep apnea test diagnose narcolepsy or REM sleep behavior disorder?</summary><p>No. The Type III and Type IV monitors billed as G0399, G0400, or the CPT home-testing codes don't record EEG, EOG, or chin EMG, so they can't stage sleep, and sleep staging is what a narcolepsy, REM sleep behavior disorder, or periodic limb movement disorder workup runs on. Those diagnoses route to attended, facility-based polysomnography (95808 or 95810), and a suspected narcolepsy workup adds next-day multiple sleep latency testing (95805). Ordering or billing a home-test code against one of these diagnoses is a medical-necessity mismatch before it's ever a coding question.</p></details>
+    <details class="faq-item"><summary>Do all non-Medicare payers accept the CPT codes for home sleep testing?</summary><p>No, and that's the assumption that causes denials. Most commercial payers accept CPT 95800, 95801, and 95806 for home sleep apnea testing, but a real minority of commercial plans and some state Medicaid programs crosswalk their own policy to Medicare's methodology and require the G-codes instead. Medicare Advantage plans split further still, some mirror traditional Medicare's G-code mandate, others accept the CPT equivalents. Confirm the specific payer's current medical policy before the first claim goes out; claims history from a different payer doesn't transfer.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -316,62 +371,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 30 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>

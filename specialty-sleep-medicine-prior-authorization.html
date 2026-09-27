@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Sleep Medicine Prior Authorization: Home Tests, In-Lab Studies, and CPAP | Verified RCM">
 <meta name="twitter:description" content="Sleep medicine prior authorization: the home-test-first step therapy pattern, when in-lab polysomnography is justified, CPAP/DME authorization, repeat study criteria, and CMS-0057-F timelines.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Sleep Medicine","item":"https://www.verifiedrcm.com/specialty-sleep-medicine.html"},{"@type":"ListItem","position":4,"name":"Sleep medicine prior authorization: home tests, in-lab studies, and CPAP","item":"https://www.verifiedrcm.com/specialty-sleep-medicine-prior-authorization.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does every payer require a home sleep apnea test before approving an in-lab study?","acceptedAnswer":{"@type":"Answer","text":"No, but it's the default path for most commercial plans on an otherwise uncomplicated adult with suspected obstructive sleep apnea. UnitedHealthcare's commercial sleep studies policy treats home sleep apnea testing as medically necessary first-line testing and only calls for attended in-lab polysomnography after a single home test comes back negative, inconclusive, or technically inadequate — or up front when the chart documents significant cardiopulmonary disease or a suspected non-OSA sleep disorder that needs EEG monitoring. Aetna's clinical policy bulletin takes a similar comorbidity-based approach to when in-lab testing is medically necessary without a home test first. Confirm the specific payer and plan's current medical policy before submitting, since criteria and step position are not identical across payers."}},{"@type":"Question","name":"Does Medicare require prior authorization for CPAP the same way commercial payers do?","acceptedAnswer":{"@type":"Answer","text":"No. Traditional Medicare does not run CPAP through an upfront prior-authorization decision; coverage instead depends on a documented qualifying sleep test and a 90-day compliance-monitoring period, during which the beneficiary must show at least 4 hours of nightly use on 70% of consecutive nights in a 30-day window before continued coverage past the initial phase is confirmed. That's a compliance-based model, not a pre-approval one. Medicare Advantage plans are different — many apply their own upfront prior-authorization requirement to CPAP and related DME on top of the same underlying AHI/RDI documentation standard, and commercial payers typically require upfront authorization as well."}},{"@type":"Question","name":"What justifies a payer approving a repeat or re-titration sleep study?","acceptedAnswer":{"@type":"Answer","text":"The recurring criteria across payer medical policy are a significant weight change since the original study, new or worsening symptoms suggesting the original diagnosis or pressure setting no longer fits, a device malfunction or inability to tolerate the current settings, and documented therapy failure — continued excessive daytime sleepiness or unresolved apnea despite verified compliance. A repeat study submitted without one of these specific, dated triggers is the most common reason a re-titration request gets denied or sent back for more information."}},{"@type":"Question","name":"Does the CMS-0057-F prior authorization rule cover sleep studies and CPAP the same way it covers other services?","acceptedAnswer":{"@type":"Answer","text":"Yes, with one exception that doesn't touch most sleep medicine billing. CMS-0057-F requires Medicare Advantage plans, state Medicaid and CHIP fee-for-service programs, and Medicaid/CHIP managed care plans to decide standard prior authorization requests within 7 calendar days and expedited requests within 72 hours, effective January 1, 2026. That timeline applies to polysomnography, home sleep apnea testing, and CPAP/DME requests because they're medical and durable-medical-equipment benefit items, not drugs. The rule explicitly excludes prior-authorization decisions for drugs from the timeframe requirement, which matters for narcolepsy pharmacotherapy billed under a pharmacy benefit, and it also excludes qualified health plan issuers on the federally facilitated exchanges from the timeframe requirement specifically, even though QHPs are otherwise in scope for the rule's other provisions."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does every payer require a home sleep apnea test before approving an in-lab study?","acceptedAnswer":{"@type":"Answer","text":"No, but it's the default path for most commercial plans on an otherwise uncomplicated adult with suspected obstructive sleep apnea. UnitedHealthcare's commercial sleep studies policy treats home sleep apnea testing as medically necessary first-line testing and only calls for attended in-lab polysomnography after a single home test comes back negative, inconclusive, or technically inadequate, or up front when the chart documents significant cardiopulmonary disease or a suspected non-OSA sleep disorder that needs EEG monitoring. Aetna's clinical policy bulletin takes a similar comorbidity-based approach to when in-lab testing is medically necessary without a home test first. Confirm the specific payer and plan's current medical policy before submitting, since criteria and step position are not identical across payers."}},{"@type":"Question","name":"Does Medicare require prior authorization for CPAP the same way commercial payers do?","acceptedAnswer":{"@type":"Answer","text":"No. Traditional Medicare does not run CPAP through an upfront prior-authorization decision; coverage instead depends on a documented qualifying sleep test and a 90-day compliance-monitoring period, during which the beneficiary must show at least 4 hours of nightly use on 70% of consecutive nights in a 30-day window before continued coverage past the initial phase is confirmed. That's a compliance-based model, not a pre-approval one. Medicare Advantage plans are different, many apply their own upfront prior-authorization requirement to CPAP and related DME on top of the same underlying AHI/RDI documentation standard, and commercial payers typically require upfront authorization as well."}},{"@type":"Question","name":"What justifies a payer approving a repeat or re-titration sleep study?","acceptedAnswer":{"@type":"Answer","text":"The recurring criteria across payer medical policy are a significant weight change since the original study, new or worsening symptoms suggesting the original diagnosis or pressure setting no longer fits, a device malfunction or inability to tolerate the current settings, and documented therapy failure, continued excessive daytime sleepiness or unresolved apnea despite verified compliance. A repeat study submitted without one of these specific, dated triggers is the most common reason a re-titration request gets denied or sent back for more information."}},{"@type":"Question","name":"Does the CMS-0057-F prior authorization rule cover sleep studies and CPAP the same way it covers other services?","acceptedAnswer":{"@type":"Answer","text":"Yes, with one exception that doesn't touch most sleep medicine billing. CMS-0057-F requires Medicare Advantage plans, state Medicaid and CHIP fee-for-service programs, and Medicaid/CHIP managed care plans to decide standard prior authorization requests within 7 calendar days and expedited requests within 72 hours, effective January 1, 2026. That timeline applies to polysomnography, home sleep apnea testing, and CPAP/DME requests because they're medical and durable-medical-equipment benefit items, not drugs. The rule explicitly excludes prior-authorization decisions for drugs from the timeframe requirement, which matters for narcolepsy pharmacotherapy billed under a pharmacy benefit, and it also excludes qualified health plan issuers on the federally facilitated exchanges from the timeframe requirement specifically, even though QHPs are otherwise in scope for the rule's other provisions."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 30 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 30 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 30 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-sleep-medicine.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete sleep medicine guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a slow undulating sleep-wave line beside a crescent moon arc, representing sleep medicine">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-sleep-medicine.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete sleep medicine guide</a>
+      <h1>Sleep medicine prior authorization: home tests, in-lab studies, and CPAP.</h1>
+      <p class="lede">Almost every sleep medicine prior authorization denial traces back to one of three gaps: an in-lab study requested before the payer's required home test was attempted, a CPAP authorization submitted without the specific AHI/RDI values the payer's policy demands, or a repeat study request that restates symptoms instead of naming what changed. This guide covers the home-test-first step-therapy pattern most commercial payers now run, the documentation that justifies going straight to an in-lab study, how CPAP/DME authorization actually differs between Medicare and commercial plans, what gets a re-titration study approved, and where the CMS-0057-F prior authorization clock does and doesn't apply to sleep medicine claims.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-sleep-medicine.html">sleep medicine billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a slow undulating sleep-wave line beside a crescent moon arc, representing sleep medicine">
   <path d="M40,230 C80,220 100,240 130,225 C160,210 180,225 210,215 C240,205 260,225 290,215 C320,205 350,225 380,215 C410,205 430,220 440,215" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M40,355 C100,335 140,335 180,355 C220,375 260,375 300,355 C340,335 380,335 440,355" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M350,160 A54,54 0 1,1 291.3,101.3 A42,42 0 0,0 350,160 Z" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -178,75 +234,74 @@
   <path d="M235,305 C245,290 250,200 255,165 C260,200 270,290 285,305" fill="none" stroke="var(--cat-medical)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="255" cy="165" r="4.5" fill="var(--cat-medical)"/>
 </svg></figure>
-  <h1>Sleep medicine prior authorization: home tests, in-lab studies, and CPAP.</h1>
-  <p class="lede">Almost every sleep medicine prior authorization denial traces back to one of three gaps: an in-lab study requested before the payer's required home test was attempted, a CPAP authorization submitted without the specific AHI/RDI values the payer's policy demands, or a repeat study request that restates symptoms instead of naming what changed. This guide covers the home-test-first step-therapy pattern most commercial payers now run, the documentation that justifies going straight to an in-lab study, how CPAP/DME authorization actually differs between Medicare and commercial plans, what gets a re-titration study approved, and where the CMS-0057-F prior authorization clock does and doesn't apply to sleep medicine claims.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-sleep-medicine.html">sleep medicine billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Home sleep apnea testing (HSAT) is first-line, not optional, for most commercial plans.</b> UnitedHealthcare's commercial sleep studies policy treats HSAT as medically necessary first-line testing for uncomplicated suspected OSA, with attended in-lab polysomnography reserved for after a negative, inconclusive, or technically inadequate home test &mdash; or for patients whose chart already documents significant cardiopulmonary disease or a suspected non-OSA sleep disorder.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Medicare doesn't pre-approve CPAP &mdash; it monitors compliance instead.</b> Traditional Medicare's DME MAC coverage runs on a documented qualifying AHI/RDI value plus a 90-day usage-compliance window, not an upfront authorization decision. Medicare Advantage and commercial plans typically layer their own upfront prior-authorization requirement on top of that same clinical standard.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A repeat or re-titration study needs a named, dated trigger</b> &mdash; significant weight change, new or worsening symptoms, device malfunction, or documented therapy failure &mdash; not a renewal of the original justification.</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>CMS-0057-F's 7-day/72-hour clock applies to sleep studies and CPAP/DME</b> for Medicare Advantage, Medicaid/CHIP FFS, and Medicaid/CHIP managed care as of January 1, 2026 &mdash; but not to drug prior authorizations, and not to the timeframe requirement for QHP issuers on the federally facilitated exchanges.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Home sleep apnea testing (HSAT) is first-line, not optional, for most commercial plans.</b> UnitedHealthcare's commercial sleep studies policy treats HSAT as medically necessary first-line testing for uncomplicated suspected OSA, with attended in-lab polysomnography reserved for after a negative, inconclusive, or technically inadequate home test, or for patients whose chart already documents significant cardiopulmonary disease or a suspected non-OSA sleep disorder.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>Medicare doesn't pre-approve CPAP, it monitors compliance instead.</b> Traditional Medicare's DME MAC coverage runs on a documented qualifying AHI/RDI value plus a 90-day usage-compliance window, not an upfront authorization decision. Medicare Advantage and commercial plans typically layer their own upfront prior-authorization requirement on top of that same clinical standard.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>A repeat or re-titration study needs a named, dated trigger</b>, significant weight change, new or worsening symptoms, device malfunction, or documented therapy failure, not a renewal of the original justification.</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg><span><b>CMS-0057-F's 7-day/72-hour clock applies to sleep studies and CPAP/DME</b> for Medicare Advantage, Medicaid/CHIP FFS, and Medicaid/CHIP managed care as of January 1, 2026, but not to drug prior authorizations, and not to the timeframe requirement for QHP issuers on the federally facilitated exchanges.</span></li>
     </ul>
   </section>
 
   <h2>Home test first: the step-therapy pattern for suspected OSA</h2>
-  <p>The route determining which sleep study gets authorized isn't the referring physician's preference &mdash; it's whether the patient fits the payer's definition of an uncomplicated candidate. For most adults with suspected obstructive sleep apnea and no significant comorbidities, the payer's default position is a home sleep apnea test (HSAT) first, with attended in-lab polysomnography (PSG) held back as a second step. UnitedHealthcare's commercial and individual exchange Sleep Studies medical policy states this directly: HSAT is considered medically necessary as first-line testing for adults with suspected OSA, and full-channel attended PSG in a facility is "strongly recommended" specifically <i>after</i> a single HSAT comes back negative, inconclusive, or technically inadequate. Aetna's clinical policy bulletin on obstructive sleep apnea in adults reaches a similar destination by a different route &mdash; treating attended in-lab PSG as medically necessary largely in the presence of specific comorbid conditions, rather than as a default first test.</p>
+  <p>The route determining which sleep study gets authorized isn't the referring physician's preference, it's whether the patient fits the payer's definition of an uncomplicated candidate. For most adults with suspected obstructive sleep apnea and no significant comorbidities, the payer's default position is a home sleep apnea test (HSAT) first, with attended in-lab polysomnography (PSG) held back as a second step. UnitedHealthcare's commercial and individual exchange Sleep Studies medical policy states this directly: HSAT is considered medically necessary as first-line testing for adults with suspected OSA, and full-channel attended PSG in a facility is "strongly recommended" specifically <i>after</i> a single HSAT comes back negative, inconclusive, or technically inadequate. Aetna's clinical policy bulletin on obstructive sleep apnea in adults reaches a similar destination by a different route, treating attended in-lab PSG as medically necessary largely in the presence of specific comorbid conditions, rather than as a default first test.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Sleep study coding by setting. HCPCS G-codes apply when the home test is billed to a DME MAC under traditional Medicare; commercial payers and Medicare Advantage plans generally use the CPT codes. Confirm which code set the specific payer and claim type require before billing.</caption>
       <thead><tr><th scope="col">Test type</th><th scope="col">CPT (commercial / facility)</th><th scope="col">HCPCS (Medicare DME MAC, home test)</th><th scope="col">Setting</th></tr></thead>
       <tbody>
         <tr><td>Unattended home sleep apnea test</td><td>95800, 95801, 95806</td><td>G0398 (1&ndash;3 channels) &middot; G0399 (4&ndash;7 channels) &middot; G0400 (&ge;8 channels)</td><td>Home, portable monitor</td></tr>
-        <tr><td>Attended diagnostic polysomnography</td><td>95810</td><td>Not applicable &mdash; billed to Part A/B MAC, not DME MAC</td><td>Accredited sleep facility</td></tr>
-        <tr><td>Attended PSG with CPAP/BiPAP titration or split-night</td><td>95811</td><td>Not applicable &mdash; billed to Part A/B MAC, not DME MAC</td><td>Accredited sleep facility</td></tr>
+        <tr><td>Attended diagnostic polysomnography</td><td>95810</td><td>Not applicable, billed to Part A/B MAC, not DME MAC</td><td>Accredited sleep facility</td></tr>
+        <tr><td>Attended PSG with CPAP/BiPAP titration or split-night</td><td>95811</td><td>Not applicable, billed to Part A/B MAC, not DME MAC</td><td>Accredited sleep facility</td></tr>
       </tbody>
     </table>
   </div>
-  <p>⚠️ Multiple secondary billing-guide sources report that CPT 95800, 95801, and 95806 are scheduled for retirement effective January 1, 2027, as part of a broader restructuring of sleep testing codes. This build could not independently confirm that change against the AMA's own CPT Editorial Panel summary of panel actions or a primary CPT changes announcement, so treat it as a heads-up to watch for in the 2027 CPT code set rather than a confirmed fact to build a billing system around yet &mdash; re-verify against the current-year CPT book before it takes effect.</p>
-  <p>What changes the calculus is comorbidity, not physician preference. A sleep medicine practice that submits an in-lab PSG request for every new OSA referral, regardless of presentation, will lose the step-therapy argument on plans that default to HSAT &mdash; the fix isn't a stronger clinical narrative, it's routing the uncomplicated patient through the home test the policy already expects, and reserving the in-lab request for the patients who actually qualify to skip it.</p>
+  <p>⚠️ Multiple secondary billing-guide sources report that CPT 95800, 95801, and 95806 are scheduled for retirement effective January 1, 2027, as part of a broader restructuring of sleep testing codes. This build could not independently confirm that change against the AMA's own CPT Editorial Panel summary of panel actions or a primary CPT changes announcement, so treat it as a heads-up to watch for in the 2027 CPT code set rather than a confirmed fact to build a billing system around yet, re-verify against the current-year CPT book before it takes effect.</p>
+  <p>What changes the calculus is comorbidity, not physician preference. A sleep medicine practice that submits an in-lab PSG request for every new OSA referral, regardless of presentation, will lose the step-therapy argument on plans that default to HSAT, the fix isn't a stronger clinical narrative, it's routing the uncomplicated patient through the home test the policy already expects, and reserving the in-lab request for the patients who actually qualify to skip it.</p>
 
   <h2>When documentation supports skipping straight to in-lab polysomnography</h2>
   <p>Payers that default to HSAT still carve out patients who go straight to an attended in-lab study, and the carve-outs are consistent across the policies reviewed for this guide: significant cardiopulmonary disease that needs monitored, attended observation, and suspected sleep disorders that aren't OSA at all and require EEG channels an unattended home monitor doesn't record.</p>
   <ul class="check-list">
-    <li><span class="check">1</span><span><b>Significant cardiopulmonary disease.</b> UnitedHealthcare's policy identifies patients with significant cardiopulmonary disease as appropriate for direct in-lab PSG rather than home testing, because comprehensive attended monitoring is what the clinical picture requires &mdash; a home monitor with limited channels can miss what matters in that population.</span></li>
-    <li><span class="check">2</span><span><b>Suspected non-OSA sleep disorder needing EEG.</b> Narcolepsy, parasomnias, nocturnal seizure activity, and periodic limb movement disorder with suspected arousal correlation all require EEG channels and a technician present to score sleep staging &mdash; none of which a Type III/IV home monitor captures. An HSAT ordered for one of these presentations isn't just the wrong test to bill; it's clinically the wrong test to run, since it cannot answer the question being asked.</span></li>
+    <li><span class="check">1</span><span><b>Significant cardiopulmonary disease.</b> UnitedHealthcare's policy identifies patients with significant cardiopulmonary disease as appropriate for direct in-lab PSG rather than home testing, because comprehensive attended monitoring is what the clinical picture requires, a home monitor with limited channels can miss what matters in that population.</span></li>
+    <li><span class="check">2</span><span><b>Suspected non-OSA sleep disorder needing EEG.</b> Narcolepsy, parasomnias, nocturnal seizure activity, and periodic limb movement disorder with suspected arousal correlation all require EEG channels and a technician present to score sleep staging, none of which a Type III/IV home monitor captures. An HSAT ordered for one of these presentations isn't just the wrong test to bill; it's clinically the wrong test to run, since it cannot answer the question being asked.</span></li>
     <li><span class="check">3</span><span><b>Neuromuscular disease or suspected hypoventilation.</b> Conditions where nocturnal hypoventilation, not simple upper-airway obstruction, is the concern generally fall outside what an unattended cardiopulmonary home monitor is validated to assess, and typically justify facility-based testing with capnography.</span></li>
-    <li><span class="check">4</span><span><b>Prior technically inadequate or failed HSAT attempt.</b> A home test with insufficient recording time, sensor failure, or an inconclusive result is itself the qualifying event for the in-lab study &mdash; document the specific technical failure on the request rather than resubmitting the same clinical narrative that supported the original HSAT order.</span></li>
+    <li><span class="check">4</span><span><b>Prior technically inadequate or failed HSAT attempt.</b> A home test with insufficient recording time, sensor failure, or an inconclusive result is itself the qualifying event for the in-lab study, document the specific technical failure on the request rather than resubmitting the same clinical narrative that supported the original HSAT order.</span></li>
   </ul>
   <p>The documentation habit that separates an approved in-lab request from a denied one is specificity: naming the comorbidity and its ICD-10 code, or naming the suspected non-OSA diagnosis being ruled in or out, rather than writing "high clinical suspicion of OSA" and expecting the reviewer to infer why a home test wouldn't answer the question.</p>
 
   <h2>A worked timeline: from suspected OSA to an authorized in-lab study</h2>
   <p>The escalation path that gets approved without a peer-to-peer call, start to finish, generally looks like this for an otherwise uncomplicated adult patient with no qualifying comorbidity on the chart:</p>
   <ul class="check-list">
-    <li><span class="check">1</span><span><b>Visit 1 &mdash; clinical suspicion documented.</b> Face-to-face evaluation notes witnessed apneas, excessive daytime sleepiness (Epworth Sleepiness Scale score recorded), and no significant cardiopulmonary comorbidity. Physician orders an HSAT per the payer's step-therapy policy, since nothing in the chart yet justifies bypassing it.</span></li>
+    <li><span class="check">1</span><span><b>Visit 1, clinical suspicion documented.</b> Face-to-face evaluation notes witnessed apneas, excessive daytime sleepiness (Epworth Sleepiness Scale score recorded), and no significant cardiopulmonary comorbidity. Physician orders an HSAT per the payer's step-therapy policy, since nothing in the chart yet justifies bypassing it.</span></li>
     <li><span class="check">2</span><span><b>HSAT performed and billed.</b> Test is submitted (95800/95806 commercially, or G0398&ndash;G0400 to the DME MAC under traditional Medicare) with the ordering diagnosis attached.</span></li>
-    <li><span class="check">3</span><span><b>Result comes back inconclusive.</b> The home test shows an AHI below the qualifying threshold despite persistent, well-documented daytime sleepiness and witnessed apneas &mdash; or the study is technically inadequate (insufficient sleep time recorded, sensor dropout). This mismatch between the clinical picture and the home-test result is itself the escalation trigger, not a separate justification the physician has to invent.</span></li>
-    <li><span class="check">4</span><span><b>In-lab PSG requested with the mismatch documented by name.</b> The prior-authorization request for 95810 or 95811 cites the specific HSAT result, the recording defect or the AHI-versus-symptom mismatch, and the persistent Epworth score &mdash; not a restatement of the original suspicion that already supported the HSAT order.</span></li>
+    <li><span class="check">3</span><span><b>Result comes back inconclusive.</b> The home test shows an AHI below the qualifying threshold despite persistent, well-documented daytime sleepiness and witnessed apneas, or the study is technically inadequate (insufficient sleep time recorded, sensor dropout). This mismatch between the clinical picture and the home-test result is itself the escalation trigger, not a separate justification the physician has to invent.</span></li>
+    <li><span class="check">4</span><span><b>In-lab PSG requested with the mismatch documented by name.</b> The prior-authorization request for 95810 or 95811 cites the specific HSAT result, the recording defect or the AHI-versus-symptom mismatch, and the persistent Epworth score, not a restatement of the original suspicion that already supported the HSAT order.</span></li>
     <li><span class="check">5</span><span><b>Payer authorizes the in-lab study</b> against its own policy exception for a negative, inconclusive, or technically inadequate first HSAT, generally without requiring a peer-to-peer when the mismatch is documented with dates and values rather than adjectives.</span></li>
   </ul>
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Attach the actual HSAT report to the in-lab authorization request, not just a reference to it in the chart note. The specific numbers a reviewer needs &mdash; recorded AHI, total recording time, sensor-failure flag &mdash; live on that report, and a request that makes the reviewer request the report separately adds a full turnaround cycle to a decision that should take one pass.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Attach the actual HSAT report to the in-lab authorization request, not just a reference to it in the chart note. The specific numbers a reviewer needs, recorded AHI, total recording time, sensor-failure flag, live on that report, and a request that makes the reviewer request the report separately adds a full turnaround cycle to a decision that should take one pass.</p></div>
   </div>
 
   <h2>CPAP and DME prior authorization: two different systems entirely</h2>
-  <p>Providers who treat CPAP authorization as one uniform process get tripped up by the fact that it isn't. Traditional, fee-for-service Medicare doesn't run an upfront prior-authorization decision on CPAP the way a commercial plan does &mdash; it runs a compliance-monitoring model instead, built around Local Coverage Determination L33718 (Positive Airway Pressure Devices for the Treatment of Obstructive Sleep Apnea, CGS Administrators and Noridian Healthcare Solutions, the DME MACs, effective 01/01/2024). Medicare Advantage plans and commercial payers, by contrast, generally require a traditional upfront authorization decision before the equipment ships.</p>
+  <p>Providers who treat CPAP authorization as one uniform process get tripped up by the fact that it isn't. Traditional, fee-for-service Medicare doesn't run an upfront prior-authorization decision on CPAP the way a commercial plan does, it runs a compliance-monitoring model instead, built around Local Coverage Determination L33718 (Positive Airway Pressure Devices for the Treatment of Obstructive Sleep Apnea, CGS Administrators and Noridian Healthcare Solutions, the DME MACs, effective 01/01/2024). Medicare Advantage plans and commercial payers, by contrast, generally require a traditional upfront authorization decision before the equipment ships.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Traditional Medicare's DME MAC qualifying criteria for an E0601 CPAP device under LCD L33718, versus the upfront prior-authorization model most Medicare Advantage and commercial plans layer on top of similar clinical thresholds.</caption>
       <thead><tr><th scope="col">Requirement</th><th scope="col">Traditional Medicare (DME MAC, LCD L33718)</th><th scope="col">Medicare Advantage / commercial (typical)</th></tr></thead>
       <tbody>
-        <tr><td>Authorization model</td><td>No upfront PA decision &mdash; coverage confirmed via documented qualifying test plus compliance monitoring</td><td>Upfront prior-authorization request, decided before equipment is dispensed</td></tr>
+        <tr><td>Authorization model</td><td>No upfront PA decision, coverage confirmed via documented qualifying test plus compliance monitoring</td><td>Upfront prior-authorization request, decided before equipment is dispensed</td></tr>
         <tr><td>Qualifying AHI/RDI</td><td>&ge;15 events/hour (minimum 30 events) qualifies alone; 5&ndash;14 events/hour (minimum 10 events) qualifies only with documented excessive daytime sleepiness, impaired cognition, mood disorder, insomnia, hypertension, ischemic heart disease, or stroke history</td><td>Payer-specific, but generally requires the same AHI/RDI values and a qualifying sleep test report submitted with the request</td></tr>
         <tr><td>Compliance requirement</td><td>90-day trial: &ge;4 hours/night on &ge;70% of a consecutive 30-day period within the first 90 days, re-verified at that checkpoint before continued coverage beyond the trial</td><td>Varies by plan; some require compliance data at renewal, not as a condition of the initial equipment authorization</td></tr>
         <tr><td>Face-to-face requirement</td><td>Clinical evaluation by the treating physician before the qualifying sleep test</td><td>Typically required; documentation standards vary by payer</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The device-selection trap that generates avoidable denials: LCD L33718 states that a bilevel device with a backup rate (E0471) is not reasonable and necessary when the primary diagnosis is OSA, and will be denied on that basis if billed that way. E0471 is built for a different clinical problem &mdash; a patient with a primary hypoventilation or neuromuscular diagnosis needing backup-rate ventilatory support, not straightforward obstructive apnea. A standard CPAP (E0601) or bilevel without backup rate (E0470) is what OSA authorization requests should specify; requesting E0471 for a primary OSA diagnosis invites a denial the equipment order itself created.</p>
+  <p>The device-selection trap that generates avoidable denials: LCD L33718 states that a bilevel device with a backup rate (E0471) is not reasonable and necessary when the primary diagnosis is OSA, and will be denied on that basis if billed that way. E0471 is built for a different clinical problem, a patient with a primary hypoventilation or neuromuscular diagnosis needing backup-rate ventilatory support, not straightforward obstructive apnea. A standard CPAP (E0601) or bilevel without backup rate (E0470) is what OSA authorization requests should specify; requesting E0471 for a primary OSA diagnosis invites a denial the equipment order itself created.</p>
   <p>⚠️ Individual Medicare Advantage plans and commercial payers publish their own CPAP/DME prior-authorization policies, and specific documentation checklists, timely-filing windows, and whether compliance data is required at initial authorization versus only at renewal vary by plan. Confirm the current policy for the specific payer before submitting rather than assuming the traditional Medicare LCD framework applies verbatim.</p>
 
   <h2>Repeat and re-titration studies: what justifies a second authorization</h2>
@@ -254,19 +309,19 @@
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Named, dated trigger</div><ul>
       <li>Significant weight change since the original study (gain or loss, with the dates and values), documented enough to plausibly change disease severity or the effective pressure setting.</li>
-      <li>New or worsening symptoms &mdash; recurrent daytime sleepiness despite verified compliance, new witnessed apneas, or a new cardiopulmonary diagnosis that changes the clinical picture.</li>
+      <li>New or worsening symptoms, recurrent daytime sleepiness despite verified compliance, new witnessed apneas, or a new cardiopulmonary diagnosis that changes the clinical picture.</li>
       <li>Device malfunction or a documented inability to tolerate the current pressure settings, requiring re-titration to a new prescription.</li>
       <li>Therapy failure: continued excessive daytime sleepiness or unresolved respiratory events despite confirmed adherence to the current device and settings.</li>
     </ul></div>
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Generic renewal request</div><ul>
-      <li>"Patient is due for a follow-up study" with no new symptom, weight change, malfunction, or failure named &mdash; the most common reason a re-titration request is returned for more information or denied outright.</li>
+      <li>"Patient is due for a follow-up study" with no new symptom, weight change, malfunction, or failure named, the most common reason a re-titration request is returned for more information or denied outright.</li>
       <li>Resubmitting the original diagnostic narrative without noting what's changed since the first study, which reads to a reviewer as a request for a second opinion rather than a clinically indicated repeat test.</li>
     </ul></div>
   </div>
-  <p>Compliance-data non-adherence is a related but distinct scenario worth separating out: a patient who never met the usage threshold during the Medicare 90-day trial isn't a candidate for a repeat study first &mdash; that's a re-engagement and re-education conversation, since the equipment failed on usage, not on clinical efficacy. Submitting a re-titration request in that scenario without addressing why usage was low invites a denial on medical necessity grounds that a straightforward compliance-coaching note would have avoided.</p>
+  <p>Compliance-data non-adherence is a related but distinct scenario worth separating out: a patient who never met the usage threshold during the Medicare 90-day trial isn't a candidate for a repeat study first, that's a re-engagement and re-education conversation, since the equipment failed on usage, not on clinical efficacy. Submitting a re-titration request in that scenario without addressing why usage was low invites a denial on medical necessity grounds that a straightforward compliance-coaching note would have avoided.</p>
 
   <h2>CMS-0057-F: the new prior authorization clock for sleep medicine services</h2>
-  <p>The CMS Interoperability and Prior Authorization Final Rule (CMS-0057-F) sets a federal floor on how fast an impacted payer has to decide a prior-authorization request, and the operational decision-timeframe requirements took effect January 1, 2026 &mdash; ahead of the rule's separate FHIR API build-out deadline of January 1, 2027.</p>
+  <p>The CMS Interoperability and Prior Authorization Final Rule (CMS-0057-F) sets a federal floor on how fast an impacted payer has to decide a prior-authorization request, and the operational decision-timeframe requirements took effect January 1, 2026, ahead of the rule's separate FHIR API build-out deadline of January 1, 2027.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>CMS-0057-F prior-authorization decision timeframes by payer type, per the CMS.gov fact sheet for the final rule.</caption>
@@ -280,8 +335,8 @@
       </tbody>
     </table>
   </div>
-  <p>The exclusion worth flagging for sleep medicine specifically is the drug carve-out, not a sleep-testing or DME carve-out &mdash; because there isn't one. Polysomnography, home sleep apnea testing, and CPAP/DME requests are medical-benefit and durable-medical-equipment items, not drugs, so they're squarely inside the 7-day standard / 72-hour expedited clock for the payer types the rule covers. What the drug exclusion does affect is narcolepsy pharmacotherapy &mdash; modafinil, armodafinil, or an oxybate product billed under a pharmacy benefit &mdash; where the CMS-0057-F timeline doesn't apply and the plan's own pharmacy utilization-management timeline governs instead. The other carve-out to track is that QHP issuers on the federally facilitated exchanges are excluded from the timeframe requirement specifically, even though they're otherwise in scope for the rule's other provisions, so a delayed decision from an ACA exchange plan on a sleep study or CPAP request doesn't have this rule's clock to point to the way a Medicare Advantage or Medicaid managed care delay does.</p>
-  <p>⚠️ CMS-0057-F's Medicaid managed care and CHIP managed care compliance date is tied to each plan's first rating period beginning on or after January 1, 2027 for certain provisions, while the standard/expedited decision-timeframe requirement itself is reported as effective January 1, 2026 across the payer types above. State Medicaid programs and individual MCOs can differ on exactly which provisions apply on which date &mdash; confirm the specific state Medicaid plan's current implementation timeline before citing this rule in an appeal or escalation.</p>
+  <p>The exclusion worth flagging for sleep medicine specifically is the drug carve-out, not a sleep-testing or DME carve-out, because there isn't one. Polysomnography, home sleep apnea testing, and CPAP/DME requests are medical-benefit and durable-medical-equipment items, not drugs, so they're squarely inside the 7-day standard / 72-hour expedited clock for the payer types the rule covers. What the drug exclusion does affect is narcolepsy pharmacotherapy, modafinil, armodafinil, or an oxybate product billed under a pharmacy benefit, where the CMS-0057-F timeline doesn't apply and the plan's own pharmacy utilization-management timeline governs instead. The other carve-out to track is that QHP issuers on the federally facilitated exchanges are excluded from the timeframe requirement specifically, even though they're otherwise in scope for the rule's other provisions, so a delayed decision from an ACA exchange plan on a sleep study or CPAP request doesn't have this rule's clock to point to the way a Medicare Advantage or Medicaid managed care delay does.</p>
+  <p>⚠️ CMS-0057-F's Medicaid managed care and CHIP managed care compliance date is tied to each plan's first rating period beginning on or after January 1, 2027 for certain provisions, while the standard/expedited decision-timeframe requirement itself is reported as effective January 1, 2026 across the payer types above. State Medicaid programs and individual MCOs can differ on exactly which provisions apply on which date, confirm the specific state Medicaid plan's current implementation timeline before citing this rule in an appeal or escalation.</p>
 
   <div class="cta-band">
     <div>
@@ -293,15 +348,15 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Does every payer require a home sleep apnea test before approving an in-lab study?</summary><p>No, but it's the default path for most commercial plans on an otherwise uncomplicated adult with suspected obstructive sleep apnea. UnitedHealthcare's commercial sleep studies policy treats home sleep apnea testing as medically necessary first-line testing and only calls for attended in-lab polysomnography after a single home test comes back negative, inconclusive, or technically inadequate &mdash; or up front when the chart documents significant cardiopulmonary disease or a suspected non-OSA sleep disorder that needs EEG monitoring. Aetna's clinical policy bulletin takes a similar comorbidity-based approach to when in-lab testing is medically necessary without a home test first. Confirm the specific payer and plan's current medical policy before submitting, since criteria and step position are not identical across payers.</p></details>
-    <details class="faq-item"><summary>Does Medicare require prior authorization for CPAP the same way commercial payers do?</summary><p>No. Traditional Medicare does not run CPAP through an upfront prior-authorization decision; coverage instead depends on a documented qualifying sleep test and a 90-day compliance-monitoring period, during which the beneficiary must show at least 4 hours of nightly use on 70% of consecutive nights in a 30-day window before continued coverage past the initial phase is confirmed. That's a compliance-based model, not a pre-approval one. Medicare Advantage plans are different &mdash; many apply their own upfront prior-authorization requirement to CPAP and related DME on top of the same underlying AHI/RDI documentation standard, and commercial payers typically require upfront authorization as well.</p></details>
-    <details class="faq-item"><summary>What justifies a payer approving a repeat or re-titration sleep study?</summary><p>The recurring criteria across payer medical policy are a significant weight change since the original study, new or worsening symptoms suggesting the original diagnosis or pressure setting no longer fits, a device malfunction or inability to tolerate the current settings, and documented therapy failure &mdash; continued excessive daytime sleepiness or unresolved apnea despite verified compliance. A repeat study submitted without one of these specific, dated triggers is the most common reason a re-titration request gets denied or sent back for more information.</p></details>
+    <details class="faq-item"><summary>Does every payer require a home sleep apnea test before approving an in-lab study?</summary><p>No, but it's the default path for most commercial plans on an otherwise uncomplicated adult with suspected obstructive sleep apnea. UnitedHealthcare's commercial sleep studies policy treats home sleep apnea testing as medically necessary first-line testing and only calls for attended in-lab polysomnography after a single home test comes back negative, inconclusive, or technically inadequate, or up front when the chart documents significant cardiopulmonary disease or a suspected non-OSA sleep disorder that needs EEG monitoring. Aetna's clinical policy bulletin takes a similar comorbidity-based approach to when in-lab testing is medically necessary without a home test first. Confirm the specific payer and plan's current medical policy before submitting, since criteria and step position are not identical across payers.</p></details>
+    <details class="faq-item"><summary>Does Medicare require prior authorization for CPAP the same way commercial payers do?</summary><p>No. Traditional Medicare does not run CPAP through an upfront prior-authorization decision; coverage instead depends on a documented qualifying sleep test and a 90-day compliance-monitoring period, during which the beneficiary must show at least 4 hours of nightly use on 70% of consecutive nights in a 30-day window before continued coverage past the initial phase is confirmed. That's a compliance-based model, not a pre-approval one. Medicare Advantage plans are different, many apply their own upfront prior-authorization requirement to CPAP and related DME on top of the same underlying AHI/RDI documentation standard, and commercial payers typically require upfront authorization as well.</p></details>
+    <details class="faq-item"><summary>What justifies a payer approving a repeat or re-titration sleep study?</summary><p>The recurring criteria across payer medical policy are a significant weight change since the original study, new or worsening symptoms suggesting the original diagnosis or pressure setting no longer fits, a device malfunction or inability to tolerate the current settings, and documented therapy failure, continued excessive daytime sleepiness or unresolved apnea despite verified compliance. A repeat study submitted without one of these specific, dated triggers is the most common reason a re-titration request gets denied or sent back for more information.</p></details>
     <details class="faq-item"><summary>Does the CMS-0057-F prior authorization rule cover sleep studies and CPAP the same way it covers other services?</summary><p>Yes, with one exception that doesn't touch most sleep medicine billing. CMS-0057-F requires Medicare Advantage plans, state Medicaid and CHIP fee-for-service programs, and Medicaid/CHIP managed care plans to decide standard prior authorization requests within 7 calendar days and expedited requests within 72 hours, effective January 1, 2026. That timeline applies to polysomnography, home sleep apnea testing, and CPAP/DME requests because they're medical and durable-medical-equipment benefit items, not drugs. The rule explicitly excludes prior-authorization decisions for drugs from the timeframe requirement, which matters for narcolepsy pharmacotherapy billed under a pharmacy benefit, and it also excludes qualified health plan issuers on the federally facilitated exchanges from the timeframe requirement specifically, even though QHPs are otherwise in scope for the rule's other provisions.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education &mdash; it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -314,62 +369,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 30 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>

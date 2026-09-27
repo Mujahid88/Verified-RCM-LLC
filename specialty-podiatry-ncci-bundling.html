@@ -19,7 +19,9 @@
 <meta name="twitter:title" content="Podiatry NCCI Edits and MUE Limits: Bundling Rules Explained | Verified RCM">
 <meta name="twitter:description" content="Podiatry NCCI edits and MUE limits explained: nail debridement vs. same-day E/M, lesion-and-nail bundling on the same digit, unit caps on 11719-11721, and bunionectomy/hammertoe global-period rules.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/lake.css?v=2.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -30,7 +32,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verifiedrcm.com/"},{"@type":"ListItem","position":2,"name":"Specialties","item":"https://www.verifiedrcm.com/specialties.html"},{"@type":"ListItem","position":3,"name":"Podiatry","item":"https://www.verifiedrcm.com/specialty-podiatry.html"},{"@type":"ListItem","position":4,"name":"NCCI edits and MUE limits","item":"https://www.verifiedrcm.com/specialty-podiatry-ncci-bundling.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do we always need modifier 25 when an E/M and nail debridement happen the same visit?","acceptedAnswer":{"@type":"Answer","text":"You need it whenever you want the E/M paid separately, but appending it isn't automatic — the note has to document evaluation and management work beyond the decision to debride. A visit that's entirely \"mycotic nails, trimmed 1-5\" doesn't support modifier 25 no matter how it's coded. A visit that also works up a new complaint, adjusts a diabetic foot care plan, or evaluates a separate condition does. And the modifier goes on the E/M code, not on 11720 or 11721."}},{"@type":"Question","name":"Does the MUE on 11720 and 11721 mean we can only bill for one toenail per visit?","acceptedAnswer":{"@type":"Answer","text":"No. The MUE caps each code at one unit per date of service, but that's because the code descriptor itself already covers a range of nails — 11720 covers one to five nails and 11721 covers six or more — within that single unit. You bill one unit of the code that matches the total nail count for that visit; you don't bill additional units per nail, and trying to would trip the MUE rather than increase payment."}},{"@type":"Question","name":"Can we bill a hyperkeratotic lesion paring code and a nail debridement code for the same visit?","acceptedAnswer":{"@type":"Answer","text":"It depends entirely on where the lesion sits relative to the nail being debrided, not on whether you append modifier 59. When the lesion and the debrided nail are on the same distal phalanx, including the skin over the distal interphalangeal joint, industry guidance describes this NCCI edit as one modifier 59 cannot bypass regardless of documentation. When the lesion is on a different digit, or proximal to that joint on the same toe, separate reporting with 59 or an X-modifier is supportable. Confirm the current pair-level indicator in the CMS lookup tool before relying on this for a scrubber rule."}},{"@type":"Question","name":"Why doesn't our scrubber flag debridement billed the same day as a bunionectomy on the same toe?","acceptedAnswer":{"@type":"Answer","text":"Two different reasons, depending on what's actually happening. If the debridement was incidental work performed to access or prepare the surgical site, it's typically considered included in the more extensive procedure under NCCI's general correct-coding principle that a lesser procedure integral to a more extensive one on the same site isn't separately billable — whether that specific code pair carries a formal PTP edit in the current file should still be confirmed. If instead the debridement addressed a genuinely separate condition on a different digit, it can be separately reportable with documentation, and a scrubber tuned only to a specific pair may simply not have that exact pair loaded."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do we always need modifier 25 when an E/M and nail debridement happen the same visit?","acceptedAnswer":{"@type":"Answer","text":"You need it whenever you want the E/M paid separately, but appending it isn't automatic, the note has to document evaluation and management work beyond the decision to debride. A visit that's entirely \"mycotic nails, trimmed 1-5\" doesn't support modifier 25 no matter how it's coded. A visit that also works up a new complaint, adjusts a diabetic foot care plan, or evaluates a separate condition does. And the modifier goes on the E/M code, not on 11720 or 11721."}},{"@type":"Question","name":"Does the MUE on 11720 and 11721 mean we can only bill for one toenail per visit?","acceptedAnswer":{"@type":"Answer","text":"No. The MUE caps each code at one unit per date of service, but that's because the code descriptor itself already covers a range of nails, 11720 covers one to five nails and 11721 covers six or more, within that single unit. You bill one unit of the code that matches the total nail count for that visit; you don't bill additional units per nail, and trying to would trip the MUE rather than increase payment."}},{"@type":"Question","name":"Can we bill a hyperkeratotic lesion paring code and a nail debridement code for the same visit?","acceptedAnswer":{"@type":"Answer","text":"It depends entirely on where the lesion sits relative to the nail being debrided, not on whether you append modifier 59. When the lesion and the debrided nail are on the same distal phalanx, including the skin over the distal interphalangeal joint, industry guidance describes this NCCI edit as one modifier 59 cannot bypass regardless of documentation. When the lesion is on a different digit, or proximal to that joint on the same toe, separate reporting with 59 or an X-modifier is supportable. Confirm the current pair-level indicator in the CMS lookup tool before relying on this for a scrubber rule."}},{"@type":"Question","name":"Why doesn't our scrubber flag debridement billed the same day as a bunionectomy on the same toe?","acceptedAnswer":{"@type":"Answer","text":"Two different reasons, depending on what's actually happening. If the debridement was incidental work performed to access or prepare the surgical site, it's typically considered included in the more extensive procedure under NCCI's general correct-coding principle that a lesser procedure integral to a more extensive one on the same site isn't separately billable, whether that specific code pair carries a formal PTP edit in the current file should still be confirmed. If instead the debridement addressed a genuinely separate condition on a different digit, it can be separately reportable with documentation, and a scrubber tuned only to a specific pair may simply not have that exact pair loaded."}}]}
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
@@ -50,127 +52,181 @@
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="nav-wrap">
-  <div class="nav-bar" id="navBar">
-    <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Verified RCM logo" width="44" height="44"></a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Verified RCM</a>
-      <div class="nav-item-mega">
-      <a href="services.html" class="nav-link nav-mega-trigger">Services</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Billing</div>
-          <a href="eligibility-verification.html">Eligibility Verification</a>
-          <a href="prior-auth.html">Prior Authorization</a>
-          <a href="claims-scrubbing.html">Claims Submission</a>
-          <a href="claims-forms.html">Claim Forms (CMS-1500/UB-04)</a>
-          <a href="denials-management.html">Denials Management</a>
-          <a href="accounts-receivable-recovery.html">AR Recovery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical Coding</div>
-          <a href="medical-coding.html">Coding Overview</a>
-          <a href="specialty-family-medicine.html">Family Medicine Coding</a>
-          <a href="specialty-cardiology.html">Cardiology Coding</a>
-          <a href="specialties.html" class="see-all">See all specialty guides &rarr;</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Credentialing</div>
-          <a href="credentialing-medicare.html">Medicare</a>
-          <a href="credentialing-medicaid.html">Medicaid</a>
-          <a href="credentialing-bcbs.html">BCBS</a>
-          <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
-          <a href="credentialing-aetna.html">Aetna</a>
-          <a href="credentialing-cigna.html">Cigna</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice Growth</div>
-          <a href="digital-marketing.html">Digital Marketing</a>
-          <a href="seo-services.html">Healthcare SEO</a>
-          <a href="google-business-profile.html">Google Business Profile</a>
-          <a href="social-media-management.html">Social Media</a>
-          <a href="web-development.html">Web Development</a>
-          <a href="virtual-assistant.html">Virtual Assistants</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="specialties.html" class="nav-link nav-mega-trigger">Specialties</a>
-      <div class="nav-mega">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Primary care</div>
-          <a href="specialty-internal-medicine.html">Internal Medicine</a>
-          <a href="specialty-family-medicine.html">Family Medicine</a>
-          <a href="specialty-pediatrics.html">Pediatrics</a>
-          <a href="specialty-urgent-care.html">Urgent Care</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Medical</div>
-          <a href="specialty-cardiology.html">Cardiology</a>
-          <a href="specialty-neurology.html">Neurology</a>
-          <a href="specialty-pulmonary-diseases.html">Pulmonary Diseases</a>
-          <a href="specialty-nephrology.html">Nephrology</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Surgical</div>
-          <a href="specialty-orthopedics.html">Orthopedics</a>
-          <a href="specialty-general-surgery.html">General Surgery</a>
-          <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
-          <a href="specialty-vascular-surgery.html">Vascular Surgery</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Therapy &amp; more</div>
-          <a href="specialty-physical-therapy.html">Physical Therapy</a>
-          <a href="specialty-mental-health.html">Mental Health</a>
-          <a href="specialty-dental-care.html">Dental Care</a>
-          <a href="specialties.html" class="see-all">See all 30 specialty guides &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <div class="nav-item-mega">
-      <a href="blog.html" class="nav-link nav-mega-trigger">Blog</a>
-      <div class="nav-mega nav-mega-2col">
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Practice resources</div>
-          <a href="rcm-glossary.html">Medical Billing &amp; RCM Glossary</a>
-          <a href="in-house-vs-outsourced-billing.html">In-House vs. Outsourced Billing</a>
-          <a href="switching-billing-companies.html">Switching Billing Companies</a>
-        </div>
-        <div class="nav-mega-col">
-          <div class="nav-mega-col-title">Latest articles</div>
-          <a href="blog-mental-health-specialized-rcm.html">Mental Health RCM</a>
-          <a href="blog-internal-medicine-practice-management.html">Internal Medicine Practice Mgmt.</a>
-          <a href="blog.html" class="see-all">See all articles &rarr;</a>
-        </div>
-      </div>
-    </div>
-      <a href="about.html" class="nav-link active">About us</a>
-    <a href="https://sams.verifiedrcm.com" class="nav-link nav-link-sams">SAMS</a>
-    </nav>
-    <div class="nav-search" id="navSearch">
-      <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
-      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search..." autocomplete="off" aria-label="Search the site">
-      <div class="nav-search-results" id="searchResults"></div>
-    </div>
-    <div class="nav-spacer"></div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
-    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <a href="about.html#contact" class="btn btn-accent nav-cta">Book a consultation</a>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Verified RCM</a>
-    <a href="services.html">Services</a>
-    <a href="specialties.html">Specialties</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About us</a>
-  <a href="https://sams.verifiedrcm.com">SAMS</a>
+<div class="topbar">
+  <div class="shell">
+    <a href="tel:+16266461230"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+1 (626) 646-1230</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <span class="hide-sm">US-registered LLC &middot; BAA signed before any work begins</span>
+    <span class="sep hide-sm" aria-hidden="true">|</span>
+    <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Reviews on Trustpilot</a>
   </div>
 </div>
+
+<header class="site-header" id="navBar">
+  <div class="shell masthead">
+    <a class="brand" href="index.html" aria-label="Verified RCM home">
+      <img src="images/logo.jpg" alt="" width="42" height="42">
+      <span class="brand-name">Verified RCM<small>Billing &middot; Credentialing &middot; Practice management</small></span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main">
+      <ul>
+        <li>
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Medical billing</div>
+              <a href="eligibility-verification.html">Eligibility verification</a>
+              <a href="prior-auth.html">Prior authorization</a>
+              <a href="claims-scrubbing.html">Claims submission</a>
+              <a href="claims-forms.html">Claim forms (CMS-1500 / UB-04)</a>
+              <a href="denials-management.html">Denials management</a>
+              <a href="accounts-receivable-recovery.html">A/R recovery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical coding</div>
+              <a href="medical-coding.html">Coding overview</a>
+              <a href="specialty-family-medicine.html">Family medicine coding</a>
+              <a href="specialty-cardiology.html">Cardiology coding</a>
+              <a href="specialties.html" class="see-all">All specialty guides &rarr;</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Credentialing</div>
+              <a href="credentialing-medicare.html">Medicare</a>
+              <a href="credentialing-medicaid.html">Medicaid</a>
+              <a href="credentialing-bcbs.html">BCBS</a>
+              <a href="credentialing-unitedhealthcare.html">UnitedHealthcare</a>
+              <a href="credentialing-aetna.html">Aetna</a>
+              <a href="credentialing-cigna.html">Cigna</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Practice growth</div>
+              <a href="digital-marketing.html">Digital marketing</a>
+              <a href="seo-services.html">Healthcare SEO</a>
+              <a href="google-business-profile.html">Google Business Profile</a>
+              <a href="social-media-management.html">Social media</a>
+              <a href="web-development.html">Web development</a>
+              <a href="virtual-assistant.html">Virtual assistants</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link is-current" aria-current="page" href="specialties.html" aria-haspopup="true">Specialties <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega">
+            <div class="mega-col"><div class="mega-title">Primary care</div>
+              <a href="specialty-internal-medicine.html">Internal medicine</a>
+              <a href="specialty-family-medicine.html">Family medicine</a>
+              <a href="specialty-pediatrics.html">Pediatrics</a>
+              <a href="specialty-urgent-care.html">Urgent care</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Medical</div>
+              <a href="specialty-cardiology.html">Cardiology</a>
+              <a href="specialty-neurology.html">Neurology</a>
+              <a href="specialty-pulmonary-diseases.html">Pulmonary diseases</a>
+              <a href="specialty-nephrology.html">Nephrology</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Surgical</div>
+              <a href="specialty-orthopedics.html">Orthopedics</a>
+              <a href="specialty-general-surgery.html">General surgery</a>
+              <a href="specialty-obstetrics-gynecology.html">OB/GYN</a>
+              <a href="specialty-vascular-surgery.html">Vascular surgery</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Therapy &amp; more</div>
+              <a href="specialty-physical-therapy.html">Physical therapy</a>
+              <a href="specialty-mental-health.html">Mental health</a>
+              <a href="specialty-dental-care.html">Dental care</a>
+              <a href="specialties.html" class="see-all">All 30 specialty guides &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="mega-right">
+          <a class="nav-link" href="blog.html" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="mega mega-2">
+            <div class="mega-col"><div class="mega-title">Practice resources</div>
+              <a href="rcm-glossary.html">Medical billing &amp; RCM glossary</a>
+              <a href="in-house-vs-outsourced-billing.html">In-house vs. outsourced billing</a>
+              <a href="switching-billing-companies.html">Switching billing companies</a>
+              <a href="practice-licensing.html">Practice licensing</a>
+              <a href="practice-management-operations.html">Practice management operations</a>
+            </div>
+            <div class="mega-col"><div class="mega-title">Latest articles</div>
+              <a href="blog-mental-health-specialized-rcm.html">Mental health RCM</a>
+              <a href="blog-internal-medicine-practice-management.html">Internal medicine practice management</a>
+              <a href="blog.html" class="see-all">All articles &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-search" id="navSearch">
+      <svg class="nav-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+      <input type="text" id="searchInput" class="nav-search-input" placeholder="Search the site" autocomplete="off" aria-label="Search the site">
+      <div class="nav-search-results" id="searchResults"></div>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid" href="about.html#contact">Book a consultation</a>
+      <button class="burger" id="drawerOpen" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-top">
+      <span class="brand-name">Menu</span>
+      <button class="x-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><details><summary>Services</summary>
+          <a href="services.html">All services</a>
+          <a href="service-revenue-cycle-management.html">Revenue cycle management</a>
+          <a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a>
+          <a href="service-practice-management.html">Practice management</a>
+          <a href="medical-coding.html">Medical coding</a>
+          <a href="denials-management.html">Denials management</a>
+          <a href="digital-marketing.html">Practice growth</a>
+        </details></li>
+        <li><details><summary>Specialties</summary>
+          <a href="specialties.html">All 30 specialty guides</a>
+          <a href="specialty-internal-medicine.html">Internal medicine</a>
+          <a href="specialty-family-medicine.html">Family medicine</a>
+          <a href="specialty-pediatrics.html">Pediatrics</a>
+          <a href="specialty-cardiology.html">Cardiology</a>
+          <a href="specialty-mental-health.html">Mental health</a>
+        </details></li>
+        <li><details><summary>Resources</summary>
+          <a href="blog.html">Blog</a>
+          <a href="rcm-glossary.html">RCM glossary</a>
+          <a href="switching-billing-companies.html">Switching billing companies</a>
+          <a href="practice-licensing.html">Practice licensing</a>
+        </details></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://sams.verifiedrcm.com">SAMS</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+      <a class="btn btn-line" href="tel:+16266461230">Call +1 (626) 646-1230</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<article class="wrap article">
-  <a href="specialty-podiatry.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete podiatry guide</a>
-  <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a gently arched curve with radiating tick marks at one end and an accented joint point, representing podiatry">
+<header class="art-head">
+  <div class="shell">
+    <div class="art-head-copy">
+      <a href="specialty-podiatry.html" class="crumb-back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6"></path><path d="m12 19-7-7 7-7"></path></svg>Our complete podiatry guide</a>
+      <h1>Podiatry NCCI edits and MUE limits: the bundling rules that cause denials.</h1>
+      <p class="lede">Podiatry bills more high-frequency, low-dollar procedure codes per visit than almost any other specialty, nail debridement, lesion paring, injections, and surgical repairs, often stacked in the same encounter as an E/M. That density is exactly why podiatry practices see so many NCCI and MUE denials: more code pairs on one claim means more chances to hit an edit. This guide works through where podiatry hits NCCI hardest, nail debridement against a same-day E/M, lesion-and-nail bundling on the same digit, the unit caps on 11719&ndash;11721, and how bunionectomy and hammertoe repair interact with global-period rules, with the modifier-indicator and MAI framework you need before writing an appeal.</p>
+      <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-podiatry.html">podiatry billing and coding guide</a></span></div>
+    </div>
+    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a gently arched curve with radiating tick marks at one end and an accented joint point, representing podiatry">
   <!-- secondary echo arcs suggesting the arch's range -->
   <path d="M 122 330 Q 240 224 358 322" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="1 9"/>
   <path d="M 136 348 Q 240 252 344 340" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="1 9"/>
@@ -191,10 +247,9 @@
   <circle cx="130" cy="310" r="14" fill="none" stroke="var(--cat-surgical)" stroke-width="2.5"/>
   <circle cx="130" cy="310" r="3.5" fill="var(--cat-surgical)"/>
 </svg></figure>
-  <h1>Podiatry NCCI edits and MUE limits: the bundling rules that cause denials.</h1>
-  <p class="lede">Podiatry bills more high-frequency, low-dollar procedure codes per visit than almost any other specialty &mdash; nail debridement, lesion paring, injections, and surgical repairs, often stacked in the same encounter as an E/M. That density is exactly why podiatry practices see so many NCCI and MUE denials: more code pairs on one claim means more chances to hit an edit. This guide works through where podiatry hits NCCI hardest &mdash; nail debridement against a same-day E/M, lesion-and-nail bundling on the same digit, the unit caps on 11719&ndash;11721, and how bunionectomy and hammertoe repair interact with global-period rules &mdash; with the modifier-indicator and MAI framework you need before writing an appeal.</p>
-  <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-podiatry.html">podiatry billing and coding guide</a></span></div>
-
+  </div>
+</header>
+<article class="wrap article">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -206,13 +261,13 @@
   </section>
 
   <h2>Two systems, two questions</h2>
-  <p>NCCI Procedure-to-Procedure (PTP) edits and Medically Unlikely Edits (MUEs) answer different questions, and podiatry billers routinely conflate them because both surface as a denial that reads like "too much billed at once." A PTP edit asks: <i>can these two different codes be billed together on the same claim?</i> An MUE asks: <i>how many units of this one code are plausible for one patient on one date of service?</i> Podiatry runs into both constantly &mdash; PTP edits between nail and lesion codes, and MUE caps on codes that already describe a range of work within a single unit &mdash; and the fix for each is different, which is why sorting out which one you're looking at comes before anything else.</p>
+  <p>NCCI Procedure-to-Procedure (PTP) edits and Medically Unlikely Edits (MUEs) answer different questions, and podiatry billers routinely conflate them because both surface as a denial that reads like "too much billed at once." A PTP edit asks: <i>can these two different codes be billed together on the same claim?</i> An MUE asks: <i>how many units of this one code are plausible for one patient on one date of service?</i> Podiatry runs into both constantly, PTP edits between nail and lesion codes, and MUE caps on codes that already describe a range of work within a single unit, and the fix for each is different, which is why sorting out which one you're looking at comes before anything else.</p>
 
   <h2>NCCI modifier indicators</h2>
   <p>Every Column 1/Column 2 code pair in the NCCI PTP edit file carries a modifier indicator that decides, absolutely, whether an override is even possible:</p>
   <ul class="check-list">
-    <li><span class="warn">0</span><span><b>Never bypassable.</b> The second code in the pair isn't separately payable under any circumstances &mdash; no modifier, however well the record documents distinctness, changes that.</span></li>
-    <li><span class="check">1</span><span><b>Bypassable with documentation.</b> An NCCI-associated modifier (59 or the specific X-modifier &mdash; XE, XS, XP, XU) can override the edit, but only when the chart genuinely shows the second service was separate &mdash; different digit, different session, different lesion.</span></li>
+    <li><span class="warn">0</span><span><b>Never bypassable.</b> The second code in the pair isn't separately payable under any circumstances, no modifier, however well the record documents distinctness, changes that.</span></li>
+    <li><span class="check">1</span><span><b>Bypassable with documentation.</b> An NCCI-associated modifier (59 or the specific X-modifier, XE, XS, XP, XU) can override the edit, but only when the chart genuinely shows the second service was separate, different digit, different session, different lesion.</span></li>
     <li><span class="check">9</span><span><b>Edit deleted.</b> The pair no longer applies; don't build a scrubber rule around a stale indicator value.</span></li>
   </ul>
   <p><b>The MUE Adjudication Indicator (MAI)</b>, attached to a per-code, per-day unit cap:</p>
@@ -222,21 +277,21 @@
       <thead><tr><th scope="col">MAI</th><th scope="col">Type</th><th scope="col">What it means</th></tr></thead>
       <tbody>
         <tr><td><code>1</code></td><td>Claim-line edit</td><td>Units above the cap deny that line, but a genuinely repeated, medically necessary service can often be split across separate lines with the correct modifier.</td></tr>
-        <tr><td><code>2</code></td><td>Absolute, date-of-service edit</td><td>CMS treats exceeding it as clinically implausible. There's no appeal path &mdash; confirm the MAI before staff spend time on one.</td></tr>
-        <tr><td><code>3</code></td><td>Appealable, date-of-service edit</td><td>A real path exists with documentation that the excess units reflect genuinely distinct, medically necessary services &mdash; the toe-by-toe hammertoe scenario below is the clearest podiatry example.</td></tr>
+        <tr><td><code>2</code></td><td>Absolute, date-of-service edit</td><td>CMS treats exceeding it as clinically implausible. There's no appeal path, confirm the MAI before staff spend time on one.</td></tr>
+        <tr><td><code>3</code></td><td>Appealable, date-of-service edit</td><td>A real path exists with documentation that the excess units reflect genuinely distinct, medically necessary services, the toe-by-toe hammertoe scenario below is the clearest podiatry example.</td></tr>
       </tbody>
     </table>
   </div>
-  <p>⚠️ Quarterly is the operative word for both of these values. NCCI PTP edits and MUEs are revised four times a year, and this build could not open CMS's primary NCCI PTP edit file or MUE table directly to confirm the current indicator or MAI value for every individual podiatry code pair discussed below &mdash; CMS's practitioner PTP files are distributed as quarterly ZIP downloads split across several code-range files, not a single searchable page, and several automated retrieval attempts against them during this build did not return usable pair-level data. The structural rules in the sections below come from each code's own descriptor, from the NCCI Policy Manual's stated anatomic-site logic, or from CMS billing-and-coding guidance, and hold independent of the exact indicator value. Where a specific indicator, MAI, or unit value is stated, it's flagged and should be re-checked in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> and the current <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-medically-unlikely-edits-mues" rel="noopener">MUE table</a> before it's built into a scrubber rule.</p>
+  <p>⚠️ Quarterly is the operative word for both of these values. NCCI PTP edits and MUEs are revised four times a year, and this build could not open CMS's primary NCCI PTP edit file or MUE table directly to confirm the current indicator or MAI value for every individual podiatry code pair discussed below, CMS's practitioner PTP files are distributed as quarterly ZIP downloads split across several code-range files, not a single searchable page, and several automated retrieval attempts against them during this build did not return usable pair-level data. The structural rules in the sections below come from each code's own descriptor, from the NCCI Policy Manual's stated anatomic-site logic, or from CMS billing-and-coding guidance, and hold independent of the exact indicator value. Where a specific indicator, MAI, or unit value is stated, it's flagged and should be re-checked in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> and the current <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-medically-unlikely-edits-mues" rel="noopener">MUE table</a> before it's built into a scrubber rule.</p>
 
   <h2>Nail debridement (11720/11721) and a same-day E/M</h2>
-  <p><code>11720</code> covers debridement of one to five nails by any method; <code>11721</code> covers six or more. Both are minor procedures with a short global period, and both are billed constantly alongside an E/M visit &mdash; which is exactly where the most common podiatry bundling denial shows up.</p>
-  <p>This isn't a Column 1/Column 2 PTP edit the way the lesion-and-nail pair below is. E/M codes generally aren't part of the NCCI PTP file at all; the requirement that a same-day E/M be significant and separately identifiable before it's payable alongside a minor procedure comes from the global surgery package rules in the NCCI Policy Manual's general policy chapter, the same mechanism that governs every minor-procedure-plus-E/M claim across specialties. Practically, that means there's no pair-level indicator to look up before deciding whether modifier 25 is defensible &mdash; the entire question rests on the note.</p>
+  <p><code>11720</code> covers debridement of one to five nails by any method; <code>11721</code> covers six or more. Both are minor procedures with a short global period, and both are billed constantly alongside an E/M visit, which is exactly where the most common podiatry bundling denial shows up.</p>
+  <p>This isn't a Column 1/Column 2 PTP edit the way the lesion-and-nail pair below is. E/M codes generally aren't part of the NCCI PTP file at all; the requirement that a same-day E/M be significant and separately identifiable before it's payable alongside a minor procedure comes from the global surgery package rules in the NCCI Policy Manual's general policy chapter, the same mechanism that governs every minor-procedure-plus-E/M claim across specialties. Practically, that means there's no pair-level indicator to look up before deciding whether modifier 25 is defensible, the entire question rests on the note.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Supports modifier 25.</b> The visit also works up a new or worsening complaint, adjusts a diabetic foot care plan or offloading device, evaluates a wound or a separate skin condition, or addresses something beyond the decision to debride.</span></li>
-    <li><span class="warn">0</span><span><b>Doesn't support modifier 25.</b> The entire visit is "assessed the nails, decided to debride them" &mdash; a routine mycotic-nail maintenance visit with no other documented evaluation and management work.</span></li>
+    <li><span class="warn">0</span><span><b>Doesn't support modifier 25.</b> The entire visit is "assessed the nails, decided to debride them", a routine mycotic-nail maintenance visit with no other documented evaluation and management work.</span></li>
   </ul>
-  <p>Two coding details matter as much as the modifier itself. First, modifier 25 is appended to the E/M code, never to 11720 or 11721 &mdash; a mistake industry billing guidance flags repeatedly because it's common enough to be one of the most frequent reasons an otherwise-supportable claim still denies. Second, routine foot care carves under Medicare (nail debridement for patients without a qualifying systemic condition such as diabetes with peripheral neuropathy or peripheral vascular disease) is a medical-necessity and coverage question, not an NCCI question &mdash; a claim can be perfectly coded and still deny because the diagnosis on file doesn't support anything beyond routine care under your MAC's local coverage article. Don't treat a routine-foot-care denial as a bundling problem; it's a different framework entirely.</p>
+  <p>Two coding details matter as much as the modifier itself. First, modifier 25 is appended to the E/M code, never to 11720 or 11721, a mistake industry billing guidance flags repeatedly because it's common enough to be one of the most frequent reasons an otherwise-supportable claim still denies. Second, routine foot care carves under Medicare (nail debridement for patients without a qualifying systemic condition such as diabetes with peripheral neuropathy or peripheral vascular disease) is a medical-necessity and coverage question, not an NCCI question, a claim can be perfectly coded and still deny because the diagnosis on file doesn't support anything beyond routine care under your MAC's local coverage article. Don't treat a routine-foot-care denial as a bundling problem; it's a different framework entirely.</p>
 
   <h2>MUE unit caps: 11719, 11720, and 11721</h2>
   <p>This is where podiatry billers most often lose money they were never entitled to in the first place, by trying to bill more units than the code allows for.</p>
@@ -251,11 +306,11 @@
       </tbody>
     </table>
   </div>
-  <p>Each of these three codes is written as a range, not a per-nail unit, so the MUE of one unit per date of service isn't really capping anything &mdash; it's confirming what the descriptor already says. CMS's own billing-and-coding guidance states 11721 is reported as one unit per date of service regardless of how many nails above six were debrided; the same range-based logic applies to 11720 by the same descriptor design, though ⚠️ this build did not independently confirm 11720's specific MUE value against CMS's primary MUE table (only against secondary billing-industry sources), so verify it directly before relying on it. The billing implication is straightforward either way: never bill multiple units of 11720 to reflect a higher nail count within its own 1&ndash;5 range, and never bill 11720 and 11721 together for the same visit &mdash; pick the single code that matches the total nail count treated that day.</p>
-  <p>11719 and 11720/11721 create a second trap: trimming and debridement are different levels of work, but they're mutually exclusive for the <i>same nail</i> on the same visit. Billing 11719 for nails that received simple trimming and 11720 for others that genuinely required debridement, on the same date, is defensible only when the medical record clearly distinguishes which nails received which service and why the higher-complexity code was medically necessary for those specific nails &mdash; not as a routine way to bill both codes on every visit.</p>
+  <p>Each of these three codes is written as a range, not a per-nail unit, so the MUE of one unit per date of service isn't really capping anything, it's confirming what the descriptor already says. CMS's own billing-and-coding guidance states 11721 is reported as one unit per date of service regardless of how many nails above six were debrided; the same range-based logic applies to 11720 by the same descriptor design, though ⚠️ this build did not independently confirm 11720's specific MUE value against CMS's primary MUE table (only against secondary billing-industry sources), so verify it directly before relying on it. The billing implication is straightforward either way: never bill multiple units of 11720 to reflect a higher nail count within its own 1&ndash;5 range, and never bill 11720 and 11721 together for the same visit, pick the single code that matches the total nail count treated that day.</p>
+  <p>11719 and 11720/11721 create a second trap: trimming and debridement are different levels of work, but they're mutually exclusive for the <i>same nail</i> on the same visit. Billing 11719 for nails that received simple trimming and 11720 for others that genuinely required debridement, on the same date, is defensible only when the medical record clearly distinguishes which nails received which service and why the higher-complexity code was medically necessary for those specific nails, not as a routine way to bill both codes on every visit.</p>
 
   <h2>Lesion paring and nail debridement on the same digit</h2>
-  <p>This pairing produces one of the most specific, well-documented anatomic-site edits in podiatry, and it's worth stating precisely because the rule doesn't turn on the modifier at all &mdash; it turns on location.</p>
+  <p>This pairing produces one of the most specific, well-documented anatomic-site edits in podiatry, and it's worth stating precisely because the rule doesn't turn on the modifier at all, it turns on location.</p>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Lesion paring codes and their built-in range logic.</caption>
@@ -267,13 +322,13 @@
       </tbody>
     </table>
   </div>
-  <p>Like the nail-debridement codes, 11055&ndash;11057 are mutually exclusive with each other for one encounter &mdash; bill the single code that matches the total lesion count, not multiple tiers stacked on the same visit.</p>
-  <p>The NCCI Policy Manual describes a Column 1/Column 2 edit pairing 11055 (Column 1) with 11720 (Column 2), and the deciding factor for whether modifier 59 can bypass it is anatomic location: treatment of the nail, nail bed, and adjacent soft tissue distal to and including the skin overlying the distal interphalangeal joint is treated as a single anatomic site. When a hyperkeratotic lesion pared under 11055 (or 11056, by the same logic applied to 11720/11721) sits on that same distal segment of the same toe as a debrided nail, industry coding guidance interpreting this policy language is consistent that modifier 59 should not be used to bypass the edit &mdash; no documentation makes the pair separately payable when both procedures are on the same distal phalanx. When the lesion is on a different toe, or proximal to the distal interphalangeal joint on the same toe, separate reporting with modifier 59 or the appropriate X-modifier is supportable, because the two services are then genuinely at different anatomic sites.</p>
+  <p>Like the nail-debridement codes, 11055&ndash;11057 are mutually exclusive with each other for one encounter, bill the single code that matches the total lesion count, not multiple tiers stacked on the same visit.</p>
+  <p>The NCCI Policy Manual describes a Column 1/Column 2 edit pairing 11055 (Column 1) with 11720 (Column 2), and the deciding factor for whether modifier 59 can bypass it is anatomic location: treatment of the nail, nail bed, and adjacent soft tissue distal to and including the skin overlying the distal interphalangeal joint is treated as a single anatomic site. When a hyperkeratotic lesion pared under 11055 (or 11056, by the same logic applied to 11720/11721) sits on that same distal segment of the same toe as a debrided nail, industry coding guidance interpreting this policy language is consistent that modifier 59 should not be used to bypass the edit, no documentation makes the pair separately payable when both procedures are on the same distal phalanx. When the lesion is on a different toe, or proximal to the distal interphalangeal joint on the same toe, separate reporting with modifier 59 or the appropriate X-modifier is supportable, because the two services are then genuinely at different anatomic sites.</p>
   <p>⚠️ This build could not open the live CMS NCCI PTP file to confirm the current modifier indicator value on the 11055/11720 pair (or the parallel 11056/11721 pairing implied by the same logic) for the current quarter; the anatomic-site rule above is drawn from the NCCI Policy Manual's stated language as reflected in current coding-education sources, not from a fresh pull of the PTP table itself. Confirm the live indicator before building this into an automated scrubber rule, but treat the same-distal-phalanx logic as the operative test regardless of the exact indicator value on file.</p>
 
   <h2>Debridement bundled into a more extensive same-digit procedure</h2>
-  <p>A related but distinct trap shows up when a nail or lesion debridement code is billed alongside a more extensive procedure &mdash; a matrixectomy, an incision and drainage, or a bunion or hammertoe repair &mdash; performed on the same digit in the same session. NCCI's general correct-coding principle treats a lesser procedure as a component of a more extensive one when the lesser service is integral to performing, accessing, or completing the larger procedure at the same site: debriding or paring tissue immediately adjacent to a surgical field you're about to open is ordinarily part of the surgical prep and closure, not a separately reportable service.</p>
-  <p>⚠️ This build could not confirm a specific, current PTP modifier indicator for nail/lesion debridement codes paired against 28285, 28296, or other lesser-toe or bunion procedure codes in CMS's live file. Treat the general component-procedure principle above as reliable &mdash; it comes from the NCCI Policy Manual's stated logic on more-extensive-versus-component procedures, not from a specific pair value &mdash; but verify whether a formal PTP pair exists for your exact code combination in the current lookup tool before assuming either that it's automatically bundled or that it's automatically separately payable. Where the debridement genuinely addresses a different digit or an unrelated area untouched by the more extensive procedure, it's more often supportable as separately reportable, with documentation making the distinction explicit.</p>
+  <p>A related but distinct trap shows up when a nail or lesion debridement code is billed alongside a more extensive procedure, a matrixectomy, an incision and drainage, or a bunion or hammertoe repair, performed on the same digit in the same session. NCCI's general correct-coding principle treats a lesser procedure as a component of a more extensive one when the lesser service is integral to performing, accessing, or completing the larger procedure at the same site: debriding or paring tissue immediately adjacent to a surgical field you're about to open is ordinarily part of the surgical prep and closure, not a separately reportable service.</p>
+  <p>⚠️ This build could not confirm a specific, current PTP modifier indicator for nail/lesion debridement codes paired against 28285, 28296, or other lesser-toe or bunion procedure codes in CMS's live file. Treat the general component-procedure principle above as reliable, it comes from the NCCI Policy Manual's stated logic on more-extensive-versus-component procedures, not from a specific pair value, but verify whether a formal PTP pair exists for your exact code combination in the current lookup tool before assuming either that it's automatically bundled or that it's automatically separately payable. Where the debridement genuinely addresses a different digit or an unrelated area untouched by the more extensive procedure, it's more often supportable as separately reportable, with documentation making the distinction explicit.</p>
 
   <h2>Bunionectomy and hammertoe repair: global periods and NCCI</h2>
   <p>Podiatry's most common surgical codes carry substantial global periods, and the bundling questions that follow surgery are as often about the global surgical package as they are about NCCI itself.</p>
@@ -287,9 +342,9 @@
       </tbody>
     </table>
   </div>
-  <p>⚠️ Confirm the exact global period for these codes in the current-year Medicare Physician Fee Schedule before relying on the 90-day figure operationally &mdash; global periods are published annually and, unlike NCCI/MUE values, don't change quarterly, but they are a separate CMS data file from the one this guide is built around and weren't independently re-pulled for this build.</p>
-  <p>Inside a 90-day global period, routine postoperative visits related to the surgery are bundled into the global fee and aren't separately billable at all &mdash; no modifier makes them payable, because they're not a bundling edit to bypass, they're work the global fee already purchased. What does need a modifier: an E/M visit for a genuinely unrelated problem during the global period (modifier 24, with documentation the visit addressed something other than routine postoperative care); a planned, staged second procedure related to the original surgery (modifier 58); an unplanned return to the operating room for a complication of the same surgery (modifier 78); or a second, unrelated procedure by the same physician during the global period (modifier 79). Billing a postoperative visit without one of these modifiers when one applies, or appending 24 to a visit that's actually routine wound-check follow-up, are both common ways a podiatry practice either loses revenue it was entitled to or draws a payer audit for appending a global modifier without documentation to support it.</p>
-  <p>On the MUE side, 28285 is reported per toe, with a distinct T-modifier (T1&ndash;T9 or TA) identifying each digit corrected. Industry billing sources describe its MUE as 4 units per date of service, consistent with correcting up to four toes on one foot in a single session; ⚠️ this build could not independently confirm that exact unit value against CMS's primary MUE table, so verify it in the current MUE lookup before billing a fifth unit on the same date even when a fifth toe was genuinely corrected — if the MAI on that value is 2 rather than 3, there's no appeal path regardless of how well the fifth toe's correction is documented, which is precisely why confirming the MAI before staff time goes into an appeal matters here as much as anywhere else in this guide. Bilateral procedures on both feet are reported with the appropriate laterality modifiers rather than by billing additional units of the same line, and two different bunion procedure codes on the same foot the same session is not a billable combination under any circumstance industry guidance describes &mdash; that's a code-selection question, not an edit to override.</p>
+  <p>⚠️ Confirm the exact global period for these codes in the current-year Medicare Physician Fee Schedule before relying on the 90-day figure operationally, global periods are published annually and, unlike NCCI/MUE values, don't change quarterly, but they are a separate CMS data file from the one this guide is built around and weren't independently re-pulled for this build.</p>
+  <p>Inside a 90-day global period, routine postoperative visits related to the surgery are bundled into the global fee and aren't separately billable at all, no modifier makes them payable, because they're not a bundling edit to bypass, they're work the global fee already purchased. What does need a modifier: an E/M visit for a genuinely unrelated problem during the global period (modifier 24, with documentation the visit addressed something other than routine postoperative care); a planned, staged second procedure related to the original surgery (modifier 58); an unplanned return to the operating room for a complication of the same surgery (modifier 78); or a second, unrelated procedure by the same physician during the global period (modifier 79). Billing a postoperative visit without one of these modifiers when one applies, or appending 24 to a visit that's actually routine wound-check follow-up, are both common ways a podiatry practice either loses revenue it was entitled to or draws a payer audit for appending a global modifier without documentation to support it.</p>
+  <p>On the MUE side, 28285 is reported per toe, with a distinct T-modifier (T1&ndash;T9 or TA) identifying each digit corrected. Industry billing sources describe its MUE as 4 units per date of service, consistent with correcting up to four toes on one foot in a single session; ⚠️ this build could not independently confirm that exact unit value against CMS's primary MUE table, so verify it in the current MUE lookup before billing a fifth unit on the same date even when a fifth toe was genuinely corrected, if the MAI on that value is 2 rather than 3, there's no appeal path regardless of how well the fifth toe's correction is documented, which is precisely why confirming the MAI before staff time goes into an appeal matters here as much as anywhere else in this guide. Bilateral procedures on both feet are reported with the appropriate laterality modifiers rather than by billing additional units of the same line, and two different bunion procedure codes on the same foot the same session is not a billable combination under any circumstance industry guidance describes, that's a code-selection question, not an edit to override.</p>
 
   <div class="data-table-wrap">
     <table class="data-table">
@@ -298,8 +353,8 @@
       <tbody>
         <tr><td><code>11055</code></td><td><code>11720</code></td><td>Lesion pared and nail debrided on the same distal phalanx</td><td>Not bypassable with 59 when same site; separately reportable when a different digit or proximal to the DIP joint</td></tr>
         <tr><td><code>11719</code></td><td><code>11720</code>/<code>11721</code></td><td>Trimming and debridement billed for the same nails, same visit</td><td>Mutually exclusive for the same nail; document which nails received which level of service if both codes are used for different nails</td></tr>
-        <tr><td><code>11055</code>/<code>11056</code>/<code>11057</code></td><td>&mdash;</td><td>Multiple lesions, one encounter</td><td>Mutually exclusive among themselves; bill the single tier matching total lesion count</td></tr>
-        <tr><td><code>11720</code>/<code>11721</code></td><td>Same-day E/M</td><td>Debridement plus an office visit</td><td>Not a PTP pair; global-package rule &mdash; modifier 25 on the E/M only with documented separate work</td></tr>
+        <tr><td><code>11055</code>/<code>11056</code>/<code>11057</code></td><td>, </td><td>Multiple lesions, one encounter</td><td>Mutually exclusive among themselves; bill the single tier matching total lesion count</td></tr>
+        <tr><td><code>11720</code>/<code>11721</code></td><td>Same-day E/M</td><td>Debridement plus an office visit</td><td>Not a PTP pair; global-package rule, modifier 25 on the E/M only with documented separate work</td></tr>
         <tr><td><code>11055</code>&ndash;<code>11057</code>/<code>11720</code>/<code>11721</code></td><td>More extensive same-digit procedure (e.g., matrixectomy, <code>28285</code>, <code>28296</code>)</td><td>Debridement performed to access or prepare a surgical site on the same digit</td><td>⚠️ Generally treated as included component work; confirm whether a formal PTP pair exists before billing separately</td></tr>
       </tbody>
     </table>
@@ -307,7 +362,7 @@
 
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
-      <li>Bill one unit of the single nail-care or lesion code that matches the total count treated that visit &mdash; the range is built into the descriptor.</li>
+      <li>Bill one unit of the single nail-care or lesion code that matches the total count treated that visit, the range is built into the descriptor.</li>
       <li>Check whether a lesion and a debrided nail are on the same distal phalanx before deciding if modifier 59 is even an option.</li>
       <li>Document E/M work beyond "decided to debride" before appending modifier 25.</li>
       <li>Use the correct global-period modifier (24, 58, 76, 78, 79) on any claim inside a bunionectomy or hammertoe repair's 90-day window.</li>
@@ -316,13 +371,13 @@
       <li>Don't bill multiple units of 11720 or 11721 to reflect a higher nail count within the code's own range.</li>
       <li>Don't append 59 to a lesion-paring code and a nail-debridement code performed on the same distal phalanx of the same toe.</li>
       <li>Don't bill a routine postoperative visit inside a global period without confirming it's actually unrelated to the surgery.</li>
-      <li>Don't treat a routine-foot-care coverage denial as an NCCI bundling problem &mdash; it's a medical-necessity question instead.</li>
+      <li>Don't treat a routine-foot-care coverage denial as an NCCI bundling problem, it's a medical-necessity question instead.</li>
     </ul></div>
   </div>
 
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
-    <div><div class="protip-label">Pro tip</div><p>Before writing any podiatry bundling appeal, run it through three questions in order: is this actually a PTP pair, or a global-package/medical-necessity issue wearing a bundling denial's clothes; what's the current modifier indicator or MAI for the specific codes involved, checked in this quarter's CMS file, not a table from an article; and does the chart document the anatomic distinction &mdash; different digit, different lesion, different session &mdash; the override would claim. A "no" on any of the three means the fix is a code correction or a documentation gap to close, not an appeal letter.</p></div>
+    <div><div class="protip-label">Pro tip</div><p>Before writing any podiatry bundling appeal, run it through three questions in order: is this actually a PTP pair, or a global-package/medical-necessity issue wearing a bundling denial's clothes; what's the current modifier indicator or MAI for the specific codes involved, checked in this quarter's CMS file, not a table from an article; and does the chart document the anatomic distinction, different digit, different lesion, different session, the override would claim. A "no" on any of the three means the fix is a code correction or a documentation gap to close, not an appeal letter.</p></div>
   </div>
 
   <div class="cta-band">
@@ -335,15 +390,15 @@
 
   <h2>Frequently asked questions</h2>
   <div class="faq-list">
-    <details class="faq-item"><summary>Do we always need modifier 25 when an E/M and nail debridement happen the same visit?</summary><p>You need it whenever you want the E/M paid separately, but appending it isn't automatic &mdash; the note has to document evaluation and management work beyond the decision to debride. A visit that's entirely "mycotic nails, trimmed 1-5" doesn't support modifier 25 no matter how it's coded. A visit that also works up a new complaint, adjusts a diabetic foot care plan, or evaluates a separate condition does. And the modifier goes on the E/M code, not on 11720 or 11721.</p></details>
-    <details class="faq-item"><summary>Does the MUE on 11720 and 11721 mean we can only bill for one toenail per visit?</summary><p>No. The MUE caps each code at one unit per date of service, but that's because the code descriptor itself already covers a range of nails &mdash; 11720 covers one to five nails and 11721 covers six or more &mdash; within that single unit. You bill one unit of the code that matches the total nail count for that visit; you don't bill additional units per nail, and trying to would trip the MUE rather than increase payment.</p></details>
+    <details class="faq-item"><summary>Do we always need modifier 25 when an E/M and nail debridement happen the same visit?</summary><p>You need it whenever you want the E/M paid separately, but appending it isn't automatic, the note has to document evaluation and management work beyond the decision to debride. A visit that's entirely "mycotic nails, trimmed 1-5" doesn't support modifier 25 no matter how it's coded. A visit that also works up a new complaint, adjusts a diabetic foot care plan, or evaluates a separate condition does. And the modifier goes on the E/M code, not on 11720 or 11721.</p></details>
+    <details class="faq-item"><summary>Does the MUE on 11720 and 11721 mean we can only bill for one toenail per visit?</summary><p>No. The MUE caps each code at one unit per date of service, but that's because the code descriptor itself already covers a range of nails, 11720 covers one to five nails and 11721 covers six or more, within that single unit. You bill one unit of the code that matches the total nail count for that visit; you don't bill additional units per nail, and trying to would trip the MUE rather than increase payment.</p></details>
     <details class="faq-item"><summary>Can we bill a hyperkeratotic lesion paring code and a nail debridement code for the same visit?</summary><p>It depends entirely on where the lesion sits relative to the nail being debrided, not on whether you append modifier 59. When the lesion and the debrided nail are on the same distal phalanx, including the skin over the distal interphalangeal joint, industry guidance describes this NCCI edit as one modifier 59 cannot bypass regardless of documentation. When the lesion is on a different digit, or proximal to that joint on the same toe, separate reporting with 59 or an X-modifier is supportable. Confirm the current pair-level indicator in the CMS lookup tool before relying on this for a scrubber rule.</p></details>
-    <details class="faq-item"><summary>Why doesn't our scrubber flag debridement billed the same day as a bunionectomy on the same toe?</summary><p>Two different reasons, depending on what's actually happening. If the debridement was incidental work performed to access or prepare the surgical site, it's typically considered included in the more extensive procedure under NCCI's general correct-coding principle that a lesser procedure integral to a more extensive one on the same site isn't separately billable &mdash; whether that specific code pair carries a formal PTP edit in the current file should still be confirmed. If instead the debridement addressed a genuinely separate condition on a different digit, it can be separately reportable with documentation, and a scrubber tuned only to a specific pair may simply not have that exact pair loaded.</p></details>
+    <details class="faq-item"><summary>Why doesn't our scrubber flag debridement billed the same day as a bunionectomy on the same toe?</summary><p>Two different reasons, depending on what's actually happening. If the debridement was incidental work performed to access or prepare the surgical site, it's typically considered included in the more extensive procedure under NCCI's general correct-coding principle that a lesser procedure integral to a more extensive one on the same site isn't separately billable, whether that specific code pair carries a formal PTP edit in the current file should still be confirmed. If instead the debridement addressed a genuinely separate condition on a different digit, it can be separately reportable with documentation, and a scrubber tuned only to a specific pair may simply not have that exact pair loaded.</p></details>
   </div>
 
   <div class="content-disclaimer">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.5h.01"></path></svg>
-    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. NCCI modifier indicators, MUE values, and global periods are published by CMS and revised on their own schedules &mdash; NCCI/MUE quarterly, global periods and fee schedules annually. This page states the indicator, MAI, and global-modifier framework with confidence but flags specific pair-level and unit values that could not be independently confirmed against CMS's primary files during this build. Confirm every value against the current CMS NCCI PTP Edits Lookup Tool, MUE table, and Medicare Physician Fee Schedule, and against your specific payer mix, before submitting claims.</p>
+    <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. NCCI modifier indicators, MUE values, and global periods are published by CMS and revised on their own schedules, NCCI/MUE quarterly, global periods and fee schedules annually. This page states the indicator, MAI, and global-modifier framework with confidence but flags specific pair-level and unit values that could not be independently confirmed against CMS's primary files during this build. Confirm every value against the current CMS NCCI PTP Edits Lookup Tool, MUE table, and Medicare Physician Fee Schedule, and against your specific payer mix, before submitting claims.</p>
   </div>
 
   <h2>Related resources</h2>
@@ -356,62 +411,51 @@
 </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo"><img src="images/logo.jpg" alt="" width="44" height="44"><span>Verified RCM</span></div>
-          <p class="footer-mission">We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment, working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></div>
+        <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM exists to close the gap between the visit and the payment: working denials to their root cause, keeping providers credentialed, and giving every practice the reporting to see exactly where its revenue stands.</p>
+        <a class="foot-phone" href="tel:+16266461230">+1 (626) 646-1230</a>
+        <a class="btn btn-solid" href="about.html#contact">Book a free consultation</a>
+        <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
+          <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-        <div class="footer-actions">
-          <div class="footer-action">
-            <div class="footer-action-label">Book a consultation</div>
-            <p>Talk to a revenue cycle specialist. No forms, no waiting on hold.</p>
-            <a href="tel:+16266461230" class="footer-action-value">+1 (626) 646-1230</a>
-            <a href="about.html#contact" class="btn btn-accent btn-block-sm">Book a free consultation</a>
-          </div>
-          <div class="footer-action">
-            <div class="footer-action-label">Rate your experience</div>
-            <p>Already work with us? Reviews are collected independently by Trustpilot.</p>
-            <!-- TrustBox widget - Review Collector -->
-            <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a7cba2cb6610872c218913b" data-style-height="52px" data-style-width="100%" data-token="b6d96c63-d507-42d7-b0fe-93fa9fff7603">
-              <a href="https://www.trustpilot.com/review/verifiedrcm.com" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
-            <!-- End TrustBox widget -->
-          </div>
-        </div>
+        <!-- End TrustBox widget -->
       </div>
-      <div class="footer-cols">
-        <div><div class="footer-col-title">Main pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><div class="footer-col-title">Our services</div><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><div class="footer-col-title">Growth &amp; technology</div><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><div class="footer-col-title">Specialties</div><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 30 specialties</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="privacy.html">Privacy policy</a>
-          <a href="terms.html">Terms of service</a>
-          <a href="hipaa-notice.html">HIPAA notice</a>
-          <a href="about.html#faq">FAQs</a>
-          <a href="#" id="cookiePrefsLink">Cookie preferences</a>
-        </nav>
-        <span class="footer-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
-      </div>
+      <div><h4>Main pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="about.html#contact">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Our services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 25 specialties</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Verified RCM LLC &middot; 117 S Lexington St, Ste 100, Harrisonville, MO 64701 &middot; All rights reserved.</span>
+      <nav class="foot-legal" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="hipaa-notice.html">HIPAA notice</a>
+        <a href="about.html#faq">FAQs</a>
+        <a href="#" id="cookiePrefsLink">Cookie preferences</a>
+      </nav>
+      <span class="foot-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>US-registered LLC &middot; BAA signed before any work begins</span>
     </div>
   </div>
 </footer>
+
 <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden>
   <button type="button" class="consent-close" id="consentClose" aria-label="Close">&times;</button>
   <p>We use analytics cookies to understand how visitors use this site. No data is shared with advertisers. <b>Cookies are accepted by default.</b> If you'd rather not be tracked, click Decline. See our <a href="privacy.html">privacy policy</a> for details.</p>
   <div class="consent-actions">
-    <button type="button" class="btn btn-outline" id="consentDecline">Decline</button>
-    <button type="button" class="btn btn-accent" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-line" id="consentDecline">Decline</button>
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
   </div>
 </div>
+
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3.1"></script>
+<script src="js/lake.js?v=1.0"></script>
 </body>
 </html>
