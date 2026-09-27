@@ -1,0 +1,8 @@
+<svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a slow undulating sleep-wave line beside a crescent moon arc, representing sleep medicine">
+  <path d="M40,230 C80,220 100,240 130,225 C160,210 180,225 210,215 C240,205 260,225 290,215 C320,205 350,225 380,215 C410,205 430,220 440,215" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40,355 C100,335 140,335 180,355 C220,375 260,375 300,355 C340,335 380,335 440,355" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M350,160 A54,54 0 1,1 291.3,101.3 A42,42 0 0,0 350,160 Z" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40,300 C90,270 130,270 160,300 C190,330 210,330 235,305 C245,290 250,200 255,165 C260,200 270,290 285,305 C310,320 330,320 355,300 C380,280 400,280 440,300" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M235,305 C245,290 250,200 255,165 C260,200 270,290 285,305" fill="none" stroke="var(--cat-medical)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="255" cy="165" r="4.5" fill="var(--cat-medical)"/>
+</svg>
