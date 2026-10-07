@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Medicare, Medicaid, and Dental Insurance Coverage Rules | Verified RCM">
 <meta name="twitter:description" content="Medicare's dental exclusion, the 2023 CMS 'inextricably linked' rule, the one MAC article that covers it, Medicare Advantage dental riders, and Medicaid EPSDT vs. adult rules.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,21 +225,25 @@
       <p class="lede">"Medicare doesn't cover dental" is close enough to true to be dangerous. The exclusion is real, but it carries a verified, narrow exception, one MAC with published billing guidance for it, a Medicare Advantage rider system on entirely separate logic, and a Medicaid program that splits sharply by age and state. This guide covers the payer mechanics our pillar only introduces, which diagnosis code supports each covered scenario, what "only one MAC article exists" means for your own claims, and who gets billed first for a dual-eligible patient.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-dental-care.html">dental billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an evenly spaced row of tooth-like tick marks along a gentle arc, representing dental care">
-  <path d="M97.9,242.5 Q240,197.5 382.1,242.5" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <line x1="97.9" y1="242.5" x2="92.3" y2="225.4" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="132.6" y1="232.7" x2="128.4" y2="215.2" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="168.1" y1="225.7" x2="165.3" y2="207.9" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="203.9" y1="221.4" x2="202.5" y2="203.4" stroke="var(--cat-dental)" stroke-width="3.5" stroke-linecap="round"/>
-  <line x1="276.1" y1="221.4" x2="277.5" y2="203.4" stroke="var(--cat-dental)" stroke-width="3.5" stroke-linecap="round"/>
-  <line x1="311.9" y1="225.7" x2="314.7" y2="207.9" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="347.4" y1="232.7" x2="351.6" y2="215.2" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="382.1" y1="242.5" x2="387.7" y2="225.4" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="240" y1="220" x2="240" y2="202" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-dental-care-wide.svg" alt="Dental care: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-exclusion-and-the-one-exam-that-survives-it">The exclusion, and the one exam that survives it</a></li>
+      <li><a href="#the-2023-inextricably-linked-rule-mapped-to-the-diagnosis-co">The 2023 "inextricably linked" rule, mapped to the diagnosis code that actually supports it</a></li>
+      <li><a href="#the-mac-layer-one-published-article-and-what-that-means-for">The MAC layer: one published article, and what that means for everyone else</a></li>
+      <li><a href="#medicare-advantage-dental-riders-run-on-different-logic-enti">Medicare Advantage dental riders run on different logic entirely</a></li>
+      <li><a href="#medicaid-mandatory-under-21-optional-after">Medicaid: mandatory under 21, optional after</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -251,11 +254,11 @@
     </ul>
   </section>
 
-  <h2>The exclusion, and the one exam that survives it</h2>
+  <h2 id="the-exclusion-and-the-one-exam-that-survives-it">The exclusion, and the one exam that survives it</h2>
   <p>Section 1862(a)(12) of the Social Security Act excludes items and services connected to the care, treatment, filling, removal, or replacement of teeth or the structures directly supporting them. That's the entire legal basis for "Medicare doesn't cover dental," and on its own it's close to absolute.</p>
   <p>NCD 260.6, "Dental Examination Prior to Kidney Transplantation," is the exception that's existed the longest, effective since 01/01/1979 and still active. We pulled its indications-and-limitations text directly from CMS's coverage database rather than paraphrasing a summary: the exam is covered <i>"because the purpose of the examination is not for the care of the teeth or structures directly supporting the teeth. Rather, the examination is for the identification, prior to a complex surgical procedure, of existing medical problems where the increased possibility of infection would not only reduce the chances for successful surgery but would also expose the patient to additional risks."</i> The billing split is explicit in the NCD itself: Part A if a dentist on the hospital's staff performs the inpatient exam, Part B if a physician performs it, and the NCD is specific that a dentist performing a dental exam is not recognized as a "physician" under &sect;1861(r) of the Act for this purpose, so a dentist's exam can't be billed to Part B under that theory.</p>
 
-  <h2>The 2023 "inextricably linked" rule, mapped to the diagnosis code that actually supports it</h2>
+  <h2 id="the-2023-inextricably-linked-rule-mapped-to-the-diagnosis-co">The 2023 "inextricably linked" rule, mapped to the diagnosis code that actually supports it</h2>
   <p>CMS's 2023 final rule extended NCD 260.6's logic to any dental service "inextricably linked to, and substantially related and integral to the clinical success of" another covered medical service, in any setting. CMS named five examples and was explicit that the list illustrates the principle rather than limiting it. What the pillar guide doesn't spell out is which diagnosis code actually documents each scenario on a claim, and a Medicare crossover claim with the right CPT code but a dental-flavored or unsupported diagnosis denies exactly like one with no diagnosis at all.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -272,11 +275,11 @@
   </div>
   <p>The rule's examples are illustrative, not exhaustive, a comparably direct clinical link outside these five can still qualify, evaluated case by case, with the burden on the claim's documentation to draw the link explicitly. Reporting supports appending the <code>KX</code> modifier on claims billed under this exception, to attest the inextricable-link criteria are met. ⚠️ We could not confirm the specific code list and KX requirement against Palmetto's article text directly, CMS's coverage-database article pages returned an access error to automated retrieval during this build, so verify current requirements against your own MAC before relying on this operationally.</p>
 
-  <h2>The MAC layer: one published article, and what that means for everyone else</h2>
+  <h2 id="the-mac-layer-one-published-article-and-what-that-means-for">The MAC layer: one published article, and what that means for everyone else</h2>
   <p>We searched CMS's coverage database for every dental-specific billing-and-coding article nationally, across all MAC jurisdictions. The result: exactly one. Palmetto GBA's Article A59449, "Billing and Coding: Dental Services," effective 06/08/2023, covering both Part A and Part B claims in Palmetto's jurisdiction.</p>
   <p>No other MAC, Novitas, NGS, WPS, CGS, First Coast, or any of the rest, has a published dental-specific article in the coverage database as of this build. That doesn't mean other jurisdictions don't process these claims; it means there's no local article to check a claim against first. Don't cite A59449 as binding policy for a claim a different MAC processes, it isn't, even though it's the closest public reference available. If your MAC isn't Palmetto, call its provider contact center before your first dental crossover claim and ask directly whether it follows comparable logic or wants the claim submitted as any other Part A/B claim with strong supporting documentation. That call is cheaper than a denial that teaches you the same thing.</p>
 
-  <h2>Medicare Advantage dental riders run on different logic entirely</h2>
+  <h2 id="medicare-advantage-dental-riders-run-on-different-logic-enti">Medicare Advantage dental riders run on different logic entirely</h2>
   <p>Most Medicare Advantage plans now bundle some dental benefit, anywhere from preventive-only coverage to a comprehensive benefit with an annual dollar cap. That coverage exists under the MA plan's own supplemental-benefit design, not under traditional Medicare's statutory exception, and the two shouldn't be cited interchangeably when explaining a denial to a patient or a provider.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Verify against the plan's dental Evidence of Coverage</b>, not the base medical Summary of Benefits, the dental rider is frequently a separate document with its own limitations and exclusions.</span></li>
@@ -285,7 +288,7 @@
   </ul>
   <p>A service covered under an MA dental rider tells you nothing about whether it also qualifies under traditional Medicare's exception, and vice versa, a member who switches from MA back to traditional Medicare mid-treatment loses the rider's coverage entirely, regardless of what the prior plan authorized.</p>
 
-  <h2>Medicaid: mandatory under 21, optional after</h2>
+  <h2 id="medicaid-mandatory-under-21-optional-after">Medicaid: mandatory under 21, optional after</h2>
   <p>Medicaid dental coverage splits on a single line: turning 21. Below that age, coverage is mandatory in every state under the Early and Periodic Screening, Diagnostic and Treatment benefit, codified at 42 CFR &sect;441.56, states must cover pain relief, infection treatment, restoration, and maintenance of dental health at intervals meeting reasonable dental-practice standards, and coverage cannot be limited to emergency-only services for this population.</p>
   <p>At 21 and older, dental coverage under Medicaid is a state option, not a federal mandate. Coverage ranges from comprehensive benefits to emergency-only to nothing at all, state by state, so verify the specific state program's covered CDT codes and any annual benefit cap directly rather than assuming a neighboring state's rules carry over.</p>
   <div class="dodont">
@@ -312,7 +315,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What ICD-10 code actually proves a dental service is "inextricably linked" to a covered medical service?</summary><p>There's no single universal code, it depends on which named scenario applies, per the table above: transplant workups link to Z94.0 or Z76.82, pre-radiation extractions to a C00&ndash;C14 code paired with Z51.0, dialysis-related exams to N18.6 with Z99.2, jaw-fracture wiring to the S02.6 family. A dental-only diagnosis, however severe, never satisfies this on its own, the code has to describe the medical condition driving the dental work, not the dental finding itself.</p></details>
     <details class="faq-item"><summary>Do we need the KX modifier on every Medicare dental crossover claim?</summary><p>Per secondary reporting on Palmetto GBA's Article A59449, yes for claims processed under that MAC's framework, KX attests the inextricable-link criteria are met. We could not independently confirm this requirement against the article's full text, or confirm whether every MAC applies the same modifier logic, since CMS's coverage-database article pages returned an access error to automated retrieval during this build. Check your own MAC's current guidance, and don't append KX without documentation that actually supports the attestation, an unsupported KX modifier is its own audit trigger.</p></details>
@@ -324,7 +327,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-dental-care.html">Dental billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-dental-care-icd10-dental-crossover-coding.html">ICD-10 codes for dental-medical crossover claims <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -332,6 +335,7 @@
     <li><a href="credentialing-medicare.html">Medicare credentialing and enrollment <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="credentialing-medicaid.html">Medicaid credentialing and enrollment <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -380,6 +384,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

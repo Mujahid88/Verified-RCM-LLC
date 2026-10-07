@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Pain Management Prior Authorization and the WISeR Model | Verified RCM">
 <meta name="twitter:description" content="WISeR prior authorization for pain management: the six pilot states and their model participants, CPT 62323 scope, gold-carding exemption thresholds, and the Medicare appeal path after a non-affirmation.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,34 +225,25 @@
       <p class="lede">WISeR is not just another prior-auth queue with a new logo. It routes through six private technology companies under CMS contract, not your MAC directly, and a non-affirmation from one of them can't be appealed at all, only the claim denial that follows it can. This guide goes past the headline mechanics to the parts that actually change a Monday workflow: which company reviews your state's requests, the exact numbers that earn a gold-carding exemption, and the full appeal ladder, with 2026's filing deadlines and dollar thresholds, once a claim denies after a non-affirmation.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-pain-management.html">pain management billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of nerve pathways radiating outward from a central point, representing pain management">
-  <path d="M305.8,216.1 A70,70 0 0 1 227.8,308.9" stroke="var(--muted)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-
-  <path d="M240,240 Q170,250 118.8,310" stroke="var(--muted)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-  <circle cx="118.8" cy="310" r="3.5" stroke="var(--muted)" stroke-width="1.5" fill="none"/>
-
-  <path d="M240,240 L199.9,90.3" stroke="var(--muted)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-  <path d="M217.9,157.7 L190,130" stroke="var(--muted)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-  <path d="M217.9,157.7 L245,120" stroke="var(--muted)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-  <circle cx="199.9" cy="90.3" r="3.5" stroke="var(--muted)" stroke-width="1.5" fill="none"/>
-
-  <path d="M240,240 Q320,190 365.6,167.5" stroke="var(--muted)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-  <circle cx="365.6" cy="167.5" r="3.5" stroke="var(--muted)" stroke-width="1.5" fill="none"/>
-
-  <path d="M240,240 L278.8,384.9" stroke="var(--color-text)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-  <circle cx="278.8" cy="384.9" r="5" stroke="var(--color-text)" stroke-width="2" fill="none"/>
-
-  <path d="M240,240 L109.6,205.1" stroke="var(--color-text)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-  <circle cx="109.6" cy="205.1" r="5" stroke="var(--color-text)" stroke-width="2" fill="none"/>
-
-  <path d="M240,240 L395,240" stroke="var(--cat-medical)" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <circle cx="395" cy="240" r="4" fill="var(--cat-medical)"/>
-
-  <circle cx="240" cy="240" r="6" fill="var(--cat-medical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-pain-management-wide.svg" alt="Pain management: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#who-actually-reviews-the-request-state-by-state">Who actually reviews the request, state by state</a></li>
+      <li><a href="#the-gold-carding-exemption-in-the-numbers-that-matter">The gold-carding exemption, in the numbers that matter</a></li>
+      <li><a href="#what-happens-after-a-non-affirmation-the-appeal-ladder-that">What happens after a non-affirmation: the appeal ladder that actually applies</a></li>
+      <li><a href="#the-submission-packet-that-clears-review-the-first-time">The submission packet that clears review the first time</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -264,7 +254,7 @@
     </ul>
   </section>
 
-  <h2>Who actually reviews the request, state by state</h2>
+  <h2 id="who-actually-reviews-the-request-state-by-state">Who actually reviews the request, state by state</h2>
   <p>WISeR requests don't land on a MAC's desk first. CMS contracted six technology companies as "model participants," and each owns a specific state's reviews, with its own portal and peer-to-peer scheduling process. A biller used to a MAC's provider portal shouldn't assume a WISeR request follows the same login, it doesn't.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -282,7 +272,7 @@
   </div>
   <p>Notice that Oklahoma and Texas share a MAC jurisdiction (JH, Novitas) but answer to two different model participants, Humata Health and Cohere Health, respectively. A multi-location practice billing in both states needs two separate portal registrations, not one shared assumption about "how JH handles WISeR." Scope hasn't changed from the rest of our pain management guide: CPT 62323 is the only interventional pain code in the model, and facet injections, MBBs, and RFA remain outside it.</p>
 
-  <h2>The gold-carding exemption, in the numbers that matter</h2>
+  <h2 id="the-gold-carding-exemption-in-the-numbers-that-matter">The gold-carding exemption, in the numbers that matter</h2>
   <p>CMS built an exemption path into WISeR, and it's a concrete number, not a subjective review of reputation. A provider or supplier earns gold-card status, exemption from ongoing prior authorization and pre-payment review for that service, by submitting at least 10 requests during the assessment period and clearing at least 90% of them with an affirmation, while carrying no active Medicare exclusion.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Minimum volume: 10 requests.</b> A low-volume practice billing 62323 only a handful of times a year may never accumulate enough in one window to qualify, independent of documentation quality.</span></li>
@@ -292,7 +282,7 @@
   </ul>
   <p>Track your practice's own WISeR affirmation rate for 62323 every quarter, the same way you'd track a denial rate, and treat 90% as the number to beat. A practice already running clean epidural documentation for MAC LCD purposes, region-specific diagnosis, dated conservative-care trial, current imaging, is most of the way to the same packet WISeR wants; gold-carding rewards a documentation habit the practice should already have, not a separate one.</p>
 
-  <h2>What happens after a non-affirmation: the appeal ladder that actually applies</h2>
+  <h2 id="what-happens-after-a-non-affirmation-the-appeal-ladder-that">What happens after a non-affirmation: the appeal ladder that actually applies</h2>
   <p>The WISeR non-affirmation decision itself has no reconsideration path, that part of the model is final. What changes the outcome is proceeding anyway: perform the service, submit the claim to the MAC, and let the MAC issue its own initial determination. That determination is a standard Medicare claim decision, carrying the full five-level administrative appeal process, each level with its own filing window and decision clock.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -315,7 +305,7 @@
     <p>Peer-to-peer scheduling for WISeR has run rough in 2026, providers report waits as long as 90 minutes just to get a call scheduled, with the conversation itself happening a week or more later. Assign one staff member to own peer-to-peer requests, keep the documentation packet assembled before the call is requested, and build that one-to-two-week gap into scheduling instead of booking the procedure and hoping it resolves in time.</p>
   </div>
 
-  <h2>The submission packet that clears review the first time</h2>
+  <h2 id="the-submission-packet-that-clears-review-the-first-time">The submission packet that clears review the first time</h2>
   <p>Every model participant is reviewing against the same underlying medical-necessity question, so the packet that avoids a peer-to-peer looks the same regardless of which of the six companies is on the other end.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Current imaging report, cited by date and finding</b>, the specific level and side matching the injection requested, not a general "MRI on file" note.</span></li>
@@ -325,7 +315,7 @@
     <li><span class="check">5</span><span><b>Submitted through the correct model participant's portal</b>, with staff already registered, and enough lead time that the 120-day affirmation window and the procedure date don't collide.</span></li>
   </ul>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Confirm which model participant covers each state your practice bills 62323 in, and register staff on that specific portal ahead of the first request.</li>
@@ -349,7 +339,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What actually happens if a WISeR prior authorization request comes back non-affirmed?</summary><p>The non-affirmation decision itself cannot be appealed, there's no reconsideration path against it. But the practice can still proceed with the service and submit the claim to the MAC, and the MAC's resulting payment decision is a standard initial determination that carries full Medicare appeal rights: redetermination, QIC reconsideration, an ALJ hearing, Medicare Appeals Council review, and federal court, in that order. The thing you're appealing is never the WISeR decision, it's the claim denial that follows it.</p></details>
     <details class="faq-item"><summary>How does a pain management practice qualify for the WISeR gold-carding exemption?</summary><p>A provider or supplier needs at least 10 prior authorization requests for a WISeR-covered service during the assessment period and an affirmation rate of at least 90% on those requests, with no active exclusion from Medicare. CMS lets individual model participants set the bar lower than 90% but not higher. Exemptions last at least one year once granted and are re-evaluated quarterly, so a practice that qualifies still needs to keep its documentation habits consistent to keep the exemption at the next review.</p></details>
@@ -361,12 +351,13 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-pain-management.html">Pain management billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-pain-management-denials-appeals.html">Denials and appeals guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-pain-management-epidural-steroid-injections.html">Epidural steroid injection coding <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -415,6 +406,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

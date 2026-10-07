@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Occupational Therapy Denials and Appeals: CARC Codes | Verified RCM">
 <meta name="twitter:description" content="Occupational therapy denial and appeal guide: CO-11, CO-50, CO-97, missing GO/CQ/CO modifiers, KX-threshold denials, and RTM frequency denials, with the fix for each.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,19 +225,23 @@
       <p class="lede">Every OT denial pattern traces to one of seven root causes, and the fix is different for each: a resubmission, a modifier correction, a documentation rebuild, or genuinely nothing appealable. This guide pairs the actual CARC code with the specific cause and the appeal argument that works, going deeper than the pillar's summary table on the patterns that carry the most volume, diagnosis specificity, bundling, missing modifiers, and the two frequency traps, the KX threshold and RTM's 16-day minimum, that deny automatically regardless of how good the underlying documentation is.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-occupational-therapy.html">occupational therapy billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract sweeping reach line curving toward an open circular grasp, representing coordination and movement in occupational therapy">
-  <path d="M90,365 C145,310 180,270 225,240 C255,215 275,200 295,195" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
-  <path d="M130,330 C175,290 205,255 240,225 C265,203 282,192 300,188" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
-  <path d="M110,350 C160,300 190,260 230,230 C260,208 280,195 300,190" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M322.7,211.4 A42,42 0 1 1 369.5,184.4" fill="none" stroke="var(--cat-therapy)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M380,150 L397,140" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-  <path d="M392,175 L411,172" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
-  <circle cx="322.7" cy="211.4" r="4" fill="var(--cat-therapy)"/>
-  <circle cx="369.5" cy="184.4" r="3.5" fill="var(--cat-therapy)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-occupational-therapy-wide.svg" alt="Occupational therapy: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-ot-denials-cluster-the-way-they-do">Why OT denials cluster the way they do</a></li>
+      <li><a href="#the-two-timing-traps-kx-threshold-and-rtms-16-day-minimum">The two timing traps: KX threshold and RTM's 16-day minimum</a></li>
+      <li><a href="#appeal-language-that-actually-works">Appeal language that actually works</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -249,7 +252,7 @@
     </ul>
   </section>
 
-  <h2>Why OT denials cluster the way they do</h2>
+  <h2 id="why-ot-denials-cluster-the-way-they-do">Why OT denials cluster the way they do</h2>
   <p>OT denials split cleanly into two families that need entirely different responses. Missing-modifier denials (GO, CQ/CO) and frequency denials (KX threshold, RTM's 16-day minimum) are correctable, not appealable, the claim was wrong as submitted and the fix is a corrected resubmission. Diagnosis-specificity denials (CO-11) and bundling denials (CO-97) sit in a gray zone: sometimes the original claim was actually correct and worth appealing, sometimes it wasn't, and the difference is a specific check, the deficit-specific code the chart supports, or the pair's modifier indicator, not a judgment call. The table below pairs each denial with its actual appeal argument, not just the reason it fired.</p>
 
   <div class="data-table-wrap">
@@ -268,7 +271,7 @@
     </table>
   </div>
 
-  <h2>The two timing traps: KX threshold and RTM's 16-day minimum</h2>
+  <h2 id="the-two-timing-traps-kx-threshold-and-rtms-16-day-minimum">The two timing traps: KX threshold and RTM's 16-day minimum</h2>
   <p>Both of these deny for the same underlying reason, a date hasn't been reached yet, and both are the fastest, most preventable denial dollars to close, because neither one is a documentation argument at all.</p>
   <p><b>KX threshold.</b> The claim denies as CO-119 the moment cumulative allowed OT charges for the calendar year exceed $2,480 without KX attached, regardless of whether the treatment itself was appropriate. The record almost always supports continued medical necessity; the claim still denies because the modifier that says so wasn't on it. This is purely a system-tracking problem, the fix is a running-total flag in the billing system tied to the patient's cumulative charges, checked before the claim goes out, not a chart review after the denial lands.</p>
   <p><b>RTM's 16-day minimum.</b> 98977 (device supply, musculoskeletal system, each 30 days) and its associated codes require at least 16 of the preceding 30 days of recorded device data before they're billable. The most common version of this error isn't a calculation mistake, it's billing 98977 tied to a visit date rather than the device's actual data-collection window. A patient seen for a follow-up visit 10 days after RTM device setup has not yet generated 16 days of data, even though the visit itself is complete and billable on its own terms. Hold the RTM device-supply and treatment-management codes until the 16-day window closes, tracked from device activation, independent of whatever visit schedule the patient is on.</p>
@@ -278,7 +281,7 @@
     <div><div class="protip-label">Pro tip</div><p>Before writing a CO-11 appeal, pull the chart and check whether a deficit-specific code was actually documented and simply not billed, laterality, dominance, or cause. Most CO-11 denials resolve faster as a corrected resubmission with the specific code than as a formal appeal defending the unspecified one, because the specific code is usually sitting in the note already.</p></div>
   </div>
 
-  <h2>Appeal language that actually works</h2>
+  <h2 id="appeal-language-that-actually-works">Appeal language that actually works</h2>
   <p>A CO-50 or an appealable CO-97 denial succeeds or fails on specificity in the letter itself, not just in the attached chart. Two patterns hold up on review:</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Name the modifier indicator, not just the code pair.</b> "97140 and 97530 were billed with modifier XS because [region A] and [region B] were treated as independently documented, distinct services; the NCCI modifier indicator for this pair permits an override with supporting documentation, attached" reads as a claim someone checked, not a claim someone is hoping clears on a second pass.</span></li>
@@ -293,7 +296,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Why did our OT claim deny with CO-11 when the diagnosis matches the patient's condition?</summary><p>CO-11 fires because the payer's edit compares the diagnosis against the procedure and complexity billed, not just against the patient's actual condition. An unspecified code like G81.90 (hemiplegia, unspecified side) can process for a low-complexity evaluation but fail against a higher complexity tier or a procedure that assumes laterality or a specific functional deficit. The fix is almost never an appeal, resubmit with the deficit-specific code the chart already supports, such as I69.351 for hemiplegia following cerebral infarction on a documented side, rather than arguing the original code was close enough.</p></details>
     <details class="faq-item"><summary>Can we appeal a CO-97 bundling denial on 97140 and 97530?</summary><p>Only if the pair's NCCI modifier indicator allows an override, which is a 1, not a 0. Confirm that first. If the indicator permits it and the documentation genuinely shows two distinct services, different body region or task, independently time-documented, resubmit with the specific X-modifier (XS in most OT cases) rather than filing a formal appeal on the original bundled claim. If the indicator is 0, there is no argument that reverses it, and staff time is better spent elsewhere.</p></details>
@@ -305,13 +308,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-occupational-therapy.html">Occupational therapy billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-occupational-therapy-modifiers.html">Occupational therapy modifiers: GO, CQ/CO, 59/X, 96/97, and KX explained <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-occupational-therapy-8-minute-rule-unit-billing.html">The 8-minute rule for occupational therapy: unit billing explained <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -360,6 +364,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

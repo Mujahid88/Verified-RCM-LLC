@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="NCCI Edits and MUE Limits in Gastroenterology | Verified RCM">
 <meta name="twitter:description" content="NCCI edits and MUE limits in gastroenterology: 45378's indicator-0 bundling into every therapeutic colonoscopy code, same-lesion vs. separate-site overrides, EGD bundling, and unit caps.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,17 +225,27 @@
       <p class="lede">A small set of code pairs drives most of gastroenterology's bundling denials, and exactly two of them get confused with each other constantly: 45378's absolute bundling into every therapeutic colonoscopy code, and 45380/45385's conditional bundling that a distinct-site modifier can actually override. Confusing the two wastes staff time appealing a claim that can never win, and misses appeals that would have succeeded. This guide walks the specific pairs, the indicator values that decide each one, and the MUE unit caps that sit alongside them.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of <a href="specialty-gastroenterology.html">our gastroenterology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract winding line suggesting the gastrointestinal tract">
-  <path d="M 150,130 C 210,108 268,132 258,172 C 248,208 180,204 172,244 C 164,284 236,296 252,258 C 266,224 328,232 332,272 C 336,312 280,344 236,332 C 200,322 186,290 212,276" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5" transform="translate(6,10)"/>
-  <path d="M 148,124 C 208,100 266,126 256,166 C 246,204 178,198 170,238 C 162,280 234,292 250,254 C 264,220 326,228 330,268 C 334,310 278,340 234,328 C 198,318 184,286 210,272" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 168,150 C 200,142 224,150 220,168" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
-  <path d="M 196,250 C 220,242 244,250 240,268" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
-  <circle cx="148" cy="124" r="6" fill="var(--cat-surgical)"/>
-  <circle cx="210" cy="272" r="5" fill="var(--cat-surgical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-gastroenterology-wide.svg" alt="Gastroenterology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-bundling-decides-so-much-of-gis-denial-pattern">Why bundling decides so much of GI's denial pattern</a></li>
+      <li><a href="#45378-the-absolute-bundle">45378: the absolute bundle</a></li>
+      <li><a href="#45380-versus-45385-the-conditional-bundle">45380 versus 45385: the conditional bundle</a></li>
+      <li><a href="#45381-into-45390-a-technique-bundle-not-a-site-bundle">45381 into 45390: a technique bundle, not a site bundle</a></li>
+      <li><a href="#egd-family-internal-bundling-follows-the-same-logic">EGD family: internal bundling follows the same logic</a></li>
+      <li><a href="#mue-limits-the-unit-cap-sitting-alongside-the-ptp-edits">MUE limits: the unit cap sitting alongside the PTP edits</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -247,10 +256,10 @@
     </ul>
   </section>
 
-  <h2>Why bundling decides so much of GI's denial pattern</h2>
+  <h2 id="why-bundling-decides-so-much-of-gis-denial-pattern">Why bundling decides so much of GI's denial pattern</h2>
   <p>Colonoscopy and EGD are built from a small number of base and add-on codes performed in combination within a single endoscopic session, a diagnostic exam that becomes a biopsy, a biopsy that becomes a polypectomy, an injection that precedes a resection. NCCI's Procedure-to-Procedure (PTP) edits exist specifically to prevent double-paying for work that's already valued into a more comprehensive code, and gastroenterology's code families generate more of these pairs, more often, than most specialties. The practical stakes: some of these pairs can never be unbundled no matter how well the chart documents the reason, and others can be unbundled easily with the right modifier and a two-sentence note. Knowing which is which, before the claim goes out or the appeal gets written, is the entire game.</p>
 
-  <h2>45378: the absolute bundle</h2>
+  <h2 id="45378-the-absolute-bundle">45378: the absolute bundle</h2>
   <p><code>45378</code>, flexible colonoscopy, diagnostic, with or without collection of specimen by brushing or washing, is reported by billing-industry sources as a Column 2 component of every therapeutic colonoscopy code in the family: <code>45380</code> (biopsy), <code>45384</code> (removal by hot biopsy forceps), <code>45385</code> (snare polypectomy), <code>45388</code> (ablation), and the rest, with a modifier indicator of <b>0</b>.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -265,7 +274,7 @@
   </div>
   <p>The consequence of not knowing this shows up two ways. First, claims: a scrubber rule that doesn't catch 45378-plus-therapeutic-code combinations lets denials go out that never had to happen. Second, and more expensive, appeals: staff time spent writing a CO-97 appeal against this specific pair is time that can never produce a reversal, because there is no documentation-based argument that overrides an indicator-0 edit, the base diagnostic exam is already valued into the therapeutic code, so 45378 simply isn't separately payable once anything therapeutic happened in that colonoscopy. Fix the scrubber rule; don't write the appeal.</p>
 
-  <h2>45380 versus 45385: the conditional bundle</h2>
+  <h2 id="45380-versus-45385-the-conditional-bundle">45380 versus 45385: the conditional bundle</h2>
   <p>This is a genuinely different edit from the one above, and confusing the two is the single most common mistake we see in this part of GI billing. <code>45380</code> (biopsy) is reported as a Column 2 component of <code>45385</code> (snare polypectomy) with a modifier indicator of <b>1</b>, bypassable, but only when the documentation supports it.</p>
   <ul class="check-list">
     <li><span class="warn">Same lesion</span><span><b>Not billable together.</b> A biopsy taken from the same polyp that was then snared is part of the same therapeutic act, 45380 bundles into 45385 with no override.</span></li>
@@ -274,13 +283,13 @@
   </ul>
   <p>The documentation bar here is specific, not general: "multiple polyps removed" without individual location and technique per lesion won't support the override on audit, even if the claim initially pays. The note needs enough anatomic specificity, segment of colon, approximate distance, technique used at each site, that a reviewer can confirm two genuinely separate lesions were addressed, not one lesion described twice.</p>
 
-  <h2>45381 into 45390: a technique bundle, not a site bundle</h2>
+  <h2 id="45381-into-45390-a-technique-bundle-not-a-site-bundle">45381 into 45390: a technique bundle, not a site bundle</h2>
   <p><code>45381</code> (colonoscopy with directed submucosal injection, used for tattooing, saline lifting, or hemostasis) is reported as bundled into <code>45390</code> (endoscopic mucosal resection) because the injection is an integral technical step of the EMR lift-and-cut technique itself, the submucosal injection is how 45390 is performed, not an optional add-on to it. This is a meaningfully different kind of bundle than the 45380/45385 pair above: it isn't about whether the two things happened at the same or different anatomic sites, it's that one procedure is definitionally part of how the other is done. Don't reach for XS on this pair expecting a different-site argument to work; billing-industry sources report this edit at indicator 0 as well, consistent with a component-of-the-procedure bundle rather than a distinct-service bundle.</p>
 
-  <h2>EGD family: internal bundling follows the same logic</h2>
+  <h2 id="egd-family-internal-bundling-follows-the-same-logic">EGD family: internal bundling follows the same logic</h2>
   <p>The upper endoscopy family mirrors the colonoscopy pattern closely. <code>43235</code> (diagnostic EGD) functions as the base code the same way 45378 does, when a biopsy is taken, the claim reports <code>43239</code> (EGD with biopsy) instead of, not in addition to, 43235; billing both the same session is the EGD equivalent of the 45378 error above. From there, the more extensive intervention codes, <code>43251</code> (polypectomy, snare technique), <code>43254</code> (endoscopic mucosal resection), <code>43266</code> (stent placement), <code>43270</code> (ablation), each replace the base or biopsy-level code for that session rather than stacking on top of it, following the general NCCI logic that the more extensive procedure absorbs the less extensive one performed in the course of reaching it. Where EGD genuinely diverges from colonoscopy is volume of separate-site scenarios: the upper GI tract offers fewer physically distinct structures in a single pass than the colon does, so distinct-site overrides come up less often in EGD than they do in colonoscopy, when they're used, the same XS-preferred, note-must-document-each-site standard applies.</p>
 
-  <h2>MUE limits: the unit cap sitting alongside the PTP edits</h2>
+  <h2 id="mue-limits-the-unit-cap-sitting-alongside-the-ptp-edits">MUE limits: the unit cap sitting alongside the PTP edits</h2>
   <p>MUE (Medically Unlikely Edits) are a separate control from PTP bundling, they cap the number of units of a single code billable for one patient on one date of service, regardless of what else is on the claim. Colonoscopy-family codes are commonly reported with an MUE of <b>one unit per date of service</b>, which reflects that a single colonoscopy encounter, not each individual lesion addressed within it, is the clinical unit CMS is capping. Additional lesion-level work within that same encounter gets expressed through code selection (a different therapeutic code for a different technique) and, where genuinely at a separate site, a distinct-site modifier, not by billing two units of the same code.</p>
   <p>The MUE Adjudication Indicator (MAI) that rides along with each MUE value decides whether an above-cap unit is even worth appealing: MAI 1 is a claim-line edit that can sometimes be split across separate lines; MAI 2 is an absolute date-of-service edit CMS treats as clinically implausible, with no appeal path; MAI 3 is a date-of-service edit that can be appealed with documentation showing the excess units were genuinely distinct and necessary. Confirm the MAI before spending staff time on an MUE appeal, the same rule that applies in <a href="specialty-cardiology-ncci-mue.html">other specialty NCCI/MUE guides on this site</a> applies here too.</p>
   <div class="protip">
@@ -288,7 +297,7 @@
     <div><div class="protip-label">Pro tip</div><p>Before writing any bundling or unit-cap appeal in GI, ask one question first: is this the 45378-into-therapeutic-code pattern? If yes, stop, that pair carries a reported indicator of 0 and there is no argument that reverses it. If it's the 45380/45385 pattern instead, check whether the note documents two genuinely separate lesions before you write anything; that's the pair actually worth fighting for.</p></div>
   </div>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Fix the scrubber rule for 45378-against-any-therapeutic-code before claims go out, not after the denial.</li>
@@ -312,7 +321,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Why does 45378 deny when billed with a polypectomy code the same day?</summary><p>45378 is a Column 2 component of every therapeutic colonoscopy code, 45380, 45384, 45385, 45388, and the rest of the family, with a reported NCCI modifier indicator of 0. That means the edit cannot be overridden by any modifier, including 59 or XS, because the base diagnostic exam is already valued into the therapeutic code. If your scrubber is still letting 45378 go out alongside a same-session therapeutic code, fix the rule rather than appealing the denial; there is no documentation that reverses an indicator-0 edit.</p></details>
     <details class="faq-item"><summary>Can we bill 45381 separately from 45390 if the injection was at a different site than the resection?</summary><p>No, submucosal injection (45381) is bundled into endoscopic mucosal resection (45390) because the injection is an integral technical step of the EMR lift-and-cut technique itself, not because it happens at the same location. Unlike the 45380/45385 biopsy-versus-polypectomy pair, this edit is reported as indicator 0 by billing-industry sources, meaning site doesn't change the outcome, the injection is part of how 45390 is performed, full stop. Don't reach for XS on this pair; it isn't the kind of edit a distinct-site modifier was built to override.</p></details>
@@ -324,13 +333,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. ⚠️ The specific NCCI modifier indicator and MUE values cited on this page are reported consistently by billing-industry sources but could not be independently confirmed against CMS's primary NCCI PTP edit file or MUE table during this build (CMS's site and the NCCI Policy Manual PDF both returned access errors to automated fetch attempts), verify each pair's current value in the CMS NCCI PTP Edits Lookup Tool and the CMS MUE files before relying on it operationally. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-gastroenterology.html">Gastroenterology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-gastroenterology-modifiers.html">Gastroenterology modifiers: PT, 33, 59/XS, 52, 53 explained <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-gastroenterology-denials-appeals.html">Gastroenterology denials and appeals: the CARC-to-argument playbook <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -379,6 +389,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

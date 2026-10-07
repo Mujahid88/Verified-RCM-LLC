@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Fracture Care Billing: Global Periods, Casting, Follow-Up | Verified RCM">
 <meta name="twitter:description" content="Fracture care CPT codes and global periods explained: 10-day vs 90-day families, what's bundled vs separately billable, modifiers 54/55/56, and the ICD-10 7th-character logic that decides episode-of-care denials.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,35 +225,24 @@
       <p class="lede">Fracture care is billed as a package, not a visit, and the package's boundaries trip up more claims than the treatment codes themselves. The global period decides what's already paid for and what's a separate line; the wrong ICD-10 7th character on a routine follow-up denies a claim that was otherwise correct. This guide covers the 10-day-versus-90-day distinction, exactly what's bundled versus separately billable, co-management billing with modifiers 54/55/56, and the episode-of-care diagnosis logic that decides whether a follow-up visit pays.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-orthopedics.html">orthopedics billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a joint hinge, two angled bone segments meeting at a pivot, representing orthopedics">
-  <!-- outer decorative range-of-motion arc -->
-  <path d="M 151.4 207.5 A 85 85 0 0 1 298.6 207.5" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="1 9"/>
-  <!-- inner range-of-motion arc -->
-  <path d="M 182.9 214.7 A 55 55 0 0 1 267.1 214.7" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 8"/>
-
-  <!-- bone 1 rails (secondary) -->
-  <path d="M 133.3 124.4 L 218.3 254.4" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M 146.7 115.6 L 231.7 245.6" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-
-  <!-- bone 2 rails (secondary) -->
-  <path d="M 222.1 257.5 L 352.1 307.5" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M 227.9 242.5 L 357.9 292.5" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-
-  <!-- end tick marks -->
-  <path d="M 131.6 125.5 L 148.4 114.5" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M 351.4 309.3 L 358.6 290.7" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-
-  <!-- primary bone segments meeting at pivot -->
-  <path d="M 140 120 L 225 250" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 225 250 L 355 300" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- pivot accent -->
-  <circle cx="225" cy="250" r="16" fill="none" stroke="var(--cat-surgical)" stroke-width="2.5"/>
-  <circle cx="225" cy="250" r="3.5" fill="var(--cat-surgical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-orthopedics-wide.svg" alt="Orthopedics: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#10-day-versus-90-day-what-actually-decides-it">10-day versus 90-day: what actually decides it</a></li>
+      <li><a href="#whats-bundled-versus-whats-separately-billable">What's bundled versus what's separately billable</a></li>
+      <li><a href="#co-management-modifiers-54-55-and-56">Co-management: modifiers 54, 55, and 56</a></li>
+      <li><a href="#the-icd-10-7th-character-why-the-wrong-one-denies-a-paid-cla">The ICD-10 7th character: why the wrong one denies a paid claim</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -265,7 +253,7 @@
     </ul>
   </section>
 
-  <h2>10-day versus 90-day: what actually decides it</h2>
+  <h2 id="10-day-versus-90-day-what-actually-decides-it">10-day versus 90-day: what actually decides it</h2>
   <p>Fracture treatment codes carry a global period like any other surgical CPT code, and the assignment tracks the treatment method rendered, not the fracture pattern or the bone involved. As a general rule: closed treatment without manipulation, the fracture is stable and simply immobilized, typically falls into the shorter global family, commonly 10 days. Closed treatment with manipulation, percutaneous skeletal fixation, and open reduction internal fixation (ORIF) typically fall into the 90-day major-procedure family, because they represent a genuine surgical intervention even when "closed treatment with manipulation" doesn't involve an incision.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -281,7 +269,7 @@
   </div>
   <p>The practical trap: the same fracture, treated two different ways, lands in two different global families, and staff who default to "it's a fracture, it's 90 days" either overbill the global window on a minor closed treatment or, more often, under-recognize that a manipulated or fixated fracture blocks routine follow-up billing for a much longer stretch than they planned for. Pull the global-days value for the exact code billed, every time, rather than assuming from the injury type.</p>
 
-  <h2>What's bundled versus what's separately billable</h2>
+  <h2 id="whats-bundled-versus-whats-separately-billable">What's bundled versus what's separately billable</h2>
   <p>The global surgical package for fracture care is narrower than most billers assume. Two things are included, and everything else that touches the injury during the global window is a separate line if it's genuinely separate work.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Included in the global fee</div><ul>
@@ -297,7 +285,7 @@
   </div>
   <p>The costliest pattern we see is practices bundling supply costs into the perceived "global fee" out of habit and never billing the Q-codes or the DME L-codes separately at all. That's not a denial, it's silent underbilling, because a supply line that's never submitted never shows up anywhere to flag the loss. Audit a sample of fracture-care encounters against the actual claims submitted, not against what the global period conceptually covers, to find out whether this is happening in your practice.</p>
 
-  <h2>Co-management: modifiers 54, 55, and 56</h2>
+  <h2 id="co-management-modifiers-54-55-and-56">Co-management: modifiers 54, 55, and 56</h2>
   <p>Fracture care frequently splits across two practices, an emergency physician or hospitalist renders the initial treatment and an orthopedist takes over follow-up, or an orthopedist performs the definitive fixation and a primary care physician or rural provider manages routine follow-up closer to the patient's home. Three modifiers report each party's share of the same global surgical package:</p>
   <ul class="check-list">
     <li><span class="check">54</span><span><b>Surgical care only.</b> Reported by the physician who performed the fracture treatment or fixation itself, when a different physician will handle some or all of the postoperative follow-up.</span></li>
@@ -306,7 +294,7 @@
   </ul>
   <p>Each party bills their own portion of the global package rather than the full fee, and the split is decided by the date care was transferred, which needs to be documented and consistent across both practices' records. Payer policy, not the CPT code itself, sets how each modifier's portion is valued relative to the whole global fee, so confirm the specific payer's split methodology if you bill co-managed fracture care routinely rather than assuming a fixed percentage. The failure mode payers catch quickly: two practices both billing without a 54/55 split for the same fracture episode, or billing overlapping date ranges, the claims contradict each other on their face and one gets recouped.</p>
 
-  <h2>The ICD-10 7th character: why the wrong one denies a paid claim</h2>
+  <h2 id="the-icd-10-7th-character-why-the-wrong-one-denies-a-paid-cla">The ICD-10 7th character: why the wrong one denies a paid claim</h2>
   <p>Fracture diagnosis codes carry a 7th character that reports episode of care, where the patient is in the treatment and healing timeline, and it has to match the visit type, not simply restate the same code used at the first visit. Using a Colles' fracture of the right radius as a worked example, verified against the FY2026 ICD-10-CM code set:</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -333,7 +321,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>How do we know if a fracture code carries a 10-day or a 90-day global period?</summary><p>Check the global period assigned to the specific CPT code billed, not the injury itself. As a general pattern, closed treatment without manipulation typically falls in the shorter, 10-day global family, while treatment requiring manipulation, percutaneous skeletal fixation, or open reduction internal fixation typically falls in the 90-day family. The same fracture can be billed under codes with different global assignments depending on how it was actually treated, so confirm the exact global days for your billed code in the CMS Physician Fee Schedule Look-Up Tool rather than assuming from the fracture type.</p></details>
     <details class="faq-item"><summary>Can we bill an X-ray taken during a fracture's global period separately?</summary><p>Yes. The fracture global package covers routine follow-up visits and the first cast or splint application, but it does not include imaging performed to assess healing, casting and splinting supplies beyond the first application, or DME such as a walking boot. Bill the radiology code for the follow-up film and the appropriate supply codes for any re-casting or bracing separately from the fracture treatment code itself; bundling those into the global fee gives away margin silently, because an underbilled supply or imaging line never generates a denial the way a rejected claim does.</p></details>
@@ -345,7 +333,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, global-period assignments, and payer coverage policy change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-orthopedics.html">Our fracture care billing guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-orthopedics-ncci-mue.html">Orthopedic NCCI edits and MUE limits <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -353,6 +341,7 @@
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialties.html">All 30 specialties <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -401,6 +390,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

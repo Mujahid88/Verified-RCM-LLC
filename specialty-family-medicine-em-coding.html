@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Family Medicine E/M Coding: 99202-99215 by Time or MDM | Verified RCM">
 <meta name="twitter:description" content="Family medicine E/M coding for 99202-99215: time and MDM thresholds, the three MDM elements, prolonged-service add-ons 99417/G2212, and where visits get under-leveled.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,16 +225,25 @@
       <p class="lede">Family medicine runs the full new-and-established E/M ladder every single day, and the specialty's chronic-condition mix, two or three comorbidities in the same 20-minute slot, is exactly the pattern that either earns 99214/99215 on medical decision making or gets flattened to 99213 because the note never states the risk that made the visit complex. This guide covers both leveling pathways for 99202&ndash;99215, the three MDM elements that actually decide the code, and the prolonged-service add-ons most practices bill wrong.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-family-medicine.html">family medicine billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract nested arcs of varying sizes representing generations of a family joined by one continuous line of care">
-  <path d="M128.6,152.8 A148,148 0 1 1 146.8,361.4" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M140.3,206.4 A104,104 0 1 1 147.9,294" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M215,182.3 A62,62 0 1 1 235.2,297.1" fill="none" stroke="var(--muted)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M170,130 C220,170 190,250 250,270 C300,290 280,340 320,362" fill="none" stroke="var(--cat-primary-care)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="240" r="5" fill="var(--cat-primary-care)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-family-medicine-wide.svg" alt="Family medicine: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#new-or-established-the-code-family-depends-on-this-first">New or established: the code family depends on this first</a></li>
+      <li><a href="#time-based-leveling-the-thresholds-for-9920299215">Time-based leveling: the thresholds for 99202–99215</a></li>
+      <li><a href="#mdm-based-leveling-the-three-elements-that-actually-decide-t">MDM-based leveling: the three elements that actually decide the code</a></li>
+      <li><a href="#where-family-medicine-visits-get-under-leveled">Where family medicine visits get under-leveled</a></li>
+      <li><a href="#prolonged-services-99417-commercial-vs-g2212-medicare">Prolonged services: 99417 (commercial) vs. G2212 (Medicare)</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -246,7 +254,7 @@
     </ul>
   </section>
 
-  <h2>New or established: the code family depends on this first</h2>
+  <h2 id="new-or-established-the-code-family-depends-on-this-first">New or established: the code family depends on this first</h2>
   <p>A patient is new if no physician or other qualified health professional of the same specialty and subspecialty, in the same group practice, has provided a face-to-face professional service to that patient within the past three years. That's a group-and-taxonomy test, not a "has this specific doctor met them" test, a patient who saw a departed physician at the same practice 18 months ago is still established for a new physician joining that group, provided the specialty match holds. Get this wrong in either direction and the claim denies: billing new-patient codes on an established patient is a frequency edit, and billing established-patient codes on a genuinely new patient under-codes a visit that legitimately supports more work.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -259,7 +267,7 @@
     </table>
   </div>
 
-  <h2>Time-based leveling: the thresholds for 99202&ndash;99215</h2>
+  <h2 id="time-based-leveling-the-thresholds-for-9920299215">Time-based leveling: the thresholds for 99202&ndash;99215</h2>
   <p>Total time is everything the physician or qualified health professional personally spends on the date of the encounter: preparing to see the patient, obtaining or reviewing a separate history, performing the exam, counseling, ordering medications or tests, referring and communicating with other professionals when that communication isn't separately reported, and documenting the encounter. It does not include time spent by clinical staff, and it does not include work on a different calendar date, reviewing a lab result that resulted three days later doesn't count toward that earlier visit's total time.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -278,7 +286,7 @@
     </table>
   </div>
 
-  <h2>MDM-based leveling: the three elements that actually decide the code</h2>
+  <h2 id="mdm-based-leveling-the-three-elements-that-actually-decide-t">MDM-based leveling: the three elements that actually decide the code</h2>
   <p>Medical decision making is scored on three elements, the number and complexity of problems addressed, the amount and complexity of data reviewed and analyzed, and the risk of complications, morbidity, or mortality from the management decisions made that day, and the overall level is set by whichever two of the three elements the encounter meets or exceeds. A visit doesn't need all three at the same tier; it needs two.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -294,7 +302,7 @@
   </div>
   <p>Two family medicine patterns matter more than any other on this table. Prescription drug management, by itself, without anything else, is a recognized moderate-risk factor, which is why a straightforward medication refill visit and a genuine dose-titration-with-monitoring visit are not the same risk level even though both involve "adjusting a prescription." And "2 or more stable chronic illnesses" is moderate complexity on its own; a panel patient carrying hypertension and type 2 diabetes, both stable, already clears the problems element at moderate before anything else in the visit is considered.</p>
 
-  <h2>Where family medicine visits get under-leveled</h2>
+  <h2 id="where-family-medicine-visits-get-under-leveled">Where family medicine visits get under-leveled</h2>
   <p>The recurring failure isn't miscoding, it's under-documenting work that already happened. Three patterns account for most of it in a typical panel.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>What earns the level</div><ul>
@@ -313,7 +321,7 @@
     <div><div class="protip-label">Pro tip</div><p>Pull a sample of recent 99213s for patients carrying two or more chronic diagnoses on the problem list. If the note doesn't separately document each condition's status and the reasoning behind any medication decision, a real share of those visits likely support 99214 on MDM alone, this is one of the highest-yield chart audits a family practice can run, because it's a documentation-template fix, not a physician-retraining project.</p></div>
   </div>
 
-  <h2>Prolonged services: 99417 (commercial) vs. G2212 (Medicare)</h2>
+  <h2 id="prolonged-services-99417-commercial-vs-g2212-medicare">Prolonged services: 99417 (commercial) vs. G2212 (Medicare)</h2>
   <p>Once a visit runs past the level-5 code's time range, the prolonged-service add-on that applies depends on the payer, and the two codes use different time math. CPT's own 99417 is reportable once total time exceeds the level-5 code's <i>minimum</i> time by a full 15 minutes. Medicare rejected that approach and created HCPCS G2212 instead, reportable once total time exceeds the level-5 code's <i>maximum</i> time by a full 15 minutes, which pushes the Medicare threshold later than the commercial one for the identical visit.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -335,7 +343,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Can we bill 99214 or 99215 on medical decision making alone if the visit ran short on time?</summary><p>Yes. Time and MDM are two independent pathways, and fully satisfying either one justifies the code on its own. A visit can qualify for 99214 or 99215 on MDM alone even if total time falls well under the corresponding time threshold, and the reverse is equally true. Bill on whichever pathway the documentation actually supports at the higher level; never blend the two or average them.</p></details>
     <details class="faq-item"><summary>Does total time include work the medical assistant or nurse does, like taking vitals or rooming the patient?</summary><p>No. Total time counts only time personally spent by the physician or qualified health professional on the date of the encounter, reviewing history, examining the patient, counseling, ordering, and documenting. Clinical staff time such as rooming, vitals, or giving an injection doesn't count toward the E/M time threshold, even though that same staff time may be billable elsewhere, such as under chronic care management's separate staff-time codes.</p></details>
@@ -347,12 +355,13 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-family-medicine.html">Family medicine billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-family-medicine-denials-appeals.html">Family medicine denials and appeals: CO-50, CO-97, CO-151, and more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-family-medicine-preventive-vs-problem-visits.html">Preventive visits vs. problem E/M: modifier 25 done right <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -401,6 +410,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

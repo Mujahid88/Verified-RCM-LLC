@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Sleep Medicine NCCI Edits and MUE Limits: Bundling Rules Explained | Verified RCM">
 <meta name="twitter:description" content="Sleep medicine NCCI edits and MUE limits: split-night 95810/95811 duplicate billing, one-study-per-night unit caps, CPAP/DME bundling, and home sleep test G-code same-day E/M rules explained.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,17 +225,26 @@
       <p class="lede">Most sleep medicine bundling denials don't come from an obscure payer policy, they come from a code pair that looks like two services but is really one, billed twice. This guide works through the four places sleep medicine hits NCCI and MUE hardest, diagnostic and titration studies billed as if they were separate nights, the one-study-per-night unit cap, the CPAP setup and DME billing split, and home sleep test G-codes paired with same-day E/M, with the modifier-indicator and MAI framework you need before deciding whether a denial is worth appealing or just needs a corrected code.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-sleep-medicine.html">NCCI edits and bundling guide for sleep medicine</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a slow undulating sleep-wave line beside a crescent moon arc, representing sleep medicine">
-  <path d="M40,230 C80,220 100,240 130,225 C160,210 180,225 210,215 C240,205 260,225 290,215 C320,205 350,225 380,215 C410,205 430,220 440,215" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M40,355 C100,335 140,335 180,355 C220,375 260,375 300,355 C340,335 380,335 440,355" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M350,160 A54,54 0 1,1 291.3,101.3 A42,42 0 0,0 350,160 Z" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M40,300 C90,270 130,270 160,300 C190,330 210,330 235,305 C245,290 250,200 255,165 C260,200 270,290 285,305 C310,320 330,320 355,300 C380,280 400,280 440,300" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M235,305 C245,290 250,200 255,165 C260,200 270,290 285,305" fill="none" stroke="var(--cat-medical)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="255" cy="165" r="4.5" fill="var(--cat-medical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-sleep-medicine-wide.svg" alt="Sleep medicine: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-two-indicators-that-decide-every-bundling-fight">The two indicators that decide every bundling fight</a></li>
+      <li><a href="#diagnostic-and-titration-billed-as-two-studies-95810-vs-9581">Diagnostic and titration billed as two studies: 95810 vs. 95811</a></li>
+      <li><a href="#the-mue-ceiling-one-sleep-study-per-night">The MUE ceiling: one sleep study per night</a></li>
+      <li><a href="#cpap-setup-education-and-the-dme-billing-split">CPAP setup, education, and the DME billing split</a></li>
+      <li><a href="#home-sleep-test-g-codes-and-same-day-em">Home sleep test G-codes and same-day E/M</a></li>
+      <li><a href="#sleep-medicine-bundling-pairs-at-a-glance">Sleep medicine bundling pairs at a glance</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -247,7 +255,7 @@
     </ul>
   </section>
 
-  <h2>The two indicators that decide every bundling fight</h2>
+  <h2 id="the-two-indicators-that-decide-every-bundling-fight">The two indicators that decide every bundling fight</h2>
   <p>Two CMS-published values control whether a sleep medicine code pair or a unit-capped code is billable at all, and neither is something you infer from clinical logic alone, both are specific, quarterly-updated values attached to the exact codes on your claim.</p>
   <p><b>The NCCI Procedure-to-Procedure modifier indicator</b>, attached to a Column 1/Column 2 code pair:</p>
   <ul class="check-list">
@@ -263,7 +271,7 @@
   </ul>
   <p>⚠️ This build could not open CMS's raw NCCI Procedure-to-Procedure edit file or the current-quarter MUE spreadsheet directly to confirm the specific modifier indicator or MAI digit for any sleep-medicine pair below (CMS distributes both as downloadable data files automated fetch in this session could not parse). What's confirmed instead comes from CMS's own <b>Billing and Coding Article A57496</b> ("Polysomnography and Sleep Testing," First Coast Service Options, governing LCD L33405), cross-checked against AAPC and MAC-adjacent billing guidance. Where a specific indicator or MAI value is cited, it's flagged; verify the current value in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> and the MUE Lookup Tool before building either into a scrubber rule.</p>
 
-  <h2>Diagnostic and titration billed as two studies: 95810 vs. 95811</h2>
+  <h2 id="diagnostic-and-titration-billed-as-two-studies-95810-vs-9581">Diagnostic and titration billed as two studies: 95810 vs. 95811</h2>
   <p>This is the single most common bundling denial in sleep medicine, and like rheumatology's ultrasound-guidance question, it's really a code-selection problem wearing an NCCI costume.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -279,12 +287,12 @@
   <p>The practical coding rule: look at what actually happened, not at how many phases the technologist's notes describe. If therapeutic titration was initiated at any point during the recorded night, the whole night bills as 95811. If it wasn't, apnea wasn't confirmed, or a separate titration night was scheduled, the whole night bills as 95810, and the later titration study is its own, separately payable 95811 (or 95783 under age 6) on that different date of service. What doesn't exist is a legitimate scenario where the same calendar night generates both codes on the same claim. ⚠️ The exact modifier indicator CMS currently attaches to the 95810/95811 pair wasn't independently pulled from the live NCCI PTP file this session; industry billing references describe the pair as mutually exclusive, functionally a non-bypassable relationship, but confirm the current digit in the lookup tool before treating it as absolute in a scrubber rule.</p>
   <p>One more frequent trap: 95810 and 95811 already include sleep staging, so a separate EEG, EOG, or EMG code billed alongside either one miscodes the encounter, the additional physiologic parameters that make up "4 or more additional parameters" are what the code already pays for, not services to itemize separately.</p>
 
-  <h2>The MUE ceiling: one sleep study per night</h2>
+  <h2 id="the-mue-ceiling-one-sleep-study-per-night">The MUE ceiling: one sleep study per night</h2>
   <p>Layered on top of the code-selection question is a hard unit cap. Multiple current billing references converge on a Medically Unlikely Edit of <b>1 unit per day</b> for 95810 and for 95811, and the same 1-unit-per-day cap is reported for G0399, the home sleep testing code most frequently billed of the three HST G-codes. That lines up with the clinical reality the codes describe: a patient has one night, one bed, and one sleep architecture to record, so a second unit of the same code on the same date is, by definition, clinically implausible rather than a real second service.</p>
   <p>Where this becomes a revenue-cycle decision rather than a coding footnote is the MAI attached to that cap. An MAI of 2 means the edit is absolute for that date of service, no modifier or documentation changes the outcome, so time spent appealing is time the practice doesn't get back. An MAI of 3 leaves a real path: documentation showing the excess units reflect genuinely distinct, medically necessary sessions (a technical failure partway through the night requiring a wholly new recording, if the MAC's policy recognizes that as a separate unit rather than a modifier-52 reduced service). ⚠️ This build could not confirm the current MAI value assigned to 95810, 95811, or the HST G-codes against CMS's live MUE table. Pull the current MAI for the specific code from the CMS MUE Lookup Tool before assuming either "it's absolute" or "it's appealable", that one digit is the difference between a five-minute scheduling conversation and a formal appeal.</p>
   <p>A related pattern worth flagging separately from the MUE itself: billing more than one <i>type</i> of sleep-testing code for the same patient on the same date, an in-lab attended study code alongside a home sleep test G-code, say, isn't a unit-cap problem at all, since they're different codes each capped at their own 1-unit ceiling. It's a medical-necessity and duplicate-service problem instead, and it gets scrutinized as such: a payer or MAC reviewing a claim with both a 95810 and a G0399 on the same date is going to ask why the patient needed two different testing modalities the same night before it ever gets to an NCCI conversation.</p>
 
-  <h2>CPAP setup, education, and the DME billing split</h2>
+  <h2 id="cpap-setup-education-and-the-dme-billing-split">CPAP setup, education, and the DME billing split</h2>
   <p>This is the sleep medicine bundling question that gets tangled the most, because it isn't one relationship, it's three, involving two different billing entities and two different benefit categories, and only some of the overlaps are governed by NCCI at all.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>94660 (CPAP initiation and management)</b> is a professional CPT code the treating physician or qualified provider bills for a face-to-face visit devoted to starting or adjusting CPAP therapy.</span></li>
@@ -305,7 +313,7 @@
   </div>
   <p>The E/M-plus-94660 question follows the same documentation logic sleep medicine shares with every specialty that bills a minor service alongside an E/M code: a visit that's entirely "reviewed the download, adjusted pressure, reinforced adherence" doesn't support modifier 25 on the E/M no matter how it's coded, while a visit that also works up a new symptom, manages a comorbid condition, or addresses something unrelated to the CPAP therapy itself does. ⚠️ The exact NCCI PTP status (and modifier indicator) of 94660 against the titration codes and against E/M codes specifically wasn't independently pulled from CMS's live PTP file this session; the bundling described here is corroborated across AAPC coding discussion and standard CPT reporting conventions rather than a confirmed indicator digit, check the current pair in the lookup tool before building a scrubber rule around it.</p>
 
-  <h2>Home sleep test G-codes and same-day E/M</h2>
+  <h2 id="home-sleep-test-g-codes-and-same-day-em">Home sleep test G-codes and same-day E/M</h2>
   <p>Unattended home sleep apnea testing runs on three HCPCS Level II codes rather than CPT, split by how many channels the portable monitor records:</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -322,7 +330,7 @@
   <p>For a same-day E/M question specifically: if a physician sees a patient for an unrelated problem and separately dispenses or interprets a home sleep test the same date, the pairing between the E/M code and the applicable G-code needs to be checked by its specific modifier indicator rather than assumed bundled outright or automatically separable with modifier 25. ⚠️ This build could not retrieve the complete, current list of codes paired with G0398, G0399, and G0400 in the NCCI PTP file, nor the modifier indicator attached to each pair, the 2008 transmittal establishes that the edits exist and that a documented-separate-encounter bypass was contemplated, but the pair-by-pair detail has to come from the CMS NCCI PTP Edits Lookup Tool at the time of billing, since these edits update quarterly like every other PTP pair.</p>
   <p>Two related points that aren't NCCI edits but get treated as if they were: the TC/26 split matters more here than in attended in-lab testing, since the device is often supplied by a separate DME or home sleep testing company while the ordering practice bills only the professional interpretation (26), billing a global code when the practice didn't furnish the equipment overstates what was performed. And HST G-codes carry their own frequency expectations under most MAC LCDs (a repeat HST after a technically inadequate first attempt is generally recognized; a repeat simply because the first didn't confirm the suspected diagnosis often isn't), a coverage question decided at the LCD level, not the NCCI level.</p>
 
-  <h2>Sleep medicine bundling pairs at a glance</h2>
+  <h2 id="sleep-medicine-bundling-pairs-at-a-glance">Sleep medicine bundling pairs at a glance</h2>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Common sleep medicine code relationships. Confirm the current modifier indicator or MAI for any pair marked ⚠️ before relying on it in a scrubber rule or appeal.</caption>
@@ -367,7 +375,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Why does billing 95810 and 95811 for the same night trigger a denial instead of paying both?</summary><p>Because 95811 already includes everything 95810 describes. 95811 (polysomnography with CPAP or bi-level titration) is the split-night code, and its own descriptor covers the diagnostic sleep staging plus the therapeutic titration performed later the same night. Billing 95810 for the diagnostic portion and 95811 for the titration portion as if they were two separate studies reports the diagnostic work twice, which is exactly why payer systems treat the pair as mutually exclusive on the same date of service. CMS's own billing and coding guidance for polysomnography states plainly that a split-night study is reported as 95811 alone. The fix is rebilling as a single unit of 95811, not appending a modifier to force both lines through.</p></details>
     <details class="faq-item"><summary>What's the MUE unit cap on sleep study codes, and is there ever a legitimate way around it?</summary><p>Industry billing references consistently show a Medically Unlikely Edit of one unit per day for 95810, 95811, and G0399, which matches the clinical reality that a patient undergoes one sleep study per night. Whether that cap is appealable depends on the MUE Adjudication Indicator (MAI) attached to the specific code in the current-quarter MUE table: an MAI of 2 is an absolute date-of-service edit with no appeal path regardless of documentation, while an MAI of 3 leaves room to appeal with records showing genuinely distinct, separately medically necessary sessions. This build could not independently confirm the current MAI value for these codes against CMS's live MUE file, so treat the one-study-per-night ceiling as the working assumption and confirm the MAI in the CMS MUE Lookup Tool before staff time goes into an appeal.</p></details>
@@ -380,13 +388,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including quarterly NCCI and MUE updates and annual code-set revisions. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-quarter NCCI PTP and MUE files. Confirm requirements against your specific payer mix and MAC jurisdiction before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-sleep-medicine.html">Sleep medicine billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="prior-auth.html">Prior authorization <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="claims-scrubbing.html">Claims submission and scrubbing <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -435,6 +444,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

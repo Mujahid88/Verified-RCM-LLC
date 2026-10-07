@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Rheumatology E/M Coding: Time vs. MDM | Verified RCM">
 <meta name="twitter:description" content="Rheumatology E/M coding guide: 99202-99215 by time or MDM, high-complexity biologic/methotrexate monitoring, step-therapy documentation, prolonged services, and telehealth.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,35 +225,25 @@
       <p class="lede">Rheumatology's documentation regularly does 99215-level work and regularly gets billed as 99213, because the visit's real complexity, independently reviewing toxicity labs, weighing infection risk against disease control, walking a patient through why their last DMARD failed, never makes it into a note built around exam findings instead of decision-making. This guide works through the full time-vs-MDM decision tree for 99202&ndash;99205 and 99212&ndash;99215 in a rheumatology context, with the specific documentation language that separates a defensible high-level visit from an undercoded one.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-rheumatology.html">rheumatology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a joint hinge with orbiting markers representing rheumatology">
-  <!-- upper limb segment -->
-  <path d="M150,140 L232,220" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-  <!-- lower limb segment -->
-  <path d="M232,220 L300,340" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- secondary parallel bone contours -->
-  <path d="M164,150 L246,228" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M246,232 L314,350" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- joint capsule -->
-  <circle cx="232" cy="220" r="34" fill="none" stroke="var(--muted)" stroke-width="2" />
-
-  <!-- range-of-motion arc -->
-  <path d="M180,268 A100,100 0 0 1 232,150" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" />
-
-  <!-- secondary hinge lines suggesting cartilage striations -->
-  <path d="M206,196 L212,242" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
-  <path d="M256,198 L252,244" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
-
-  <!-- orbiting inflammation marker dots (accent) -->
-  <circle cx="232" cy="220" r="58" fill="none" stroke="var(--muted)" stroke-width="1" stroke-dasharray="1 10" stroke-linecap="round" />
-  <circle cx="290" cy="188" r="5" fill="var(--cat-medical)" />
-  <circle cx="276" cy="266" r="3.5" fill="var(--cat-medical)" />
-  <circle cx="188" cy="196" r="3" stroke="var(--cat-medical)" stroke-width="2" fill="none" />
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-rheumatology-wide.svg" alt="Rheumatology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#two-paths-one-code-not-added-together">Two paths, one code, not added together</a></li>
+      <li><a href="#what-actually-drives-high-complexity-mdm-in-rheumatology">What actually drives high-complexity MDM in rheumatology</a></li>
+      <li><a href="#documenting-step-therapy-discussion-time">Documenting step-therapy discussion time</a></li>
+      <li><a href="#prolonged-services-add-on-codes">Prolonged services add-on codes</a></li>
+      <li><a href="#telehealth-em-for-autoimmune-follow-up">Telehealth E/M for autoimmune follow-up</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -265,7 +254,7 @@
     </ul>
   </section>
 
-  <h2>Two paths, one code, not added together</h2>
+  <h2 id="two-paths-one-code-not-added-together">Two paths, one code, not added together</h2>
   <p>New-patient visits (<code>99202</code>&ndash;<code>99205</code>) and established-patient visits (<code>99212</code>&ndash;<code>99215</code>) are each billed by fully satisfying either total time on the date of the encounter <i>or</i> medical decision making, whichever pathway the visit actually supports, not a blend of partial credit from both. A visit with a short face-to-face component but genuinely high-complexity decision-making (a biologic switch with extensive lab review) can bill at a high level on MDM alone. A visit with straightforward decision-making but a long, legitimately necessary conversation, working through step-therapy history, addressing a patient's needle anxiety before a self-injectable biologic, can bill at a high level on time alone. Pick the pathway the note actually supports and document to that standard; don't reach for time because the MDM elements weren't captured, and don't reach for MDM language after the fact to justify a time total that wasn't tracked.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -281,7 +270,7 @@
   </div>
   <p>New-patient codes 99202&ndash;99205 follow the same either/or structure with their own time bands (roughly 15&ndash;29 minutes for 99203 up through 60&ndash;74 minutes for 99205) and the same MDM levels; the decision-making analysis below applies identically to new and established visits, since MDM complexity doesn't reset with patient status.</p>
 
-  <h2>What actually drives high-complexity MDM in rheumatology</h2>
+  <h2 id="what-actually-drives-high-complexity-mdm-in-rheumatology">What actually drives high-complexity MDM in rheumatology</h2>
   <p>MDM level is set by the highest two of three elements: number and complexity of problems addressed, amount and complexity of data reviewed, and risk of complications and morbidity from management. Rheumatology visits routinely clear moderate or high on the second and third elements even when the first, the problem list itself, looks unremarkable on paper, because "stable RA, continue current therapy" undersells what the visit actually required.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -296,7 +285,7 @@
   </div>
   <p>Worked example: an established RA patient (<code>M06.9</code> RA without rheumatoid factor, unspecified, or, better, the laterality-and-site-specific code the chart actually supports) on adalimumab returns for a scheduled follow-up. The physician independently reviews that month's CBC and LFTs (normal), discusses a recent upper respiratory infection and decides to hold the next dose pending resolution, and documents the specific reasoning. That's moderate-to-high risk (a management decision balancing infection risk against disease control) plus moderate-to-high data complexity (independent lab review with interpretation), enough for 99215 on MDM alone, even if the face-to-face time that day was closer to 99213 length. If the note instead reads "RA stable, continue adalimumab, recheck labs next visit," the same clinical judgment almost certainly happened in the physician's head, but it isn't on the chart, and the code that's actually supportable drops to 99213 or 99214.</p>
 
-  <h2>Documenting step-therapy discussion time</h2>
+  <h2 id="documenting-step-therapy-discussion-time">Documenting step-therapy discussion time</h2>
   <p>Time spent discussing why a conventional DMARD failed, walking through the evidence for a biologic step-up, or addressing a patient's concerns before starting a self-injectable therapy all count toward total time on the date of the encounter, under the time-based pathway, but only the billing practitioner's own personal time, and only when it's documented specifically enough to be reconstructable, not asserted as a round number.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Name what the time covered.</b> "22 minutes total time: 12 minutes face-to-face reviewing methotrexate intolerance history and discussing biologic options; 10 minutes same-day chart review and documentation" supports the total. "45 minutes spent with patient" with no breakdown is weaker on audit even if it's accurate.</span></li>
@@ -304,10 +293,10 @@
     <li><span class="check">3</span><span><b>Same-day non-face-to-face work counts.</b> Reviewing outside records of a prior DMARD trial before the visit, or completing documentation and orders after the patient leaves but still on the same calendar date, both count toward the total, don't undercount by only tallying the time the patient was physically in the room.</span></li>
   </ul>
 
-  <h2>Prolonged services add-on codes</h2>
+  <h2 id="prolonged-services-add-on-codes">Prolonged services add-on codes</h2>
   <p>When total time on the date of the encounter exceeds the maximum time for the highest-level code in the family (99205 for new patients, 99215 for established), prolonged services add-on codes report the additional time rather than trying to force the whole visit into the base code alone. CPT's prolonged-service add-on (<code>99417</code>) and Medicare's own version (<code>G2212</code>) both report additional 15-minute increments beyond the base code's time threshold, but they're not interchangeable on the claim, which one applies, and the exact minute threshold before the first unit is billable, depends on the payer, so confirm the current payer-specific rule rather than defaulting to whichever add-on code a different payer accepted last. A long new-biologic-initiation visit that runs well past 54 minutes for an established patient is exactly the scenario this code family exists for; document the total time clearly enough that the base code's threshold and the prolonged increment are both independently supportable.</p>
 
-  <h2>Telehealth E/M for autoimmune follow-up</h2>
+  <h2 id="telehealth-em-for-autoimmune-follow-up">Telehealth E/M for autoimmune follow-up</h2>
   <p>The E/M code itself doesn't change for a telehealth visit, the same 99202&ndash;99215 codes and the same time-or-MDM leveling logic apply. What changes is the physical exam component of MDM (largely unavailable or limited on a video visit) and the claim-level reporting: place-of-service code and/or modifier requirements vary by payer and change frequently, so confirm the current POS/modifier convention for each payer rather than assuming last year's rule still applies. A data- and management-heavy autoimmune follow-up, reviewing labs, discussing medication response, adjusting a DMARD dose, can fully support a high MDM level over telehealth with no hands-on exam at all, since the data-review and risk elements carry the complexity independent of physical findings. Where a visit genuinely depends on physical exam findings (new joint swelling that needs to be examined, a rash that needs direct visualization), that's a signal the encounter may need to be in-person rather than telehealth, independent of the coding question.</p>
 
   <div class="dodont">
@@ -333,7 +322,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What makes rheumatology MDM high-complexity instead of moderate?</summary><p>High-complexity MDM generally needs a chronic illness with severe exacerbation or side effects of treatment posing a threat to life or bodily function, paired with either extensive data review or a high-risk management decision. In rheumatology that's most often initiating or changing a biologic or targeted synthetic DMARD while independently reviewing labs that carry real toxicity risk, CBC, liver enzymes, renal function, TB and hepatitis screening, and weighing infection or malignancy risk against uncontrolled disease. A routine refill visit with stable labs and no therapy change is moderate at most, even if the underlying diagnosis is the same severe disease.</p></details>
     <details class="faq-item"><summary>Can we count time spent discussing step-therapy failure toward the E/M level?</summary><p>Yes, under the time-based pathway. Total time on the date of the encounter includes face-to-face time plus same-day non-face-to-face work performed personally by the billing practitioner, reviewing prior DMARD trial results, discussing why a conventional therapy failed or wasn't tolerated, and documenting that discussion all count. It has to be the practitioner's own time, not delegated staff work, and it has to be documented with enough specificity that the total is reconstructable from the note, not asserted as a round number with nothing behind it.</p></details>
@@ -345,7 +334,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-rheumatology.html">Rheumatology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-rheumatology-joint-injection-billing.html">Joint injection and aspiration billing: 20600-20611 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -353,6 +342,7 @@
     <li><a href="denials-management.html">Denials management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialties.html">All 30 specialties <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -401,6 +391,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

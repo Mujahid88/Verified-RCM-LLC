@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Neurology, Billing and coding guide">
+  <defs>
+    <linearGradient id="bgspecialtyneurology" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+    <radialGradient id="glspecialtyneurology" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#5eead4" stop-opacity="0.5"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+    <pattern id="grspecialtyneurology" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cpspecialtyneurology"><rect x="860" y="55" width="250" height="250" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bgspecialtyneurology)"/>
+  <rect width="1200" height="360" fill="url(#grspecialtyneurology)"/>
+  <rect width="1200" height="360" fill="url(#glspecialtyneurology)"/>
+  <circle cx="1040" cy="60" r="170" fill="#5eead4" fill-opacity="0.14"/>
+  <circle cx="1110" cy="280" r="110" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="860" y="55" width="250" height="250" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cpspecialtyneurology)"><g transform="translate(880 75) scale(0.4375)">
+  
+  <path d="M240 240 C 200 210, 175 180, 150 140" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 140 C 138 122, 128 108, 120 92" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.72" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 140 C 160 118, 168 104, 172 86" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.72" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M240 240 C 205 225, 178 220, 142 226" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M142 226 C 122 224, 106 228, 88 240" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.72" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M142 226 C 126 214, 112 206, 96 200" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.72" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M240 240 C 268 208, 288 190, 300 156" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M300 156 C 306 138, 308 124, 304 106" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.72" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M300 156 C 316 144, 328 134, 336 118" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.72" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M240 240 C 270 258, 292 262, 324 258" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M324 258 C 344 256, 358 260, 374 270" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.72" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M324 258 C 340 246, 350 238, 366 232" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.72" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M240 240 C 226 274, 220 300, 226 332" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M226 332 C 220 350, 216 364, 220 382" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.72" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M226 332 C 236 348, 242 360, 244 378" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.72" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M240 240 C 258 272, 276 288, 306 302" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M306 302 C 320 314, 330 324, 338 340" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.72" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M306 302 C 324 306, 338 306, 354 312" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.72" stroke-linecap="round" stroke-linejoin="round"/>
+
+  
+  <path d="M240 240 C 205 225, 178 220, 142 226" fill="none" stroke="#ffffff" stroke-width="4.42" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <path d="M240 240 C 268 208, 288 190, 300 156" fill="none" stroke="#ffffff" stroke-width="4.42" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+
+  
+  <circle cx="240" cy="240" r="5" fill="none" stroke="#ffffff" stroke-width="4.08"/>
+  <circle cx="150" cy="140" r="3" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.06"/>
+  <circle cx="142" cy="226" r="3" fill="none" stroke="#ffffff" stroke-width="3.40"/>
+  <circle cx="300" cy="156" r="3" fill="none" stroke="#ffffff" stroke-width="3.40"/>
+  <circle cx="324" cy="258" r="3" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.06"/>
+  <circle cx="226" cy="332" r="3" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.06"/>
+  <circle cx="306" cy="302" r="3" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.06"/>
+
+  
+  <circle cx="120" cy="92" r="4.5" fill="#5eead4"/>
+  <circle cx="336" cy="118" r="4.5" fill="#5eead4"/>
+  <path d="M240 240 C 226 274, 220 300, 226 332" fill="none" stroke="#5eead4" stroke-width="3.74" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+</g></g>
+  <rect x="90" y="46" width="72" height="8" rx="4" fill="#5eead4"/>
+  <text x="90" y="78" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">MEDICAL SPECIALTY</text>
+  <text x="90" y="160" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="84" font-weight="800" fill="#ffffff" letter-spacing="-2">Neurology</text>
+  <text x="90" y="202" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#ffffff" fill-opacity="0.85">Billing and coding guide</text>
+  <text x="90" y="336" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>

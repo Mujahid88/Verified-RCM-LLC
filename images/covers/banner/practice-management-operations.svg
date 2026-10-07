@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Practice operations, Practice guide">
+  <defs>
+    <linearGradient id="bgpracticemanagementoperations" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e293b"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient>
+    <radialGradient id="glpracticemanagementoperations" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#5eead4" stop-opacity="0.5"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+    <pattern id="grpracticemanagementoperations" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cppracticemanagementoperations"><rect x="800" y="145" width="340" height="340" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgpracticemanagementoperations)"/>
+  <rect width="1200" height="630" fill="url(#grpracticemanagementoperations)"/>
+  <rect width="1200" height="630" fill="url(#glpracticemanagementoperations)"/>
+  <circle cx="1040" cy="130" r="220" fill="#5eead4" fill-opacity="0.14"/>
+  <circle cx="1110" cy="550" r="150" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="800" y="145" width="340" height="340" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cppracticemanagementoperations)"><g transform="translate(820 165) scale(0.6250)">
+  
+  <line x1="100" y1="336" x2="380" y2="336" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+
+  
+  <path d="M115,320 A125,125 0 0 1 365,320" fill="none" stroke="#ffffff" stroke-width="5.10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  
+  <path d="M262,197 A125,125 0 0 1 336,240" fill="none" stroke="#5eead4" stroke-width="5.10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  
+  <line x1="100" y1="320" x2="115" y2="320" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <line x1="141" y1="221" x2="152" y2="232" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <line x1="240" y1="180" x2="240" y2="195" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <line x1="339" y1="221" x2="328" y2="232" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <line x1="380" y1="320" x2="365" y2="320" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+
+  
+  <line x1="240" y1="320" x2="295" y2="225" stroke="#ffffff" stroke-width="5.95" stroke-linecap="round"/>
+  <circle cx="295" cy="225" r="4" fill="#5eead4"/>
+
+  
+  <circle cx="240" cy="320" r="9" fill="none" stroke="#ffffff" stroke-width="4.25"/>
+</g></g>
+  <rect x="90" y="118" width="72" height="8" rx="4" fill="#5eead4"/>
+  <text x="90" y="178" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">PRACTICE MANAGEMENT</text>
+  <text x="90" y="292" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="110" font-weight="800" fill="#ffffff" letter-spacing="-2">Practice</text>
+  <text x="90" y="411" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="110" font-weight="800" fill="#ffffff" letter-spacing="-2">operations</text>
+  <text x="90" y="473" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" fill="#ffffff" fill-opacity="0.85">Practice guide</text>
+  <text x="90" y="560" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Physical therapy, Billing and coding guide">
+  <defs>
+    <linearGradient id="bgspecialtyphysicaltherapy" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#042f2e"/><stop offset="1" stop-color="#115e59"/></linearGradient>
+    <radialGradient id="glspecialtyphysicaltherapy" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#fcd34d" stop-opacity="0.5"/><stop offset="1" stop-color="#fcd34d" stop-opacity="0"/></radialGradient>
+    <pattern id="grspecialtyphysicaltherapy" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cpspecialtyphysicaltherapy"><rect x="800" y="145" width="340" height="340" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgspecialtyphysicaltherapy)"/>
+  <rect width="1200" height="630" fill="url(#grspecialtyphysicaltherapy)"/>
+  <rect width="1200" height="630" fill="url(#glspecialtyphysicaltherapy)"/>
+  <circle cx="1040" cy="130" r="220" fill="#fcd34d" fill-opacity="0.14"/>
+  <circle cx="1110" cy="550" r="150" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="800" y="145" width="340" height="340" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#fcd34d" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cpspecialtyphysicaltherapy)"><g transform="translate(820 165) scale(0.6250)">
+  
+  <line x1="250" y1="300" x2="120" y2="300" stroke="#ffffff" stroke-opacity=".7" stroke-width="4.25" stroke-linecap="round"/>
+  
+  <line x1="250" y1="300" x2="330" y2="161" stroke="#ffffff" stroke-width="5.95" stroke-linecap="round"/>
+  
+  <circle cx="250" cy="300" r="8" fill="none" stroke="#ffffff" stroke-width="4.25"/>
+  
+  <path d="M160,300 A90,90 0 0,1 295,222.1" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  
+  <line x1="163.4" y1="250" x2="180.7" y2="260" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <line x1="200" y1="213.4" x2="210" y2="230.7" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <line x1="250" y1="200" x2="250" y2="220" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  
+  <path d="M234.4,211.4 A90,90 0 0,1 295,222.1" fill="none" stroke="#fcd34d" stroke-width="4.25" stroke-linecap="round"/>
+  
+  <circle cx="295" cy="222.1" r="6" fill="#fcd34d"/>
+</g></g>
+  <rect x="90" y="118" width="72" height="8" rx="4" fill="#fcd34d"/>
+  <text x="90" y="178" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">THERAPY AND REHAB</text>
+  <text x="90" y="292" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="112" font-weight="800" fill="#ffffff" letter-spacing="-2">Physical</text>
+  <text x="90" y="413" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="112" font-weight="800" fill="#ffffff" letter-spacing="-2">therapy</text>
+  <text x="90" y="475" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" fill="#ffffff" fill-opacity="0.85">Billing and coding guide</text>
+  <text x="90" y="560" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>

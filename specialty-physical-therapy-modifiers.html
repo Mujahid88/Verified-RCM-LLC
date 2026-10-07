@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Physical Therapy Modifiers: GP, GO, GN, 59, X{EPSU}, KX, 96/97, CQ/CO Explained | Verified RCM">
 <meta name="twitter:description" content="Physical therapy billing modifiers explained with real claim-line examples: GP/GO/GN discipline modifiers, 59 vs XE/XS/XP/XU, the KX threshold attestation, 96 vs 97, and CQ/CO's 15% cut.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,27 +225,26 @@
       <p class="lede">PT billing runs on more required modifiers per claim line than almost any other specialty, and several of them aren't optional the way a cardiology or orthopedic modifier often is, they're mandatory on every single line or the claim rejects outright. This guide covers every modifier that carries real weight in outpatient PT, one at a time, with the actual claim-line example each one produces: discipline modifiers on every line, the 59-versus-X-modifier decision tree, the KX attestation language that survives review, habilitative versus rehabilitative coding, and the PTA/OTA de minimis standard behind the 15% payment cut.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-physical-therapy.html">physical therapy billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line-art icon of a range-of-motion arc, like a protractor sweep, for physical therapy">
-  <!-- baseline limb segment -->
-  <line x1="250" y1="300" x2="120" y2="300" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- moved limb segment (primary) -->
-  <line x1="250" y1="300" x2="330" y2="161" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round"/>
-  <!-- joint pivot -->
-  <circle cx="250" cy="300" r="8" fill="none" stroke="var(--color-text)" stroke-width="2.5"/>
-  <!-- range-of-motion sweep arc -->
-  <path d="M160,300 A90,90 0 0,1 295,222.1" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <!-- tick marks along the sweep -->
-  <line x1="163.4" y1="250" x2="180.7" y2="260" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="200" y1="213.4" x2="210" y2="230.7" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="250" y1="200" x2="250" y2="220" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- accent highlight on final measured segment of the arc -->
-  <path d="M234.4,211.4 A90,90 0 0,1 295,222.1" fill="none" stroke="var(--cat-therapy)" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- accent marker at the measured endpoint -->
-  <circle cx="295" cy="222.1" r="6" fill="var(--cat-therapy)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-physical-therapy-wide.svg" alt="Physical therapy: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-pt-leans-on-modifiers-harder-than-most-specialties">Why PT leans on modifiers harder than most specialties</a></li>
+      <li><a href="#gp-go-gn-the-discipline-modifier-on-every-line">GP, GO, GN: the discipline modifier on every line</a></li>
+      <li><a href="#59-and-xepsu-the-decision-tree">59 and X{EPSU}: the decision tree</a></li>
+      <li><a href="#kx-the-threshold-attestation-that-has-to-survive-review">KX: the threshold attestation that has to survive review</a></li>
+      <li><a href="#96-versus-97-habilitative-versus-rehabilitative">96 versus 97: habilitative versus rehabilitative</a></li>
+      <li><a href="#cqco-ptaota-de-minimis-services-and-the-15-cut">CQ/CO: PTA/OTA de minimis services and the 15% cut</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -257,16 +255,16 @@
     </ul>
   </section>
 
-  <h2>Why PT leans on modifiers harder than most specialties</h2>
+  <h2 id="why-pt-leans-on-modifiers-harder-than-most-specialties">Why PT leans on modifiers harder than most specialties</h2>
   <p>A cardiology claim might carry one or two situational modifiers. A PT claim line routinely carries three or four, and most of them aren't optional add-ons for an edge case, they're structural. The discipline modifier tells the payer which benefit category and which KX threshold the charge counts against. The bundling modifier tells the payer whether two codes performed the same visit are genuinely separate services. The KX modifier tells the payer the practice is affirmatively attesting to medical necessity past a dollar line. Get any one of them wrong and the claim doesn't just deny, in several cases it denies for a reason that has nothing to do with whether the treatment itself was appropriate.</p>
 
-  <h2>GP, GO, GN: the discipline modifier on every line</h2>
+  <h2 id="gp-go-gn-the-discipline-modifier-on-every-line">GP, GO, GN: the discipline modifier on every line</h2>
   <p>GP identifies a service furnished under a physical therapy plan of care, GO under an occupational therapy plan of care, and GN under a speech-language pathology plan of care. Every therapy claim line needs one of the three attached, because the modifier is what routes the charge to the correct discipline-specific accumulator, PT and SLP share one combined KX threshold, while OT tracks its own separate one, and a claim line with no discipline modifier gives the payer's system nothing to route it against at all.</p>
   <p><b>Claim-line example, single-discipline PT visit:</b> a patient seen for low back pain treatment bills <code>97110-GP</code> (therapeutic exercise, 1 unit) and <code>97140-GP</code> (manual therapy, 1 unit), GP on both lines, because both services were furnished under the same PT plan of care.</p>
   <p><b>Claim-line example, multi-discipline practice, same date:</b> a pediatric patient seen by both a PT and an OT the same day bills <code>97112-GP</code> for the PT's neuromuscular re-education and <code>97530-GO</code> for the OT's therapeutic activities, two different discipline modifiers on two lines from the same date of service, because each line belongs to a different plan of care with its own certifying provider and its own threshold tracking.</p>
   <p>A claim line missing its discipline modifier is one of the few PT modifier errors that reliably denies outright rather than paying at the wrong rate, typically as a missing-or-invalid-modifier denial (CO-4 under the standard CARC set) rather than a medical-necessity denial, because the payer's adjudication logic can't process a therapy charge without knowing which discipline's benefit it draws against.</p>
 
-  <h2>59 and X{EPSU}: the decision tree</h2>
+  <h2 id="59-and-xepsu-the-decision-tree">59 and X{EPSU}: the decision tree</h2>
   <p>These override an NCCI bundling edit, but only where the edit's modifier indicator permits an override at all. An indicator of 0 means no modifier changes the outcome; confirm that before reaching for any of the modifiers below. Where an override is possible, work through the distinction in this order:</p>
   <ul class="check-list">
     <li><span class="check">XE</span><span><b>Separate encounter.</b> The two services happened during genuinely separate patient encounters, not the same continuous visit, uncommon in a standard PT session, more relevant when a patient is seen twice in one day for unrelated reasons.</span></li>
@@ -278,19 +276,19 @@
   <p><b>Claim-line example:</b> manual therapy to L4-L5 and a separate block of therapeutic activities in the same visit, same body region, bills <code>97140-GP</code> (8 minutes, grade III/IV posterior-anterior mobilization to L4-L5) and <code>97530-GP-59</code> (12 minutes, sit-to-stand transfer training with dynamic reaching), 59 rather than XS, because the distinction being claimed is separate time, not separate anatomy; the note documents each code's own start/stop or minute count as two temporally distinct treatment segments, not one continuous block split into two labels after the fact.</p>
   <p>What defeats the override on audit, regardless of which modifier is used: a single narrative paragraph describing hands-on work blended into a functional activity across one continuous stretch of time, then split into two billed codes without the record ever showing two separate segments. Routine use of 59 to clear a scrubber flag, rather than to reflect a documented, genuinely distinct service, is one of the most reliably audited patterns in outpatient PT billing, payers track append rates at the provider level and flag high-59 billers for review independent of whether any single claim was individually correct.</p>
 
-  <h2>KX: the threshold attestation that has to survive review</h2>
+  <h2 id="kx-the-threshold-attestation-that-has-to-survive-review">KX: the threshold attestation that has to survive review</h2>
   <p>Once a Medicare patient's accumulated allowed charges for the calendar year cross the therapy threshold, every subsequent claim line for that discipline needs KX attached, and the modifier is an affirmative attestation that the medical record independently supports continued medical necessity, not a box that unlocks continued payment automatically. PT and SLP share one combined threshold; OT tracks a separate one. A materially higher, separate targeted medical review threshold sits above that, and crossing it makes the patient's claims eligible for a MAC-initiated review request independent of whether KX is correctly attached.</p>
   <p><b>Claim-line example:</b> a patient who crossed the threshold two visits ago continues treatment for a documented rotator cuff repair recovery; the visit bills <code>97110-GP-KX</code> and <code>97140-GP-KX</code>, with KX on every line for that discipline going forward, not just the line where the threshold was first crossed.</p>
   <p><b>Documentation language that survives review</b> names the specific skilled reason continued treatment is necessary, not a restatement of the original diagnosis. A note that reads "patient continues to have shoulder pain, therapy to continue" restates the diagnosis and doesn't independently establish necessity. A note that reads "patient continues to demonstrate a 15-degree external rotation deficit limiting overhead reach; continued skilled manual therapy and progressive resistance training required to safely advance load without compromising the surgical repair, per the post-op protocol's current phase" names the functional deficit, the skilled intervention, and the specific clinical reason a home program alone wouldn't be safe or effective, the standard a targeted medical review is built to test.</p>
   <p>⚠️ This page does not restate the current-year KX threshold dollar figures, since they're set annually and this build could not independently confirm the current-year amount against CMS's primary annual notice; verify the current threshold directly against CMS's published therapy threshold amounts before relying on a specific dollar figure, and see <a href="specialty-physical-therapy.html">our complete physical therapy billing and coding guide</a> for the full threshold mechanics.</p>
 
-  <h2>96 versus 97: habilitative versus rehabilitative</h2>
+  <h2 id="96-versus-97-habilitative-versus-rehabilitative">96 versus 97: habilitative versus rehabilitative</h2>
   <p>These aren't Medicare modifiers, traditional fee-for-service Medicare doesn't distinguish habilitative from rehabilitative coverage the way many state-mandated commercial benefit categories do. Modifier 96 identifies a habilitative service: building a skill or function the patient never had, common in pediatric and developmental PT. Modifier 97 identifies a rehabilitative service: restoring a function the patient previously had and lost, the more common case in adult orthopedic and post-surgical PT.</p>
   <p><b>Claim-line example, habilitative:</b> a pediatric patient with a developmental gait delay who has never walked independently bills <code>97116-GP-96</code>, gait training aimed at building a function the patient never had.</p>
   <p><b>Claim-line example, rehabilitative:</b> an adult patient recovering gait function lost after a stroke bills <code>97116-GP-97</code>, the same code, the opposite clinical direction, restoring a function that existed before the loss.</p>
   <p>Several states' insurance mandates set separate visit caps or benefit categories for habilitative versus rehabilitative therapy, which makes the 96/97 distinction the thing that decides which benefit bucket, and which visit cap, a claim draws against. Getting it backwards on a plan with a hard habilitative-visit cap can exhaust the wrong benefit and deny visits that should have been payable under the rehabilitative category instead, a coding error that looks, from the denial alone, like a genuine benefit exhaustion when it isn't one.</p>
 
-  <h2>CQ/CO: PTA/OTA de minimis services and the 15% cut</h2>
+  <h2 id="cqco-ptaota-de-minimis-services-and-the-15-cut">CQ/CO: PTA/OTA de minimis services and the 15% cut</h2>
   <p>CQ identifies PTA involvement and CO identifies OTA involvement in furnishing a service, and either one triggers a mandatory 15% payment reduction on the affected unit compared with the same service furnished entirely by the licensed therapist, a statutory reduction, not a payer discretion, in effect for Medicare services furnished on or after January 1, 2022.</p>
   <p>The trigger is CMS's de minimis standard: when a therapy assistant's independently furnished time within a given 15-minute unit exceeds a low, single-digit-minute share of that unit, the entire unit is billed with CQ or CO attached. A unit where the assistant's contribution stays under that de minimis share doesn't require the modifier at all, even if the assistant was present or assisted briefly. The standard is applied per unit, not per visit, a visit can legitimately carry some units with CQ/CO and others without, depending on how the therapist's and assistant's time actually split within each specific 15-minute block.</p>
   <p><b>Claim-line example, CQ required:</b> a PTA independently furnishes 12 of a 15-minute manual therapy unit, well past the de minimis share, so the unit bills <code>97140-GP-CQ</code>, with the 15% reduction applied to that line.</p>
@@ -323,7 +321,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What's the difference between GP, GO, and GN modifiers?</summary><p>They identify which discipline's plan of care a service was furnished under: GP for physical therapy, GO for occupational therapy, GN for speech-language pathology. They're required on every therapy claim line, not just the ones a payer has flagged before, because the modifier is what maps the charge to the correct discipline-specific KX threshold and benefit category. A claim line missing its discipline modifier typically rejects outright rather than paying at the wrong rate, since the payer's system has no discipline to assign the charge to.</p></details>
     <details class="faq-item"><summary>When do I use 59 instead of XS on a PT claim?</summary><p>Use the specific X-modifier whenever it accurately describes the reason two services were distinct: XS for a separate anatomic structure, XE for a separate encounter, XP for a separate practitioner, XU for an unusual non-overlapping service. Use 59 only when the distinction is real but doesn't map cleanly to one of those four categories, which in PT is most often a same-structure, same-encounter case where the only thing separating two codes is that they were performed in genuinely separate, non-overlapping blocks of time, a temporal distinction none of the four X-modifiers names directly.</p></details>
@@ -335,7 +333,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-physical-therapy.html">Physical therapy billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-physical-therapy-8-minute-rule.html">The 8-minute rule: unit calculation guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -343,6 +341,7 @@
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialties.html">All 30 specialties <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -391,6 +390,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

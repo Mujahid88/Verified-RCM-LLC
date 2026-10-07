@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Dermatology, Billing and coding guide">
+  <defs>
+    <linearGradient id="bgspecialtydermatology" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#312e81"/><stop offset="1" stop-color="#4338ca"/></linearGradient>
+    <radialGradient id="glspecialtydermatology" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#5eead4" stop-opacity="0.5"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+    <pattern id="grspecialtydermatology" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cpspecialtydermatology"><rect x="800" y="145" width="340" height="340" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgspecialtydermatology)"/>
+  <rect width="1200" height="630" fill="url(#grspecialtydermatology)"/>
+  <rect width="1200" height="630" fill="url(#glspecialtydermatology)"/>
+  <circle cx="1040" cy="130" r="220" fill="#5eead4" fill-opacity="0.14"/>
+  <circle cx="1110" cy="550" r="150" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="800" y="145" width="340" height="340" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cpspecialtydermatology)"><g transform="translate(820 165) scale(0.6250)">
+  <path d="M30 128 C110 118, 150 138, 240 128 C330 118, 370 138, 450 128" fill="none" stroke="#ffffff" stroke-width="4.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 168 C110 156, 150 180, 240 168 C330 156, 370 180, 450 168" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 213 C110 203, 150 223, 240 213 C330 203, 370 223, 450 213" fill="none" stroke="#5eead4" stroke-width="5.10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 258 C110 244, 150 272, 240 258 C330 244, 370 272, 450 258" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 302 C110 292, 150 312, 240 302 C330 292, 370 312, 450 302" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 346 C110 336, 150 356, 240 346 C330 336, 370 356, 450 346" fill="none" stroke="#ffffff" stroke-width="5.10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="172" cy="206" r="4" fill="#5eead4"/>
+  <circle cx="322" cy="221" r="4" fill="#5eead4"/>
+</g></g>
+  <rect x="90" y="118" width="72" height="8" rx="4" fill="#5eead4"/>
+  <text x="90" y="178" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">SURGICAL SPECIALTY</text>
+  <text x="90" y="292" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="100" font-weight="800" fill="#ffffff" letter-spacing="-2">Dermatology</text>
+  <text x="90" y="354" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" fill="#ffffff" fill-opacity="0.85">Billing and coding guide</text>
+  <text x="90" y="560" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>

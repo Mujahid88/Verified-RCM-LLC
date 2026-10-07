@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Vascular Surgery NCCI Edits and MUE Limits | Verified RCM">
 <meta name="twitter:description" content="Vascular surgery NCCI and MUE guide: modifier indicators, MUE Adjudication Indicators, dialysis circuit stacking, duplex conflicts, and LER bundling pairs.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,36 +225,26 @@
       <p class="lede">Most vascular surgery content stops at naming a bundled pair qualitatively, "duplex studies bundle together," "the fistulogram is included in the intervention", without ever stating the actual value that decides whether a modifier can legally clear the edit, or whether a unit-cap denial can be appealed at all. Two CMS values answer both questions, and this guide walks through them against the specific pairs that generate the most denied and underpaid vascular claims: dialysis circuit stacking, same-day duplex conflicts, and LER territory bundling.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Updated August 2026</span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of branching blood vessels forking at accented nodes, representing vascular surgery">
-  <!-- primary trunk -->
-  <path d="M240,410 C238,375 244,345 238,308" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- primary branches from main fork -->
-  <path d="M238,308 C214,282 196,266 166,224" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M238,308 C262,282 280,266 312,224" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- secondary sub-branches, left -->
-  <path d="M166,224 C146,204 128,196 100,176" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M166,224 C158,196 164,170 150,138" fill="none" stroke="var(--muted)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M100,176 C86,164 78,158 64,150" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- secondary sub-branches, right -->
-  <path d="M312,224 C334,204 352,196 382,178" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M312,224 C320,196 314,170 328,138" fill="none" stroke="var(--muted)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M382,178 C396,168 404,162 418,156" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- fine capillary offshoots near base -->
-  <path d="M238,360 C222,352 210,348 196,344" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M240,360 C256,352 268,348 282,344" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- accent nodes at branch points -->
-  <circle cx="238" cy="308" r="5.5" fill="var(--cat-surgical)"/>
-  <circle cx="166" cy="224" r="4.5" fill="var(--cat-surgical)"/>
-  <circle cx="312" cy="224" r="4.5" fill="var(--cat-surgical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-vascular-surgery-wide.svg" alt="Vascular surgery: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#how-the-ncci-modifier-indicator-and-mai-actually-work">How the NCCI modifier indicator and MAI actually work</a></li>
+      <li><a href="#dialysis-access-circuit-stacking">Dialysis access circuit stacking</a></li>
+      <li><a href="#arterial-and-venous-duplex-same-day-conflicts">Arterial and venous duplex same-day conflicts</a></li>
+      <li><a href="#ler-primary-vs-add-on-pairs">LER primary-vs-add-on pairs</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#sources-and-verification">Sources and verification</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -266,7 +255,7 @@
     </ul>
   </section>
 
-  <h2>How the NCCI modifier indicator and MAI actually work</h2>
+  <h2 id="how-the-ncci-modifier-indicator-and-mai-actually-work">How the NCCI modifier indicator and MAI actually work</h2>
   <p>Two separate CMS mechanisms control vascular surgery's bundling and unit-cap denials, and they answer two different questions. The NCCI modifier indicator governs whether a Column 1/Column 2 code pair can ever be unbundled with a modifier. The MUE Adjudication Indicator governs whether exceeding a per-code, per-day unit cap can be appealed at all. Neither is a judgment call, both are specific values CMS publishes and updates quarterly.</p>
   <p><b>The NCCI modifier indicator</b> attached to a Column 1/Column 2 code pair:</p>
   <ul class="check-list">
@@ -282,7 +271,7 @@
   </ul>
   <p>The MAI 2 date-of-service mechanism is worth calling out specifically for vascular surgery, because it's easy to assume a laterality modifier automatically protects a bilateral claim from a unit cap. It doesn't, for a code where CMS's adjudication sums units across the whole date of service rather than line by line, RT and LT on two separate lines can still trip a date-of-service MUE if the code's MAI is 2 or 3, because the cap looks at total units billed for that code on that date, not at how many lines it's split across. Confirm the specific code's MAI before assuming a bilateral claim is automatically safe.</p>
 
-  <h2>Dialysis access circuit stacking</h2>
+  <h2 id="dialysis-access-circuit-stacking">Dialysis access circuit stacking</h2>
   <p>This is the most common and most avoidable NCCI denial pattern in the specialty, because the dialysis access family (<code>36901</code>&ndash;<code>36909</code>) is built as an additive hierarchy, not a menu of independent services.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -298,7 +287,7 @@
   </div>
   <p>The practical rule that holds regardless of the exact indicator value: bill the single highest code in the hierarchy that reflects what was actually performed for that access on that date, not the base code plus the therapeutic code. The one legitimate exception is a genuinely separate access site or a diagnostic-only encounter that didn't proceed to intervention, in that case 36901 stands alone, appropriately, because there's no higher-tier code to bundle it into. Where a modifier 52 (reduced services) situation applies, imaging interpreted through an existing catheter rather than a fresh percutaneous access, that's a separate billing decision from the stacking question above, not a way to unbundle the additive hierarchy.</p>
 
-  <h2>Arterial and venous duplex same-day conflicts</h2>
+  <h2 id="arterial-and-venous-duplex-same-day-conflicts">Arterial and venous duplex same-day conflicts</h2>
   <p>The vascular lab's highest-volume same-day bundling question is whether an arterial study and a venous study of the same extremity, ordered together, are separately payable.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -313,7 +302,7 @@
   </div>
   <p>⚠️ As with the dialysis access pairs above, this build could not confirm the specific modifier indicator values for these duplex pairs against CMS's primary NCCI PTP file (the CMS Coverage Database and NCCI files returned access errors to automated retrieval attempts made researching this page and the vascular surgery pillar guide). The bundling patterns described are consistent with standard industry billing guidance and CPT's own component structure, but treat every indicator value as reported-but-unconfirmed until checked in the CMS NCCI PTP Edits Lookup Tool.</p>
 
-  <h2>LER primary-vs-add-on pairs</h2>
+  <h2 id="ler-primary-vs-add-on-pairs">LER primary-vs-add-on pairs</h2>
   <p>The 2026 lower extremity revascularization restructure (<code>37254</code>&ndash;<code>37299</code>) creates two distinct bundling questions that are easy to conflate but resolve differently.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Same territory, same session, a CPT hierarchy rule, not an NCCI edit.</b> When angioplasty is performed as vessel preparation for a stent or atherectomy in the same territory, that's not two separately billable services needing a modifier override; it's a single procedure reported with the one code that reflects the highest-intensity intervention actually performed. Billing the angioplasty code separately alongside the stent code in the same territory is an invalid-combination error, not a bundling denial to appeal.</span></li>
@@ -328,7 +317,7 @@
     <div><div class="protip-label">The verification workflow before you write an appeal</div><p>1) Confirm the exact two CPT codes actually billed together, not a paraphrased version of them. 2) Look up the NCCI modifier indicator for that specific pair in the CMS NCCI Procedure-to-Procedure Edits Lookup Tool, if it's 0, stop, there's no appeal to write. 3) If it's 1, confirm the operative note or study report independently documents the anatomic distinction (territory, structure, or side) that justifies the modifier. 4) Separately, look up the MUE and its MAI for any code that also hit a unit cap, if MAI 2, stop again, regardless of how the modifier question resolved. 5) Only draft the appeal once both checks clear, citing the specific indicator and MAI values by name, not "per CMS guidelines" generically.</p></div>
   </div>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Check the modifier indicator for a pair before appending 59 or an X-modifier, every time, not just on claims that already denied.</li>
@@ -352,7 +341,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Can 36901 ever be billed alongside 36902 or 36903 the same session?</summary><p>No, not for the same access on the same date. The dialysis access family is additive: 36902 already includes the diagnostic fistulogram work described by 36901, and 36903 already includes everything in both 36901 and 36902. Billing 36901 on the same claim as 36902 or 36903 for the same access reports work that's already paid for inside the higher code, and it denies as bundled. The only scenario where a diagnostic study is separately reportable is a genuinely distinct access or a separate, later encounter that didn't lead to an intervention that same session.</p></details>
     <details class="faq-item"><summary>Is an arterial and venous duplex of the same leg on the same day ever separately payable?</summary><p>It can be, but it's the exception rather than the default, and it depends on two things: whether the code pair's NCCI modifier indicator allows an override at all, and whether the order documents two independently necessary clinical indications, not one combined vascular workup. A patient worked up for both claudication and suspected DVT in the same leg is a defensible case for XS; a routine "vascular survey" order covering both without two distinct reasons is not. Check the specific pair's indicator before billing both, and don't assume the override is automatic just because the clinical picture seems to justify it.</p></details>
@@ -364,16 +353,17 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Sources and verification</h2>
+  <h2 id="sources-and-verification">Sources and verification</h2>
   <p>NCCI modifier-indicator and MUE Adjudication Indicator definitions are stated with confidence as CMS policy structure, consistent with how they're described in this site's cardiology and vascular surgery pillar content. Specific indicator and MAI values for the individual vascular code pairs named in this guide, the dialysis access family, the duplex same-day pairs, and the 2026 LER territory pairings, could not be confirmed against CMS's primary NCCI PTP and MUE files during this build; the CMS Coverage Database and NCCI file pages returned access errors to every automated retrieval attempt made researching this page. Every specific value above is flagged inline as reported-but-unconfirmed and should be checked in the CMS NCCI Procedure-to-Procedure Edits Lookup Tool and the current MUE files before being relied on operationally, since these values change quarterly. No Medicare Physician Fee Schedule dollar amounts are published in this guide.</p>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-vascular-surgery.html">Vascular surgery billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-vascular-surgery-modifiers.html">Vascular surgery modifiers: the complete reference <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-vascular-surgery-denials-appeals.html">Vascular surgery denials and appeals <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -422,6 +412,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

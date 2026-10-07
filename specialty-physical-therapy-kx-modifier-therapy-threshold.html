@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="The KX Modifier and Medicare Therapy Threshold: 2026 Rules | Verified RCM">
 <meta name="twitter:description" content="KX modifier and Medicare therapy threshold for PT in 2026: the dollar threshold, the targeted medical review threshold, what the attestation must document, and Jimmo v. Sebelius.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,27 +225,25 @@
       <p class="lede">The KX modifier is the single line item that decides whether a Medicare patient's therapy claims keep paying past a dollar line drawn once a calendar year, and it isn't a box to check, it's an attestation the medical record has to independently support. This guide covers the 2026 threshold figures, the separate and much higher targeted medical review threshold, exactly what documentation has to say to survive a KX-triggered review, the <i>Jimmo v. Sebelius</i> maintenance-therapy standard that governs a large share of KX claims, and what actually happens when a claim crosses the threshold without the modifier attached. Read this alongside <a href="specialty-physical-therapy.html">the full physical therapy billing guide</a> for how the threshold fits into the rest of PT's revenue cycle.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of <a href="specialty-physical-therapy.html">our physical therapy billing and coding pillar page</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line-art icon of a range-of-motion arc, like a protractor sweep, for physical therapy">
-  <!-- baseline limb segment -->
-  <line x1="250" y1="300" x2="120" y2="300" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- moved limb segment (primary) -->
-  <line x1="250" y1="300" x2="330" y2="161" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round"/>
-  <!-- joint pivot -->
-  <circle cx="250" cy="300" r="8" fill="none" stroke="var(--color-text)" stroke-width="2.5"/>
-  <!-- range-of-motion sweep arc -->
-  <path d="M160,300 A90,90 0 0,1 295,222.1" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <!-- tick marks along the sweep -->
-  <line x1="163.4" y1="250" x2="180.7" y2="260" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="200" y1="213.4" x2="210" y2="230.7" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="250" y1="200" x2="250" y2="220" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- accent highlight on final measured segment of the arc -->
-  <path d="M234.4,211.4 A90,90 0 0,1 295,222.1" fill="none" stroke="var(--cat-therapy)" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- accent marker at the measured endpoint -->
-  <circle cx="295" cy="222.1" r="6" fill="var(--cat-therapy)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-physical-therapy-wide.svg" alt="Physical therapy: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-2026-threshold-figures">The 2026 threshold figures</a></li>
+      <li><a href="#tracking-the-running-total">Tracking the running total</a></li>
+      <li><a href="#what-the-medical-necessity-attestation-has-to-document">What the medical necessity attestation has to document</a></li>
+      <li><a href="#jimmo-v-sebelius-and-the-maintenance-therapy-standard">Jimmo v. Sebelius and the maintenance therapy standard</a></li>
+      <li><a href="#what-happens-when-a-claim-crosses-the-threshold-without-kx">What happens when a claim crosses the threshold without KX</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -257,7 +254,7 @@
     </ul>
   </section>
 
-  <h2>The 2026 threshold figures</h2>
+  <h2 id="the-2026-threshold-figures">The 2026 threshold figures</h2>
   <p>Medicare tracks therapy spending against two separate dollar lines each calendar year, and confusing them is a common source of both under-caution (stopping short when nothing required it) and over-exposure (billing past a line that actually triggers review).</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -273,7 +270,7 @@
   <p>⚠️ CMS's fee-schedule and therapy-threshold pages returned access errors to every automated retrieval attempt made while researching this page, so the figures above are stated with their usual industry sourcing rather than a primary-source pull confirmed this build. Verify the current-year threshold directly against the CMS therapy-services page or your MAC's published annual notice, both thresholds are indexed and typically change slightly year over year, so a figure that's correct for 2026 will not automatically be correct for 2027.</p>
   <p>The distinction that matters operationally: the KX threshold is a documentation-and-modifier trigger, not a payment stop. Medicare will keep paying claims past it, provided KX is attached and the record supports the attestation. The targeted medical review threshold is a different kind of event entirely, it doesn't change what goes on the claim, it changes the odds that the MAC requests the underlying documentation before or after paying it. A patient can cross the KX threshold, have every subsequent claim correctly flagged with KX, and still be selected for review once their total crosses the higher targeted-review line; correct KX use doesn't exempt a claim from review, it just means the review should go the practice's way when it happens.</p>
 
-  <h2>Tracking the running total</h2>
+  <h2 id="tracking-the-running-total">Tracking the running total</h2>
   <p>Both thresholds are calculated against the Medicare Physician Fee Schedule's allowed amount, not the practice's billed charge, the running total accumulates based on what Medicare actually allows for each service, summed across every date of service in the calendar year for that discipline. This has a practical consequence billing staff miss: a practice can't reliably predict the exact date a patient will cross the threshold just from billed charges, because the allowed amount (after any sequestration or other payment adjustment) is what the total is actually measured against.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Track it in the billing system, not on a spreadsheet.</b> A patient's running total needs to be visible at the point of claim creation, ideally with an automatic flag a set dollar amount before the threshold, so front-office and billing staff aren't discovering the crossing after a claim has already gone out without KX.</span></li>
@@ -281,7 +278,7 @@
     <li><span class="check">3</span><span><b>PT/SLP and OT are separate totals for the same patient.</b> A patient receiving both PT and OT concurrently, common in a post-stroke or post-surgical rehab course, needs both totals tracked independently; crossing one doesn't imply anything about the other.</span></li>
   </ul>
 
-  <h2>What the medical necessity attestation has to document</h2>
+  <h2 id="what-the-medical-necessity-attestation-has-to-document">What the medical necessity attestation has to document</h2>
   <p>KX attests, on the claim itself, that the services billed are medically necessary and that documentation justifying continued treatment is on file. That's a specific, falsifiable claim about what the chart contains, not a general statement that the patient is still receiving PT. A targeted medical review checks exactly this: does the note actually say what the modifier claims it says.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Documentation that survives review</div><ul>
@@ -299,7 +296,7 @@
   </div>
   <p>Appending KX without this level of specificity behind it is a false attestation on the claim, not a technicality, it's the exact gap a targeted medical review is designed to surface, and it's a recoupment risk on every claim in the reviewed sample, not just the one that gets pulled first.</p>
 
-  <h2><i>Jimmo v. Sebelius</i> and the maintenance therapy standard</h2>
+  <h2 id="jimmo-v-sebelius-and-the-maintenance-therapy-standard"><i>Jimmo v. Sebelius</i> and the maintenance therapy standard</h2>
   <p>The 2013 <i>Jimmo v. Sebelius</i> settlement is the legal basis for a large share of KX-threshold claims, and it's frequently misapplied in both directions, either treated as if it doesn't apply at all, or treated as a blanket justification for open-ended continued treatment.</p>
   <p>Before <i>Jimmo</i>, an informal "improvement standard" had crept into how many payers and even some auditors evaluated therapy claims: coverage was assumed to require that the patient continue to show measurable functional improvement. The settlement made clear that standard was never the actual coverage rule. Skilled therapy is covered when the skilled service itself is necessary to <b>maintain</b> the patient's current condition, or to <b>prevent or slow further decline</b>, even where no further improvement is expected, a genuinely different and narrower standard than "the patient benefits from continuing."</p>
   <div class="check-list">
@@ -308,7 +305,7 @@
   </div>
   <p>The practical effect for KX-threshold claims specifically: a patient who has plateaued clinically is not automatically ineligible for continued, KX-attested therapy, but the documentation burden shifts entirely onto naming the skilled maintenance component. A note that simply stops mentioning progress, without affirmatively invoking and supporting the maintenance rationale, reads as a claim that quietly stopped being medically necessary rather than one that legitimately transitioned to maintenance care.</p>
 
-  <h2>What happens when a claim crosses the threshold without KX</h2>
+  <h2 id="what-happens-when-a-claim-crosses-the-threshold-without-kx">What happens when a claim crosses the threshold without KX</h2>
   <p>This is a hard system edit, not a soft flag a payer might choose to enforce. Once a patient's accumulated allowed charges for the calendar year cross the KX threshold, a subsequent claim line for that discipline submitted without KX attached denies for exceeding the therapy limit, the denial fires at the system edit level, before any human reviewer looks at the claim.</p>
   <p>The fix at that point is almost always a corrected claim, not an appeal: attach KX, confirm the supporting documentation is genuinely on file, and resubmit, provided the timely-filing window for that payer hasn't closed. Where this becomes a real revenue problem is discovery lag, a practice that doesn't track the running total in its own billing system in real time typically finds out only when a batch of claims comes back denied days or weeks after submission, by which point staff time is spent re-billing a stack of claims in bulk rather than catching the crossing at the point the very first affected claim was created.</p>
   <div class="protip">
@@ -324,7 +321,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What is the KX modifier threshold for physical therapy in 2026?</summary><p>The KX modifier threshold for CY2026 is reported at $2,480 in accumulated allowed charges for PT and speech-language pathology combined, with OT tracked against its own separate $2,480 threshold. ⚠️ These figures could not be independently confirmed against CMS's primary annual notice during this build, CMS's fee-schedule and therapy-threshold pages returned access errors to automated retrieval, so confirm the current-year figure against your MAC's published notice or the CMS therapy-services page before relying on it operationally.</p></details>
     <details class="faq-item"><summary>What has to be documented before appending KX to a claim past the threshold?</summary><p>The medical record has to independently establish that continued skilled therapy is medically necessary, the specific functional deficit still being addressed, the skilled intervention (not a home-program-replaceable activity) being used to address it, and objective evidence of progress or, under the Jimmo v. Sebelius maintenance standard, why a licensed therapist's skill is still required even without further improvement. Simply noting that the original diagnosis is still present is not sufficient; KX is an attestation the documentation has to back up, not a formality appended once a running total crosses a number.</p></details>
@@ -336,7 +333,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-physical-therapy.html">Physical therapy billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-physical-therapy-icd-10-diagnosis-coding.html">ICD-10 codes for physical therapy: specificity rules that prevent denials <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -344,6 +341,7 @@
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialties.html">All specialty guides <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -392,6 +390,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

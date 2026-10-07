@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Gastroenterology, Billing and coding guide">
+  <defs>
+    <linearGradient id="bgspecialtygastroenterology" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#312e81"/><stop offset="1" stop-color="#4338ca"/></linearGradient>
+    <radialGradient id="glspecialtygastroenterology" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#5eead4" stop-opacity="0.5"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+    <pattern id="grspecialtygastroenterology" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cpspecialtygastroenterology"><rect x="860" y="55" width="250" height="250" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bgspecialtygastroenterology)"/>
+  <rect width="1200" height="360" fill="url(#grspecialtygastroenterology)"/>
+  <rect width="1200" height="360" fill="url(#glspecialtygastroenterology)"/>
+  <circle cx="1040" cy="60" r="170" fill="#5eead4" fill-opacity="0.14"/>
+  <circle cx="1110" cy="280" r="110" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="860" y="55" width="250" height="250" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cpspecialtygastroenterology)"><g transform="translate(880 75) scale(0.4375)">
+  <path d="M 150,130 C 210,108 268,132 258,172 C 248,208 180,204 172,244 C 164,284 236,296 252,258 C 266,224 328,232 332,272 C 336,312 280,344 236,332 C 200,322 186,290 212,276" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round" stroke-linejoin="round" opacity="0.5" transform="translate(6,10)"/>
+  <path d="M 148,124 C 208,100 266,126 256,166 C 246,204 178,198 170,238 C 162,280 234,292 250,254 C 264,220 326,228 330,268 C 334,310 278,340 234,328 C 198,318 184,286 210,272" fill="none" stroke="#ffffff" stroke-width="5.10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 168,150 C 200,142 224,150 220,168" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+  <path d="M 196,250 C 220,242 244,250 240,268" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+  <circle cx="148" cy="124" r="6" fill="#5eead4"/>
+  <circle cx="210" cy="272" r="5" fill="#5eead4"/>
+</g></g>
+  <rect x="90" y="46" width="72" height="8" rx="4" fill="#5eead4"/>
+  <text x="90" y="78" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">SURGICAL SPECIALTY</text>
+  <text x="90" y="160" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="66" font-weight="800" fill="#ffffff" letter-spacing="-2">Gastroenterology</text>
+  <text x="90" y="202" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#ffffff" fill-opacity="0.85">Billing and coding guide</text>
+  <text x="90" y="336" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>

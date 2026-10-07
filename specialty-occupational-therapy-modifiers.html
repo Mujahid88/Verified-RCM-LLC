@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Occupational Therapy Modifiers: GO, CQ/CO, 59/X, 96/97, KX | Verified RCM">
 <meta name="twitter:description" content="Occupational therapy modifiers explained: GO plan-of-care, the CQ/CO assistant de minimis rule and its final-unit exception, 59/X-modifiers, 96 vs. 97, and the KX threshold.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,19 +225,28 @@
       <p class="lede">Every OT modifier decision traces back to one of four questions: who furnished the minutes, whether two timed services were genuinely distinct, whether the payer treats the service as habilitative or rehabilitative, and whether the patient has crossed the annual therapy threshold. Miss any one of them and the claim either denies outright or pays at the wrong rate silently, because nothing flags an underpayment the way it flags a rejection. This guide covers every modifier that changes payment in occupational therapy, including the CQ/CO final-unit edge case most billing guides skip entirely.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-occupational-therapy.html">occupational therapy billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract sweeping reach line curving toward an open circular grasp, representing coordination and movement in occupational therapy">
-  <path d="M90,365 C145,310 180,270 225,240 C255,215 275,200 295,195" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
-  <path d="M130,330 C175,290 205,255 240,225 C265,203 282,192 300,188" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
-  <path d="M110,350 C160,300 190,260 230,230 C260,208 280,195 300,190" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M322.7,211.4 A42,42 0 1 1 369.5,184.4" fill="none" stroke="var(--cat-therapy)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M380,150 L397,140" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-  <path d="M392,175 L411,172" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
-  <circle cx="322.7" cy="211.4" r="4" fill="var(--cat-therapy)"/>
-  <circle cx="369.5" cy="184.4" r="3.5" fill="var(--cat-therapy)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-occupational-therapy-wide.svg" alt="Occupational therapy: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-ot-modifiers-carry-so-much-weight">Why OT modifiers carry so much weight</a></li>
+      <li><a href="#go-the-plan-of-care-modifier">GO: the plan-of-care modifier</a></li>
+      <li><a href="#cqco-assistant-furnished-services">CQ/CO: assistant-furnished services</a></li>
+      <li><a href="#59-xe-xs-xp-xu-the-9714097530-pair">59, XE, XS, XP, XU: the 97140/97530 pair</a></li>
+      <li><a href="#96-vs-97-habilitative-vs-rehabilitative">96 vs. 97: habilitative vs. rehabilitative</a></li>
+      <li><a href="#kx-threshold-exceeded-medical-necessity-attestation">KX: threshold-exceeded medical necessity attestation</a></li>
+      <li><a href="#worked-billing-scenarios">Worked billing scenarios</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -249,14 +257,14 @@
     </ul>
   </section>
 
-  <h2>Why OT modifiers carry so much weight</h2>
+  <h2 id="why-ot-modifiers-carry-so-much-weight">Why OT modifiers carry so much weight</h2>
   <p>OT bills the same 15-minute unit differently depending on who performed it, which benefit category the payer files it under, and whether the calendar-year dollar total has crossed a federal threshold, and the modifier is the only thing on the claim line that tells the payer which of those is true. A cardiology claim usually fails on a component split; an OT claim usually fails because one of these four modifier decisions got made by default instead of by the record. GO, CQ/CO, 59/X, 96/97, and KX don't overlap much in when they apply, which means a missing one rarely gets caught by a scrubber rule built around a different modifier family. Each is covered below with the specific claim scenario it's built for.</p>
 
-  <h2>GO: the plan-of-care modifier</h2>
+  <h2 id="go-the-plan-of-care-modifier">GO: the plan-of-care modifier</h2>
   <p>GO identifies a line as furnished under a plan of care established by an occupational therapist, distinct from GP (physical therapy) and GN (speech-language pathology), the two modifiers it's most often confused with in a multidisciplinary clinic billing all three disciplines off one charge master. GO belongs on every OT claim line without exception; it isn't situational the way 59 or 96/97 are, and there's no clinical scenario where an OT service is correctly billed without it.</p>
   <p>Missing GO denies as CARC <b>CO-4</b> (the procedure code is inconsistent with the modifier used, or a required modifier is missing), a straightforward correction and resubmission, not an appeal. The failure mode is almost always structural rather than clinical: an EHR charge template that doesn't hard-code GO into the OT service line, or a multidisciplinary practice where OT, PT, and SLP charges route through a shared charge set and GO gets dropped on a high-volume day. Fix it at the charge-capture default. If the modifier isn't automatically appended by the system for every OT CPT code, it gets missed at some volume, and no amount of staff training reliably closes that gap once volume climbs.</p>
 
-  <h2>CQ/CO: assistant-furnished services</h2>
+  <h2 id="cqco-assistant-furnished-services">CQ/CO: assistant-furnished services</h2>
   <p>CO is the OT-side equivalent of PT's CQ modifier: it flags a unit as furnished, in whole or in part, by an occupational therapy assistant (OTA) rather than the supervising OT. Since January 1, 2022, CMS pays any unit carrying CQ or CO at 85% of the physician fee schedule rate for that code, an across-the-board 15% reduction, not a per-service negotiation.</p>
   <p><b>The 10% de minimis standard.</b> A unit gets the CO modifier when the OTA furnished more than 10% of the minutes that make up that specific unit. This is evaluated unit by unit, not against the visit's total time, an OT/OTA team splitting a 45-minute session roughly evenly doesn't automatically put CO on every unit; each 15-minute block is judged on its own mix of minutes.</p>
   <p><b>The exception almost no guide mentions: the final unit isn't governed by the flat 10% rule.</b> When a treatment day's total timed minutes land in the 8-minute rule's leftover zone, the partial final unit billed because at least 8 of the remaining minutes were delivered, not because a full 15 was reached, the standard that governs it shifts: the question becomes which practitioner furnished the <i>majority</i> of the minutes actually inside that specific unit, not whether the assistant's share crossed 10% of it.</p>
@@ -273,7 +281,7 @@
   </div>
   <p>Under a flat 10% reading applied to every unit including the last, unit 3 above would incorrectly carry CO. Under the remainder-unit standard, it doesn't, because the OT supplied the majority of that unit's minutes even though the OTA's share exceeds 10% in isolation. ⚠️ This distinction is described consistently across billing-industry guidance and professional-association resources (AOTA, APTA) tracing to CMS's CY2020 Physician Fee Schedule final-rule preamble and subregulatory therapy billing guidance; this build could not open the CMS primary-source pages directly to re-confirm the current wording (CMS.gov returned access errors to automated fetch attempts made while researching this page), so verify the mechanics against your MAC's specific therapy billing article before building it into a scrubber rule, it's exactly the kind of sub-regulatory detail that gets refined without a CPT or fee-schedule change to flag it.</p>
 
-  <h2>59, XE, XS, XP, XU: the 97140/97530 pair</h2>
+  <h2 id="59-xe-xs-xp-xu-the-9714097530-pair">59, XE, XS, XP, XU: the 97140/97530 pair</h2>
   <p>97140 (manual therapy) and 97530 (therapeutic activities) carry a widely reported NCCI bundling relationship: billed together on the same date without a modifier, one is typically treated as included in the other rather than separately payable. ⚠️ This build could not open CMS's primary NCCI PTP edit file to confirm the current modifier indicator for this specific pair, it is consistently reported in billing-industry guidance as bypassable (indicator 1), but confirm the live value in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before relying on it, since indicator values are pair-specific and revised quarterly.</p>
   <p>Where the pair is genuinely distinct, manual therapy addressing one body region's joint or soft-tissue restriction, therapeutic activity addressing a different functional task entirely, each independently time-documented, append the modifier that states the reason directly on the claim:</p>
   <ul class="check-list">
@@ -284,16 +292,16 @@
   </ul>
   <p>Use plain 59 only when the distinction is real but doesn't map to XE, XS, XP, or XU specifically. In every case the note has to independently support two distinct services, separate body region, separate task, separate documented time, not just carry the modifier because the claim wouldn't clear the scrubber otherwise. High append rates on 59/X for this exact pair are one of the more commonly audited patterns in outpatient therapy billing, and payers see it regardless of whether any individual claim was correct.</p>
 
-  <h2>96 vs. 97: habilitative vs. rehabilitative</h2>
+  <h2 id="96-vs-97-habilitative-vs-rehabilitative">96 vs. 97: habilitative vs. rehabilitative</h2>
   <p>96 (habilitative) and 97 (rehabilitative) tell a payer which benefit category a service falls under: rehabilitative restores a skill or function that was lost, post-stroke ADL retraining (<code>I69.351</code>, hemiplegia following cerebral infarction, right dominant side), post-fracture hand therapy, while habilitative builds a skill the patient never had, most commonly pediatric developmental therapy (<code>R27.8</code>, other lack of coordination, or <code>F82</code>, specific developmental disorder of motor function). Both codes verified live against the FY2026 ICD-10-CM code set.</p>
   <p>The distinction matters because many commercial and state Medicaid plans carry separate visit caps or cost-sharing rules for the two categories under ACA essential-health-benefit habilitative-services requirements, so appending the wrong one can trigger a benefit-category mismatch even when the treatment itself was entirely correct and medically necessary. Traditional Medicare fee-for-service doesn't generally require 96/97 the way it requires GO, this is predominantly a commercial and Medicaid modifier pair. Check the specific plan's policy before assuming either is required or safely omitted; a pediatric developmental-coordination caseload billed to a commercial plan without 96 attached is a common source of this exact denial, because the claim processes as if it were rehabilitative and gets checked against the wrong benefit bucket.</p>
 
-  <h2>KX: threshold-exceeded medical necessity attestation</h2>
+  <h2 id="kx-threshold-exceeded-medical-necessity-attestation">KX: threshold-exceeded medical necessity attestation</h2>
   <p>KX attests that services beyond the annual therapy threshold, $2,480 for OT in calendar year 2026, are medically necessary and that supporting documentation is on file, not merely available if requested. It isn't a routine modifier; it's a legal attestation, and appending it without the documentation behind it is functionally the same problem as billing an E/M level the note doesn't support.</p>
   <p>The mechanics are straightforward once the threshold is tracked correctly: every dollar of allowed OT charges accumulates toward the $2,480 figure across the calendar year, regardless of how many different OT providers or locations the beneficiary saw. The first claim that would push cumulative charges past $2,480 needs KX attached, and every claim after it for the rest of the year needs it too, the threshold doesn't reset until January 1. A separate $3,000 targeted medical review threshold sits above it; crossing that number doesn't require a modifier, but it does make the claim more likely to be pulled for an additional documentation request, so the underlying chart needs to hold up regardless of whether KX is even the issue in play.</p>
   <p>Track the running total in the billing system against the patient's cumulative charges automatically. A manual per-patient check is the most common way practices either miss the KX requirement entirely or attach it before the threshold has actually been crossed.</p>
 
-  <h2>Worked billing scenarios</h2>
+  <h2 id="worked-billing-scenarios">Worked billing scenarios</h2>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Modifier stacking by scenario, each row shows the full modifier set for the claim as billed.</caption>
@@ -307,7 +315,7 @@
     </table>
   </div>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Hard-code GO into the OT charge template so it can't be dropped at charge entry.</li>
@@ -331,7 +339,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Does the 10% de minimis standard apply to every unit in a mixed OT/OTA session?</summary><p>No. It governs every full 15-minute unit, but the final, partial unit created by the 8-minute rule's remainder is judged differently: whichever provider, OT or OTA, furnished the majority of that specific unit's minutes decides whether CO applies, not the flat 10% threshold. This exception is the source of most OTA modifier disputes, because a practice applying the 10% rule mechanically to every unit, including the last one, ends up attaching CO more often than the standard actually requires.</p></details>
     <details class="faq-item"><summary>Do we need modifier 96 or 97 on Medicare claims?</summary><p>Generally no. 96 (habilitative) and 97 (rehabilitative) are predominantly commercial and state Medicaid requirements tied to ACA essential-health-benefit habilitative-services rules, not a traditional Medicare fee-for-service requirement the way GO is. Check the specific plan's policy before assuming either is required; billing to a commercial plan without the correct one attached is a common source of a benefit-category denial even when the treatment itself was appropriate.</p></details>
@@ -343,13 +351,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-occupational-therapy.html">Occupational therapy billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-occupational-therapy-ncci-mue-bundling.html">NCCI edits and MUE limits for occupational therapy <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-occupational-therapy-denials-appeals.html">Occupational therapy denials and appeals: CARC codes and the fix for each <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -398,6 +407,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

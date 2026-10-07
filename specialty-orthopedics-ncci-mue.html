@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Orthopedic NCCI Edits and MUE Limits | Verified RCM">
 <meta name="twitter:description" content="Orthopedic NCCI bundling edits explained: modifier indicators 0/1/9, MUE Adjudication Indicators 1/2/3, and the specific arthroscopy and hardware-removal pairs that trip claims.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,35 +225,26 @@
       <p class="lede">Orthopedics stacks more NCCI bundling into a single operative session than almost any other specialty, a knee arthroscopy alone can touch meniscectomy, chondroplasty, loose-body removal, and diagnostic arthroscopy codes in one sitting, and hardware removal shows up as a column-2 pair against half the fixation and arthroplasty codes in the book. Two CMS values decide whether any of that is billable at all: the NCCI modifier indicator, and the MUE Adjudication Indicator. Neither is a guess, and neither is optional to check before a claim goes out or an appeal gets written.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-orthopedics.html">orthopedics billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a joint hinge, two angled bone segments meeting at a pivot, representing orthopedics">
-  <!-- outer decorative range-of-motion arc -->
-  <path d="M 151.4 207.5 A 85 85 0 0 1 298.6 207.5" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="1 9"/>
-  <!-- inner range-of-motion arc -->
-  <path d="M 182.9 214.7 A 55 55 0 0 1 267.1 214.7" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 8"/>
-
-  <!-- bone 1 rails (secondary) -->
-  <path d="M 133.3 124.4 L 218.3 254.4" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M 146.7 115.6 L 231.7 245.6" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-
-  <!-- bone 2 rails (secondary) -->
-  <path d="M 222.1 257.5 L 352.1 307.5" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M 227.9 242.5 L 357.9 292.5" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-
-  <!-- end tick marks -->
-  <path d="M 131.6 125.5 L 148.4 114.5" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M 351.4 309.3 L 358.6 290.7" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-
-  <!-- primary bone segments meeting at pivot -->
-  <path d="M 140 120 L 225 250" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 225 250 L 355 300" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- pivot accent -->
-  <circle cx="225" cy="250" r="16" fill="none" stroke="var(--cat-surgical)" stroke-width="2.5"/>
-  <circle cx="225" cy="250" r="3.5" fill="var(--cat-surgical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-orthopedics-wide.svg" alt="Orthopedics: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-orthopedics-carries-so-much-bundling-exposure">Why orthopedics carries so much bundling exposure</a></li>
+      <li><a href="#the-ncci-modifier-indicator-0-1-9">The NCCI modifier indicator: 0, 1, 9</a></li>
+      <li><a href="#orthopedic-bundling-pairs-that-show-up-most">Orthopedic bundling pairs that show up most</a></li>
+      <li><a href="#mai-1-2-3-what-an-mue-denial-actually-means">MAI 1, 2, 3: what an MUE denial actually means</a></li>
+      <li><a href="#building-a-scrubber-rule-that-wont-go-stale">Building a scrubber rule that won't go stale</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -265,10 +255,10 @@
     </ul>
   </section>
 
-  <h2>Why orthopedics carries so much bundling exposure</h2>
+  <h2 id="why-orthopedics-carries-so-much-bundling-exposure">Why orthopedics carries so much bundling exposure</h2>
   <p>Four patterns generate most of the NCCI volume in this specialty. Knee and shoulder arthroscopy routinely touch multiple procedures in one compartment or one session, diagnostic arthroscopy converted to surgical, chondroplasty alongside meniscectomy, subacromial decompression alongside rotator cuff repair. Fracture care bundles the first cast or splint and routine follow-up into the definitive treatment code, so a separately billed casting-application code on the same date as the definitive fixation is a near-automatic edit. Hardware removal is functionally part of many revision and staged procedures, which is exactly why 20680 shows up as a column-2 code so often. And joint injection codes bundle their own ultrasound guidance and cap at one code per joint per session, which is a unit-cap issue rather than a pairing issue. Covered in the pillar guide's overview, this page goes deeper into the pair-specific and code-specific values that decide what's actually billable.</p>
 
-  <h2>The NCCI modifier indicator: 0, 1, 9</h2>
+  <h2 id="the-ncci-modifier-indicator-0-1-9">The NCCI modifier indicator: 0, 1, 9</h2>
   <p>Every Column 1/Column 2 code pair in the NCCI Procedure-to-Procedure edit file carries one of three indicator values, and the indicator, not the clinical story, decides whether an override modifier can even be attempted.</p>
   <ul class="check-list">
     <li><span class="warn">0</span><span><b>Never bypassable.</b> No modifier, however well the record supports a distinct service, overrides the edit. If the pair carries a 0, the column-2 code simply isn't separately payable on that claim, full stop. Appending 59 or an X-modifier here doesn't get the claim paid, it just adds an unsupported modifier to a claim that was already going to deny.</span></li>
@@ -277,7 +267,7 @@
   </ul>
   <p>The practical filter: before appending any override modifier to an orthopedic claim, look up the specific pair's current indicator. If it's 0, stop, there's no version of the documentation that changes the outcome, and the right move is to not bill the column-2 code at all rather than bill it and lose the appeal later.</p>
 
-  <h2>Orthopedic bundling pairs that show up most</h2>
+  <h2 id="orthopedic-bundling-pairs-that-show-up-most">Orthopedic bundling pairs that show up most</h2>
   <p>These are the pairs that generate the highest denial and take-back volume in orthopedic claims review, based on consistent billing-industry and coding-education sourcing.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -295,7 +285,7 @@
   </div>
   <p>⚠️ <b>On specificity:</b> the indicator values in this table reflect consistent secondary sourcing from coding-education publishers and billing-industry commentary; this build could not open CMS's primary NCCI PTP Edits file directly to confirm the exact indicator digit for each pair, because CMS's site returned an access error to automated fetch attempts made while researching this page, the same limitation disclosed on this site's orthopedics pillar guide. Treat every value above as reported-but-unconfirmed and verify the current value for your specific pair in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before building it into a scrubber rule, because these values are republished quarterly and the lookup tool is the only source that's always current.</p>
 
-  <h2>MAI 1, 2, 3: what an MUE denial actually means</h2>
+  <h2 id="mai-1-2-3-what-an-mue-denial-actually-means">MAI 1, 2, 3: what an MUE denial actually means</h2>
   <p>The Medically Unlikely Edit sets a per-code, per-day unit cap, and the MUE Adjudication Indicator attached to that cap decides whether exceeding it can ever be appealed.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Claim-line edit.</b> Units above the cap deny that specific line, but a genuinely repeated or bilateral service can often be split across separate claim lines with the correct laterality or distinct-service modifier and documentation, it's a formatting fix more than an appeal.</span></li>
@@ -309,7 +299,7 @@
     <div><div class="protip-label">Pro tip</div><p>Check the modifier indicator first, then the MAI, in that order, every time, before you bill an override modifier and before you draft an appeal. A pair with indicator 0 never needs an MAI check, because the column-2 code was never separately payable to begin with. A code that clears the indicator check still has to clear the unit cap separately; the two values answer different questions and both have to come back favorable before staff time goes into the claim.</p></div>
   </div>
 
-  <h2>Building a scrubber rule that won't go stale</h2>
+  <h2 id="building-a-scrubber-rule-that-wont-go-stale">Building a scrubber rule that won't go stale</h2>
   <p>An NCCI or MUE rule hard-coded from a table like this one, ours included, is accurate on the day it's built and wrong within a quarter if nobody revisits it. CMS republishes both the PTP edit file and the MUE table quarterly, and pairs get added, removed, or flip indicator values without much notice outside the release itself.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Identify the pair or code, not the category.</b> "Arthroscopy bundling" isn't a rule; "29877 into 29881, same compartment" is. Build rules at the CPT-pair level.</span></li>
@@ -318,7 +308,7 @@
     <li><span class="check">4</span><span><b>Set a quarterly review trigger tied to CMS's publication schedule</b>, not an annual one, NCCI updates land quarterly, and an annual review misses three of every four release cycles.</span></li>
   </ul>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Look up the specific pair's current indicator before appending 59, XE, XS, XP, or XU.</li>
@@ -342,7 +332,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Can we ever bill 29877 with 29880 or 29881 on the same knee?</summary><p>Not under the standard CPT pairing, chondroplasty (29877) performed in the same compartment as a meniscectomy (29880 or 29881) is bundled into the meniscectomy by definition, and industry-reported guidance treats that pair as a modifier indicator of 0, meaning no override modifier changes the outcome. The Medicare-specific path is HCPCS G0289, which reports chondroplasty or loose-body removal performed in a genuinely different compartment of the same knee during the same arthroscopic session. It only applies to the different-compartment scenario, and it's a Medicare-specific code, not a universal CPT substitute, check whether a given commercial payer recognizes it before relying on it.</p></details>
     <details class="faq-item"><summary>Why does our hardware-removal claim keep bundling into the arthroplasty or fixation code?</summary><p>20680 is widely reported as a common Column 2 code against arthroplasty and fracture-fixation procedures when the hardware removed is an integral, expected part of the primary procedure at the same anatomic site, for example, removing temporary fixation hardware as part of a planned staged revision. It's billable separately, with an override modifier, only when the hardware removed is at a distinct anatomic site or is left over from a prior, unrelated procedure, and the operative note has to say so explicitly. Confirm the specific pair's modifier indicator before appending 59 or an X-modifier, because a 0 indicator means no modifier changes the outcome regardless of documentation.</p></details>
@@ -354,7 +344,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates and quarterly NCCI/MUE revisions. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix and the current-quarter CMS NCCI Edits Lookup Tool before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-orthopedics.html">The NCCI and MUE section of our orthopedics guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-orthopedics-denials-appeals.html">Orthopedic denials and appeals: CARC codes and winning arguments <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -362,6 +352,7 @@
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialties.html">All 30 specialties <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -410,6 +401,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

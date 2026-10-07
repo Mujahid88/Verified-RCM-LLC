@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="NCCI Edits and Bundling Traps in ENT Coding | Verified RCM">
 <meta name="twitter:description" content="ENT NCCI edits and bundling traps: 31254/31255, 31256/31267, 92552-92556 into 92557, 31575/31579, myringotomy into tympanostomy, and the 95165/95004 MUE caps.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,15 +225,27 @@
       <p class="lede">ENT bundling denials cluster around five predictable pairs, and every one of them turns on a single value coders rarely check before submission: the NCCI modifier indicator. A 0 means no modifier, however well documented, ever unbundles the pair, the second code simply isn't separately payable. A 1 means an override is possible, but only where the record shows a genuinely distinct site or session. This guide names the pairs, states the indicator that governs each, and covers the two allergy/immunotherapy MUE caps that trip up ENT practices running in-office testing.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-ent.html">ENT coding and billing guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art for ENT and otolaryngology: a small spiral, a gentle arc, and a straight line">
-  <path d="M190,205 L189.2,212.2 L179.2,215.1 L170,205 L175.8,189.1 L195.8,186.2 L210,205 L199.2,229.5 L169.2,232.4 L150,205" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M140,320 Q240,268 340,320" fill="none" stroke="var(--muted)" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M300,150 L235,262" fill="none" stroke="var(--cat-surgical)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="300" cy="150" r="4.5" fill="var(--cat-surgical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-ent-wide.svg" alt="ENT: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#how-the-modifier-indicator-decides-everything">How the modifier indicator decides everything</a></li>
+      <li><a href="#31254-31255-partial-versus-total-ethmoidectomy">31254 / 31255: partial versus total ethmoidectomy</a></li>
+      <li><a href="#31256-31267-the-maxillary-antrostomy-overlap">31256 / 31267: the maxillary antrostomy overlap</a></li>
+      <li><a href="#9255292556-into-92557-component-audiometry">92552–92556 into 92557: component audiometry</a></li>
+      <li><a href="#31575-31579-diagnostic-laryngoscopy-into-stroboscopy">31575 / 31579: diagnostic laryngoscopy into stroboscopy</a></li>
+      <li><a href="#myringotomy-into-tympanostomy-tube-placement">Myringotomy into tympanostomy tube placement</a></li>
+      <li><a href="#mue-thresholds-95165-and-95004">MUE thresholds: 95165 and 95004</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -245,7 +256,7 @@
     </ul>
   </section>
 
-  <h2>How the modifier indicator decides everything</h2>
+  <h2 id="how-the-modifier-indicator-decides-everything">How the modifier indicator decides everything</h2>
   <p>Every NCCI Column 1/Column 2 code pair carries a modifier indicator, and that single digit is the only thing that determines whether documentation can ever change the outcome. An indicator of <b>0</b> means the second code is never separately payable against the first, under any circumstances, the pair is a permanent bundle, and no amount of chart documentation reverses it. An indicator of <b>1</b> means an NCCI-associated modifier (59 or the more specific X-modifier) can bypass the edit, but only where the record independently shows the second service was genuinely distinct: a different side, a different sinus, a different session. The indicator is pair-specific, not code-specific, the same code can carry a 0 against one partner and a 1 against another.</p>
   <p>The five pairs below are where ENT loses the most claims to this exact mechanic. Check the indicator before you ever reach for 59 or XS.</p>
 
@@ -264,19 +275,19 @@
   </div>
   <p>⚠️ <b>On the specific indicator digits above:</b> the bundling relationship for each pair (which code is the Column 1 comprehensive service and which is the bundled Column 2 component) is well corroborated across industry secondary sources, and the 31254/31255 indicator-1 status is already stated in our <a href="specialty-ent.html">ENT pillar</a>, sourced there against the same standard industry reporting. This build could not open CMS's primary NCCI PTP Edits file directly to re-confirm the exact indicator digit for the other four pairs on this page, 31267/31256, 92552&ndash;92556/92557, 31575/31579, and 69420&ndash;69421/69433&ndash;69436 (CMS's Medicare Coverage Database and NCCI Policy Manual PDF pages returned an access error, HTTP 403, to every automated fetch attempt made while researching this page, including a direct attempt at the 2026 NCCI Policy Manual Chapter 5 PDF), verify the current indicator for any pair you're building into a scrubber rule in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before relying on it operationally.</p>
 
-  <h2>31254 / 31255: partial versus total ethmoidectomy</h2>
+  <h2 id="31254-31255-partial-versus-total-ethmoidectomy">31254 / 31255: partial versus total ethmoidectomy</h2>
   <p>31254 reports a partial (anterior) ethmoidectomy; 31255 reports a total ethmoidectomy addressing both anterior and posterior ethmoid cells. Because a total ethmoidectomy already includes the anterior work, 31254 is a Column 2 component of 31255 whenever both are billed for the same side. The indicator-1 status means the edit is bypassable, but only in one of two genuine scenarios: a partial ethmoidectomy on one side paired with a total on the other, or a documented separate session. Billing both for the same side in the same operative encounter, even with 59 or XS attached, describes one procedure reported twice, not two distinct services, and won't survive an audit regardless of the modifier.</p>
 
-  <h2>31256 / 31267: the maxillary antrostomy overlap</h2>
+  <h2 id="31256-31267-the-maxillary-antrostomy-overlap">31256 / 31267: the maxillary antrostomy overlap</h2>
   <p>31256 reports nasal/sinus endoscopy with maxillary antrostomy alone. 31267 reports the same antrostomy plus removal of tissue from the maxillary sinus, a more extensive version of the same access, not an additional separate procedure. Because 31267 already includes the antrostomy component described by 31256, the pair bundles on the same side in the same session, and the override logic mirrors the ethmoidectomy pair above: a genuinely separate side or a documented separate session is what makes the modifier defensible, not "the surgeon happened to do more work than usual." A coder billing 31256 alongside 31267 for the same maxillary sinus because the antrostomy felt like a distinct billable step is the single most common trigger for this specific denial.</p>
 
-  <h2>92552&ndash;92556 into 92557: component audiometry</h2>
+  <h2 id="9255292556-into-92557-component-audiometry">92552&ndash;92556 into 92557: component audiometry</h2>
   <p>92557 (comprehensive audiometry, air and bone conduction with speech threshold and recognition) already includes the individual pieces described by 92552 (pure tone air only), 92553 (air and bone), 92555 (speech threshold alone), and 92556 (speech threshold with recognition). This is a comprehensive-versus-component relationship, not a partial-versus-total one like the sinus pairs above, and it's reported to carry a modifier indicator of 0: there is no clinically defensible scenario where a full comprehensive audiometry test and one of its own subset components are separately payable for the same ear on the same date. Bill 92557 alone whenever the comprehensive protocol was actually run. Reach for a component code only when the encounter genuinely performed just that limited piece, a pure tone screen without speech testing, for instance, not as an add-on to the comprehensive code.</p>
 
-  <h2>31575 / 31579: diagnostic laryngoscopy into stroboscopy</h2>
+  <h2 id="31575-31579-diagnostic-laryngoscopy-into-stroboscopy">31575 / 31579: diagnostic laryngoscopy into stroboscopy</h2>
   <p>31579 (laryngoscopy with stroboscopy) already includes the diagnostic scope component described by 31575. This is the same overlap pattern as the audiometry pair: the more complete code subsumes the simpler one entirely, and industry sourcing consistently reports the pair as never separately payable together. Bill 31579 alone whenever stroboscopy was performed as part of the exam. Use 31575 on its own only when stroboscopy genuinely was not part of that encounter, a straightforward diagnostic scope with no strobe light unit involved.</p>
 
-  <h2>Myringotomy into tympanostomy tube placement</h2>
+  <h2 id="myringotomy-into-tympanostomy-tube-placement">Myringotomy into tympanostomy tube placement</h2>
   <p>Myringotomy alone, 69420 without general anesthesia, 69421 requiring it, describes an incision into the eardrum without tube placement. 69433 (tube placement, local/topical anesthesia) and 69436 (tube placement, general anesthesia) both require making that same incision as the first step of the procedure. Whenever tubes are actually placed in the same session, the myringotomy code is a bundled step of the tube-placement code for that ear, with no override: you cannot bill 69420/69421 alongside 69433/69436 for the same ear in the same encounter regardless of documentation, because the incision is inherent to tube placement, not a separate service. Myringotomy is only separately billable as a stand-alone procedure when no tube was placed at all, a diagnostic or therapeutic drainage incision performed on its own.</p>
 
   <div class="dodont">
@@ -294,7 +305,7 @@
     </ul></div>
   </div>
 
-  <h2>MUE thresholds: 95165 and 95004</h2>
+  <h2 id="mue-thresholds-95165-and-95004">MUE thresholds: 95165 and 95004</h2>
   <p>Two Medically Unlikely Edits matter most for ENT practices running in-office allergy testing and immunotherapy, and both are gated by unit-count math rather than a same-day bundling pair.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -321,7 +332,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Can we ever bill 31254 and 31255 together for the same patient?</summary><p>Only when the operative note documents genuinely separate sides or separate sessions, and only because this pair carries a modifier indicator of 1. Bill 31255 (total ethmoidectomy) alone when it was performed on the side in question; append 59 or XS to 31254 only if a partial ethmoidectomy was performed on the other side, or at a distinct session, and the note says so explicitly. Billing both for the same side in the same operative encounter is not a distinct-service scenario and will not survive an audit even with a modifier attached.</p></details>
     <details class="faq-item"><summary>Why does our audiometry component code always deny when billed with 92557?</summary><p>Because 92552, 92553, 92555, and 92556 are each a subset of the work already described by 92557, and that pair is reported to carry a modifier indicator of 0, no modifier, however well documented, unbundles it. There is no clinical scenario where a comprehensive audiometry test and one of its own components are separately payable for the same ear on the same date. Bill 92557 alone whenever the comprehensive test was performed, and reserve the component codes for encounters where only that limited piece of testing actually happened.</p></details>
@@ -333,13 +344,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-ent.html">ENT (Otolaryngology) billing and coding pillar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-ent-denials-appeals.html">ENT claim denials and appeals: the fixes that actually work <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-ent-icd10-specificity.html">ICD-10 coding for ENT: getting laterality and site right <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -388,6 +400,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="BPH Procedure Billing: UroLift, Rezum, TURP, and Aquablation | Verified RCM">
 <meta name="twitter:description" content="BPH procedure coding for UroLift, Rezum, TURP, and Aquablation: CPT codes, the UroLift unit ceiling, TURP bundling, LCD coverage, and prior authorization by payer type.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,33 +225,26 @@
       <p class="lede">Four procedures treat the same diagnosis and get scheduled almost interchangeably by front-office staff working around a prior-auth timeline, but they're billed, capped, and covered under four genuinely different rule sets. One has a Medicare unit ceiling that denies a claim line even when every implant was clinically necessary. One is a comprehensive code that bundles the very procedure most likely to get billed alongside it. One has an active Medicare LCD; two, as far as we could confirm, don't. This guide is the code-level decision tree for all four.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-urology.html">urology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a flow line passing through a valve node, representing urology">
-  <!-- secondary echo line, upper -->
-  <path d="M 90 155 C 140 138, 175 158, 205 178 C 222 189, 232 193, 245 194" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- secondary echo line, lower -->
-  <path d="M 245 286 C 265 289, 285 300, 320 300 C 355 300, 380 312, 410 322" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- primary flow line passing through the valve -->
-  <path d="M 60 195 C 120 170, 170 195, 205 222 C 222 235, 232 239, 240 240 C 248 241, 258 246, 278 243 C 320 237, 355 258, 420 285" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- radiating ticks around the valve -->
-  <path d="M 266 214 L 278 200" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M 214 214 L 202 200" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M 266 266 L 278 280" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M 214 266 L 202 280" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- valve node -->
-  <circle cx="240" cy="240" r="34" fill="none" stroke="var(--cat-surgical)" stroke-width="2.5"/>
-  <circle cx="240" cy="240" r="11" fill="none" stroke="var(--cat-surgical)" stroke-width="2"/>
-
-  <!-- flow indicator dots -->
-  <circle cx="130" cy="182" r="3" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="185" cy="208" r="3" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="300" cy="235" r="4" fill="var(--cat-surgical)" stroke="none"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-urology-wide.svg" alt="Urology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-four-procedures-at-a-glance">The four procedures, at a glance</a></li>
+      <li><a href="#urolift-the-unit-ceiling-worked">UroLift: the unit ceiling, worked</a></li>
+      <li><a href="#rezum-the-code-that-isnt-53852">Rezum: the code that isn't 53852</a></li>
+      <li><a href="#turp-what-52601-already-includes">TURP: what 52601 already includes</a></li>
+      <li><a href="#aquablation-the-code-that-changed-and-the-lcd-that-governs-i">Aquablation: the code that changed, and the LCD that governs it</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -263,7 +255,7 @@
     </ul>
   </section>
 
-  <h2>The four procedures, at a glance</h2>
+  <h2 id="the-four-procedures-at-a-glance">The four procedures, at a glance</h2>
   <p>All four treat symptomatic BPH, but split cleanly into two operational categories: UroLift and Rezum are non-resective, device-based, frequently office- or ASC-based; TURP and Aquablation are resective, generally facility-based with anesthesia. Confirm the diagnosis pairs with LUTS, <code>N40.1</code>, not the LUTS-free <code>N40.0</code>, before any of the four goes on a claim; a procedure billed against N40.0 alone, with no symptom burden documented, is one of the more common medical-necessity denials in this family.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -278,7 +270,7 @@
     </table>
   </div>
 
-  <h2>UroLift: the unit ceiling, worked</h2>
+  <h2 id="urolift-the-unit-ceiling-worked">UroLift: the unit ceiling, worked</h2>
   <p><code>52441</code> reports the first permanent transprostatic implant; add-on code <code>+52442</code> reports each additional implant, one unit per implant. Billing-industry sources, including manufacturer Teleflex's own physician billing guide, consistently report a Medicare Medically Unlikely Edit of 1 unit on 52441 and 6 units on +52442, a combined ceiling of 7 payable implants per session. &#9888;&#65039; We could not independently pull that exact MUE value from CMS's own MUE table during this build (CMS.gov access limits in this environment); confirm it there before relying on it operationally.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>6 implants placed</div><ul>
@@ -293,11 +285,11 @@
   <p>Whether that eighth unit is recoverable on appeal depends on the MUE Adjudication Indicator (MAI) assigned to +52442, not on how well the note justifies the implant count. An MAI of 1 (claim line edit) generally allows an appeal with supporting documentation; an MAI of 3 (date-of-service edit) is a much harder ceiling most payers won't move on. Confirm the current MAI before submission, not after the denial, that's the higher-leverage step.</p>
   <p>Traditional Medicare generally does not require prior authorization for UroLift. Most commercial payers and Medicare Advantage plans do, frequently with step-therapy documentation showing a trial of medical management (typically an alpha-blocker or 5-alpha-reductase inhibitor) first. Verify the specific plan every time, including any Medicare Advantage replacement plan.</p>
 
-  <h2>Rezum: the code that isn't 53852</h2>
+  <h2 id="rezum-the-code-that-isnt-53852">Rezum: the code that isn't 53852</h2>
   <p>Rezum bills as <code>53854</code>, transurethral destruction of prostate tissue by radiofrequency water vapor thermotherapy. It is not the same code as <code>53852</code>, transurethral radiofrequency needle ablation of the prostate. The two treat tissue by genuinely different mechanisms (steam versus RF energy through a needle), and treating them as interchangeable because both are "ablation of the prostate" is a code-selection error, not a documentation nuance a modifier fixes.</p>
   <p>Like UroLift, we could not confirm a dedicated Medicare LCD for Rezum in the CMS Coverage Database as of this build. That puts more weight on the diagnosis and symptom documentation carrying the claim: <code>N40.1</code> with a clearly documented LUTS burden, not a bare BPH diagnosis. Commercial and Medicare Advantage prior-auth requests follow the same step-therapy pattern as UroLift, confirm the specific payer's policy before scheduling, since the two devices don't share an authorization.</p>
 
-  <h2>TURP: what 52601 already includes</h2>
+  <h2 id="turp-what-52601-already-includes">TURP: what 52601 already includes</h2>
   <p><code>52601</code> is a comprehensive code. Diagnostic cystoscopy, meatotomy, and urethral calibration or dilation performed the same session are bundled into it and generally not separately payable. Industry billing guidance consistently describes 52000 (diagnostic cystoscopy) as an NCCI column-2 component of 52601 under an edit a modifier generally does not override when the cystoscopy is simply the surgeon's view of the prostate on the way to resecting it, the case in the overwhelming majority of TURP claims. &#9888;&#65039; We could not independently confirm the current NCCI modifier indicator for this pair against CMS's own PTP edit file during this build (CMS.gov access limits); check it directly before relying on it.</p>
   <p>The narrow exception some payers recognize is a diagnostic cystoscopy for a genuinely separate, unrelated indication, working up an incidental bladder lesion, for example, that would have been necessary on its own regardless of the planned TURP. That has to be explicit in the operative note: two clearly separated findings, not one combined narrative that happens to mention both. Billing 52000, a meatotomy code, or a dilation code alongside 52601 without that separation is one of the more common self-inflicted denials in BPH surgical billing.</p>
   <div class="protip">
@@ -305,7 +297,7 @@
     <div><div class="protip-label">Pro tip</div><p>If your charge master auto-populates 52000 on every cystoscopic case, add a hard stop for TURP claims specifically. The auto-added line is the single most common source of this denial, not a coder actively choosing to bill it, but a scrubber rule that doesn't distinguish TURP from a stand-alone diagnostic cystoscopy.</p></div>
   </div>
 
-  <h2>Aquablation: the code that changed, and the LCD that governs it</h2>
+  <h2 id="aquablation-the-code-that-changed-and-the-lcd-that-governs-i">Aquablation: the code that changed, and the LCD that governs it</h2>
   <p>Aquablation converted from Category III <code>0421T</code> to a permanent, RVU-valued Category I code, <code>52597</code>, effective January 1, 2026. Continuing to report 0421T after the transition is a denial waiting to happen, and a payer contract negotiated while it was still a Category III code may not yet reflect the new code at all, confirm the fee schedule has actually been updated, not just that the crosswalk exists on paper.</p>
   <p>Unlike UroLift and Rezum, Aquablation runs on an active, dense family of Medicare LCDs. Several MACs publish it as "Transurethral Waterjet Ablation of the Prostate"; others, using older terminology for the same waterjet technology, publish it as "Fluid Jet System in the Treatment of Benign Prostatic Hyperplasia (BPH)." Confirmed current examples, verified against the CMS Coverage Database:</p>
   <div class="data-table-wrap">
@@ -324,7 +316,7 @@
   </div>
   <p>Each LCD has a matching billing-and-coding article (A58227 from Noridian, A57926 from CGS) carrying the covered-diagnosis list the LCD itself doesn't spell out. Coverage is decided at the jurisdiction level: identify your MAC first, then pull that MAC's current LCD and article before the claim goes out, rather than citing a different jurisdiction's LCD number because it's the one that turned up first in a search.</p>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Confirm the MUE Adjudication Indicator on +52442 before appealing any excess UroLift implant unit.</li>
@@ -348,7 +340,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Why does Aquablation have an active Medicare LCD but UroLift and Rezum don't?</summary><p>Aquablation is covered under a dense family of local coverage determinations titled "Transurethral Waterjet Ablation of the Prostate" (also published by some MACs as "Fluid Jet System in the Treatment of Benign Prostatic Hyperplasia"), for example L38705 from Noridian Healthcare Solutions and L38378 from CGS Administrators, each with its own billing-and-coding article. We could not find a comparable dedicated LCD for UroLift or Rezum in the CMS Coverage Database as of this writing. That doesn't mean they're uncovered; it means medical necessity is judged under general BPH coverage rules rather than a procedure-specific policy, which makes the Aquablation LCD's own criteria the one you actually have to read line by line, while UroLift and Rezum claims lean more heavily on a clean N40.1 diagnosis and a documented trial of medical management.</p></details>
     <details class="faq-item"><summary>Does UroLift's 7-implant unit ceiling reset per session, and is anything recoverable if a case goes over it?</summary><p>The ceiling applies per operative session, it comes from Medicare Medically Unlikely Edits of 1 unit on 52441 and 6 units on add-on code +52442, for a combined 7 payable implants on initial submission. Units billed past that ceiling deny that claim line. Whether the excess is recoverable depends on the MUE Adjudication Indicator (MAI) assigned to +52442, not on how thoroughly the note documents necessity: an MAI of 1 allows a claim-level appeal with supporting documentation, while an MAI of 3 is a hard, non-appealable edit. Confirm the current MAI before submission, we could not independently pull that indicator from CMS's own MUE table during this build, so verify it there before relying on it operationally.</p></details>
@@ -360,12 +352,13 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-urology.html">Urology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-urology-cystoscopy-coding.html">Cystoscopy and Endoscopic Bladder Procedure Billing <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-urology-urodynamics-catheter-dme.html">Urodynamics Billing and Medicare Coverage <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -414,6 +407,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

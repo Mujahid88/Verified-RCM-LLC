@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="ICD-10 Coding for Mental Health: Specificity That Stops Denials | Verified RCM">
 <meta name="twitter:description" content="ICD-10 codes for mental health diagnoses: F32/F33 episode and severity specifiers, F41.1 vs F41.9 vs F41.3 anxiety, F43.10-F43.12 PTSD, and F43.22 adjustment disorder.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,18 +225,25 @@
       <p class="lede">An unspecified diagnosis code isn't invalid, it's just frequently missing from the covered-diagnosis list a payer's coverage policy actually checks against. F41.9, F32.9, and F43.10 are all valid, billable ICD-10-CM codes, and all three are also a common way to trigger a CO-50 medical-necessity denial when the governing policy names a more specific subtype instead. This guide covers exactly where mental health's four highest-volume diagnosis families, depressive disorders, anxiety disorders, PTSD, and adjustment disorders, need more than the default code, and why the difference decides whether the claim clears.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of <a href="specialty-mental-health.html">our complete guide to mental health billing and coding</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract overlapping wave lines representing calm rhythms in mental health care">
-  <path d="M20,150 C 80,120 130,120 190,150 C 250,180 300,180 360,150 C 410,124 440,124 460,140" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
-  <path d="M10,205 C 70,165 125,165 190,205 C 255,245 310,245 370,205 C 415,175 440,175 470,195" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
-  <path d="M15,260 C 80,215 140,215 210,260 C 280,305 340,305 400,260 C 430,238 450,238 465,250" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M20,315 C 85,278 145,278 215,315 C 285,352 345,352 405,315 C 430,298 445,298 460,308" fill="none" stroke="var(--cat-behavioral)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M30,365 C 90,335 145,335 205,365 C 265,395 320,395 380,365 C 415,347 435,347 455,358" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
-  <circle cx="215" cy="315" r="4.5" fill="var(--cat-behavioral)"/>
-  <circle cx="330" cy="329" r="3" fill="var(--cat-behavioral)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-mental-health-wide.svg" alt="Mental health: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-specificity-decides-the-claim-not-just-the-diagnosis">Why specificity decides the claim, not just the diagnosis</a></li>
+      <li><a href="#depressive-disorders-f32-vs-f33-and-the-specifiers-that-foll">Depressive disorders: F32 vs. F33, and the specifiers that follow</a></li>
+      <li><a href="#anxiety-disorders-f410-f411-f413-vs-f419">Anxiety disorders: F41.0, F41.1, F41.3 vs. F41.9</a></li>
+      <li><a href="#ptsd-f4310-f4311-f4312">PTSD: F43.10, F43.11, F43.12</a></li>
+      <li><a href="#adjustment-disorder-f4320f4329-especially-f4322">Adjustment disorder: F43.20–F43.29, especially F43.22</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -248,11 +254,11 @@
     </ul>
   </section>
 
-  <h2>Why specificity decides the claim, not just the diagnosis</h2>
+  <h2 id="why-specificity-decides-the-claim-not-just-the-diagnosis">Why specificity decides the claim, not just the diagnosis</h2>
   <p>Every code discussed on this page is a real, HIPAA-valid ICD-10-CM code, verified live against the FY2026 code set for this guide. None of them are wrong to use clinically. The issue is narrower and more mechanical: Medicare LCDs and coverage articles for psychotherapy and psychological testing publish a list of the specific diagnosis codes that support medical necessity for that service, and an unspecified or category-level code frequently isn't on it, even when a more specific code describing the same patient would be. Three coverage documents govern this territory depending on jurisdiction, First Coast Service Options' <b>A57520</b>, "Billing and Coding: Psychiatric Diagnostic Evaluation and Psychotherapy Services" (effective 01/01/2025), First Coast's earlier <b>L33252</b> LCD of the same name (effective 07/01/2020), and Palmetto GBA's <b>L39853</b>, "Outpatient Psychotherapy" (effective 10/20/2024), all confirmed live against the CMS Coverage Database for this guide. Find your own MAC's version before treating any one of these as universal; coverage policy in behavioral health is written per contractor, not nationally.</p>
   <p>⚠️ This build confirmed the document IDs, contractor names, and effective dates above directly against the CMS Coverage Database. The specific covered-diagnosis code lists inside each article were not independently re-verified here, CMS's article pages returned an access error to automated retrieval during this build, so pull the actual diagnosis list from your governing article before finalizing a coding rule against it. The pattern described below (specific subtype coded, category-level default avoided) reflects standard coverage-policy structure across behavioral health LCDs generally, not a confirmed line-by-line reading of any one article's list.</p>
 
-  <h2>Depressive disorders: F32 vs. F33, and the specifiers that follow</h2>
+  <h2 id="depressive-disorders-f32-vs-f33-and-the-specifiers-that-foll">Depressive disorders: F32 vs. F33, and the specifiers that follow</h2>
   <p>F32 codes a single depressive episode; F33 codes a recurrent one, the distinction requires the chart to actually establish episode count, not just current symptoms. Both branches carry a severity digit, and F33 adds a separate remission-status branch that F32 splits differently.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -271,7 +277,7 @@
   </div>
   <p>The trap here isn't picking the wrong code at intake, it's never revisiting it. A first visit often can't support a severity or episode-count determination, so F32.9 is a legitimate first claim. The problem is the chart that still carries F32.9 eight months and a documented second episode later, when the diagnosis has clearly moved to F33-something and nobody updated the superbill. Recurrent-episode history has to be written into the note explicitly, "second documented episode, prior episode [date], full interim remission", or a coder has no basis to move off F32 even when the clinician knows the history.</p>
 
-  <h2>Anxiety disorders: F41.0, F41.1, F41.3 vs. F41.9</h2>
+  <h2 id="anxiety-disorders-f410-f411-f413-vs-f419">Anxiety disorders: F41.0, F41.1, F41.3 vs. F41.9</h2>
   <p>The F41 family is smaller than depression's, which makes the unspecified default even harder to justify once the presentation is clear.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -288,7 +294,7 @@
   </div>
   <p>F41.9 is defensible at an initial visit before diagnostic clarity exists, or genuinely when a patient's presentation doesn't yet sort into a specific subtype. It stops being defensible once a course of psychotherapy is underway and the treatment note keeps describing GAD-consistent symptoms, persistent, hard-to-control worry, months of duration, multiple worry domains, without the diagnosis on the claim ever moving to F41.1. That gap is exactly where an otherwise clean psychotherapy claim denies against a coverage policy that names F41.1 but not F41.9.</p>
 
-  <h2>PTSD: F43.10, F43.11, F43.12</h2>
+  <h2 id="ptsd-f4310-f4311-f4312">PTSD: F43.10, F43.11, F43.12</h2>
   <p>PTSD's specificity axis is duration, and it's a short, clean decision once the chart states it.</p>
   <ul class="check-list">
     <li><span class="warn">F43.10</span><span><b>Unspecified.</b> Valid, but appropriate mainly before duration is established, a genuinely new presentation, or a chart that hasn't yet documented how long symptoms have persisted.</span></li>
@@ -297,7 +303,7 @@
   </ul>
   <p>Prior authorization reviewers for psychological testing and step-up levels of care look at chronicity as a clinical urgency signal, not a coding footnote, a chronic, treatment-resistant PTSD presentation reads differently on utilization review than a fresh acute reaction. Coding to F43.10 on a patient who has been in treatment for a year, with a chart that clearly supports chronic, understates the clinical picture on every claim and testing authorization request that follows.</p>
 
-  <h2>Adjustment disorder: F43.20&ndash;F43.29, especially F43.22</h2>
+  <h2 id="adjustment-disorder-f4320f4329-especially-f4322">Adjustment disorder: F43.20&ndash;F43.29, especially F43.22</h2>
   <p>This is the family with the widest gap between what the default code says and what the chart actually supports. Adjustment disorder is, by definition, a reaction to an identifiable stressor with a specified emotional or behavioral presentation, the presentation is almost always documented in the note even when the diagnosis code doesn't reflect it.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -342,7 +348,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Is F41.9 (anxiety disorder, unspecified) an invalid ICD-10 code?</summary><p>No. F41.9 is a valid, billable ICD-10-CM code, confirmed for HIPAA transactions in the FY2026 code set, and using it is never a coding error by itself. The problem is medical necessity, not validity: coverage policies for psychotherapy and testing often name specific anxiety subtypes, most commonly F41.1 (generalized anxiety disorder), as the covered indication, and F41.9 frequently isn't on that list. A claim can be denied for medical necessity while the diagnosis code on it is completely valid, those are two separate questions, and conflating them is why practices keep defaulting to unspecified codes without realizing the risk.</p></details>
     <details class="faq-item"><summary>How specific does a PTSD diagnosis need to be for ongoing psychotherapy or testing authorization?</summary><p>As specific as the clinical picture actually supports at the time of coding, which for PTSD means choosing between F43.11 (acute, generally under three months of symptoms) and F43.12 (chronic, three months or more) rather than defaulting to F43.10 (unspecified) once that duration is established. Authorization reviewers for testing and higher-intensity psychotherapy frequently weigh chronicity directly, since it affects both clinical urgency and expected treatment course, and a note that never states duration leaves the coder stuck defaulting to F43.10 indefinitely even after the chart clearly supports one of the specific codes.</p></details>
@@ -354,7 +360,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-mental-health.html">Mental health billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-mental-health-denials-appeals-behavioral-health.html">Mental health claim denials and appeals: CARC codes and sample language <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -362,6 +368,7 @@
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialties.html">All 30 specialties <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -410,6 +417,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

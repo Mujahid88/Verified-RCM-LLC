@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Claims Scrubbing &amp; Submission: Edits, Clearinghouse, Timely Filing | Verified RCM">
 <meta name="twitter:description" content="Claims scrubbing and submission guide: the 837/835 transaction flow, the edit categories that catch a claim before submission, rejection versus denial, and the timely filing clock.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -222,41 +221,28 @@
       <h1>Claims scrubbing: catching the error before the payer does.</h1>
       <p class="lede">A claim rejected by a scrubber costs a few seconds to fix. The same claim denied by a payer costs weeks of float, staff time to rework, and sometimes the money entirely. Scrubbing is simply moving the error detection from after submission to before it, and the economics of that shift are not close.</p>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of scattered claim points funneling down through filtering stages to a single clean, submitted claim">
-  <!-- incoming claims: scattered points above the funnel -->
-  <circle cx="140" cy="106" r="5" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="172" cy="118" r="4" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="204" cy="100" r="5" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="240" cy="112" r="4" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="276" cy="100" r="5" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="308" cy="118" r="4" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="340" cy="106" r="5" fill="none" stroke="var(--muted)" stroke-width="2"/>
-
-  <!-- funnel: primary outer walls -->
-  <path d="M150,132 L240,330" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M330,132 L240,330" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- funnel: secondary inner converging lines -->
-  <path d="M178,132 L240,330" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M206,136 L240,330" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M274,136 L240,330" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M302,132 L240,330" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-
-  <!-- filter stages: sieve bars crossing the funnel, narrowing with it -->
-  <path d="M177,190 L303,190" fill="none" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M195,230 L285,230" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M213,270 L267,270" fill="none" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- convergence point: the one clean, scrubbed claim -->
-  <circle cx="240" cy="330" r="7" fill="var(--cat-medical-billing)"/>
-
-  <!-- submission: accented line and arrow leaving the funnel -->
-  <path d="M240,338 L240,372" fill="none" stroke="var(--cat-medical-billing)" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M228,360 L240,374 L252,360" fill="none" stroke="var(--cat-medical-billing)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/claims-scrubbing.svg" alt="Claims scrubbing: billing process guide" width="1200" height="630" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#what-scrubbing-checks-in-order">What scrubbing checks, in order</a></li>
+      <li><a href="#the-pre-submission-edit-categories-that-catch-a-claim-before">The pre-submission edit categories that catch a claim before it moves</a></li>
+      <li><a href="#what-a-clearinghouse-actually-does-between-your-claim-and-th">What a clearinghouse actually does between your claim and the payer</a></li>
+      <li><a href="#rejections-vs-denials-two-different-problems-two-different-f">Rejections vs denials: two different problems, two different fixes</a></li>
+      <li><a href="#timely-filing-the-clock-that-runs-whether-or-not-the-claim-i">Timely filing: the clock that runs whether or not the claim is clean</a></li>
+      <li><a href="#the-feedback-loop-is-the-whole-point">The feedback loop is the whole point</a></li>
+      <li><a href="#step-by-step-building-a-pre-submission-scrubbing-workflow">Step by step: building a pre-submission scrubbing workflow</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <div class="payer-contact">
     <div class="payer-contact-item">
       <div class="payer-contact-label"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Standard transaction</div>
@@ -290,7 +276,7 @@
     </ul>
   </section>
 
-  <h2>What scrubbing checks, in order</h2>
+  <h2 id="what-scrubbing-checks-in-order">What scrubbing checks, in order</h2>
   <p>Scrubbing runs layered checks. The first layer is structural: required fields present, identifiers formatted correctly, dates valid and internally consistent. The second is code-level: valid current codes, correct modifiers, code-pair edits, unit limits, diagnosis supporting procedure. The third, and the layer that separates a good scrubber from a generic one, is payer-specific: rules encoding what your particular payers reject, drawn from your own remittance history rather than a shared national ruleset.</p>
   <p>That third layer is where most of the value sits and where most practices stop short. Every payer applies local policies and idiosyncratic field requirements that no off-the-shelf edit library covers. A denial that recurs three times and is reworked three times, without an edit being written, will recur a fourth.</p>
   <p>The order matters because each layer is cheaper to fix than the one after it. A structural error caught at entry costs a keystroke. The same error caught at the clearinghouse costs a rejection and a resubmission cycle. Left uncaught until the payer adjudicates, it costs a denial, a rework, and in the medical-necessity case, sometimes a formal appeal. Running the layers in this order, structural first, code-level second, payer-specific third, is what keeps the cheap fixes cheap and stops the expensive ones from ever reaching the payer at all.</p>
@@ -312,7 +298,7 @@
     </table>
   </div>
 
-  <h2>The pre-submission edit categories that catch a claim before it moves</h2>
+  <h2 id="the-pre-submission-edit-categories-that-catch-a-claim-before">The pre-submission edit categories that catch a claim before it moves</h2>
   <p>"Scrubbing" is not one check, it's a stack of them, and each category catches a different kind of mistake. Five categories account for most of what a working scrubber flags before a claim ever leaves the building.</p>
   <p><b>NPI and taxonomy mismatches.</b> The rendering or billing NPI doesn't match the taxonomy code on file with the payer, or a group NPI is used where an individual NPI is required. This is a formatting problem, not a clinical one, and it's entirely preventable by validating identifiers against payer enrollment records before the claim goes out.</p>
   <p><b>Missing or invalid modifiers.</b> A procedure that requires a modifier to be paid correctly, a bilateral indicator, a distinct-service override, a component split, goes out without one, or with one the code pair doesn't support. Modifier logic is specialty-specific and payer-specific enough that generic scrubber libraries catch only the most obvious cases; the rest need rules built around your own procedure mix.</p>
@@ -322,13 +308,13 @@
   <p>Catching any of these before submission is cheap: a flagged claim, a two-minute correction, resubmission the same day. Catching the same problem after the payer has already adjudicated the claim means working a denial, which usually means pulling the chart, documenting the correction, and in the medical-necessity case, sometimes filing a formal appeal. The cost difference between the two isn't marginal, it's an order of magnitude, which is the entire argument for scrubbing in the first place.</p>
   <p>Not every category carries the same weight in every practice. A high-volume primary care practice usually sees more missing-field and duplicate errors, simply on volume; a practice billing complex procedures with heavy modifier logic sees more of its preventable losses in the modifier and diagnosis-procedure categories, where a single missed rule can affect every claim for that procedure until someone catches the pattern. Knowing which categories actually drive your denials, rather than assuming a generic distribution, is what makes the rule-writing effort worth the time it takes. The full breakdown of each category, with a worked example and exactly what it prevents, is in <a href="claims-scrubbing-common-edits.html">our pre-submission edit categories guide</a>.</p>
 
-  <h2>What a clearinghouse actually does between your claim and the payer</h2>
+  <h2 id="what-a-clearinghouse-actually-does-between-your-claim-and-th">What a clearinghouse actually does between your claim and the payer</h2>
   <p>The claim leaves your practice management system as an 837 file, 837P if it's a professional claim, 837I if it's institutional, and it doesn't go straight to the payer. It goes to a clearinghouse first, which sits between you and every payer you bill, translating and validating the file before forwarding it on.</p>
   <p>What the clearinghouse checks is real, but it's narrower than practices sometimes assume. It validates the 837's structure against the HIPAA transaction standard, confirms required fields are present and correctly formatted, checks payer-specific companion guide rules where the payer has published them, and flags obvious problems like an invalid NPI format or a malformed date. What it does not do is adjudicate the claim. It has no visibility into whether the patient's plan covers the specific procedure billed, whether medical necessity is met under that payer's coverage policy, whether the patient's benefits were exhausted, or whether a prior authorization was actually on file. Those decisions belong entirely to the payer, and they happen after the clearinghouse has already done its job and passed the claim through.</p>
   <p>This is why "the clearinghouse accepted it" is not the same statement as "the payer will pay it." A claim can sail through clearinghouse validation with a perfectly formatted 837 and still come back denied, because the two systems are checking two different things: one checks whether the claim is legible and complete, the other checks whether the payer owes you the money. Treating clearinghouse acceptance as a sign-off invites exactly the kind of downstream denial a good scrubber is meant to prevent. The remittance that eventually comes back, the 835, is what tells you which of those two gates a claim actually cleared, and reconciling 835s against what was submitted is how you find out whether your scrubber is checking the right things.</p>
   <p>Many clearinghouses also publish payer-specific companion guides, documents that spell out a given payer's extra field requirements on top of the baseline 837 standard. These are worth building into your own edit set directly, because they're one of the few sources of genuinely payer-specific rules that didn't have to be reverse-engineered from your own denial history; the payer or clearinghouse has already written them down. The full transaction flow, what a clearinghouse validates versus what only the payer catches, and how to read a rejection against that split, is in <a href="claims-scrubbing-clearinghouse-role.html">our clearinghouse role guide</a>.</p>
 
-  <h2>Rejections vs denials: two different problems, two different fixes</h2>
+  <h2 id="rejections-vs-denials-two-different-problems-two-different-f">Rejections vs denials: two different problems, two different fixes</h2>
   <p>These two words get used interchangeably in casual conversation and they should not be, because the fix for one is nothing like the fix for the other.</p>
   <p>A <b>rejection</b> means the claim never entered adjudication at all. Either the clearinghouse or the payer's front-end system refused it on structural grounds, a formatting problem, a missing field, an invalid identifier, before any decision about payment was ever made. CARC CO-16, "claim lacks information or a submission/billing error that prevents correct adjudication," is the code that shows up on a huge share of these. Rejections are corrected and resubmitted, usually within the day, and because the claim never entered the payer's system, there's no formal appeal involved, you fix the data and send it again.</p>
   <p>A <b>denial</b> means the payer received the claim, adjudicated it, and decided not to pay some or all of it. This is a substantive decision, not a data error: the payer looked at the claim and determined the service wasn't covered, wasn't medically necessary under its policy, was a duplicate of one already paid (CARC CO-18), or fails some other coverage rule. Denials require an appeal if you disagree with the decision, and appeals run on their own timelines with their own documentation requirements, a materially bigger lift than fixing and resubmitting a rejected claim.</p>
@@ -346,7 +332,7 @@
     </table>
   </div>
 
-  <h2>Timely filing: the clock that runs whether or not the claim is clean</h2>
+  <h2 id="timely-filing-the-clock-that-runs-whether-or-not-the-claim-i">Timely filing: the clock that runs whether or not the claim is clean</h2>
   <p>None of the scrubbing discipline above matters if the claim misses its filing deadline, because a technically perfect claim submitted late is denied for timeliness regardless of how clean it is.</p>
   <p>Medicare's timely filing limit is 12 months, one calendar year, from the date of service, and this is applied consistently across Medicare Administrative Contractors nationally. Commercial payers are a different story: filing windows vary significantly by payer and by contract, and are frequently shorter than Medicare's, commonly falling somewhere in a 90-to-180-day range depending on the specific plan. There is no single universal commercial number, which is exactly why tracking submission deadlines payer by payer, rather than assuming one rule applies everywhere, matters as much as it does.</p>
 
@@ -364,12 +350,12 @@
   <p>The clock gets more complicated when a claim is rejected and corrected. A rejected claim generally still has to land within the original filing window in most cases, the rejection doesn't reset the clock or grant an extension, it just means the corrected version has to be resubmitted quickly enough to still make the original deadline. A claim that sits in a work queue for three weeks after rejection, waiting for someone to notice it, can burn through a meaningful fraction of a commercial payer's filing window before anyone has even attempted the fix.</p>
   <p>This is the argument for tracking submission dates centrally rather than payer by payer: a claim that's clean but late is exactly as unpaid as a claim that's dirty and on time, and a scrubber that catches every formatting error but has no visibility into filing deadlines is only solving half the problem. The Medicare specifics, how commercial windows typically compare, and the operational discipline for tracking deadlines across a mixed payer panel are in <a href="claims-scrubbing-timely-filing.html">our timely filing guide</a>.</p>
 
-  <h2>The feedback loop is the whole point</h2>
+  <h2 id="the-feedback-loop-is-the-whole-point">The feedback loop is the whole point</h2>
   <p>A scrubber is only as good as the rules in it, and the rules should grow from your own remittance data. The discipline is straightforward: every denial that recurs gets analysed for whether a pre-submission check could have caught it, and where the answer is yes, an edit is written. Over time the scrubber comes to encode the accumulated knowledge of what your specific payers reject.</p>
   <p>Without that loop, scrubbing becomes a static gate that catches typing errors and nothing else, while the denials that actually cost money pass straight through. This is why clean claim rate alone is a poor measure of scrubber quality: a permissive scrubber produces a beautiful first-pass number and a disappointing collection rate. Watch the CARC codes on your 835s specifically, a recurring CO-16 usually points at a data or field problem the scrubber should already be catching, while a recurring CO-18 usually points at a workflow problem in how corrected or resubmitted claims are being tracked, not a coding problem at all.</p>
   <p>Three numbers, tracked together, tell you more than any one of them alone: clean claim rate (the share accepted for processing on first submission), first-pass payment rate (the share actually paid without rework), and average days from date of service to submission (which tells you how much of your timely filing window you're spending before the claim even leaves the building). A practice with a high clean claim rate, a mediocre first-pass payment rate, and a submission lag creeping toward the edge of its commercial filing windows has three separate problems wearing one deceptively good-looking scrubbing metric.</p>
 
-  <h2>Step by step: building a pre-submission scrubbing workflow</h2>
+  <h2 id="step-by-step-building-a-pre-submission-scrubbing-workflow">Step by step: building a pre-submission scrubbing workflow</h2>
   <p>None of this requires new software if your existing clearinghouse or PM system already supports custom edit rules, which most do. What it requires is the discipline to actually build and maintain the rule set, rather than leaving it at whatever generic edits shipped with the system on day one.</p>
   <ol class="cred-steps">
     <li><b>Confirm structural checks run on every claim</b><span>NPI presence and format, required fields, valid dates, internally consistent data, this layer should catch nearly everything before the claim leaves your practice management system.</span></li>
@@ -389,7 +375,7 @@
     </div>
   </div>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do">
       <div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Do</div>
@@ -415,7 +401,7 @@
     </div>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What is the difference between a rejection and a denial?</summary><p>A rejection happens before adjudication: the clearinghouse or payer refused the claim on structural grounds, so it never entered the system. It can be corrected and resubmitted freely, and it does not count against timely filing in the same way. A denial is an adjudication decision, which means it must be appealed or corrected within a defined window. Rejections are cheap; denials are expensive. Scrubbing converts what would have been denials into rejections you fix yourself.</p></details>
     <details class="faq-item"><summary>Is a 99% clean claim rate good?</summary><p>Only if paired with a strong first-pass payment rate. A permissive scrubber that checks little will report an excellent clean claim rate while claims deny after adjudication, because the metric only measures claims accepted for processing. Look at both numbers together: claims accepted, and claims paid correctly on first submission. The second is what actually reflects revenue cycle quality.</p></details>
@@ -436,7 +422,7 @@
     <p><b>Confirm before you rely on this.</b> Payer edit rules, clearinghouse requirements and timely filing limits change and vary by payer. The process information on this page reflects standard industry practice as of August 2026 and is provided for general education, verify current requirements directly with your clearinghouse and payer mix before relying on it.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="claims-scrubbing-common-edits.html">Pre-submission edit categories <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="claims-scrubbing-clearinghouse-role.html">What a clearinghouse actually does <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -448,6 +434,7 @@
     <li><a href="prior-auth.html">Prior authorization <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="medical-coding.html">Medical coding <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -496,6 +483,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

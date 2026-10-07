@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="ICD-10 Coding for Chiropractic Claims: The Two-Diagnosis Rule | Verified RCM">
 <meta name="twitter:description" content="Chiropractic ICD-10 coding: the Medicare two-diagnosis rule, the full M99.00-M99.19 subluxation region table, the M99.9 under-coding red flag, and the over-coding trap that fails audit.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,27 +225,25 @@
       <p class="lede">Every Medicare chiropractic claim runs on two diagnosis codes working together, not one, a primary subluxation code that names the region, and a secondary code that states the actual clinical reason manipulation was necessary that date. Get either half wrong and the claim fails, in one of two different ways: an unspecified or missing piece that reads as insufficient documentation, or an over-specific code the note doesn't actually support. This guide is the full crosswalk: every region code in both subluxation series, the secondary pairings that hold up, and the two traps that sit on either side of the rule.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-chiropractic.html">chiropractic billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a spine formed from aligned vertebral segments, with one segment highlighted as the point of alignment">
-  <path d="M 244 100 C 260 140, 220 160, 232 200 C 244 240, 256 260, 244 300 C 236 330, 220 350, 236 380" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <line x1="232" y1="105" x2="260" y2="105" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round"/>
-  <line x1="240" y1="135" x2="268" y2="135" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="222" y1="165" x2="250" y2="165" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="214" y1="195" x2="242" y2="195" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="222" y1="225" x2="250" y2="225" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="236" y1="255" x2="264" y2="255" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-
-  <circle cx="250" cy="285" r="30" fill="none" stroke="var(--cat-therapy)" stroke-width="1.5" stroke-dasharray="3 7" stroke-linecap="round"/>
-  <line x1="236" y1="285" x2="264" y2="285" stroke="var(--cat-therapy)" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="250" cy="285" r="4" fill="var(--cat-therapy)"/>
-
-  <line x1="224" y1="315" x2="252" y2="315" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="210" y1="345" x2="238" y2="345" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="218" y1="375" x2="246" y2="375" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-chiropractic-wide.svg" alt="Chiropractic: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-two-diagnosis-rule-in-full">The two-diagnosis rule, in full</a></li>
+      <li><a href="#the-primary-code-full-region-reference">The primary code: full region reference</a></li>
+      <li><a href="#the-secondary-code-what-the-medical-necessity-argument-actua">The secondary code: what the medical necessity argument actually rests on</a></li>
+      <li><a href="#the-m999-under-coding-red-flag">The M99.9 under-coding red flag</a></li>
+      <li><a href="#the-over-coding-trap">The over-coding trap</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -257,7 +254,7 @@
     </ul>
   </section>
 
-  <h2>The two-diagnosis rule, in full</h2>
+  <h2 id="the-two-diagnosis-rule-in-full">The two-diagnosis rule, in full</h2>
   <p>Under the MAC chiropractic billing and coding articles that govern Medicare payment (WPS <code>A56273</code>, CGS <code>A56455</code>, Palmetto GBA <code>A56616</code>, Wellpoint Federal <code>A57889</code>), a chiropractic claim establishes medical necessity through two diagnosis codes working together, each doing a different job:</p>
   <ol>
     <li><b>A primary nonallopathic lesion/subluxation code</b>, from the M99.00&ndash;M99.05 series (segmental and somatic dysfunction) or the M99.10&ndash;M99.19 series (subluxation complex, vertebral), identifying the spinal region where the subluxation was found.</li>
@@ -265,7 +262,7 @@
   </ol>
   <p>The logic behind requiring both: the primary code by itself only says where a biomechanical finding was located. It doesn't say what that finding is doing to the patient, or why treating it matters clinically. A payer reviewing a claim with only a primary code has no stated reason manipulation was reasonable and necessary that date, and &ldquo;reasonable and necessary&rdquo; is the exact standard Medicare medical necessity review is built around. The secondary code closes that gap by naming the actual condition, low back pain, cervicalgia, a documented sprain, that the PART findings and the treatment plan are addressing.</p>
 
-  <h2>The primary code: full region reference</h2>
+  <h2 id="the-primary-code-full-region-reference">The primary code: full region reference</h2>
   <p>Both series cover the same six regions and are treated as functionally interchangeable by most MAC articles for establishing the primary subluxation diagnosis, the distinction between &ldquo;segmental and somatic dysfunction&rdquo; and &ldquo;subluxation complex, vertebral&rdquo; is a documentation-convention difference more than a coverage one, though your specific MAC's article language should be the final word for your jurisdiction. All twelve codes below were verified live against the current (FY2026) ICD-10-CM code set and confirmed billable for HIPAA transactions.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -284,7 +281,7 @@
   <p>These six regions are the ones that map to Medicare's chiropractic benefit and to the CMT code family (98940&ndash;98942 bill by how many of these regions were treated). Both series extend further, M99.06/M99.16 (lower extremity), M99.07/M99.17 (upper extremity), M99.08/M99.18 (rib cage), and M99.09/M99.19 (abdomen and other regions) are also verified billable, but they describe extraspinal findings, which fall under 98943 and are statutorily excluded from the Medicare chiropractic benefit regardless of medical necessity. They're relevant to a chiropractic chart, but not to a Medicare-payable CMT claim, know the distinction before selecting a primary code on a claim you intend to bill to Medicare.</p>
   <p>Only one primary code is billed per claim, matched to the region(s) the CMT code covers. A claim billing 98941 (3&ndash;4 regions) should carry a primary code, or, where a payer's edit logic requires region-specific reporting, primary codes, consistent with the regions the note documents as positive, not just the regions physically touched during the adjustment.</p>
 
-  <h2>The secondary code: what the medical necessity argument actually rests on</h2>
+  <h2 id="the-secondary-code-what-the-medical-necessity-argument-actua">The secondary code: what the medical necessity argument actually rests on</h2>
   <p>The secondary code is where a chiropractic claim either holds up or falls apart on medical necessity review, because it's the only place on the claim that states the clinical reason treatment happened. It has to match the region and the clinical picture the note describes, not a generic musculoskeletal code chosen out of habit.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -306,11 +303,11 @@
   </div>
   <p>Two things decide whether a secondary code is right, and neither is optional: it has to match the region the primary code and the note both point to, and it has to be exactly as specific as the documentation supports, no more, no less. A note that documents lumbar PART findings and describes axial low back pain with no imaging in the chart supports M54.50, not M54.51; a note that references a specific MRI-confirmed endplate finding supports M54.51 directly.</p>
 
-  <h2>The M99.9 under-coding red flag</h2>
+  <h2 id="the-m999-under-coding-red-flag">The M99.9 under-coding red flag</h2>
   <p><code>M99.9</code> (biomechanical lesion, unspecified) is verified billable and exists in the current code set for the rare case where a finding genuinely can't be localized to a specific region. In a chiropractic practice running a real PART exam at every visit, that case should be rare, the exam is built around region-specific findings by design. If the note documents cervical asymmetry and a cervical range-of-motion restriction, the claim should carry M99.01 or M99.11, not M99.9.</p>
   <p>The pattern that draws attention on a coding-accuracy review is exactly this: a claim history where M99.9 appears repeatedly, or appears on a claim where the note plainly names a region. It reads as either a documentation shortcut (the PART exam was done but not translated into a specific code) or an actual documentation gap (the PART exam wasn't specific enough to support a region code at all), and payers can't tell which from the claim alone, so both read as a problem. Either way, it's a signal worth fixing before a payer flags it, not after.</p>
 
-  <h2>The over-coding trap</h2>
+  <h2 id="the-over-coding-trap">The over-coding trap</h2>
   <p>The opposite failure mode gets less attention but is just as costly. Billing a highly specific secondary code, one that implies a particular diagnostic finding, like an imaging-confirmed source of pain, when the note doesn't actually document that finding is a claim that can pay cleanly on first submission and still fail an audit months later, because nothing about specificity mismatches trips an automated edit the way a missing code does.</p>
   <p>The clearest example in chiropractic practice: <code>M54.51</code> (vertebrogenic low back pain) specifically implies imaging-confirmed vertebral endplate changes as the pain source. Billing it because it's &ldquo;more specific&rdquo; or because a template defaults to it, with no imaging referenced anywhere in the chart, creates a gap between what the code claims and what the record supports. On review, that gap reads the same as any other unsupported code, the fact that it was more specific rather than less specific doesn't protect it. The safer default whenever imaging hasn't actually been reviewed and cited in the note is <code>M54.50</code> (unspecified) or <code>M54.59</code> (other specified, when the note describes a mechanism or source that isn't imaging-based), moving to M54.51 only once the imaging finding is actually in the chart and referenced in the assessment.</p>
   <div class="dodont">
@@ -332,7 +329,7 @@
     <div><div class="protip-label">Pro tip</div><p>Run a periodic report of primary and secondary diagnosis pairs across your Medicare chiropractic claims. Two patterns are worth a chart-level review every time they show up: M99.9 appearing on more than a handful of claims, and any single secondary code appearing on nearly every claim regardless of presentation. Both usually trace back to a template default rather than an actual coding decision made visit by visit.</p></div>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Can we bill a chiropractic claim to Medicare with only the subluxation code?</summary><p>Not defensibly. The primary subluxation code (M99.00-M99.05 or M99.10-M99.19) tells the payer where the subluxation is, but it does not state why manipulation was medically necessary on that date of service, that's the secondary code's job. A claim with only a primary code leaves the medical necessity argument incomplete, and it is one of the fastest routes to a CO-50 denial. Every Medicare chiropractic claim needs both codes working together.</p></details>
     <details class="faq-item"><summary>Is M99.9 ever an acceptable primary diagnosis?</summary><p>It's a valid, billable code, but it's a documentation-specificity red flag whenever the exam actually identifies a region, and in chiropractic practice, the PART exam almost always does. If the note documents cervical PART findings, the claim should carry M99.01 or M99.11, not M99.9. Reserve M99.9 for the rare case where the documentation genuinely can't localize the finding to a specific region, and expect it to draw more scrutiny than a region-specific code.</p></details>
@@ -352,13 +349,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-chiropractic.html">Our chiropractic billing and coding pillar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-chiropractic-em-modifier-25.html">Chiropractic E/M coding: when modifier 25 actually applies <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-chiropractic-medicare-vs-commercial-coverage.html">Chiropractic coverage: Medicare vs Medicare Advantage vs commercial payers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -407,6 +405,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Podiatry, Billing and coding guide">
+  <defs>
+    <linearGradient id="bgspecialtypodiatry" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#312e81"/><stop offset="1" stop-color="#4338ca"/></linearGradient>
+    <radialGradient id="glspecialtypodiatry" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#5eead4" stop-opacity="0.5"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+    <pattern id="grspecialtypodiatry" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cpspecialtypodiatry"><rect x="860" y="55" width="250" height="250" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bgspecialtypodiatry)"/>
+  <rect width="1200" height="360" fill="url(#grspecialtypodiatry)"/>
+  <rect width="1200" height="360" fill="url(#glspecialtypodiatry)"/>
+  <circle cx="1040" cy="60" r="170" fill="#5eead4" fill-opacity="0.14"/>
+  <circle cx="1110" cy="280" r="110" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="860" y="55" width="250" height="250" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cpspecialtypodiatry)"><g transform="translate(880 75) scale(0.4375)">
+  
+  <path d="M 122 330 Q 240 224 358 322" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round" stroke-dasharray="1 9"/>
+  <path d="M 136 348 Q 240 252 344 340" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round" stroke-dasharray="1 9"/>
+
+  
+  <path d="M 140 317 Q 240 214 340 308" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+
+  
+  <path d="M 130 310 Q 240 180 350 300" fill="none" stroke="#ffffff" stroke-width="5.95" stroke-linecap="round" stroke-linejoin="round"/>
+
+  
+  <path d="M 354 296 L 386 286" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <path d="M 356 302 L 390 300" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <path d="M 356 309 L 388 316" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <path d="M 353 316 L 382 328" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+
+  
+  <circle cx="130" cy="310" r="14" fill="none" stroke="#5eead4" stroke-width="4.25"/>
+  <circle cx="130" cy="310" r="3.5" fill="#5eead4"/>
+</g></g>
+  <rect x="90" y="46" width="72" height="8" rx="4" fill="#5eead4"/>
+  <text x="90" y="78" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">SURGICAL SPECIALTY</text>
+  <text x="90" y="160" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="84" font-weight="800" fill="#ffffff" letter-spacing="-2">Podiatry</text>
+  <text x="90" y="202" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#ffffff" fill-opacity="0.85">Billing and coding guide</text>
+  <text x="90" y="336" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>

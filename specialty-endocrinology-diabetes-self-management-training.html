@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Diabetes Self-Management Training Billing: G0108, G0109 Explained | Verified RCM">
 <meta name="twitter:description" content="DSMT billing with G0108 and G0109: the 10-hour initial split, the required referral, annual follow-up hours, accreditation rules, and how MNT fits in.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,23 +225,25 @@
       <p class="lede">DSMT is one of the few Medicare preventive benefits with a hard-coded hour budget, a benefit-specific referral rule, and a program-level accreditation requirement stacked on top of the usual coding rules, and a claim can be clean on CPT/HCPCS grounds and still deny because one of those three failed. This guide covers exactly how the 10 initial hours split between G0108 and G0109, who is allowed to write the referral and what it has to say, the annual follow-up allotment, and how Medical Nutrition Therapy layers on top without colliding with DSMT on the same date of service.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-endocrinology.html">endocrinology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an undulating glucose-level waveform with an accented peak beside a symmetric butterfly-shaped loop suggesting the thyroid gland">
-  <line x1="70" y1="305" x2="410" y2="305" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-
-  <path d="M 70,275 C 110,260 140,260 170,275 C 200,290 230,290 260,275 C 290,260 320,260 350,275 C 380,290 400,290 410,285" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
-
-  <path d="M 70,240 C 110,220 130,220 150,240 C 165,255 175,260 185,235 C 195,205 205,160 220,150 C 235,140 245,160 255,195 C 262,220 268,245 280,255 C 300,270 320,265 340,245 C 360,225 380,225 410,240" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M 185,235 C 195,205 205,160 220,150 C 235,140 245,160 255,195" fill="none" stroke="var(--cat-medical)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="220" cy="150" r="5" fill="var(--cat-medical)"/>
-
-  <path d="M 240,350 C 205,325 180,335 178,360 C 176,385 205,400 240,372" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 240,350 C 275,325 300,335 302,360 C 304,385 275,400 240,372" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="361" r="4" fill="var(--cat-medical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-endocrinology-wide.svg" alt="Endocrinology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#g0108-and-g0109-the-codes-and-the-hour-math">G0108 and G0109: the codes and the hour math</a></li>
+      <li><a href="#the-referral-dsmt-cant-be-billed-without-and-the-accreditati">The referral DSMT can't be billed without, and the accreditation rule stacked on top of it</a></li>
+      <li><a href="#follow-up-training-the-annual-allotment-after-year-one">Follow-up training: the annual allotment after year one</a></li>
+      <li><a href="#dsmt-and-mnt-together-two-benefits-two-referral-rules-never">DSMT and MNT together: two benefits, two referral rules, never the same day</a></li>
+      <li><a href="#worked-example-a-newly-diagnosed-patients-first-year-hour-al">Worked example: a newly diagnosed patient's first-year hour allocation</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -253,7 +254,7 @@
     </ul>
   </section>
 
-  <h2>G0108 and G0109: the codes and the hour math</h2>
+  <h2 id="g0108-and-g0109-the-codes-and-the-hour-math">G0108 and G0109: the codes and the hour math</h2>
   <p>DSMT bills under two HCPCS Level II codes, both denominated in 30-minute units, and the code you choose depends entirely on who's in the room, not on the content being taught.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -275,7 +276,7 @@
   <p>None of these are self-certifying by the DSMT program, the referral itself has to name the condition. A program that decides on its own that a patient "seems like a better fit for individual sessions" and bills G0108 for hours 2 through 10 without that reasoning on the order is billing outside the benefit, regardless of how clinically reasonable the judgment was.</p>
   <p>⚠️ Sources describe the initial 10-hour benefit as "once-in-a-lifetime" per beneficiary, distinct from the annual follow-up allotment described below. Unlike MNT, which has a published second-referral mechanism (HCPCS G0270/G0271) for a significant change in diagnosis or treatment regimen, this build could not independently confirm through a primary CMS source whether an equivalent path exists to reopen the initial DSMT benefit after a major change in a patient's diabetes management (for example, a new insulin start years after the initial 10 hours were used). Treat the annual 2-hour follow-up as the only confirmed mechanism for additional DSMT hours after year one, and confirm with the patient's MAC before billing anything beyond it.</p>
 
-  <h2>The referral DSMT can't be billed without, and the accreditation rule stacked on top of it</h2>
+  <h2 id="the-referral-dsmt-cant-be-billed-without-and-the-accreditati">The referral DSMT can't be billed without, and the accreditation rule stacked on top of it</h2>
   <p>DSMT has two gating requirements that sit above ordinary coding rules: a specific referral, and a specific kind of program. Miss either one and the hours themselves being medically reasonable doesn't save the claim.</p>
   <p><b>Who can refer.</b> The referral has to come from the physician or a qualified nonphysician practitioner, a nurse practitioner, physician assistant, or clinical nurse specialist, who is actively managing the beneficiary's diabetes. It can't come from a provider who isn't involved in that patient's diabetes care just because they happen to be available to sign an order.</p>
   <p><b>What the referral has to specify.</b> A DSMT referral that will survive review documents all of the following:</p>
@@ -288,7 +289,7 @@
   <p>The referring provider is also expected to maintain a plan of diabetes care in the patient's own medical record, separate from the referral itself, and the DSMT program is expected to retain the original referral, along with any documented change to it, in its own records. A verbal order that never gets reduced to a signed, dated referral is the single most common gap that shows up when a payer asks for records on a DSMT claim.</p>
   <p><b>The program itself has to be accredited.</b> This is easy to overlook because it isn't about the biller's credentials at all, it's about the DSMT program's status. Medicare only pays for DSMT furnished by a program that holds accreditation from the Association of Diabetes Care &amp; Education Specialists (ADCES) or recognition from the American Diabetes Association (ADA). Both statuses have to be renewed periodically; a program billing on an accreditation that lapsed mid-year is billing for a service it's no longer qualified to furnish, independent of whether any individual session was clinically appropriate. Confirm current accreditation status before the first claim goes out, not after a payer asks for it.</p>
 
-  <h2>Follow-up training: the annual allotment after year one</h2>
+  <h2 id="follow-up-training-the-annual-allotment-after-year-one">Follow-up training: the annual allotment after year one</h2>
   <p>Once the initial 10-hour benefit is exhausted, DSMT doesn't end, it converts to a smaller annual allotment.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -303,7 +304,7 @@
   <p>Follow-up hours run on a calendar-year basis, not a 12-month rolling window like the initial benefit, and they can be delivered as either individual or group depending on how the session is actually furnished, the strict 1-hour-individual cap that applies to the initial benefit doesn't carry over to follow-up training. Follow-up hours are also use-it-or-lose-it: unused hours from one calendar year don't roll into the next, and there's no mechanism to bank them. A patient who uses none of their 2 follow-up hours in 2026 doesn't get 4 hours available in 2027.</p>
   <p>The referral requirement doesn't relax for follow-up training. Each year's follow-up hours need their own documented medical necessity tying back to the patient's diabetes management, even if it's a brief order rather than a full new referral packet, a DSMT program billing follow-up hours purely on the strength of the original initial-benefit referral, with nothing dated to the current calendar year, is exposed the same way an initial claim without a referral is.</p>
 
-  <h2>DSMT and MNT together: two benefits, two referral rules, never the same day</h2>
+  <h2 id="dsmt-and-mnt-together-two-benefits-two-referral-rules-never">DSMT and MNT together: two benefits, two referral rules, never the same day</h2>
   <p>Medical Nutrition Therapy is a separate Medicare Part B benefit that frequently travels alongside DSMT for the same diabetic patient, but it runs on its own codes, its own hour allotment, and, critically, its own referral rule that's narrower than DSMT's.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -323,7 +324,7 @@
   <p>The referral gap is the trap worth building a workflow around. DSMT accepts an order from a physician or a qualified nonphysician practitioner. MNT does not extend that same latitude, Medicare requires a physician specifically to refer for MNT. A clinic that routes both referrals through its nurse practitioners because that's who orders DSMT will find every MNT claim vulnerable to a referral-requirement denial, because the NP's signature that's sufficient for G0108/G0109 doesn't satisfy the referral requirement behind 97802/97803/97804.</p>
   <p>Both benefits can be used by the same patient in the same calendar year, a diabetes diagnosis alone doesn't force a choice between them. The one absolute rule is timing: DSMT and MNT cannot be billed for the same beneficiary on the same date of service, even when both are medically necessary in the same period of care. Scheduling has to put them on different calendar days; a same-day DSMT group session and MNT initial assessment is a denial waiting to happen no matter how well-documented each one is on its own.</p>
 
-  <h2>Worked example: a newly diagnosed patient's first-year hour allocation</h2>
+  <h2 id="worked-example-a-newly-diagnosed-patients-first-year-hour-al">Worked example: a newly diagnosed patient's first-year hour allocation</h2>
   <p>A 58-year-old patient is diagnosed with type 2 diabetes (E11.9) at a primary care visit. The physician documents the diagnosis, refers the patient to an ADCES-accredited DSMT program for the full 10-hour initial benefit as group training (no exception condition applies), and separately writes a physician-signed referral to a registered dietitian for MNT, citing the diabetes diagnosis. Both referrals are dated the same week but the sessions themselves are scheduled on different days throughout the following two months.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -361,7 +362,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>How many hours of DSMT does Medicare cover, and how are they split between individual and group?</summary><p>Medicare covers 10 hours of initial DSMT within a continuous 12-month period starting from the first training session. Of those 10 hours, only 1 hour is payable as individual training (G0108); the remaining 9 hours must be furnished as group sessions (G0109) unless one of three documented exceptions applies. After the initial benefit is used, beneficiaries qualify for up to 2 hours of follow-up training in each subsequent calendar year, billable as either individual or group depending on how it's delivered.</p></details>
     <details class="faq-item"><summary>Can a patient get all 10 initial DSMT hours as individual training instead of group?</summary><p>Only if the referring physician or qualified nonphysician practitioner documents one of three conditions: no group class is available within two months of the referral date, the beneficiary has a documented barrier to group learning such as vision loss, hearing loss, a cognitive impairment, a language barrier, or a mobility limitation, or the referring provider indicates the patient needs additional one-on-one insulin-training instruction. Without one of those three reasons on the referral, only the first hour is payable as individual training and the rest must run as group.</p></details>
@@ -374,7 +375,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix and Medicare Administrative Contractor before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-endocrinology.html">Endocrinology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialties.html">All 30 specialty billing guides <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -382,6 +383,7 @@
     <li><a href="denials-management.html">Denials management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="rcm-glossary.html">Medical billing &amp; RCM glossary <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -430,6 +432,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

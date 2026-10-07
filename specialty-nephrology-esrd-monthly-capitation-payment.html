@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="ESRD Monthly Capitation Payment Billing: 90951-90970 Explained | Verified RCM">
 <meta name="twitter:description" content="ESRD monthly capitation payment billing explained: the age-band and visit-count matrix for 90951-90970, full-month vs. home vs. partial-month codes, and the one-visit-short error.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,43 +225,26 @@
       <p class="lede">The ESRD monthly capitation payment (MCP) is a bundled monthly fee, not a fee-per-visit code, and the code you select is decided by two variables at once: the patient's age band and the number of face-to-face physician visits furnished during the month. Get either variable wrong, miscount the visits, misjudge whether a month was full or partial, and the claim either pays at a lower tier than the care actually delivered supports, or denies as a duplicate against another physician's claim for the same period. This guide walks the full code matrix, the From/To date mechanics for partial months, the one-per-patient-per-month rule, and the single documentation error that costs nephrology practices the most MCP revenue.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-nephrology.html">nephrology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of parallel flow lines passing through a filtering mesh, symbolizing nephrology and renal filtration">
-  <path d="M 70 240 A 170 170 0 0 1 410 240" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-  <path d="M 410 240 A 170 170 0 0 1 70 240" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
-
-  <line x1="78" y1="150" x2="188" y2="150" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="292" y1="150" x2="402" y2="150" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-
-  <line x1="78" y1="190" x2="188" y2="190" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="292" y1="190" x2="402" y2="190" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-
-  <line x1="78" y1="240" x2="188" y2="240" stroke="var(--cat-medical)" stroke-width="3" stroke-linecap="round"/>
-  <line x1="292" y1="240" x2="402" y2="240" stroke="var(--cat-medical)" stroke-width="3" stroke-linecap="round"/>
-
-  <line x1="78" y1="290" x2="188" y2="290" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="292" y1="290" x2="402" y2="290" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-
-  <line x1="78" y1="330" x2="188" y2="330" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="292" y1="330" x2="402" y2="330" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-
-  <rect x="188" y="118" width="104" height="244" rx="14" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linejoin="round"/>
-
-  <line x1="212" y1="130" x2="212" y2="350" stroke="var(--muted)" stroke-width="1.5"/>
-  <line x1="240" y1="130" x2="240" y2="350" stroke="var(--muted)" stroke-width="1.5"/>
-  <line x1="268" y1="130" x2="268" y2="350" stroke="var(--muted)" stroke-width="1.5"/>
-
-  <line x1="196" y1="150" x2="284" y2="150" stroke="var(--muted)" stroke-width="1.5"/>
-  <line x1="196" y1="190" x2="284" y2="190" stroke="var(--muted)" stroke-width="1.5"/>
-  <line x1="196" y1="240" x2="284" y2="240" stroke="var(--muted)" stroke-width="1.5"/>
-  <line x1="196" y1="290" x2="284" y2="290" stroke="var(--muted)" stroke-width="1.5"/>
-  <line x1="196" y1="330" x2="284" y2="330" stroke="var(--muted)" stroke-width="1.5"/>
-
-  <circle cx="240" cy="190" r="4" fill="var(--cat-medical)"/>
-  <circle cx="268" cy="290" r="4" fill="var(--cat-medical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-nephrology-wide.svg" alt="Nephrology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-the-mcp-isnt-billed-like-a-normal-em">Why the MCP isn't billed like a normal E/M</a></li>
+      <li><a href="#full-month-in-facility-codes-9095190962">Full-month in-facility codes: 90951–90962</a></li>
+      <li><a href="#full-month-home-dialysis-codes-9096390966">Full-month home dialysis codes: 90963–90966</a></li>
+      <li><a href="#less-than-full-month-codes-9096790970-and-the-fromto-date-me">Less-than-full-month codes: 90967–90970 and the From/To date mechanics</a></li>
+      <li><a href="#the-one-mcp-per-month-rule">The one-MCP-per-month rule</a></li>
+      <li><a href="#the-documentation-short-by-one-visit-error">The documentation short-by-one-visit error</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -273,10 +255,10 @@
     </ul>
   </section>
 
-  <h2>Why the MCP isn't billed like a normal E/M</h2>
+  <h2 id="why-the-mcp-isnt-billed-like-a-normal-em">Why the MCP isn't billed like a normal E/M</h2>
   <p>Once a patient is established on outpatient maintenance dialysis, the physician work of managing that dialysis, reviewing labs, adjusting the prescription, managing anemia and mineral-bone complications, coordinating the vascular access, seeing the patient face-to-face, is paid as a single bundled monthly service rather than as a series of separately billed encounters. That's the entire logic of the MCP code family, 90951&ndash;90970: one code represents a month (or a partial month) of related dialysis management, selected by the patient's age and, for in-facility care, how many face-to-face visits actually happened. There's no add-on for a fifth visit in a 4-or-more month, and there's no partial credit for a visit that happened but isn't documented as a distinct, dated, signed encounter.</p>
 
-  <h2>Full-month in-facility codes: 90951&ndash;90962</h2>
+  <h2 id="full-month-in-facility-codes-9095190962">Full-month in-facility codes: 90951&ndash;90962</h2>
   <p>Twelve codes cover a full calendar month of in-facility (non-home) maintenance dialysis management, organized as four age bands crossed with three visit-count tiers. A fourth visit scenario, zero face-to-face visits in the month, doesn't have its own code in this range; it's handled through the less-than-full-month mechanism below, or through whatever documentation and medical-necessity standard your MAC's coverage policy attaches to a zero-visit month, which is worth confirming directly with your contractor rather than assuming a default treatment.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -292,7 +274,7 @@
   </div>
   <p>Read the table by row first, then column: age band decides which row applies, and it doesn't change mid-month even if a birthday falls inside the billing period, use the age band that applied for the majority of the month, and if your practice has a different convention documented with your MAC, follow that instead. Visit count decides which column applies, and it's counted against the calendar month being billed, not a rolling 30-day window.</p>
 
-  <h2>Full-month home dialysis codes: 90963&ndash;90966</h2>
+  <h2 id="full-month-home-dialysis-codes-9096390966">Full-month home dialysis codes: 90963&ndash;90966</h2>
   <p>Home dialysis, peritoneal dialysis or home hemodialysis, uses a separate, simpler four-code set for a full month of management. There's one code per age band, and critically, no visit-count tiering at all:</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -308,7 +290,7 @@
   </div>
   <p>This is a real structural difference from in-facility billing, not a simplification for convenience: a home dialysis patient managed with two physician contacts in a month and one managed with six both bill the identical code, because the monthly management model for home dialysis doesn't tie payment to visit frequency the way in-facility care does. A coder trained on the in-facility matrix who tries to apply visit-count logic to a 90966 claim is solving a problem that code family doesn't have, the error runs in the other direction from the usual one, but it still produces an incorrect code selection. Home dialysis training codes, the virtual-supervision allowance for training, and the unresolved telehealth-modifier question specific to 90966 are covered in our <a href="specialty-nephrology-home-dialysis-billing.html">home dialysis billing: peritoneal dialysis and home hemodialysis codes</a> guide.</p>
 
-  <h2>Less-than-full-month codes: 90967&ndash;90970 and the From/To date mechanics</h2>
+  <h2 id="less-than-full-month-codes-9096790970-and-the-fromto-date-me">Less-than-full-month codes: 90967&ndash;90970 and the From/To date mechanics</h2>
   <p>The remaining four codes cover ESRD-related service that doesn't span a full calendar month under a given physician's management, billed per day rather than as a flat monthly unit.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -331,7 +313,7 @@
   </ul>
   <p>Get the date span wrong in either direction and the per-day unit count won't reconcile: too few units for the days actually managed, and the claim underpays for care that was delivered; a From date that predates the physician's actual involvement, or a To date that runs past a transfer or death, overstates the span and invites a payer request for records that the documentation won't support. Pull the exact From and To dates from the chart at the time of the transition, the day of transfer, the date of death on the death certificate, the transplant date from the operative note, rather than approximating from the billing calendar after the fact.</p>
 
-  <h2>The one-MCP-per-month rule</h2>
+  <h2 id="the-one-mcp-per-month-rule">The one-MCP-per-month rule</h2>
   <p>Only one MCP service is payable per patient per calendar month, full stop, regardless of how many physicians were actually involved in that patient's care during the month. This rule sits above the entire code matrix above it and is the source of a disproportionate share of MCP-related denials, because it's a coordination problem between two billing parties, not a coding decision either one makes alone.</p>
   <p>The scenario that trips this up most often is a mid-month coverage handoff: patient transfers from Physician A's panel to Physician B's, or a group restructures on-call coverage mid-month and two different providers end up documenting MCP-qualifying visits in the same calendar month. If Physician A bills a full-month code (90951&ndash;90966 range) covering the whole month, and Physician B also bills a partial-month code (90967&ndash;90970) for the days after the transfer, one of the two claims is going to deny as a duplicate, the payer's system doesn't reconcile the split for you. The fix has to happen before either claim is submitted: both physicians' billing offices need to agree on the exact transfer date, Physician A bills a less-than-full-month code ending the day before transfer, and Physician B bills a less-than-full-month code starting the day of transfer. Waiting until one claim denies to sort this out turns a five-minute coordination call into a multi-week reconciliation with two different billing departments.</p>
   <div class="protip">
@@ -339,7 +321,7 @@
     <div><div class="protip-label">Pro tip</div><p>Flag every mid-month transfer or coverage handoff in your scheduling or EHR system the day it happens, not the day the claim is coded. A transfer date agreed on by both practices in real time prevents the overlap; a transfer date reconstructed weeks later from two different charts is where duplicate MCP denials actually come from.</p></div>
   </div>
 
-  <h2>The documentation short-by-one-visit error</h2>
+  <h2 id="the-documentation-short-by-one-visit-error">The documentation short-by-one-visit error</h2>
   <p>This is the single most expensive recurring error in the MCP code family, and it doesn't behave like a normal billing mistake, because it never generates a denial. The MCP is banded by face-to-face visit count within the month, four-or-more, two-to-three, or one, and each band pays at a different rate. If the physician actually saw the patient four times during the month but only three of those visits are documented as a distinct, dated, signed face-to-face encounter, the claim has to be coded and paid at the 2&ndash;3 visit tier even though the fourth visit genuinely happened. There's no code for "we saw the patient four times but can only prove three", the documentation gap is the billing outcome.</p>
   <p>What counts as a visit for this purpose is specific: a face-to-face encounter between the patient and the billing physician (or, under your practice's normal incident-to and supervision arrangement, a qualifying non-physician practitioner), independently dated and signed as its own note. A chart addendum mentioning "spoke with patient today" without a distinct visit note doesn't establish a countable visit on audit. A rounding note written for four patients in a batch, where one patient's individual encounter isn't separately documented, has the same problem. The clinical work may have been done correctly and completely, the billing failure is purely in whether the record can independently prove the visit count the claim is asserting.</p>
   <p>Because this error never denies, it also never surfaces in a denials work queue the way a rejected claim does. A practice can run this way for months, paid consistently at the 2&ndash;3 visit tier for patients actually seen four times, and nothing in the standard AR workflow flags it, because every one of those claims paid. The only way to catch it is to audit visit-count documentation against actual physician schedules and note logs before the claim goes out, a monthly reconciliation, not a claims-level QA step, since the claims themselves look clean.</p>
@@ -366,7 +348,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Which visits count toward the 4-or-more MCP visit tier?</summary><p>A face-to-face encounter between the patient and the billing physician (or, under the practice's normal incident-to and supervision rules, a qualifying non-physician practitioner) that's dated and signed in the chart as a distinct visit related to the patient's dialysis management. A phone call, a chart review without the patient present, or a visit note that isn't independently dated and signed doesn't count. If your count depends on a visit that can't be pointed to as a specific, documented encounter, treat it as not having happened for billing purposes.</p></details>
     <details class="faq-item"><summary>What happens if a patient dies or transfers mid-month under the MCP?</summary><p>You bill one of the less-than-full-month codes, 90967-90970 by age band, reporting a From date and a To date that span only the days the billing physician actually managed the patient's ESRD care that month, with units billed per day within that range. A death, a mid-month transplant, or a transfer to a different facility or physician are the three scenarios that trigger this code family. Get the From/To span wrong and the per-day unit count on the claim won't reconcile with what the payer expects for a partial month, which is a common cause of the claim pending or paying incorrectly.</p></details>
@@ -378,13 +360,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-nephrology.html">Nephrology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-nephrology-prior-authorization.html">Prior authorization for ESAs and dialysis services in nephrology <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-nephrology-vascular-access-billing.html">Dialysis vascular access billing: fistula, graft, and angioplasty CPT <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -433,6 +416,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

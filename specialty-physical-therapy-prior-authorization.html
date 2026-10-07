@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Physical Therapy Prior Authorization in 2026: Payer-by-Payer Changes | Verified RCM">
 <meta name="twitter:description" content="PT prior authorization in 2026: UnitedHealthcare Medicare Advantage PT/OT/SLP auth expansion and rollback, CMS's payer transparency mandate, state Medicaid visit caps, and a pre-visit verification workflow.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,27 +225,26 @@
       <p class="lede">Traditional Medicare doesn't require prior authorization for outpatient PT, but that's close to the only stable fact in this list. UnitedHealthcare is expanding Medicare Advantage authorization requirements into new states in one announcement and rolling requirements back in another, CMS's payer transparency mandate now forces specific denial reasons onto rejected requests instead of a generic code, and state Medicaid visit caps vary enough that "the Medicaid rule" isn't a real thing. This guide breaks down what's actually changing payer by payer in 2026 and the verification workflow that catches a missing or expired authorization before it becomes an unrecoverable denial.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-physical-therapy.html">physical therapy billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line-art icon of a range-of-motion arc, like a protractor sweep, for physical therapy">
-  <!-- baseline limb segment -->
-  <line x1="250" y1="300" x2="120" y2="300" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- moved limb segment (primary) -->
-  <line x1="250" y1="300" x2="330" y2="161" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round"/>
-  <!-- joint pivot -->
-  <circle cx="250" cy="300" r="8" fill="none" stroke="var(--color-text)" stroke-width="2.5"/>
-  <!-- range-of-motion sweep arc -->
-  <path d="M160,300 A90,90 0 0,1 295,222.1" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <!-- tick marks along the sweep -->
-  <line x1="163.4" y1="250" x2="180.7" y2="260" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="200" y1="213.4" x2="210" y2="230.7" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="250" y1="200" x2="250" y2="220" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- accent highlight on final measured segment of the arc -->
-  <path d="M234.4,211.4 A90,90 0 0,1 295,222.1" fill="none" stroke="var(--cat-therapy)" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- accent marker at the measured endpoint -->
-  <circle cx="295" cy="222.1" r="6" fill="var(--cat-therapy)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-physical-therapy-wide.svg" alt="Physical therapy: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-check-last-years-rule-is-now-an-actively-dangerous-habit">Why "check last year's rule" is now an actively dangerous habit</a></li>
+      <li><a href="#unitedhealthcare-medicare-advantage-expansion-and-rollback-i">UnitedHealthcare Medicare Advantage: expansion and rollback in the same year</a></li>
+      <li><a href="#cmss-2026-payer-transparency-mandate">CMS's 2026 payer transparency mandate</a></li>
+      <li><a href="#state-medicaid-visit-cap-variation">State Medicaid visit-cap variation</a></li>
+      <li><a href="#building-a-pre-visit-verification-workflow">Building a pre-visit verification workflow</a></li>
+      <li><a href="#what-happens-when-authorization-lapses-mid-episode">What happens when authorization lapses mid-episode</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -257,11 +255,11 @@
     </ul>
   </section>
 
-  <h2>Why "check last year's rule" is now an actively dangerous habit</h2>
+  <h2 id="why-check-last-years-rule-is-now-an-actively-dangerous-habit">Why "check last year's rule" is now an actively dangerous habit</h2>
   <p>Most billing rules drift slowly. PT prior authorization in 2026 is moving in two directions inside the same payer at the same time, which means a front-desk workflow built around "this payer required auth last quarter" can be wrong in either direction, wrong because a requirement was added somewhere it wasn't before, or wrong because staff are still requesting an authorization a payer stopped requiring months earlier. Neither error is free: the first produces an authorized-visit-count denial that's genuinely hard to appeal, and the second burns staff time on a step that no longer does anything.</p>
   <p>The only durable fix is verifying at the payer-and-plan level, every time, rather than trusting institutional memory. The sections below name the specific 2026 changes worth building into that verification step.</p>
 
-  <h2>UnitedHealthcare Medicare Advantage: expansion and rollback in the same year</h2>
+  <h2 id="unitedhealthcare-medicare-advantage-expansion-and-rollback-i">UnitedHealthcare Medicare Advantage: expansion and rollback in the same year</h2>
   <p>UnitedHealthcare runs the largest Medicare Advantage book in the country, which makes its 2026 PT policy changes disproportionately important to track, and disproportionately confusing, because two opposite-direction announcements landed within months of each other.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -276,7 +274,7 @@
   <p>⚠️ Both figures reflect industry reporting on UHC's policy changes; this build could not independently confirm either the state list, the effective dates, or the specific codes affected against a UnitedHealthcare provider-policy primary source, since this session's web search allowance was exhausted before a UHC-specific source could be pulled and CMS/payer policy pages have been unreliable to automated fetch in this environment. Before scheduling a new UHC Medicare Advantage PT patient in any state, confirm current authorization requirements directly through UnitedHealthcare's provider portal or provider services line for that specific state and plan, a rollback in one line of business doesn't necessarily apply to every plan UHC sells, and an expansion announced for one state doesn't confirm the requirement is live in every neighboring state.</p>
   <p>The practical risk if a practice gets this backwards: treating a patient in a newly-added state without the now-required authorization produces a denial that's genuinely hard to win on appeal, because the payer's position is straightforward, the service required authorization and none was obtained. That's a different, harder problem than a medical-necessity denial, where the clinical record can usually carry an appeal.</p>
 
-  <h2>CMS's 2026 payer transparency mandate</h2>
+  <h2 id="cmss-2026-payer-transparency-mandate">CMS's 2026 payer transparency mandate</h2>
   <p>Separately from any single payer's own policy, CMS's Interoperability and Prior Authorization framework puts new obligations on a defined set of payers starting in 2026: impacted plans must provide a specific reason for a prior-authorization denial rather than a generic one, and must publicly report prior-authorization metrics, with aggregate metrics reporting due by March 31, 2026.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Covered by the mandate</div><ul>
@@ -292,7 +290,7 @@
   <p>The specific-denial-reason requirement is the part worth building into an appeal workflow: a rejection that arrives as a bare code, with no stated reason tied to the clinical submission, is itself grounds to push back on a covered plan in 2026, cite the requirement by name in the appeal and ask the payer to state which specific documentation element it found insufficient, rather than accepting a generic denial and re-submitting blind.</p>
   <p>⚠️ The effective-date and reporting-deadline detail above reflects general familiarity with CMS's Interoperability and Prior Authorization framework rather than a primary rule text re-confirmed during this build (CMS.gov's rule and policy pages have returned access errors to automated fetch attempts in this environment, and this session's web search allowance was exhausted before a secondary source could be cross-checked). Verify current compliance dates against CMS's own rule and any transmittal before citing them to a payer in a live appeal.</p>
 
-  <h2>State Medicaid visit-cap variation</h2>
+  <h2 id="state-medicaid-visit-cap-variation">State Medicaid visit-cap variation</h2>
   <p>Medicaid PT coverage is its own layer entirely, separate from Medicare Advantage and separate from CMS's transparency mandate, and it varies by state program and often by managed-care plan within a state.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -307,7 +305,7 @@
   </div>
   <p>Because of that last row, "we checked our state's Medicaid rule" isn't actually a complete verification step for a managed-care Medicaid patient, the state's fee-for-service policy and a specific managed-care plan's policy can diverge, and a practice that verified only the state-level rule can still get an authorized-visit-count denial from the plan that actually administers the patient's benefit. Verify at the plan level for managed Medicaid, not just the state level.</p>
 
-  <h2>Building a pre-visit verification workflow</h2>
+  <h2 id="building-a-pre-visit-verification-workflow">Building a pre-visit verification workflow</h2>
   <p>The recoverable-revenue argument for prior-auth verification is simple: an authorized-visit-count denial or a missing-authorization denial is close to fully preventable, and close to fully preventable denials are the cheapest ones to eliminate, because the fix doesn't require an appeal at all, it requires a step done correctly before the first visit.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Confirm the exact payer and plan</b>, not just the payer brand, a Medicare Advantage plan, a commercial plan, and a marketplace plan sold under the same carrier name can each carry different PT authorization rules.</span></li>
@@ -321,7 +319,7 @@
     <div><div class="protip-label">Pro tip</div><p>Don't let a verified authorization go stale between the verification call and visit one. A benefit or authorization confirmed three weeks before treatment starts, on a plan that's mid-change in 2026, is worth a second check closer to the actual first visit, especially for any UnitedHealthcare Medicare Advantage patient in a state where the authorization requirement is reportedly in flux.</p></div>
   </div>
 
-  <h2>What happens when authorization lapses mid-episode</h2>
+  <h2 id="what-happens-when-authorization-lapses-mid-episode">What happens when authorization lapses mid-episode</h2>
   <p>The claim adjustment reason code most commonly attached to an authorization-related denial is CO-197 (precertification/authorization/notification absent), and it behaves differently from a medical-necessity denial: the clinical record rarely wins this argument on its own, because the payer's position isn't that the care was unnecessary, it's that the required process step wasn't completed. If the payer allows retroactive authorization and continued necessity can be shown, request it; if not, the appeal has to show the payer's own notification process failed, which is a materially harder case to make than a documentation-quality argument.</p>
   <p>The cheaper move, every time, is catching the approaching cap or expiring authorization before the visit happens, which is the entire point of the verification workflow above.</p>
 
@@ -333,7 +331,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Does traditional Medicare require prior authorization for outpatient physical therapy?</summary><p>No. Traditional fee-for-service Medicare does not require prior authorization for outpatient PT under any circumstance. The prior-auth landscape covered in this guide, Medicare Advantage plan requirements, CMS's transparency mandate, and state Medicaid visit caps, applies to Medicare Advantage, Medicaid and CHIP managed care, ACA marketplace plans, and commercial payers, not to Original Medicare Part B. Confirm which product a patient is actually enrolled in before assuming either rule set applies.</p></details>
     <details class="faq-item"><summary>What's changing with UnitedHealthcare's Medicare Advantage prior authorization for PT in 2026?</summary><p>Two things are reportedly happening at once. UnitedHealthcare has reportedly expanded Medicare Advantage prior-authorization requirements for physical therapy, occupational therapy, and speech-language pathology into additional states, with Arizona and California cited as effective February 2026, while a separate announcement reported for May 2026 describes UHC eliminating prior-authorization requirements on roughly 30% of services across its portfolio, reportedly including some outpatient therapy codes. Both figures come from industry reporting rather than a UHC provider-policy primary source this build could confirm directly, so verify the current requirement for your specific state and plan with UnitedHealthcare provider services before treatment.</p></details>
@@ -345,13 +343,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-physical-therapy.html">Physical therapy billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-physical-therapy-kx-modifier-therapy-threshold.html">The KX modifier and Medicare therapy threshold: 2026 rules <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-physical-therapy-dry-needling-acupuncture-coverage.html">Dry needling and acupuncture billing: Medicare coverage rules <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="prior-auth.html">Prior authorization services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -400,6 +399,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

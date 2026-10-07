@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Cardiology NCCI Edits and MUE Limits Explained | Verified RCM">
 <meta name="twitter:description" content="Cardiology NCCI bundling edits and MUE unit limits explained by procedure family, with the modifier indicator and MAI values that decide whether an edit or a denial can be appealed.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,15 +225,24 @@
       <p class="lede">Two CMS values decide whether a bundled or capped cardiology code is billable at all, the NCCI modifier indicator and the MUE Adjudication Indicator, and almost nobody publishing cardiology billing content states either one. This guide explains what they mean, where they hit hardest in cardiology, and, critically, how to tell whether a denial built on either one is worth appealing before you spend staff time on it.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-cardiology.html">cardiology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a cardiac ECG heart-rhythm waveform">
-  <path d="M40,300 L108,300 C118,294 128,294 138,300 L172,300 L186,270 L200,315 L214,300 L250,300 C266,282 286,282 302,300 L440,300" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M40,240 L108,240 C118,230 128,230 138,240 L160,240 L172,256 L186,158 L200,282 L214,240 L250,240 C266,206 286,206 302,240 L340,240 L355,232 L365,248 L375,240 L440,240" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M172,256 L186,158 L200,282" fill="none" stroke="var(--cat-medical)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="186" cy="158" r="4.5" fill="var(--cat-medical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-cardiology-wide.svg" alt="Cardiology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#two-systems-two-questions">Two systems, two questions</a></li>
+      <li><a href="#ncci-modifier-indicators">NCCI modifier indicators</a></li>
+      <li><a href="#mue-adjudication-indicators-mai">MUE Adjudication Indicators (MAI)</a></li>
+      <li><a href="#why-these-values-cant-be-memorized">Why these values can't be memorized</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -245,10 +253,10 @@
     </ul>
   </section>
 
-  <h2>Two systems, two questions</h2>
+  <h2 id="two-systems-two-questions">Two systems, two questions</h2>
   <p>NCCI Procedure-to-Procedure (PTP) edits and Medically Unlikely Edits (MUEs) answer different questions, and cardiology billers routinely conflate them because both show up as a denial that looks like "too much billed at once." A PTP edit asks: <i>can these two different codes be billed together on the same claim?</i> An MUE asks: <i>how many units of this one code are plausible for one patient on one date of service?</i> The mechanism for overriding each is different, and mixing them up is why appeals fail.</p>
 
-  <h2>NCCI modifier indicators</h2>
+  <h2 id="ncci-modifier-indicators">NCCI modifier indicators</h2>
   <p>Every Column 1/Column 2 code pair in the NCCI PTP edit file carries a modifier indicator that decides, absolutely, whether an override is even possible:</p>
   <ul class="check-list">
     <li><span class="warn">0</span><span><b>Never bypassable.</b> The edit stands regardless of any modifier appended to either code. If the pair you're billing carries a 0, the second code is not separately payable under any documentation.</span></li>
@@ -258,7 +266,7 @@
   <p>Where this hits cardiology hardest: an echocardiogram and a stress test performed at the same visit routinely trigger a Column 1/Column 2 pair, because when the echo is a component of the stress protocol itself, not a separately ordered, separately interpreted study, it isn't separately payable. The professional/technical pair is the second recurring case: if a facility has already billed the technical component for a study, billing the global fee for the same study on your side creates an internal duplicate that both claims eventually get audited against, even when submitted weeks apart.</p>
   <p>⚠️ Billing-industry sources consistently describe the Doppler add-on codes <code>93320</code> and <code>93325</code> as bundled into <code>93306</code> under a modifier indicator of 0. This build attempted to confirm that value directly against CMS's own NCCI PTP edit file and Policy Manual and could not, every automated retrieval attempt against cms.gov returned an access error during this build. Treat it as reported-but-unconfirmed, and check the current pair in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before building a scrubber rule on it.</p>
 
-  <h2>MUE Adjudication Indicators (MAI)</h2>
+  <h2 id="mue-adjudication-indicators-mai">MUE Adjudication Indicators (MAI)</h2>
   <p>The MUE itself is just a number, the maximum units of a code payable for one patient on one date of service. The MAI attached to that number is what actually decides what happens when a claim exceeds it:</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -278,7 +286,7 @@
     <div><div class="protip-label">Pro tip</div><p>Build a two-question checklist into your denial workflow before any bundling or unit-cap appeal gets written: (1) what's the modifier indicator or MAI for this specific pair or code, checked in the current CMS lookup tool, not memory; (2) does the chart actually document the distinction the override would claim. If either answer is "no," don't write the appeal, correct the claim or write it off, and spend the staff time on the ones that can actually be won.</p></div>
   </div>
 
-  <h2>Why these values can't be memorized</h2>
+  <h2 id="why-these-values-cant-be-memorized">Why these values can't be memorized</h2>
   <p>NCCI PTP edits and MUE values are both revised quarterly, additions, deletions, and revisions publish four times a year. A scrubber rule or a coder's mental model tuned to one quarter's file can silently start passing claims it should be catching, or blocking claims that should now be payable, by the next quarter. This is precisely why every specific indicator or MAI value in this guide carries a verification note rather than being stated as permanent fact: the correct habit is to check the current file for the specific pair or code every time it matters, not to memorize a table from an article, including this one.</p>
 
   <div class="cta-band">
@@ -289,7 +297,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Where do I look up the current NCCI indicator for a specific cardiology code pair?</summary><p>The CMS NCCI Procedure-to-Procedure Edits Lookup Tool is the authoritative, always-current source, indicator values change quarterly, so anything published in an article, including this one, should be treated as a starting point to verify there, not a final answer to build a permanent scrubber rule on.</p></details>
     <details class="faq-item"><summary>Can a modifier ever override an MUE unit cap the way it can override an NCCI edit?</summary><p>No, MUEs and NCCI PTP edits are different mechanisms. A modifier can bypass an NCCI edit when the indicator allows it. An MUE is a per-code, per-day unit ceiling; the only way past it is billing on separate lines with documentation showing genuinely distinct services, and only where the MAI value permits an appeal at all.</p></details>
@@ -301,12 +309,13 @@
     <p><b>Verify before billing.</b> NCCI modifier indicators and MUE/MAI values are published by CMS and revised quarterly. This page states the indicator and MAI category system with confidence but flags specific pair-level values that could not be confirmed against CMS's primary files during this build, check the current value for any code or pair in the CMS NCCI and MUE lookup tools before relying on it operationally.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-cardiology.html">Cardiology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-cardiology-denials-appeals.html">Cardiology denials and appeals <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-cardiology-echocardiogram-billing.html">Echocardiogram billing guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -355,6 +364,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Bariatric Surgery Prior Authorization and NCD 100.1 Checklist | Verified RCM">
 <meta name="twitter:description" content="Bariatric surgery prior auth checklist: NCD 100.1's three coverage conditions, procedure-by-procedure coverage status, ICD-10 documentation, and MAC billing articles from Novitas, WPS, and Noridian.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,20 +225,26 @@
       <p class="lede">Bariatric surgery is the one general surgery procedure family where prior authorization runs on documentation, not just an authorization number. NCD 100.1 sets three conditions that must all be met before Medicare covers gastric bypass, biliopancreatic diversion with duodenal switch, or adjustable gastric banding, and two items practices still check, facility center-of-excellence certification and blanket sleeve gastrectomy coverage, stopped being accurate years ago. This is the code-level checklist to build scheduling and pre-bill review around.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-general-surgery.html">general surgery billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a straight surgical incision crossed by suture stitch marks, representing general surgery">
-  <path d="M120,410 A210,210 0 0,1 405,155" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
-  <line x1="169.3" y1="296.5" x2="191.7" y2="316.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="203.3" y1="258.5" x2="225.7" y2="278.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="237.3" y1="220.5" x2="259.7" y2="240.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="271.3" y1="182.5" x2="293.7" y2="202.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="296.8" y1="154" x2="319.2" y2="174" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" />
-  <line x1="155" y1="335" x2="325" y2="145" stroke="var(--cat-surgical)" stroke-width="3.5" stroke-linecap="round" />
-  <circle cx="155" cy="335" r="4" fill="var(--cat-surgical)" />
-  <circle cx="325" cy="145" r="4" fill="var(--cat-surgical)" />
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-general-surgery-wide.svg" alt="General surgery: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-this-prior-auth-runs-on-the-chart-not-the-authorization">Why this prior auth runs on the chart, not the authorization number</a></li>
+      <li><a href="#the-three-conditions-and-the-chart-language-that-actually-sa">The three conditions, and the chart language that actually satisfies each one</a></li>
+      <li><a href="#procedure-by-procedure-coverage-status">Procedure-by-procedure coverage status</a></li>
+      <li><a href="#icd-10-codes-that-document-the-claim">ICD-10 codes that document the claim</a></li>
+      <li><a href="#mac-specific-billing-articles-behind-the-ncd">MAC-specific billing articles behind the NCD</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -250,10 +255,10 @@
     </ul>
   </section>
 
-  <h2>Why this prior auth runs on the chart, not the authorization number</h2>
+  <h2 id="why-this-prior-auth-runs-on-the-chart-not-the-authorization">Why this prior auth runs on the chart, not the authorization number</h2>
   <p>Most general surgery prior authorization is a utilization-management question: does this payer require sign-off before this CPT code, and did staff get it. Bariatric surgery adds a harder layer underneath, even with an authorization number in hand, the claim itself has to demonstrate that NCD 100.1 (Bariatric Surgery for Treatment of Co-Morbid Conditions Related to Morbid Obesity), confirmed directly against the CMS Coverage Database, was actually met on the date of service. A CO-50 medical necessity denial on a bariatric claim is rarely about the wrong CPT code; it's almost always one of the three conditions below being present somewhere in the chart but never stated in a form that supports the specific ICD-10 code billed.</p>
 
-  <h2>The three conditions, and the chart language that actually satisfies each one</h2>
+  <h2 id="the-three-conditions-and-the-chart-language-that-actually-sa">The three conditions, and the chart language that actually satisfies each one</h2>
   <p>NCD 100.1 covers open and laparoscopic Roux-en-Y gastric bypass (RYGBP), open and laparoscopic biliopancreatic diversion with duodenal switch (BPD/DS), and laparoscopic adjustable gastric banding (LAGB) only when all three conditions below are met.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Body-mass index of 35 kg/m&sup2; or greater.</b> The chart needs recorded height and weight the BMI is calculated from, not a stated BMI number with no source data behind it, report the specific Z68 band (see the ICD-10 table below) alongside the qualifying obesity diagnosis.</span></li>
@@ -262,7 +267,7 @@
   </ul>
   <p>One exception carves BMI below 35 out entirely, regardless of comorbidity: effective February 12, 2009, CMS determined RYGBP, LAGB, and BPD/DS are not covered for beneficiaries with type 2 diabetes and a BMI under 35, a diabetes diagnosis alone never substitutes for the BMI threshold.</p>
 
-  <h2>Procedure-by-procedure coverage status</h2>
+  <h2 id="procedure-by-procedure-coverage-status">Procedure-by-procedure coverage status</h2>
   <p>Not every bariatric CPT code sits under the same rule. Codes below are paraphrased, not reproduced verbatim from the CPT Professional edition; coverage status is confirmed against NCD 100.1.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -284,7 +289,7 @@
   </div>
   <p>The 2026 CPT set added <code>43889</code>, transoral endoscopic suturing to reduce stomach volume, an incision-free option positioned for a BMI of 30 or greater plus a related comorbidity. It sits outside NCD 100.1 entirely, and several payers hadn't published a formal policy for it as of this build. &#9888;&#65039; Treat a prior-auth request for it as headed for exception review this year, not an automated pathway.</p>
 
-  <h2>ICD-10 codes that document the claim</h2>
+  <h2 id="icd-10-codes-that-document-the-claim">ICD-10 codes that document the claim</h2>
   <p>Confirmed live against the FY2026 ICD-10-CM code set via the ICD-10 coverage connector.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -307,7 +312,7 @@
     <div><div class="protip-label">Pro tip</div><p>Novitas's A56422 and WPS's A54923 both took effect 01/01/2026, and Noridian retired its prior article (A53028) on 09/25/2025 in favor of a new one (A53026). Pull the current version from the CMS Coverage Database, not a saved PDF from a prior benefit year.</p></div>
   </div>
 
-  <h2>MAC-specific billing articles behind the NCD</h2>
+  <h2 id="mac-specific-billing-articles-behind-the-ncd">MAC-specific billing articles behind the NCD</h2>
   <p>NCD 100.1 is national, but the claim-completion detail underneath it is published per MAC, the same pattern general surgery's wound care and colonoscopy coverage follows. Confirmed live against the CMS Coverage Database.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -323,7 +328,7 @@
   </div>
   <p>&#9888;&#65039; Document IDs, MAC names, and effective dates above were retrieved live from the CMS Coverage Database and confirmed active as of this build; the covered-diagnosis lists and claim-completion detail inside each article were not independently re-verified here (CMS's article detail pages blocked automated retrieval during this build), so pull the specific article text for your own MAC before finalizing a checklist against it. If your MAC isn't one of the three above, search the CMS Coverage Database for your own jurisdiction's bariatric article first.</p>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Confirm the chart shows recorded height and weight the BMI is calculated from, not just a stated figure.</li>
@@ -348,7 +353,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Does Medicare still require facility certification for bariatric surgery centers?</summary><p>No. Facility certification as an American College of Surgeons Level 1 Bariatric Surgery Center or an American Society for Bariatric Surgery Center of Excellence was required through September 23, 2013, and CMS removed that requirement for dates of service on and after September 24, 2013. A prior-auth checklist still asking for a center-of-excellence attestation on a Medicare claim is asking for something that hasn't been required in over a decade.</p></details>
     <details class="faq-item"><summary>Is laparoscopic sleeve gastrectomy covered by Medicare?</summary><p>Not as a national coverage guarantee the way gastric bypass, biliopancreatic diversion with duodenal switch, and adjustable gastric banding are. Effective June 27, 2012, CMS left coverage of stand-alone laparoscopic sleeve gastrectomy to each Medicare Administrative Contractor's discretion, conditioned on the same three criteria as the nationally covered procedures: BMI of 35 kg/m&sup2; or greater, at least one obesity-related comorbidity, and documented unsuccessful prior medical treatment for obesity. Confirm your specific MAC's current position, Novitas, WPS, and Noridian each publish their own bariatric billing article, before assuming it's covered the same way gastric bypass is.</p></details>
@@ -360,12 +365,13 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-general-surgery.html">General surgery billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-general-surgery-denials-and-appeals.html">Top general surgery claim denials and how to appeal them <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-general-surgery-modifiers.html">Modifier 58 vs. 78 vs. 79: billing during the global surgical period <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -414,6 +420,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

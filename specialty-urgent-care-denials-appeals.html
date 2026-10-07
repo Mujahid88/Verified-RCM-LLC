@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Urgent Care Claim Denials and Appeals: CARC Playbook | Verified RCM">
 <meta name="twitter:description" content="Urgent care claim denials explained CARC by CARC: CO-16, CO-97, CO-4, CO-50, CO-234, the S9083-vs-E/M mismatch, timely filing traps, and appeal-letter structure.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,27 +225,26 @@
       <p class="lede">A denial code by itself tells you almost nothing useful, CO-97 means "bundled," but whether that's appealable, a billing correction, or a dead end depends entirely on what's actually behind it. This guide pairs urgent care's five most consequential CARCs with the specific fix or appeal argument for each, then covers the two failure patterns unique to this specialty: the S9083-versus-E/M mismatch, and timely filing traps built around a walk-in population that never scheduled a return visit in the first place.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-urgent-care.html">urgent care billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a clock face with hands and a radiating speed motif, representing urgent care">
-  <circle cx="240" cy="240" r="108" fill="none" stroke="var(--muted)" stroke-width="2" />
-  <g stroke="var(--muted)" stroke-width="2" stroke-linecap="round">
-    <line x1="240" y1="132" x2="240" y2="144" />
-    <line x1="348" y1="240" x2="336" y2="240" />
-    <line x1="240" y1="348" x2="240" y2="336" />
-    <line x1="132" y1="240" x2="144" y2="240" />
-  </g>
-  <line x1="240" y1="240" x2="202" y2="197" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-  <line x1="240" y1="240" x2="306" y2="184" stroke="var(--cat-primary-care)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <circle cx="240" cy="240" r="5" fill="var(--cat-primary-care)" />
-  <polyline points="352,214 374,232 359,239 381,260" fill="none" stroke="var(--cat-primary-care)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-  <g stroke="var(--muted)" stroke-width="2" stroke-linecap="round">
-    <line x1="318" y1="196" x2="332" y2="210" />
-    <line x1="330" y1="176" x2="348" y2="194" />
-    <line x1="300" y1="160" x2="316" y2="176" />
-  </g>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-urgent-care-wide.svg" alt="Urgent care: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-five-carcs-that-matter-most-in-urgent-care">The five CARCs that matter most in urgent care</a></li>
+      <li><a href="#why-registration-and-eligibility-outweigh-coding-in-this-spe">Why registration and eligibility outweigh coding in this specialty</a></li>
+      <li><a href="#the-s9083-versus-em-mismatch-a-denial-category-unique-to-urg">The S9083-versus-E/M mismatch: a denial category unique to urgent care</a></li>
+      <li><a href="#timely-filing-traps-unique-to-a-walk-in-one-time-population">Timely filing traps unique to a walk-in, one-time population</a></li>
+      <li><a href="#appeal-letter-structure-that-actually-moves-a-claim">Appeal-letter structure that actually moves a claim</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -257,7 +255,7 @@
     </ul>
   </section>
 
-  <h2>The five CARCs that matter most in urgent care</h2>
+  <h2 id="the-five-carcs-that-matter-most-in-urgent-care">The five CARCs that matter most in urgent care</h2>
   <p>These five account for the large majority of urgent care's denial volume. Pairing each with the actual fix or appeal argument, not just the reason it fired, is the difference between a denial-code glossary and something a biller can act on mid-workflow.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -273,7 +271,7 @@
     </table>
   </div>
 
-  <h2>Why registration and eligibility outweigh coding in this specialty</h2>
+  <h2 id="why-registration-and-eligibility-outweigh-coding-in-this-spe">Why registration and eligibility outweigh coding in this specialty</h2>
   <p>A scheduled office visit gives a practice days or weeks of lead time to verify eligibility before the patient ever arrives. A walk-in urgent care visit gives none of that, the first time the front desk sees the patient's insurance card is often the same minute they're being roomed, and that compressed timeline is exactly where CO-16 originates. By industry reporting, eligibility and registration failures account for more than half of urgent care's total denial volume, which means the single highest-leverage fix in this specialty is a front-desk workflow change, not a coding correction.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Real-time eligibility checks on every visit, not just new patients.</b> An established patient's coverage can lapse or change between visits with no notice to the practice; checking only at first registration misses that.</span></li>
@@ -281,7 +279,7 @@
   </ul>
   <p>Practices that treat CO-16 purely as a billing-department problem are fixing the wrong end of the workflow. The correction belongs at check-in, before the claim is ever generated, and measuring CO-16 rate as a front-desk metric, not a billing metric, is what actually moves it.</p>
 
-  <h2>The S9083-versus-E/M mismatch: a denial category unique to urgent care</h2>
+  <h2 id="the-s9083-versus-em-mismatch-a-denial-category-unique-to-urg">The S9083-versus-E/M mismatch: a denial category unique to urgent care</h2>
   <p>No other specialty in this series carries this specific failure mode, because no other specialty splits its core visit billing between a flat-fee HCPCS code and a standard E/M code depending entirely on which payer is on the claim. S9083 is a HCPCS Level II global flat-fee urgent care visit code that some commercial and Medicaid MCO contracts still price; standard E/M (<code>99202</code>&ndash;<code>99215</code>) is the alternative, and which one is correct is decided by the payer contract, not by the visit itself.</p>
   <div class="dodont">
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> S9083 billed to Medicare</div><ul>
@@ -293,7 +291,7 @@
   </div>
   <p>Neither error is a coding judgment call, both are payer-rule violations that a per-payer billing rule set, checked at registration, prevents entirely. S9083's real-world use is also shrinking industry-wide as more payers move urgent care onto standard E/M rates, so a rule set that isn't reviewed periodically drifts out of date on its own, denying claims against payers that dropped S9083 months earlier without the practice noticing. Full payer-by-payer mechanics are in the E/M coding section of <a href="specialty-urgent-care.html">our urgent care billing and coding guide</a>.</p>
 
-  <h2>Timely filing traps unique to a walk-in, one-time population</h2>
+  <h2 id="timely-filing-traps-unique-to-a-walk-in-one-time-population">Timely filing traps unique to a walk-in, one-time population</h2>
   <p>Timely filing denials (CARC <b>CO-29</b>, the time limit for filing has expired) are rarely about the filing deadline itself, they're about a claim that stalled somewhere in the revenue cycle with nothing forcing anyone to notice. That risk is structurally higher in urgent care than in a scheduled specialty for a specific reason: a scheduled practice sees a patient again, which creates a natural checkpoint where a stuck prior claim gets caught. A walk-in urgent care patient may never return, so a claim that stalls in a work queue has no second visit to surface it.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>No follow-up visit means no natural catch point.</b> Build a hard, automated aging report by payer-specific timely filing window, commonly 90 to 365 days depending on the payer, rather than relying on staff noticing a claim has gone quiet.</span></li>
@@ -301,7 +299,7 @@
     <li><span class="check">3</span><span><b>A timely filing denial is winnable only with proof of timely submission.</b> A clearinghouse acceptance report or a payer's own portal timestamp showing the original claim was submitted within the window is the appeal argument, without that documentation, there's no case to make regardless of the circumstances.</span></li>
   </ul>
 
-  <h2>Appeal-letter structure that actually moves a claim</h2>
+  <h2 id="appeal-letter-structure-that-actually-moves-a-claim">Appeal-letter structure that actually moves a claim</h2>
   <p>A generic appeal letter citing "medical necessity" or "modifier applied" without specifics rarely succeeds. The structure that does:</p>
   <ol style="margin:0 0 1.2em 1.3em;padding:0;line-height:1.7">
     <li><b>Claim identifiers up front.</b> Patient, date of service, claim number, and the specific CARC being appealed, stated in the first two lines, not buried in a narrative.</li>
@@ -316,7 +314,7 @@
     <div><div class="protip-label">Pro tip</div><p>Before appealing any CO-97 or CO-234 denial, check two things in order: whether the code pair's NCCI modifier indicator permits an override at all, and whether the bundling is instead defined by the payer's own S9083 contract terms. A contract-defined bundle has no appeal path regardless of documentation quality, that staff time is better spent on the next walk-in's eligibility check.</p></div>
   </div>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Treat CO-16 as a front-desk metric first and a billing metric second.</li>
@@ -340,7 +338,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Why do so many urgent care claims deny with CO-16 before the diagnosis is even evaluated?</summary><p>Because urgent care runs on walk-in volume with no scheduled registration window, and by industry reporting, eligibility and registration errors account for more than half of the specialty's denials. A wrong subscriber ID, an unverified plan, or a missing required field on a walk-in claim triggers CO-16 before the payer ever reaches the CPT or ICD-10 codes on the line. Real-time eligibility verification at check-in, on every visit rather than only for new patients, is the highest-leverage fix available.</p></details>
     <details class="faq-item"><summary>Is a CO-97 bundling denial always appealable?</summary><p>No. Check the NCCI modifier indicator on the code pair first, an indicator of 0 means the edit cannot be overridden by any modifier, so no appeal argument reverses it. An indicator of 1 means it can be appealed with documentation showing the second service was genuinely distinct. A third pattern is specific to urgent care: some payer contracts bundle x-ray and lab testing directly into a flat S9083 visit fee, which isn't an NCCI edit at all and has no appeal path regardless of documentation.</p></details>
@@ -352,13 +350,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-urgent-care.html">Urgent care billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-urgent-care-modifiers.html">Urgent care billing modifiers: 25, 59, X-modifiers, and POS <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-urgent-care-ncci-bundling.html">NCCI edits and bundling in urgent care billing <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -407,6 +406,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

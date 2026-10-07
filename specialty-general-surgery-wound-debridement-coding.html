@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Wound Debridement Coding: 11042-11047 | Verified RCM">
 <meta name="twitter:description" content="Wound debridement CPT coding: the 11042-11047 depth hierarchy, add-on unit math for large wounds, ICD-10 specificity, MAC-specific LCDs, and the excisional-vs-active-wound-care trap.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,20 +225,26 @@
       <p class="lede">Debridement looks like the simplest code family in general surgery, three depths, three add-ons, until a real wound spans two depths, a claim gets bundled into a same-day closure, or a wound care LCD flags a documentation gap the note never anticipated. This guide covers the depth hierarchy in unit-math detail, the ICD-10 specificity that clears medical necessity, and the excisional-versus-active-wound-care distinction competitor content usually skips.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-general-surgery.html">general surgery billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a straight surgical incision crossed by suture stitch marks, representing general surgery">
-  <path d="M120,410 A210,210 0 0,1 405,155" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
-  <line x1="169.3" y1="296.5" x2="191.7" y2="316.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="203.3" y1="258.5" x2="225.7" y2="278.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="237.3" y1="220.5" x2="259.7" y2="240.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="271.3" y1="182.5" x2="293.7" y2="202.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="296.8" y1="154" x2="319.2" y2="174" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" />
-  <line x1="155" y1="335" x2="325" y2="145" stroke="var(--cat-surgical)" stroke-width="3.5" stroke-linecap="round" />
-  <circle cx="155" cy="335" r="4" fill="var(--cat-surgical)" />
-  <circle cx="325" cy="145" r="4" fill="var(--cat-surgical)" />
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-general-surgery-wide.svg" alt="General surgery: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-depth-hierarchy-and-why-its-the-whole-code">The depth hierarchy, and why it's the whole code</a></li>
+      <li><a href="#excisional-debridement-versus-active-wound-care-management">Excisional debridement versus active wound care management</a></li>
+      <li><a href="#icd-10-specificity-for-wound-debridement-claims">ICD-10 specificity for wound debridement claims</a></li>
+      <li><a href="#bundling-debridement-plus-same-session-closure">Bundling: debridement plus same-session closure</a></li>
+      <li><a href="#payer-coverage-five-macs-five-separate-lcds">Payer coverage: five MACs, five separate LCDs</a></li>
+      <li><a href="#modifier-25-and-debridement-office-visits">Modifier 25 and debridement office visits</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -250,7 +255,7 @@
     </ul>
   </section>
 
-  <h2>The depth hierarchy, and why it's the whole code</h2>
+  <h2 id="the-depth-hierarchy-and-why-its-the-whole-code">The depth hierarchy, and why it's the whole code</h2>
   <p>Excisional debridement is coded by the deepest tissue plane the surgeon actually excised down to, not by wound size and not by how many passes it took. Wound area only enters through the add-on codes, once the depth-appropriate base code has already been selected.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -276,11 +281,11 @@
 
   <p><b>Worked example, mixed-depth wound.</b> A 30 sq cm wound has subcutaneous tissue debrided across most of the field, with a 6 sq cm patch at the base showing exposed, necrotic bone also excised. <b>Wrong:</b> 11042 + 11045 + 11044 as three lines, double-bills the subcutaneous work the bone code already includes. <b>Right:</b> the whole wound is coded under the bone family, 11044 for the first 20 sq cm plus one unit of 11047 for the remaining 10, because bone was the deepest plane reached anywhere in it. Two genuinely separate wounds debrided the same date, at different depths, are coded separately by wound.</p>
 
-  <h2>Excisional debridement versus active wound care management</h2>
+  <h2 id="excisional-debridement-versus-active-wound-care-management">Excisional debridement versus active wound care management</h2>
   <p>11042-11047 and CPT's active wound care management codes (97597 for the first 20 sq cm, 97598 as its add-on) describe genuinely different services, conflated constantly because both bill by wound surface area. 11042-11047 is sharp excision of devitalized tissue down to a specific, named tissue plane, documented to bleeding, viable tissue, typically performed by the physician or a QHP, and carries a 000-day global with its own per-depth MUE. 97597/97598 is selective or non-selective wound care, which can include high-pressure waterjet, without necessarily excising to a defined plane, commonly performed by a wound care nurse or PT under physician supervision.</p>
   <p>The determining factor is technique and depth documented, not the setting or who's holding the instrument. A physician excising necrotic tissue with a scalpel down to fascia is 11043, whether it happens in an OR, a wound clinic, or a hospital bedside, the same physician performing surface-level cleansing without excising to a defined plane belongs in the active-wound-care family instead. &#9888;&#65039; This build did not independently confirm the current NCCI PTP indicator between 11042-11047 and 97597/97598 (CMS's PTP edit file returned access errors to automated fetch attempts); treat these as generally not billed together for the same wound, same date, until confirmed in the CMS NCCI PTP Edits Lookup Tool.</p>
 
-  <h2>ICD-10 specificity for wound debridement claims</h2>
+  <h2 id="icd-10-specificity-for-wound-debridement-claims">ICD-10 specificity for wound debridement claims</h2>
   <p>An unspecified ulcer or wound code frequently clears claim-level edits and then fails medical necessity review, because it doesn't establish the etiology, depth, or severity a payer's wound care policy is actually checking against. Confirmed live against the FY2026 ICD-10-CM code set, the axes that matter most for debridement claims:</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -298,7 +303,7 @@
   </div>
   <p>Build this into pre-bill review: whenever the CPT code claims bone-level debridement (11044/11047), the diagnosis should carry an axis that plausibly explains bone involvement, osteomyelitis, gangrene, or a severity-coded ulcer documenting bone necrosis, rather than a plain, unspecified skin ulcer code. 11044 against a diagnosis that only documents "breakdown of skin" severity is exactly the CPT-to-ICD-10 mismatch that draws medical necessity scrutiny.</p>
 
-  <h2>Bundling: debridement plus same-session closure</h2>
+  <h2 id="bundling-debridement-plus-same-session-closure">Bundling: debridement plus same-session closure</h2>
   <p>Debridement immediately before primary closure of that same wound, same session, is frequently bundled into the closure code's own valuation as wound-bed preparation, some degree of tissue trimming before closure is expected, non-separately-reportable work.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -314,7 +319,7 @@
   </div>
   <p>&#9888;&#65039; The specific NCCI modifier indicator governing the debridement-plus-closure pair changes by code combination and quarter; this build could not independently confirm current indicator values against CMS's PTP edit file (access errors on automated fetch). Confirm the current indicator for the specific base-code/closure-code pair you're billing in the CMS NCCI PTP Edits Lookup Tool before relying on a modifier override.</p>
 
-  <h2>Payer coverage: five MACs, five separate LCDs</h2>
+  <h2 id="payer-coverage-five-macs-five-separate-lcds">Payer coverage: five MACs, five separate LCDs</h2>
   <p>"Per CMS" doesn't hold up for wound debridement, because the relevant coverage policy is written and maintained by individual Medicare Administrative Contractor, not nationally. Confirmed live against the CMS Coverage Database:</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -331,7 +336,7 @@
   </div>
   <p>Find your practice's MAC first, then pull that MAC's specific document by number in any appeal or pre-bill check, a coverage requirement copied from the wrong MAC's article can pass internal review and still deny at the payer. &#9888;&#65039; This build confirmed the document IDs, MACs, and effective dates above against the CMS Coverage Database; the covered-diagnosis lists and documentation checklists inside each LCD's full text were not independently re-verified here (CMS's LCD detail pages returned access errors to automated retrieval), so pull the specific document text for your MAC before finalizing an order-set rule. The consistent theme across these LCDs: the chart needs to establish wound etiology, the depth and type of tissue actually removed (not merely cleansed), and a plan showing debridement is expected to progress healing.</p>
 
-  <h2>Modifier 25 and debridement office visits</h2>
+  <h2 id="modifier-25-and-debridement-office-visits">Modifier 25 and debridement office visits</h2>
   <p>Because 11042-11047 carry a 000-day global, a same-day E/M is billable alongside debridement only when it's a significant, separately identifiable service, documented with modifier 25. An established patient presenting with a new, unrelated complaint who also needs scheduled debridement the same visit supports 25 on the E/M; a visit that's entirely about evaluating and then debriding the wound does not, because that evaluation is already part of what makes the procedure billable. The note has to separately support the E/M's own history, exam, and medical decision making, distinct from the assessment leading directly into the procedure, a note reading as one continuous wound-focused encounter doesn't clear that bar even with 25 appended.</p>
 
   <div class="cta-band">
@@ -342,7 +347,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What's the difference between excisional debridement (11042-11047) and active wound care management (97597/97598)?</summary><p>11042-11047 describe excisional debridement: cutting devitalized tissue away down to a defined tissue plane (subcutaneous, muscle/fascia, or bone), documented to bleeding, viable tissue. 97597/97598 describe active wound care management, selective or non-selective, billed by wound area the same way, commonly performed by a wound care nurse or PT under physician supervision without necessarily excising to a defined depth. The distinction is technique and depth reached, not who holds the instrument, a physician excising necrotic tissue with a scalpel down to fascia is 11043, not 97597, regardless of setting.</p></details>
     <details class="faq-item"><summary>How do we bill a wound that spans two depths, like a wound that's mostly subcutaneous but has a patch of exposed bone?</summary><p>Code to the single deepest tissue level actually debrided anywhere in that wound, then use the add-on codes to capture the rest of the total area at that same base code, you do not split one wound into a subcutaneous code for part of it and a bone code for the rest. A 30 sq cm wound with bone exposed in a 5 sq cm patch and subcutaneous tissue across the remaining 25 sq cm is coded 11044 for the first 20 sq cm plus one unit of 11047 for the remaining 10, because the deeper code already presumes the more superficial tissue was addressed to reach it. The note needs to state total area and the single deepest plane reached, not describe multiple separate procedures.</p></details>
@@ -354,12 +359,13 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-general-surgery.html">General surgery billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-general-surgery-hernia-repair-coding.html">Hernia repair CPT codes by type and approach <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-general-surgery-ncci-bundling-traps.html">NCCI bundling traps in general surgery <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -408,6 +414,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

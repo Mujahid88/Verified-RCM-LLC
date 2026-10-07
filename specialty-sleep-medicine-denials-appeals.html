@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Sleep Medicine Claim Denials and Appeals: Wrong Code Set, CPAP Compliance | Verified RCM">
 <meta name="twitter:description" content="Sleep medicine denial fixes: HSAT CPT-vs-G-code mismatches (CO-16), CO-50 medical necessity, split-night bundling (CO-97), repeat-study frequency denials, and the KX modifier for CPAP compliance.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,17 +225,25 @@
       <p class="lede">Sleep medicine denials cluster around a small set of repeat offenders: a home sleep test billed with the wrong code set for the payer, a titration study that never proves the patient still needs the device, a split night billed as two full studies instead of one, and a CPAP rental line missing the modifier that certifies compliance. Almost none of these need a true medical-necessity appeal, they need the claim corrected against the rule that actually governs it. This guide covers the six denials that account for most sleep lab and DME write-offs, the appeal or correction argument for each, and a worked resubmission letter for the most common one: the CPT-versus-G-code mismatch on a home sleep apnea test.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-sleep-medicine.html">sleep medicine billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a slow undulating sleep-wave line beside a crescent moon arc, representing sleep medicine">
-  <path d="M40,230 C80,220 100,240 130,225 C160,210 180,225 210,215 C240,205 260,225 290,215 C320,205 350,225 380,215 C410,205 430,220 440,215" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M40,355 C100,335 140,335 180,355 C220,375 260,375 300,355 C340,335 380,335 440,355" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M350,160 A54,54 0 1,1 291.3,101.3 A42,42 0 0,0 350,160 Z" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M40,300 C90,270 130,270 160,300 C190,330 210,330 235,305 C245,290 250,200 255,165 C260,200 270,290 285,305 C310,320 330,320 355,300 C380,280 400,280 440,300" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M235,305 C245,290 250,200 255,165 C260,200 270,290 285,305" fill="none" stroke="var(--cat-medical)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="255" cy="165" r="4.5" fill="var(--cat-medical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-sleep-medicine-wide.svg" alt="Sleep medicine: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-sleep-medicine-denials-are-mostly-rulebook-mismatches-no">Why sleep medicine denials are mostly rulebook mismatches, not coverage fights</a></li>
+      <li><a href="#the-six-denials-that-account-for-most-sleep-medicine-write-o">The six denials that account for most sleep medicine write-offs</a></li>
+      <li><a href="#the-hsat-code-set-mismatch-in-detail">The HSAT code-set mismatch, in detail</a></li>
+      <li><a href="#split-night-billing-one-code-one-continuous-study">Split-night billing: one code, one continuous study</a></li>
+      <li><a href="#a-worked-resubmission-hsat-denied-for-the-wrong-code-set">A worked resubmission: HSAT denied for the wrong code set</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -247,11 +254,11 @@
     </ul>
   </section>
 
-  <h2>Why sleep medicine denials are mostly rulebook mismatches, not coverage fights</h2>
+  <h2 id="why-sleep-medicine-denials-are-mostly-rulebook-mismatches-no">Why sleep medicine denials are mostly rulebook mismatches, not coverage fights</h2>
   <p>Sleep medicine sits across three billing systems at once, and most of its denials come from applying the wrong one rather than from a payer genuinely disputing medical necessity. A facility-based polysomnogram or titration study bills as a professional/technical service under the medical benefit. A home sleep apnea test (HSAT) bills under the same benefit but uses a completely different code set depending on the payer, CPT for most commercial plans, HCPCS G-codes for Medicare DME MACs. And the CPAP device itself, once it goes home with the patient, moves into the durable medical equipment (DME) benefit, with its own capped-rental billing cycle, its own modifier rules, and its own compliance-documentation clock that runs independently of anything the sleep lab already submitted.</p>
   <p>That three-way split is exactly where denials concentrate. A biller who's used to submitting CPT codes for a commercial HSAT sends the same code set to a Medicare DME MAC and gets an automatic rejection that looks like a coding error but is really a payer-identification error. A sleep lab that documents a split-night study correctly still loses the second code to a bundling edit if it bills both halves separately. A DME supplier with a fully compliant patient still gets denied if the KX modifier goes out before the compliance download is pulled and filed. None of these are medical-necessity disputes in the usual sense, they're claims built against the wrong rule, which means most of them get fixed by resubmission or a short, specific letter rather than a lengthy appeal.</p>
 
-  <h2>The six denials that account for most sleep medicine write-offs</h2>
+  <h2 id="the-six-denials-that-account-for-most-sleep-medicine-write-o">The six denials that account for most sleep medicine write-offs</h2>
   <p>The table below lists each denial with its actual CARC, why it fires, the argument that gets it overturned or corrected, and the upstream fix that keeps it from recurring.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -303,7 +310,7 @@
     <div><div class="protip-label">Pro tip</div><p>Read the CARC before deciding how to fight it. A CO-16/N56 denial and a CO-50 denial look similar on an aging report, both show up as unpaid sleep study claims, but one needs a corrected code on a resubmission and the other needs a clinical appeal with chart documentation. Routing a code-set mismatch into the appeals queue instead of the same-day correction queue is one of the most common ways sleep lab AR ages past the point it should.</p></div>
   </div>
 
-  <h2>The HSAT code-set mismatch, in detail</h2>
+  <h2 id="the-hsat-code-set-mismatch-in-detail">The HSAT code-set mismatch, in detail</h2>
   <p>This is the single highest-volume sleep medicine denial because it isn't a judgment call, it's a lookup table problem that gets skipped under volume. Medicare DME MACs classify a home sleep apnea test by the number of channels the monitor records, and assign a HCPCS G-code accordingly instead of recognizing the CPT unattended-study codes most commercial payers use.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -318,7 +325,7 @@
   </div>
   <p>The practical rule: confirm whether the claim is going to a Medicare DME MAC before the code is chosen, not after a denial. Some commercial payers also accept G-codes and some Medicare Advantage plans process CPT correctly through their own claims systems, so this isn't a universal Medicare-versus-commercial split, it's a per-payer setting that has to be confirmed and stored against that payer in the practice management system, the same way a payer's timely-filing limit or claim-form preference would be.</p>
 
-  <h2>Split-night billing: one code, one continuous study</h2>
+  <h2 id="split-night-billing-one-code-one-continuous-study">Split-night billing: one code, one continuous study</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> One continuous overnight recording</div><ul>
       <li>Diagnostic portion followed by CPAP or bi-level titration in the same overnight session bills as 95811 alone. The code's own definition already includes the diagnostic portion, so there's nothing left for 95810 to describe on that date of service.</li>
@@ -329,7 +336,7 @@
   </div>
   <p>Sleep labs generally follow the American Academy of Sleep Medicine's split-night criteria when deciding whether to convert a diagnostic study into a same-night titration: an apnea-hypopnea index of at least 40 confirmed over a minimum of two hours of diagnostic recording, or an AHI of 20&ndash;40 supported by clinical judgment. ⚠️ That AASM threshold is a clinical protocol standard, not a universal CMS billing rule, check the specific split-night language in your MAC's polysomnography LCD and any commercial payer's sleep-study medical policy before treating it as the coding trigger, since a payer can require its own documentation of the conversion decision independent of the AASM criteria.</p>
 
-  <h2>A worked resubmission: HSAT denied for the wrong code set</h2>
+  <h2 id="a-worked-resubmission-hsat-denied-for-the-wrong-code-set">A worked resubmission: HSAT denied for the wrong code set</h2>
   <p>Because a CPT-versus-G-code mismatch usually means the test and its documentation were correct all along, this isn't framed as a clinical appeal, it's a corrected-claim cover letter that tells the payer exactly what changed and why the original service still stands.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -354,7 +361,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Why does Medicare deny a home sleep apnea test billed with CPT code 95806?</summary><p>Because Medicare DME MACs don't recognize CPT 95806, 95800, or 95801 for a home sleep apnea test at all, they require the equivalent HCPCS G-code instead: G0398 for a Type II monitor (7 or more channels), G0399 for a Type III monitor (4 or more channels, the most commonly billed code and the Medicare equivalent of CPT 95806), or G0400 for a Type IV monitor (3 or more channels). Submitting the CPT code to a Medicare DME MAC typically comes back CO-16 with remark code N56, meaning the procedure code isn't valid for the service billed. Since the test itself and its documentation are usually fine, the fix is a corrected resubmission with the matching G-code, not a medical-necessity appeal.</p></details>
     <details class="faq-item"><summary>What documentation prevents a CO-50 medical-necessity denial on a diagnostic sleep study?</summary><p>The order has to show the qualifying signs, symptoms, and comorbidities your payer's coverage policy lists, typically habitual loud snoring, witnessed apneas or gasping, excessive daytime sleepiness, or a comorbidity such as treatment-resistant hypertension, atrial fibrillation, or a high STOP-BANG or Epworth score, documented before the test is ordered, with the corresponding ICD-10 code linked on the claim. A study ordered on a chart that only says "rule out sleep apnea" without a documented indication is the single most common way this denial happens, because the payer has nothing on the claim tying the test to a covered indication.</p></details>
@@ -367,7 +374,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, NCCI edits, and payer-specific rules for code sets and modifiers change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets and LCDs in your jurisdiction. Confirm requirements against your specific payer mix and MAC before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-sleep-medicine.html">Sleep medicine billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-sleep-medicine-polysomnography-vs-home-sleep-test-billing.html">Polysomnography vs. home sleep test billing: choosing the right code <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -375,6 +382,7 @@
     <li><a href="prior-auth.html">Prior authorization services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="rcm-glossary.html">Medical billing &amp; RCM glossary <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -423,6 +431,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

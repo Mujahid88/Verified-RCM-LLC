@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Rheumatology Infusion Billing: 96365-96368 and J-Code Units | Verified RCM">
 <meta name="twitter:description" content="Rheumatology infusion billing depth guide: 96365-96368 timing rules and unit math, JW/JZ waste modifiers, hydration bundling, and J-code unit calculations worked out drug by drug.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,35 +225,25 @@
       <p class="lede">Infusion visits carry the highest revenue concentration in a rheumatology practice, and they're where the most units, minutes, and modifiers stack onto a single claim line. The administration code depends on start and stop times documented to the minute; the J-code units depend on vial size, dose, and waste reconciling to the decimal. Miss either one and the claim underpays quietly or gets returned before it's ever adjudicated. This guide works the actual math, timing thresholds, sequential-versus-concurrent scenarios, and J-code unit calculations for the five biologics rheumatology bills most.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-rheumatology.html">rheumatology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a joint hinge with orbiting markers representing rheumatology">
-  <!-- upper limb segment -->
-  <path d="M150,140 L232,220" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-  <!-- lower limb segment -->
-  <path d="M232,220 L300,340" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- secondary parallel bone contours -->
-  <path d="M164,150 L246,228" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M246,232 L314,350" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- joint capsule -->
-  <circle cx="232" cy="220" r="34" fill="none" stroke="var(--muted)" stroke-width="2" />
-
-  <!-- range-of-motion arc -->
-  <path d="M180,268 A100,100 0 0 1 232,150" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" />
-
-  <!-- secondary hinge lines suggesting cartilage striations -->
-  <path d="M206,196 L212,242" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
-  <path d="M256,198 L252,244" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
-
-  <!-- orbiting inflammation marker dots (accent) -->
-  <circle cx="232" cy="220" r="58" fill="none" stroke="var(--muted)" stroke-width="1" stroke-dasharray="1 10" stroke-linecap="round" />
-  <circle cx="290" cy="188" r="5" fill="var(--cat-medical)" />
-  <circle cx="276" cy="266" r="3.5" fill="var(--cat-medical)" />
-  <circle cx="188" cy="196" r="3" stroke="var(--cat-medical)" stroke-width="2" fill="none" />
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-rheumatology-wide.svg" alt="Rheumatology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-infusion-code-family-mapped-to-whats-actually-running">The infusion code family, mapped to what's actually running</a></li>
+      <li><a href="#timing-rules-and-the-more-than-half-threshold">Timing rules and the "more than half" threshold</a></li>
+      <li><a href="#sequential-versus-concurrent-and-where-hydration-actually-fi">Sequential versus concurrent, and where hydration actually fits</a></li>
+      <li><a href="#j-code-unit-math-drug-by-drug">J-code unit math, drug by drug</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -265,7 +254,7 @@
     </ul>
   </section>
 
-  <h2>The infusion code family, mapped to what's actually running</h2>
+  <h2 id="the-infusion-code-family-mapped-to-whats-actually-running">The infusion code family, mapped to what's actually running</h2>
   <p>Every infusion code family answers one question: what's going in, and how many substances during the same encounter. Rheumatology mostly lives in three of these families, and picking the wrong one is a coding error independent of whether the clinical care was correct.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -284,7 +273,7 @@
   </div>
   <p>Only one code can be the "initial" service per encounter, and it's the highest-complexity substance administered, not necessarily the first one physically hung. If a chemo-classified drug and a non-chemo biologic both run the same visit, 96413 is the initial code and the non-chemo drug becomes a sequential or concurrent add-on, never the reverse, and never two initial codes on one claim.</p>
 
-  <h2>Timing rules and the "more than half" threshold</h2>
+  <h2 id="timing-rules-and-the-more-than-half-threshold">Timing rules and the "more than half" threshold</h2>
   <p>96365 covers infusion time up to and including 1 hour. Each 96366 unit after that needs the infusion to run more than 30 minutes past the prior hour increment, the same "more than half" convention CPT uses for other time-based add-on codes. A remainder of exactly 30 minutes or less doesn't clear the bar; a remainder of 31 minutes or more does.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -300,7 +289,7 @@
   </div>
   <p>None of this works from a note that says "infusion completed without incident." The record needs an actual start and stop time for every component, the initial infusion, each additional hour, each sequential or concurrent drug, because that's the only data the units are legitimately calculated from. A note that defaults to the same duration every visit, regardless of what actually happened that day, is exactly the pattern an infusion-unit audit is built to catch.</p>
 
-  <h2>Sequential versus concurrent, and where hydration actually fits</h2>
+  <h2 id="sequential-versus-concurrent-and-where-hydration-actually-fi">Sequential versus concurrent, and where hydration actually fits</h2>
   <p>96367 and 96368 are both add-on codes for a second drug, and the distinction is administrative, not clinical. 96367 is for a second, different drug infused sequentially, after the first finishes, through the same or a new line, following the same up-to-1-hour structure as any initial infusion, billed once per sequential drug. 96368 is for a second, different drug running concurrently through a separate line, reported once per encounter regardless of how long it ran.</p>
   <p>Neither code applies to a second bag of the same drug, and neither applies to hydration fluid alone. That last point causes real denials: routine saline to keep a line patent, or a brief flush before or after the biologic, is incidental to the therapeutic infusion and bundled into 96365/96366, it isn't separately billable under 96360/96361 just because it ran through the pump. Hydration only earns its own code when it's medically necessary in its own right and documented with its own start and stop time, separate from the biologic administration record.</p>
   <div class="protip">
@@ -308,7 +297,7 @@
     <div><div class="protip-label">Pro tip</div><p>Build the infusion note around explicit start/stop timestamp fields per component, not one free-text summary. Units calculated from timestamped fields hold up under a post-payment audit in a way a narrative summary rarely does, because the auditor is checking your math against your own documented minutes.</p></div>
   </div>
 
-  <h2>J-code unit math, drug by drug</h2>
+  <h2 id="j-code-unit-math-drug-by-drug">J-code unit math, drug by drug</h2>
   <p>HCPCS J-codes bill in fixed dosage increments, not per vial, not per milligram given, but per the specific unit CMS assigned that code. Billed units always equal the actual dose administered; anything drawn from a single-dose vial but not given appears separately under JW, with JZ reserved for zero-waste vials. Below are the five biologics rheumatology bills most, with the math worked through.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -326,7 +315,7 @@
   <p>The two failure modes are mirror images. Under-reporting drops the waste and understates what was actually drawn from inventory, creating a mismatch against the buy-and-bill purchase record on an audited claim. Over-reporting bills the full vial size as administered regardless of the actual weight-based dose, inflating the claim above what the dosing calculation supports. Both are caught the same way: recalculate the dose from the documented weight and mg/kg order, check it against the units billed, and confirm the JW line accounts for the remainder.</p>
   <p>NDC reporting compounds this. A growing list of commercial payers and state Medicaid programs require the drug's 11-digit NDC, its quantity in the NDC's own unit of measure (often different from the HCPCS billing unit), and the correct unit-of-measure qualifier on the same line as the J-code. A claim with perfect units and correct JW/JZ can still deny purely because the NDC segment doesn't reconcile, confirm each payer's NDC requirement before submission, not after a denial pattern makes it obvious.</p>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Document start and stop times for every infusion component.</li>
@@ -350,7 +339,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>How many units of 96366 can we bill for a 3-hour infusion?</summary><p>One unit of 96365 covers the first hour, and each 96366 unit after that needs more than 30 minutes past the prior hour increment, CPT's &ldquo;more than half&rdquo; rule. A 2-hour-45-minute infusion bills 96365 x1 and 96366 x2: the first hour, the second hour, then the 45-minute remainder clears the threshold for a third increment. An infusion stopping at 2 hours 20 minutes bills only 96365 x1 and 96366 x1, since 20 minutes doesn't clear the bar for a second add-on unit.</p></details>
     <details class="faq-item"><summary>Can we bill hydration fluid separately on a biologic infusion day?</summary><p>Only if it's medically necessary in its own right and documented separately, with its own start and stop time. Hydration under 96360/96361 on the same encounter as a therapeutic infusion usually isn't separately payable when it's incidental, saline to keep the line open, or a brief flush, is bundled into the infusion code, not billed as its own service. Confirm the specific payer's edit before appending both.</p></details>
@@ -364,7 +353,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-rheumatology.html">Rheumatology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-rheumatology-joint-injection-billing.html">Rheumatology joint injection coding: CPT 20600-20611 by joint size <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -372,6 +361,7 @@
     <li><a href="specialty-rheumatology-modifiers.html">Rheumatology billing modifiers: 25, 59, 50, JW/JZ explained <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-rheumatology-denials-appeals.html">Rheumatology claim denials and appeals: CO-197, CO-50, CO-97 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -420,6 +410,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

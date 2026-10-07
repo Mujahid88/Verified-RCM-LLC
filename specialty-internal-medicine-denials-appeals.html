@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Internal Medicine Claim Denials and Appeals: Top CARC Codes | Verified RCM">
 <meta name="twitter:description" content="Internal medicine denial fixes by CARC code: CO-50 medical necessity, CO-97 bundling, CO-16/MA130 CCM documentation gaps, PR-204 coverage exclusions, and sample appeal letters.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,17 +225,26 @@
       <p class="lede">A denial reason code alone doesn't tell your staff what to do next, it just tells them what happened. This guide pairs internal medicine's four highest-volume denials (CO-50, CO-97, CO-16/MA130, and PR-204) with the specific fix or appeal argument each one needs, because the four require completely different responses: one is a diagnosis-specificity fix, one is an NCCI lookup, one is a documentation pull, and one usually isn't appealable at all. Two worked appeal letters, a downcoded E/M visit and a CCM claim denied on incomplete time documentation, are included below.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-internal-medicine.html">internal medicine billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of layered arcs and a heartbeat pulse line, symbolizing internal medicine and ongoing whole-body primary care">
-  <path d="M100,360 A190,190 0 0,1 380,360" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M130,360 A160,160 0 0,1 350,360" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M160,360 A125,125 0 0,1 320,360" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M150,210 L190,210 L205,180 L220,235 L235,190 L250,210 L330,210" fill="none" stroke="var(--cat-primary-care)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="150" cy="210" r="4" fill="var(--cat-primary-care)"/>
-  <circle cx="330" cy="210" r="4" fill="var(--cat-primary-care)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-internal-medicine-wide.svg" alt="Internal medicine: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-carc-specific-fixes-beat-a-generic-denial-workflow">Why CARC-specific fixes beat a generic denial workflow</a></li>
+      <li><a href="#co-50-not-medically-necessary-the-icd-10-specificity-fix">CO-50: not medically necessary, the ICD-10 specificity fix</a></li>
+      <li><a href="#co-97-bundled-into-another-service-the-ncci-indicator-and-mo">CO-97: bundled into another service, the NCCI indicator and modifier fix</a></li>
+      <li><a href="#co-16-ma130-missing-or-invalid-information-the-most-common-c">CO-16 / MA130: missing or invalid information, the most common CCM/TCM denial</a></li>
+      <li><a href="#pr-204-not-covered-under-the-patients-plan">PR-204: not covered under the patient's plan</a></li>
+      <li><a href="#sample-appeal-letters">Sample appeal letters</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -247,7 +255,7 @@
     </ul>
   </section>
 
-  <h2>Why CARC-specific fixes beat a generic denial workflow</h2>
+  <h2 id="why-carc-specific-fixes-beat-a-generic-denial-workflow">Why CARC-specific fixes beat a generic denial workflow</h2>
   <p>Most denial-management content treats "appeal it" as a single step. In internal medicine, that's the wrong instinct for at least half of what actually denies. A CO-97 bundling denial where the NCCI modifier indicator is 0 has no appeal path, the second code simply isn't separately payable, and staff time spent writing an appeal is time that produced nothing. A PR-204 plan-exclusion denial is the same story from a different angle: there's frequently no error to correct. Meanwhile a CO-16/MA130 documentation-gap denial on a CCM claim is close to a coin-flip win if the underlying time was real, because the fix is pulling records that already exist, not manufacturing a new clinical argument. Sorting denials by CARC before deciding whether to appeal, correct, or write off is what separates a denials team that recovers real revenue from one that works every denial the same way regardless of whether it's winnable.</p>
 
   <div class="data-table-wrap">
@@ -263,7 +271,7 @@
     </table>
   </div>
 
-  <h2>CO-50: not medically necessary, the ICD-10 specificity fix</h2>
+  <h2 id="co-50-not-medically-necessary-the-icd-10-specificity-fix">CO-50: not medically necessary, the ICD-10 specificity fix</h2>
   <p>CO-50 fires when the diagnosis on the claim doesn't support the billed service under the payer's coverage policy, and in internal medicine the most common version of this isn't a wrong diagnosis, it's an incomplete one. ICD-10-CM's combination codes carry "use additional code" instructional notes that a lot of EHR problem lists don't enforce, and a claim that looks complete at a glance is actually missing a required companion code.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -279,7 +287,7 @@
   </div>
   <p>The appeal argument for a correct-but-underspecified claim is straightforward once you know the target: resubmit or appeal with the missing companion code added and the chart note that supports it referenced by date. This is a correction more often than a true appeal, if the specificity exists in the documentation and simply wasn't coded, most payers process it as a corrected claim rather than requiring the full appeal process. Where the specificity genuinely doesn't exist in the chart, the CKD stage was never actually assessed, that's not an appealable CO-50; it's a documentation gap the next visit needs to close, covered in more depth in <a href="specialty-internal-medicine-icd-10-multi-morbidity.html">our ICD-10 coding guide for multi-morbidity patients</a>.</p>
 
-  <h2>CO-97: bundled into another service, the NCCI indicator and modifier fix</h2>
+  <h2 id="co-97-bundled-into-another-service-the-ncci-indicator-and-mo">CO-97: bundled into another service, the NCCI indicator and modifier fix</h2>
   <p>CO-97 means the billed code is a Column 2 component of another code already paid on the same claim, and the single question that decides whether it's worth appealing is the NCCI modifier indicator for that specific pair, not the diagnosis, not the documentation quality, the indicator.</p>
   <ul class="check-list">
     <li><span class="warn">0</span><span><b>Never bypassable.</b> The pair simply isn't separately payable under any circumstances. Don't appeal, correct the claim by removing the bundled line, or confirm you meant to bill the comprehensive code instead of both components.</span></li>
@@ -289,7 +297,7 @@
   <p>The internal medicine collision that generates the most CO-97 volume isn't a same-day procedure against the office visit, it's the EKG family billing more than one component for a single test. <code>93000</code> (global tracing plus interpretation) is mutually exclusive with <code>93005</code> (tracing only) or <code>93010</code> (interpretation only) for the same test, same date; billing two of the three is the actual error behind most EKG-related CO-97s in this specialty, not a conflict with the E/M. Spirometry follows the same pattern: <code>94060</code> already includes the pre- and post-bronchodilator readings as a single global service, so a separate <code>94010</code> line for the same encounter's baseline reading denies as a component-of-the-whole, not a genuine bundling dispute. A real repeat EKG on the same date, new chest pain mid-visit, a second tracing that's actually medically necessary, is a modifier 76 (repeat procedure) scenario, not a 59/X-modifier override, because it's a true repeat of the identical service rather than two distinct ones.</p>
   <p>⚠️ The current-quarter NCCI modifier indicator for any specific internal medicine code pair should be confirmed in the CMS NCCI PTP Edits Lookup Tool before you build an appeal or a scrubber rule around it, this build could not open CMS's primary NCCI PTP edit files directly (CMS.gov returned access errors to automated retrieval attempts made while researching this page), so treat the 0/1/9 framework above as CMS policy structure that's confirmed, while individual pair values need a live lookup because they update quarterly. Full bundling reference for EKG, spirometry, and in-office procedure pairs is in <a href="specialty-internal-medicine-ncci-bundling-edits.html">our NCCI edits and bundling guide for internal medicine</a>.</p>
 
-  <h2>CO-16 / MA130: missing or invalid information, the most common CCM/TCM denial</h2>
+  <h2 id="co-16-ma130-missing-or-invalid-information-the-most-common-c">CO-16 / MA130: missing or invalid information, the most common CCM/TCM denial</h2>
   <p>This pairing is the single most frequent denial internal medicine practices see on care-management claims, because CCM and TCM billing depends on documentation elements that live outside the note itself, a time log, a consent date, a care plan, and any one gap denies the claim even when the clinical work genuinely happened.</p>
   <ul class="check-list">
     <li><span class="warn">1</span><span><b>Incomplete monthly time log (CCM).</b> The most common driver by volume. A log with individual entries that don't clearly sum to the 20-minute (or 60-minute, for complex CCM) threshold for the billed month reads as unsupported, even if the total work happened. Fix: pull the actual dated entries, total them, and attach or reference the total in the resubmission.</span></li>
@@ -299,7 +307,7 @@
   </ul>
   <p>Because CCM is billed monthly at real per-patient volume, this is the denial category where a systematic monthly documentation check pays for itself fastest, catching a missing time-log entry before submission is far cheaper than appealing it after the fact. A sample appeal letter for exactly this scenario is below.</p>
 
-  <h2>PR-204: not covered under the patient's plan</h2>
+  <h2 id="pr-204-not-covered-under-the-patients-plan">PR-204: not covered under the patient's plan</h2>
   <p>PR-204 means the service is excluded from the specific plan's benefit design, and unlike the three denials above, it's usually not a claim error at all, which means the first move is verification, not appeal-letter drafting. Two internal medicine patterns generate most of this specialty's PR-204 volume: commercial "wellness visit" benefits that don't map one-to-one to Medicare's AWV codes, and commercial plans that simply don't cover care-management codes (CCM, TCM, RPM) the way Medicare does.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Worth checking</div><ul>
@@ -313,7 +321,7 @@
   </div>
   <p>If the exclusion checks out as real, the claim isn't appealable in the traditional sense; bill the patient's responsibility per the plan's terms, and flag the payer's care-management coverage posture in your enrollment records so future patients on that plan aren't scheduled into a program the plan won't pay for. The upstream fix, verifying care-management and preventive-visit coverage at the plan level during intake, not at claim submission, prevents far more PR-204 denials than any appeal language would.</p>
 
-  <h2>Sample appeal letters</h2>
+  <h2 id="sample-appeal-letters">Sample appeal letters</h2>
   <p>Both letters below follow the same structure: state the code and date of service, name the exact denial reason and CARC as it appeared on the remittance, state the specific standard the service met, attach the supporting documentation by date, and close with the specific action requested.</p>
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
@@ -333,7 +341,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What's the difference between a CO-50 and a CO-97 denial in internal medicine?</summary><p>CO-50 means the diagnosis on the claim doesn't support medical necessity for the service under the payer's coverage policy, the fix is usually a more specific ICD-10 code or a missing companion code, like the N18.x CKD stage that has to accompany E11.22. CO-97 means the code itself is bundled into another code already paid on the claim, which is an NCCI Column 1/Column 2 issue, not a diagnosis issue. Confusing the two wastes appeal time: a CO-97 denial doesn't get fixed by adding diagnosis specificity, and a CO-50 denial doesn't get fixed by appending a modifier.</p></details>
     <details class="faq-item"><summary>Why do our CCM claims keep denying with CO-16 or MA130?</summary><p>CO-16 with remark code MA130 means the claim is missing information the payer needs to adjudicate it, and for chronic care management the usual gaps are a monthly time log that doesn't clearly sum to the required minutes, a consent that was never dated, or no comprehensive care plan on file as of the billed date. It's the single most common denial in this code family because CCM is billed on a recurring monthly basis and any one month's documentation gap denies that month's claim, even when every other month was clean. Fix it by pulling the actual dated time entries before resubmitting, not by re-billing the same claim unchanged.</p></details>
@@ -345,13 +353,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-internal-medicine.html">Internal medicine billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-internal-medicine-ncci-bundling-edits.html">NCCI edits and bundling in internal medicine: EKG, spirometry, and in-office procedures <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-internal-medicine-icd-10-multi-morbidity.html">ICD-10 coding for multi-morbidity patients in internal medicine <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -400,6 +409,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Prior Authorization Services &amp; Workflow for Medical Practices | Verified RCM">
 <meta name="twitter:description" content="Prior authorization guide: the eligibility-to-approval workflow, major payer portals and turnaround times, peer-to-peer review, gold-carding, and the denials that follow a missed authorization.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -222,21 +221,29 @@
       <h1>Prior authorization: the write-off that started as a scheduling problem.</h1>
       <p class="lede">A missing or lapsed authorization is one of the only denials a practice usually cannot bill the patient for, which makes it the most expensive category of avoidable loss in the revenue cycle. The fix runs entirely before the appointment, never after.</p>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a gated turnstile representing prior authorization clearance">
-  <line x1="170" y1="130" x2="170" y2="350" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="310" y1="130" x2="310" y2="350" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="170" cy="130" r="6" stroke="var(--color-text)" stroke-width="2" fill="none"/>
-  <circle cx="310" cy="130" r="6" stroke="var(--color-text)" stroke-width="2" fill="none"/>
-  <line x1="150" y1="350" x2="330" y2="350" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M170,240 Q240,150 310,240" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="170" y1="240" x2="310" y2="240" stroke="var(--cat-medical-billing)" stroke-width="3.5" stroke-linecap="round"/>
-  <circle cx="240" cy="240" r="5" fill="var(--cat-medical-billing)"/>
-  <line x1="120" y1="310" x2="150" y2="290" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="110" y1="280" x2="140" y2="262" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/prior-auth.svg" alt="Prior authorization: billing process guide" width="1200" height="630" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-this-sits-upstream-of-billing-not-inside-it">Why this sits upstream of billing, not inside it</a></li>
+      <li><a href="#what-tends-to-trigger-a-prior-authorization-requirement">What tends to trigger a prior authorization requirement</a></li>
+      <li><a href="#the-workflow-step-by-step">The workflow, step by step</a></li>
+      <li><a href="#peer-to-peer-review-the-fastest-way-back-from-a-denial">Peer-to-peer review: the fastest way back from a denial</a></li>
+      <li><a href="#gold-carding-when-a-strong-track-record-buys-you-out-of-the">Gold-carding: when a strong track record buys you out of the process</a></li>
+      <li><a href="#common-mistakes-that-turn-into-denials">Common mistakes that turn into denials</a></li>
+      <li><a href="#when-authorization-is-denied-appeal-levels-and-the-proceed-o">When authorization is denied: appeal levels and the proceed-or-wait decision</a></li>
+      <li><a href="#tracking-prior-authorizations-across-payers-without-losing-o">Tracking prior authorizations across payers without losing one</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <div class="payer-contact">
     <div class="payer-contact-item">
       <div class="payer-contact-label"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>Typical turnaround</div>
@@ -274,12 +281,12 @@
     </ul>
   </section>
 
-  <h2>Why this sits upstream of billing, not inside it</h2>
+  <h2 id="why-this-sits-upstream-of-billing-not-inside-it">Why this sits upstream of billing, not inside it</h2>
   <p>Prior authorization is decided before the service is delivered, which means every failure here is locked in before a claim is ever generated. A biller who does everything else correctly, clean coding, accurate modifiers, a well-scrubbed claim, still cannot recover a service that required authorization and never got it. That is what makes this a scheduling and intake discipline first, and a billing discipline second: the work that actually prevents the loss happens days before the appointment, not after the remittance arrives.</p>
   <p>The second reason this category is expensive is that it is frequently invisible until it is large. A single missed authorization is one denied claim. A workflow that does not track approval expiration dates and visit counts against the schedule accumulates lapses quietly across every recurring-visit patient in the practice, and the pattern usually surfaces only when someone reconciles a quarter of denials and finds the same root cause repeated dozens of times.</p>
   <p>There's a third reason this deserves ownership separate from billing: the people best positioned to catch a requirement, the front-desk and scheduling staff, are rarely the people who feel the pain of a missed one. The denial lands on a biller's desk weeks later, disconnected from the scheduling decision that caused it, which makes the root cause hard to see without deliberately connecting the two. Practices that treat authorization checking as part of scheduling, with a named owner and a hard rule that nothing gets booked until the check is done, catch far more of this upstream than practices that treat it as a billing cleanup step.</p>
 
-  <h2>What tends to trigger a prior authorization requirement</h2>
+  <h2 id="what-tends-to-trigger-a-prior-authorization-requirement">What tends to trigger a prior authorization requirement</h2>
   <p>There is no universal list, since every payer publishes and revises its own, but certain categories of service are authorization-dependent often enough across payers that they're worth checking by default rather than by exception. Treat the table below as a starting checklist for where to look first, not a substitute for the payer's own current policy.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -309,7 +316,7 @@
     </table>
   </div>
 
-  <h2>The workflow, step by step</h2>
+  <h2 id="the-workflow-step-by-step">The workflow, step by step</h2>
   <ol class="check-list">
     <li><span class="check">1</span><span><b>Eligibility and requirement check.</b> Confirm active coverage and look up whether the specific CPT/HCPCS code and diagnosis require authorization under that plan, before the visit is scheduled, not after.</span></li>
     <li><span class="check">2</span><span><b>Documentation assembly.</b> Gather the clinical notes, orders and medical-necessity justification the payer's own policy asks for, since a generic submission is the most common reason for an avoidable delay.</span></li>
@@ -327,18 +334,18 @@
     </div>
   </div>
 
-  <h2>Peer-to-peer review: the fastest way back from a denial</h2>
+  <h2 id="peer-to-peer-review-the-fastest-way-back-from-a-denial">Peer-to-peer review: the fastest way back from a denial</h2>
   <p>A peer-to-peer review is a direct phone conversation between the treating physician and the payer's medical director, offered after an initial denial and typically available before or during a formal written appeal. It exists because a written appeal has to travel through a review queue, sometimes staffed initially by non-clinical reviewers checking the submission against a policy checklist, before it ever reaches a physician who can evaluate the actual clinical picture. A peer-to-peer skips that queue entirely: it puts your physician on the phone with a physician on the other side, and a meaningful share of denials reverse in that single call because the medical director can approve on the spot once the clinical necessity is actually explained.</p>
   <p>The reason peer-to-peer requests fail has almost nothing to do with whether the service was medically necessary and almost everything to do with who takes the call and how prepared they are. Delegating the call to a scheduler or a biller, however capable, hands the payer's medical director someone who cannot answer a clinical follow-up question, which ends the conversation in a denial by default. A physician who joins the call without the chart open in front of them is in the same position: the medical director asks about a specific exam finding or a specific failed conservative treatment, and "I'd have to check the note" is not an answer that reverses anything. And the single most common failure is arguing policy instead of medical necessity, telling the medical director the plan "should" cover this instead of explaining why this specific patient, with this specific clinical history, needs it. The physicians who win these calls consistently talk about the patient in front of them, not the payer's policy language.</p>
   <p>Getting this right starts with treating the denial letter as urgent the moment it arrives, since most payers set a short, defined window to request the peer-to-peer at all, and it also means logging what was actually said on the call, not just the outcome, since a reversal sometimes needs to be confirmed in writing afterward before it shows up correctly on the claim. The full mechanics, exactly what to hand the physician before the call, how to actually get it scheduled quickly, and the specific reasons these calls fail even when the underlying clinical case is strong, are in <a href="prior-auth-peer-to-peer.html">our peer-to-peer review guide</a>.</p>
 
-  <h2>Gold-carding: when a strong track record buys you out of the process</h2>
+  <h2 id="gold-carding-when-a-strong-track-record-buys-you-out-of-the">Gold-carding: when a strong track record buys you out of the process</h2>
   <p>Gold-carding is an increasingly recognized industry term for programs that exempt a provider from prior authorization on specific services once that provider has demonstrated a consistently high approval rate over time. It is not a single national program, it's a patchwork, with several states now having passed gold-carding legislation of their own and a number of payers running their own version independent of any state mandate. Where it applies, it removes the authorization step entirely for the covered services, which for a practice doing the same handful of high-volume, authorization-dependent procedures can eliminate a meaningful share of the administrative burden this page describes.</p>
   <p>The trend line matters here even for practices whose current payer mix doesn't offer it yet. Gold-carding legislation has expanded state by state rather than arriving all at once nationally, and payers have been under sustained pressure, from regulators, from providers, and from public reporting on prior authorization burden, to expand exemption programs rather than contract them. A practice that starts tracking its own approval-rate data now is positioned to claim an exemption the moment one becomes available in its state or its payer mix, instead of finding out a year later that it would have qualified from the start.</p>
   <p>Qualification is built around historical approval-rate data: a provider whose requests for a given service are approved at a high rate over a defined lookback period becomes eligible, with the exact threshold, lookback window and list of covered services set independently by each payer or state law. That variation is the reason a practice cannot assume gold-carding applies just because it's heard the term, it takes a direct check against the specific payers in that practice's own mix, service by service, since eligibility for one procedure with one payer says nothing about eligibility for a different procedure or a different plan.</p>
   <p>Gold-card status is also not something a practice earns once and keeps forever. Programs typically re-evaluate eligibility on a recurring cycle, and a drop in approval rate, a change in the covered service list, or a change in state law can pull a previously exempt provider back into full prior authorization requirements without much warning. That is exactly why tracking your own approval rate by service and by payer has value on its own, independent of whether any formal gold-carding program is currently in play: it is the same data a payer would use to grant the exemption, it is leverage in a payer negotiation even absent a formal program, and it is the early-warning system that tells a practice its status is at risk before a claim gets denied under a program it assumed still applied. How to check whether your specific payer mix offers it, and how to build the approval-rate tracking that makes the case either way, is in <a href="prior-auth-gold-carding.html">our gold-carding guide</a>.</p>
 
-  <h2>Common mistakes that turn into denials</h2>
+  <h2 id="common-mistakes-that-turn-into-denials">Common mistakes that turn into denials</h2>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Where prior authorization workflows break down, and what prevents each one.</caption>
@@ -355,12 +362,12 @@
     </table>
   </div>
 
-  <h2>When authorization is denied: appeal levels and the proceed-or-wait decision</h2>
+  <h2 id="when-authorization-is-denied-appeal-levels-and-the-proceed-o">When authorization is denied: appeal levels and the proceed-or-wait decision</h2>
   <p>An authorization denial and a claim denial are not the same event, even though practices often react to both the same way. An authorization denial happens before the service is delivered, which makes it a decision point rather than a loss: nothing has been billed yet, and the practice still has real options, reconsideration, peer-to-peer, a formal appeal, or a decision to reschedule. A claim denial happens after the service was already delivered and billed, at which point the cost is sunk and the only question left is whether it's recoverable at all. That distinction is why an authorization denial deserves urgency rather than dread: acted on quickly, it rarely has to become a financial loss.</p>
   <p>The real risk in this category isn't the denial itself, it's what a practice does next. Proceeding with a scheduled service on the assumption the authorization "will probably come through" or "should apply retroactively" converts a recoverable decision point into exactly the write-off this page opened with, because most payer contracts treat a missing or denied authorization as the practice's administrative failure rather than the patient's responsibility. The appeal path itself typically runs through reconsideration, then peer-to-peer (covered above), then a formal written appeal, and in some states an external review beyond that, the exact sequence, deadlines and what each level requires varies by payer and plan type, so treat the structure as a starting map rather than a fixed script.</p>
   <p>The one place this calculus genuinely changes is urgent or emergent care, where the clinical risk of waiting for an authorization decision can outweigh the financial risk of proceeding without one, and that's a decision the practice and the patient make deliberately and document, not one that happens by default because a schedule was already set. Documenting it means the chart shows the clinical reasoning for proceeding, not just the fact that it happened, since that documentation is often what a later appeal or an internal write-off review will actually turn on. For elective and non-urgent services, the appeal path is almost always faster and cheaper than an unauthorized write-off. The full appeal-level breakdown, how to document a proceed decision defensibly when timing genuinely doesn't allow for it, and where practices most often get this sequencing wrong, are in <a href="prior-auth-denials-appeals.html">our prior authorization denials and appeals guide</a>.</p>
 
-  <h2>Tracking prior authorizations across payers without losing one</h2>
+  <h2 id="tracking-prior-authorizations-across-payers-without-losing-o">Tracking prior authorizations across payers without losing one</h2>
   <p>The operational reality behind most of the mistakes in the table above is simple: a practice working with a dozen payers is juggling a dozen different portals, a dozen different submission formats, and a dozen different turnaround expectations, often for the same handful of high-volume procedures. Nothing about that is unified across payers, and a workflow built around remembering it all rather than tracking it systematically is the reason lapses accumulate quietly across every recurring-visit patient in the practice until a denial audit surfaces the same root cause dozens of times over.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -378,7 +385,7 @@
   </div>
   <p>The cost of losing track of any one of these fields is the same regardless of which field slipped: either the service gets delayed while the practice scrambles to re-verify status, or it gets delivered on the assumption authorization was still in force, and the practice finds out otherwise when the claim denies weeks later. The tool matters less than the discipline, a well-maintained spreadsheet reviewed daily by a named owner beats an expensive authorization module nobody actually opens, though at real volume a system that surfaces expirations automatically instead of relying on someone remembering to look is worth the cost. What a tracking system actually needs to look like, whether a spreadsheet is ever good enough, and how to build the escalation step so a stalled request doesn't sit silently until it expires, are in <a href="prior-auth-tracking-workflow.html">our authorization tracking guide</a>.</p>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do">
       <div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Do</div>
@@ -402,7 +409,7 @@
     </div>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>How long does prior authorization actually take?</summary><p>It varies by payer and by whether the request is standard or expedited. Commercial plans commonly decide standard requests within a few business days and expedited requests within 24 to 72 hours, but the only reliable number is the one published in that specific payer's current policy, since timeframes are revised periodically and are sometimes governed by state prompt-authorization laws layered on top of the payer's own standard.</p></details>
     <details class="faq-item"><summary>What is a peer-to-peer review and when do we ask for one?</summary><p>A peer-to-peer is a direct conversation between the ordering physician and the payer's reviewing physician after an initial denial, usually the fastest path to reversing a medical-necessity denial without a full written appeal. Request it as soon as the denial letter arrives rather than waiting to exhaust other options, since most payers set a deadline for requesting it.</p></details>
@@ -426,7 +433,7 @@
     <p><b>Confirm before you rely on this.</b> Prior authorization requirements, payer portals and turnaround times change by payer, plan and service. The process information on this page reflects standard industry practice as of August 2026 and is provided for general education, verify current requirements directly with the specific payer before relying on it.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="prior-auth-peer-to-peer.html">Peer-to-peer review: how to win one <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="prior-auth-gold-carding.html">Gold-carding explained <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -437,6 +444,7 @@
     <li><a href="denials-management.html">Denials management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="service-revenue-cycle-management.html">Revenue cycle management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -485,6 +493,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

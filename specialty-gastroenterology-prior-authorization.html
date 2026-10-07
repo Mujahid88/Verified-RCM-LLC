@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Gastroenterology Prior Authorization: Capsule, Biologics, ERCP | Verified RCM">
 <meta name="twitter:description" content="Gastroenterology prior authorization requirements: capsule endoscopy documentation, IBD biologic and infusion step therapy for Entyvio and biosimilar infliximab, ERCP, and payer-specific variation across Aetna, UHC, and Cigna.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,17 +225,24 @@
       <p class="lede">Three service lines drive nearly all of gastroenterology's prior-auth denial volume, capsule endoscopy, IBD biologic infusions, and ERCP, and each one fails for a different, specific reason. Capsule endoscopy denies for missing prior-attempt documentation. Biologic infusions deny for step-therapy detail that's stated too vaguely. ERCP denies when elective and emergent get confused at scheduling. This guide covers the exact documentation each one needs and where Aetna, UnitedHealthcare, and Cigna diverge.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of <a href="specialty-gastroenterology.html">our gastroenterology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract winding line suggesting the gastrointestinal tract">
-  <path d="M 150,130 C 210,108 268,132 258,172 C 248,208 180,204 172,244 C 164,284 236,296 252,258 C 266,224 328,232 332,272 C 336,312 280,344 236,332 C 200,322 186,290 212,276" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5" transform="translate(6,10)"/>
-  <path d="M 148,124 C 208,100 266,126 256,166 C 246,204 178,198 170,238 C 162,280 234,292 250,254 C 264,220 326,228 330,268 C 334,310 278,340 234,328 C 198,318 184,286 210,272" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 168,150 C 200,142 224,150 220,168" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
-  <path d="M 196,250 C 220,242 244,250 240,268" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
-  <circle cx="148" cy="124" r="6" fill="var(--cat-surgical)"/>
-  <circle cx="210" cy="272" r="5" fill="var(--cat-surgical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-gastroenterology-wide.svg" alt="Gastroenterology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#capsule-endoscopy-the-prior-attempt-requirement">Capsule endoscopy: the prior-attempt requirement</a></li>
+      <li><a href="#ibd-biologic-and-infusion-step-therapy">IBD biologic and infusion step therapy</a></li>
+      <li><a href="#ercp-and-advanced-imaging-elective-versus-emergent">ERCP and advanced imaging: elective versus emergent</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -247,7 +253,7 @@
     </ul>
   </section>
 
-  <h2>Capsule endoscopy: the prior-attempt requirement</h2>
+  <h2 id="capsule-endoscopy-the-prior-attempt-requirement">Capsule endoscopy: the prior-attempt requirement</h2>
   <p>Capsule endoscopy has three relevant codes, <code>91110</code> (esophagus through ileum), <code>91111</code> (esophagus only), and <code>91113</code> (colon capsule), and prior authorization is close to universal across Medicare Advantage and commercial plans for all three. The single documentation requirement that decides most of these requests: a standard colonoscopy or EGD has to have been attempted and found incomplete, or specifically contraindicated, before capsule is authorized. It is treated as second-line, not an alternative to be chosen up front.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Prior conventional exam attempted and incomplete.</b> The operative note has to state why, poor prep, patient intolerance, anatomic obstruction, failure to reach the target segment, not just "colonoscopy performed."</span></li>
@@ -256,7 +262,7 @@
   </ul>
   <p>Commercial review for capsule endoscopy is frequently delegated. Cigna, for example, routes gastroenterology prior authorization, including capsule endoscopy and EGD, through eviCore's own portal and clinical guideline documents, which are separate from Cigna's general medical policy pages. Confirm which vendor actually adjudicates the request for a given payer before assuming the payer's own prior-auth process applies. ⚠️ This detail was confirmed through eviCore's own published Cigna gastroenterology guideline documents found via web search, not through direct access to Cigna's provider portal during this build, verify current delegation and portal details for your specific payer contract before building a workflow around it.</p>
 
-  <h2>IBD biologic and infusion step therapy</h2>
+  <h2 id="ibd-biologic-and-infusion-step-therapy">IBD biologic and infusion step therapy</h2>
   <p>Entyvio (vedolizumab) and biosimilar infliximab (Inflectra, Avsola, Renflexis, and brand Remicade) authorizations run on step therapy, and the documentation has to be specific, dates, doses, duration, and the clinical reason a prior therapy was discontinued, not a summary statement that treatment "failed."</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -275,11 +281,11 @@
     <div><div class="protip-label">Pro tip</div><p>Build a standing step-therapy documentation template into the chart at the point a biologic is first considered, drug name, start date, stop date, dose, and discontinuation reason, rather than reconstructing it from scattered visit notes when the prior-auth request goes out. It cuts the single most common cause of a returned-for-more-information request in this category.</p></div>
   </div>
 
-  <h2>ERCP and advanced imaging: elective versus emergent</h2>
+  <h2 id="ercp-and-advanced-imaging-elective-versus-emergent">ERCP and advanced imaging: elective versus emergent</h2>
   <p>Elective ERCP, scheduled for a known stricture, suspected choledocholithiasis without acute obstruction, or a planned stent exchange, is the norm requiring prior authorization across commercial and Medicare Advantage plans. A genuinely emergent ERCP, for acute cholangitis or an acutely impacted common bile duct stone, typically doesn't need authorization before the procedure, though most payers still expect notification within a defined window afterward. The distinction that decides whether a claim needs an authorization number on it is elective versus emergent clinical status, not which CPT code from the <code>43260</code>&ndash;<code>43278</code> family gets billed.</p>
   <p>Cross-sectional imaging that frequently precedes ERCP, MRCP, CT abdomen/pelvis with contrast, typically carries its own separate prior-authorization requirement through a radiology benefit manager, which is a different authorization process and a different vendor than the one covering the ERCP itself. Confirm both authorizations exist independently before the ERCP is scheduled; an approved ERCP authorization does not retroactively cover the imaging that led to it, and vice versa.</p>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Document the prior colonoscopy/EGD attempt and outcome before requesting capsule endoscopy authorization.</li>
@@ -303,7 +309,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What has to be documented before a capsule endoscopy prior auth request goes out?</summary><p>A prior colonoscopy or EGD that was attempted and was incomplete, or a specific, documented contraindication to conventional endoscopy, not a general indication or a statement that the patient prefers capsule. Every MAC that publishes a colon capsule endoscopy coverage article treats it as second-line behind conventional endoscopy, and Cigna's clinical guidelines for capsule endoscopy carry the same requirement for commercial coverage through eviCore. Get the prior attempt or contraindication note into the chart and the authorization request before scheduling the capsule study, not after a denial.</p></details>
     <details class="faq-item"><summary>How much biologic step therapy documentation does an IBD infusion authorization actually need?</summary><p>Specific dates, doses, and duration of the prior therapy, plus the clinical reason it was discontinued, inadequate response, loss of response, or intolerance, not just a note that a prior therapy "failed." UnitedHealthcare's infliximab biosimilar policy, for example, requires documentation of at least a 14-week trial of a preferred biosimilar before a non-preferred product is approved. A request that states "failed prior biologic" without dates, doses, and the specific reason for discontinuation is a standing cause of a request being returned for more information rather than approved on the first pass.</p></details>
@@ -315,7 +321,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-gastroenterology.html">Our gastroenterology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-gastroenterology-denials-appeals.html">Gastroenterology denials and appeals: the CARC-to-argument playbook <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -323,6 +329,7 @@
     <li><a href="prior-auth.html">Prior authorization services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialties.html">All 30 specialties <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -371,6 +378,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

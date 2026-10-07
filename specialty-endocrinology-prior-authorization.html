@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Endocrinology Prior Authorization: CGMs, Pumps, and GLP-1 Drugs | Verified RCM">
 <meta name="twitter:description" content="GLP-1, CGM, and insulin pump prior authorization for endocrinology: the diabetes-vs-weight-loss coverage split, CMS-0057-F's 2026 timelines, and the peer-to-peer process for denials.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,23 +225,26 @@
       <p class="lede">Three prior-authorization fights dominate an endocrinology billing desk right now, and they don't run on the same clock or the same evidence. GLP-1 receptor agonists split hard between a diabetes indication that clears review and a weight-loss indication that often doesn't, regardless of the pill in the bottle. CGMs and insulin pumps split between a Medicare model built on LCD documentation held on file and a commercial model that still runs traditional case-by-case authorization. And a new federal rule that took effect this year speeds up neither one, because it was written to exclude the exact category, drugs, where endocrinology's biggest authorization backlog lives.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-endocrinology.html">endocrinology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an undulating glucose-level waveform with an accented peak beside a symmetric butterfly-shaped loop suggesting the thyroid gland">
-  <line x1="70" y1="305" x2="410" y2="305" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-
-  <path d="M 70,275 C 110,260 140,260 170,275 C 200,290 230,290 260,275 C 290,260 320,260 350,275 C 380,290 400,290 410,285" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
-
-  <path d="M 70,240 C 110,220 130,220 150,240 C 165,255 175,260 185,235 C 195,205 205,160 220,150 C 235,140 245,160 255,195 C 262,220 268,245 280,255 C 300,270 320,265 340,245 C 360,225 380,225 410,240" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M 185,235 C 195,205 205,160 220,150 C 235,140 245,160 255,195" fill="none" stroke="var(--cat-medical)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="220" cy="150" r="5" fill="var(--cat-medical)"/>
-
-  <path d="M 240,350 C 205,325 180,335 178,360 C 176,385 205,400 240,372" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 240,350 C 275,325 300,335 302,360 C 304,385 275,400 240,372" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="361" r="4" fill="var(--cat-medical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-endocrinology-wide.svg" alt="Endocrinology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#glp-1-prior-authorization-the-indication-is-the-whole-case">GLP-1 prior authorization: the indication is the whole case</a></li>
+      <li><a href="#weight-loss-only-glp-1-requests-a-different-and-harder-set-o">Weight-loss-only GLP-1 requests: a different and harder set of rules</a></li>
+      <li><a href="#cgm-and-insulin-pump-prior-authorization-certification-versu">CGM and insulin pump prior authorization: certification versus true PA</a></li>
+      <li><a href="#cms-0057-f-what-changes-for-endocrinology-prior-authorizatio">CMS-0057-F: what changes for endocrinology prior authorization, and what doesn't</a></li>
+      <li><a href="#a-worked-timeline-the-same-drug-prescribed-two-ways">A worked timeline: the same drug, prescribed two ways</a></li>
+      <li><a href="#peer-to-peer-review-when-a-glp-1-cgm-or-pump-pa-is-denied">Peer-to-peer review when a GLP-1, CGM, or pump PA is denied</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -253,7 +255,7 @@
     </ul>
   </section>
 
-  <h2>GLP-1 prior authorization: the indication is the whole case</h2>
+  <h2 id="glp-1-prior-authorization-the-indication-is-the-whole-case">GLP-1 prior authorization: the indication is the whole case</h2>
   <p>Semaglutide and tirzepatide are the same two molecules sold under different brand names for different FDA-approved uses, and which use is on the prior-authorization request determines almost everything else about how the review goes. Ozempic (semaglutide) and Mounjaro (tirzepatide) carry type 2 diabetes indications and bill against a plan's diabetes-drug utilization criteria. Wegovy (semaglutide) and Zepbound (tirzepatide) carry chronic weight-management indications, and Wegovy additionally picked up an FDA indication in March 2024 for reducing cardiovascular death, heart attack, and stroke risk in adults with established cardiovascular disease and obesity or overweight, based on the SELECT trial's roughly 20% reduction in major adverse cardiovascular events. Same drug, three different coverage postures depending on which box gets checked on the request.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -272,7 +274,7 @@
   <p>Medicare Advantage adds its own wrinkle: UnitedHealthcare implemented prior-authorization requirements for GLP-1s across its Medicare Advantage and Medicare Part D prescription plans effective January 1, 2024, with an exception that lets a member with a confirmed type 2 diabetes diagnosis already on file bypass the PA step entirely. That's a workflow detail worth building into an intake process, confirming the diagnosis is already flagged in the plan's system before submitting a request that didn't need to be submitted.</p>
   <p>⚠️ Standard commercial PA turnaround for GLP-1 requests is commonly reported in the 5&ndash;10 business day range across payer-facing guidance; this reflects an aggregated industry pattern rather than a single verified source, and actual turnaround is plan- and state-specific, confirm the number for the specific payer before setting patient expectations.</p>
 
-  <h2>Weight-loss-only GLP-1 requests: a different and harder set of rules</h2>
+  <h2 id="weight-loss-only-glp-1-requests-a-different-and-harder-set-o">Weight-loss-only GLP-1 requests: a different and harder set of rules</h2>
   <p>Medicare Part D has excluded "agents when used for anorexia, weight loss, or weight gain" from coverage since the program began in 2006, under the statutory drug exclusions carried over from the Medicare Modernization Act of 2003. That exclusion is why Wegovy and Zepbound prescribed for weight loss alone are not covered under standard Part D formularies, and it's also why Wegovy's March 2024 cardiovascular-risk-reduction indication mattered: once a drug carries an FDA-approved use that isn't weight loss, the statutory exclusion no longer blocks a Part D plan from covering that specific use. A Part D plan can now cover Wegovy for a patient with established cardiovascular disease and obesity or overweight under the cardiovascular indication, but not for a patient whose documented reason for the prescription is weight loss by itself.</p>
   <p>CMS considered going further. A Contract Year 2026 proposal would have reinterpreted the weight-loss exclusion so it no longer applied to drugs used to treat obesity itself, which would have opened Medicare and Medicaid coverage broadly. In April 2025, CMS declined to finalize that proposal. In its place, CMS is running the Medicare GLP-1 Bridge, a voluntary demonstration from July 1, 2026 through December 31, 2027, offering eligible Part D beneficiaries a flat monthly copay near $50 for participating GLP-1 drugs used for weight loss, entirely outside the standard Part D formulary structure. ⚠️ The exact drug list, eligibility criteria, and participating-plan roster for the GLP-1 Bridge demonstration should be confirmed against CMS's own program page before quoting specifics to a patient or including them in a payer-facing appeal, since demonstration program details are subject to CMS updates as the start date approaches.</p>
   <p>On the commercial side, weight-loss-indication requests face their own documentation bar, distinct from the diabetes pathway:</p>
@@ -282,7 +284,7 @@
     <li><span class="check">3</span><span><b>Ongoing proof at renewal.</b> Reauthorization at 12 months commonly requires documented weight loss of 5% or more from baseline. A request that approved on day one can still lapse at renewal if the outcome documentation isn't there.</span></li>
   </ul>
 
-  <h2>CGM and insulin pump prior authorization: certification versus true PA</h2>
+  <h2 id="cgm-and-insulin-pump-prior-authorization-certification-versu">CGM and insulin pump prior authorization: certification versus true PA</h2>
   <p>This section covers the prior-authorization mechanics specifically; device selection criteria and full CGM/pump billing detail live in our <a href="specialty-endocrinology-cgm-insulin-pump-billing.html">CGM and insulin pump billing guide</a>.</p>
   <p>Original Medicare doesn't process most CGM and external insulin pump claims through a prospective, submit-and-wait prior authorization. Coverage instead runs on the DME MACs' Local Coverage Determinations: LCD L33822, <i>Glucose Monitors</i>, and LCD L33794, <i>External Infusion Pumps</i>, both administered by CGS Administrators, LLC and Noridian Healthcare Solutions, LLC in their respective DME MAC jurisdictions. The supplier holds a signed standard written order and clinical documentation meeting the LCD's criteria, a confirmed diabetes diagnosis plus insulin use or a documented history of hypoglycemia for a CGM; documented poor control on multiple daily injections, glucose testing frequency, and structured diabetes self-management participation for a pump, and produces it if the claim is reviewed or audited, rather than submitting it for approval before the equipment is dispensed.</p>
   <p>That's a meaningfully different workflow from a true prior authorization, and it matters for two practical reasons. First, CMS maintains a separate, shorter <i>Required Prior Authorization List</i> for certain DMEPOS items under 42 CFR &sect; 414.234, which as of April 2026 covers 74 HCPCS codes; both the CGM code (E2103) and the insulin pump code (E0784) currently sit on the broader Master List of items CMS could add to that Required list in the future, but neither is on the shorter required-PA list itself as of this writing. That status is reviewed periodically, so confirm the current Required Prior Authorization List before assuming a Medicare CGM or pump claim needs no upfront submission. Second, "no prospective PA" doesn't mean "no documentation risk", a DME MAC post-payment review that finds the LCD criteria weren't actually met on the date of service results in the same denial a failed prior authorization would have produced, just later and after the equipment has already been dispensed.</p>
@@ -304,7 +306,7 @@
     <div><div class="protip-label">Pro tip</div><p>Don't let "Medicare doesn't require PA" become "Medicare doesn't require documentation." Build the CGM and pump chart note to LCD L33822 or L33794's exact criteria at the time of the order, diagnosis, insulin use or hypoglycemia history, testing frequency, follow-up cadence, even though nothing gets submitted for prospective approval. That's the record a DME MAC post-payment audit will ask for, and it's identical to what a commercial payer's prior-authorization form would have asked for anyway.</p></div>
   </div>
 
-  <h2>CMS-0057-F: what changes for endocrinology prior authorization, and what doesn't</h2>
+  <h2 id="cms-0057-f-what-changes-for-endocrinology-prior-authorizatio">CMS-0057-F: what changes for endocrinology prior authorization, and what doesn't</h2>
   <p>CMS's Interoperability and Prior Authorization Final Rule (CMS-0057-F) has operational compliance requirements starting January 1, 2026, and it applies to Medicare Advantage organizations, state Medicaid and CHIP fee-for-service programs, Medicaid and CHIP managed care plans, and Qualified Health Plan issuers on the federally facilitated exchanges. For prior-authorization requests subject to the rule, it sets a standard decision deadline of 7 calendar days and an expedited deadline of 72 hours, a real tightening for device and service requests that previously ran on slower plan-specific timelines.</p>
   <p>The rule does not touch GLP-1 authorizations, and this is the detail worth flagging clearly for anyone who reads a headline about "faster prior auth" and assumes it covers drugs: CMS-0057-F explicitly excludes prior-authorization decisions for drugs from its scope. A CGM or insulin pump request from a Medicare Advantage plan subject to the rule now has a real, enforceable 7-day/72-hour clock. A GLP-1 request from the same plan on the same day does not, it continues to run on whatever timeline that plan's pharmacy benefit uses, unconstrained by this rule.</p>
   <p>That gap is deliberate and it's temporary in intent. CMS released a follow-on proposal, CMS-0062-P, on April 10, 2026, aimed specifically at extending interoperability and prior-authorization requirements to drug decisions. ⚠️ CMS-0062-P is a proposed rule, not a final one, and its provisions, including a reported effective date of October 1, 2027 for most changes, are not binding unless and until CMS finalizes it; treat any GLP-1-specific timeline claimed under this proposal as forward-looking, not current law.</p>
@@ -320,7 +322,7 @@
     </table>
   </div>
 
-  <h2>A worked timeline: the same drug, prescribed two ways</h2>
+  <h2 id="a-worked-timeline-the-same-drug-prescribed-two-ways">A worked timeline: the same drug, prescribed two ways</h2>
   <p>The clearest way to see the coverage gap in practice is to walk the same molecule through both indications side by side.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Prescribed for type 2 diabetes</div><ul>
@@ -337,7 +339,7 @@
     </ul></div>
   </div>
 
-  <h2>Peer-to-peer review when a GLP-1, CGM, or pump PA is denied</h2>
+  <h2 id="peer-to-peer-review-when-a-glp-1-cgm-or-pump-pa-is-denied">Peer-to-peer review when a GLP-1, CGM, or pump PA is denied</h2>
   <p>A peer-to-peer review is a direct phone conversation between the prescriber and the plan's medical director, requested after a denial and typically available within 5 to 10 business days of that denial without a formal written appeal, a portal submission, or the standard appeal's longer wait. Published research on peer-to-peer review across specialties reports overturn rates above 50%, with rates reported as high as 70% in some imaging and specialty-procedure categories, and the mechanism for why is consistent across GLP-1, CGM, and pump denials alike: a clinician speaking to specific, dated facts gives the reviewer something concrete to approve against, where a restated diagnosis in a portal message doesn't.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Prepare the same specifics that should have been in the original request.</b> For a GLP-1: the exact A1C values and dates, the metformin trial or intolerance, or the BMI and comorbidity plus lifestyle-modification dates for a weight-loss request. For a CGM or pump: the exact hypoglycemia episodes or testing frequency the LCD criteria call for.</span></li>
@@ -353,7 +355,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Does Medicare require prior authorization for a continuous glucose monitor or insulin pump?</summary><p>Not in the traditional sense for most beneficiaries. Original Medicare covers non-implanted CGMs and external insulin infusion pumps through the DME MACs' Local Coverage Determinations, LCD L33822 for glucose monitors and LCD L33794 for external infusion pumps, both administered by CGS Administrators and Noridian Healthcare Solutions. Coverage turns on the supplier holding a signed order and clinical documentation meeting the LCD's criteria, not a prospective payer approval before the claim is filed. Both HCPCS codes sit on CMS's broader DMEPOS Master List of items that could be added to the shorter Required Prior Authorization list, so check the current list before assuming that stays true. Commercial and Medicare Advantage plans are a different story, many still require a standard prior authorization for both device categories, so verify the specific plan's policy rather than assuming Medicare's model carries over.</p></details>
     <details class="faq-item"><summary>Will insurance cover a GLP-1 for weight loss the same way it covers it for diabetes?</summary><p>No, and the gap is often total rather than partial. A GLP-1 prescribed for an established type 2 diabetes diagnosis typically clears prior authorization once metformin step therapy and an above-goal A1C are documented. The same drug prescribed for weight loss alone faces a harder path: many commercial plans require a BMI of 30 or higher (or 27 or higher with a qualifying comorbidity) plus a documented lifestyle-modification trial, and Medicare Part D has excluded agents used for weight loss from coverage since the program began in 2006. That exclusion doesn't apply once a drug carries a separate, non-weight-loss FDA indication, semaglutide's March 2024 cardiovascular-risk-reduction indication is the example that opened a narrow Part D coverage path for patients with established cardiovascular disease, not for weight loss as the stated reason.</p></details>
@@ -366,7 +368,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and payer prior-authorization requirements change, including annual code-set updates and the frequent commercial-policy revisions this topic sees. This page reflects standard industry practice as of September 2026 and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Items in this article flagged with ⚠️ could not be independently re-confirmed against a primary source at the time of writing and should be verified against the payer's or CMS's current published policy before you rely on them in an appeal or a claim.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-endocrinology.html">Endocrinology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-endocrinology-cgm-insulin-pump-billing.html">CGM and insulin pump billing: HCPCS codes, modifiers, and coverage criteria <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -374,6 +376,7 @@
     <li><a href="denials-management.html">Denials management: turning peer-to-peer wins into a repeatable process <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="medical-coding.html">Medical coding overview <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -422,6 +425,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

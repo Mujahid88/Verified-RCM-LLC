@@ -1,4 +1,3 @@
-Self-hosted fonts for the Lake design system (latin subsets, woff2):
-- Quicksand-700-latin.woff2: display face, headings only
-- NunitoSans-Variable-latin.woff2: body and UI, weights 200 to 1000
-Both are open source (SIL OFL) from Google Fonts. No third-party font requests are made.
+Self-hosted font for the Clean design system (latin subset, woff2):
+- Inter-latin-variable.woff2: all text, weights 100 to 900
+Inter is open source (SIL OFL). No third-party font requests are made.

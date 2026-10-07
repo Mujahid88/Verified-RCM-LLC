@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Neurology NCCI Edits and MUE Limits | Verified RCM">
 <meta name="twitter:description" content="Neurology NCCI and MUE guide: the modifier-indicator and MAI framework applied to EMG/NCS add-on bundling, same-day EEG+EMG pairs, and Botox+E/M billing, with the CMS lookup workflow.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,53 +225,26 @@
       <p class="lede">Two CMS-published values decide whether a bundled or capped neurology code is billable at all: the NCCI modifier indicator on a Column 1/Column 2 code pair, and the MUE Adjudication Indicator (MAI) on a per-code unit cap. Neither is a guess, and neither is something a coder should be reconstructing from memory. This guide applies that framework specifically to EMG/NCS add-on bundling, same-day EEG and EMG pairs, and Botox-plus-E/M billing, the three places it shows up most in this specialty, and flags every specific indicator value this build could not confirm directly against CMS's primary source.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-neurology.html">neurology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of branching neurons connecting at synapse nodes, representing neurology">
-  <!-- secondary background branches -->
-  <path d="M240 240 C 200 210, 175 180, 150 140" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M150 140 C 138 122, 128 108, 120 92" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M150 140 C 160 118, 168 104, 172 86" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M240 240 C 205 225, 178 220, 142 226" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M142 226 C 122 224, 106 228, 88 240" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M142 226 C 126 214, 112 206, 96 200" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M240 240 C 268 208, 288 190, 300 156" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M300 156 C 306 138, 308 124, 304 106" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M300 156 C 316 144, 328 134, 336 118" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M240 240 C 270 258, 292 262, 324 258" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M324 258 C 344 256, 358 260, 374 270" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M324 258 C 340 246, 350 238, 366 232" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M240 240 C 226 274, 220 300, 226 332" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M226 332 C 220 350, 216 364, 220 382" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M226 332 C 236 348, 242 360, 244 378" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M240 240 C 258 272, 276 288, 306 302" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M306 302 C 320 314, 330 324, 338 340" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M306 302 C 324 306, 338 306, 354 312" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- primary heavier trunk lines, slightly darker for hierarchy -->
-  <path d="M240 240 C 205 225, 178 220, 142 226" fill="none" stroke="var(--color-text)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
-  <path d="M240 240 C 268 208, 288 190, 300 156" fill="none" stroke="var(--color-text)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
-
-  <!-- node dots at forks -->
-  <circle cx="240" cy="240" r="5" fill="none" stroke="var(--color-text)" stroke-width="2.4"/>
-  <circle cx="150" cy="140" r="3" fill="none" stroke="var(--muted)" stroke-width="1.8"/>
-  <circle cx="142" cy="226" r="3" fill="none" stroke="var(--color-text)" stroke-width="2"/>
-  <circle cx="300" cy="156" r="3" fill="none" stroke="var(--color-text)" stroke-width="2"/>
-  <circle cx="324" cy="258" r="3" fill="none" stroke="var(--muted)" stroke-width="1.8"/>
-  <circle cx="226" cy="332" r="3" fill="none" stroke="var(--muted)" stroke-width="1.8"/>
-  <circle cx="306" cy="302" r="3" fill="none" stroke="var(--muted)" stroke-width="1.8"/>
-
-  <!-- accent synapse terminals: 1-3 uses of --cat-medical only -->
-  <circle cx="120" cy="92" r="4.5" fill="var(--cat-medical)"/>
-  <circle cx="336" cy="118" r="4.5" fill="var(--cat-medical)"/>
-  <path d="M240 240 C 226 274, 220 300, 226 332" fill="none" stroke="var(--cat-medical)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-neurology-wide.svg" alt="Neurology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-two-frameworks-briefly">The two frameworks, briefly</a></li>
+      <li><a href="#emgncs-add-on-bundling">EMG/NCS add-on bundling</a></li>
+      <li><a href="#same-day-eeg-and-emgncs-pairs">Same-day EEG and EMG/NCS pairs</a></li>
+      <li><a href="#botox-64615-and-em-bundling">Botox (64615) and E/M bundling</a></li>
+      <li><a href="#how-to-check-the-current-values-yourself">How to check the current values yourself</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -283,7 +255,7 @@
     </ul>
   </section>
 
-  <h2>The two frameworks, briefly</h2>
+  <h2 id="the-two-frameworks-briefly">The two frameworks, briefly</h2>
   <p>The NCCI modifier indicator attaches to a Column 1/Column 2 procedure-code pair and governs whether the two can ever be billed together on the same date of service.</p>
   <ul class="check-list">
     <li><span class="warn">0</span><span><b>Never bypassable.</b> No modifier, however well-documented, overrides it. If a pair carries a 0, the Column 2 code simply isn't separately payable when billed with the Column 1 code, full stop.</span></li>
@@ -297,7 +269,7 @@
     <li><span class="check">3</span><span><b>Appealable, date-of-service edit.</b> A real path exists with documentation showing the excess units reflect genuinely distinct, medically necessary work.</span></li>
   </ul>
 
-  <h2>EMG/NCS add-on bundling</h2>
+  <h2 id="emgncs-add-on-bundling">EMG/NCS add-on bundling</h2>
   <p>The EMG add-on codes, <code>95885</code> (limited extremity study, one to five muscles), <code>95886</code> (complete extremity study, five or more muscles and a minimum of three nerves), and <code>95887</code> (non-extremity muscle group), are CPT add-on codes, marked with a plus sign in the code set. Add-on codes are defined by CPT itself to require a listed primary procedure on the same claim; here, that primary procedure is a nerve conduction study, <code>95907</code>&ndash;<code>95913</code>. That requirement is a CPT structural rule, not an NCCI Column 1/Column 2 edit, which matters because no modifier fixes a missing-primary-procedure denial the way it might fix a bypassable NCCI edit.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -313,11 +285,11 @@
   </div>
   <p>Documentation is what separates a defensible standalone-plus-NCS claim from an indefensible one where the indicator does allow an override: the note has to show why a standalone extremity study was clinically necessary in addition to, not instead of, the nerve conduction work, naming the specific muscles and the clinical question each study answered.</p>
 
-  <h2>Same-day EEG and EMG/NCS pairs</h2>
+  <h2 id="same-day-eeg-and-emgncs-pairs">Same-day EEG and EMG/NCS pairs</h2>
   <p>EEG and EMG/NCS are structurally different code families, one records cortical electrical activity, the other tests peripheral nerve and muscle function, and NCCI Column 1/Column 2 edits are built around code pairs that overlap in the actual work being performed, not simply the same date of service. That means a direct PTP edit between, say, a routine EEG code (<code>95812</code>&ndash;<code>95816</code>) and an NCS code is less likely on its face than the EMG-family conflicts above. Where this scenario actually runs into trouble is usually medical necessity and documentation, not a bundling edit: the chart has to support two genuinely distinct clinical indications for ordering both studies the same visit, a new seizure evaluation alongside a longstanding neuropathy workup, for instance, not two tests ordered reflexively as a package.</p>
   <p>⚠️ This build did not identify a confirmed, currently active NCCI PTP edit between a routine EEG code and an EMG/NCS code, but that absence is reported, not verified against CMS's live PTP file directly, the same access limitation affecting every specific indicator value in this guide. Check the specific code pair you're billing in the CMS NCCI PTP Edits Lookup Tool before assuming no edit exists, since the file updates quarterly.</p>
 
-  <h2>Botox (64615) and E/M bundling</h2>
+  <h2 id="botox-64615-and-em-bundling">Botox (64615) and E/M bundling</h2>
   <p>64615 and a same-day E/M follow the same 25-modifier logic covered in <a href="specialty-neurology-modifiers.html">our neurology modifiers guide</a>: the E/M is billable alongside the injection only when the visit addresses something genuinely separate from the decision to administer Botox itself. Where NCCI and MUE specifically enter this scenario is on the drug and unit side, not just the procedure-plus-E/M side.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -336,7 +308,7 @@
     <div><div class="protip-label">Pro tip</div><p>Before writing any bundling or unit-cap appeal on an EMG, EEG, or Botox claim, look up two things in order: the NCCI modifier indicator for the specific pair, then the MUE Adjudication Indicator for the specific code. If either comes back as the non-appealable value, indicator 0, or MAI 2, stop. There is no argument that reverses it, and the staff time is better spent on the claims that are actually winnable.</p></div>
   </div>
 
-  <h2>How to check the current values yourself</h2>
+  <h2 id="how-to-check-the-current-values-yourself">How to check the current values yourself</h2>
   <p>These values are pair-specific and code-specific, published by CMS, and updated quarterly, nobody should be relying on memory or a guide like this one for the current number on a specific claim. The workflow:</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>NCCI PTP edits.</b> Use the CMS NCCI Procedure-to-Procedure Edits Lookup Tool (practitioner services file) for the current quarter. Search your Column 2 code, confirm the Column 1 code it's paired with matches what's on your claim, and read the modifier indicator column directly, don't infer it from a prior quarter's value.</span></li>
@@ -345,7 +317,7 @@
   </ul>
   <p>⚠️ CMS's own NCCI and MUE pages returned an access error to every automated fetch attempt made while researching this page, the same limitation the cardiology and neurology pillar builds hit. Every specific indicator or MAI value stated or implied above should be treated as reported-but-unconfirmed until you pull it yourself from the live lookup tool; the framework (what 0/1/9 and 1/2/3 mean) is confirmed CMS policy structure, but no individual pair's current value in this guide should be built into a scrubber rule without that direct check.</p>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Confirm whether a denied add-on EMG code is a CPT structural issue (no primary procedure) before treating it as an NCCI edit to appeal.</li>
@@ -369,7 +341,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Why does our EMG add-on code deny when it's billed by itself?</summary><p>Because 95885, 95886, and 95887 are CPT add-on codes, marked with a plus sign in the code set, and add-on codes are structurally defined to require a primary procedure on the same claim, in this case a nerve conduction study, 95907 through 95913. That's a CPT coding rule, not an NCCI bundling edit, and no modifier fixes it. If the claim shows an add-on EMG code with no NCS on the same date, the fix is to confirm which family actually applies: if no NCS was performed, the standalone codes 95860 through 95864 are what should have been billed instead.</p></details>
     <details class="faq-item"><summary>Is there an NCCI edit between EEG and EMG/NCS codes billed the same day?</summary><p>Not typically, because they're different code families addressing different body systems, and NCCI edits are built around pairs of codes that overlap in the work being performed, not simply the same date of service. Same-day EEG and EMG/NCS is usually a medical-necessity and documentation question rather than a hard bundling edit, the chart needs to support two genuinely distinct clinical indications, such as a new seizure evaluation alongside a longstanding neuropathy workup. Confirm the specific pair in the CMS NCCI PTP Edits Lookup Tool before assuming either way, since edit pairs update quarterly and a new edit could exist that this guide doesn't capture.</p></details>
@@ -381,13 +353,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. NCCI modifier indicators, MUE values, and MAI designations change quarterly, and every specific value referenced in this guide is flagged where it could not be confirmed directly against CMS's primary NCCI/MUE files during this build. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or a current lookup of the specific edit and MAI values before you rely on them operationally.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-neurology.html">Neurology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-neurology-modifiers.html">Neurology modifiers: 25, 59, 26/TC, and telehealth <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-neurology-denials-appeals.html">Neurology denials and appeals: the recurring patterns <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -436,6 +409,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

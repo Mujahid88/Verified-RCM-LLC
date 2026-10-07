@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Eligibility verification, Billing process guide">
+  <defs>
+    <linearGradient id="bgeligibilityverification" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient>
+    <radialGradient id="gleligibilityverification" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#5eead4" stop-opacity="0.5"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+    <pattern id="greligibilityverification" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cpeligibilityverification"><rect x="800" y="145" width="340" height="340" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgeligibilityverification)"/>
+  <rect width="1200" height="630" fill="url(#greligibilityverification)"/>
+  <rect width="1200" height="630" fill="url(#gleligibilityverification)"/>
+  <circle cx="1040" cy="130" r="220" fill="#5eead4" fill-opacity="0.14"/>
+  <circle cx="1110" cy="550" r="150" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="800" y="145" width="340" height="340" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cpeligibilityverification)"><g transform="translate(820 165) scale(0.6250)">
+  <rect x="120" y="170" width="200" height="140" rx="14" fill="none" stroke="#ffffff" stroke-width="5.10" stroke-linejoin="round"/>
+  <circle cx="170" cy="216" r="20" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <line x1="205" y1="206" x2="292" y2="206" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <line x1="205" y1="226" x2="272" y2="226" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <line x1="140" y1="282" x2="300" y2="282" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <circle cx="332" cy="188" r="34" fill="none" stroke="#5eead4" stroke-width="5.10"/>
+  <path d="M317,188 L328,199 L349,175" fill="none" stroke="#5eead4" stroke-width="5.95" stroke-linecap="round" stroke-linejoin="round"/>
+</g></g>
+  <rect x="90" y="118" width="72" height="8" rx="4" fill="#5eead4"/>
+  <text x="90" y="178" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">REVENUE CYCLE</text>
+  <text x="90" y="292" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="91" font-weight="800" fill="#ffffff" letter-spacing="-2">Eligibility</text>
+  <text x="90" y="390" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="91" font-weight="800" fill="#ffffff" letter-spacing="-2">verification</text>
+  <text x="90" y="452" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" fill="#ffffff" fill-opacity="0.85">Billing process guide</text>
+  <text x="90" y="560" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>

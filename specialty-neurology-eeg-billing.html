@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="EEG Billing and Coding: Routine, Ambulatory, and Video Monitoring | Verified RCM">
 <meta name="twitter:description" content="EEG billing and coding guide: 95812-95816 routine EEG, ambulatory setup rules, video/LTM component splits, inpatient PA thresholds, and Palmetto's Special EEG LCD by MAC.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,53 +225,25 @@
       <p class="lede">EEG billing forks three ways, a routine study read in one sitting, an ambulatory study worn for days, and video or long-term monitoring that can run from hours to weeks, and each one has its own code family, its own component-split logic, and its own denial pattern. Recording-state documentation decides the routine code, monitoring-period logic decides the ambulatory code, and site-of-service ownership decides the video/LTM component split. This guide covers all three, plus the MAC-specific local coverage documents that govern them.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-neurology.html">neurology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of branching neurons connecting at synapse nodes, representing neurology">
-  <!-- secondary background branches -->
-  <path d="M240 240 C 200 210, 175 180, 150 140" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M150 140 C 138 122, 128 108, 120 92" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M150 140 C 160 118, 168 104, 172 86" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M240 240 C 205 225, 178 220, 142 226" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M142 226 C 122 224, 106 228, 88 240" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M142 226 C 126 214, 112 206, 96 200" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M240 240 C 268 208, 288 190, 300 156" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M300 156 C 306 138, 308 124, 304 106" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M300 156 C 316 144, 328 134, 336 118" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M240 240 C 270 258, 292 262, 324 258" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M324 258 C 344 256, 358 260, 374 270" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M324 258 C 340 246, 350 238, 366 232" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M240 240 C 226 274, 220 300, 226 332" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M226 332 C 220 350, 216 364, 220 382" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M226 332 C 236 348, 242 360, 244 378" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M240 240 C 258 272, 276 288, 306 302" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M306 302 C 320 314, 330 324, 338 340" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M306 302 C 324 306, 338 306, 354 312" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- primary heavier trunk lines, slightly darker for hierarchy -->
-  <path d="M240 240 C 205 225, 178 220, 142 226" fill="none" stroke="var(--color-text)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
-  <path d="M240 240 C 268 208, 288 190, 300 156" fill="none" stroke="var(--color-text)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
-
-  <!-- node dots at forks -->
-  <circle cx="240" cy="240" r="5" fill="none" stroke="var(--color-text)" stroke-width="2.4"/>
-  <circle cx="150" cy="140" r="3" fill="none" stroke="var(--muted)" stroke-width="1.8"/>
-  <circle cx="142" cy="226" r="3" fill="none" stroke="var(--color-text)" stroke-width="2"/>
-  <circle cx="300" cy="156" r="3" fill="none" stroke="var(--color-text)" stroke-width="2"/>
-  <circle cx="324" cy="258" r="3" fill="none" stroke="var(--muted)" stroke-width="1.8"/>
-  <circle cx="226" cy="332" r="3" fill="none" stroke="var(--muted)" stroke-width="1.8"/>
-  <circle cx="306" cy="302" r="3" fill="none" stroke="var(--muted)" stroke-width="1.8"/>
-
-  <!-- accent synapse terminals: 1-3 uses of --cat-medical only -->
-  <circle cx="120" cy="92" r="4.5" fill="var(--cat-medical)"/>
-  <circle cx="336" cy="118" r="4.5" fill="var(--cat-medical)"/>
-  <path d="M240 240 C 226 274, 220 300, 226 332" fill="none" stroke="var(--cat-medical)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-neurology-wide.svg" alt="Neurology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#routine-eeg-95812-95816">Routine EEG: 95812-95816</a></li>
+      <li><a href="#ambulatory-eeg-setup-once-per-monitoring-period">Ambulatory EEG: setup once per monitoring period</a></li>
+      <li><a href="#video-and-long-term-monitoring-time-tiered-and-split-by-equi">Video and long-term monitoring: time-tiered, and split by equipment ownership</a></li>
+      <li><a href="#inpatient-video-eeg-where-prior-authorization-risk-concentra">Inpatient video-EEG: where prior authorization risk concentrates</a></li>
+      <li><a href="#mac-coverage-palmettos-special-electroencephalography-lcd-an">MAC coverage: Palmetto's Special Electroencephalography LCD, and what other MACs publish</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -283,7 +254,7 @@
     </ul>
   </section>
 
-  <h2>Routine EEG: 95812-95816</h2>
+  <h2 id="routine-eeg-95812-95816">Routine EEG: 95812-95816</h2>
   <p>Routine EEG splits along two axes that a study report has to answer explicitly: how long the recording ran, and what state it captured. Getting either wrong on the report forces the coder to under-code or guess, and payers check both against the study report, not against the ordering physician's intent.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -301,7 +272,7 @@
   </div>
   <p>The recurring documentation gap: a technologist's report that states total run time but never characterizes the recording state, awake only, awake and drowsy, or awake and asleep, leaves the coder unable to distinguish 95816 from 95819 from a duration-only code, and the safe move under audit pressure is usually to under-code rather than guess. Build recording-state as a required field on the study report template, not an optional narrative line, and this stops being a recurring problem.</p>
 
-  <h2>Ambulatory EEG: setup once per monitoring period</h2>
+  <h2 id="ambulatory-eeg-setup-once-per-monitoring-period">Ambulatory EEG: setup once per monitoring period</h2>
   <p>Ambulatory EEG is billed with a setup component, patient education, electrode placement, and instruction on the recording device, and a separate interpretation component once the recording period ends and the physician reviews the data. The setup component bills once per monitoring period, regardless of how many days the study runs.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
@@ -316,12 +287,12 @@
   </div>
   <p>The overbilling pattern here is specific and recurring enough to name: a multi-day ambulatory study where the setup code gets charged again after a mid-study electrode check or battery swap, treated as if it were a new monitoring episode. Payer frequency edits on the setup code eventually catch this pattern, and because it reads as duplicate billing for the same episode of care, it's more likely to trigger a recoupment review than a routine denial once flagged.</p>
 
-  <h2>Video and long-term monitoring: time-tiered, and split by equipment ownership</h2>
+  <h2 id="video-and-long-term-monitoring-time-tiered-and-split-by-equi">Video and long-term monitoring: time-tiered, and split by equipment ownership</h2>
   <p>Video and long-term monitoring (LTM) EEG covers everything from a several-hour inpatient study to multi-day epilepsy-monitoring-unit admissions, and it's built on the same component-split logic that runs through the rest of neurology's diagnostic testing: a global code when one entity owns the equipment, employs the technologist, and performs the interpretation, and a professional/technical (26/TC) split whenever those roles are divided, typically a hospital owning the monitoring equipment while an outside neurologist reads the recording.</p>
   <p>On top of the component split, this family is tiered by recording duration and by whether video was captured alongside the EEG trace, generally structured around 24-hour recording periods once monitoring extends past the first several hours. ⚠️ <b>Unverified:</b> we could not confirm the exact current-year code-to-hour-tier mapping for the video/LTM family against a primary AMA or CMS source during this build, CPT has no dedicated connector, and CMS's coding-billing pages and the specialty coding references we attempted to reach returned no usable content to automated retrieval. Treat the structural description above (global vs. 26/TC, video vs. non-video, tiered by hour blocks) as reliable, but confirm the specific code numbers and their exact hour boundaries against your current CPT Professional edition or your EHR's code table before building a charge-capture rule against them.</p>
   <p>What doesn't change regardless of the exact tier code: whoever bills the technical component has to be the party that actually owns the recording equipment and employs the monitoring staff, and the professional component belongs to whoever performs and documents the interpretation. Billing globally when a hospital owns the monitoring unit creates the same conflicting-claim problem that shows up elsewhere in neurology's and cardiology's diagnostic testing, the facility's own claim for the technical component contradicts a global claim from the interpreting practice.</p>
 
-  <h2>Inpatient video-EEG: where prior authorization risk concentrates</h2>
+  <h2 id="inpatient-video-eeg-where-prior-authorization-risk-concentra">Inpatient video-EEG: where prior authorization risk concentrates</h2>
   <p>Inpatient video-EEG monitoring is the category in this guide most exposed to prior-authorization risk. Traditional Medicare generally doesn't require prior auth for it, but a growing share of Medicare Advantage and commercial plans do once monitoring extends past 24&ndash;48 hours, and the threshold is plan-specific, not universal.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Verify the authorization threshold by payer and plan before the admission</b>, not after monitoring has already run past it. A multi-day epilepsy-monitoring-unit admission that clears the clinical bar but misses the authorization step is one of the more expensive denials in neurology.</span></li>
@@ -329,7 +300,7 @@
     <li><span class="warn">3</span><span><b>Documentation has to justify why routine or ambulatory EEG wasn't sufficient</b>, typically seizure frequency too low to capture on a shorter study, or a specific localization question that requires extended, continuous monitoring. A chart that doesn't state that reasoning is a common cause of an initial denial independent of the authorization question.</span></li>
   </ul>
 
-  <h2>MAC coverage: Palmetto's Special Electroencephalography LCD, and what other MACs publish</h2>
+  <h2 id="mac-coverage-palmettos-special-electroencephalography-lcd-an">MAC coverage: Palmetto's Special Electroencephalography LCD, and what other MACs publish</h2>
   <p>We confirmed the following local coverage documents directly against the CMS Coverage Database.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -359,7 +330,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What's the difference between 95812, 95813, and 95816?</summary><p>95812 and 95813 are extended-recording routine EEG, split by duration, 95812 covers 41 to 60 minutes and 95813 covers over 60 minutes, regardless of recording state. 95816 is a standard-length study that has to capture both an awake and a drowsy state; a report that only documents an awake tracing doesn't support 95816. If the study also captures true sleep rather than just drowsiness, a different code in the same family applies, check the recording-state documentation against the specific code's requirement before billing, not just the total run time.</p></details>
     <details class="faq-item"><summary>Can we bill the ambulatory EEG setup code more than once during a multi-day study?</summary><p>No, setup, patient education, and takedown are billed once per monitoring period, not once per day of wear. Charging the setup code again partway through a multi-day ambulatory study is a common overbilling pattern that a payer's own frequency edits will eventually catch, and it typically triggers a recoupment rather than a simple denial once identified, because it looks like duplicate billing for the same episode of care.</p></details>
@@ -371,7 +342,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-neurology.html">Neurology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-neurology-emg-nerve-conduction-billing.html">EMG and nerve conduction study billing: the complete guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -379,6 +350,7 @@
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialties.html">All 30 specialties <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -427,6 +399,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

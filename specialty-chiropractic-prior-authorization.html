@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Chiropractic Prior Authorization: Medicare Advantage Rules and Visit Limits | Verified RCM">
 <meta name="twitter:description" content="Chiropractic prior authorization under UnitedHealthcare Medicare Advantage: the 6-visit/8-week no-review threshold, typical MA plan visit caps, and the ABN/GA workflow for maintenance care.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,27 +225,23 @@
       <p class="lede">A clean, correctly coded chiropractic claim can still deny under Medicare Advantage, not because anything about the coding was wrong, but because the plan of care behind it was never authorized for that many visits. UnitedHealthcare's prior-authorization expansion for chiropractic and outpatient therapy is live now and actively producing exactly that pattern. This guide covers the visit-count mechanics, the caps other MA plans set on top of it, and the ABN/GA workflow for the point where active treatment genuinely becomes maintenance care.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of <a href="specialty-chiropractic.html">our complete chiropractic billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a spine formed from aligned vertebral segments, with one segment highlighted as the point of alignment">
-  <path d="M 244 100 C 260 140, 220 160, 232 200 C 244 240, 256 260, 244 300 C 236 330, 220 350, 236 380" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <line x1="232" y1="105" x2="260" y2="105" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round"/>
-  <line x1="240" y1="135" x2="268" y2="135" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="222" y1="165" x2="250" y2="165" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="214" y1="195" x2="242" y2="195" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="222" y1="225" x2="250" y2="225" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="236" y1="255" x2="264" y2="255" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-
-  <circle cx="250" cy="285" r="30" fill="none" stroke="var(--cat-therapy)" stroke-width="1.5" stroke-dasharray="3 7" stroke-linecap="round"/>
-  <line x1="236" y1="285" x2="264" y2="285" stroke="var(--cat-therapy)" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="250" cy="285" r="4" fill="var(--cat-therapy)"/>
-
-  <line x1="224" y1="315" x2="252" y2="315" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="210" y1="345" x2="238" y2="345" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="218" y1="375" x2="246" y2="375" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-chiropractic-wide.svg" alt="Chiropractic: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#unitedhealthcares-medicare-advantage-prior-auth-expansion">UnitedHealthcare's Medicare Advantage prior-auth expansion</a></li>
+      <li><a href="#typical-medicare-advantage-visit-caps">Typical Medicare Advantage visit caps</a></li>
+      <li><a href="#the-abn-and-ga-workflow-active-care-to-maintenance">The ABN and GA workflow: active care to maintenance</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -257,7 +252,7 @@
     </ul>
   </section>
 
-  <h2>UnitedHealthcare's Medicare Advantage prior-auth expansion</h2>
+  <h2 id="unitedhealthcares-medicare-advantage-prior-auth-expansion">UnitedHealthcare's Medicare Advantage prior-auth expansion</h2>
   <p>UHC announced in August 2024 that chiropractic services delivered in multidisciplinary offices and outpatient hospital settings would require prior authorization starting September 1, 2024; home-based chiropractic services were excluded from the requirement at rollout. The policy was refined further for authorization requests submitted on or after January 13, 2025, into the structure that governs claims today.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -279,7 +274,7 @@
     <li><span class="check">4</span><span><b>Flag home-based chiropractic separately</b> in the scheduling and billing workflow, since it sits outside this specific UHC requirement, but don't assume that exclusion applies to any other MA carrier's policy without checking.</span></li>
   </ul>
 
-  <h2>Typical Medicare Advantage visit caps</h2>
+  <h2 id="typical-medicare-advantage-visit-caps">Typical Medicare Advantage visit caps</h2>
   <p>UHC's prior-auth threshold is a review trigger, not a hard visit ceiling, visits beyond 6 can still be authorized with a cleared plan of care. Separately, and on top of that mechanism, most Medicare Advantage plans set their own annual chiropractic visit cap as a distinct benefit-design feature, and this applies whether or not the specific carrier runs a UHC-style review process.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Common plan design</div><ul>
@@ -295,7 +290,7 @@
   </div>
   <p>⚠️ Specific per-carrier visit-cap figures beyond UHC's own published policy vary by plan and product line and are set at the payer level rather than published in a single, centrally verifiable CMS source; treat any cap number as a starting estimate and confirm the specific plan's current benefit summary or Evidence of Coverage before building a scrubber rule or patient conversation around it. Eligibility and benefits verification for a new chiropractic patient should confirm the visit cap and prior-auth trigger as a standard field, not an exception-handling step performed only when a denial has already happened.</p>
 
-  <h2>The ABN and GA workflow: active care to maintenance</h2>
+  <h2 id="the-abn-and-ga-workflow-active-care-to-maintenance">The ABN and GA workflow: active care to maintenance</h2>
   <p>Prior authorization and the AT/GA modifier decision are two separate gates, and confusing them causes two different kinds of denial. Prior auth asks whether the plan of care was cleared for this many visits. AT versus GA asks whether the documentation, on this specific date of service, still supports active/corrective treatment. A visit can clear prior auth and still need GA instead of AT if the clinical picture has plateaued, authorization approves the visit count, it doesn't certify the clinical trajectory.</p>
   <p>The correct sequence when a course of active treatment plateaus:</p>
   <ol>
@@ -318,7 +313,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Does the initial chiropractic evaluation require prior authorization under UnitedHealthcare's Medicare Advantage policy?</summary><p>No. The initial evaluation itself is exempt from prior authorization under UHC's policy. The review requirement attaches to the plan of care once treatment moves past 6 visits or 8 weeks from the first date of service, whichever comes first, not to the evaluation that establishes the plan in the first place.</p></details>
     <details class="faq-item"><summary>How many chiropractic visits are covered before Medicare Advantage prior auth kicks in?</summary><p>Under UnitedHealthcare's policy, effective for authorization requests submitted on or after January 13, 2025, the first 6 visits of a new plan of care are covered without clinical review, provided they fall within 8 weeks of the first date of service. Beyond that 6-visit/8-week threshold, the full plan of care has to be submitted and reviewed for medical necessity before additional visits are authorized. Separately, most Medicare Advantage plans also set their own annual visit cap, commonly 20 to 30 visits a year, which applies regardless of the UHC-specific review threshold.</p></details>
@@ -330,13 +325,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-chiropractic.html">Chiropractic billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-chiropractic-medicare-vs-commercial-coverage.html">Chiropractic coverage: Medicare vs. Medicare Advantage vs. commercial payers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-chiropractic-modifiers.html">Chiropractic billing modifiers: AT, GA, GY, GZ, 25, and 59 explained <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="prior-auth.html">Prior authorization services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -385,6 +381,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Virtual assistants, Growth guide">
+  <defs>
+    <linearGradient id="bgvirtualassistant" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#164e63"/><stop offset="1" stop-color="#0e7490"/></linearGradient>
+    <radialGradient id="glvirtualassistant" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#fcd34d" stop-opacity="0.5"/><stop offset="1" stop-color="#fcd34d" stop-opacity="0"/></radialGradient>
+    <pattern id="grvirtualassistant" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cpvirtualassistant"><rect x="860" y="55" width="250" height="250" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bgvirtualassistant)"/>
+  <rect width="1200" height="360" fill="url(#grvirtualassistant)"/>
+  <rect width="1200" height="360" fill="url(#glvirtualassistant)"/>
+  <circle cx="1040" cy="60" r="170" fill="#fcd34d" fill-opacity="0.14"/>
+  <circle cx="1110" cy="280" r="110" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="860" y="55" width="250" height="250" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#fcd34d" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cpvirtualassistant)"><g transform="translate(880 75) scale(0.4375)">
+  
+  <path d="M150,172 Q240,92 330,192" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+
+  
+  <circle cx="150" cy="172" r="11" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40"/>
+  <circle cx="330" cy="192" r="11" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40"/>
+
+  
+  <path d="M150,172 C172,232 212,270 245,290" fill="none" stroke="#ffffff" stroke-width="5.44" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M330,192 C300,242 270,272 245,290" fill="none" stroke="#ffffff" stroke-width="5.44" stroke-linecap="round" stroke-linejoin="round"/>
+
+  
+  <path d="M222,306 Q214,320 224,332" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.06" stroke-linecap="round"/>
+  <path d="M266,304 Q276,317 267,330" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.06" stroke-linecap="round"/>
+
+  
+  <circle cx="245" cy="290" r="6.5" fill="#fcd34d"/>
+</g></g>
+  <rect x="90" y="46" width="72" height="8" rx="4" fill="#fcd34d"/>
+  <text x="90" y="78" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">PRACTICE GROWTH</text>
+  <text x="90" y="138" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="70" font-weight="800" fill="#ffffff" letter-spacing="-2">Virtual</text>
+  <text x="90" y="214" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="70" font-weight="800" fill="#ffffff" letter-spacing="-2">assistants</text>
+  <text x="90" y="256" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#ffffff" fill-opacity="0.85">Growth guide</text>
+  <text x="90" y="336" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>

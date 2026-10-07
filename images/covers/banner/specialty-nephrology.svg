@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Nephrology, Billing and coding guide">
+  <defs>
+    <linearGradient id="bgspecialtynephrology" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+    <radialGradient id="glspecialtynephrology" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#5eead4" stop-opacity="0.5"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+    <pattern id="grspecialtynephrology" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cpspecialtynephrology"><rect x="800" y="145" width="340" height="340" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgspecialtynephrology)"/>
+  <rect width="1200" height="630" fill="url(#grspecialtynephrology)"/>
+  <rect width="1200" height="630" fill="url(#glspecialtynephrology)"/>
+  <circle cx="1040" cy="130" r="220" fill="#5eead4" fill-opacity="0.14"/>
+  <circle cx="1110" cy="550" r="150" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="800" y="145" width="340" height="340" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cpspecialtynephrology)"><g transform="translate(820 165) scale(0.6250)">
+  <path d="M 70 240 A 170 170 0 0 1 410 240" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" opacity="0.5"/>
+  <path d="M 410 240 A 170 170 0 0 1 70 240" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" opacity="0.35"/>
+
+  <line x1="78" y1="150" x2="188" y2="150" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <line x1="292" y1="150" x2="402" y2="150" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+
+  <line x1="78" y1="190" x2="188" y2="190" stroke="#ffffff" stroke-opacity=".7" stroke-width="4.25" stroke-linecap="round"/>
+  <line x1="292" y1="190" x2="402" y2="190" stroke="#ffffff" stroke-opacity=".7" stroke-width="4.25" stroke-linecap="round"/>
+
+  <line x1="78" y1="240" x2="188" y2="240" stroke="#5eead4" stroke-width="5.10" stroke-linecap="round"/>
+  <line x1="292" y1="240" x2="402" y2="240" stroke="#5eead4" stroke-width="5.10" stroke-linecap="round"/>
+
+  <line x1="78" y1="290" x2="188" y2="290" stroke="#ffffff" stroke-opacity=".7" stroke-width="4.25" stroke-linecap="round"/>
+  <line x1="292" y1="290" x2="402" y2="290" stroke="#ffffff" stroke-opacity=".7" stroke-width="4.25" stroke-linecap="round"/>
+
+  <line x1="78" y1="330" x2="188" y2="330" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <line x1="292" y1="330" x2="402" y2="330" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+
+  <rect x="188" y="118" width="104" height="244" rx="14" fill="none" stroke="#ffffff" stroke-width="5.95" stroke-linejoin="round"/>
+
+  <line x1="212" y1="130" x2="212" y2="350" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55"/>
+  <line x1="240" y1="130" x2="240" y2="350" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55"/>
+  <line x1="268" y1="130" x2="268" y2="350" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55"/>
+
+  <line x1="196" y1="150" x2="284" y2="150" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55"/>
+  <line x1="196" y1="190" x2="284" y2="190" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55"/>
+  <line x1="196" y1="240" x2="284" y2="240" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55"/>
+  <line x1="196" y1="290" x2="284" y2="290" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55"/>
+  <line x1="196" y1="330" x2="284" y2="330" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55"/>
+
+  <circle cx="240" cy="190" r="4" fill="#5eead4"/>
+  <circle cx="268" cy="290" r="4" fill="#5eead4"/>
+</g></g>
+  <rect x="90" y="118" width="72" height="8" rx="4" fill="#5eead4"/>
+  <text x="90" y="178" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">MEDICAL SPECIALTY</text>
+  <text x="90" y="292" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="110" font-weight="800" fill="#ffffff" letter-spacing="-2">Nephrology</text>
+  <text x="90" y="354" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" fill="#ffffff" fill-opacity="0.85">Billing and coding guide</text>
+  <text x="90" y="560" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>

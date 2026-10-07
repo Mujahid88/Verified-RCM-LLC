@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Peer-to-Peer Review: How to Actually Win One | Verified RCM">
 <meta name="twitter:description" content="How a prior authorization peer-to-peer review actually works: when it's offered, how the treating physician should prepare, and the most common reasons these calls fail.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,21 +225,25 @@
       <p class="lede">A peer-to-peer review is the fastest legitimate path back from a prior authorization denial, when the treating physician actually takes the call, comes prepared with the chart, and argues clinical necessity instead of policy. Most of the calls that fail were losable before they started, for reasons that have nothing to do with the underlying medicine.</p>
       <div class="post-meta"><span class="muted">Reviewed by Marcus Fielding, CPB &middot; Certified Professional Biller (AAPC) &middot; Part of our <a href="prior-auth.html">prior authorization guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a gated turnstile representing prior authorization clearance">
-  <line x1="170" y1="130" x2="170" y2="350" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="310" y1="130" x2="310" y2="350" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="170" cy="130" r="6" stroke="var(--color-text)" stroke-width="2" fill="none"/>
-  <circle cx="310" cy="130" r="6" stroke="var(--color-text)" stroke-width="2" fill="none"/>
-  <line x1="150" y1="350" x2="330" y2="350" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M170,240 Q240,150 310,240" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="170" y1="240" x2="310" y2="240" stroke="var(--cat-medical-billing)" stroke-width="3.5" stroke-linecap="round"/>
-  <circle cx="240" cy="240" r="5" fill="var(--cat-medical-billing)"/>
-  <line x1="120" y1="310" x2="150" y2="290" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="110" y1="280" x2="140" y2="262" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/prior-auth-wide.svg" alt="Prior authorization: billing process guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#what-a-peer-to-peer-review-actually-is">What a peer-to-peer review actually is</a></li>
+      <li><a href="#when-its-offered-and-why-the-window-is-short">When it's offered, and why the window is short</a></li>
+      <li><a href="#how-to-actually-prepare-the-physician-for-the-call">How to actually prepare the physician for the call</a></li>
+      <li><a href="#what-actually-gets-said-on-a-winning-call">What actually gets said on a winning call</a></li>
+      <li><a href="#why-these-calls-fail-even-when-the-clinical-case-is-strong">Why these calls fail even when the clinical case is strong</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -251,15 +254,15 @@
     </ul>
   </section>
 
-  <h2>What a peer-to-peer review actually is</h2>
+  <h2 id="what-a-peer-to-peer-review-actually-is">What a peer-to-peer review actually is</h2>
   <p>A peer-to-peer review is a direct phone conversation between the physician who ordered or is treating the patient and a physician working for the payer, typically the plan's medical director or a physician reviewer designated for that specialty. It happens after an initial prior authorization denial and is generally offered as a step before, or alongside, a formal written appeal. The premise is straightforward: the initial denial was often issued by a reviewer applying a policy checklist rather than evaluating the specific clinical picture in depth, and a peer-to-peer gives the treating physician a direct line to someone with the clinical background and the authority to reverse that decision on the spot.</p>
   <p>This is what makes a peer-to-peer categorically different from a written appeal. A written appeal is a document that enters a queue, is reviewed on the payer's timeline, and can take anywhere from days to weeks to produce a decision, sometimes after passing through more than one level of internal review before a physician ever reads it closely. A peer-to-peer collapses that timeline into a single conversation. When it goes well, the medical director agrees the service is necessary and authorizes it before the call ends, which is a turnaround no written process can match. That's also exactly why it's worth treating as the priority option rather than a formality to get through on the way to a written appeal.</p>
 
-  <h2>When it's offered, and why the window is short</h2>
+  <h2 id="when-its-offered-and-why-the-window-is-short">When it's offered, and why the window is short</h2>
   <p>Peer-to-peer review is typically offered specifically after an adverse determination on a prior authorization request, it is not usually available before a decision has been made, and it is not the same thing as simply calling the payer to ask about status. The denial letter or notification is where the offer and the instructions for requesting it usually appear, along with a deadline. That deadline is the detail practices most often miss, because a denial letter that arrives at a busy front desk or in a general inbox can sit unopened for days, and by the time anyone reads it, the window to request a peer-to-peer at all may have closed, leaving only the slower written-appeal path.</p>
   <p>The practical fix is procedural, not clinical: every prior authorization denial needs a named owner and a same-day triage step the moment it's received, specifically to check whether a peer-to-peer is offered and, if so, to request it immediately rather than after other options have been considered. Waiting to "see if the written appeal is even necessary" before requesting the peer-to-peer is a common way practices accidentally forfeit the faster option while trying to be efficient about which path to pursue.</p>
 
-  <h2>How to actually prepare the physician for the call</h2>
+  <h2 id="how-to-actually-prepare-the-physician-for-the-call">How to actually prepare the physician for the call</h2>
   <p>The single biggest determinant of whether a peer-to-peer succeeds is whether the physician on the call is prepared to make a clinical argument in real time, and preparation here means something specific: the physician needs the chart open, not a summary someone else wrote, with the exam findings, relevant imaging or lab results, prior treatments tried and their outcomes, and the reasoning that justified the original request all immediately at hand. Medical directors ask follow-up questions, and a physician who has to pause to look something up loses the momentum of a conversation that often only lasts a few minutes.</p>
   <p>A short written prep sheet, pulled directly from the chart before the call rather than assembled from memory, consistently makes the difference between a physician who speaks fluently about the case and one who improvises. That sheet should answer, in advance, the questions a medical director is most likely to ask: what conservative or lower-cost treatments were tried first and why they failed or weren't appropriate, what specific findings support the requested service, and what happens clinically if the request stays denied. A physician walking into the call with those three answers already organized is walking in prepared to win it.</p>
   <div class="data-table-wrap">
@@ -276,11 +279,11 @@
     </table>
   </div>
 
-  <h2>What actually gets said on a winning call</h2>
+  <h2 id="what-actually-gets-said-on-a-winning-call">What actually gets said on a winning call</h2>
   <p>The physicians who reverse denials on these calls consistently frame the conversation around the specific patient in front of them, not around the payer's policy in the abstract. "This patient failed six weeks of physical therapy and still has functional limitation, here's the exam finding that shows it" is a clinical argument a medical director can act on. "Your policy should cover physical therapy failures after six weeks" is an argument about the policy, not the patient, and it invites the medical director to defend the policy rather than evaluate the case. The distinction sounds subtle in the abstract, but in practice it's the difference between a conversation that moves toward yes and one that stalls into a restatement of the original denial reason.</p>
   <p>It also helps to treat the call as a genuine clinical discussion rather than an adversarial negotiation. Medical directors are physicians reviewing a case, and a physician-to-physician conversation that stays clinical, specific, and grounded in the chart tends to go better than one that opens by challenging the payer's judgment. Ending the call by confirming next steps explicitly, whether that's an on-the-spot approval, a request for additional documentation, or an explanation of why the denial stands, keeps the record clear for whatever comes next.</p>
 
-  <h2>Why these calls fail even when the clinical case is strong</h2>
+  <h2 id="why-these-calls-fail-even-when-the-clinical-case-is-strong">Why these calls fail even when the clinical case is strong</h2>
   <p>Three failure patterns account for most peer-to-peer losses that had a defensible clinical case behind them. The first is delegation: handing the call to a scheduler, biller, or office manager because the physician was unavailable and the request window was closing. However capable that staff member is administratively, they cannot answer a clinical follow-up question, and the call typically ends in a denial by default the moment the medical director asks something only a clinician can answer.</p>
   <p>The second is walking in unprepared. A physician who agrees to take the call but doesn't pull the chart beforehand, relying instead on memory of a patient seen days or weeks earlier among dozens of others, loses the specificity that makes these calls work. The third, and most common even among physicians who show up prepared, is arguing the wrong thing: defending the policy instead of the patient, or expressing frustration with the payer instead of making the clinical case. All three are avoidable with the same fix, a same-day triage process that gets the request to the physician immediately, and a prep sheet that puts the clinical case in front of them before they pick up the phone.</p>
 
@@ -292,7 +295,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Who should actually take the peer-to-peer call?</summary><p>The treating or ordering physician, not a scheduler, biller, or office manager. The payer's medical director is a physician evaluating a clinical question, and only someone who can answer clinical follow-up questions in real time, about exam findings, prior treatment, contraindications, can actually move the conversation toward reversal. Delegating the call to non-clinical staff is one of the most common reasons a winnable peer-to-peer ends in a denial anyway.</p></details>
     <details class="faq-item"><summary>What does the physician need in front of them during the call?</summary><p>The full chart, not a summary, the specific exam findings, imaging results, prior treatments tried and their outcomes, and the medical-necessity rationale already submitted with the original request. The call typically moves fast, and a physician who has to say "let me check the note" loses momentum in a conversation that often only lasts a few minutes. Preparing a one-page clinical summary before the call, pulled directly from the chart, is the difference between a physician speaking fluently and one improvising.</p></details>
@@ -304,7 +307,7 @@
     <p><b>Confirm before you rely on this.</b> Prior authorization requirements, payer portals and turnaround times change by payer, plan and service. The process information on this page reflects standard industry practice as of August 2026 and is provided for general education, verify current requirements directly with the specific payer before relying on it.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="prior-auth.html">Our complete prior authorization guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="prior-auth-gold-carding.html">Gold-carding explained <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -312,6 +315,7 @@
     <li><a href="prior-auth-tracking-workflow.html">Tracking authorizations across payers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="service-revenue-cycle-management.html">Revenue cycle management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -360,6 +364,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

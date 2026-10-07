@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="NCCI Edits and Bundling in Internal Medicine: EKG, Spirometry, In-Office Procedures | Verified RCM">
 <meta name="twitter:description" content="NCCI edits and bundling in internal medicine: modifier indicator and MUE Adjudication Indicator logic applied to EKG, spirometry, and injection administration collisions.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,17 +225,24 @@
       <p class="lede">Internal medicine's bundling collisions aren't exotic, they're the same handful of in-office tests and procedures colliding with themselves and with the visit around them, week after week: the EKG billed with more than one of its own component codes, a baseline spirometry billed alongside the code that already includes it, an injection administration line denying against the E/M that ordered it. Two CMS values decide whether any of these can be resolved with a modifier at all, and neither is a guess. See <a href="specialty-internal-medicine.html">the complete internal medicine billing guide</a> for the rest of the specialty's coding rules, this guide goes deep on the bundling logic alone.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-internal-medicine.html">internal medicine billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of layered arcs and a heartbeat pulse line, symbolizing internal medicine and ongoing whole-body primary care">
-  <path d="M100,360 A190,190 0 0,1 380,360" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M130,360 A160,160 0 0,1 350,360" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M160,360 A125,125 0 0,1 320,360" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M150,210 L190,210 L205,180 L220,235 L235,190 L250,210 L330,210" fill="none" stroke="var(--cat-primary-care)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="150" cy="210" r="4" fill="var(--cat-primary-care)"/>
-  <circle cx="330" cy="210" r="4" fill="var(--cat-primary-care)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-internal-medicine-wide.svg" alt="Internal medicine: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-two-numbers-that-decide-whether-a-collision-can-be-resol">The two numbers that decide whether a collision can be resolved</a></li>
+      <li><a href="#ekg-93000-93005-93010-a-code-selection-collision-not-a-modif">EKG: 93000, 93005, 93010, a code-selection collision, not a modifier override</a></li>
+      <li><a href="#spirometry-94010-94060-and-the-prepost-bronchodilator-bundle">Spirometry: 94010, 94060, and the pre/post-bronchodilator bundle</a></li>
+      <li><a href="#injection-administration-versus-the-same-day-em-where-the-re">Injection administration versus the same-day E/M: where the real collision is</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -247,7 +253,7 @@
     </ul>
   </section>
 
-  <h2>The two numbers that decide whether a collision can be resolved</h2>
+  <h2 id="the-two-numbers-that-decide-whether-a-collision-can-be-resol">The two numbers that decide whether a collision can be resolved</h2>
   <p><b>The NCCI modifier indicator</b> attached to a Column 1/Column 2 code pair:</p>
   <ul class="check-list">
     <li><span class="warn">0</span><span><b>Never bypassable.</b> No modifier, however well-documented, overrides it. If the pair carries a 0, the second code simply isn't separately payable, full stop.</span></li>
@@ -262,7 +268,7 @@
   </ul>
   <p>Both values are pair-specific and code-specific, published by CMS, and updated quarterly, a value confirmed today can shift at the next quarterly release. Look up the current value in the CMS NCCI PTP Edits Lookup Tool and the MUE tables before building either into a scrubber rule.</p>
 
-  <h2>EKG: 93000, 93005, 93010, a code-selection collision, not a modifier override</h2>
+  <h2 id="ekg-93000-93005-93010-a-code-selection-collision-not-a-modif">EKG: 93000, 93005, 93010, a code-selection collision, not a modifier override</h2>
   <p>The single most common EKG billing error in internal medicine isn't a true NCCI bundling conflict between the EKG and the same-day E/M, a diagnostic EKG is generally separately payable from an E/M performed the same day, because it's a distinct diagnostic service, not a bundled component of the visit. The actual collision is internal to the EKG code family itself.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -278,12 +284,12 @@
   <p>Billing more than one of these three for a single EKG performed once is the mistake that generates most CO-97 denials on this code family, not a conflict with the office visit billed the same day. This is a code-selection error, and the fix is picking the one code that matches how the test was actually performed and read, not appending a modifier to force two of them through together.</p>
   <p>A genuine second, medically necessary tracing performed later the same visit, a patient develops new chest pain mid-encounter and a repeat EKG is clinically warranted, is a real scenario, but the modifier that fits is usually 76 (repeat procedure, same physician), reporting a true repeat of the identical test, rather than 59 or an X-modifier, which claim the second service was distinct rather than a repeat. Documentation for a 76 needs to state why the repeat was medically necessary, not just that a second tracing exists in the chart. We confirmed an active Noridian Healthcare Solutions billing-and-coding article for electrocardiograms (Article A57326, effective 11/06/2025, superseding the prior A57327) directly against the CMS Coverage Database, confirm your own MAC's specific EKG article before finalizing a scrubber rule, since coverage articles are jurisdiction-specific and Noridian's may not match your MAC.</p>
 
-  <h2>Spirometry: 94010, 94060, and the pre/post-bronchodilator bundle</h2>
+  <h2 id="spirometry-94010-94060-and-the-prepost-bronchodilator-bundle">Spirometry: 94010, 94060, and the pre/post-bronchodilator bundle</h2>
   <p>Spirometry billing has its own internal component logic worth knowing before appending anything. <code>94010</code> reports a single, baseline spirometry, the graphic record, vital capacity, and expiratory flow rates. <code>94060</code> reports bronchodilator responsiveness testing: spirometry performed both before and after the patient receives a bronchodilator, as a single global service. Because 94060 already includes the pre-bronchodilator baseline reading as part of its own definition, billing 94010 separately for that same encounter's baseline measurement is a component-of-the-whole error, the same category of mistake as double-billing the EKG family, just inside a different code pair.</p>
   <p>The clinical scenario where this shows up constantly: a patient with a respiratory complaint, new dyspnea, a suspected COPD exacerbation (<code>J44.1</code>, verified billable against the FY2026 ICD-10-CM code set), gets a baseline spirometry that, based on the result, the physician decides to repeat post-bronchodilator to assess reversibility. If both readings happened as part of one bronchodilator-response protocol, that's 94060 alone, not 94010 plus 94060. 94010 is only separately appropriate when a genuinely distinct, standalone baseline spirometry was performed outside a bronchodilator-response encounter, a different visit, a different clinical question, not two readings of the same testing session split across two codes.</p>
   <p>Medicare local coverage for spirometry is narrower than most competitor content assumes. We searched the CMS Coverage Database directly and found only a CGS Administrators LCD specific to <i>transtelephonic</i> spirometry (<code>L34541</code>, effective 10/02/2025), a remote-monitoring context, not general in-office spirometry. No general "pulmonary function testing" LCD surfaced in that search. Don't assume a parallel in-office spirometry LCD exists for your MAC just because one exists for the transtelephonic variant; confirm your own MAC's specific coverage posture for in-office spirometry directly, since it may be governed by national coverage rules rather than a local policy at all.</p>
 
-  <h2>Injection administration versus the same-day E/M: where the real collision is</h2>
+  <h2 id="injection-administration-versus-the-same-day-em-where-the-re">Injection administration versus the same-day E/M: where the real collision is</h2>
   <p>Injection administration (<code>96372</code> and similar) is the pattern most often billed incorrectly in either direction, and the actual NCCI conflict is between the E/M and the injection's own built-in evaluative component, not between the injection and some other procedure code. NCCI treats the minimal clinical work inherent to giving an injection (confirming the drug, route, and patient tolerance) as bundled into 96372 itself; that bundled work doesn't independently support a separately billed E/M.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Correctly billed together</div><ul>
@@ -309,7 +315,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Can we bill 93000 and 93010 for the same EKG if two different physicians reviewed it?</summary><p>No, 93000 already reports the global service (tracing plus interpretation) for that single EKG, and a second physician's review of the same tracing isn't a separately billable interpretation just because a different person looked at it. A separately billable second interpretation requires a genuinely distinct clinical reason, not a duplicate read of the same test. If a formal second opinion is medically necessary and documented as such, that's a rare, specific scenario worth confirming against your payer's own policy before billing it, it isn't the default rule for two physicians reviewing one tracing.</p></details>
     <details class="faq-item"><summary>Why does 94010 deny when billed with 94060 on the same date?</summary><p>94060 already reports spirometry performed before and after bronchodilator administration as a single global service, and that pre-bronchodilator measurement is the same baseline spirometry that 94010 reports on its own. Billing 94010 separately for the same encounter's baseline reading is a component-of-the-whole error, you're billing part of 94060 a second time under a different code, not a distinct additional service. If a genuinely separate, medically necessary spirometry was performed outside the bronchodilator-response protocol, document why before appending any override modifier.</p></details>
@@ -321,13 +327,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-internal-medicine.html">Internal medicine billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-internal-medicine-modifiers.html">Internal medicine modifiers: 25, 59, 24, and telehealth modifiers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-internal-medicine-denials-appeals.html">Internal medicine claim denials and appeals: top CARC codes and fixes <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -376,6 +383,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

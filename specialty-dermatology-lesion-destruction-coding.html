@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Lesion Destruction Coding: AK, Benign &amp; Malignant | Verified RCM">
 <meta name="twitter:description" content="Lesion destruction CPT coding by lesion type: actinic keratosis (17000-17004), benign lesions (17110-17111), and malignant destruction (17260-17286), plus documentation rules.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,19 +225,26 @@
       <p class="lede">Destruction is billed by lesion pathology, not by the tool used to treat it, and that's exactly where practices lose money or trip an audit, three separate CPT families cover actinic keratosis, benign lesions, and malignant lesions, each with its own lesion-count or size logic, and the diagnosis on the claim has to actually match the family billed. This guide covers all three code families in full, the lesion-count threshold that changes reimbursement structure entirely, the AK-versus-malignant miscoding trap, and exactly what the note needs to defend the claim.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-dermatology.html">lesion destruction coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of stacked, gently curving bands suggesting cross-sectional layers of skin, representing dermatology">
-  <path d="M30 128 C110 118, 150 138, 240 128 C330 118, 370 138, 450 128" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M30 168 C110 156, 150 180, 240 168 C330 156, 370 180, 450 168" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M30 213 C110 203, 150 223, 240 213 C330 203, 370 223, 450 213" fill="none" stroke="var(--cat-surgical)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M30 258 C110 244, 150 272, 240 258 C330 244, 370 272, 450 258" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M30 302 C110 292, 150 312, 240 302 C330 292, 370 312, 450 302" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M30 346 C110 336, 150 356, 240 346 C330 336, 370 356, 450 346" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="172" cy="206" r="4" fill="var(--cat-surgical)"/>
-  <circle cx="322" cy="221" r="4" fill="var(--cat-surgical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-dermatology-wide.svg" alt="Dermatology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#three-families-one-decision-point">Three families, one decision point</a></li>
+      <li><a href="#actinic-keratosis-destruction-17000-17003-17004">Actinic keratosis destruction: 17000, +17003, 17004</a></li>
+      <li><a href="#benign-lesion-destruction-17110-and-17111">Benign lesion destruction: 17110 and 17111</a></li>
+      <li><a href="#malignant-lesion-destruction-1726017286">Malignant lesion destruction: 17260–17286</a></li>
+      <li><a href="#the-trap-ak-code-on-a-confirmed-malignancy-or-malignant-code">The trap: AK code on a confirmed malignancy, or malignant code without confirmation</a></li>
+      <li><a href="#documentation-requirements-lesion-count-and-destruction-meth">Documentation requirements: lesion count and destruction method</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -249,7 +255,7 @@
     </ul>
   </section>
 
-  <h2>Three families, one decision point</h2>
+  <h2 id="three-families-one-decision-point">Three families, one decision point</h2>
   <p>Every destruction claim starts with the same question: what was the lesion, pathologically? That answer, not the anatomic site, not the technique, not how many minutes it took, is what routes the claim to one of three CPT families.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -264,7 +270,7 @@
   </div>
   <p>Skin tags are a fourth, adjacent family that gets pulled into this one by mistake constantly, they're coded under 11200/+11201, not 17110, even though both are "destruction of a small benign growth" in plain language. If a claim mixes skin tag removal into a 17110 lesion count, the count is wrong on both codes.</p>
 
-  <h2>Actinic keratosis destruction: 17000, +17003, 17004</h2>
+  <h2 id="actinic-keratosis-destruction-17000-17003-17004">Actinic keratosis destruction: 17000, +17003, 17004</h2>
   <p>AK destruction is the highest-volume code in this family for most general dermatology practices, and it's also where the lesion-count threshold has the most direct effect on the claim's structure. 17000 covers the first lesion destroyed in the session. +17003 is the add-on for each additional lesion from the second through the fourteenth, billed in units, one unit per lesion, up to thirteen units maximum alongside the single 17000. At the fifteenth lesion, the entire billing model changes: 17004 replaces the whole set as one flat code covering all AK lesions destroyed that session, regardless of whether the actual count is 15 or 40.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -281,15 +287,15 @@
   </div>
   <p>The reimbursement math behind that threshold is why it matters operationally, not just as a coding trivia point. Each unit of +17003 up to the fourteenth lesion adds incremental value on top of 17000; 17004 pays a single flat rate regardless of whether the session treated 15 lesions or 45. That means the marginal value of the fourteenth versus the fifteenth lesion in a session isn't linear, it's worth confirming the exact count before submission, because a count that's miscounted by one or two lesions right around that threshold can put the claim in the wrong code entirely, not just the wrong unit count. Exact per-code dollar values are locality- and year-specific; check the CMS Physician Fee Schedule Look-Up Tool for your own locality rather than relying on a rate published here.</p>
 
-  <h2>Benign lesion destruction: 17110 and 17111</h2>
+  <h2 id="benign-lesion-destruction-17110-and-17111">Benign lesion destruction: 17110 and 17111</h2>
   <p>This family covers destruction of benign lesions other than actinic keratosis and skin tags, common molluscum, viral warts, and seborrheic keratoses fall here when treated by destruction rather than excision. 17110 covers up to 14 lesions in the session as a single code, with no per-lesion add-on the way AK destruction has +17003; 17111 replaces it once the count reaches 15 or more, again as a single flat code, not a stack of units. The count that matters is destroyed lesions in that session across all anatomic sites, not lesions per site.</p>
   <p>The most common billing error in this family is treating 17110 like it works the way +17003 does, trying to bill it per-lesion or attach unit counts the way the AK add-on allows. It doesn't; 17110 and 17111 are each single codes covering a lesion-count range, reported once per session regardless of how many lesions fall within that range.</p>
 
-  <h2>Malignant lesion destruction: 17260&ndash;17286</h2>
+  <h2 id="malignant-lesion-destruction-1726017286">Malignant lesion destruction: 17260&ndash;17286</h2>
   <p>Malignant destruction follows the same two-variable logic dermatology uses for excision: anatomic location sets which of the three code ranges applies, and lesion diameter sets which specific code within that range applies, banded across six ascending size tiers from 0.5 cm or smaller up through greater than 4.0 cm. Trunk, arms, and legs use the lowest-numbered range (17260&ndash;17266); scalp, neck, hands, feet, and genitalia use the middle range (17270&ndash;17276); face, ears, eyelids, nose, lips, and mucous membrane, the highest-risk cosmetic and functional sites, use the highest range (17280&ndash;17286).</p>
   <p>What makes this family different from AK and benign destruction isn't the code structure, it's the diagnosis requirement behind it. A code from 17260&ndash;17286 has to be supported by a diagnosis that's actually malignant, a confirmed basal cell, squamous cell, or other skin malignancy diagnosis, typically from a pathology result already on file. That's the trap covered next.</p>
 
-  <h2>The trap: AK code on a confirmed malignancy, or malignant code without confirmation</h2>
+  <h2 id="the-trap-ak-code-on-a-confirmed-malignancy-or-malignant-code">The trap: AK code on a confirmed malignancy, or malignant code without confirmation</h2>
   <p>This is the single costliest coding error in the destruction family, and it runs in both directions.</p>
   <div class="dodont">
     <div class="dodont-col dont"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>Undercoding direction</div><ul>
@@ -301,7 +307,7 @@
   </div>
   <p>The fix in both directions is the same workflow discipline: before the destruction claim goes out, confirm what diagnosis the chart actually supports as of that date of service, and route the code family to match it, not to whatever the visit was originally scheduled as. A biopsy result that comes back after the destruction was already performed still has to update the claim before submission, not after a payer catches the mismatch on audit.</p>
 
-  <h2>Documentation requirements: lesion count and destruction method</h2>
+  <h2 id="documentation-requirements-lesion-count-and-destruction-meth">Documentation requirements: lesion count and destruction method</h2>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Exact lesion count, stated as a number.</b> "Multiple AKs treated" or "several lesions destroyed" doesn't support anything past the first-lesion code. The note needs the actual count, and ideally the anatomic sites, especially anywhere near the 14-to-15 lesion threshold where the code family itself changes.</span></li>
     <li><span class="check">2</span><span><b>Destruction method, named specifically.</b> Cryotherapy (liquid nitrogen), laser ablation, chemical destruction, and electrodesiccation-curettage (ED&amp;C) don't change the CPT code, but the method still needs to be in the note, it supports medical necessity and distinguishes a destruction encounter from a biopsy or excision on the same claim if either is also billed.</span></li>
@@ -324,7 +330,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What's the difference between the actinic keratosis and benign lesion destruction codes?</summary><p>They're two separate CPT families keyed to two separate diagnoses. Actinic keratosis destruction is 17000 for the first lesion, +17003 for each additional lesion from the second through the fourteenth, and 17004 as a single flat code once a session reaches fifteen or more AK lesions. Destruction of benign lesions other than AK and skin tags, warts, molluscum, seborrheic keratoses, is 17110 for up to fourteen lesions and 17111 for fifteen or more, with no per-lesion add-on in between. Billing the wrong family doesn't just miscode the claim; it attaches the wrong diagnosis logic, since AK destruction should link to L57.0 and benign destruction should link to the specific benign diagnosis actually treated.</p></details>
     <details class="faq-item"><summary>Can we bill malignant destruction codes without a biopsy confirming cancer first?</summary><p>Clinically, yes in some cases, a physician can destroy a lesion based on clinical presentation alone without a preceding biopsy, and that's a legitimate treatment decision. Billing-wise, the malignant destruction codes (17260-17286) require a diagnosis that actually supports malignancy, which usually means a confirmed pathology result already on file, either from a prior biopsy of that same lesion or from tissue obtained and read at the time of destruction. Destroying a lesion on clinical suspicion alone and coding it as malignant destruction without a supporting pathology diagnosis is a common audit trigger; if there's no confirmed diagnosis, the benign or AK destruction codes are usually the defensible choice instead.</p></details>
@@ -336,13 +342,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-dermatology.html">Dermatology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-dermatology-mohs-surgery-billing.html">Mohs micrographic surgery billing: 17311-17315 and split billing <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-dermatology-prior-auth-medical-necessity.html">Dermatology prior authorization and medical necessity documentation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -391,6 +398,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

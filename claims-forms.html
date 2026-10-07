@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="CMS-1500 vs UB-04: Claim Forms, Fields, Rejections | Verified RCM">
 <meta name="twitter:description" content="CMS-1500 and UB-04 claim forms explained: which form applies to which provider type, the fields that decide payment, their electronic equivalents, and the rejections each one causes.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -225,31 +224,27 @@
       <h1>CMS-1500 vs UB-04: the two claim forms, and the fields that actually decide payment.</h1>
       <p class="lede">Every medical claim in the United States is filed on one of two forms, and which one applies depends on the type of provider billing, not the type of service delivered. Getting the wrong form, or the right form with the wrong field, is one of the most basic and most common ways a clean encounter turns into a rejected claim. This guide walks through both forms field by field, their electronic equivalents, and the specific errors that cause each one to bounce.</p>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line art of a medical claim form with ruled fields, representing CMS-1500 and UB-04 claim forms">
-  <rect x="100" y="110" width="280" height="260" rx="6" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <line x1="112" y1="150" x2="368" y2="150" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round"/>
-
-  <line x1="240" y1="190" x2="240" y2="312" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-
-  <line x1="112" y1="176" x2="368" y2="176" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="112" y1="201" x2="228" y2="201" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="252" y1="201" x2="368" y2="201" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="112" y1="226" x2="368" y2="226" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="112" y1="251" x2="228" y2="251" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="252" y1="251" x2="368" y2="251" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-
-  <line x1="112" y1="276" x2="368" y2="276" stroke="var(--cat-medical-billing)" stroke-width="2.5" stroke-linecap="round"/>
-
-  <line x1="112" y1="301" x2="228" y2="301" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="252" y1="301" x2="368" y2="301" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="112" y1="326" x2="368" y2="326" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-
-  <circle cx="334" cy="350" r="6" fill="var(--cat-medical-billing)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/claims-forms.svg" alt="Claim forms: billing process guide" width="1200" height="630" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#professional-vs-institutional-which-form-applies">Professional vs. institutional: which form applies</a></li>
+      <li><a href="#cms-1500-the-fields-that-decide-payment">CMS-1500: the fields that decide payment</a></li>
+      <li><a href="#ub-04-the-fields-that-decide-payment">UB-04: the fields that decide payment</a></li>
+      <li><a href="#paper-forms-vs-the-837-electronic-transaction">Paper forms vs. the 837 electronic transaction</a></li>
+      <li><a href="#where-clean-claims-go-wrong-across-both-forms">Where clean claims go wrong, across both forms</a></li>
+      <li><a href="#step-by-step-catching-form-errors-before-submission">Step by step: catching form errors before submission</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <div class="payer-contact">
     <div class="payer-contact-item">
       <div class="payer-contact-label"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M14 3v6h6"></path><path d="M9 13h6"></path><path d="M9 17h6"></path></svg>CMS-1500 fields</div>
@@ -284,7 +279,7 @@
     </ul>
   </section>
 
-  <h2>Professional vs. institutional: which form applies</h2>
+  <h2 id="professional-vs-institutional-which-form-applies">Professional vs. institutional: which form applies</h2>
   <p>The CMS-1500 is the professional claim form used by physicians, non-physician practitioners and most outpatient practices to bill for the services they personally perform: the office visit, the procedure, the interpretation. The UB-04, also known by its CMS number as the CMS-1450, is the institutional claim form used by hospitals, skilled nursing facilities, home health agencies, hospices and other facility-type providers to bill for the facility side of care: the room, the equipment, the nursing staff, the overhead.</p>
   <p>The distinction is about who is billing, not where the care happens. A patient seen in a hospital-owned outpatient clinic can generate two separate claims for the same visit: a UB-04 from the hospital for the facility fee, and a CMS-1500 from the treating physician for the professional fee, even though the patient experienced it as one appointment. This is also the structural reason professional and technical component splits exist in specialties like radiology and cardiology, covered in more depth on our <a href="specialty-cardiology.html">cardiology coding guide</a>.</p>
   <p>The split traces back to how Medicare itself is organized: Part A generally covers the institutional side of care and Part B the professional side, and the CMS-1500 and UB-04 grew up as the paper forms built around that division. Every payer that followed Medicare's lead inherited the same two-form structure, which is why the distinction holds regardless of whether the claim is going to a commercial payer, Medicaid, or Medicare itself. An independent diagnostic testing facility, a physician-owned ambulatory surgery center's professional fees, and a solo practitioner's office visit all sit on the CMS-1500 side of the line for the same reason: none of them is billing for a facility.</p>
@@ -308,7 +303,7 @@
   </div>
   <p>For the full walkthrough of how a single patient encounter can legitimately generate both claim types, including the billing-desk mechanics of keeping the two straight, see <a href="claims-forms-professional-vs-institutional.html">CMS-1500 vs. UB-04: which form applies to which claim</a>.</p>
 
-  <h2>CMS-1500: the fields that decide payment</h2>
+  <h2 id="cms-1500-the-fields-that-decide-payment">CMS-1500: the fields that decide payment</h2>
   <p>The CMS-1500 has 33 numbered boxes, but a small subset carries almost all of the payment risk. Boxes 1 through 13 identify the patient, the insured and the relationship between them; errors here cause eligibility mismatches rather than clinical denials, a subscriber ID that doesn't match what the payer has on file, or a patient-relationship-to-insured field that contradicts the eligibility response the front desk pulled that morning. Those errors are usually caught before the claim ever reaches adjudication, because most clearinghouses validate patient and subscriber fields against the eligibility transaction automatically. The boxes that most often cause preventable rejections sit further down the form, and they cluster into three categories: the provider identifier fields that confirm who rendered and who is billing for a service, the diagnosis pointer that links each service line back to a supporting diagnosis, and the billing-versus-rendering provider distinction that determines whose enrollment record the claim is actually checked against.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -327,7 +322,7 @@
   </div>
   <p>Notice how many of these trace back to the same three categories. Box 24J and box 33 are both provider identifier fields, and the payer's adjudication system checks them against different enrollment records: 24J against the individual practitioner who rendered the service, 33 against the group that is billing for it. A mismatch between the two, a rendering provider who isn't reassigned to the billing group, for instance, rejects the claim even though every code on it is correct. Box 24E, the diagnosis pointer, is a linking error rather than a coding error, which is exactly why it slips past coding reviews that only check whether the codes themselves are valid. And the billing-versus-rendering distinction in boxes 24J, 32 and 33 together is its own recurring source of rejections, especially for locum tenens coverage, incident-to billing and multi-location groups where the physical location of service, the rendering individual and the billing entity are three different things that all have to agree. The category-by-category breakdown of exactly how each of these fails on a real claim is in <a href="claims-forms-cms1500-common-rejections.html">CMS-1500 rejections: the fields that cause the most trouble</a>.</p>
 
-  <h2>UB-04: the fields that decide payment</h2>
+  <h2 id="ub-04-the-fields-that-decide-payment">UB-04: the fields that decide payment</h2>
   <p>The UB-04 uses form locators rather than numbered boxes, and it carries more structural information than the CMS-1500 because it is describing an institutional stay or episode rather than a single office encounter. Three form locators do most of the work of telling the payer what kind of claim this is and what it covers.</p>
   <p>Beyond those three, the UB-04 has entire blocks of form locators with no CMS-1500 equivalent at all, because a professional claim never needs to describe them. Condition codes, in the FL 18&ndash;28 range, flag circumstances that affect how the claim should be processed, things like a beneficiary-requested billing situation or a change from inpatient to outpatient status mid-stay. Occurrence codes, in the FL 31&ndash;34 range, record specific dated events tied to the claim, such as an accident date or the admission date itself. Value codes, in the FL 39&ndash;41 range, carry dollar amounts or quantities the payer needs for adjudication, separate from the charge lines themselves. None of these exist on the CMS-1500 because a single office visit doesn't need to describe an episode's conditions, dated events and values, it just needs to describe the visit. That extra structure is also why an institutional claim has more places for a single wrong entry to cascade into a rejection than a professional claim does.</p>
   <div class="data-table-wrap">
@@ -357,12 +352,12 @@
   </div>
   <p>Two form locators are worth knowing simply as anchor points for how the rest of the form is organized. FL 1 carries the billing provider's name and address, the institutional equivalent of CMS-1500 box 33, and sits at the very top of the form because everything else on the claim is read in reference to who is billing. FL 81 sits at the opposite end, carrying the taxonomy code and qualifier that further identifies the billing provider's specialty designation to the payer. Between those two bookends sits every category covered above: identification, bill classification, dated occurrences, condition flags, dollar values, revenue and procedure detail, and diagnosis coding, which is why the UB-04 is structurally more complex than the CMS-1500, it isn't describing one service, it's describing an entire institutional episode from admission (or the outpatient equivalent) through discharge. The full breakdown of what each block of form locators captures, anchored to FL 1 and FL 81, is in <a href="claims-forms-ub04-field-locators.html">UB-04 field locators: what an institutional claim actually captures</a>.</p>
 
-  <h2>Paper forms vs. the 837 electronic transaction</h2>
+  <h2 id="paper-forms-vs-the-837-electronic-transaction">Paper forms vs. the 837 electronic transaction</h2>
   <p>Under HIPAA's electronic transaction standard, almost every claim above a small-volume threshold has to be submitted electronically, as the 837P for professional claims or the 837I for institutional claims, rather than on the printed form. The paper CMS-1500 and UB-04 still matter for two reasons: a small number of providers qualify for an exception and still submit paper, and the field structure of the paper form is what the electronic transaction is built around, so payer remittance advice and denial correspondence frequently still reference box numbers and form locators by their paper-form names even when the claim was never printed.</p>
   <p>In practice this means staff who only ever see a clearinghouse dashboard still need to understand what box 24E or form locator 4 represents, because that is the language payer denial reason codes speak.</p>
   <p>The remaining paper submitters are a narrow group, generally small-volume or non-standard submitters who qualify for an exception to the electronic mandate, plus certain payer-specific situations that still call for a printed form. For everyone else, electronic submission isn't just the default, it's the more reliable path, because a clearinghouse or scrubbing engine can validate field-level logic (a diagnosis pointer that doesn't map to a listed diagnosis, a Type of Bill frequency digit that contradicts what's already on file) before the claim ever reaches the payer, catching in seconds what a paper submission would only surface weeks later as a rejection letter. The narrow paper exceptions that remain, and why electronic submission catches so much more before it becomes a denial, are covered in <a href="claims-forms-electronic-vs-paper.html">837P and 837I: why almost nobody actually mails a paper claim anymore</a>.</p>
 
-  <h2>Where clean claims go wrong, across both forms</h2>
+  <h2 id="where-clean-claims-go-wrong-across-both-forms">Where clean claims go wrong, across both forms</h2>
   <p>Strip away the field numbers and both forms fail for a small, repeating set of reasons. Almost every preventable rejection on either form traces back to one of four root causes: a mismatched identifier somewhere in the provider chain, a linking field pointing at something that doesn't exist elsewhere on the claim, a classification code that contradicts the claim's own history with the payer, or a required field left blank because nobody realized the payer's specific policy required it. Recognizing the pattern matters more than memorizing every field, because it's the pattern that tells a biller where to look first when a denial reason code doesn't immediately make sense.</p>
   <p>This is also why a coding review and a claims-scrubbing review catch different things, and why a practice needs both rather than assuming one substitutes for the other. A coding review asks whether the CPT, HCPCS or ICD-10 codes themselves are correct and supported by documentation. A claims-scrubbing review asks whether the fields around those codes are internally consistent, whether the pointer resolves, whether the identifiers match, whether the classification code agrees with the claim's own history. A claim can pass a thorough coding review and still fail on submission because nobody checked whether box 24E pointed at a diagnosis that existed in box 21. That's the gap our <a href="claims-scrubbing.html">claims scrubbing service</a> is built to close before a claim ever reaches the payer.</p>
   <div class="data-table-wrap">
@@ -378,7 +373,7 @@
     </table>
   </div>
 
-  <h2>Step by step: catching form errors before submission</h2>
+  <h2 id="step-by-step-catching-form-errors-before-submission">Step by step: catching form errors before submission</h2>
   <ol class="cred-steps">
     <li><b>Confirm the form before the codes</b><span>Verify billing provider type first, professional or institutional, so the entire claim is being built on the correct field structure from the start, rather than discovering the wrong form was used after codes and modifiers are already entered.</span></li>
     <li><b>Validate every identifier in the provider chain</b><span>Rendering NPI, billing NPI, service facility, and for UB-04 claims, taxonomy in FL 81. Each is checked against a different enrollment record, and a single mismatch anywhere in the chain rejects the whole claim.</span></li>
@@ -396,7 +391,7 @@
     </div>
   </div>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Confirm the billing provider type before assuming which form applies.</li>
@@ -416,7 +411,7 @@
     </ul></div>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>How do I know whether to use CMS-1500 or UB-04?</summary><p>It follows the provider type, not the service. A physician office, individual practitioner or most outpatient clinics bill professional services on the CMS-1500 regardless of where the service happens. A hospital, skilled nursing facility, home health agency or other institutional provider bills on the UB-04, including for outpatient hospital services. A single patient visit to a hospital-owned clinic can generate both: a UB-04 for the facility fee and a CMS-1500 for the physician's professional fee.</p></details>
     <details class="faq-item"><summary>Does anyone still submit paper claim forms?</summary><p>Rarely, and mostly for small-volume or non-standard submitters who qualify for an exception under HIPAA's electronic filing requirement. The overwhelming majority of claims move as the 837P or 837I electronic transaction through a clearinghouse. The paper form layout still matters because it defines the fields, and because some payer correspondence and remittance advice references box numbers by their paper-form names even for electronic submissions.</p></details>
@@ -435,7 +430,7 @@
     <p><b>Confirm before you rely on this.</b> Claim form requirements and payer-specific field rules change. The process information on this page reflects standard industry practice as of August 2026 and is provided for general education, verify current requirements against the current NUCC CMS-1500 and NUBC UB-04 instructions before relying on it.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="claims-forms-professional-vs-institutional.html">CMS-1500 vs. UB-04: which form applies to which claim <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="claims-forms-cms1500-common-rejections.html">CMS-1500 rejections: the fields that cause the most trouble <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -447,6 +442,7 @@
     <li><a href="medical-coding.html">Medical coding <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="service-revenue-cycle-management.html">Revenue cycle management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -495,6 +491,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

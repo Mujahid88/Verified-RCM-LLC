@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Gold-Carding: Earning Exemption from Prior Auth | Verified RCM">
 <meta name="twitter:description" content="How gold-carding works: the general concept, how a provider typically qualifies on approval-rate history, why status isn't permanent, and the value of tracking your own approval rate.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,21 +225,25 @@
       <p class="lede">Gold-carding is the industry's answer to a simple frustration: a provider who gets a service approved every single time still has to ask permission every single time. Where it applies, it removes the authorization step entirely, but it's a patchwork of state laws and payer programs, not a single national rule, and status isn't permanent once you have it.</p>
       <div class="post-meta"><span class="muted">Reviewed by Marcus Fielding, CPB &middot; Certified Professional Biller (AAPC) &middot; Part of our <a href="prior-auth.html">prior authorization guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a gated turnstile representing prior authorization clearance">
-  <line x1="170" y1="130" x2="170" y2="350" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="310" y1="130" x2="310" y2="350" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="170" cy="130" r="6" stroke="var(--color-text)" stroke-width="2" fill="none"/>
-  <circle cx="310" cy="130" r="6" stroke="var(--color-text)" stroke-width="2" fill="none"/>
-  <line x1="150" y1="350" x2="330" y2="350" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M170,240 Q240,150 310,240" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="170" y1="240" x2="310" y2="240" stroke="var(--cat-medical-billing)" stroke-width="3.5" stroke-linecap="round"/>
-  <circle cx="240" cy="240" r="5" fill="var(--cat-medical-billing)"/>
-  <line x1="120" y1="310" x2="150" y2="290" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="110" y1="280" x2="140" y2="262" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/prior-auth-wide.svg" alt="Prior authorization: billing process guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-concept-earning-your-way-out-of-the-process">The concept: earning your way out of the process</a></li>
+      <li><a href="#why-its-a-patchwork-not-a-national-rule">Why it's a patchwork, not a national rule</a></li>
+      <li><a href="#how-a-provider-typically-qualifies">How a provider typically qualifies</a></li>
+      <li><a href="#why-gold-card-status-isnt-permanent">Why gold-card status isn't permanent</a></li>
+      <li><a href="#the-value-of-tracking-approval-rate-even-without-formal-gold">The value of tracking approval rate even without formal gold-carding</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -251,23 +254,23 @@
     </ul>
   </section>
 
-  <h2>The concept: earning your way out of the process</h2>
+  <h2 id="the-concept-earning-your-way-out-of-the-process">The concept: earning your way out of the process</h2>
   <p>Gold-carding is a recognized industry term for a program that exempts a provider from the prior authorization requirement on specific services, once that provider has demonstrated a consistently high approval rate for those services over time. The logic behind it is straightforward from the payer's side: if a provider's requests for a given service are approved essentially every time, the review step isn't catching anything, it's just adding delay and administrative cost for both sides without changing the outcome. Removing the requirement for that specific provider and that specific service is, in effect, the payer trusting a track record instead of re-checking every individual case.</p>
   <p>It's important to be precise about what gold-carding does and doesn't do. It exempts a provider from the authorization step for the specific services covered by the program, it does not exempt the provider from medical necessity generally, and a payer can typically still conduct retrospective review of claims delivered under a gold-card exemption. The benefit is procedural: care isn't delayed waiting on a decision, and staff time isn't spent submitting and tracking a request the outcome of which has already been effectively established by history.</p>
 
-  <h2>Why it's a patchwork, not a national rule</h2>
+  <h2 id="why-its-a-patchwork-not-a-national-rule">Why it's a patchwork, not a national rule</h2>
   <p>There is no single federal gold-carding standard. What exists instead is a growing but uneven set of state laws that mandate some version of gold-carding for payers operating in that state, layered on top of payers that have independently chosen to run their own exemption programs regardless of whether state law requires it. That means gold-carding can apply to one payer in a practice's mix and not another, even within the same state, and it can apply to one service a provider performs at high volume and not to a different service from the same provider that hasn't built the same approval history.</p>
   <p>This is the reason a practice can't treat gold-carding as a single yes-or-no question. The only reliable way to know whether it applies is to check directly, payer by payer and service by service, against the practice's own mix, a general awareness that "gold-carding exists" doesn't tell a billing team anything actionable until it's been checked against the specific payers that specific practice actually bills.</p>
 
-  <h2>How a provider typically qualifies</h2>
+  <h2 id="how-a-provider-typically-qualifies">How a provider typically qualifies</h2>
   <p>Qualification criteria are set independently by each payer or by the state law behind a given program, so there's no universal threshold to quote, but the shape of the requirement is consistent across most versions: a provider has to demonstrate a high approval rate for a specific service, sustained over a defined lookback period, usually measured by looking at that provider's own prior authorization request history for that exact service rather than the practice's overall denial rate across everything it bills. A provider with a strong approval history on one procedure and a much thinner one on another can be eligible for gold-carding on the first and not the second, which is why eligibility has to be assessed at the service level rather than at the provider level in general.</p>
   <p>Practically, this means the data a practice needs to even find out whether it likely qualifies is the same data most practices already generate but rarely aggregate deliberately: how many prior authorization requests were submitted for a given service over the relevant period, how many were approved on first submission versus after peer-to-peer or appeal, and what that approval rate looks like sustained over time. Where that data isn't already being tracked in a form that's easy to pull, the first step toward gold-carding eligibility is building the tracking, not applying for the program.</p>
 
-  <h2>Why gold-card status isn't permanent</h2>
+  <h2 id="why-gold-card-status-isnt-permanent">Why gold-card status isn't permanent</h2>
   <p>Programs typically build in a re-evaluation cycle rather than granting the exemption indefinitely. A provider's approval rate for the covered service is checked again at defined intervals, and a decline, whether from a genuine shift in case mix, a change in how the provider is documenting medical necessity, or simple variance, can result in the exemption being withdrawn and the provider returning to standard prior authorization requirements for that service. The covered service list itself can also change if the payer revises the program, and where the exemption exists because of state law, a legislative change or sunset provision can affect it independent of anything the provider did.</p>
   <p>The practical implication is that gold-carding is something maintained through continued performance, not something banked once and forgotten. A practice that stops paying attention to its own approval rate after achieving gold-card status risks finding out it lost the exemption only when a request that used to sail through suddenly requires standard authorization again, at which point the gap between losing the status and discovering it has already cost scheduling time and, potentially, a denial.</p>
 
-  <h2>The value of tracking approval rate even without formal gold-carding</h2>
+  <h2 id="the-value-of-tracking-approval-rate-even-without-formal-gold">The value of tracking approval rate even without formal gold-carding</h2>
   <p>The trend line matters here even for practices whose current payer mix doesn't offer gold-carding yet. Legislation has expanded state by state rather than arriving all at once nationally, and payers have faced sustained pressure, from regulators, from provider organizations, and from public reporting on the administrative burden of prior authorization, to expand exemption programs rather than contract them. A practice tracking its own approval-rate data now, by payer and by service, is positioned to claim an exemption the moment one becomes available, instead of discovering a year later that it would have qualified from day one and simply never had the history assembled to prove it.</p>
   <p>That same data has value independent of any formal program. An approval rate tracked consistently over time is leverage in a direct conversation with a payer, even one without a published gold-carding policy, a provider who can show a near-perfect approval history for a specific service has a real argument for reduced review, whether or not the payer calls it gold-carding. It's also, functionally, the same discipline described in <a href="prior-auth-tracking-workflow.html">our authorization tracking guide</a>: submission dates, outcomes and reference numbers logged consistently by payer and by service, which most practices need for operational reasons regardless of whether gold-carding is ever on the table.</p>
 
@@ -279,7 +282,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Is gold-carding available everywhere?</summary><p>No. It's a patchwork rather than a single national program, several states have passed gold-carding legislation of their own, and a number of payers run their own version independent of any state mandate, but neither is universal. Whether it applies to a given practice depends on the specific states and payers in that practice's own mix, checked service by service, not assumed from the concept existing generally.</p></details>
     <details class="faq-item"><summary>How does a provider typically qualify?</summary><p>Qualification is built around historical approval-rate data for a specific service: a provider whose requests for that service are approved at a high rate, sustained over a defined lookback period, becomes eligible for the exemption. The exact threshold, the lookback window, and which services are covered are all set independently by the payer or the state law behind the program, which is why eligibility for one service with one payer doesn't imply eligibility for a different service or a different plan.</p></details>
@@ -292,7 +295,7 @@
     <p><b>Confirm before you rely on this.</b> Prior authorization requirements, payer portals and turnaround times change by payer, plan and service. The process information on this page reflects standard industry practice as of August 2026 and is provided for general education, verify current requirements directly with the specific payer before relying on it.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="prior-auth.html">Our complete prior authorization guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="prior-auth-peer-to-peer.html">Peer-to-peer review: how to win one <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -300,6 +303,7 @@
     <li><a href="prior-auth-tracking-workflow.html">Tracking authorizations across payers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="service-revenue-cycle-management.html">Revenue cycle management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -348,6 +352,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

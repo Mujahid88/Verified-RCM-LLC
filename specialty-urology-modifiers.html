@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Urology Billing Modifiers: RT/LT, 50, 59/XS, and 26/TC | Verified RCM">
 <meta name="twitter:description" content="Urology modifier guide: RT/LT laterality by procedure, modifier 50 versus two RT/LT lines, 59 versus XS for paired-organ unbundling, and 26/TC equipment ownership.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,33 +225,25 @@
       <p class="lede">Urology bills more paired organs than almost any other specialty, and RT/LT, 50, 59/XS, and 26/TC are the four modifiers that carry that weight on the claim. Get the laterality modifier right and a bilateral stone case pays as two distinct procedures instead of denying as a duplicate. Get 59 versus XS wrong and a legitimately separate structure reads as a bundled component. This guide goes past the pillar's overview with code-level detail: which procedures carry laterality, which don't, and how to stack these modifiers correctly when more than one applies to the same line.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-urology.html">urology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a flow line passing through a valve node, representing urology">
-  <!-- secondary echo line, upper -->
-  <path d="M 90 155 C 140 138, 175 158, 205 178 C 222 189, 232 193, 245 194" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- secondary echo line, lower -->
-  <path d="M 245 286 C 265 289, 285 300, 320 300 C 355 300, 380 312, 410 322" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- primary flow line passing through the valve -->
-  <path d="M 60 195 C 120 170, 170 195, 205 222 C 222 235, 232 239, 240 240 C 248 241, 258 246, 278 243 C 320 237, 355 258, 420 285" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- radiating ticks around the valve -->
-  <path d="M 266 214 L 278 200" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M 214 214 L 202 200" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M 266 266 L 278 280" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M 214 266 L 202 280" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- valve node -->
-  <circle cx="240" cy="240" r="34" fill="none" stroke="var(--cat-surgical)" stroke-width="2.5"/>
-  <circle cx="240" cy="240" r="11" fill="none" stroke="var(--cat-surgical)" stroke-width="2"/>
-
-  <!-- flow indicator dots -->
-  <circle cx="130" cy="182" r="3" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="185" cy="208" r="3" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="300" cy="235" r="4" fill="var(--cat-surgical)" stroke="none"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-urology-wide.svg" alt="Urology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-laterality-carries-so-much-weight-here">Why laterality carries so much weight here</a></li>
+      <li><a href="#rtlt-the-default-for-paired-organ-procedures">RT/LT: the default for paired-organ procedures</a></li>
+      <li><a href="#modifier-50-when-one-line-beats-two-rtlt-lines">Modifier 50: when one line beats two RT/LT lines</a></li>
+      <li><a href="#59-xs-separating-what-rtlt-alone-cant">59 / XS: separating what RT/LT alone can't</a></li>
+      <li><a href="#26tc-equipment-ownership-beyond-urodynamics">26/TC: equipment ownership beyond urodynamics</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -263,10 +254,10 @@
     </ul>
   </section>
 
-  <h2>Why laterality carries so much weight here</h2>
+  <h2 id="why-laterality-carries-so-much-weight-here">Why laterality carries so much weight here</h2>
   <p>Urology treats kidneys, ureters, and testes, three paired organs that generate a large share of the specialty's procedure volume, and none of them bill as a single indivisible unit the way a prostate does. A stone in the left kidney and a stone in the right ureter are two different claim lines even when they're treated in the same operative session, and the only thing on the claim that tells the payer they're genuinely different sites is the modifier. Miss that distinction and the second line reads as a duplicate of the first, denying work that was both necessary and already performed.</p>
 
-  <h2>RT/LT: the default for paired-organ procedures</h2>
+  <h2 id="rtlt-the-default-for-paired-organ-procedures">RT/LT: the default for paired-organ procedures</h2>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Common urology procedure families and their laterality requirement.</caption>
@@ -282,7 +273,7 @@
   </div>
   <p>Some codes' own descriptors already resolve the laterality question. Vasectomy (<code>55250</code>) is the clearest urology example, CPT describes the code as covering the procedure whether performed unilaterally or bilaterally, so the code accounts for both sides by definition. Appending RT, LT, or 50 to that line doesn't add information the payer needs; it contradicts what the code already means.</p>
 
-  <h2>Modifier 50: when one line beats two RT/LT lines</h2>
+  <h2 id="modifier-50-when-one-line-beats-two-rtlt-lines">Modifier 50: when one line beats two RT/LT lines</h2>
   <p>Whether a true bilateral procedure bills as one line with modifier 50 or two lines with RT and LT depends on the payer's own bilateral-billing convention, not a fixed rule that applies everywhere. Medicare's Physician Fee Schedule assigns every code a bilateral surgery indicator that governs how, or whether, a 150% bilateral payment adjustment applies:</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -299,13 +290,13 @@
   <p>⚠️ This is the indicator framework as CMS defines it, but we couldn't independently pull the specific value for <code>50220</code>, <code>55530</code>, <code>54520</code>, or <code>52353</code> from the CMS Physician Fee Schedule Look-Up Tool during this build, its pages returned access errors to automated fetch attempts. Confirm the indicator for your specific codes there before defaulting to either billing pattern.</p>
   <p>A worked example makes the choice concrete. A patient undergoing bilateral simple orchiectomy for advanced prostate cancer bills either as <code>54520-50</code> on one line, or as <code>54520-RT</code> plus <code>54520-LT</code> on two lines, depending on the specific payer's convention. Submitting the pattern a given payer doesn't expect is a common cause of one line paying and the other denying as a duplicate, even though both sides were genuinely operated on the same session.</p>
 
-  <h2>59 / XS: separating what RT/LT alone can't</h2>
+  <h2 id="59-xs-separating-what-rtlt-alone-cant">59 / XS: separating what RT/LT alone can't</h2>
   <p>RT/LT and 50 answer where a procedure happened. 59 and XS answer why a second, different code on the same claim isn't already included in the first. The two questions get confused often enough in urology's paired-organ world that it's worth walking through when laterality alone is enough, and when a claim needs a distinct-procedure modifier as well.</p>
   <p>When the same code is billed twice for two different sides, the routine case being bilateral ureteroscopy with lithotripsy for a right ureteral stone and a separate left renal pelvis stone, both reported as <code>52353</code>, RT and LT are what separate the two lines, not 59 or XS. NCCI's Column 1/Column 2 pair edits generally compare two different codes, not the same code billed twice for opposite sides. Even so, appending XS or 59 alongside RT/LT on the second line is common practice as a safeguard against duplicate-claim filters that don't always parse the laterality modifier before flagging.</p>
   <p>A cleaner case for XS on its own is a bundling edit between two different codes on the same side. A patient undergoing right-side ureteroscopy with lithotripsy (<code>52353-RT</code>) is found, on the same pass, to have an unrelated bladder lesion, fulgurated at <code>52224</code>. Because diagnostic-look bundling logic treats the cystoscopic view as included in the therapeutic procedure, the second line needs a distinct-structure modifier to avoid reading as a bundled step of the first: <code>52224-59</code> or, more specifically, <code>52224-XS</code>, with the operative note explicitly separating the bladder lesion finding from the ureteral stone treatment. Confirm the modifier indicator for the specific pair first, if it comes back 0, no modifier reverses the bundle.</p>
   <p>Where a line needs both a laterality modifier and a distinct-procedure modifier, for example, a left-side renal biopsy (<code>50200-LT</code>) billed alongside an unrelated right-side procedure in the same session, sequence the anatomic modifier first, informational second. Most payer adjudication systems price a line off the first-listed modifier, so RT/LT ahead of 59/XS keeps the laterality read correctly on lines carrying both.</p>
 
-  <h2>26/TC: equipment ownership beyond urodynamics</h2>
+  <h2 id="26tc-equipment-ownership-beyond-urodynamics">26/TC: equipment ownership beyond urodynamics</h2>
   <p>The pillar guide covers 26/TC for urodynamics equipment ownership in full. The same logic runs through every other diagnostic study urology bills, renal and bladder ultrasound, post-void residual measurement, voiding cystourethrography. Whoever owns the equipment and employs the technologist bills TC; whoever performs the interpretation bills 26; the global fee with no modifier is correct only when the same practice does both. As with urodynamics, billing globally against equipment the practice doesn't own creates a duplicate-claim conflict with whatever the facility already billed for its own technical component, same failure mode, different study.</p>
 
   <div class="dodont">
@@ -336,7 +327,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Do we need modifier 59 or XS when the same CPT code is billed twice with different RT/LT modifiers?</summary><p>Not under NCCI's own logic, Column 1/Column 2 pair edits generally compare two different codes, not the same code billed twice for opposite sides, so RT and LT are what separate the two lines. In practice, many clearinghouse and payer duplicate-claim filters flag identical CPT codes billed the same date regardless of the laterality modifier, so appending XS or 59 alongside RT/LT is common practice as a safeguard against that filter, not because a bundling edit requires it.</p></details>
     <details class="faq-item"><summary>When does modifier 50 replace two RT/LT lines in urology billing?</summary><p>It depends on the payer's own bilateral-billing convention, not a single national rule. Medicare's Physician Fee Schedule assigns every code a bilateral surgery indicator that determines whether a 150% bilateral payment adjustment applies to a single modifier-50 line versus two full-price RT/LT lines, and that indicator varies by code. We could not independently pull the specific indicator value for the codes in this guide from the CMS PFS Look-Up Tool during this build, so confirm it there before defaulting to either billing pattern.</p></details>
@@ -348,12 +339,13 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-urology.html">Urology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-urology-urodynamics-catheter-dme.html">Urodynamics Billing and Medicare Coverage <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-urology-ncci-bundling.html">NCCI Edits and Bundling for Urology Procedures <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -402,6 +394,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

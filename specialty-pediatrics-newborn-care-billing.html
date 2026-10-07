@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Newborn Care Billing: CPT 99460-99463 and Hospital Coding Rules | Verified RCM">
 <meta name="twitter:description" content="CPT 99460 newborn care billing: 99460 vs 99461 vs 99462 vs 99463 by site and stay length, 99468/99469 critical care, the Z38.x diagnosis rule, and the sequencing error that drives denials.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,22 +225,28 @@
       <p class="lede">Newborn care coding looks simple, four codes, one age group, until a multi-day stay hits a hospitalist rotation and the wrong code gets billed on the wrong day. The whole family runs on two variables: where the exam happened and which day of the stay it was, plus a diagnosis rule that trips up practices that treat it as an afterthought. This guide covers the full decision logic, the critical-care carve-out, and the sequencing error that drives more hospitalist newborn denials than any other single mistake.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-pediatrics.html">pediatrics billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a rising growth curve marking a pediatric development milestone">
-  <path d="M120 300 Q 200 300 240 250 Q 290 190 360 150" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M110 200 L 110 320 L 370 320" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M110 260 L 340 260" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
-  <path d="M110 225 L 355 225" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
-  <path d="M150 320 L 150 300" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M195 320 L 195 288" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M240 320 L 240 250" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M285 320 L 285 205" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M330 320 L 330 168" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="285" cy="203" r="7" fill="var(--cat-primary-care)"/>
-  <path d="M285 175 Q 300 160 320 158" fill="none" stroke="var(--cat-primary-care)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-pediatrics-wide.svg" alt="Pediatrics: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#newborn-care-billing-at-a-glance">Newborn care billing at a glance</a></li>
+      <li><a href="#99460-vs-99461-vs-99462-vs-99463-the-decision-logic">99460 vs. 99461 vs. 99462 vs. 99463: the decision logic</a></li>
+      <li><a href="#who-can-actually-bill-99460-the-first-examiner-rule">Who can actually bill 99460, the first-examiner rule</a></li>
+      <li><a href="#the-multi-day-sequencing-error-that-drives-hospitalist-denia">The multi-day sequencing error that drives hospitalist denials</a></li>
+      <li><a href="#9946899469-neonatal-critical-care-is-a-different-pathway">99468/99469: neonatal critical care is a different pathway</a></li>
+      <li><a href="#the-z38x-primary-diagnosis-requirement">The Z38.x primary diagnosis requirement</a></li>
+      <li><a href="#top-denials-on-newborn-claims">Top denials on newborn claims</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -252,7 +257,7 @@
     </ul>
   </section>
 
-  <h2>Newborn care billing at a glance</h2>
+  <h2 id="newborn-care-billing-at-a-glance">Newborn care billing at a glance</h2>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>The newborn code family, summarized before the detail below.</caption>
@@ -267,7 +272,7 @@
     </table>
   </div>
 
-  <h2>99460 vs. 99461 vs. 99462 vs. 99463: the decision logic</h2>
+  <h2 id="99460-vs-99461-vs-99462-vs-99463-the-decision-logic">99460 vs. 99461 vs. 99462 vs. 99463: the decision logic</h2>
   <p>All four codes describe the same clinical work, a complete history and physical exam of a newborn, plus the initial management plan, billed differently depending on where the baby is and which day of the encounter it is. None of them are time-based or MDM-leveled the way office E/M is; the decision runs entirely on site of service and day count.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -283,7 +288,7 @@
   </div>
   <p>The pattern to hold onto: 99460 is a single-use code that belongs to whichever provider saw the newborn first, on the day the stay began. Every day after that is 99462, no matter who's rounding. The only exception that removes 99460 from the picture entirely is a same-day discharge, which converts the whole encounter to 99463 instead.</p>
 
-  <h2>Who can actually bill 99460, the first-examiner rule</h2>
+  <h2 id="who-can-actually-bill-99460-the-first-examiner-rule">Who can actually bill 99460, the first-examiner rule</h2>
   <p>This is the rule that generates the most confusion in group practices and hospitalist coverage models. 99460 is not a per-provider code or a per-visit code, it belongs to the single physician or qualified health professional who performed the first newborn exam that day, full stop. A few scenarios worth walking through explicitly:</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Delivering pediatrician exams the newborn at birth, then a partner in the same group rounds later that afternoon.</b> Only the first exam is billable as 99460. The second same-day exam by the partner isn't separately payable, it's bundled into the day's newborn care, even though a different individual NPI performed it.</span></li>
@@ -292,7 +297,7 @@
   </ul>
   <p>The practical fix: build the "first examiner" flag into the newborn nursery workflow at the chart level, not at the billing level. If billing has to reconstruct who saw the baby first after the fact, from notes written by three different providers over a multi-day stay, errors compound. The provider documenting the exam should mark whether it's the first exam of the stay in the note itself.</p>
 
-  <h2>The multi-day sequencing error that drives hospitalist denials</h2>
+  <h2 id="the-multi-day-sequencing-error-that-drives-hospitalist-denia">The multi-day sequencing error that drives hospitalist denials</h2>
   <p>This is the single highest-volume error in newborn billing, and it's almost always a workflow problem rather than a knowledge gap. Walk through a typical three-day uncomplicated vaginal delivery stay:</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -308,7 +313,7 @@
   <p>What happens on the payer side: 99460 is functionally a once-per-stay code in practice, so a second and third 99460 for the same newborn at the same facility reads as a duplicate service and denies as such, the claim doesn't fail because the clinical work wasn't real, it fails because the code doesn't describe day two or day three of a stay. Worse, because the denial hits on the duplicate 99460 line, the 99462 that should have been billed for those days frequently never gets billed at all; the revenue is lost silently rather than flagged for correction, unless someone catches it manually against the length-of-stay record.</p>
   <p>⚠️ This build could not confirm a specific published Medicare MUE value or NCCI modifier indicator for the 99460/99462 same-stay pair against CMS's primary MUE and NCCI PTP files directly (CMS's site returned an access error to automated fetch attempts made while researching this page); the once-per-stay behavior described above reflects standard industry billing practice and payer claims-edit behavior, not a confirmed specific indicator value. Verify the current MUE for 99460 and 99462 in the CMS MUE lookup tool before relying on a specific unit-cap number in a scrubber rule.</p>
 
-  <h2>99468/99469: neonatal critical care is a different pathway</h2>
+  <h2 id="9946899469-neonatal-critical-care-is-a-different-pathway">99468/99469: neonatal critical care is a different pathway</h2>
   <p>99468 and 99469 are not an escalation of 99460&ndash;99463, they're a materially different clinical and billing pathway, gated by acuity rather than site of service or day count. A newborn moved to critical care doesn't get a "higher" version of the normal newborn code; the whole family switches.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -322,7 +327,7 @@
   </div>
   <p>The trap: a newborn admitted as normal (99460 billed day one) who decompensates and moves to critical care on day two isn't billed 99462 that day, the claim shifts to 99468 for the day critical care actually began, because 99468/99469 describe a distinct level and type of service, not a continuation of normal newborn rounding. Documentation has to independently support the critical-care threshold (the specific cardiac/respiratory support and continuous monitoring furnished) for each day billed under 99468/99469; a chart that reads like routine newborn rounding won't support the critical-care code even if the baby happens to be in the NICU.</p>
 
-  <h2>The Z38.x primary diagnosis requirement</h2>
+  <h2 id="the-z38x-primary-diagnosis-requirement">The Z38.x primary diagnosis requirement</h2>
   <p>Every claim in the 99460&ndash;99463 family requires a specific liveborn-infant code as the primary diagnosis. This isn't a formality, claims scrubbers and payer edit logic check for it directly, and a normal newborn claim carrying anything else as primary is one of the most reliably flagged patterns in newborn billing.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -345,7 +350,7 @@
     <div><div class="protip-label">Pro tip</div><p>Run a weekly length-of-stay reconciliation for every newborn admission: pull the facility's discharge date against the newborn codes actually billed, and flag any stay where 99460 appears more than once or where the number of 99462 lines doesn't match (stay length minus one day). This single report catches the sequencing error before it reaches a payer, rather than after a denial batch comes back.</p></div>
   </div>
 
-  <h2>Top denials on newborn claims</h2>
+  <h2 id="top-denials-on-newborn-claims">Top denials on newborn claims</h2>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Recurring newborn care denials, why they fire, and the fix.</caption>
@@ -359,7 +364,7 @@
     </table>
   </div>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Confirm which provider performed the actual first exam before assigning 99460 on a multi-day stay.</li>
@@ -383,7 +388,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Who is allowed to bill CPT 99460?</summary><p>Only the first physician or qualified health professional to examine the newborn in the hospital or birthing center that day. If a partner in the same group rounds on the baby later the same calendar day, that second exam isn't separately billable, it's bundled into the first examiner's 99460. A different provider seeing the baby on day two bills 99462, not 99460, even if it's the same practice or the same group NPI.</p></details>
     <details class="faq-item"><summary>What's the difference between 99460 and 99463?</summary><p>99460 is the initial hospital or birthing-center exam of a normal newborn on a day the baby stays admitted. 99463 applies only when the newborn is both admitted and discharged on the same calendar date, a same-day birth-and-discharge encounter. 99463 replaces 99460 for that encounter; the two are never billed together on the same date of service.</p></details>
@@ -395,7 +400,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-pediatrics.html">Pediatrics billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-pediatrics-vaccine-administration-billing.html">Vaccine administration billing: CPT 90460, 90461, and 90471-90474 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -403,6 +408,7 @@
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialties.html">All 30 specialties <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -451,6 +457,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

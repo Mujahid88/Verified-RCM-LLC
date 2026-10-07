@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="In-Office Procedure Billing: Injections, Skin, Spirometry | Verified RCM">
 <meta name="twitter:description" content="Family medicine in-office procedure billing: joint and trigger point injections, skin lesion destruction, and spirometry, diagnosis linkage, NCCI edits, and the LCDs that actually govern coverage.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,16 +225,25 @@
       <p class="lede">A missing drug line, an unspecified diagnosis, or a bundling conflict on one injection visit is a rounding error, repeated across a year of joint injections, lesion destructions, and spirometry claims, it's real revenue. This guide goes past the code list and into the diagnosis linkage, the LCDs that actually govern coverage, and the NCCI edits that decide whether a same-day E/M survives.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-family-medicine.html">family medicine billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract nested arcs of varying sizes representing generations of a family joined by one continuous line of care">
-  <path d="M128.6,152.8 A148,148 0 1 1 146.8,361.4" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M140.3,206.4 A104,104 0 1 1 147.9,294" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M215,182.3 A62,62 0 1 1 235.2,297.1" fill="none" stroke="var(--muted)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M170,130 C220,170 190,250 250,270 C300,290 280,340 320,362" fill="none" stroke="var(--cat-primary-care)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="240" r="5" fill="var(--cat-primary-care)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-family-medicine-wide.svg" alt="Family medicine: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#joint-and-bursa-injections-diagnosis-linkage-and-the-coverag">Joint and bursa injections: diagnosis linkage and the coverage gap nobody checks</a></li>
+      <li><a href="#trigger-point-injections-a-separate-code-family-with-its-own">Trigger point injections: a separate code family with its own LCD</a></li>
+      <li><a href="#skin-lesion-destruction-diagnosis-driven-family-count-driven">Skin lesion destruction: diagnosis-driven family, count-driven code</a></li>
+      <li><a href="#spirometry-the-coverage-gap-and-the-bundling-trap">Spirometry: the coverage gap and the bundling trap</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -246,7 +254,7 @@
     </ul>
   </section>
 
-  <h2>Joint and bursa injections: diagnosis linkage and the coverage gap nobody checks</h2>
+  <h2 id="joint-and-bursa-injections-diagnosis-linkage-and-the-coverag">Joint and bursa injections: diagnosis linkage and the coverage gap nobody checks</h2>
   <p>The 20600&ndash;20611 family (covered by code and joint size in <a href="specialty-family-medicine.html">our pillar guide</a>) is billed constantly, and most practices assume it's governed by an LCD the way trigger point and epidural injections are. A targeted CMS Coverage database search found no LCD for the general joint/bursa aspiration-injection codes at the MACs checked, while <b>Trigger Point Injections</b> and <b>Sacroiliac Joint Injections and Procedures</b> each have dedicated, actively maintained LCDs at multiple MACs. Without a governing LCD, medical necessity for a routine knee or shoulder injection rests on diagnosis-code specificity and general medical policy rather than a documented frequency limit, the diagnosis code carries more of the weight, not less.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -261,7 +269,7 @@
   <p>Two claim-level details matter as much as the diagnosis. The injected substance, corticosteroid, local anesthetic, hyaluronic acid, is a separate line under its own drug code, never bundled into 20600&ndash;20611; billing the procedure alone and dropping the drug line is a routine way this service leaves money on the table. And the ultrasound-guidance codes (20604/20606/20611) require a permanently retained image as part of the record, not just a note that a probe was used in the room, a payer auditing the higher-value code specifically looks for that image before allowing it to stand.</p>
   <p>The NCCI relationship here is the same one that governs 96372 elsewhere in this specialty: an established-patient E/M reported the same day as a joint injection commonly edits against the injection code with a modifier-allowed indicator, meaning modifier 25 can unbundle it, but only when the note shows a genuinely separate history, exam, and MDM beyond "patient here for injection." Stacking two or three injections at different joints on the same date is the more common trap: use the site-specific X-modifier (XS, separate structure) on the second and third injection rather than relying on units alone, since a per-day unit cap on 20600/20604 can trip on a polyarticular visit a single-joint visit never approaches.</p>
 
-  <h2>Trigger point injections: a separate code family with its own LCD</h2>
+  <h2 id="trigger-point-injections-a-separate-code-family-with-its-own">Trigger point injections: a separate code family with its own LCD</h2>
   <p>Trigger point injections are often confused with the joint/bursa family above, but they're structurally different, injection into one or more muscle trigger points, reported by number of muscles injected rather than joint size. Unlike the 20600 family, this one has real, actively maintained local coverage policy.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -280,7 +288,7 @@
   </div>
   <p>Every jurisdiction has its own version, don't assume the covered-diagnosis list, frequency limit, or documentation requirement in one LCD applies to a claim processed by a different MAC; pull the LCD for the MAC that actually processes your claims before building a charge rule around this service. ICD-10-CM has no single dedicated code for "myofascial pain syndrome"; the myalgia family carries the weight instead, <code>M79.10</code> (unspecified site) is billable but nonspecific, and <code>M79.18</code> (other site) paired with a clear site description is the stronger claim where the LCD's covered-diagnosis list requires one. Document the specific muscles and injection sites; the code level (single vs. multiple muscle groups) is decided by that count, the same way lesion count decides the skin codes below.</p>
 
-  <h2>Skin lesion destruction: diagnosis-driven family, count-driven code</h2>
+  <h2 id="skin-lesion-destruction-diagnosis-driven-family-count-driven">Skin lesion destruction: diagnosis-driven family, count-driven code</h2>
   <p>The two lesion-destruction families covered at a summary level in <a href="specialty-family-medicine.html">the pillar guide</a>, 17000/17003/17004 for premalignant lesions and 17110/17111 for benign lesions, are selected first by diagnosis and then by lesion count, and mixing up either axis is the most common error in this part of the chart.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -299,7 +307,7 @@
     <p><b>Pro tip.</b> A lesion with any feature that reads as possibly malignant, irregular border, rapid change, bleeding, needs a biopsy or referral pathway before destruction, not after. A destruction code billed against a diagnosis that later turns out to be malignant, with no biopsy anywhere in the chart, is exactly the pattern a payer's medical review looks for.</p>
   </div>
 
-  <h2>Spirometry: the coverage gap and the bundling trap</h2>
+  <h2 id="spirometry-the-coverage-gap-and-the-bundling-trap">Spirometry: the coverage gap and the bundling trap</h2>
   <p>94010 (basic spirometry) and 94060 (spirometry pre- and post-bronchodilator) are two of the more frequently ordered diagnostic tests in a family panel, and their denial pattern is almost entirely about the diagnosis code and one bundling rule, not about a coverage policy that doesn't exist for most practices.</p>
   <p>A CMS Coverage database search for spirometry and pulmonary function testing LCDs returned only <b>Transtelephonic Spirometry</b> (<code>L34541</code>, CGS Administrators), a remote-monitoring service using telephone-transmitted spirometry, not standard in-office 94010/94060 testing. No LCD for routine office spirometry surfaced, which means, like the joint-injection family above, medical necessity typically rests on diagnosis-code specificity and general medical policy rather than a documented LCD frequency limit. ⚠️ This doesn't rule out an LCD at a MAC not covered by this search; confirm your own jurisdiction's LCD and article library before assuming none applies.</p>
   <div class="data-table-wrap">
@@ -314,7 +322,7 @@
   </div>
   <p>The bundling trap is simpler than the diagnosis issue: 94060 already includes the baseline measurement, so reporting 94010 and 94060 together for the same encounter double-bills it. Order 94060 when reversibility is the clinical question, typical for a new asthma or COPD workup, and 94010 alone for a measurement without a bronchodilator challenge. Documentation for 94060 should capture the pre-bronchodilator values, the drug and dose given, the post-bronchodilator values, and the percent change; a claim with the code but no pre/post comparison in the chart is functionally undocumented even with the correct CPT selection.</p>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Default to site- and laterality-specific joint pain or osteoarthritis codes instead of <code>M25.50</code>.</li>
@@ -338,7 +346,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Does Medicare require a specific LCD-covered diagnosis for a joint or bursa injection?</summary><p>Not the way it does for trigger point injections or sacroiliac joint procedures, a targeted search of the CMS Coverage database turned up no LCD for the general joint and bursa injection/aspiration codes (20600-20611) at the MACs checked, while Trigger Point Injections and Sacroiliac Joint Injections and Procedures each carry their own LCDs at multiple MACs. That means medical necessity for a routine knee or shoulder injection is usually established by diagnosis-code specificity and your payer's general coverage policy, not a dedicated LCD. Confirm against your own MAC's LCD and article library before assuming blanket coverage, since a MAC can publish one at any time.</p></details>
     <details class="faq-item"><summary>Can we bill 17110 for a wart and 17000 for an actinic keratosis at the same visit?</summary><p>Yes, they're separate code families covering separate lesion types, and both are billable on the same date when the documentation supports each diagnosis independently. 17000/17003/17004 apply to premalignant lesions like actinic keratoses (ICD-10 L57.0); 17110/17111 apply to benign lesions such as viral warts (B07.0-B07.9) or seborrheic keratoses (L82.0/L82.1). Report each code against its own diagnosis and document the lesion count and location for both families, since the code selected within each family depends entirely on how many lesions were treated.</p></details>
@@ -350,12 +358,13 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-family-medicine.html">Family medicine billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-family-medicine-vaccine-administration.html">Vaccine administration billing: CPT 90460-90474 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-family-medicine-icd10-specificity.html">ICD-10 specificity for family medicine: hypertension, diabetes, depression <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -404,6 +413,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

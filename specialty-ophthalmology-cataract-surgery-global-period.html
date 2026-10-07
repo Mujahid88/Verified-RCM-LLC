@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Cataract Surgery Coding and Global Period (66984, 66982, 79) | Verified RCM">
 <meta name="twitter:description" content="Cataract surgery coding: 66984 vs 66982 documentation, the 90-day global period, modifiers 58/78/79, second-eye scheduling, YAG capsulotomy timing, and MAC LCDs.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,20 +225,27 @@
       <p class="lede">Almost every dollar a practice loses around cataract surgery traces to one of three things: billing 66982 without the note to support it, appending the wrong postoperative modifier when a patient comes back for something unplanned, or losing track of what the 90-day global window bundles versus what it doesn't. This guide goes past the pillar's overview, the exact documentation each 66982 complexity factor needs, how 58, 78, and 79 differ inside the same global period, and the timing trap around YAG capsulotomy that catches practices that never audit for it.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-ophthalmology.html">ophthalmology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of concentric circles forming a minimal eye and iris, representing ophthalmology">
-  <path d="M100,240 Q240,148 380,240" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M100,240 Q240,332 380,240" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="240" r="78" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="240" r="54" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="240" r="30" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="240" r="14" fill="none" stroke="var(--cat-medical)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="240" r="5" fill="var(--cat-medical)" stroke="none"/>
-  <path d="M118,236 Q100,240 118,244" fill="none" stroke="var(--muted)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M362,236 Q380,240 362,244" fill="none" stroke="var(--muted)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-ophthalmology-wide.svg" alt="Ophthalmology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#what-the-90-day-global-period-actually-bundles">What the 90-day global period actually bundles</a></li>
+      <li><a href="#66984-vs-66982-what-the-operative-note-has-to-say">66984 vs. 66982: what the operative note has to say</a></li>
+      <li><a href="#modifier-58-78-and-79-which-one-and-when">Modifier 58, 78, and 79: which one and when</a></li>
+      <li><a href="#second-eye-cataract-surgery-sequencing-and-scheduling">Second-eye cataract surgery: sequencing and scheduling</a></li>
+      <li><a href="#yag-capsulotomy-66821-a-separate-procedure-not-a-bundled-ste">YAG capsulotomy (66821): a separate procedure, not a bundled step</a></li>
+      <li><a href="#femtosecond-laser-and-premium-iols-whats-separately-billable">Femtosecond laser and premium IOLs: what's separately billable</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -250,7 +256,7 @@
     </ul>
   </section>
 
-  <h2>What the 90-day global period actually bundles</h2>
+  <h2 id="what-the-90-day-global-period-actually-bundles">What the 90-day global period actually bundles</h2>
   <p>Cataract extraction (<code>66984</code>, <code>66982</code>) carries a 90-day global surgical period bundling the pre-operative visit on the day before or day of surgery, the surgery itself, and all routine postoperative care through day 90. The standard-interval visits at day one, week one, month one, and month three are not separately billable, and scheduling those as new E/M charges is a common, self-inflicted denial.</p>
   <p>Three things are not bundled, and are worth a scrubber rule rather than relearning after a denial:</p>
   <ul class="check-list">
@@ -259,7 +265,7 @@
     <li><span class="warn">Not billable</span><span>Routine follow-up for the operated eye at a standard postoperative interval, that's what the global fee already paid for.</span></li>
   </ul>
 
-  <h2>66984 vs. 66982: what the operative note has to say</h2>
+  <h2 id="66984-vs-66982-what-the-operative-note-has-to-say">66984 vs. 66982: what the operative note has to say</h2>
   <p><code>66984</code> is standard cataract extraction with intraocular lens insertion. <code>66982</code> is the complex version, and the distinction lives entirely in the operative note, not in surgeon preference, case difficulty in the abstract, or a billing team's assumption that a longer case means a higher code. The note has to name the specific factor and describe how it changed the procedure:</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -275,7 +281,7 @@
   </div>
   <p>Diagnosis coding should match: age-related nuclear cataract is laterality-specific, <code>H25.11</code> right eye, <code>H25.12</code> left eye, <code>H25.13</code> bilateral (ICD-10-CM FY2026, verified billable), and the eye coded on the diagnosis line has to match the operative note and the RT/LT modifier. A laterality mismatch between the diagnosis and the procedure is a routine, avoidable cause of a claim processing incorrectly.</p>
 
-  <h2>Modifier 58, 78, and 79: which one and when</h2>
+  <h2 id="modifier-58-78-and-79-which-one-and-when">Modifier 58, 78, and 79: which one and when</h2>
   <p>All three cover a second procedure inside a prior procedure's postoperative period, and cataract surgery's 90-day window is where they get tested most. The distinction is planned-versus-unplanned and related-versus-unrelated, not severity.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -295,20 +301,20 @@
     <div><div class="protip-label">Pro tip</div><p>Ask one question before appending any of the three: was this part of the original plan (58), an unplanned fix for a problem the first surgery caused (78), or a separate problem entirely (79)? That resolves the modifier faster than any lookup table, including this one.</p></div>
   </div>
 
-  <h2>Second-eye cataract surgery: sequencing and scheduling</h2>
+  <h2 id="second-eye-cataract-surgery-sequencing-and-scheduling">Second-eye cataract surgery: sequencing and scheduling</h2>
   <p>The second eye is a distinct procedure on a different anatomic structure, performed by the same physician inside the first eye's 90-day global period, not a repeat of the same procedure on the same structure, which makes <b>79</b> the correct modifier, not 76 or 77. Sequence the pricing modifier before the informational laterality modifier: <code>66984-79-LT</code>, not <code>66984-LT-79</code>. Reversing the order is a common, avoidable cause of a claim pricing incorrectly rather than denying outright, which means nobody catches it without a deliberate audit.</p>
   <p>Diagnosis coding for the second eye needs its own laterality-specific code even when the underlying disease process is the same one billed for the first eye, <code>H25.11</code> and <code>H25.12</code> describe two different operative eyes, not one bilateral code repeated. Reserve <code>H25.13</code> for both eyes genuinely addressed in a single encounter, which surgery staged weeks apart is not.</p>
 
-  <h2>YAG capsulotomy (66821): a separate procedure, not a bundled step</h2>
+  <h2 id="yag-capsulotomy-66821-a-separate-procedure-not-a-bundled-ste">YAG capsulotomy (66821): a separate procedure, not a bundled step</h2>
   <p>Posterior capsule opacification is a genuinely separate, later complication of cataract surgery, coded <code>H26.491</code> right eye, <code>H26.492</code> left eye, <code>H26.493</code> bilateral (ICD-10-CM FY2026, verified billable), and it cannot be planned or staged as part of the original procedure. YAG laser posterior capsulotomy (<code>66821</code>) is billed as a distinct code, with modifier 79 (plus the correct laterality modifier) when it falls inside the 90-day window of the original cataract surgery on that eye.</p>
   <p>CGS Administrators publishes coverage for this exact procedure as its own LCD, <code>L33946</code>, "Capsule Opacification Following Cataract Surgery: Discission and YAG Laser Capsulotomy" (effective 11/06/2025, confirmed active in the CMS Coverage Database as of this build), distinct from the MAC's general cataract extraction LCD. ⚠️ The document ID, contractor, and effective date were confirmed live; the article's internal visual-acuity and symptom-documentation thresholds were not independently re-verified line by line (CMS's article pages returned access errors to automated retrieval), so pull the current text for your own MAC before building a documentation template against it.</p>
   <p>The timing trap runs opposite to what most practices expect: the risk isn't billing it too late, it's performing it too early. YAG done shortly after the original surgery invites medical-necessity scrutiny even though the code is correctly billable, because early, clinically significant opacification is less common and the record needs to independently support the finding, typically a documented drop in visual acuity or symptomatic glare, rather than a routine post-op schedule.</p>
 
-  <h2>Femtosecond laser and premium IOLs: what's separately billable</h2>
+  <h2 id="femtosecond-laser-and-premium-iols-whats-separately-billable">Femtosecond laser and premium IOLs: what's separately billable</h2>
   <p>Medicare pays the same amount for <code>66984</code> or <code>66982</code> whether the surgeon uses a femtosecond laser or a conventional manual technique, and there's no separate CPT or HCPCS line item for the laser step. CMS guidance reiterating CMS Rulings 05-01 (May 3, 2005) and CMS-1536-R (effective January 22, 2007) established the framework: the laser fee is a non-covered upgrade the practice may bill directly to the beneficiary, on the same logic governing presbyopia- and astigmatism-correcting premium IOLs. ⚠️ CMS.gov's own guidance document returned access errors to direct retrieval during this build; the ruling numbers above are corroborated through American Academy of Ophthalmology reporting rather than independently re-confirmed against the CMS PDF itself, verify current wording against your MAC before finalizing financial forms.</p>
   <p>Get the financial-responsibility waiver for the laser fee and any premium-IOL price difference signed before surgery, framed as a genuine non-covered-service agreement, not an ABN implying Medicare might still pay if the paperwork is right. Payers read the two documents differently on appeal.</p>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Require a named complexity factor and its technique consequence in every 66982 note before it's coded.</li>
@@ -330,7 +336,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What's the difference between modifier 58 and modifier 79 during the cataract global period?</summary><p>Modifier 58 covers a staged or planned procedure that was always intended as a next step, a secondary IOL placement after a complicated case where lens implantation was deliberately deferred, for example, and it opens a new 90-day global period. Modifier 79 covers a procedure that is clinically unrelated to the original surgery, most commonly second-eye cataract extraction, and it also opens a new global period. The distinction is whether the second procedure was part of the original surgical plan (58) or is an independent problem or a different anatomic site entirely (79); billing the wrong one on an audit-sensitive claim is a common, avoidable error.</p></details>
     <details class="faq-item"><summary>Does modifier 78 apply when a patient returns to the OR for a retained lens fragment after cataract surgery?</summary><p>Yes. An unplanned return to the operating room for a complication of the original surgery, a retained lens fragment, a dislocated IOL, or a wound leak requiring repair, is modifier 78, not 58 or 79, because it is both unplanned and related to the original procedure. Modifier 78 does not open a new 90-day global period and Medicare reimburses only the intraoperative portion of the fee, since the original procedure's pre- and post-operative work is already being paid under the first global fee. Confirm the payer's specific reduction percentage before posting the expected reimbursement.</p></details>
@@ -342,13 +348,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-ophthalmology.html">Ophthalmology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-ophthalmology-ncci-bundling.html">NCCI edits and bundling rules <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-ophthalmology-anti-vegf-injections.html">Anti-VEGF injection billing <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-ophthalmology-modifiers.html">Ophthalmology billing modifiers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -397,6 +404,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

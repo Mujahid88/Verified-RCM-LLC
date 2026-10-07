@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Prior Authorization for Urology: Imaging, BPH Devices, and OAB | Verified RCM">
 <meta name="twitter:description" content="Urology prior authorization by category: CT urogram and prostate MRI, UroLift/Rezum/Aquablation, and the OAB medication-to-procedure escalation ladder, with the documentation each request needs.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,33 +225,24 @@
       <p class="lede">Prior authorization isn't one workflow in urology, it's three, and treating them as interchangeable is why the average request still eats 19&ndash;20 minutes of staff time on the phone. Advanced imaging, BPH device procedures, and OAB medications and procedures each run on a different authority (a paused federal program, payer-specific device rules, and MAC LCDs, respectively), and each fails for a different preventable reason. This guide breaks out the documentation each category actually needs, before the request goes out rather than after it stalls.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-urology.html">urology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a flow line passing through a valve node, representing urology">
-  <!-- secondary echo line, upper -->
-  <path d="M 90 155 C 140 138, 175 158, 205 178 C 222 189, 232 193, 245 194" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- secondary echo line, lower -->
-  <path d="M 245 286 C 265 289, 285 300, 320 300 C 355 300, 380 312, 410 322" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- primary flow line passing through the valve -->
-  <path d="M 60 195 C 120 170, 170 195, 205 222 C 222 235, 232 239, 240 240 C 248 241, 258 246, 278 243 C 320 237, 355 258, 420 285" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- radiating ticks around the valve -->
-  <path d="M 266 214 L 278 200" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M 214 214 L 202 200" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M 266 266 L 278 280" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M 214 266 L 202 280" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- valve node -->
-  <circle cx="240" cy="240" r="34" fill="none" stroke="var(--cat-surgical)" stroke-width="2.5"/>
-  <circle cx="240" cy="240" r="11" fill="none" stroke="var(--cat-surgical)" stroke-width="2"/>
-
-  <!-- flow indicator dots -->
-  <circle cx="130" cy="182" r="3" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="185" cy="208" r="3" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="300" cy="235" r="4" fill="var(--cat-surgical)" stroke="none"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-urology-wide.svg" alt="Urology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-urologys-prior-auth-workload-splits-into-three-playbooks">Why urology's prior-auth workload splits into three playbooks</a></li>
+      <li><a href="#imaging-ct-urogram-and-prostate-mri">Imaging: CT urogram and prostate MRI</a></li>
+      <li><a href="#bph-devices-urolift-rezum-aquablation-turp">BPH devices: UroLift, Rezum, Aquablation, TURP</a></li>
+      <li><a href="#oab-the-medication-to-procedure-escalation-ladder">OAB: the medication-to-procedure escalation ladder</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -263,10 +253,10 @@
     </ul>
   </section>
 
-  <h2>Why urology's prior-auth workload splits into three playbooks</h2>
+  <h2 id="why-urologys-prior-auth-workload-splits-into-three-playbooks">Why urology's prior-auth workload splits into three playbooks</h2>
   <p>Treating "prior authorization" as one process is the first mistake. Imaging PA, when it exists at all, is administered by a radiology benefit manager against the plan's own appropriateness criteria. BPH device PA is administered against a specific CPT code and, frequently, a step-therapy requirement. OAB procedure PA is administered against the same MAC LCDs that govern coverage in the first place, layered with the plan's own medication-history requirement. One generic "PA checklist" for all three is why staff re-discover the same missing document on every category, every time.</p>
 
-  <h2>Imaging: CT urogram and prostate MRI</h2>
+  <h2 id="imaging-ct-urogram-and-prostate-mri">Imaging: CT urogram and prostate MRI</h2>
   <p>Two studies drive nearly all of urology's imaging PA volume: a CT urogram for hematuria, and a prostate MRI for an elevated PSA or active-surveillance follow-up.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -286,7 +276,7 @@
     <li><span class="check">3</span><span><b>State the biopsy plan or surveillance status explicitly on the MRI request.</b> "Elevated PSA" alone reads as an open-ended request rather than a defined clinical pathway.</span></li>
   </ul>
 
-  <h2>BPH devices: UroLift, Rezum, Aquablation, TURP</h2>
+  <h2 id="bph-devices-urolift-rezum-aquablation-turp">BPH devices: UroLift, Rezum, Aquablation, TURP</h2>
   <p>Traditional Medicare generally doesn't require prior authorization for UroLift, Rezum, or Aquablation. Nearly everything else in this category does, and the authorization is tied to the CPT code, not the underlying diagnosis.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -315,7 +305,7 @@
   </div>
   <p>The switch-mid-procedure scenario is the single most common way a fully-authorized case turns into a denied claim: a practice authorizes UroLift, then the surgeon finds intraoperatively that Rezum fits the anatomy better. The original authorization covered 52441/+52442; it doesn't extend to 53854 just because the diagnosis and patient are the same. Flag any intraoperative device change for a same-day authorization callback before the claim goes out.</p>
 
-  <h2>OAB: the medication-to-procedure escalation ladder</h2>
+  <h2 id="oab-the-medication-to-procedure-escalation-ladder">OAB: the medication-to-procedure escalation ladder</h2>
   <p>Overactive bladder and urge incontinence (<code>N32.81</code>, <code>N39.41</code>) authorization follows a documented step ladder, and every rung has to be independently supported in the chart, not implied by the next code billed.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -344,7 +334,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Does traditional Medicare require prior authorization for a CT urogram or prostate MRI?</summary><p>Not currently. CMS indefinitely paused the Appropriate Use Criteria (AUC) program for advanced diagnostic imaging, CT, MRI, PET, and nuclear medicine, effective January 1, 2024, and providers no longer need to include AUC consultation information on Medicare fee-for-service claims. There's no active federal prior-authorization mandate for these studies under traditional Medicare as of 2026. That doesn't extend to Medicare Advantage or commercial plans, most of which run their own imaging-management prior-auth program regardless of what traditional Medicare requires. Confirm the specific plan's own imaging PA list before ordering, every time.</p></details>
     <details class="faq-item"><summary>What does a payer want to see before approving OAB botulinum toxin injections or sacral neuromodulation?</summary><p>Nearly every payer, and the MAC LCDs governing OAB botulinum toxin (L38809 from Novitas Solutions, L39836 from Palmetto GBA), expect documented failure of, or intolerance to, at least one oral OAB medication trial before either escalation is authorized. Sacral neuromodulation additionally requires a successful percutaneous test/trial phase, generally defined across payer policy as 50% or greater symptom improvement on a voiding diary, before the permanent pulse generator is authorized. Skipping the documented medication trial, or requesting the implant without a quantified trial result in the chart, is the most common reason both stall in review.</p></details>
@@ -358,12 +348,13 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-urology.html">Urology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-urology-denials-appeals.html">Urology Claim Denials and Appeals: The Top Patterns <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-urology-prostate-biopsy-2026.html">Prostate Biopsy Coding: The 2026 CPT Overhaul (55707&ndash;55715) <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -412,6 +403,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

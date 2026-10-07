@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Medical Practice KPIs: Collections, A/R Aging, Denials | Verified RCM">
 <meta name="twitter:description" content="Why a bank balance is a lagging indicator, and the four KPIs that actually show practice health: collections rate, A/R aging by bucket, denial trend analysis by cause, and provider productivity.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,33 +225,27 @@
       <p class="lede">A bank balance tells you how much cash cleared weeks ago. It doesn't tell you whether denials are climbing, whether claims are aging past the point of collectability, or whether a provider's productivity dropped last quarter. Four metrics actually answer those questions: collections rate, A/R aging by bucket, denial trend analysis by cause, and provider productivity. None of them come from the bank statement, all of them come from the billing system and the payer remittances behind it.</p>
       <div class="post-meta"><span class="muted">Reviewed by Priya Mehta, MBA &middot; Healthcare Practice Operations Consultant &middot; Part of our <a href="practice-management-operations.html">practice management operations guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dashboard gauge with a needle pointing into a highlighted zone, representing practice management operations">
-  <!-- base line -->
-  <line x1="100" y1="336" x2="380" y2="336" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- main gauge arc -->
-  <path d="M115,320 A125,125 0 0 1 365,320" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- accent highlighted zone on the gauge -->
-  <path d="M262,197 A125,125 0 0 1 336,240" fill="none" stroke="var(--cat-practice-mgmt)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- tick marks -->
-  <line x1="100" y1="320" x2="115" y2="320" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="141" y1="221" x2="152" y2="232" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="240" y1="180" x2="240" y2="195" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="339" y1="221" x2="328" y2="232" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="380" y1="320" x2="365" y2="320" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- needle -->
-  <line x1="240" y1="320" x2="295" y2="225" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round"/>
-  <circle cx="295" cy="225" r="4" fill="var(--cat-practice-mgmt)"/>
-
-  <!-- pivot -->
-  <circle cx="240" cy="320" r="9" fill="none" stroke="var(--color-text)" stroke-width="2.5"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/practice-management-operations-wide.svg" alt="Practice operations: practice guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-a-bank-balance-is-the-wrong-thing-to-watch">Why a bank balance is the wrong thing to watch</a></li>
+      <li><a href="#the-four-kpis-that-actually-matter">The four KPIs that actually matter</a></li>
+      <li><a href="#collections-rate-net-not-gross">Collections rate: net, not gross</a></li>
+      <li><a href="#ar-aging-where-money-actually-dies">A/R aging: where money actually dies</a></li>
+      <li><a href="#denial-trend-analysis-rate-tells-you-theres-a-problem-cause">Denial trend analysis: rate tells you there's a problem, cause tells you what to fix</a></li>
+      <li><a href="#provider-productivity-volume-against-a-real-baseline">Provider productivity: volume against a real baseline</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -263,10 +256,10 @@
     </ul>
   </section>
 
-  <h2>Why a bank balance is the wrong thing to watch</h2>
+  <h2 id="why-a-bank-balance-is-the-wrong-thing-to-watch">Why a bank balance is the wrong thing to watch</h2>
   <p>A bank balance is the sum of everything that's already been collected, minus everything that's already gone out, a lagging snapshot of decisions and claims that happened weeks or months earlier. It tells you nothing about whether this month's claims are clean, whether this quarter's denial rate is climbing, or whether a provider's documentation has started slipping in a way that will show up as lost revenue two months from now. A practice that watches only its bank balance finds out about a problem only once the problem has already been compounding for a while, by which point the fix takes much longer and costs much more than catching it early would have.</p>
 
-  <h2>The four KPIs that actually matter</h2>
+  <h2 id="the-four-kpis-that-actually-matter">The four KPIs that actually matter</h2>
   <p>Each of these comes from the billing system and the payer remittances that feed it, not from the bank feed. Together they show the practice's real operating health, not just its cash position on a given day.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -281,10 +274,10 @@
     </table>
   </div>
 
-  <h2>Collections rate: net, not gross</h2>
+  <h2 id="collections-rate-net-not-gross">Collections rate: net, not gross</h2>
   <p>Gross charges measure what the practice billed at its full fee schedule, a number that has almost nothing to do with what's actually collectible once contractual adjustments are applied. Net collections rate measures collected revenue against the contractually allowed amount, which is the only version of the metric that reflects reality. A practice tracking gross collections rate alone can look like it's underperforming when it's actually collecting close to everything it's owed, or the reverse, looking fine on a gross basis while actually leaving real, collectible money on the table.</p>
 
-  <h2>A/R aging: where money actually dies</h2>
+  <h2 id="ar-aging-where-money-actually-dies">A/R aging: where money actually dies</h2>
   <p>Not all outstanding A/R is equal, and lumping it into one total obscures the part that matters most. Breaking it into buckets by age shows where the real risk sits:</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>0-30 days.</b> Normal, expected A/R for claims still moving through the payer's standard processing timeline.</span></li>
@@ -294,10 +287,10 @@
   </ul>
   <p>A practice that only looks at total A/R has no way to see this risk building. A growing 90+ bucket, even with a stable total A/R number, is a much stronger warning sign than the total figure alone will ever show.</p>
 
-  <h2>Denial trend analysis: rate tells you there's a problem, cause tells you what to fix</h2>
+  <h2 id="denial-trend-analysis-rate-tells-you-theres-a-problem-cause">Denial trend analysis: rate tells you there's a problem, cause tells you what to fix</h2>
   <p>Denial rate is a single, blunt number, the percentage of claims that came back denied. It's useful as a first alarm, but it doesn't point to a fix. Denial trend analysis by cause breaks that rate down into the actual reasons claims are denying, eligibility mismatches, missing prior authorization, coding errors, timely filing misses, medical necessity disputes, and tracks how each cause trends over time. A rising denial rate driven mostly by eligibility issues points straight at the front-desk verification workflow; the same rate driven by missing prior auth points at a completely different process. Without the cause breakdown, both look identical on the summary number, and neither gets fixed.</p>
 
-  <h2>Provider productivity: volume against a real baseline</h2>
+  <h2 id="provider-productivity-volume-against-a-real-baseline">Provider productivity: volume against a real baseline</h2>
   <p>Provider productivity should be tracked against the provider's own historical baseline and, where the specialty mix allows a fair comparison, against peers, not as a single practice-wide average that hides individual variation. A sustained drop in one provider's encounter volume or coded work, without a corresponding drop in their scheduled patients, is worth investigating before it shows up as a revenue shortfall two or three months later. Productivity metrics are also the piece most likely to get distorted once a practice adds providers across different specialties, which is a large part of why they need to be tracked per provider rather than blended into one number.</p>
 
   <div class="protip">
@@ -305,7 +298,7 @@
     <div><div class="protip-label">Pro tip</div><p>Review all four KPIs monthly, on a fixed schedule, rather than only when the bank balance looks off. By the time a bank balance moves enough to trigger concern, the underlying problem in denials or aging has usually been building for six to eight weeks already.</p></div>
   </div>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Track net collections rate against the contracted allowable, not gross charges.</li>
@@ -326,7 +319,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Talk to a specialist</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Why isn't a healthy bank balance enough to tell if a practice is doing well?</summary><p>Because a bank balance reflects cash that cleared weeks or months ago, it's a lagging snapshot, not a current signal. A practice can have a healthy balance today while its denial rate is climbing and its A/R over 90 days is quietly growing, and the balance won't show either problem until the backlog eventually stops converting to cash. By then the fix takes much longer than if it had been caught early.</p></details>
     <details class="faq-item"><summary>What's the difference between denial rate and denial trend analysis by cause?</summary><p>Denial rate is a single number, what percentage of claims denied. Denial trend analysis by cause breaks that number down by why claims are denying: eligibility issues, missing prior authorization, coding errors, timely filing, and so on. The rate alone tells you there's a problem; the cause breakdown tells you which specific process to fix, which is the only part of the metric that's actually actionable.</p></details>
@@ -338,7 +331,7 @@
     <p><b>Confirm before you rely on this.</b> Regulatory requirements, software options and best practices change. The process information on this page reflects standard industry practice as of August 2026 and is provided for general education, verify current requirements directly with HHS OCR, your accountant, or the relevant vendor before relying on it.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="practice-management-operations.html">Our complete practice management operations guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="practice-management-operations-staffing-hiring.html">Staffing and hiring <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -349,6 +342,7 @@
     <li><a href="service-practice-management.html">Practice management service <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="practice-licensing.html">Practice licensing <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -397,6 +391,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

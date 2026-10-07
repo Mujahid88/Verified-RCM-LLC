@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Claims scrubbing, Billing process guide">
+  <defs>
+    <linearGradient id="bgclaimsscrubbing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient>
+    <radialGradient id="glclaimsscrubbing" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#5eead4" stop-opacity="0.5"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+    <pattern id="grclaimsscrubbing" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cpclaimsscrubbing"><rect x="860" y="55" width="250" height="250" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bgclaimsscrubbing)"/>
+  <rect width="1200" height="360" fill="url(#grclaimsscrubbing)"/>
+  <rect width="1200" height="360" fill="url(#glclaimsscrubbing)"/>
+  <circle cx="1040" cy="60" r="170" fill="#5eead4" fill-opacity="0.14"/>
+  <circle cx="1110" cy="280" r="110" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="860" y="55" width="250" height="250" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cpclaimsscrubbing)"><g transform="translate(880 75) scale(0.4375)">
+  
+  <circle cx="140" cy="106" r="5" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40"/>
+  <circle cx="172" cy="118" r="4" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40"/>
+  <circle cx="204" cy="100" r="5" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40"/>
+  <circle cx="240" cy="112" r="4" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40"/>
+  <circle cx="276" cy="100" r="5" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40"/>
+  <circle cx="308" cy="118" r="4" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40"/>
+  <circle cx="340" cy="106" r="5" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40"/>
+
+  
+  <path d="M150,132 L240,330" fill="none" stroke="#ffffff" stroke-width="5.10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M330,132 L240,330" fill="none" stroke="#ffffff" stroke-width="5.10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  
+  <path d="M178,132 L240,330" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <path d="M206,136 L240,330" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <path d="M274,136 L240,330" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <path d="M302,132 L240,330" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+
+  
+  <path d="M177,190 L303,190" fill="none" stroke="#ffffff" stroke-width="3.40" stroke-linecap="round"/>
+  <path d="M195,230 L285,230" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <path d="M213,270 L267,270" fill="none" stroke="#ffffff" stroke-width="3.40" stroke-linecap="round"/>
+
+  
+  <circle cx="240" cy="330" r="7" fill="#5eead4"/>
+
+  
+  <path d="M240,338 L240,372" fill="none" stroke="#5eead4" stroke-width="4.25" stroke-linecap="round"/>
+  <path d="M228,360 L240,374 L252,360" fill="none" stroke="#5eead4" stroke-width="4.25" stroke-linecap="round" stroke-linejoin="round"/>
+</g></g>
+  <rect x="90" y="46" width="72" height="8" rx="4" fill="#5eead4"/>
+  <text x="90" y="78" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">REVENUE CYCLE</text>
+  <text x="90" y="138" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="70" font-weight="800" fill="#ffffff" letter-spacing="-2">Claims</text>
+  <text x="90" y="214" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="70" font-weight="800" fill="#ffffff" letter-spacing="-2">scrubbing</text>
+  <text x="90" y="256" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#ffffff" fill-opacity="0.85">Billing process guide</text>
+  <text x="90" y="336" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>

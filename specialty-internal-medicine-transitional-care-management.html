@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Transitional Care Management Billing: CPT 99495 and 99496 | Verified RCM">
 <meta name="twitter:description" content="TCM billing for CPT 99495 and 99496: interactive contact and face-to-face timing, MDM complexity across the 30-day period, and why TCM and CCM can't overlap.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,17 +225,25 @@
       <p class="lede">TCM pays well for a 30-day episode of post-discharge care coordination, and it denies for reasons that are almost always operational rather than clinical: a claim submitted before the required visit happened, a claim submitted before the service period actually closed, or a 99496 billed on documentation that only supports moderate complexity. This guide covers the three required elements, the exact timing rules, and the two denial patterns that account for most of TCM's lost revenue.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-internal-medicine.html">internal medicine billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of layered arcs and a heartbeat pulse line, symbolizing internal medicine and ongoing whole-body primary care">
-  <path d="M100,360 A190,190 0 0,1 380,360" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M130,360 A160,160 0 0,1 350,360" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M160,360 A125,125 0 0,1 320,360" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M150,210 L190,210 L205,180 L220,235 L235,190 L250,210 L330,210" fill="none" stroke="var(--cat-primary-care)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="150" cy="210" r="4" fill="var(--cat-primary-care)"/>
-  <circle cx="330" cy="210" r="4" fill="var(--cat-primary-care)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-internal-medicine-wide.svg" alt="Internal medicine: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-three-required-elements">The three required elements</a></li>
+      <li><a href="#99495-versus-99496-which-window-which-complexity">99495 versus 99496: which window, which complexity</a></li>
+      <li><a href="#when-the-claim-can-actually-go-out">When the claim can actually go out</a></li>
+      <li><a href="#why-tcm-and-ccm-cant-overlap">Why TCM and CCM can't overlap</a></li>
+      <li><a href="#denial-patterns-and-fixes">Denial patterns and fixes</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -247,7 +254,7 @@
     </ul>
   </section>
 
-  <h2>The three required elements</h2>
+  <h2 id="the-three-required-elements">The three required elements</h2>
   <p>TCM (<code>99495</code>, <code>99496</code>) covers the 30-day period immediately following a discharge from an inpatient hospital stay, observation stay, skilled nursing facility, or partial hospitalization. It's built around three elements, and a claim needs all three actually met, not referenced in passing, to survive review.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -262,7 +269,7 @@
   </div>
   <p>The interactive contact doesn't have to be performed by the billing practitioner personally, clinical staff can make it under the practitioner's direction. The face-to-face visit is different: it has to be performed by the billing physician or qualified health professional, not delegated to staff, and it can't also be billed as a stand-alone E/M on top of the TCM code.</p>
 
-  <h2>99495 versus 99496: which window, which complexity</h2>
+  <h2 id="99495-versus-99496-which-window-which-complexity">99495 versus 99496: which window, which complexity</h2>
   <p>Both conditions have to be true at once. A visit inside the 7-day window with only moderate-complexity documentation still bills 99495. High-complexity decision making with a visit on day 10 also still bills 99495, because it missed the 7-day cutoff. Neither element alone decides the code.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -279,7 +286,7 @@
   <p>⚠️ 2026 national non-facility average payment figures for 99495 and 99496 are widely reported by billing-industry sources, but this build could not open the CMS Physician Fee Schedule Look-Up Tool directly to confirm a specific dollar amount against the primary source, and any rate is locality-specific regardless. Look up your own locality and year in the <b>CMS PFS Look-Up Tool</b> rather than relying on a national average published anywhere, including here.</p>
   <p>The service period covers real non-face-to-face work that has to actually happen, not just be available: medication reconciliation and management no later than the face-to-face visit, review of the discharge summary and any pending diagnostic tests or treatments, patient/family/caregiver education, and coordination with community and social services the patient needs during the transition. This is what supports the MDM-complexity element on audit, a note that only covers the visit itself, with nothing documenting the reconciliation or coordination work, reads thin even when the visit was thorough.</p>
 
-  <h2>When the claim can actually go out</h2>
+  <h2 id="when-the-claim-can-actually-go-out">When the claim can actually go out</h2>
   <p>This is the piece that generates the most avoidable denials. TCM's date of service is the 30th day after discharge, not the day of the face-to-face visit, and Medicare's own TCM billing guidance is to submit the claim once the 30-day service period has concluded, not release it the moment the visit is documented. A practice that bills 99496 on day 8, right after the day-7 visit, is submitting nine days before the period the code actually represents has finished; even though the two required elements (contact and visit) were both met on time, the claim represents 30 days of care management, and Medicare's processing systems are built around that period actually having elapsed.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
@@ -297,10 +304,10 @@
   </div>
   <p>Two scenarios end a TCM episode early. If the patient is readmitted within the 30-day period before the required face-to-face visit occurs, the original TCM service generally can't be completed as opened, and a new episode starts from the new discharge date instead. If the patient dies during the period, TCM billing depends on whether the required elements were completed before death; work performed toward an episode that never completed the full requirement set isn't separately billable as TCM. Neither is a documentation failure, both simply mean the claim doesn't go out for that episode, and billing it anyway creates a denial that then needs a correction rather than an appeal.</p>
 
-  <h2>Why TCM and CCM can't overlap</h2>
+  <h2 id="why-tcm-and-ccm-cant-overlap">Why TCM and CCM can't overlap</h2>
   <p>CMS treats TCM and chronic care management as mutually exclusive for the same patient in the same calendar month, whether the same practitioner bills both or two different ones do. This collides constantly in a real internal medicine panel, because the patient most likely to be discharged and need TCM is exactly the multi-chronic-condition patient already enrolled in CCM. If a discharge falls mid-month for a patient with active CCM time already logged, that month's CCM claim doesn't go out for that patient, either close CCM out for the prior month before the discharge, or hold the current month's time and resume CCM the month after the TCM episode closes. Building this as an automated scheduling hold, rather than relying on billing staff to catch the overlap manually, is the fix that actually prevents the denial rather than catching it after the fact. The full concurrent-billing matrix across CCM, TCM, AWV, RPM, BHI, and PCM is in <a href="specialty-internal-medicine.html">the internal medicine coding guide</a>.</p>
 
-  <h2>Denial patterns and fixes</h2>
+  <h2 id="denial-patterns-and-fixes">Denial patterns and fixes</h2>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>TCM's recurring denial and downcoding patterns, why they happen, and the fix.</caption>
@@ -326,7 +333,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Can we submit a TCM claim right after the face-to-face visit?</summary><p>No. The face-to-face visit has to happen inside its required window, but the claim's date of service is the 30th day after discharge, and Medicare guidance is to hold submission until the full 30-day service period has actually concluded, not release it the moment the visit is documented. Submitting on day 8 because the 99496 visit happened on day 7 is a common premature-billing denial, the non-face-to-face care management built into the code (medication reconciliation, discharge summary review, care coordination) is expected to continue through day 30, and the claim represents the whole period, not just the visit.</p></details>
     <details class="faq-item"><summary>What's the real documentation difference between 99495 and 99496?</summary><p>Two things have to line up, not one. The face-to-face visit has to fall inside the code's window, 14 days for 99495, 7 days for 99496, and the medical decision making has to independently support the complexity level: moderate for 99495, high for 99496. A visit on day 7 with only moderate-complexity documentation still bills 99495; a visit on day 10 with genuinely high-complexity decision making still bills 99495, because it missed the 7-day window. Both conditions have to be true for 99496, and a note that just restates the discharge diagnosis without documenting the ongoing complexity of the transition is the most common reason a 99496 gets downcoded on review.</p></details>
@@ -338,7 +345,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-internal-medicine.html">Internal medicine billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-internal-medicine-chronic-care-management.html">Chronic care management billing for internal medicine (99490, 99439, 99487) <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -346,6 +353,7 @@
     <li><a href="denials-management.html">Denials management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialties.html">All 30 specialties <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -394,6 +402,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

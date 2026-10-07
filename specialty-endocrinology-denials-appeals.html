@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Endocrinology Claim Denials and Appeals: CGM, DSMT, and More | Verified RCM">
 <meta name="twitter:description" content="Endocrinology denials by CARC code: CGM medical necessity, missing KX modifiers, thyroid FNA imaging-guidance bundling, DSMT referrals, and CCM/DSMT frequency limits, with the appeal that works.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,23 +225,26 @@
       <p class="lede">Endocrinology's denial volume doesn't cluster around one bad code, it clusters around five recurring problems that have nothing to do with each other: a CGM claim missing the medical-necessity trail, a DME claim missing one modifier, a thyroid FNA claim billing a service that's already paid for inside another code, a DSMT claim missing the referral its own coverage rule requires, and a frequency cap nobody was tracking. This guide pairs each one with the CARC that actually fires, the appeal argument for when the claim was right all along, and the fix that stops it recurring, plus a full appeal-letter skeleton for the CGM denial that costs practices the most avoidable revenue.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-endocrinology.html">endocrinology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an undulating glucose-level waveform with an accented peak beside a symmetric butterfly-shaped loop suggesting the thyroid gland">
-  <line x1="70" y1="305" x2="410" y2="305" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-
-  <path d="M 70,275 C 110,260 140,260 170,275 C 200,290 230,290 260,275 C 290,260 320,260 350,275 C 380,290 400,290 410,285" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
-
-  <path d="M 70,240 C 110,220 130,220 150,240 C 165,255 175,260 185,235 C 195,205 205,160 220,150 C 235,140 245,160 255,195 C 262,220 268,245 280,255 C 300,270 320,265 340,245 C 360,225 380,225 410,240" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M 185,235 C 195,205 205,160 220,150 C 235,140 245,160 255,195" fill="none" stroke="var(--cat-medical)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="220" cy="150" r="5" fill="var(--cat-medical)"/>
-
-  <path d="M 240,350 C 205,325 180,335 178,360 C 176,385 205,400 240,372" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 240,350 C 275,325 300,335 302,360 C 304,385 275,400 240,372" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="361" r="4" fill="var(--cat-medical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-endocrinology-wide.svg" alt="Endocrinology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-five-denials-that-eat-an-endocrinology-practices-revenue">The five denials that eat an endocrinology practice's revenue</a></li>
+      <li><a href="#cgm-medical-necessity-what-the-chart-has-to-show">CGM medical necessity: what the chart has to show</a></li>
+      <li><a href="#the-kx-modifier-an-attestation-not-a-checkbox">The KX modifier: an attestation, not a checkbox</a></li>
+      <li><a href="#thyroid-fna-and-the-imaging-guidance-bundle-that-isnt-appeal">Thyroid FNA and the imaging-guidance bundle that isn't appealable</a></li>
+      <li><a href="#dsmt-the-referral-requirement-and-the-frequency-trap">DSMT: the referral requirement and the frequency trap</a></li>
+      <li><a href="#appeal-letter-skeleton-cgm-denied-co-50-when-the-documentati">Appeal-letter skeleton: CGM denied CO-50 when the documentation existed</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -253,7 +255,7 @@
     </ul>
   </section>
 
-  <h2>The five denials that eat an endocrinology practice's revenue</h2>
+  <h2 id="the-five-denials-that-eat-an-endocrinology-practices-revenue">The five denials that eat an endocrinology practice's revenue</h2>
   <p>Endocrinology bills across an unusually wide mix of benefit types in a single practice, office E/M, DME supply claims, time-based care management, in-office procedures, and structured education services, and each one has its own denial logic. The table below pairs the CARC that actually fires with the appeal argument for when the claim was right, and the prevention step that keeps it from firing again.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -269,21 +271,21 @@
     </table>
   </div>
 
-  <h2>CGM medical necessity: what the chart has to show</h2>
+  <h2 id="cgm-medical-necessity-what-the-chart-has-to-show">CGM medical necessity: what the chart has to show</h2>
   <p>Medicare's CGM coverage rule is simpler than it used to be, which is exactly why claims still get denied on it, staff are often still documenting to an older, stricter version of the policy while missing the piece that's actually required now. CMS dropped the requirement for confirmatory fingerstick testing and removed any minimum-frequency threshold for insulin administration: any insulin use qualifies a patient, not just multiple daily injections. For a patient not on insulin, coverage instead turns on a documented history of problematic hypoglycemia, specifically, two or more level 2 events (glucose under 54 mg/dL) that persisted despite documented changes to the treatment plan, or one level 3 event (altered mental or physical state requiring third-party assistance).</p>
   <p>What still has to be on the chart, regardless of which qualifying path applies, is a face-to-face or Medicare-approved telehealth visit for diabetes management within the six months before the CGM is prescribed, and a follow-up visit at least every six months confirming the patient continues to meet criteria and is using the device consistent with the treatment plan. A CO-50 denial on a CGM claim almost never means the patient wasn't a legitimate candidate, it usually means one of those two things wasn't captured in a form the claim's supporting documentation could show.</p>
   <p>The professional CGM codes carry their own distinctions worth getting right at the coding stage, not just the DME supply side: 95249 covers patient-provided equipment, sensor placement, hookup, calibration, training, and printout; 95250 covers the same scope of service using office-provided equipment and includes sensor removal when performed; and 95251 covers analysis, interpretation, and report, billable once per calendar month and requiring no face-to-face encounter of its own. Mixing these up, billing 95250 when the patient supplied their own sensor, for instance, creates a documentation mismatch that a payer's system flags even when the underlying CGM use was entirely appropriate.</p>
 
-  <h2>The KX modifier: an attestation, not a checkbox</h2>
+  <h2 id="the-kx-modifier-an-attestation-not-a-checkbox">The KX modifier: an attestation, not a checkbox</h2>
   <p>A CO-4 denial on a CGM or insulin-pump supply claim is almost always a missing or invalid KX modifier, and the fix that actually prevents recurrence isn't "always append KX", it's understanding what appending it means. The KX modifier certifies that the supplier has already confirmed the item meets every coverage criterion in the applicable LCD: the qualifying diagnosis, the required face-to-face evaluation, the written order, and any other policy-specific prerequisite, with documentation available on request. Appending it as a default before that confirmation has actually happened converts a simple missing-modifier denial into a claim the practice can't defend if audited.</p>
   <p>The current HCPCS supply codes worth knowing are A4238 (supply allowance for an adjunctive CGM system, requiring confirmatory fingerstick testing before treatment decisions) and A4239 (supply allowance for a non-adjunctive system, approved for treatment decisions without fingerstick confirmation), both billed as one unit of service per 30-day supply. These replaced K0553 and K0554, which CMS retired effective December 31, 2022. A charge master or scrubber rule still pointing at the retired codes will generate denials on invalid or terminated codes before the KX modifier question is ever reached, so confirm the current code set is what's actually loaded before troubleshooting anything downstream.</p>
   <p>The correction for a CO-4 on this claim type is straightforward: verify the LCD criteria were actually confirmed, append KX, and rebill. It's rarely worth a formal appeal, it's a rebilling task, and treating it as an appeal just adds a week to the turnaround.</p>
 
-  <h2>Thyroid FNA and the imaging-guidance bundle that isn't appealable</h2>
+  <h2 id="thyroid-fna-and-the-imaging-guidance-bundle-that-isnt-appeal">Thyroid FNA and the imaging-guidance bundle that isn't appealable</h2>
   <p>CPT 10005 (fine needle aspiration biopsy, first lesion, including ultrasound guidance) and its add-on +10006 (each additional lesion) already have real-time ultrasound guidance built into their own valuation and descriptor, that's the entire point of the 2019 code revision that replaced the older 10021-plus-76942 combination. CPT's own parenthetical guidance is explicit that 76942 (ultrasound guidance for needle placement) is not separately reportable with 10005. A claim that bills both will deny CO-97, and unlike a standard NCCI procedure-to-procedure edit with an appealable indicator, this pairing functions as a hard exclusion at the code-descriptor level.</p>
   <p>That changes the right response entirely. Where a CO-97 on another pairing might be worth appealing with documentation that the second service was genuinely distinct, this one almost never is, the guidance wasn't a separate service in the first place; it's already paid for inside 10005's value. The correct move is to remove 76942 from the claim and resubmit, not to draft an appeal arguing medical necessity for a service that was never separately billable to begin with. The one scenario worth a closer look before assuming that: a genuinely separate, medically necessary diagnostic ultrasound performed at a different time from the FNA itself, for a different clinical question, which is a distinct service from procedural guidance and should be coded and documented as such from the start rather than reconstructed after a denial.</p>
 
-  <h2>DSMT: the referral requirement and the frequency trap</h2>
+  <h2 id="dsmt-the-referral-requirement-and-the-frequency-trap">DSMT: the referral requirement and the frequency trap</h2>
   <p>DSMT denies for two structural reasons that have nothing to do with whether the education itself was appropriate. The first is the referral: Medicare requires a written order from the treating physician or qualified non-physician practitioner managing the patient's diabetes care before DSMT begins, and that referral is what CARC B15 is checking for, the CARC's own language, "this service/procedure requires that a qualifying service/procedure be received and covered," describes exactly this dependency. A related but distinct code, CO-B7 ("this provider was not certified/eligible to be paid for this procedure/service on this date of service"), shows up instead when the issue is the DSMT entity's own accreditation status rather than the individual patient's referral, worth distinguishing before assuming a B-series denial is a referral problem when it's actually a program-certification one. ⚠️ Which of these two codes a given payer returns for which underlying problem is payer-specific in practice; verify against the remittance advice and the payer's own denial-code crosswalk rather than assuming B15 always means "referral" and B7 always means "accreditation."</p>
   <p>The second is frequency. Medicare covers up to 10 hours of initial DSMT, one hour individual, nine hours group, all of which must occur within the 12 consecutive months starting from the first DSMT date of service. After that, 2 hours of follow-up training are available in each subsequent calendar year, but every year's follow-up hours require a new referral; last year's order doesn't carry forward. Billing past either cap doesn't produce a medical-necessity dispute, it produces a CARC 119 benefit-maximum denial, and the fix is confirming hours already used and the current referral, then resubmitting in the period the patient is actually eligible, not writing an appeal letter. G0108 (individual, per 30 minutes) and G0109 (group session of two or more, per 30 minutes) can't both be billed for the same date of service for the same patient, and hours from both codes draw down the same combined limit, a common source of an unexpected 119 denial when individual and group sessions aren't tracked against one running total.</p>
 
@@ -292,7 +294,7 @@
     <div><div class="protip-label">Pro tip</div><p>Sort every endocrinology denial into "correction" or "genuine dispute" before anyone drafts anything. CO-4 on a DME claim, CO-97 on a thyroid FNA/76942 pairing, and CARC 119 frequency denials are corrections, rebill with the fix and move on. A CO-50 CGM denial where the qualifying documentation exists but wasn't submitted, or a CO-B15 where the referral was on file but not attached, are genuine appeals worth the letter. Running a denial through that filter first is what keeps a small endocrinology billing team fast instead of just busy.</p></div>
   </div>
 
-  <h2>Appeal-letter skeleton: CGM denied CO-50 when the documentation existed</h2>
+  <h2 id="appeal-letter-skeleton-cgm-denied-co-50-when-the-documentati">Appeal-letter skeleton: CGM denied CO-50 when the documentation existed</h2>
   <p>This is the highest-value appeal in endocrinology denial management because it's also the most common preventable one: the patient genuinely met Medicare's CGM criteria, the visit note and insulin regimen or hypoglycemia log were sitting in the chart, and none of it went out with the original claim. The redetermination request doesn't need a new clinical argument, it needs the proof attached the first time, framed against the specific coverage policy.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -319,7 +321,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What CARC code fires when a CGM claim is denied for lack of medical necessity, and how do we appeal it?</summary><p>CO-50, not medically necessary. It fires most often when the claim goes out without documentation tying the patient to Medicare's CGM coverage criteria: insulin treatment, or, for a non-insulin patient, a documented history of problematic hypoglycemia (two or more level 2 events despite treatment changes, or one level 3 event requiring third-party assistance). If that documentation genuinely exists in the chart but wasn't attached to the original claim, the appeal is a redetermination request with the visit note, the insulin regimen or hypoglycemia log, and the ordering clinician's attestation attached, not a new argument, just the proof that should have gone out the first time.</p></details>
     <details class="faq-item"><summary>Does Medicare still require fingerstick confirmation before covering a continuous glucose monitor?</summary><p>No. CMS removed the fingerstick confirmatory-testing requirement from CGM coverage criteria, and there's no minimum frequency requirement for insulin administration either, any insulin use qualifies a patient, not just multiple daily injections. What's still required is a face-to-face or Medicare-approved telehealth visit for diabetes management within six months before the CGM is prescribed, and a follow-up visit at least every six months confirming the patient continues to meet criteria and use the device consistent with the treatment plan.</p></details>
@@ -332,13 +334,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CARC/RARC codes, LCD and policy article numbers, NCCI edits, and coverage criteria change, including annual code-set updates and quarterly edit refreshes. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements, including the applicable DME MAC jurisdiction's current policy article number, against your specific payer mix before submitting claims or filing an appeal.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-endocrinology.html">Endocrinology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-endocrinology-cgm-insulin-pump-billing.html">CGM and insulin pump billing: codes, modifiers, and documentation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="prior-auth.html">Prior authorization services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -387,6 +390,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

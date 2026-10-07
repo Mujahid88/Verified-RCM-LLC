@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="NCCI Edits and MUE Limits for Nephrology Claims | Verified RCM">
 <meta name="twitter:description" content="Nephrology NCCI bundling edits and MUE unit caps by procedure family: dialysis MCP-vs-session exclusivity, renal biopsy imaging-guidance edits, vascular access bundling, and the three MUE tables that actually apply.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,43 +225,23 @@
       <p class="lede">Nephrology's bundling denials cluster around pairs that don't show up in general billing content: a renal biopsy against its own imaging guidance, a dialysis drug that isn't bundled by NCCI at all but by an entirely different payment mechanism, and a monthly capitation code that carries a different unit cap depending on which of three separate CMS tables the claim runs through. This guide is the procedure-family reference our <a href="specialty-nephrology.html">nephrology billing and coding guide</a> points to, the specific pairs, indicators, and the one distinction, three MUE tables, not one, that most nephrology billing content skips entirely.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-nephrology.html">nephrology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of parallel flow lines passing through a filtering mesh, symbolizing nephrology and renal filtration">
-  <path d="M 70 240 A 170 170 0 0 1 410 240" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-  <path d="M 410 240 A 170 170 0 0 1 70 240" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
-
-  <line x1="78" y1="150" x2="188" y2="150" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="292" y1="150" x2="402" y2="150" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-
-  <line x1="78" y1="190" x2="188" y2="190" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="292" y1="190" x2="402" y2="190" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-
-  <line x1="78" y1="240" x2="188" y2="240" stroke="var(--cat-medical)" stroke-width="3" stroke-linecap="round"/>
-  <line x1="292" y1="240" x2="402" y2="240" stroke="var(--cat-medical)" stroke-width="3" stroke-linecap="round"/>
-
-  <line x1="78" y1="290" x2="188" y2="290" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="292" y1="290" x2="402" y2="290" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-
-  <line x1="78" y1="330" x2="188" y2="330" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="292" y1="330" x2="402" y2="330" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-
-  <rect x="188" y="118" width="104" height="244" rx="14" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linejoin="round"/>
-
-  <line x1="212" y1="130" x2="212" y2="350" stroke="var(--muted)" stroke-width="1.5"/>
-  <line x1="240" y1="130" x2="240" y2="350" stroke="var(--muted)" stroke-width="1.5"/>
-  <line x1="268" y1="130" x2="268" y2="350" stroke="var(--muted)" stroke-width="1.5"/>
-
-  <line x1="196" y1="150" x2="284" y2="150" stroke="var(--muted)" stroke-width="1.5"/>
-  <line x1="196" y1="190" x2="284" y2="190" stroke="var(--muted)" stroke-width="1.5"/>
-  <line x1="196" y1="240" x2="284" y2="240" stroke="var(--muted)" stroke-width="1.5"/>
-  <line x1="196" y1="290" x2="284" y2="290" stroke="var(--muted)" stroke-width="1.5"/>
-  <line x1="196" y1="330" x2="284" y2="330" stroke="var(--muted)" stroke-width="1.5"/>
-
-  <circle cx="240" cy="190" r="4" fill="var(--cat-medical)"/>
-  <circle cx="268" cy="290" r="4" fill="var(--cat-medical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-nephrology-wide.svg" alt="Nephrology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#three-mue-tables-not-one">Three MUE tables, not one</a></li>
+      <li><a href="#procedure-family-bundling-reference">Procedure-family bundling reference</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -273,12 +252,12 @@
     </ul>
   </section>
 
-  <h2>Three MUE tables, not one</h2>
+  <h2 id="three-mue-tables-not-one">Three MUE tables, not one</h2>
   <p>CMS publishes Medically Unlikely Edit values in three separate files, revised on the same quarterly cadence as the NCCI PTP edit file: Practitioner Services, Facility Outpatient (Hospital) Services, and DME Supplier Services. Each table sets its own unit cap per code per date of service, and the same CPT code doesn't necessarily carry the same number across all three, a code can be capped tighter on the facility side than the practitioner side, or vice versa, because the two tables model plausibility against different billing contexts.</p>
   <p>This isn't a technicality in nephrology; it's the normal claim pattern. An ESRD facility bills its per-treatment or per-month charges on an institutional claim that runs against the Facility Outpatient table. A nephrologist billing the professional component of the same patient's monthly management, or a same-day E/M, runs against the Practitioner table. A vascular access procedure performed in a hospital outpatient department generates two claims, the facility's and the physician's, that can hit different MUE ceilings for related codes on the same date of service. Pulling a cap from one table and assuming it governs the other claim type is a common, avoidable confusion point when a billing office and a facility compare notes on why a claim capped differently than expected.</p>
   <p>Effective dates follow the standard NCCI/MUE release rhythm, quarterly, with each quarter's file typically posted roughly a month ahead of its effective date (the July 1 file, for example, posts around June 1). ⚠️ This build corroborated the three-table structure and the general quarterly release cadence against CMS's own MUE program page and multiple independent secondary coding sources, but did not pull the current quarter's specific unit-cap values for individual nephrology codes directly from CMS's MUE files this session, since CMS.gov's own downloadable files returned an access error to automated fetch. Look up the current cap for any specific code, in the specific table matching your claim type, at the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-medically-unlikely-edits-mues" rel="noopener">CMS Medically Unlikely Edits page</a> before building a denial-avoidance rule around a specific number.</p>
 
-  <h2>Procedure-family bundling reference</h2>
+  <h2 id="procedure-family-bundling-reference">Procedure-family bundling reference</h2>
   <p>The pairs below are the ones that actually generate nephrology bundling denials, organized by the mechanism behind each, because "it's bundled" covers at least three genuinely different systems in this specialty, and the override path (if one exists) depends entirely on which one applies.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -301,7 +280,7 @@
     <div><div class="protip-label">Pro tip</div><p>Before writing any nephrology bundling appeal, name the mechanism first: NCCI PTP edit, MUE cap, ESRD Consolidated Billing, or global-surgery/modifier-25. Each has a different override path, and a denial-management team that defaults to "append 59 and resubmit" for all four will win the NCCI cases occasionally, lose the consolidated-billing cases every time, and burn staff hours on appeals that were never structurally possible.</p></div>
   </div>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Check the MUE table matching the actual claim type, Practitioner, Facility Outpatient, or DME, not whichever table you last looked at.</li>
@@ -325,7 +304,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Why does the MUE limit for the same code look different depending on who's billing it?</summary><p>Because CMS publishes MUE values in three separate tables, Practitioner Services, Facility Outpatient (Hospital) Services, and DME Supplier Services, and the same CPT code can carry a different unit cap in each one. A dialysis facility's institutional claim for a session-based hemodialysis code runs against the Facility Outpatient table, while a nephrologist's professional-service claim for the same code runs against the Practitioner table. Pulling a cap from the wrong table and applying it to the other claim type is a common, avoidable source of confusion when a facility and a physician group compare notes on the same denial.</p></details>
     <details class="faq-item"><summary>Can we bill an ESA or IV iron separately for an in-center maintenance dialysis patient?</summary><p>Not under original Medicare, and this isn't an NCCI bundling question at all, it's ESRD Consolidated Billing. Erythropoiesis-stimulating agents, IV iron, vitamin D analogs, and most other dialysis-related drugs were folded into the ESRD Prospective Payment System's per-treatment bundled payment for facility claims starting in 2011, and they aren't separately payable to Part B outside that bundle for an established in-center maintenance patient. Appending a modifier to try to unbundle an ESA claim doesn't work here, because the drug was never a Column 2 code paired against a Column 1 procedure, it's excluded from separate billing by the payment system itself.</p></details>
@@ -337,7 +316,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-nephrology.html">Nephrology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-nephrology-modifiers.html">Nephrology billing modifiers: 25, 59, 26/TC, and RT/LT <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -345,6 +324,7 @@
     <li><a href="specialty-nephrology-esrd-monthly-capitation-payment.html">ESRD monthly capitation payment billing: 90951-90970 explained <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-nephrology-vascular-access-billing.html">Dialysis vascular access billing: fistula, graft, and angioplasty CPT <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -393,6 +373,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

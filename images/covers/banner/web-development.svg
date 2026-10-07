@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Web development, Growth guide">
+  <defs>
+    <linearGradient id="bgwebdevelopment" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#164e63"/><stop offset="1" stop-color="#0e7490"/></linearGradient>
+    <radialGradient id="glwebdevelopment" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#fcd34d" stop-opacity="0.5"/><stop offset="1" stop-color="#fcd34d" stop-opacity="0"/></radialGradient>
+    <pattern id="grwebdevelopment" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cpwebdevelopment"><rect x="800" y="145" width="340" height="340" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgwebdevelopment)"/>
+  <rect width="1200" height="630" fill="url(#grwebdevelopment)"/>
+  <rect width="1200" height="630" fill="url(#glwebdevelopment)"/>
+  <circle cx="1040" cy="130" r="220" fill="#fcd34d" fill-opacity="0.14"/>
+  <circle cx="1110" cy="550" r="150" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="800" y="145" width="340" height="340" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#fcd34d" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cpwebdevelopment)"><g transform="translate(820 165) scale(0.6250)">
+  <rect x="110" y="130" width="260" height="220" rx="14" fill="none" stroke="#ffffff" stroke-width="5.10" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="110" y1="172" x2="370" y2="172" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <circle cx="134" cy="151" r="5" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40"/>
+  <circle cx="154" cy="151" r="5" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40"/>
+  <circle cx="174" cy="151" r="5" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40"/>
+  <line x1="140" y1="198" x2="300" y2="198" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <line x1="140" y1="220" x2="256" y2="220" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <path d="M182,284 L158,310 L182,336" fill="none" stroke="#fcd34d" stroke-width="5.10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M258,284 L282,310 L258,336" fill="none" stroke="#fcd34d" stroke-width="5.10" stroke-linecap="round" stroke-linejoin="round"/>
+</g></g>
+  <rect x="90" y="118" width="72" height="8" rx="4" fill="#fcd34d"/>
+  <text x="90" y="178" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">PRACTICE GROWTH</text>
+  <text x="90" y="292" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="100" font-weight="800" fill="#ffffff" letter-spacing="-2">Web</text>
+  <text x="90" y="400" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="100" font-weight="800" fill="#ffffff" letter-spacing="-2">development</text>
+  <text x="90" y="462" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" fill="#ffffff" fill-opacity="0.85">Growth guide</text>
+  <text x="90" y="560" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>

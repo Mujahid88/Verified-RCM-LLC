@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Dermatology NCCI Bundling Edits: Biopsy, Excision, Destruction | Verified RCM">
 <meta name="twitter:description" content="Dermatology NCCI edits and bundling: modifier indicator values for biopsy/excision, destruction/E&#47;M, and destruction/repair pairs, plus MUE caps on lesion-count codes.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,19 +225,26 @@
       <p class="lede">Dermatology stacks more distinct procedures into one visit than almost any other specialty, which means it also stacks more NCCI bundling exposure, a biopsy, an excision, a destruction, and an E/M can all land on the same claim from the same encounter. The pillar covers the shape of this problem; this guide covers the exact pairs that generate the volume: biopsy plus excision of the same lesion, destruction plus same-day E/M, multiple destruction codes billed the same date, and excision billed alongside adjacent tissue transfer repair, plus the MUE unit caps on the lesion-count codes that trip up practices doing real multi-lesion volume.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; See <a href="specialty-dermatology.html">our dermatology NCCI edits and bundling guide</a> for the complete specialty billing picture</span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of stacked, gently curving bands suggesting cross-sectional layers of skin, representing dermatology">
-  <path d="M30 128 C110 118, 150 138, 240 128 C330 118, 370 138, 450 128" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M30 168 C110 156, 150 180, 240 168 C330 156, 370 180, 450 168" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M30 213 C110 203, 150 223, 240 213 C330 203, 370 223, 450 213" fill="none" stroke="var(--cat-surgical)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M30 258 C110 244, 150 272, 240 258 C330 244, 370 272, 450 258" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M30 302 C110 292, 150 312, 240 302 C330 292, 370 312, 450 302" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M30 346 C110 336, 150 356, 240 346 C330 336, 370 356, 450 346" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="172" cy="206" r="4" fill="var(--cat-surgical)"/>
-  <circle cx="322" cy="221" r="4" fill="var(--cat-surgical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-dermatology-wide.svg" alt="Dermatology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-dermatology-bundles-so-densely">Why dermatology bundles so densely</a></li>
+      <li><a href="#the-modifier-indicator-refresher">The modifier indicator refresher</a></li>
+      <li><a href="#the-four-pairs-that-drive-dermatologys-bundling-volume">The four pairs that drive dermatology's bundling volume</a></li>
+      <li><a href="#destruction-plus-em-why-its-a-25-problem-not-a-59-problem">Destruction plus E/M: why it's a 25 problem, not a 59 problem</a></li>
+      <li><a href="#mue-unit-caps-on-the-lesion-count-codes">MUE unit caps on the lesion-count codes</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -249,17 +255,17 @@
     </ul>
   </section>
 
-  <h2>Why dermatology bundles so densely</h2>
+  <h2 id="why-dermatology-bundles-so-densely">Why dermatology bundles so densely</h2>
   <p>A single dermatology encounter routinely contains more than one billable procedure: a lesion gets biopsied, a different lesion gets destroyed, a third gets excised, and the visit itself may support a separately identifiable E/M. Each of those pairings has its own NCCI logic, and treating all of them as "the same kind of bundling problem" is exactly how staff end up appealing claims that were never going to reverse, or missing an appeal on one that would have. Two values decide the outcome for any pair: the NCCI modifier indicator (0, 1, or 9) for procedure-to-procedure edits, and the MUE Adjudication Indicator for per-code unit caps. Neither is a guess, and neither should be assumed from memory.</p>
 
-  <h2>The modifier indicator refresher</h2>
+  <h2 id="the-modifier-indicator-refresher">The modifier indicator refresher</h2>
   <ul class="check-list">
     <li><span class="warn">0</span><span><b>Never bypassable.</b> No modifier overrides it, regardless of documentation quality. If a pair carries a 0, the second code isn't separately payable, full stop, staff time spent appealing it is wasted.</span></li>
     <li><span class="check">1</span><span><b>Bypassable with documentation.</b> An NCCI-associated modifier (59 or the specific X-modifier) can override the edit, but only where the record shows the second service was genuinely distinct, separate lesion, separate site, separate clinical decision.</span></li>
     <li><span class="check">9</span><span><b>Edit deleted.</b> The pair no longer applies; the indicator itself carries no meaning going forward.</span></li>
   </ul>
 
-  <h2>The four pairs that drive dermatology's bundling volume</h2>
+  <h2 id="the-four-pairs-that-drive-dermatologys-bundling-volume">The four pairs that drive dermatology's bundling volume</h2>
   <div class="data-table-wrap">
     <table class="data-table">
       <caption>Dermatology's highest-volume NCCI bundling pairs and the modifier logic each one runs on.</caption>
@@ -275,11 +281,11 @@
   <p>The third row is the one most guides get backwards: multiple destruction codes on the same date are not automatically a bundling problem, because 17000&ndash;17004 (actinic keratosis), 17110&ndash;17111 (other benign lesions), and 17260&ndash;17286 (malignant) are separate code families keyed to lesion pathology, not overlapping descriptions of the same work. Billing 17000 for an AK on the forehead and 17110 for a seborrheic keratosis on the back in the same visit is two legitimately different services, not a duplicate. Where this goes wrong is when the same family is billed twice for what should have been one line, two units of 17110 instead of one line reflecting the actual lesion count, which is a unit-count (MUE) problem, not a Column 1/Column 2 bundling problem. Keeping that distinction straight is what the MUE section below is for.</p>
   <p>⚠️ Industry coding references consistently describe the biopsy/excision and ATT pairs the way this table presents them, but this build could not open CMS's primary NCCI PTP edit files or the NCCI Policy Manual PDF directly to re-confirm the current-quarter indicator value for each specific code pair (CMS's site returned an access error to every automated fetch attempt made while researching this page). Look up the live value for the exact codes you're billing in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before building any of this into a scrubber rule, since values are pair-specific and revised quarterly.</p>
 
-  <h2>Destruction plus E/M: why it's a 25 problem, not a 59 problem</h2>
+  <h2 id="destruction-plus-em-why-its-a-25-problem-not-a-59-problem">Destruction plus E/M: why it's a 25 problem, not a 59 problem</h2>
   <p>This pair gets miscategorized constantly because it looks like the other bundling problems on this page. It isn't quite the same mechanism. Destruction codes carry a 0- or 10-day global period, and the global surgery package already includes the E/M work directly tied to the decision to perform the minor procedure. NCCI enforces that bundling through E/M-versus-minor-procedure edit pairs, and the override is modifier 25, appended to the E/M line, not modifier 59 appended to the procedure. Reaching for 59 on this pair is a common and telling error, because it signals staff are pattern-matching to the biopsy/excision or destruction/ATT bundling logic instead of the global-period logic that actually governs this specific pair.</p>
   <p>The E/M has to be significant and separately identifiable from the work of deciding to destroy the lesion. Evaluating and documenting a second, unrelated skin concern at the same visit as a destruction procedure supports 25; an E/M billed for a visit that consisted entirely of examining the one lesion that got destroyed does not, regardless of how thorough the note reads.</p>
 
-  <h2>MUE unit caps on the lesion-count codes</h2>
+  <h2 id="mue-unit-caps-on-the-lesion-count-codes">MUE unit caps on the lesion-count codes</h2>
   <p>MUE limits matter most in dermatology precisely because so many of its codes are lesion-count-driven. Reading the code descriptor correctly often tells you the cap before you ever need to look one up.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -302,7 +308,7 @@
     <div><div class="protip-label">Pro tip</div><p>Before treating an MUE denial as a real multi-lesion claim that needs an appeal, check the order queue first. A same-code, same-date line that looks unusually high is far more often two orders for what should have been one charge-capture event, a nurse and a physician both logging the same destruction, or an EHR charge trigger firing twice, than it is a genuinely large lesion count. Confirm the lesion count against the note before spending appeal time on a denial that's actually a workflow duplicate.</p></div>
   </div>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Check the modifier indicator for the specific pair before appending 59, an X-modifier, or 25.</li>
@@ -326,7 +332,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What NCCI modifier indicator applies when a biopsy and an excision are billed for the same lesion the same day?</summary><p>Industry coding references consistently describe this pair as carrying a modifier indicator of 1, meaning an NCCI-associated modifier can override the edit, but only when the documentation shows the biopsy drove a genuinely separate clinical decision, most commonly an intraoperative frozen section that changed the surgical plan before the excision was performed. Routine same-session biopsy plus excision of the same lesion, where the excision was already planned regardless of the biopsy result, doesn't meet that bar and the biopsy denies as bundled into the excision. Confirm the live indicator for the specific code pair you're billing in the CMS NCCI PTP Edits Lookup Tool before building it into a scrubber rule, since values are pair-specific and revised quarterly.</p></details>
     <details class="faq-item"><summary>Can destruction or excision be billed together with adjacent tissue transfer repair for the same lesion?</summary><p>No, CPT's own parenthetical instruction under the adjacent tissue transfer codes (14000-14302) states not to separately report an excision code for the lesion the flap or graft is repairing, because the ATT code's "primary defect" already includes removing the lesion. This is treated as a hard, non-bypassable bundle in practice, equivalent to a modifier indicator of 0, no amount of documentation makes the excision separately payable when an ATT code is billed for the same defect the same session. Bill the ATT code alone at the size of the primary plus secondary defect; billing the excision code alongside it is one of dermatology's more consequential bundling errors because it inflates the claim rather than just risking a partial denial.</p></details>
@@ -338,7 +344,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-dermatology.html">Dermatology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-dermatology-denials-appeals.html">Dermatology claim denials and appeals: CARC codes and the exact fix <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -346,6 +352,7 @@
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialties.html">All 30 specialties <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -394,6 +401,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Ophthalmology NCCI Edits and Bundling Rules | Verified RCM">
 <meta name="twitter:description" content="Ophthalmology NCCI PTP edits and MUE limits explained: modifier indicators 0/1/9, MAI 1/2/3, the 92133/92134 restriction, gonioscopy and tonometry bundling, and the cataract global-period bundling zone.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,20 +225,26 @@
       <p class="lede">Our ophthalmology guide names the bundling patterns that cost practices the most. This page goes underneath them: how a PTP modifier indicator actually works, why an MUE denial needs a different appeal strategy than a PTP bundling denial, and where cataract surgery's global period quietly bundles testing that looks separately billable.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-ophthalmology.html">ophthalmology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of concentric circles forming a minimal eye and iris, representing ophthalmology">
-  <path d="M100,240 Q240,148 380,240" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M100,240 Q240,332 380,240" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="240" r="78" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="240" r="54" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="240" r="30" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="240" r="14" fill="none" stroke="var(--cat-medical)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="240" r="5" fill="var(--cat-medical)" stroke="none"/>
-  <path d="M118,236 Q100,240 118,244" fill="none" stroke="var(--muted)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M362,236 Q380,240 362,244" fill="none" stroke="var(--muted)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-ophthalmology-wide.svg" alt="Ophthalmology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#ptp-modifier-indicators-what-actually-decides-an-outcome">PTP modifier indicators: what actually decides an outcome</a></li>
+      <li><a href="#mues-and-mai-a-different-bundling-mechanism-entirely">MUEs and MAI: a different bundling mechanism entirely</a></li>
+      <li><a href="#the-9213392134-restriction-cpt-instruction-not-just-a-ptp-ed">The 92133/92134 restriction: CPT instruction, not just a PTP edit</a></li>
+      <li><a href="#gonioscopy-tonometry-and-the-separate-procedure-label">Gonioscopy, tonometry, and the "separate procedure" label</a></li>
+      <li><a href="#the-cataract-global-period-bundling-zone">The cataract global-period bundling zone</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -250,7 +255,7 @@
     </ul>
   </section>
 
-  <h2>PTP modifier indicators: what actually decides an outcome</h2>
+  <h2 id="ptp-modifier-indicators-what-actually-decides-an-outcome">PTP modifier indicators: what actually decides an outcome</h2>
   <p>Every NCCI procedure-to-procedure (PTP) edit pairs a Column One code with a Column Two code and assigns a modifier indicator deciding whether an override is even possible. Get it wrong and everything downstream, the modifier, the documentation, the appeal, is wasted effort.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -265,7 +270,7 @@
   </div>
   <p>⚠️ The specific PTP indicator value for any individual ophthalmology code pair is published by CMS and revised quarterly; CMS's NCCI PTP Edits Lookup Tool returned access errors to automated retrieval during this build. Verify the current value there before building any pair into a scrubber rule.</p>
 
-  <h2>MUEs and MAI: a different bundling mechanism entirely</h2>
+  <h2 id="mues-and-mai-a-different-bundling-mechanism-entirely">MUEs and MAI: a different bundling mechanism entirely</h2>
   <p>A Medically Unlikely Edit caps the units of a single code payable for one patient on one date, it never compares two codes the way a PTP edit does, and confusing the two is why staff sometimes appeal an MUE denial with the wrong documentation. Every MUE carries its own MUE Adjudication Indicator (MAI), which decides whether the cap can be appealed at all:</p>
   <ul class="check-list">
     <li><span class="check">MAI 1</span><span><b>Claim-line edit.</b> Modifiers reporting the same code on separate lines can allow medically necessary excess units to be paid.</span></li>
@@ -274,15 +279,15 @@
   </ul>
   <p>67028 (intravitreal injection administration) shows how an MUE interacts with bilateral billing rather than blocking it. The code carries an MUE of one payable unit per date, and current billing-industry sourcing describes its Medicare bilateral indicator as a 150% payment adjustment, so a same-day, both-eyes injection is reported as <b>one unit with modifier 50</b> (or separate RT/LT lines, where a payer prefers it), not two units. Billing two units risks an MUE denial and is simply the wrong mechanism. ⚠️ Confirm the current MUE value and bilateral indicator against CMS's own files before building a claim rule on it, this build couldn't retrieve them directly.</p>
 
-  <h2>The 92133/92134 restriction: CPT instruction, not just a PTP edit</h2>
+  <h2 id="the-9213392134-restriction-cpt-instruction-not-just-a-ptp-ed">The 92133/92134 restriction: CPT instruction, not just a PTP edit</h2>
   <p>Our main ophthalmology guide flags this pair as the specialty's cleanest bundle that isn't modifier-bypassable, and it's worth being precise about why. CPT's own instructional note under 92134 tells coders not to report 92133 and 92134 together for the same patient, same date, because the two codes are alternative clinical applications of the same SCODI imaging technology, one for the optic nerve head, typically glaucoma; one for the retina, typically macular disease, not two separately performed studies. Current billing-industry sourcing also places the pair in the NCCI PTP edit table, 92133 in Column One and 92134 in Column Two.</p>
   <p>⚠️ This build couldn't confirm the current PTP modifier indicator for the pair against CMS's own edit file. Treat it as non-bypassable regardless: the CPT-level instruction applies on its own authority, independent of NCCI, and no modifier indicator undoes an instruction embedded in the code descriptors. Bill whichever code matches what was clinically performed, not both, and not the second "just in case."</p>
 
-  <h2>Gonioscopy, tonometry, and the "separate procedure" label</h2>
+  <h2 id="gonioscopy-tonometry-and-the-separate-procedure-label">Gonioscopy, tonometry, and the "separate procedure" label</h2>
   <p>Three codes carry the CPT "separate procedure" designation and a bundling history that trips up staff working off the old rule: <b>92020</b> (gonioscopy), <b>92100</b> (serial tonometry with multiple IOP measurements and interpretation), and <b>92060</b> (sensorimotor examination). Medicare bundled all three into eye exam and E/M codes until that policy reversed in 1999; under current Medicare NCCI policy none needs an override modifier alongside an eye exam or E/M code on the same date.</p>
   <p>What still makes the claim billable is medical necessity, not the modifier: the visit and the special service need separate, documented diagnostic reasons, not the same complaint captured twice. A reflexive add-on to every comprehensive exam regardless of indication draws the same audit attention as routine 59 use, and a commercial payer that never adopted the 1999 reversal may still edit these as stand-alone-only, confirm the specific payer's current policy rather than assuming it.</p>
 
-  <h2>The cataract global-period bundling zone</h2>
+  <h2 id="the-cataract-global-period-bundling-zone">The cataract global-period bundling zone</h2>
   <p>Cataract surgery's 90-day global period is where ophthalmology's bundling logic gets tested hardest, because the deciding factor is a date on the calendar, not which code was billed. Ophthalmic biometry (<code>92136</code>) for IOL power calculation is the clearest example: performed before the decision for surgery was made, it's separately billable on its own date. The identical code, repeated the day before or day of surgery to confirm IOL power, falls inside the global package the same way the pre-operative E/M visit does, billing it again duplicates a service the global fee already covers.</p>
   <p>The same logic governs any diagnostic testing during the 90-day post-operative window: a test tied to routine post-op monitoring is bundled, while a test ordered for a new, unrelated finding, documented as such, ideally paired with modifier 24, is separately billable. The chart has to show the "why" each time; repeating a test at a fixed interval without a new clinical indication turns a legitimately separate service into a bundling denial.</p>
   <div class="protip">
@@ -290,7 +295,7 @@
     <div><div class="protip-label">Pro tip</div><p>Before writing off a same-day diagnostic test as bundled into the cataract global fee, check the date the decision for surgery was actually documented, not the date the test was run. A study performed genuinely before that documented decision is separate revenue even if it landed close to the surgery date, revenue missed when staff apply the global period as a blanket rule instead of checking the chart's timeline.</p></div>
   </div>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Check the PTP modifier indicator first, indicator 0 ends the question immediately.</li>
@@ -314,7 +319,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Do we need a modifier to bill gonioscopy or tonometry alongside an eye exam?</summary><p>Not on most carriers, once the record supports a genuinely separate diagnostic reason. Gonioscopy (92020), serial tonometry (92100), and sensorimotor exam (92060) carry the CPT label "separate procedure" and were bundled into eye exam codes until that reversed in 1999; today none needs an override modifier alongside an eye exam or E/M code on most payers. The real requirement is medical necessity: the visit and the special service need distinct diagnostic reasons documented, or a payer that still treats "separate procedure" as stand-alone-only will deny it as incidental. Confirm your carrier's policy rather than assuming the Medicare reversal applies everywhere.</p></details>
     <details class="faq-item"><summary>Can we bill IOL biometry (92136) separately if it's performed on the same day as cataract surgery?</summary><p>Not if it's part of the routine pre-operative workup captured by the 90-day global package. Biometry performed before the decision for surgery was made is separately billable on its own date. The same code repeated the day of or day before surgery to confirm IOL power falls inside the global period the way the pre-op E/M visit does, and billing it separately duplicates a service the global fee already covers. Timing relative to the surgical decision decides it, not which code captured the measurement.</p></details>
@@ -326,13 +331,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-ophthalmology.html">Ophthalmology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-ophthalmology-denials-appeals.html">Ophthalmology denials and appeals <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-ophthalmology-cataract-surgery-global-period.html">Cataract surgery coding and global period <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-ophthalmology-modifiers.html">Ophthalmology billing modifiers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -381,6 +387,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

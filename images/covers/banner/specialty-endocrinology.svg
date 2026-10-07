@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Endocrinology, Billing and coding guide">
+  <defs>
+    <linearGradient id="bgspecialtyendocrinology" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+    <radialGradient id="glspecialtyendocrinology" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#5eead4" stop-opacity="0.5"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+    <pattern id="grspecialtyendocrinology" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cpspecialtyendocrinology"><rect x="800" y="145" width="340" height="340" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgspecialtyendocrinology)"/>
+  <rect width="1200" height="630" fill="url(#grspecialtyendocrinology)"/>
+  <rect width="1200" height="630" fill="url(#glspecialtyendocrinology)"/>
+  <circle cx="1040" cy="130" r="220" fill="#5eead4" fill-opacity="0.14"/>
+  <circle cx="1110" cy="550" r="150" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="800" y="145" width="340" height="340" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cpspecialtyendocrinology)"><g transform="translate(820 165) scale(0.6250)">
+  <line x1="70" y1="305" x2="410" y2="305" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round" opacity="0.4"/>
+
+  <path d="M 70,275 C 110,260 140,260 170,275 C 200,290 230,290 260,275 C 290,260 320,260 350,275 C 380,290 400,290 410,285" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+
+  <path d="M 70,240 C 110,220 130,220 150,240 C 165,255 175,260 185,235 C 195,205 205,160 220,150 C 235,140 245,160 255,195 C 262,220 268,245 280,255 C 300,270 320,265 340,245 C 360,225 380,225 410,240" fill="none" stroke="#ffffff" stroke-width="5.10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M 185,235 C 195,205 205,160 220,150 C 235,140 245,160 255,195" fill="none" stroke="#5eead4" stroke-width="5.95" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="220" cy="150" r="5" fill="#5eead4"/>
+
+  <path d="M 240,350 C 205,325 180,335 178,360 C 176,385 205,400 240,372" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="4.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 240,350 C 275,325 300,335 302,360 C 304,385 275,400 240,372" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="4.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="240" cy="361" r="4" fill="#5eead4"/>
+</g></g>
+  <rect x="90" y="118" width="72" height="8" rx="4" fill="#5eead4"/>
+  <text x="90" y="178" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">MEDICAL SPECIALTY</text>
+  <text x="90" y="292" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="84" font-weight="800" fill="#ffffff" letter-spacing="-2">Endocrinology</text>
+  <text x="90" y="354" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" fill="#ffffff" fill-opacity="0.85">Billing and coding guide</text>
+  <text x="90" y="560" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>

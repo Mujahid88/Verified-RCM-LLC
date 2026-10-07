@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Orthopedics, Billing and coding guide">
+  <defs>
+    <linearGradient id="bgspecialtyorthopedics" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#312e81"/><stop offset="1" stop-color="#4338ca"/></linearGradient>
+    <radialGradient id="glspecialtyorthopedics" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#5eead4" stop-opacity="0.5"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+    <pattern id="grspecialtyorthopedics" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cpspecialtyorthopedics"><rect x="860" y="55" width="250" height="250" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bgspecialtyorthopedics)"/>
+  <rect width="1200" height="360" fill="url(#grspecialtyorthopedics)"/>
+  <rect width="1200" height="360" fill="url(#glspecialtyorthopedics)"/>
+  <circle cx="1040" cy="60" r="170" fill="#5eead4" fill-opacity="0.14"/>
+  <circle cx="1110" cy="280" r="110" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="860" y="55" width="250" height="250" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cpspecialtyorthopedics)"><g transform="translate(880 75) scale(0.4375)">
+  
+  <path d="M 151.4 207.5 A 85 85 0 0 1 298.6 207.5" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round" stroke-dasharray="1 9"/>
+  
+  <path d="M 182.9 214.7 A 55 55 0 0 1 267.1 214.7" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" stroke-dasharray="2 8"/>
+
+  
+  <path d="M 133.3 124.4 L 218.3 254.4" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <path d="M 146.7 115.6 L 231.7 245.6" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+
+  
+  <path d="M 222.1 257.5 L 352.1 307.5" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <path d="M 227.9 242.5 L 357.9 292.5" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+
+  
+  <path d="M 131.6 125.5 L 148.4 114.5" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <path d="M 351.4 309.3 L 358.6 290.7" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+
+  
+  <path d="M 140 120 L 225 250" fill="none" stroke="#ffffff" stroke-width="5.95" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 225 250 L 355 300" fill="none" stroke="#ffffff" stroke-width="5.95" stroke-linecap="round" stroke-linejoin="round"/>
+
+  
+  <circle cx="225" cy="250" r="16" fill="none" stroke="#5eead4" stroke-width="4.25"/>
+  <circle cx="225" cy="250" r="3.5" fill="#5eead4"/>
+</g></g>
+  <rect x="90" y="46" width="72" height="8" rx="4" fill="#5eead4"/>
+  <text x="90" y="78" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">SURGICAL SPECIALTY</text>
+  <text x="90" y="160" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="84" font-weight="800" fill="#ffffff" letter-spacing="-2">Orthopedics</text>
+  <text x="90" y="202" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#ffffff" fill-opacity="0.85">Billing and coding guide</text>
+  <text x="90" y="336" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>

@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="The 8-Minute Rule for Physical Therapy Billing: Unit Calculation Guide | Verified RCM">
 <meta name="twitter:description" content="The 8-minute rule for PT billing: the full unit table through 8 units, the mixed-code remainder method Medicare uses, and the different AMA method some commercial payers apply.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,27 +225,25 @@
       <p class="lede">The 8-minute rule converts minutes of documented treatment into billable units, and it's the single most common source of unit-count errors in outpatient PT billing, not because the math is hard, but because most practices apply the wrong version of it, round instead of using the actual midpoint boundary, or bill units the note's own itemized time doesn't support. This guide walks the full increment table through 8 units, the mixed-code remainder method Medicare actually uses when more than one timed code is billed the same visit, the different substantial-portion method some commercial payers apply instead, and the specific documentation gap that turns a clean claim into a recoupment.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-physical-therapy.html">physical therapy billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line-art icon of a range-of-motion arc, like a protractor sweep, for physical therapy">
-  <!-- baseline limb segment -->
-  <line x1="250" y1="300" x2="120" y2="300" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- moved limb segment (primary) -->
-  <line x1="250" y1="300" x2="330" y2="161" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round"/>
-  <!-- joint pivot -->
-  <circle cx="250" cy="300" r="8" fill="none" stroke="var(--color-text)" stroke-width="2.5"/>
-  <!-- range-of-motion sweep arc -->
-  <path d="M160,300 A90,90 0 0,1 295,222.1" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <!-- tick marks along the sweep -->
-  <line x1="163.4" y1="250" x2="180.7" y2="260" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="200" y1="213.4" x2="210" y2="230.7" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="250" y1="200" x2="250" y2="220" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- accent highlight on final measured segment of the arc -->
-  <path d="M234.4,211.4 A90,90 0 0,1 295,222.1" fill="none" stroke="var(--cat-therapy)" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- accent marker at the measured endpoint -->
-  <circle cx="295" cy="222.1" r="6" fill="var(--cat-therapy)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-physical-therapy-wide.svg" alt="Physical therapy: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-the-math-matters-more-than-it-looks">Why the math matters more than it looks</a></li>
+      <li><a href="#the-full-8-minute-rule-increment-table">The full 8-minute rule increment table</a></li>
+      <li><a href="#mixed-code-remainder-totaling-how-medicare-actually-assigns">Mixed-code remainder totaling: how Medicare actually assigns units</a></li>
+      <li><a href="#the-cptama-substantial-portion-method-a-different-total-not">The CPT/AMA substantial-portion method: a different total, not just a different split</a></li>
+      <li><a href="#the-documentation-error-that-triggers-takebacks">The documentation error that triggers takebacks</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -257,11 +254,11 @@
     </ul>
   </section>
 
-  <h2>Why the math matters more than it looks</h2>
+  <h2 id="why-the-math-matters-more-than-it-looks">Why the math matters more than it looks</h2>
   <p>Timed CPT codes, 97110, 97112, 97116, 97140, 97530, and the constant-attendance modalities like 97032 and 97035, are billed in 15-minute units, and the 8-minute rule is the conversion table between minutes of documented, skilled, one-on-one treatment time and the number of units that actually go on the claim. Get the conversion wrong in either direction and it costs money: under-convert and units go unbilled with no denial to flag it, since a missed unit never reaches a work queue the way a rejected claim does; over-convert and the claim either denies on units exceeding what the documentation supports, or worse, pays and sits as recoupment risk until a payer's post-payment review catches it.</p>
   <p>The rule itself is simple in structure and gets complicated only in application: one table converts total minutes to total units, a second rule decides which specific codes fill those units when more than one timed code was performed, and a third, entirely separate method exists for payers who don't follow Medicare's approach at all. Treating all three as one rule is where most unit-count errors start.</p>
 
-  <h2>The full 8-minute rule increment table</h2>
+  <h2 id="the-full-8-minute-rule-increment-table">The full 8-minute rule increment table</h2>
   <p>Medicare's version of the rule, published in the Medicare Claims Processing Manual, Chapter 5, Section 20.2, works on <b>total</b> timed minutes across every timed code billed on a single date of service, not code by code. Look up the total first; which specific codes fill that total comes after, in the remainder method below.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -282,7 +279,7 @@
   </div>
   <p>The pattern holds indefinitely past 8 units: every additional unit needs 15 more minutes, with the midpoint of that block, 8 of the 15, as the threshold to round up. A visit with exactly 22 minutes of timed treatment bills 1 unit; one minute more, at 23, crosses into 2 units. Below 8 minutes total, nothing is billable at all, a single 6-minute treatment segment with no other timed code performed that date doesn't round up to 1 unit under any version of this rule.</p>
 
-  <h2>Mixed-code remainder totaling: how Medicare actually assigns units</h2>
+  <h2 id="mixed-code-remainder-totaling-how-medicare-actually-assigns">Mixed-code remainder totaling: how Medicare actually assigns units</h2>
   <p>When more than one timed code is performed in the same visit, the total-minutes-first logic above still decides the unit count, but a second step decides which codes fill those units. The method, step by step:</p>
   <ul class="check-list">
     <li><span class="check">1</span><span>Sum total timed minutes across every timed CPT code performed that date of service.</span></li>
@@ -306,7 +303,7 @@
   <p>Total timed minutes come to 46, which sits in the 38&ndash;52 bracket for 3 units total. Two of those units are assigned immediately in step 3, because 97110 and 97530 each contain a full 15-minute increment on their own. That leaves 1 unit unassigned against 2 units already spoken for. Ranking the leftovers, 97140 at 12 minutes, 97110 at 3, 97530 at 1, the largest leftover wins the remaining unit: 97140, even though it never reached a full increment by itself. <b>Final claim: 97110 &times;1, 97140 &times;1, 97530 &times;1, three lines, three units, matching the fixed total from the table.</b></p>
   <p>That last point is the one that trips up staff trained on a simpler mental model: a code with only 12 documented minutes, well under a full 15-minute block, still earned its own billable unit here, because the remainder method ranks unassigned minutes across every code in the visit, not just within a single code's own total. Skip step 4 and default to only billing codes that independently cleared 15 minutes, and a legitimate unit goes unbilled on every visit with a similar minute spread.</p>
 
-  <h2>The CPT/AMA substantial-portion method: a different total, not just a different split</h2>
+  <h2 id="the-cptama-substantial-portion-method-a-different-total-not">The CPT/AMA substantial-portion method: a different total, not just a different split</h2>
   <p>Medicare's total-minutes-first method above is not the only version of the 8-minute rule in circulation. The CPT/AMA substantial-portion method, which a meaningful share of commercial payers apply instead, works differently at the root: rather than summing all timed minutes across the visit before converting to units, it applies the same 8-minute midpoint boundary to <b>each code's own billed time independently</b>, then adds the resulting per-code unit counts together.</p>
   <p><b>Worked contrast, same visit, two methods:</b> 97110 for 21 minutes and 97112 for 19 minutes, same date of service, 40 minutes total.</p>
   <div class="data-table-wrap">
@@ -322,7 +319,7 @@
   <p>Same patient, same visit, same 40 documented minutes, a full unit of difference depending on which method the payer's claims system applies. The gap gets more dramatic at the edges: two codes billed at 7 minutes each total 14 minutes, which is 1 unit under Medicare's combined method, but 0 units under the AMA method, because neither code independently clears the 8-minute threshold on its own. Neither method is universally wrong; the payer's own billing manual decides which one governs a given claim, and defaulting to the Medicare table for a commercial payer that actually follows the AMA method is a documented, ongoing source of over- or under-billing that a scrubber built only around CMS logic won't catch.</p>
   <p>⚠️ Not every commercial payer states its method explicitly in a published provider manual. Where it isn't stated, confirm directly with the payer's provider relations line or against your specific provider contract's billing reference rather than assuming either method applies by default, a wrong assumption doesn't produce a denial that flags the error, it produces a silent over- or under-bill on every mixed-code visit with that payer until someone checks.</p>
 
-  <h2>The documentation error that triggers takebacks</h2>
+  <h2 id="the-documentation-error-that-triggers-takebacks">The documentation error that triggers takebacks</h2>
   <p>The highest-cost mistake in this whole rule has nothing to do with the arithmetic. It's a note where the stated total treatment time doesn't match the sum of the individual timed-code minutes billed on the claim. If the note documents "50 minutes of skilled treatment" as a summary line but the itemized time entries for the billed codes only add up to 38 minutes, a post-payment auditor reconciles the claim against the itemized entries, not the summary sentence, and the 12-minute gap reads as either an undocumented service or an inflated unit count. Either read is a recoupment, and by the time an auditor is doing that reconciliation, it's no longer a correctable documentation gap; it's money coming back.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
@@ -350,7 +347,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>How many units can I bill for a 45-minute physical therapy visit?</summary><p>45 minutes of total timed treatment falls in the 38-52 minute bracket on the CMS 8-minute rule table, which bills 3 units under Medicare's total-time method. That's the total across every timed code performed that date, not per code, a 45-minute visit split across two codes still tops out at 3 units combined, with the mixed-code remainder rule deciding which code gets which unit. Some commercial payers using the CPT/AMA substantial-portion method instead can land on a different total, since that method sums units calculated per code rather than summing minutes first, check the payer's own billing manual before assuming the Medicare total applies.</p></details>
     <details class="faq-item"><summary>Does every commercial payer use Medicare's 8-minute rule?</summary><p>No. Medicare and most Medicaid programs use the total-time method described in the Medicare Claims Processing Manual, Chapter 5, which sums all timed minutes across the visit before converting to units. A meaningful share of commercial payers instead follow the CPT/AMA substantial-portion method, which applies the same 8-minute midpoint logic to each code's own minutes independently and then adds the resulting units together. The two methods can produce different total unit counts on the same visit, not just a different split between codes, so confirm which method a specific payer uses rather than defaulting to the Medicare table for every claim.</p></details>
@@ -362,7 +359,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-physical-therapy.html">Physical therapy billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-physical-therapy-modifiers.html">Physical therapy modifiers: GP, GO, GN, 59, X{EPSU}, KX, 96/97, CQ/CO <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -370,6 +367,7 @@
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialties.html">All 30 specialties <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -418,6 +416,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

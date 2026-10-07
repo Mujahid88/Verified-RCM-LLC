@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Plastic Surgery NCCI Edits and MUE Limits: Bundling Rules Explained | Verified RCM">
 <meta name="twitter:description" content="Plastic surgery NCCI edits and MUE limits: closure bundling into excision, flap, and graft codes, PTP edits vs. the Multiple Procedure Payment Reduction, and global-period revision rules explained.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,23 +225,25 @@
       <p class="lede">Plastic surgery bundling denials cluster around a handful of recurring fights: whether a closure is really separate from the flap or excision that created the wound, whether a second procedure in the same session is a genuine NCCI edit or a completely different payment-reduction mechanism, and whether a revision belongs to the original operation's global period or stands on its own. This guide works through all four, closure bundling, multi-procedure sessions, global-period revisions, and the anesthesia/facility distinction, with the modifier-indicator and MAI framework you need before deciding whether a denial is worth appealing.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-plastic-surgery.html">NCCI edits and bundling guide for plastic surgery</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of two mirrored curved forms meeting at a central sutured seam, representing plastic and reconstructive surgery">
-  <path d="M165,90 C95,175 95,305 165,390" fill="none" stroke="var(--muted)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M320,95 C395,170 390,310 315,385" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M195,110 C140,170 140,310 195,370" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M290,100 C350,165 345,320 285,375" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-  <line x1="226" y1="163" x2="256" y2="177" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" />
-  <line x1="222" y1="207" x2="252" y2="219" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" />
-  <line x1="220" y1="251" x2="250" y2="261" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" />
-  <line x1="222" y1="295" x2="252" y2="303" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" />
-  <line x1="227" y1="323" x2="257" y2="333" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" />
-  <path d="M240,130 C245,200 235,280 240,350" fill="none" stroke="var(--cat-surgical)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <circle cx="240" cy="130" r="4" fill="var(--cat-surgical)" />
-  <circle cx="240" cy="350" r="4" fill="var(--cat-surgical)" />
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-plastic-surgery-wide.svg" alt="Plastic surgery: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-two-indicators-that-decide-every-bundling-fight">The two indicators that decide every bundling fight</a></li>
+      <li><a href="#closure-codes-bundled-into-the-primary-excision-or-reconstru">Closure codes bundled into the primary excision or reconstruction procedure</a></li>
+      <li><a href="#multiple-procedures-same-session-ncci-ptp-edit-vs-multiple-p">Multiple procedures, same session: NCCI PTP edit vs. Multiple Procedure Payment Reduction</a></li>
+      <li><a href="#revision-and-scar-repair-procedures-global-period-vs-genuine">Revision and scar-repair procedures: global period vs. genuinely new problem</a></li>
+      <li><a href="#anesthesia-and-facility-billing-a-different-claim-not-a-surg">Anesthesia and facility billing: a different claim, not a surgeon PTP issue</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -253,7 +254,7 @@
     </ul>
   </section>
 
-  <h2>The two indicators that decide every bundling fight</h2>
+  <h2 id="the-two-indicators-that-decide-every-bundling-fight">The two indicators that decide every bundling fight</h2>
   <p>Two CMS-published values control whether a plastic surgery code pair or a unit-capped code is billable at all, and neither is something you infer from how the operative note reads, both are specific, quarterly-updated values attached to the exact codes on the claim.</p>
   <p><b>The NCCI Procedure-to-Procedure modifier indicator</b>, attached to a Column 1/Column 2 code pair:</p>
   <ul class="check-list">
@@ -269,7 +270,7 @@
   </ul>
   <p>⚠️ This build could not retrieve the specific NCCI PTP modifier indicator or MUE/MAI value for any individual plastic surgery code pair directly from CMS's primary edit files during research (the NCCI PTP and MUE files are large, quarterly-refreshed downloads, not a queryable API, and general web search doesn't surface a single pair's current indicator reliably). The structural rules in the sections below hold independent of those values, they follow from CPT's own code descriptors and surgical-package conventions, not from a Column 1/Column 2 lookup. Wherever a specific indicator or MAI value would matter to a scrubber rule, it's flagged below; confirm the current value in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> or the current MUE table before building it into a permanent rule, since both refresh every quarter and a value that was accurate last quarter can be deleted or changed the next.</p>
 
-  <h2>Closure codes bundled into the primary excision or reconstruction procedure</h2>
+  <h2 id="closure-codes-bundled-into-the-primary-excision-or-reconstru">Closure codes bundled into the primary excision or reconstruction procedure</h2>
   <p>This is the bundling question plastic surgery runs into more than any other specialty, because closure complexity is often the clinical reason the case was referred to a plastic surgeon in the first place, and it's frequently misfiled as an NCCI question when it's really a CPT surgical-package rule that applies whether or not the pair even appears in the PTP file.</p>
   <p>The baseline rule: a simple, single-layer closure is included in the work value of the procedure that created the defect. That holds for a straightforward lesion excision (11400&ndash;11646), and it holds just as firmly for the reconstructive codes plastic surgery bills constantly. Intermediate repair (12031&ndash;12057) and complex repair (13100&ndash;13153) can be separately reportable, but only when the primary code's own descriptor doesn't already fold that level of closure in, and several of the codes plastic surgeons use most, adjacent tissue transfer and skin grafting, fold in more than people expect.</p>
   <div class="data-table-wrap">
@@ -288,13 +289,13 @@
   <p>The adjacent tissue transfer row is the one that costs practices money in both directions. Some coders under-bill by assuming a Z-plasty or rotation flap needs an add-on repair code the way an excision might; it doesn't, because the code descriptor for 14000&ndash;14302 already represents the excision of the defect and its closure through the flap technique itself, billing an excision code or any repair code alongside it double-bills a single service. Others over-bill by billing the lesion excision that preceded the flap as its own line; that excision is included in the adjacent tissue transfer code whenever the two are performed as one planned procedure, regardless of whether the excision and the flap technically happened in sequence during the same operative session.</p>
   <p>Skin graft donor sites work differently, and it's worth pulling the specific graft code's own parenthetical note rather than assuming one rule covers every graft code, because CPT's donor-site closure language isn't uniform across the 15002&ndash;15278 series. The safe default: a single-layer donor-site closure is never separately billable, and only a documented intermediate or complex donor-site repair, more suturing, more than one layer, genuinely more work than a simple closure, supports a separate repair line, and even then only when the specific graft code's guidance permits it.</p>
 
-  <h2>Multiple procedures, same session: NCCI PTP edit vs. Multiple Procedure Payment Reduction</h2>
+  <h2 id="multiple-procedures-same-session-ncci-ptp-edit-vs-multiple-p">Multiple procedures, same session: NCCI PTP edit vs. Multiple Procedure Payment Reduction</h2>
   <p>Plastic surgery routinely performs more than one billable procedure in a single operative session, a breast reconstruction stage alongside a contralateral symmetry procedure, a panniculectomy alongside abdominal-wall work, staged flap procedures in the same visit, and two entirely different Medicare mechanisms can reduce or deny the second line. Treating them as the same thing is the single most common reason a genuinely appealable line never gets appealed, and a genuinely non-appealable line gets an appeal letter written for it anyway.</p>
   <p><b>A true NCCI PTP edit</b> is a Column 1/Column 2 pair with a modifier indicator attached. If the indicator is 0, the second code isn't payable no matter what; if it's 1, the pair can be unbundled with a modifier and documentation showing genuine separateness (different breast, different structure, different medically necessary reason). ⚠️ This build could not confirm the current modifier indicator for any specific breast reconstruction/symmetry-procedure pair (for example, a mastopexy or reduction mammaplasty code billed alongside an implant or flap reconstruction code) against CMS's live PTP file, some payer and coding-reference sources describe certain symmetry-procedure codes as already included within specific reconstruction code descriptors by CPT's own parenthetical instructions, which is a coding-selection question rather than a PTP edit, similar to the adjacent-tissue-transfer pattern above. Confirm both the CPT parenthetical for the specific codes involved and the current PTP indicator before billing or appealing a specific pair.</p>
   <p><b>The Multiple Procedure Payment Reduction</b> is a different mechanism entirely, and it has no modifier indicator and no bypass modifier because it isn't disallowing anything, it's a payment-amount adjustment applied to correctly reported, genuinely separate procedures performed the same session by the same surgeon. Under Medicare's standard multiple-surgery payment rules, the highest-valued procedure pays at 100% of the fee schedule amount and subsequent procedures rank down from there (typically 50% for the second through fifth procedure, by report beyond that). A panniculectomy (<code>15830</code>) performed alongside separately reportable work in the same session, or a breast reconstruction stage genuinely billed alongside a distinct, separately payable procedure, can be subject to this ranked reduction on the lower-valued code without any NCCI edit being involved at all. Appealing a reduced-but-paid second-procedure line as though it were an NCCI denial wastes the appeal on a mechanism that was never disallowing the service, it was paying it, just at the ranked rate the multiple-surgery rules require.</p>
   <p>Panniculectomy and abdominoplasty-adjacent work is worth calling out specifically because the coding relationship is well-documented and the payer-coverage relationship is not. CPT <code>+15847</code> (abdominoplasty component, umbilical transposition, fascial plication, or both) is an add-on code reported with <code>15830</code> and cannot stand alone. Where NCCI does create a genuine PTP pair is between <code>15830</code> and certain abdominal-wall hernia repair codes performed the same session; when both are medically necessary and distinct, modifier 59 on the appropriate code is what makes the pair separately payable, not a symmetry or payment-reduction argument. Separately, and this is a coverage question rather than a bundling question: most payers treat the abdominoplasty component itself as cosmetic even when it's performed at the same operation as a medically necessary panniculectomy, so 15830 may be covered while 15847 is denied on medical-necessity grounds regardless of how the NCCI and MPPR questions resolve. Confirm the patient's specific coverage policy before assuming 15847 will pay even when correctly coded and correctly modified.</p>
 
-  <h2>Revision and scar-repair procedures: global period vs. genuinely new problem</h2>
+  <h2 id="revision-and-scar-repair-procedures-global-period-vs-genuine">Revision and scar-repair procedures: global period vs. genuinely new problem</h2>
   <p>A revision or scar-repair procedure performed after the index reconstruction runs on the global surgery package, not the NCCI PTP file, and the modifier that makes it payable depends entirely on why the revision is happening, not on how it's coded.</p>
   <ul class="check-list">
     <li><span class="check">58</span><span><b>Staged or planned procedure, same physician, during the postoperative period.</b> A revision anticipated at the time of the original operation, a planned second stage of a multi-stage reconstruction, for example, reports with modifier 58 and its own separate payment; it doesn't reset against the original procedure's global period.</span></li>
@@ -303,7 +304,7 @@
   </ul>
   <p>The recurring documentation failure is billing a revision with modifier 59 instead of 58/78/79, or with no modifier at all, while a global period is still active. Modifier 59 answers a completely different question, "these two codes on today's claim describe genuinely separate services", and does nothing to establish why a procedure performed inside another procedure's global period should be separately payable at all. A scar revision billed with 59 during an active 90-day global period denies as included in the original surgery regardless of medical necessity, because the claims system is checking against the global surgery package, not a PTP pair. The fix is documentation that maps cleanly onto one of the three modifiers above: was this planned, is it treating a complication of the same surgery, or is it addressing something genuinely new. Notes that blend those three rationales together are the ones that get denied and then lose the appeal too.</p>
 
-  <h2>Anesthesia and facility billing: a different claim, not a surgeon PTP issue</h2>
+  <h2 id="anesthesia-and-facility-billing-a-different-claim-not-a-surg">Anesthesia and facility billing: a different claim, not a surgeon PTP issue</h2>
   <p>Anesthesia and facility charges don't create an NCCI Procedure-to-Procedure problem on the surgeon's own claim, for a structural reason that's easy to lose track of when a denial letter references "bundling": they're billed on separate claims by separate billing entities entirely. The anesthesiologist or CRNA bills anesthesia time-based codes (the 00100&ndash;01999 series) under their own NPI; the facility bills its own claim for the OR, supplies, and recovery; the surgeon's claim carries only the surgical CPT codes. A PTP edit pair requires both codes to appear on the same claim by the same provider for the same beneficiary on the same date, anesthesia and facility codes structurally never meet that condition against the surgeon's own CPT codes, so there's no PTP pair to check an indicator for.</p>
   <p>The one place anesthesia and surgical billing genuinely interact is a Policy Manual restriction, not a PTP edit: a surgeon generally cannot separately report an anesthesia code for a procedure they are personally performing, since the work of administering anesthesia for one's own case isn't a separately billable service distinct from the surgery itself. That's a restriction on what the surgeon can report under their own NPI, not a bundling relationship between the surgeon's claim and the anesthesiologist's independent claim. If a rheumatology- or orthopedics-style scrubber alert fires on an anesthesia code appearing alongside a surgical CPT code, the first question is whose claim it's actually on, a same-claim anesthesia code from the operating surgeon is the Policy Manual issue above, while a claim denial referencing the anesthesiologist's separate bill is virtually never an NCCI question on the surgeon's side at all.</p>
 
@@ -335,7 +336,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Is simple closure ever separately billable with an excision, flap, or graft code in plastic surgery?</summary><p>No. A single-layer, simple closure is bundled into every excision, adjacent tissue transfer, and skin graft code's own valuation, that's a CPT surgical-package rule, not a bypassable NCCI edit, so no modifier changes it. Intermediate (12031-12057) or complex (13100-13153) closure can be separately reportable, but only when the primary code's own descriptor doesn't already fold that complexity in. Adjacent tissue transfer codes (14000-14302) are the exception that trips people up: CPT does not allow any repair code, simple through complex, alongside them, because the flap or rearrangement itself is the closure.</p></details>
     <details class="faq-item"><summary>Is the payment reduction on a second procedure in the same operative session, like a breast reconstruction stage plus a symmetry procedure, an NCCI edit we can appeal?</summary><p>Usually not, and appealing it as one wastes staff time. Medicare's multiple-procedure payment reduction, which pays the highest-valued procedure at 100% and ranks the rest down (typically 50% for the second through fifth), is a separate payment mechanism from the NCCI Procedure-to-Procedure edit file. It has no modifier indicator to look up and no bypass modifier, because it isn't disallowing the second procedure, it's adjusting the payment amount for genuinely separate, correctly reported services performed the same session. A true NCCI PTP edit between two codes is a different question entirely, with its own indicator.</p></details>
@@ -348,13 +349,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates and quarterly NCCI/MUE revisions. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Items flagged with ⚠️ above could not be independently confirmed against a live CMS source during this build; confirm them in the CMS NCCI PTP Edits Lookup Tool, the current MUE table, or your CPT Professional edition before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-plastic-surgery.html">Plastic surgery billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="prior-auth.html">Prior authorization <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="medical-coding.html">Medical coding overview <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -403,6 +405,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

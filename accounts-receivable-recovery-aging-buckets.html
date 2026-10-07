@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="A/R Aging Buckets: Reading the Report &amp; Prioritizing Work | Verified RCM">
 <meta name="twitter:description" content="How to read a medical A/R aging report by bucket, why dollar amount alone misprioritizes the work, and how to build a weekly prioritization workflow around it.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,21 +225,24 @@
       <p class="lede">Every A/R aging report looks the same: a handful of columns, a handful of dollar totals, and a temptation to just start at the top of the largest bucket and work down. That instinct is understandable and usually wrong. The bucket a claim sits in tells you roughly how much trouble it's in, but not which claims are actually running out of time, and those are two different questions that need two different answers.</p>
       <div class="post-meta"><span class="muted">Reviewed by Grace Odom, CRCR &middot; Certified Revenue Cycle Representative (HFMA) &middot; Part of our <a href="accounts-receivable-recovery.html">accounts receivable recovery guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line art of an upward-trending recovery line rising through gridlines to an accented endpoint, representing accounts receivable recovery">
-  <line x1="150" y1="330" x2="150" y2="150" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="150" y1="330" x2="360" y2="330" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="150" y1="276" x2="330" y2="276" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
-  <line x1="150" y1="222" x2="330" y2="222" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
-  <path d="M168,308 C205,300 220,255 250,240 C280,225 300,205 322,178" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M168,308 L204,318" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="204" cy="292" r="4" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="258" cy="248" r="4" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <path d="M296,178 L322,178 L322,204" fill="none" stroke="var(--cat-medical-billing)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="322" cy="178" r="9" fill="var(--cat-medical-billing)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/accounts-receivable-recovery-wide.svg" alt="A/R recovery: billing process guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#what-the-standard-buckets-actually-measure">What the standard buckets actually measure</a></li>
+      <li><a href="#why-dollar-amount-alone-misprioritizes-the-work">Why dollar amount alone misprioritizes the work</a></li>
+      <li><a href="#why-recovery-odds-decline-as-claims-age">Why recovery odds decline as claims age</a></li>
+      <li><a href="#building-a-weekly-prioritization-workflow-around-the-report">Building a weekly prioritization workflow around the report</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -251,12 +253,12 @@
     </ul>
   </section>
 
-  <h2>What the standard buckets actually measure</h2>
+  <h2 id="what-the-standard-buckets-actually-measure">What the standard buckets actually measure</h2>
   <p>The 0-30, 31-60, 61-90, 91-120 and 120-plus day buckets are a near-universal convention across practice management systems and clearinghouse reporting, and for good reason: they roughly track the lifecycle of a claim from submission through normal processing, into a delay, and eventually into genuine risk territory. A claim in the 0-30 bucket is usually just moving through a payer's normal turnaround time and needs no action. A claim in the 31-60 bucket is starting to run past what's typical and deserves a status check. By the 61-90 bucket, something has usually gone wrong, a denial that hasn't been worked, a hold that hasn't been followed up on, or a submission that never reached the payer at all.</p>
   <p>What the bucket doesn't tell you is the one thing that matters most for prioritization: how much time is actually left before the claim's specific appeal or resubmission deadline closes. Two claims can sit in the same 91-120 bucket and have completely different levels of urgency, because one has an appeal deadline forty-five days out and the other has a deadline that closes next week. The bucket is a starting filter, not a complete answer, and treating it as a complete answer is the most common mistake in how practices work an aging report.</p>
   <p>It's also worth confirming what start date your own system uses before drawing conclusions across payers. Some systems age a claim from the date of service, others from the date of original submission, and a few adjust the clock after a resubmission or corrected claim. None of these conventions is wrong, but comparing numbers without knowing which one your system uses is how a practice ends up misreading its own report, assuming a claim is younger or older than it actually is relative to its real deadline.</p>
 
-  <h2>Why dollar amount alone misprioritizes the work</h2>
+  <h2 id="why-dollar-amount-alone-misprioritizes-the-work">Why dollar amount alone misprioritizes the work</h2>
   <p>It's tempting to sort the aging report by dollar value and start with the biggest number, and there's a real logic to it, a handful of large claims often do account for a disproportionate share of the total balance. But dollar value on its own ignores risk entirely. A $4,000 claim sitting at 20 days is, in almost every case, just moving through normal payer processing and carries essentially no risk of becoming uncollectible. A $400 claim sitting at 100 days, close to the edge of its appeal window, carries far more risk per dollar, because the entire balance is about to become permanently unrecoverable if nobody acts on it this week.</p>
   <p>The practical fix is to combine both signals rather than picking one. Dollar value tells you where the biggest financial impact sits if a claim is lost. Aging and remaining deadline tell you which claims are actually at risk of being lost. A prioritization list that sorts by dollar value within each bucket, and treats the 91-120 and 120-plus buckets as the ones needing deadline verification first regardless of dollar size, captures both signals instead of optimizing for only one of them.</p>
   <div class="data-table-wrap">
@@ -271,11 +273,11 @@
   </div>
   <p>Worked purely by dollar value, Claim A gets attention first and Claim B gets missed until it's too late to fix. Worked with deadline awareness layered on top of the bucket, Claim B moves to the top of the list despite its small balance, because it's the one about to become permanently uncollectible if nobody acts on it now.</p>
 
-  <h2>Why recovery odds decline as claims age</h2>
+  <h2 id="why-recovery-odds-decline-as-claims-age">Why recovery odds decline as claims age</h2>
   <p>The pattern holds across the industry: the longer a balance sits unresolved, the harder it becomes to collect, and the decline isn't gradual and even, it accelerates once a claim passes roughly the 90-to-120-day mark. That's not because the underlying medical necessity or coverage changes with time. It's because the practical mechanisms that make a claim collectible, timely filing deadlines, payer-specific appeal windows, and eventually the patient's own ability or willingness to pay an old balance, are almost all time-limited, and most of them cluster in that same window. A claim that's still fixable at 60 days often isn't fixable anymore at 130, not because the error became worse, but because the window to correct it closed somewhere in between.</p>
   <p>This is the core reason aging-based prioritization matters more than it might seem from the outside. It's not about hitting an arbitrary target number on a report. It's about recognizing that every week a fixable claim sits untouched in the 61-90 or 91-120 bucket is a week closer to it becoming permanently unfixable, and building a workflow that catches it before that happens rather than after.</p>
 
-  <h2>Building a weekly prioritization workflow around the report</h2>
+  <h2 id="building-a-weekly-prioritization-workflow-around-the-report">Building a weekly prioritization workflow around the report</h2>
   <p>The single biggest lever available to a practice is simply reviewing the aging report on a fixed weekly schedule rather than occasionally, because a weekly cadence catches a claim while it's still moving through a workable bucket instead of after it's already landed in one where the deadline has closed. A monthly review, by contrast, can easily miss the entire window on a claim that ages from 75 days to 105 days between two review cycles.</p>
   <ol class="cred-steps">
     <li><b>Pull the report on the same day each week</b><span>Consistency matters more than frequency past a certain point, a fixed weekly day builds the habit and makes drift visible immediately.</span></li>
@@ -291,7 +293,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Talk to a specialist</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What are the standard A/R aging buckets in medical billing?</summary><p>Most practice management systems and clearinghouses report A/R in 0-30, 31-60, 61-90, 91-120 and 120-plus day buckets, measured from the date of service or the date of claim submission depending on the system's configuration. These buckets are a standard industry convention, not a regulatory requirement, so confirm which start date your own system uses before comparing numbers across payers or benchmarking against another practice.</p></details>
     <details class="faq-item"><summary>Should we prioritize the A/R work by dollar amount or by age?</summary><p>Neither alone. A large balance at 20 days is normal processing and lower risk than a small balance at 100 days that's about to lose its appeal window. The right prioritization combines dollar value, aging bucket and the specific deadline remaining on each claim, rather than sorting the whole list by one column and working it top to bottom.</p></details>
@@ -303,7 +305,7 @@
     <p><b>Confirm before you rely on this.</b> Collection practices, write-off policy and payer follow-up requirements vary by practice and payer. The process information on this page reflects standard industry practice as of August 2026 and is provided for general education, confirm your own write-off and collections policy with your accountant and legal counsel before applying it.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="accounts-receivable-recovery.html">Our complete accounts receivable recovery guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="accounts-receivable-recovery-write-offs.html">Write-off policy <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -312,6 +314,7 @@
     <li><a href="service-revenue-cycle-management.html">Revenue cycle management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -360,6 +363,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

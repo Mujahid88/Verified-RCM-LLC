@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="OB/GYN NCCI Edits: Colposcopy, Hysteroscopy, Ablation | Verified RCM">
 <meta name="twitter:description" content="OB/GYN NCCI bundling edits explained: colposcopy and LEEP code pairs, hysteroscopy vs. endometrial ablation, and the modifier-indicator logic that decides overrides.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,33 +225,26 @@
       <p class="lede">OB/GYN's densest bundling sits in two procedure families, cervical colposcopy/LEEP and uterine hysteroscopy/ablation, and both get billed wrong the same way: submitting the component code alongside the comprehensive code because the operative note describes both steps, when NCCI only ever pays for the more extensive one. This guide states the exact pairs, which ones can never be overridden with a modifier, and the one high-volume pair (58300/58301) that has no NCCI edit at all but denies anyway.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-obstetrics-gynecology.html">OB/GYN billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of gentle orbiting arcs around a central circle, symbolizing the ongoing cycle of obstetric and gynecologic care">
-  <!-- outer orbit hint, sparse arc -->
-  <path d="M 322.5 97.11 A 165 165 0 0 1 382.89 322.5" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- secondary orbit -->
-  <path d="M 329.27 272.49 A 95 95 0 1 1 207.51 150.23" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- primary orbit arc -->
-  <path d="M 117.84 195.54 A 130 130 0 1 1 284.46 362.16" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- core circle -->
-  <circle cx="240" cy="240" r="45" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- small radiating ticks from core -->
-  <path d="M 201.03 262.5 L 183.71 272.5" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
-  <path d="M 240 195 L 240 175" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
-  <path d="M 284.32 247.81 L 304.01 251.28" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
-
-  <!-- accented segment on the primary orbit -->
-  <path d="M 284.46 362.16 A 130 130 0 0 1 195.54 362.16" fill="none" stroke="var(--cat-surgical)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- accent point on the orbit -->
-  <circle cx="240" cy="370" r="7" fill="var(--cat-surgical)" />
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-obstetrics-gynecology-wide.svg" alt="OB/GYN: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-edit-pairs-at-a-glance">The edit pairs at a glance</a></li>
+      <li><a href="#colposcopy-57454-and-its-component-codes">Colposcopy: 57454 and its component codes</a></li>
+      <li><a href="#leep-57460-and-57461-bundle-into-57400">LEEP: 57460 and 57461 bundle into 57400</a></li>
+      <li><a href="#hysteroscopy-vs-ablation-58558-58563-and-58120">Hysteroscopy vs. ablation: 58558, 58563, and 58120</a></li>
+      <li><a href="#5830058301-no-ncci-edit-denies-anyway">58300/58301: no NCCI edit, denies anyway</a></li>
+      <li><a href="#modifier-indicator-logic-when-an-edit-can-and-cant-be-overri">Modifier-indicator logic: when an edit can and can't be overridden</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -263,7 +255,7 @@
     </ul>
   </section>
 
-  <h2>The edit pairs at a glance</h2>
+  <h2 id="the-edit-pairs-at-a-glance">The edit pairs at a glance</h2>
   <p>Five relationships drive nearly all of OB/GYN's NCCI denial volume. None of them are close calls once you know which pair you're looking at, the failure mode is almost always billing the component code out of habit alongside the comprehensive one, because the operative note genuinely describes both steps.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -279,25 +271,25 @@
     </table>
   </div>
 
-  <h2>Colposcopy: 57454 and its component codes</h2>
+  <h2 id="colposcopy-57454-and-its-component-codes">Colposcopy: 57454 and its component codes</h2>
   <p>57454 reports colposcopy of the cervix including the upper/adjacent vagina, with biopsy of the cervix and endocervical curettage, it's the most extensive routine colposcopy code and the one most other colposcopy services collapse into when performed the same session. NCCI bundles three codes into it as components: 57452 (colposcopy alone, no biopsy), 57455 (colposcopy with cervical biopsy, no ECC), and 57421 (colposcopy of the vagina with biopsy). Billing-industry sources describe this bundle as permanent, carrying a modifier indicator of 0, when 57454 was performed, the component codes are not separately payable under any circumstances, and no modifier changes that outcome.</p>
   <p>57454 also interacts with 57522 (conization of the cervix, cold knife or laser, with or without D&amp;C, with or without repair) when both are performed the same session, a colposcopy-guided biopsy followed by a cold-knife cone in the same operative encounter is a documentation and edit-review situation, not an automatic bundle the way the 57452/57455/57421 pairs are. Review the specific pair in the NCCI PTP file before billing both, because whether an override is even possible depends on that pair's own indicator, not on the indicator for 57454's other component codes.</p>
   <p>The practical trap: a colposcopy note commonly documents visualization, then biopsy, then ECC as three distinct steps, which reads to a coder as three billable events. It isn't. If the ECC and biopsy both happened, 57454 alone captures all of it; billing 57455 or 57452 on top is what triggers the CO-97 denial, and appending 59 to force it through doesn't work, because the pair's indicator is 0.</p>
 
-  <h2>LEEP: 57460 and 57461 bundle into 57400</h2>
+  <h2 id="leep-57460-and-57461-bundle-into-57400">LEEP: 57460 and 57461 bundle into 57400</h2>
   <p>57460 reports colposcopy with loop electrode biopsy of the cervix (LEEP biopsy, typically limited to the exocervix); 57461 reports colposcopy with loop electrode conization (a deeper excision including the transformation zone and often a portion of the endocervix). Both bundle into 57400 (dilation of the vagina under anesthesia) under NCCI when both are performed in the same session. The colposcope has to be used for actual examination of the cervix, not merely to guide the loop electrode, or the documentation doesn't support billing 57460/57461 as colposcopy-based codes in the first place, a distinction auditors check specifically in this family.</p>
   <p>The coder-facing decision that matters more day to day is 57460 versus 57461, not the 57400 bundle: 57460 is the correct code when the excision is limited to exocervical tissue, while 57461 is correct when the excision includes the transformation zone and possibly a portion of the endocervical canal. Billing 57461 when the operative note only supports 57460's more limited excision is an upcoding exposure independent of the NCCI edit against 57400.</p>
 
-  <h2>Hysteroscopy vs. ablation: 58558, 58563, and 58120</h2>
+  <h2 id="hysteroscopy-vs-ablation-58558-58563-and-58120">Hysteroscopy vs. ablation: 58558, 58563, and 58120</h2>
   <p>58558 reports diagnostic or operative hysteroscopy with sampling (biopsy) of the endometrium and/or polypectomy, with or without D&amp;C. 58563 reports hysteroscopy with endometrial ablation. When both are performed in the same operative session, a common real-world scenario, since a surgeon frequently biopsies or removes a polyp before proceeding to ablate, only 58563 is billable. Billing-industry sources consistently describe this as a mutually exclusive relationship: the diagnostic hysteroscopic visualization required to perform 58558 is treated as inherent to the ablation approach itself, so 58558 doesn't survive as a separate line even with modifier 59 or an X-modifier appended.</p>
   <p>58120 (dilation and curettage, diagnostic and/or therapeutic, non-obstetric) follows the same logic one level down: when a D&amp;C is performed as part of either 58558 or 58563 in the same session, it is not separately reportable. CPT's own coding guidance treats a same-session D&amp;C as included in the hysteroscopy code, not an add-on. The recurring documentation trap here mirrors colposcopy, the operative note narrates biopsy, polypectomy, and D&amp;C as sequential steps of one procedure, and a coder unfamiliar with the bundle bills each step as its own line.</p>
   <p>⚠️ Billing-industry sources (AAPC coding newsletters, payer-facing coding guides) describe the 57454/57452/57455/57421 bundle as carrying a modifier indicator of 0, and describe the 58558/58563 relationship the same way. This build could not open CMS's primary NCCI PTP edit file or Policy Manual directly to confirm the current indicator value for any of these specific pairs against the source, CMS's site returned an access error to every fetch attempt made while researching this page, so treat the indicator values above as reported-but-unconfirmed and verify the current pair value in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before building any of them into a scrubber rule, since these values change quarterly.</p>
 
-  <h2>58300/58301: no NCCI edit, denies anyway</h2>
+  <h2 id="5830058301-no-ncci-edit-denies-anyway">58300/58301: no NCCI edit, denies anyway</h2>
   <p>Same-day IUD insertion (58300) and removal (58301), a reinsertion, or an exchange for a new device, is the one pair on this page with no formal NCCI procedure-to-procedure edit behind it at all. Neither code carries a global period, and the NCCI file doesn't bundle one into the other, so nothing in the edit set technically blocks billing both lines the same date, and no modifier is required by the edit logic. ACOG's own coding guidance confirms both codes can be reported together from a pure coding standpoint.</p>
   <p>Payer behavior doesn't follow the edit file, though. Billing-industry sources report that very few payers actually reimburse both lines on the same date of service, most price the claim down to whichever code has the lower relative value, insertion or removal, regardless of the missing edit. That means the fix isn't a modifier at all; it's payer-specific claim strategy. Track which payers in your mix pay only one line on a same-day reinsertion, and for those payers, submit only the insertion code (58300) rather than both lines, so you aren't writing off a denied or down-coded second line after the fact. For payers that do reimburse both, append modifier 51 to the second procedure per standard multiple-procedure sequencing.</p>
 
-  <h2>Modifier-indicator logic: when an edit can and can't be overridden</h2>
+  <h2 id="modifier-indicator-logic-when-an-edit-can-and-cant-be-overri">Modifier-indicator logic: when an edit can and can't be overridden</h2>
   <p>Every pair above sits under one of three NCCI modifier indicator values, and the indicator, not the documentation, not how well the operative note is written, decides whether an override is even possible.</p>
   <ul class="check-list">
     <li><span class="warn">0</span><span><b>Never bypassable.</b> No modifier, however well-documented the distinct service, overrides it. The colposcopy family (57454 over 57452/57455/57421) and the 58558/58563 hysteroscopy-ablation pair are both reported this way. Appending 59 or an X-modifier to force a claim through against a 0-indicator pair doesn't work and reads as an audit flag if it's used routinely.</span></li>
@@ -331,7 +323,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Can 57454 and 57455 be billed together in the same colposcopy session?</summary><p>No. 57454 (colposcopy with biopsy of the cervix and endocervical curettage) is the more extensive service, and NCCI bundles the more limited 57452, 57455, and 57421 into it as component codes carrying a modifier indicator of 0. When the more extensive procedure was performed, only 57454 is reported; billing 57455 alongside it denies as a bundled service regardless of any modifier appended.</p></details>
     <details class="faq-item"><summary>Do we need a modifier when 58558 and 58563 are performed together?</summary><p>No modifier makes this pair separately payable. Billing-industry sources consistently describe 58558 (hysteroscopy with biopsy, polypectomy, or D&amp;C) as bundled into 58563 (hysteroscopy with endometrial ablation) under a mutually exclusive relationship whenever both are performed in the same operative session, because the diagnostic hysteroscopic visualization is inherent to the ablation approach. Only 58563 is billed. Confirm the current indicator in the CMS NCCI PTP Edits Lookup Tool before relying on it operationally, since this build could not open CMS's primary edit file directly.</p></details>
@@ -343,7 +335,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-obstetrics-gynecology.html">OB/GYN billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-obstetrics-gynecology-denials-appeals.html">OB/GYN denials and appeals: the codes, the causes, and the fix <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -351,6 +343,7 @@
     <li><a href="denials-management.html">Denials management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialties.html">All 30 specialties <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -399,6 +392,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="In-house vs outsourced, Resource guide">
+  <defs>
+    <linearGradient id="bginhousevsoutsourcedbilling" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e293b"/><stop offset="1" stop-color="#334155"/></linearGradient>
+    <radialGradient id="glinhousevsoutsourcedbilling" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#5eead4" stop-opacity="0.5"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+    <pattern id="grinhousevsoutsourcedbilling" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cpinhousevsoutsourcedbilling"><rect x="800" y="145" width="340" height="340" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bginhousevsoutsourcedbilling)"/>
+  <rect width="1200" height="630" fill="url(#grinhousevsoutsourcedbilling)"/>
+  <rect width="1200" height="630" fill="url(#glinhousevsoutsourcedbilling)"/>
+  <circle cx="1040" cy="130" r="220" fill="#5eead4" fill-opacity="0.14"/>
+  <circle cx="1110" cy="550" r="150" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="800" y="145" width="340" height="340" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cpinhousevsoutsourcedbilling)"><g transform="translate(820 165) scale(0.6250)">
+  
+  <line x1="240" y1="195" x2="240" y2="335" stroke="#ffffff" stroke-width="5.10" stroke-linecap="round"/>
+  
+  <path d="M240,335 L205,365 M240,335 L275,365" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="4.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="205" y1="365" x2="275" y2="365" stroke="#ffffff" stroke-opacity=".7" stroke-width="4.25" stroke-linecap="round"/>
+  
+  <line x1="145" y1="175" x2="335" y2="215" stroke="#ffffff" stroke-width="5.10" stroke-linecap="round"/>
+  
+  <path d="M145,175 L115,250 M145,175 L165,250" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <path d="M115,250 Q140,278 165,250" fill="none" stroke="#ffffff" stroke-width="5.10" stroke-linecap="round"/>
+  
+  <path d="M335,215 L305,295 M335,215 L355,295" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <path d="M305,295 Q330,323 355,295" fill="none" stroke="#ffffff" stroke-width="5.10" stroke-linecap="round"/>
+  
+  <circle cx="145" cy="175" r="3.5" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40"/>
+  <circle cx="335" cy="215" r="3.5" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40"/>
+  
+  <circle cx="240" cy="195" r="7" fill="#5eead4"/>
+</g></g>
+  <rect x="90" y="118" width="72" height="8" rx="4" fill="#5eead4"/>
+  <text x="90" y="178" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">PRACTICE RESOURCES</text>
+  <text x="90" y="292" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="100" font-weight="800" fill="#ffffff" letter-spacing="-2">In-house vs</text>
+  <text x="90" y="400" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="100" font-weight="800" fill="#ffffff" letter-spacing="-2">outsourced</text>
+  <text x="90" y="462" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" fill="#ffffff" fill-opacity="0.85">Resource guide</text>
+  <text x="90" y="560" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>

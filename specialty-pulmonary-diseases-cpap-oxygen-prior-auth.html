@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="CPAP and Oxygen Prior Authorization: Avoiding the 30% Denial Rate | Verified RCM">
 <meta name="twitter:description" content="CPAP and oxygen prior auth by the numbers: LCD L33718/L33800/L33797 criteria, AHI/RDI and blood-gas thresholds, the 2026 DMEPOS PA master list, and the two-part re-evaluation payers actually check.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,41 +225,27 @@
       <p class="lede">CPAP and home oxygen are two of the most common items pulmonology bills and two of the most heavily gated. Both HCPCS E0601 (CPAP) and E1390 (oxygen concentrator) sit on CMS's Required Prior Authorization list for DMEPOS, both are governed by DME MAC local coverage policy with specific numeric thresholds, and both carry a second authorization checkpoint after the initial approval that a surprising number of practices never build into their workflow. This guide goes past "get a prior auth" into the actual AHI/RDI and blood-gas numbers, the document IDs behind them, and the two-part re-evaluation that decides whether coverage continues past the first 90 days.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-pulmonary-diseases.html">pulmonary medicine billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a branching bronchial tree, representing pulmonary and respiratory diseases">
-  <path d="M150,120 C90,180 80,300 140,380" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M330,120 C390,180 400,300 340,380" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M240,110 L240,192" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M240,192 Q210,215 190,252" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M240,192 Q270,215 290,252" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M190,252 Q168,278 150,302" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M190,252 Q202,282 210,312" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M290,252 Q278,282 270,312" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M290,252 Q312,278 330,302" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M150,302 Q138,322 130,342" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M150,302 Q158,325 165,347" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M210,312 Q202,332 195,352" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M210,312 Q218,330 226,348" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M270,312 Q262,330 254,348" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M270,312 Q278,332 285,352" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M330,302 Q322,325 315,347" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M330,302 Q342,322 350,342" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M130,342 Q122,358 118,372" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M195,352 Q190,366 188,378" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M285,352 Q290,366 293,378" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M350,342 Q358,358 362,372" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <circle cx="130" cy="342" r="4.5" fill="var(--cat-medical)"/>
-  <circle cx="226" cy="348" r="4.5" fill="var(--cat-medical)"/>
-  <circle cx="350" cy="342" r="4.5" fill="var(--cat-medical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-pulmonary-diseases-wide.svg" alt="Pulmonary diseases: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-this-pair-of-items-denies-harder-than-almost-anything-el">Why this pair of items denies harder than almost anything else in pulmonology</a></li>
+      <li><a href="#cpap-prior-authorization-the-ahirdi-gate">CPAP prior authorization: the AHI/RDI gate</a></li>
+      <li><a href="#when-a-bi-level-rad-device-replaces-cpap-and-needs-its-own-a">When a bi-level RAD device replaces CPAP, and needs its own authorization</a></li>
+      <li><a href="#oxygen-therapy-group-i-vs-group-ii-and-the-modifier-that-pro">Oxygen therapy: Group I vs. Group II and the modifier that proves it</a></li>
+      <li><a href="#the-cpap-re-evaluation-one-requirement-two-parts">The CPAP re-evaluation: one requirement, two parts</a></li>
+      <li><a href="#accessory-resupply-the-quiet-volume-denial">Accessory resupply: the quiet volume denial</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -271,10 +256,10 @@
     </ul>
   </section>
 
-  <h2>Why this pair of items denies harder than almost anything else in pulmonology</h2>
+  <h2 id="why-this-pair-of-items-denies-harder-than-almost-anything-el">Why this pair of items denies harder than almost anything else in pulmonology</h2>
   <p>CPAP and oxygen aren't denied because the equipment is clinically wrong for the patient, they're denied because the claim has to clear three separate gates and most workflows are only built to clear one. The first gate is a DME MAC local coverage determination with a specific numeric threshold: an AHI/RDI cutoff for CPAP, a blood-gas cutoff for oxygen. The second gate is prior authorization itself, which for both items is a condition of payment under CMS's DMEPOS Required Prior Authorization program, not a courtesy check. The third gate is a re-evaluation checkpoint after the initial approval, which most practices treat as a formality and most payers treat as a hard requirement. Miss any one of the three and the claim denies regardless of how appropriate the therapy is.</p>
 
-  <h2>CPAP prior authorization: the AHI/RDI gate</h2>
+  <h2 id="cpap-prior-authorization-the-ahirdi-gate">CPAP prior authorization: the AHI/RDI gate</h2>
   <p>CPAP (HCPCS <code>E0601</code>) is governed by <b>LCD L33718, Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea</b>, jointly published by DME MACs CGS Administrators and Noridian Healthcare Solutions, effective 01/01/2024, with its companion Policy Article A52467 last updated 05/08/2024. The medical necessity threshold is a specific numeric split, not a single cutoff:</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -290,14 +275,14 @@
   <p>The 5&ndash;14 tier is where most preventable CPAP denials start. A sleep study result alone is enough to order the device clinically, but it is not enough to satisfy the LCD unless the qualifying symptom or comorbidity is written into the same chart, not implied by the diagnosis, stated. A note that says "OSA, AHI 9" without naming daytime sleepiness, a mood disorder, or one of the listed comorbidities reads as unqualified on review even when the patient's condition is real.</p>
   <p>E0601 sits on CMS's <b>DMEPOS Required Prior Authorization Master List</b>, which means an approved prior authorization number is a condition of payment, not just good practice. CMS's January 13, 2026 Federal Register update to the master list took effect April 13, 2026 and added several oxygen-related codes to the parallel face-to-face/written-order-prior-to-delivery requirement, confirm your supplier's current list placement before assuming an item's PA status hasn't changed year over year, since these lists are revised on their own schedule.</p>
 
-  <h2>When a bi-level RAD device replaces CPAP, and needs its own authorization</h2>
+  <h2 id="when-a-bi-level-rad-device-replaces-cpap-and-needs-its-own-a">When a bi-level RAD device replaces CPAP, and needs its own authorization</h2>
   <p>Respiratory assist devices (bi-level PAP, HCPCS <code>E0470</code>/<code>E0471</code> depending on backup-rate capability) are governed by a separate policy: <b>LCD L33800, Respiratory Assist Devices</b>, from the same two DME MACs, effective 06/09/2025. RAD coverage applies to patients who fail CPAP therapy, who have OSA with a hypoventilation component, or who have a separate qualifying diagnosis such as severe COPD with hypercapnia or a restrictive thoracic disorder, it is not simply "CPAP didn't work, try the next device."</p>
   <div class="protip">
     <span class="protip-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.7h5.4c.1-.7.4-1.3.9-1.7A6 6 0 0 0 12 3Z"></path></svg></span>
     <div><div class="protip-label">Pro tip</div><p>Because L33718 and L33800 are two separate LCDs, an existing CPAP prior authorization does not carry over to a RAD device. Treat the switch as a new order from scratch: new qualifying documentation against L33800's criteria, a new Standard Written Order naming the RAD device specifically, and a new PA submission, not an amendment request against the old CPAP authorization number.</p></div>
   </div>
 
-  <h2>Oxygen therapy: Group I vs. Group II and the modifier that proves it</h2>
+  <h2 id="oxygen-therapy-group-i-vs-group-ii-and-the-modifier-that-pro">Oxygen therapy: Group I vs. Group II and the modifier that proves it</h2>
   <p>Home oxygen equipment is governed by <b>LCD L33797, Oxygen and Oxygen Equipment</b>, from CGS and Noridian, effective 04/01/2023, with companion Policy Article A52514 last updated 05/09/2024. Coverage runs on a blood-gas result placed into one of two tiers, and the tier a patient falls into determines both what else has to be in the chart and which modifier goes on the claim.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -327,10 +312,10 @@
   </div>
   <p>Group II coverage carries its own continuation checkpoint, separate from CPAP's: a beneficiary who initially qualified under Group II needs to be re-evaluated and retested between the 61st and 90th day of therapy for coverage to continue past that window. Group I doesn't carry the same automatic retest requirement. Treating Group I and Group II as interchangeable for follow-up scheduling purposes is how a Group II patient's oxygen quietly lapses at day 91.</p>
 
-  <h2>The CPAP re-evaluation: one requirement, two parts</h2>
+  <h2 id="the-cpap-re-evaluation-one-requirement-two-parts">The CPAP re-evaluation: one requirement, two parts</h2>
   <p>Continued CPAP coverage past the initial trial hinges on a single encounter between the 31st and 91st day of therapy that has to do two things at once: the treating practitioner documents that the patient's OSA symptoms have improved, and that same visit reviews the objective adherence data pulled from the device, use on at least 70% of nights, at least 4 hours per night, across a consecutive 30-day period within the first 90 days. Both elements need to trace to the same encounter. A compliance report faxed over on its own, with no accompanying visit note describing symptomatic improvement, satisfies the data half of the requirement and leaves the clinical half unaddressed, and payers that scrutinize CPAP continuation claims are checking for both.</p>
 
-  <h2>Accessory resupply: the quiet volume denial</h2>
+  <h2 id="accessory-resupply-the-quiet-volume-denial">Accessory resupply: the quiet volume denial</h2>
   <p>Mask and tubing resupply generates far more line-item denials than the initial device authorization, because it's high-volume, low-dollar-per-claim, and easy to automate past the point of compliance. DME MAC guidance publishes maximum replacement frequencies per accessory, these are ceilings tied to actual patient need and contact, not an entitlement to auto-ship on a calendar:</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -346,7 +331,7 @@
   </div>
   <p>A resupply denial almost never means the patient stopped needing the item, it means the claim shipped ahead of the documented need date, or without the patient contact that CMS requires suppliers to log before each resupply shipment. Build the contact log into the resupply workflow itself; reconstructing it after a post-payment audit request rarely produces a usable record.</p>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Name the specific symptom or comorbidity in the note whenever a CPAP AHI/RDI result falls in the 5&ndash;14 range.</li>
@@ -370,7 +355,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What AHI or RDI qualifies a patient for CPAP coverage under Medicare?</summary><p>An AHI or RDI of 15 or more events per hour, with a minimum of 30 events on the study, qualifies on its own under LCD L33718. Between 5 and 14 events per hour, with a minimum of 10 events, only qualifies when the chart also documents excessive daytime sleepiness, impaired cognition, a mood disorder, or insomnia, or a history of hypertension, ischemic heart disease, or stroke. A study showing an AHI of 8 with no symptom or comorbidity documentation doesn't meet the coverage bar even though it shows real disease.</p></details>
     <details class="faq-item"><summary>Do we need a new prior authorization when a patient switches from CPAP to a bi-level RAD device?</summary><p>Yes. CPAP and RAD devices sit under two separate LCDs (L33718 for CPAP, L33800 for respiratory assist devices), each with its own medical necessity criteria and its own authorization. A patient failing CPAP doesn't automatically qualify for a RAD device on the strength of the original CPAP order; the switch needs its own qualifying documentation, a new order specific to the RAD device, and its own prior authorization submission, not an amendment to the existing CPAP authorization.</p></details>
@@ -382,13 +367,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-pulmonary-diseases.html">Pulmonary medicine billing and coding: the complete guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-pulmonary-diseases-copd-asthma-icd10.html">ICD-10 coding for COPD, asthma, and overlap syndrome <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-pulmonary-diseases-critical-care-ventilator-billing.html">Ventilator management and critical care time billing for pulmonology <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-pulmonary-diseases-sleep-study-coding.html">Sleep study and home sleep apnea test coding: CPT vs. HCPCS G-codes <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -437,6 +423,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

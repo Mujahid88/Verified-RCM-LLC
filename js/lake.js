@@ -1,5 +1,6 @@
-/* Verified RCM - lake home page: mobile drawer (accessible), nothing else.
-   Search, reviews slider, counters and the cookie banner still come from js/main.js. */
+/* Verified RCM: mobile drawer, home page widgets, and the contents navigation
+   on article pages. Search, reviews slider, counters and the cookie banner
+   come from js/main.js. */
 (function () {
   'use strict';
   var burger = document.getElementById('drawerOpen');
@@ -157,18 +158,6 @@
       if (empty) empty.classList.toggle('is-shown', !any);
     });
   }
-
-  /* Pointer tilt on the big cards */
-  if (!reduce && window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    document.querySelectorAll('[data-tilt]').forEach(function (el) {
-      el.addEventListener('pointermove', function (e) {
-        var r = el.getBoundingClientRect();
-        var x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
-        el.style.transform = 'perspective(900px) rotateX(' + (-y * 4) + 'deg) rotateY(' + (x * 5) + 'deg) translateY(-3px)';
-      });
-      el.addEventListener('pointerleave', function () { el.style.transform = ''; });
-    });
-  }
 })();
 
 /* Safety net for the scroll reveal in js/main.js: anything that has scrolled
@@ -187,4 +176,54 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll);
   window.addEventListener('load', function () { setTimeout(sweep, 50); });
+})();
+
+/* Contents navigation ("In this guide") on article pages: collapsed on small
+   screens, open and sticky on wide ones, with the current section highlighted. */
+(function () {
+  'use strict';
+  var toc = document.querySelector('.toc');
+  if (!toc) return;
+  var summary = toc.querySelector('summary');
+  var mq = window.matchMedia('(max-width: 1100px)');
+
+  function sync() { if (mq.matches) toc.removeAttribute('open'); else toc.setAttribute('open', ''); }
+  sync();
+  if (mq.addEventListener) mq.addEventListener('change', sync); else if (mq.addListener) mq.addListener(sync);
+  // On wide screens the list is always shown, so the heading is not a toggle.
+  if (summary) summary.addEventListener('click', function (e) { if (!mq.matches) e.preventDefault(); });
+
+  var links = [].slice.call(toc.querySelectorAll('a[href^="#"]'));
+  var heads = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+  if (!links.length) return;
+
+  var active = -1, pending = false;
+  function update() {
+    pending = false;
+    var idx = 0, line = 140;
+    for (var i = 0; i < heads.length; i++) {
+      if (heads[i] && heads[i].getBoundingClientRect().top <= line) idx = i;
+    }
+    // At the very bottom, the last section is the current one.
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) idx = heads.length - 1;
+    // Above the first heading, nothing is current.
+    if (heads[0] && heads[0].getBoundingClientRect().top > line) idx = -1;
+    if (idx === active) return;
+    active = idx;
+    links.forEach(function (a, i) {
+      var on = i === idx;
+      a.classList.toggle('is-active', on);
+      if (on) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+    });
+    // Keep the highlighted entry visible inside a long, scrollable list.
+    var cur = links[idx];
+    if (cur && toc.scrollHeight > toc.clientHeight && !mq.matches) {
+      var top = cur.offsetTop, h = cur.offsetHeight;
+      if (top < toc.scrollTop + 40 || top + h > toc.scrollTop + toc.clientHeight - 20) toc.scrollTop = Math.max(0, top - toc.clientHeight / 2);
+    }
+  }
+  function onScroll() { if (!pending) { pending = true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
 })();

@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="ENT Claim Denials and Appeals: The Fixes That Actually Work | Verified RCM">
 <meta name="twitter:description" content="Top ENT denial triggers mapped to the CARC pattern, the fix, and whether it's appealable: laterality, modifier 50 misuse, unbundled sinus codes, audiometry, prior auth, and 95165 overbilling.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,15 +225,28 @@
       <p class="lede">Not every ENT denial is a fight worth having, and the practices that recover the most revenue know the difference before staff time gets spent. This guide works through the nine denial patterns that drive most of ENT's avoidable write-offs, the CARC pattern each one returns, the specific fix, and a direct answer on whether it's appealable. Some aren't, and pretending otherwise wastes the staff hours that could be closing the claims that actually are.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-ent.html">ENT billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art for ENT and otolaryngology: a small spiral, a gentle arc, and a straight line">
-  <path d="M190,205 L189.2,212.2 L179.2,215.1 L170,205 L175.8,189.1 L195.8,186.2 L210,205 L199.2,229.5 L169.2,232.4 L150,205" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M140,320 Q240,268 340,320" fill="none" stroke="var(--muted)" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M300,150 L235,262" fill="none" stroke="var(--cat-surgical)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="300" cy="150" r="4.5" fill="var(--cat-surgical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-ent-wide.svg" alt="ENT: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-nine-denials-that-drive-ents-write-offs">The nine denials that drive ENT's write-offs</a></li>
+      <li><a href="#missing-laterality-on-ear-and-sinus-diagnoses">Missing laterality on ear and sinus diagnoses</a></li>
+      <li><a href="#modifier-50-on-a-midline-structure-not-appealable">Modifier 50 on a midline structure: not appealable</a></li>
+      <li><a href="#unbundled-sinus-codes-and-the-tube-placement-duplicate">Unbundled sinus codes and the tube-placement duplicate</a></li>
+      <li><a href="#audiometry-component-codes-billed-with-92557">Audiometry component codes billed with 92557</a></li>
+      <li><a href="#medical-necessity-gaps-on-laryngoscopy-and-audiometry">Medical necessity gaps on laryngoscopy and audiometry</a></li>
+      <li><a href="#missing-or-expired-prior-authorization-balloon-sinuplasty-an">Missing or expired prior authorization: balloon sinuplasty and cochlear implants</a></li>
+      <li><a href="#95165-unit-overbilling-past-the-mue">95165 unit overbilling past the MUE</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -245,7 +257,7 @@
     </ul>
   </section>
 
-  <h2>The nine denials that drive ENT's write-offs</h2>
+  <h2 id="the-nine-denials-that-drive-ents-write-offs">The nine denials that drive ENT's write-offs</h2>
   <p>Pairing the denial with the CARC pattern it actually returns, the correct next action, and a direct appealable-or-not answer is what turns a denial list into something a biller can act on the same day it lands in the work queue.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -265,30 +277,30 @@
     </table>
   </div>
 
-  <h2>Missing laterality on ear and sinus diagnoses</h2>
+  <h2 id="missing-laterality-on-ear-and-sinus-diagnoses">Missing laterality on ear and sinus diagnoses</h2>
   <p>This is the single most preventable denial in ENT, and it's almost never a medical necessity problem in disguise, it's a coding gap on a chart that already has the answer. Chronic sinusitis has a full site-specific ICD-10 family (<code>J32.0</code> maxillary, <code>J32.1</code> frontal, <code>J32.2</code> ethmoidal, <code>J32.3</code> sphenoidal) next to the unspecified default (<code>J32.9</code>), and otitis media carries the same pattern with laterality on top (<code>H65.491</code>/<code>H65.492</code>/<code>H65.493</code> right/left/bilateral versus <code>H65.499</code> unspecified; <code>H66.91</code>/<code>H66.92</code>/<code>H66.93</code> the same way). A claim billed unspecified when the note names the site and side denies as lacking the specificity the payer's coverage policy expects.</p>
   <p>This is a correction, not an appeal. Pull the chart, confirm the side and site actually documented, and resubmit with the correct code, there's rarely an argument to make beyond "here's the code the existing documentation already supports." The upstream fix: flag any FESS, tympanostomy, or otitis media claim about to go out with an unspecified-side code as a hold for review before submission, not after the remit comes back.</p>
 
-  <h2>Modifier 50 on a midline structure: not appealable</h2>
+  <h2 id="modifier-50-on-a-midline-structure-not-appealable">Modifier 50 on a midline structure: not appealable</h2>
   <p>Septoplasty (<code>30520</code>) billed with modifier 50 denies because the claim makes an anatomic claim that isn't true, there is one nasal septum, not two. Unlike almost every other denial on this page, no documentation and no appeal letter changes that fact, because the problem isn't insufficient evidence, it's that the modifier describes anatomy the patient doesn't have. Void the bilateral line and resubmit the code once, unmodified.</p>
   <p>This denial keeps recurring because septoplasty is frequently performed in the same session as a genuinely bilateral procedure, turbinate reduction, bilateral FESS, and the turbinate line's bilateral logic gets carried over to the septum line by habit. The scrubber-level fix is a hard rule: block modifier 50 from ever attaching to 30520, or any other single-midline-structure code, at claim build, not at denial.</p>
 
-  <h2>Unbundled sinus codes and the tube-placement duplicate</h2>
+  <h2 id="unbundled-sinus-codes-and-the-tube-placement-duplicate">Unbundled sinus codes and the tube-placement duplicate</h2>
   <p><code>31254</code> (partial/anterior ethmoidectomy) is a Column 2 component of <code>31255</code> (total ethmoidectomy) on the same side, carrying a modifier-1 indicator, bypassable only with documentation the two were performed on genuinely separate sides or sessions, never both on the same side in one encounter. Before drafting anything, confirm the indicator on the specific pair billed, because a different sinus pair on the claim might carry a 0 indicator instead, which ends the appeal before it starts.</p>
   <p>The tube-placement duplicate is related but distinct: <code>69433</code> (local/topical anesthesia) and <code>69436</code> (general anesthesia) describe the same service delivered two different ways, not two separate ones. Billing both for the same ear denies as a duplicate and isn't appealable, check the anesthesia record and rebill whichever single code it supports.</p>
 
-  <h2>Audiometry component codes billed with 92557</h2>
+  <h2 id="audiometry-component-codes-billed-with-92557">Audiometry component codes billed with 92557</h2>
   <p><code>92557</code> (comprehensive audiometry, air and bone with speech) already includes the work of <code>92552</code> (pure tone air only), <code>92553</code> (air and bone), <code>92555</code> (speech threshold), and <code>92556</code> (speech threshold with recognition). Billing any of the four alongside 92557 the same date denies as bundled, and the denial is usually correct, the comprehensive code genuinely includes the narrower test. This is a correction, not an appeal: drop the component code and bill 92557 alone. A component code is legitimately separate only when the encounter performed just that limited testing and never the comprehensive workup at all.</p>
 
-  <h2>Medical necessity gaps on laryngoscopy and audiometry</h2>
+  <h2 id="medical-necessity-gaps-on-laryngoscopy-and-audiometry">Medical necessity gaps on laryngoscopy and audiometry</h2>
   <p>Unlike the denials above, a CO-50 medical necessity denial on laryngoscopy or audiometry is genuinely worth fighting when the clinical picture supports it, the claim usually failed on linkage, not on the facts. The diagnosis on the claim has to be one the payer's coverage policy names as supporting the specific test; a vague symptom code rarely survives review even when the clinical reasoning was sound. Vestibular and audiologic function testing coverage is set by Medicare Administrative Contractor rather than nationally, Novitas Solutions (<code>L35007</code>), Palmetto GBA (<code>L34537</code>), and First Coast Service Options (<code>L33966</code>) each publish their own article, and "per CMS" without naming the specific MAC rarely moves a reviewer.</p>
   <p>The appeal needs three things: the specific symptom-based ICD-10 the exam documents (hearing loss, tinnitus, hoarseness, stridor, not a general visit reason), the exam findings establishing it, and the MAC's article cited by number. ⚠️ <b>Unverified:</b> this build could not confirm the specific covered-diagnosis lists inside L35007, L34537, or L33966 against CMS's article text directly (automated retrieval returned access errors), pull the current article text yourself before finalizing appeal language, since that list is exactly what the appeal has to match.</p>
 
-  <h2>Missing or expired prior authorization: balloon sinuplasty and cochlear implants</h2>
+  <h2 id="missing-or-expired-prior-authorization-balloon-sinuplasty-an">Missing or expired prior authorization: balloon sinuplasty and cochlear implants</h2>
   <p>This is the denial most billers instinctively want to appeal and most consistently can't. When a payer requires prospective authorization and none was obtained, CO-197 usually isn't a reviewable claims decision at all, it's the payer enforcing a contractual precondition that wasn't met, and standard medical-necessity appeal language doesn't address that gap no matter how strong the clinical case is. The one real path is a retroactive authorization request, which most payers treat as discretionary and reserve for exceptional circumstances, not a routine fallback for a missed step.</p>
   <p>Cochlear implantation adds a layer: it sits under National Coverage Determination 50.3, last updated March 26, 2024, which sets its own criteria independent of whatever commercial or MAC-level authorization also applies, both have to be satisfied. Balloon sinuplasty authorization runs almost entirely on commercial medical policy, and criteria differ meaningfully by payer, so a policy pulled for one payer doesn't transfer to a denial from another. The durable fix is upstream: verify authorization at scheduling for every balloon sinuplasty, cochlear implant, and hypoglossal nerve stimulation case, and in Arizona, New Jersey, Ohio, Oklahoma, Texas, or Washington specifically, confirm hypoglossal nerve stimulation claims route through CMS's WISeR AI-assisted authorization pathway rather than standard MAC review, since that 2026 pilot changed the process, not just the paperwork, for Original Medicare patients there.</p>
 
-  <h2>95165 unit overbilling past the MUE</h2>
+  <h2 id="95165-unit-overbilling-past-the-mue">95165 unit overbilling past the MUE</h2>
   <p>Allergen immunotherapy antigen supply (<code>95165</code>) is billed per 1&nbsp;cc dose, and Medicare caps billable doses at 10 per 10&nbsp;cc maintenance vial regardless of how many draws are actually taken. The Medically Unlikely Edit sits at 30 units per date of service; units above that deny automatically. Whether it's appealable depends on the code's MUE Adjudication Indicator (MAI), an MAI of 2 is absolute with no appeal path, while an MAI of 3 can be appealed with documentation the excess units were genuinely distinct and necessary. ⚠️ <b>Unverified:</b> this build could not confirm the specific MAI assigned to 95165 against CMS's primary MUE table directly (the file returned an access error), confirm the current MAI in the CMS NCCI/MUE Lookup Tool before deciding whether an appeal is worth staff time, because writing one against an MAI-2 edit is a guaranteed loss.</p>
   <p>In practice this denial is a workflow failure more often than a clinical dispute, two orders that should have been reconciled into one vial count before submission. A dose-tracking step at antigen preparation prevents it; a denial-stage recovery process doesn't.</p>
 
@@ -305,7 +317,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Is a modifier 50 denial on a septoplasty claim ever appealable?</summary><p>No. The nasal septum is a single midline structure, so a bilateral modifier on a septoplasty claim doesn't describe a real clinical fact, there's no documentation that fixes that, because the anatomy itself doesn't support the modifier. The correct move is to void the bilateral submission and resubmit the code once, without modifier 50, rather than draft an appeal that has no argument to make.</p></details>
     <details class="faq-item"><summary>Why did our balloon sinuplasty or cochlear implant claim deny even though the patient clearly needed it?</summary><p>Almost always because the authorization wasn't on file before the procedure was performed, not because the payer disputes medical necessity after the fact. Most payer contracts treat a missing prospective authorization as a forfeited authorization requirement rather than a reviewable claims decision, so a standard medical-necessity appeal usually doesn't apply, the only real path is a retroactive authorization request, which is discretionary and far less likely to succeed than getting the authorization before scheduling.</p></details>
@@ -317,13 +329,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-ent.html">ENT billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-ent-modifiers.html">ENT billing modifiers: 50, 59/XS, 25, LT/RT and 76 explained <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-ent-ncci-bundling.html">NCCI edits and bundling traps in ENT coding <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -372,6 +385,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

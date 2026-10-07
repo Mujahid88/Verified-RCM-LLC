@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="OB/GYN Modifiers: 25, 22, 59/X, 51, 53, 76/77 | Verified RCM">
 <meta name="twitter:description" content="OB/GYN billing modifiers explained: 25, 22 (documented difficult delivery), 59 and the X-modifiers, 51, 53, 76/77, and the TC/26 split for ultrasound interpretation.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,33 +225,29 @@
       <p class="lede">OB/GYN carries one of the highest reported denial rates in medicine, and a meaningful share of it traces to a modifier that was missing, wrong, or applied without the documentation to back it up. This specialty has more of its billing logic expressed through modifiers than most, a same-day problem visit, a genuinely harder-than-usual delivery, a bundled hysteroscopy pair, a repeat ultrasound, an interpretation split from the equipment that produced it. Get the wrong one on the claim and it either denies outright or, worse, pays at a rate that quietly leaves money on the table. This guide covers every modifier that carries real weight in OB/GYN, with the exact scenario and documentation bar each one requires.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-obstetrics-gynecology.html">OB/GYN billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of gentle orbiting arcs around a central circle, symbolizing the ongoing cycle of obstetric and gynecologic care">
-  <!-- outer orbit hint, sparse arc -->
-  <path d="M 322.5 97.11 A 165 165 0 0 1 382.89 322.5" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- secondary orbit -->
-  <path d="M 329.27 272.49 A 95 95 0 1 1 207.51 150.23" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- primary orbit arc -->
-  <path d="M 117.84 195.54 A 130 130 0 1 1 284.46 362.16" fill="none" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- core circle -->
-  <circle cx="240" cy="240" r="45" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- small radiating ticks from core -->
-  <path d="M 201.03 262.5 L 183.71 272.5" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
-  <path d="M 240 195 L 240 175" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
-  <path d="M 284.32 247.81 L 304.01 251.28" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
-
-  <!-- accented segment on the primary orbit -->
-  <path d="M 284.46 362.16 A 130 130 0 0 1 195.54 362.16" fill="none" stroke="var(--cat-surgical)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- accent point on the orbit -->
-  <circle cx="240" cy="370" r="7" fill="var(--cat-surgical)" />
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-obstetrics-gynecology-wide.svg" alt="OB/GYN: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-obgyn-modifiers-carry-outsized-weight">Why OB/GYN modifiers carry outsized weight</a></li>
+      <li><a href="#modifier-25-same-day-em-with-a-procedure-or-a-global-ob-visi">Modifier 25: same-day E/M with a procedure or a global OB visit</a></li>
+      <li><a href="#modifier-22-increased-procedural-service">Modifier 22: increased procedural service</a></li>
+      <li><a href="#59-and-the-x-modifiers-distinct-gynecologic-procedures">59 and the X-modifiers: distinct gynecologic procedures</a></li>
+      <li><a href="#modifier-51-multiple-procedures-same-day-iud-removal-and-rei">Modifier 51: multiple procedures, same-day IUD removal and reinsertion</a></li>
+      <li><a href="#modifier-53-discontinued-procedure">Modifier 53: discontinued procedure</a></li>
+      <li><a href="#76-and-77-repeat-procedures">76 and 77: repeat procedures</a></li>
+      <li><a href="#tc-and-26-the-ultrasound-interpretation-split">TC and 26: the ultrasound interpretation split</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -263,14 +258,14 @@
     </ul>
   </section>
 
-  <h2>Why OB/GYN modifiers carry outsized weight</h2>
+  <h2 id="why-obgyn-modifiers-carry-outsized-weight">Why OB/GYN modifiers carry outsized weight</h2>
   <p>OB/GYN packs three modifier-dependent decisions into routine care that most specialties only face occasionally: whether an E/M is separately billable alongside a procedure or a global OB visit, whether a bundled pair of GYN procedures was genuinely distinct, and whether the practice or an outside site owns the equipment behind an ultrasound. None of these are edge cases, they come up on a normal week's schedule, and a wrong modifier on any of them either triggers a hard denial or lets a claim pay at a reduced rate that never reaches a denials queue because nothing flagged it.</p>
 
-  <h2>Modifier 25: same-day E/M with a procedure or a global OB visit</h2>
+  <h2 id="modifier-25-same-day-em-with-a-procedure-or-a-global-ob-visi">Modifier 25: same-day E/M with a procedure or a global OB visit</h2>
   <p>Modifier 25 reports a significant, separately identifiable E/M service on the same day as a minor procedure (000/010-day global) or a global OB visit that isn't itself an E/M-billed encounter. The note has to show a distinct chief complaint, its own exam and medical decision making, and a diagnosis that isn't simply the procedure's indication restated. A well-woman exam where the patient also raises a new complaint requiring independent workup, a breast mass, new pelvic pain unrelated to the annual, supports 25. A well-woman exam where the "extra" work is just discussing an incidental finding from the exam itself usually doesn't.</p>
   <p>Two traps recur. Modifier 25 is never appropriate on an E/M billed the same day as a major (90-day global) procedure such as a hysterectomy or a global delivery, that's modifier 24 territory if the visit happens later, during the post-op window, unrelated to the surgery. And a routine antepartum visit inside the global maternity package isn't separately billable at all, with or without 25; the modifier only applies when a genuinely unrelated problem is worked up at that same visit, and the note has to say so explicitly.</p>
 
-  <h2>Modifier 22: increased procedural service</h2>
+  <h2 id="modifier-22-increased-procedural-service">Modifier 22: increased procedural service</h2>
   <p>Modifier 22 reports work that materially exceeded what the code's typical description covers, a documented difficult delivery, extensive adhesiolysis during a hysterectomy, or a procedure complicated by anatomy, prior surgery, or an unanticipated finding. It doesn't apply to E/M services, only to procedures, and it never applies just because a case felt harder than usual to the surgeon; it applies because the operative note documents specific, quantifiable reasons the work exceeded the norm.</p>
   <p>Payers evaluate modifier 22 manually against the submitted note, and the language that actually moves a reviewer follows a consistent pattern: name the complicating factor, connect it to added time or added risk, and where possible quantify it.</p>
   <div class="data-table-wrap">
@@ -286,7 +281,7 @@
   </div>
   <p>There's no fixed percentage increase a payer owes on a 22 claim; reimbursement above the standard rate is discretionary and evaluated case by case. The modifier flags the claim for review, the note has to win it.</p>
 
-  <h2>59 and the X-modifiers: distinct gynecologic procedures</h2>
+  <h2 id="59-and-the-x-modifiers-distinct-gynecologic-procedures">59 and the X-modifiers: distinct gynecologic procedures</h2>
   <p>These override an NCCI bundling edit, but only where the pair's modifier indicator allows an override at all. An indicator of 0 means no modifier changes the outcome, no matter how well the record is documented, check the indicator before reaching for any of these on a colposcopy, hysteroscopy, or biopsy claim. Where an override is possible, CMS guidance and most payer policy prefer the specific X-modifier over generic 59, because it states the reason for the split directly on the claim:</p>
   <ul class="check-list">
     <li><span class="check">XE</span><span><b>Separate encounter.</b> A distinct service performed during a separate patient encounter, for example, a colposcopy performed at a visit weeks apart from an unrelated procedure, not the same-session pairing an NCCI edit is built to catch.</span></li>
@@ -296,23 +291,23 @@
   </ul>
   <p>Use 59 itself only when the distinction is real but doesn't map cleanly to one of the four X-modifiers. What none of these do is create separation that isn't there: 58558 (hysteroscopy with biopsy or polyp removal) bundles into 58563 (hysteroscopy with endometrial ablation) as a mutually exclusive pair in the same session, and no modifier reopens it, because the diagnostic visualization is inherent to the ablation approach itself. Routine use of 59 to force an edit through, rather than reflect a genuinely distinct service, is one of the most reliably audited billing patterns in the specialty.</p>
 
-  <h2>Modifier 51: multiple procedures, same-day IUD removal and reinsertion</h2>
+  <h2 id="modifier-51-multiple-procedures-same-day-iud-removal-and-rei">Modifier 51: multiple procedures, same-day IUD removal and reinsertion</h2>
   <p>Modifier 51 flags multiple procedures in the same session for correct payment sequencing under a payer's multiple-procedure reduction rules, typically paying the highest-valued procedure at the full allowed rate and subsequent procedures at a reduced percentage. A same-day IUD removal and reinsertion, 58301 (removal) plus 58300 (insertion), is the textbook example, since both are procedural, at one encounter, with no global period folding one into the other.</p>
   <p>The catch: because 58300 has no global period, it isn't subject to a formal NCCI edit against 58301, so no modifier is technically required to bill both. Despite that, billing-industry sources consistently report most payers reimburse only the higher-valued code on a same-day reinsertion regardless of modifier 51, treating the pair as an effective bundle without a published edit. The fix is payer-specific: track which payers actually pay both lines, and for the ones that don't, bill only the insertion code rather than absorbing an automatic write-down that looks like a coding error but isn't one.</p>
 
-  <h2>Modifier 53: discontinued procedure</h2>
+  <h2 id="modifier-53-discontinued-procedure">Modifier 53: discontinued procedure</h2>
   <p>Modifier 53 reports a procedure the physician terminated after it began, after anesthesia induction or once the procedure was underway, due to extenuating circumstances or a threat to patient wellbeing. In GYN this shows up most on a planned hysteroscopic procedure stopped after a uterine perforation risk becomes apparent, or a laparoscopic case aborted when dense adhesions make continuation unsafe. It doesn't apply to a procedure that simply changed approach mid-case (a laparoscopic hysterectomy converted to open, for example), that's billed as the procedure actually completed.</p>
   <p>⚠️ <b>The trap:</b> modifier 53 is the physician-side modifier only. On the facility or ambulatory surgery center side, the correct modifiers are 73 (discontinued before anesthesia induction) and 74 (discontinued after induction or after the procedure started), not 53. Practices billing an in-office procedure suite sometimes apply 53 to the facility-side claim out of habit, which is typically rejected because facility fee-schedule logic isn't built around 53 at all.</p>
 
-  <h2>76 and 77: repeat procedures</h2>
+  <h2 id="76-and-77-repeat-procedures">76 and 77: repeat procedures</h2>
   <p>Modifier 76 reports a repeat procedure by the same physician; 77 reports the same repeat by a different physician. Both require the repeat to be genuinely medically necessary and independently justified in the note, not simply a re-run because the first result was unexpected.</p>
   <p>The highest-volume application here is a repeat obstetric ultrasound. A complete OB ultrasound (76801 first trimester, 76805 second/third trimester) is intended once per pregnancy absent a new indication; a second complete study read by the same physician, with a documented new finding driving it, is billed with 76. A different physician, a call-group partner, or an MFM consult brought in for the repeat, carries 77 instead. Either way the note needs the specific new indication (a change in fundal height, a new bleeding episode), not just a repeat order on a routine interval, or the claim reads as a frequency duplicate regardless of which repeat modifier is attached.</p>
 
-  <h2>TC and 26: the ultrasound interpretation split</h2>
+  <h2 id="tc-and-26-the-ultrasound-interpretation-split">TC and 26: the ultrasound interpretation split</h2>
   <p>Modifier 26 reports the professional component only, the physician's interpretation and written report, with no claim to the equipment. Modifier TC reports the technical component only: equipment, supplies, and sonographer time, billed by whoever owns the equipment regardless of who reads the study. Bill globally, with neither modifier, only when the practice owns the equipment, employs the sonographer, and its own physician interprets it.</p>
   <p>Most in-office OB ultrasound bills globally because the practice owns the machine end to end. The split matters when an MFM specialist or covering physician interprets a scan acquired elsewhere, a hospital-based scan, or images transferred from another practice, in which case the interpreting physician bills 26 only, and whoever owns the equipment bills TC. Billing globally when a hospital or referring practice already billed its own technical component for the same date and patient creates two claims that contradict each other, which is an easy denial and an easy audit catch.</p>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Quantify modifier 22 in the operative note, time, blood loss, and the specific complicating factor, not just "difficult."</li>
@@ -336,7 +331,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What's the difference between modifier 59 and the X-modifiers in OB/GYN coding?</summary><p>They override the same NCCI bundling edit, but the X-modifiers (XE, XS, XP, XU) state exactly why the two services were distinct, while 59 is the generic catch-all. In GYN coding XS (separate structure) covers most defensible unbundling, since colposcopy, hysteroscopy, and biopsy work is usually distinguished by anatomic site. Payers and auditors prefer the specific X-modifier wherever it applies; use 59 only when none of the four accurately describes the distinction, and only when the pair's NCCI modifier indicator actually allows an override at all.</p></details>
     <details class="faq-item"><summary>Do we need documentation beyond "difficult delivery" to bill modifier 22?</summary><p>Yes. A note that simply says the delivery was difficult, without quantifying why, is the single most common reason a modifier 22 claim pays at the unmodified rate or gets denied outright. The operative note needs specific complicating factors (shoulder dystocia with named maneuvers, a fourth-degree laceration repair, dense adhesiolysis, estimated blood loss materially above a routine case) and ideally a statement of how much additional time or work those factors added compared to a typical delivery of the same type. Payers evaluate modifier 22 claims manually against the submitted documentation, so the note has to do the arguing, not the modifier.</p></details>
@@ -348,13 +343,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-obstetrics-gynecology.html">OB/GYN billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-obstetrics-gynecology-larc-inoffice-procedure-billing.html">LARC and in-office gynecologic procedure billing: IUDs, sterilization, and consent <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-obstetrics-gynecology-denials-appeals.html">OB/GYN denials and appeals: the codes, the causes, and the fix <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -403,6 +399,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

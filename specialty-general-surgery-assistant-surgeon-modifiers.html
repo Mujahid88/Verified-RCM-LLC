@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Assistant Surgeon Modifiers 80, 81, 82, and AS | Verified RCM">
 <meta name="twitter:description" content="Assistant surgeon modifiers 80, 81, 82, and AS explained: the payment indicator that decides eligibility before you schedule, the 16%/13.6% payment split, and the modifier 62 mix-up.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,20 +225,25 @@
       <p class="lede">General surgery uses assistant surgeons more than almost any specialty outside cardiothoracic and orthopedic surgery, and the modifier picked to report one doesn't just describe who was in the room, it decides whether the claim can be paid at all. Before 80, 81, 82, or AS ever reaches the claim form, the code itself has to allow an assistant in the first place, and that's the step most billing guides skip. This one starts there.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-general-surgery.html">general surgery billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a straight surgical incision crossed by suture stitch marks, representing general surgery">
-  <path d="M120,410 A210,210 0 0,1 405,155" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
-  <line x1="169.3" y1="296.5" x2="191.7" y2="316.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="203.3" y1="258.5" x2="225.7" y2="278.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="237.3" y1="220.5" x2="259.7" y2="240.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="271.3" y1="182.5" x2="293.7" y2="202.5" stroke="var(--color-text)" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="296.8" y1="154" x2="319.2" y2="174" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" />
-  <line x1="155" y1="335" x2="325" y2="145" stroke="var(--cat-surgical)" stroke-width="3.5" stroke-linecap="round" />
-  <circle cx="155" cy="335" r="4" fill="var(--cat-surgical)" />
-  <circle cx="325" cy="145" r="4" fill="var(--cat-surgical)" />
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-general-surgery-wide.svg" alt="General surgery: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#start-with-the-payment-indicator-not-the-modifier">Start with the payment indicator, not the modifier</a></li>
+      <li><a href="#80-81-82-same-rate-different-story">80, 81, 82: same rate, different story</a></li>
+      <li><a href="#dont-confuse-80-with-62">Don't confuse 80 with 62</a></li>
+      <li><a href="#as-the-non-physician-assistant">AS: the non-physician assistant</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -250,7 +254,7 @@
     </ul>
   </section>
 
-  <h2>Start with the payment indicator, not the modifier</h2>
+  <h2 id="start-with-the-payment-indicator-not-the-modifier">Start with the payment indicator, not the modifier</h2>
   <p>Every general surgery CPT code carries an assistant-at-surgery payment indicator in the Medicare Physician Fee Schedule, and it answers a question that comes before "which modifier" entirely: is an assistant payable on this code at all? Skipping this check is the single most common reason an otherwise well-documented assistant-surgeon claim still denies, the modifier was right, the note was thorough, and none of it mattered because the code itself doesn't allow payment for an assistant.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -266,7 +270,7 @@
   </div>
   <p>In practice, the same operative note that would fully justify billing 80 on one code does nothing for the claim if the code carries indicator 1. Look up the current indicator for the specific CPT code in the CMS Physician Fee Schedule Look-Up Tool before an assistant is scheduled, not after the remit comes back, on an indicator-1 procedure, the fix isn't a stronger note or a different modifier, it's not billing an assistant at all. A practice running real assistant-surgeon volume, complex hernia repair, open bowel resection, revisional bariatric cases, should keep its own reference list of indicators for its highest-volume codes rather than looking each one up mid-schedule.</p>
 
-  <h2>80, 81, 82: same rate, different story</h2>
+  <h2 id="80-81-82-same-rate-different-story">80, 81, 82: same rate, different story</h2>
   <p>All three physician assistant-surgeon modifiers pay identically under Medicare, 16% of the amount that would apply to the primary surgeon, a figure published consistently across MAC and commercial payer policy. The modifier doesn't change the rate; it changes what the operative note has to say to defend the claim if reviewed.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -281,7 +285,7 @@
   </div>
   <p>82 is worth flagging specifically, because it's tied to a fact pattern rather than a level of effort: it only makes sense in a teaching hospital, and the note has to establish why a resident wasn't available, off rotation, committed to another case, the program not staffing that service, not merely that the surgeon chose to bring in someone else. A note that never addresses resident availability supports 80 or 81 at best, not 82.</p>
 
-  <h2>Don't confuse 80 with 62</h2>
+  <h2 id="dont-confuse-80-with-62">Don't confuse 80 with 62</h2>
   <p>This mix-up shows up in general surgery cases that run two physicians, a complex hernia repair with mesh, a combined lap chole and hernia case, a revisional bariatric procedure, and the two modifiers solve entirely different problems.</p>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Modifier 62, co-surgeons</div><ul>
@@ -295,7 +299,7 @@
   </div>
   <p>Payment for an assistant surgeon generally isn't allowed on a code where co-surgery already applies. Billing 62 for one physician and 80 for the other on the identical procedure code, same date of service, effectively claims the same operative work under two different payment structures at once, a pattern payers specifically watch for on two-surgeon general surgery claims, and worth a deliberate check before the claim goes out rather than a judgment call left to charge entry.</p>
 
-  <h2>AS: the non-physician assistant</h2>
+  <h2 id="as-the-non-physician-assistant">AS: the non-physician assistant</h2>
   <p>AS reports a PA, NP, or CNS serving as assistant at surgery, and it never appears alone, it always pairs with 80, 81, or 82 to describe the scope of that non-physician clinician's participation, the same way those three modifiers describe a physician's. AS by itself only identifies who assisted, not how much; the participation modifier carries that information.</p>
   <p>The payment structure is genuinely different, not a smaller version of the physician rate. Physician assistant-surgeon services under 80/81/82 pay at 16% of the allowed amount; non-physician services under AS are commonly published at 85% of that figure, roughly 13.6% of the allowed amount, under Medicare and payer assistant-at-surgery policy. A biller who assumes AS pays the same 16% as a physician modifier is overstating expected reimbursement on every claim it appears on; confirm the current published AS rate against your specific payer's policy rather than assuming parity.</p>
   <ul class="check-list">
@@ -310,7 +314,7 @@
     <div><div class="protip-label">Pro tip: build the indicator check into scheduling, not charge entry</div><p>The costliest assistant-surgeon errors aren't wrong modifiers, they're an assistant scheduled on a code that was never going to be payable. Pull the indicator for your top 15&ndash;20 assistant-eligible procedures once, keep that list where the surgical scheduler can see it, and treat an indicator-1 code as a staffing conversation before the case is booked, not a claim to fight after it denies. Refresh it annually against the current Physician Fee Schedule Look-Up Tool, since indicators move between code cycles.</p></div>
   </div>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Check the assistant-at-surgery indicator for the specific CPT code before an assistant is scheduled.</li>
@@ -334,7 +338,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What does an assistant-at-surgery payment indicator of "1" actually mean, and can documentation override it?</summary><p>No. Indicator 1 is a statutory payment restriction, Medicare will not pay an assistant surgeon on that code no matter how well the operative note justifies the need, because the restriction comes from the fee schedule itself, not a documentation gap. Indicator 0 is different: the restriction applies unless supporting documentation establishes medical necessity, so a strong note can unlock payment there. Confirm the indicator for a given CPT code in the Medicare Physician Fee Schedule Look-Up Tool before scheduling an assistant, not after the claim denies, on an indicator-1 code, that's a staffing decision to revisit, not a billing problem to fix.</p></details>
     <details class="faq-item"><summary>Can modifier 62 and modifier 80 be billed on the same procedure?</summary><p>No, and this is one of the more common mix-ups when two surgeons work the same case. Modifier 62 reports co-surgeons, two primary surgeons of different skill sets each performing a distinct, reportable portion of one procedure, each submitting their own operative note. Modifier 80 (and 81/82) reports an assistant who helps the primary surgeon without independently performing a separately identifiable portion. Payment for an assistant isn't allowed on a code where co-surgery already applies; billing 62 for one physician and 80 for the other on the identical code claims the same operative work twice under two different payment structures, a pattern payers specifically watch for in two-surgeon general surgery cases.</p></details>
@@ -346,12 +350,13 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-general-surgery.html">General surgery billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-general-surgery-modifiers.html">Modifier 58 vs. 78 vs. 79: billing during the global surgical period <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-general-surgery-laparoscopic-gallbladder-billing.html">Laparoscopic vs. open procedure coding: the conversion billing rule <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -400,6 +405,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

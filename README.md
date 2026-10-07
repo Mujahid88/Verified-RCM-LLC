@@ -7,30 +7,41 @@ or served as plain static files.
 
 ---
 
-## 0. Design system: "Lake" (site-wide since 2026-09-15)
+## 0. Design system: "Clean" (site-wide since 2026-10-06)
 
-The whole site runs on ONE hand-written stylesheet, `css/lake.css`, ported from the
-Belleville Lake Pediatrics design: pure black type on white, all colour in pastel
-section bands, accent tiles, buttons and artwork; frosted-glass cards over soft
-colour glows; Quicksand 700 headings + Nunito Sans body (self-hosted, `fonts/`);
-the three-layer wave divider; and an inline SVG "claim river" hero on the home page.
-Light theme only: the dark-mode toggle was retired on purpose.
+The whole site runs on ONE hand-written stylesheet, `css/site.css`. It follows the
+Fast Track Credentialing site: white and slate surfaces, a single blue (`--p600`
+`#2563eb`) with teal as the second colour, Inter throughout (self-hosted in
+`fonts/`), flat cards with thin borders, no glass, glows or waves.
+It replaced the pastel "Lake" system; class names were kept, so page markup did
+not have to be rewritten.
 
-- `css/lake.css` sections 1-26 are the home page system; section 27 restyles every
-  interior class (article, takeaways, data-table, protip, dodont, cta-band,
-  faq-list, payer-contact, cred-steps, pillar-diagram, spec-card, post-card,
-  contact-form, glossary, flow, svc-*) so no page body had to be rewritten.
-- `js/lake.js` carries the accessible mobile drawer, the home page's live claim
-  feed, denial-cost calculator, specialty finder, scroll-in bars and tilt.
-  `js/main.js` still handles search, filters, counters, the reviews slider,
-  the contact form and the cookie banner.
-- `tools/migrate-lake.py` is the one-off script that moved the 340 interior pages
-  onto the new header/footer and lifted each article's breadcrumb, cover, title,
-  lede and byline into a full-width `<header class="art-head">` band. It is
-  idempotent (skips pages already on lake.css) and documents exactly what changed.
-- House style: no em dashes anywhere in copy. The migration replaced them with commas.
-- `css/build-covers.js` still inlines the SVG covers; `css/build.js`, `css/src/`
-  and `css/style.css` were deleted with the old monochrome system.
+- `css/site.css` has 18 numbered sections (tokens, header, home, cards, article,
+  contents list, in-article components, directories, forms, responsive). Text
+  colours were checked against WCAG AA (4.5:1); keep new pairs at or above that.
+- `js/lake.js` (file name kept) carries the mobile drawer, the home page's live
+  claim feed, denial-cost calculator and specialty finder, and the **contents
+  navigation** ("In this guide") on article pages. `js/main.js` handles search,
+  filters, counters, the reviews slider, the contact form and the cookie banner.
+- **Contents navigation:** every article page has a sticky "In this guide" list
+  built from its `<h2>` headings (collapsed on phones, current section
+  highlighted). It is static HTML, so crawlers see the anchor links.
+- **Cover banners:** each topic has a 1200x630 banner (and a 1200x360 `-wide`
+  variant for cluster articles) in `images/covers/banner/`, loaded with `<img>`.
+  Banners are generated, not hand edited.
+- House style: no em dashes anywhere in copy.
+
+Adding or changing content:
+
+```
+node css/build-covers.js      # only for a NEW page: inlines its pillar's line-art cover
+node css/build-banners.js     # regenerates every banner from images/covers/*.svg
+python tools/apply-clean.py   # swaps covers for banners, adds ids + the contents list
+```
+
+`apply-clean.py` is idempotent and safe to re-run. A new topic needs an entry in
+`TOPICS` at the top of `css/build-banners.js` (the script fails loudly if a
+cover has none).
 
 ---
 
@@ -99,9 +110,9 @@ Light theme only: the dark-mode toggle was retired on purpose.
 │                                     scaling) (2026-08-30)
 ├── sitemap.xml                      385 URLs, kept in sync with the page count
 ├── robots.txt
-├── css/lake.css                     The whole design system, hand written (see §0)
-├── js/lake.js                       Drawer, home page interactivity (see §0)
-├── tools/migrate-lake.py            One-off migration that moved every page onto lake.css
+├── css/site.css                     The whole design system, hand written (see §0)
+├── js/lake.js                       Drawer, home widgets, contents navigation (see §0)
+├── tools/apply-clean.py             Rolls the design onto every page: banners, heading ids, contents list
 ├── css/build-covers.js              node css/build-covers.js: inlines each pillar's SVG
 │                                     cover (images/covers/*.svg) into every article, spoke,
 │                                     and directory-card page. Re-run after adding/editing a
@@ -116,9 +127,9 @@ Light theme only: the dark-mode toggle was retired on purpose.
 │                                     pillars + 10 standalone growth/resource pages) , 
 │                                     abstract monochrome line art, each with 1-3 elements
 │                                     in that topic's category accent color (see
-│                                     section 27 of css/lake.css for the palette). Spoke
+│                                     css/build-banners.js for the palette). Spoke
 │                                     articles reuse their pillar's cover; edit the source
-│                                     .svg here, then re-run css/build-covers.js to
+│                                     .svg here, then re-run css/build-banners.js to
 │                                     propagate: don't hand-edit the inlined copy in a page
 └── worker/                          Cloudflare Worker: the contact form backend
     ├── contact-form.js
@@ -132,9 +143,9 @@ a subfolder: the Worker is the only piece that needs an actual domain (see §4).
 
 ## 2. Design system
 
-See section 0. Colour tokens, type and spacing all live at the top of `css/lake.css`;
+See section 0. Colour tokens, type and spacing all live at the top of `css/site.css`;
 the 12 `--cat-*` cover accents referenced by the inline SVG covers are defined in
-section 27 of the same file, mapped onto the Lake accent palette.
+the same file, mapped onto the blue and teal palette.
 
 ---
 

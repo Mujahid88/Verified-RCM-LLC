@@ -1,0 +1,287 @@
+{
+ "specialty-cardiology": {
+  "label": "Cardiology",
+  "sub": "Billing and coding guide",
+  "group": "medical"
+ },
+ "specialty-chiropractic": {
+  "label": "Chiropractic",
+  "sub": "Billing and coding guide",
+  "group": "therapy"
+ },
+ "specialty-dental-care": {
+  "label": "Dental care",
+  "sub": "Billing and coding guide",
+  "group": "dental"
+ },
+ "specialty-dermatology": {
+  "label": "Dermatology",
+  "sub": "Billing and coding guide",
+  "group": "surgical"
+ },
+ "specialty-endocrinology": {
+  "label": "Endocrinology",
+  "sub": "Billing and coding guide",
+  "group": "medical"
+ },
+ "specialty-ent": {
+  "label": "ENT",
+  "sub": "Billing and coding guide",
+  "group": "surgical"
+ },
+ "specialty-family-medicine": {
+  "label": "Family medicine",
+  "sub": "Billing and coding guide",
+  "group": "primary-care"
+ },
+ "specialty-food-nutrition": {
+  "label": "Food & nutrition",
+  "sub": "Billing and coding guide",
+  "group": "behavioral"
+ },
+ "specialty-gastroenterology": {
+  "label": "Gastroenterology",
+  "sub": "Billing and coding guide",
+  "group": "surgical"
+ },
+ "specialty-general-surgery": {
+  "label": "General surgery",
+  "sub": "Billing and coding guide",
+  "group": "surgical"
+ },
+ "specialty-internal-medicine": {
+  "label": "Internal medicine",
+  "sub": "Billing and coding guide",
+  "group": "primary-care"
+ },
+ "specialty-mental-health": {
+  "label": "Mental health",
+  "sub": "Billing and coding guide",
+  "group": "behavioral"
+ },
+ "specialty-nephrology": {
+  "label": "Nephrology",
+  "sub": "Billing and coding guide",
+  "group": "medical"
+ },
+ "specialty-neurology": {
+  "label": "Neurology",
+  "sub": "Billing and coding guide",
+  "group": "medical"
+ },
+ "specialty-obstetrics-gynecology": {
+  "label": "OB/GYN",
+  "sub": "Billing and coding guide",
+  "group": "surgical"
+ },
+ "specialty-occupational-therapy": {
+  "label": "Occupational therapy",
+  "sub": "Billing and coding guide",
+  "group": "therapy"
+ },
+ "specialty-oncology": {
+  "label": "Oncology",
+  "sub": "Billing and coding guide",
+  "group": "medical"
+ },
+ "specialty-ophthalmology": {
+  "label": "Ophthalmology",
+  "sub": "Billing and coding guide",
+  "group": "medical"
+ },
+ "specialty-orthopedics": {
+  "label": "Orthopedics",
+  "sub": "Billing and coding guide",
+  "group": "surgical"
+ },
+ "specialty-pain-management": {
+  "label": "Pain management",
+  "sub": "Billing and coding guide",
+  "group": "medical"
+ },
+ "specialty-pediatrics": {
+  "label": "Pediatrics",
+  "sub": "Billing and coding guide",
+  "group": "primary-care"
+ },
+ "specialty-physical-therapy": {
+  "label": "Physical therapy",
+  "sub": "Billing and coding guide",
+  "group": "therapy"
+ },
+ "specialty-plastic-surgery": {
+  "label": "Plastic surgery",
+  "sub": "Billing and coding guide",
+  "group": "surgical"
+ },
+ "specialty-podiatry": {
+  "label": "Podiatry",
+  "sub": "Billing and coding guide",
+  "group": "surgical"
+ },
+ "specialty-pulmonary-diseases": {
+  "label": "Pulmonary diseases",
+  "sub": "Billing and coding guide",
+  "group": "medical"
+ },
+ "specialty-rheumatology": {
+  "label": "Rheumatology",
+  "sub": "Billing and coding guide",
+  "group": "medical"
+ },
+ "specialty-sleep-medicine": {
+  "label": "Sleep medicine",
+  "sub": "Billing and coding guide",
+  "group": "medical"
+ },
+ "specialty-urgent-care": {
+  "label": "Urgent care",
+  "sub": "Billing and coding guide",
+  "group": "primary-care"
+ },
+ "specialty-urology": {
+  "label": "Urology",
+  "sub": "Billing and coding guide",
+  "group": "surgical"
+ },
+ "specialty-vascular-surgery": {
+  "label": "Vascular surgery",
+  "sub": "Billing and coding guide",
+  "group": "surgical"
+ },
+ "credentialing-aetna": {
+  "label": "Aetna",
+  "sub": "Credentialing guide",
+  "group": "credentialing"
+ },
+ "credentialing-bcbs": {
+  "label": "Blue Cross Blue Shield",
+  "sub": "Credentialing guide",
+  "group": "credentialing"
+ },
+ "credentialing-cigna": {
+  "label": "Cigna",
+  "sub": "Credentialing guide",
+  "group": "credentialing"
+ },
+ "credentialing-medicaid": {
+  "label": "Medicaid",
+  "sub": "Credentialing guide",
+  "group": "credentialing"
+ },
+ "credentialing-medicare": {
+  "label": "Medicare",
+  "sub": "Credentialing guide",
+  "group": "credentialing"
+ },
+ "credentialing-unitedhealthcare": {
+  "label": "UnitedHealthcare",
+  "sub": "Credentialing guide",
+  "group": "credentialing"
+ },
+ "eligibility-verification": {
+  "label": "Eligibility verification",
+  "sub": "Billing process guide",
+  "group": "medical-billing"
+ },
+ "prior-auth": {
+  "label": "Prior authorization",
+  "sub": "Billing process guide",
+  "group": "medical-billing"
+ },
+ "claims-scrubbing": {
+  "label": "Claims scrubbing",
+  "sub": "Billing process guide",
+  "group": "medical-billing"
+ },
+ "claims-forms": {
+  "label": "Claim forms",
+  "sub": "Billing process guide",
+  "group": "medical-billing"
+ },
+ "denials-management": {
+  "label": "Denials management",
+  "sub": "Billing process guide",
+  "group": "medical-billing"
+ },
+ "accounts-receivable-recovery": {
+  "label": "A/R recovery",
+  "sub": "Billing process guide",
+  "group": "medical-billing"
+ },
+ "medical-coding": {
+  "label": "Medical coding",
+  "sub": "Coding guide",
+  "group": "medical-coding"
+ },
+ "practice-licensing": {
+  "label": "Practice licensing",
+  "sub": "Practice guide",
+  "group": "practice-mgmt"
+ },
+ "practice-management-operations": {
+  "label": "Practice operations",
+  "sub": "Practice guide",
+  "group": "practice-mgmt"
+ },
+ "in-house-vs-outsourced-billing": {
+  "label": "In-house vs outsourced",
+  "sub": "Resource guide",
+  "group": "practice-resources"
+ },
+ "switching-billing-companies": {
+  "label": "Switching billing companies",
+  "sub": "Resource guide",
+  "group": "practice-resources"
+ },
+ "rcm-glossary": {
+  "label": "RCM glossary",
+  "sub": "Resource guide",
+  "group": "practice-resources"
+ },
+ "digital-marketing": {
+  "label": "Digital marketing",
+  "sub": "Growth guide",
+  "group": "practice-growth"
+ },
+ "seo-services": {
+  "label": "Healthcare SEO",
+  "sub": "Growth guide",
+  "group": "practice-growth"
+ },
+ "google-business-profile": {
+  "label": "Google Business Profile",
+  "sub": "Growth guide",
+  "group": "practice-growth"
+ },
+ "social-media-management": {
+  "label": "Social media",
+  "sub": "Growth guide",
+  "group": "practice-growth"
+ },
+ "web-development": {
+  "label": "Web development",
+  "sub": "Growth guide",
+  "group": "practice-growth"
+ },
+ "virtual-assistant": {
+  "label": "Virtual assistants",
+  "sub": "Growth guide",
+  "group": "practice-growth"
+ },
+ "blog-mental-health-specialized-rcm": {
+  "label": "Mental health RCM",
+  "sub": "Blog article",
+  "group": "behavioral"
+ },
+ "blog-internal-medicine-practice-management": {
+  "label": "Internal medicine practice management",
+  "sub": "Blog article",
+  "group": "primary-care"
+ },
+ "default": {
+  "label": "Medical billing",
+  "sub": "Verified RCM guide",
+  "group": "medical-billing"
+ }
+}

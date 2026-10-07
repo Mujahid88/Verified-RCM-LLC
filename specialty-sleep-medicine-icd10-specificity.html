@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Sleep Medicine ICD-10 Coding: OSA Severity, Insomnia, and Narcolepsy | Verified RCM">
 <meta name="twitter:description" content="Sleep medicine ICD-10 coding: why G47.33 is the only obstructive sleep apnea code, where AHI severity actually lives, the insomnia/narcolepsy/parasomnia families, and the diagnosis-to-CPAP medical necessity link.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,17 +225,25 @@
       <p class="lede">Sleep medicine has one of the flattest ICD-10 categories in outpatient billing and one of the most misunderstood: G47.33 is the entire obstructive sleep apnea code, with no mild/moderate/severe split, which surprises coders used to cardiology or oncology's deep specificity trees. What actually gates payment is the AHI value in the sleep study and whether the diagnosis on the claim matches what the payer's coverage policy requires for that specific service, a distinction this guide verifies code by code and policy by policy, against the live ICD-10 code set and the Medicare DME and sleep-study coverage articles that actually list the diagnoses.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-sleep-medicine.html">sleep medicine billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a slow undulating sleep-wave line beside a crescent moon arc, representing sleep medicine">
-  <path d="M40,230 C80,220 100,240 130,225 C160,210 180,225 210,215 C240,205 260,225 290,215 C320,205 350,225 380,215 C410,205 430,220 440,215" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M40,355 C100,335 140,335 180,355 C220,375 260,375 300,355 C340,335 380,335 440,355" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M350,160 A54,54 0 1,1 291.3,101.3 A42,42 0 0,0 350,160 Z" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M40,300 C90,270 130,270 160,300 C190,330 210,330 235,305 C245,290 250,200 255,165 C260,200 270,290 285,305 C310,320 330,320 355,300 C380,280 400,280 440,300" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M235,305 C245,290 250,200 255,165 C260,200 270,290 285,305" fill="none" stroke="var(--cat-medical)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="255" cy="165" r="4.5" fill="var(--cat-medical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-sleep-medicine-wide.svg" alt="Sleep medicine: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#obstructive-sleep-apnea-one-code-and-why-severity-isnt-a-cod">Obstructive sleep apnea: one code, and why severity isn't a coding question</a></li>
+      <li><a href="#the-rest-of-the-g47-family-insomnia-hypersomnia-narcolepsy-a">The rest of the G47 family: insomnia, hypersomnia, narcolepsy, and parasomnias</a></li>
+      <li><a href="#diagnosis-to-medical-necessity-what-actually-justifies-each">Diagnosis-to-medical-necessity: what actually justifies each sleep study and CPAP</a></li>
+      <li><a href="#worked-crosswalk-sleep-medicine-service-to-primary-diagnosis">Worked crosswalk: sleep medicine service to primary diagnosis pattern</a></li>
+      <li><a href="#common-denial-symptom-only-coding-on-a-claim-that-needs-a-co">Common denial: symptom-only coding on a claim that needs a confirmed diagnosis</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -247,7 +254,7 @@
     </ul>
   </section>
 
-  <h2>Obstructive sleep apnea: one code, and why severity isn't a coding question</h2>
+  <h2 id="obstructive-sleep-apnea-one-code-and-why-severity-isnt-a-cod">Obstructive sleep apnea: one code, and why severity isn't a coding question</h2>
   <p>Pull the full G47.3 sleep apnea family from the current ICD-10-CM set and the pattern is immediate: there is exactly one code for obstructive sleep apnea, and it doesn't branch by severity the way, say, heart failure or COPD do. <code>G47.33</code>, &ldquo;Obstructive sleep apnea (adult) (pediatric),&rdquo; confirmed billable for HIPAA-covered transactions against the current code set, is it. There is no G47.331 for mild, no G47.332 for moderate, no G47.333 for severe. A coder who goes hunting for a severity-specific OSA code the way they would for, say, chronic kidney disease staging is hunting for something that doesn't exist in this category.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -269,7 +276,7 @@
   <p>So where does AHI severity actually live? In the coverage policy, not the code set. The Medicare DME MAC LCD governing PAP devices (L33718, Positive Airway Pressure Devices for the Treatment of Obstructive Sleep Apnea, CGS Administrators and Noridian Healthcare Solutions, effective 01/01/2024) sets two AHI/RDI pathways for initial CPAP coverage under HCPCS <code>E0601</code>: an AHI or RDI of 15 or more events per hour with a minimum of 30 events qualifies on its own, while an AHI or RDI of 5&ndash;14 events per hour with a minimum of 10 events qualifies only with documented excessive daytime sleepiness, impaired cognition, mood disorder, insomnia, hypertension, ischemic heart disease, or a history of stroke. Both pathways bill under the identical diagnosis code, <code>G47.33</code>, the AHI number and the symptom documentation are what the LCD is actually checking, and neither one changes what gets typed into the diagnosis field.</p>
   <p>That's the practical takeaway for a coder or biller: don't go looking for a "severe OSA" code that will never exist, and don't let a physician's note that says "mild OSA, AHI 8, with hypertension" talk you into thinking a different code applies. The code is G47.33 either way. The AHI and the comorbidity documentation are what belong in the chart to support the DME claim that follows, they just don't change the ICD-10 code itself.</p>
 
-  <h2>The rest of the G47 family: insomnia, hypersomnia, narcolepsy, and parasomnias</h2>
+  <h2 id="the-rest-of-the-g47-family-insomnia-hypersomnia-narcolepsy-a">The rest of the G47 family: insomnia, hypersomnia, narcolepsy, and parasomnias</h2>
   <p>Sleep medicine bills across the entire G47 category, not just the apnea subsection, and each branch has its own specificity trap. All codes below were confirmed against the current ICD-10-CM set and are billable for HIPAA transactions.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -294,7 +301,7 @@
     <div><div class="protip-label">Pro tip</div><p>When a chart says "sleep apnea" without stating central or obstructive, don't default to G47.33. Check whether the sleep study report is in hand: if it typed the apnea, use that finding; if it hasn't happened yet, <code>G47.30</code> (unspecified) is the honest pre-diagnostic code and the one that supports ordering the study, not the one that supports billing CPAP.</p></div>
   </div>
 
-  <h2>Diagnosis-to-medical-necessity: what actually justifies each sleep study and CPAP</h2>
+  <h2 id="diagnosis-to-medical-necessity-what-actually-justifies-each">Diagnosis-to-medical-necessity: what actually justifies each sleep study and CPAP</h2>
   <p>Sleep medicine's coverage rules are unusually well documented for a Medicare DME benefit, because the sleep-study and PAP-device policies were rewritten together and cross-reference the same AHI logic. Two Medicare coverage sources carry the actual diagnosis-to-service linkage: the sleep-study billing and coding article (A57697, Billing and Coding: Polysomnography and Other Sleep Studies, Noridian Healthcare Solutions) and the PAP-device policy article (A52467, Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea, Policy Article, CGS Administrators / Noridian Healthcare Solutions, the two DME MAC contractors that administer all four DME jurisdictions).</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -311,7 +318,7 @@
   <p>The gap that matters most operationally is the one between the in-lab and home-test coverage groups: central sleep apnea (<code>G47.31</code>) is covered under the attended in-lab codes but is absent from the home sleep apnea test group. That isn't an oversight, a home device generally can't measure the respiratory effort signal needed to reliably distinguish a central event from an obstructive one, so a patient with a clinical picture suggesting central apnea (Cheyne-Stokes breathing pattern, heart failure history, opioid use) should be routed to a facility-based study, not a home test kit. Ordering an HSAT for that patient risks both a clinically inconclusive study and a coverage mismatch if the claim goes out under <code>G47.31</code>.</p>
   <p>For the CPAP device itself, the linkage is narrower still. Article A52467 states directly that <code>G47.33</code> is the only diagnosis code supporting PAP device coverage, and adds the caveat that "the presence of an ICD-10 code listed in this section is not sufficient by itself to assure coverage", the LCD's AHI/RDI thresholds, the pre-test in-person evaluation, and (between day 31 and day 91 of therapy) a documented re-evaluation showing symptom improvement and adherence-data review all have to be present in the record as well. A claim with the right diagnosis code and a missing 31-to-91-day re-evaluation note is still an audit risk, even though the code itself is correct.</p>
 
-  <h2>Worked crosswalk: sleep medicine service to primary diagnosis pattern</h2>
+  <h2 id="worked-crosswalk-sleep-medicine-service-to-primary-diagnosis">Worked crosswalk: sleep medicine service to primary diagnosis pattern</h2>
   <p>This is the table worth keeping open next to the encounter form, because it maps the visit type to the diagnosis pattern the claim actually needs, not just the code that sounds closest.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -330,7 +337,7 @@
     </table>
   </div>
 
-  <h2>Common denial: symptom-only coding on a claim that needs a confirmed diagnosis</h2>
+  <h2 id="common-denial-symptom-only-coding-on-a-claim-that-needs-a-co">Common denial: symptom-only coding on a claim that needs a confirmed diagnosis</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg>Do</div><ul>
       <li>Update the diagnosis on the claim the moment the sleep study report is in hand, move from <code>G47.30</code>/<code>R06.83</code> to the specific, confirmed code before the next service (CPAP setup, re-evaluation) goes out.</li>
@@ -353,7 +360,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Does ICD-10 have separate codes for mild, moderate, and severe obstructive sleep apnea?</summary><p>No. There is one ICD-10-CM code for obstructive sleep apnea, G47.33, confirmed billable for HIPAA transactions against the current code set, and it carries no mild/moderate/severe split. Severity is documented clinically as the apnea-hypopnea index (AHI) from the sleep study, and that AHI value is what a Medicare DME LCD checks to decide whether a CPAP device is covered, it is a coverage-determination detail, not a coding one. Writing "moderate G47.33" in a note is clinically fine; there is no corresponding code to bill differently based on that severity.</p></details>
     <details class="faq-item"><summary>What diagnosis code does Medicare require to cover a CPAP device?</summary><p>G47.33, obstructive sleep apnea, is the only ICD-10 code that supports medical necessity for a PAP device under the DME MAC policy for Positive Airway Pressure Devices for the Treatment of Obstructive Sleep Apnea (LCD L33718 and its Policy Article A52467, CGS Administrators and Noridian Healthcare Solutions, DME MACs). The article states plainly that the presence of that code alone is not sufficient, the sleep study also has to meet the AHI/RDI thresholds in the LCD, and the ordering practitioner needs a documented in-person evaluation before testing.</p></details>
@@ -366,7 +373,7 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and covered-diagnosis lists change, including annual code-set updates and periodic LCD/Article revisions. This page reflects standard industry practice and the specific Medicare coverage documents cited above, verified as of September 2026, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix and the current version of each LCD/Article before submitting claims. ⚠️ Local coverage policy is Medicare Part B / DME MAC specific; commercial payers and Medicare Advantage plans frequently apply their own, differently structured sleep-medicine coverage criteria, check the individual payer's policy before assuming the Medicare pathway above applies.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-sleep-medicine.html">Sleep medicine billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="medical-coding.html">Medical coding services overview <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -374,6 +381,7 @@
     <li><a href="prior-auth.html">Prior authorization services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="eligibility-verification.html">Eligibility verification services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -422,6 +430,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

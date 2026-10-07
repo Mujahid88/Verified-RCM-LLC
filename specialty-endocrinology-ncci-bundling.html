@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Endocrinology NCCI Edits and MUE Limits: Bundling Rules Explained | Verified RCM">
 <meta name="twitter:description" content="Endocrinology NCCI edits and MUE limits: thyroid FNA imaging guidance bundled by code design, modifier 25 for same-day E/M with biopsy, CCM 99490 non-overlap rules, and DSMT same-day billing, with the modifier-indicator and MAI framework explained.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,23 +225,25 @@
       <p class="lede">Endocrinology's bundling denials cluster around four spots: a thyroid FNA billed with a redundant guidance code, a same-day E/M that lost its modifier 25 support, a chronic care management claim that double-counted time already billed elsewhere, and a diabetes education session that collided with the same day's office visit. Only some of these are genuine NCCI Procedure-to-Procedure edits with a modifier indicator attached, others are code-design, global-package, or coverage-policy rules that look like bundling but run on entirely different logic. This guide separates the two and gives you the modifier-indicator and MAI framework to tell, before staff time goes into an appeal that was never going to succeed.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-endocrinology.html">NCCI edits and bundling guide for endocrinology</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of an undulating glucose-level waveform with an accented peak beside a symmetric butterfly-shaped loop suggesting the thyroid gland">
-  <line x1="70" y1="305" x2="410" y2="305" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-
-  <path d="M 70,275 C 110,260 140,260 170,275 C 200,290 230,290 260,275 C 290,260 320,260 350,275 C 380,290 400,290 410,285" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
-
-  <path d="M 70,240 C 110,220 130,220 150,240 C 165,255 175,260 185,235 C 195,205 205,160 220,150 C 235,140 245,160 255,195 C 262,220 268,245 280,255 C 300,270 320,265 340,245 C 360,225 380,225 410,240" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <path d="M 185,235 C 195,205 205,160 220,150 C 235,140 245,160 255,195" fill="none" stroke="var(--cat-medical)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="220" cy="150" r="5" fill="var(--cat-medical)"/>
-
-  <path d="M 240,350 C 205,325 180,335 178,360 C 176,385 205,400 240,372" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 240,350 C 275,325 300,335 302,360 C 304,385 275,400 240,372" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="240" cy="361" r="4" fill="var(--cat-medical)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-endocrinology-wide.svg" alt="Endocrinology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-two-indicators-that-decide-every-bundling-fight">The two indicators that decide every bundling fight</a></li>
+      <li><a href="#thyroid-fna-and-ultrasound-guidance-bundled-by-code-design-n">Thyroid FNA and ultrasound guidance: bundled by code design, not by PTP edit</a></li>
+      <li><a href="#same-day-em-with-a-thyroid-biopsy-what-actually-earns-modifi">Same-day E/M with a thyroid biopsy: what actually earns modifier 25</a></li>
+      <li><a href="#ccm-99490-and-same-month-em-the-double-counting-rule-not-a-b">CCM (99490) and same-month E/M: the double-counting rule, not a bundling edit</a></li>
+      <li><a href="#dsmt-g0108g0109-same-day-as-an-em-visit">DSMT (G0108/G0109) same day as an E/M visit</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -253,7 +254,7 @@
     </ul>
   </section>
 
-  <h2>The two indicators that decide every bundling fight</h2>
+  <h2 id="the-two-indicators-that-decide-every-bundling-fight">The two indicators that decide every bundling fight</h2>
   <p>Two CMS-published values control whether an endocrinology code pair or a unit-capped code is billable at all, and neither is something you infer from experience, both are specific, quarterly-updated values attached to the exact codes on your claim.</p>
   <p><b>The NCCI Procedure-to-Procedure modifier indicator</b>, attached to a Column 1/Column 2 code pair:</p>
   <ul class="check-list">
@@ -269,7 +270,7 @@
   </ul>
   <p>⚠️ This build could not query CMS's primary NCCI Procedure-to-Procedure edit file or MUE tables directly to confirm the current-quarter indicator or MAI value for any individual endocrinology code pair discussed below. The structural rules in the next four sections hold independent of those values, they follow from each code's own descriptor, from CPT panel and global-period rules, or from Medicare's DSMT coverage policy, not from a Column 1/Column 2 lookup. Where a specific indicator or MAI value would matter to a scrubber rule, it's flagged; verify the current value in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before relying on it.</p>
 
-  <h2>Thyroid FNA and ultrasound guidance: bundled by code design, not by PTP edit</h2>
+  <h2 id="thyroid-fna-and-ultrasound-guidance-bundled-by-code-design-n">Thyroid FNA and ultrasound guidance: bundled by code design, not by PTP edit</h2>
   <p>This is the single most common bundling question in endocrinology billing, and getting the distinction right matters more than the codes themselves: there's a real difference between a service that's <i>already bundled into a code's own definition</i> and a service that's <i>bundled by an NCCI edit that could, in the right circumstances, be unbundled with a modifier and documentation</i>. Thyroid FNA imaging guidance is the first kind. It was never a modifier-overridable edit to begin with.</p>
   <p>CPT restructured the fine needle aspiration family in 2019, replacing the old single guidance-agnostic code (10022) and its frequent 76942 add-on with a set of codes that build the imaging modality directly into the descriptor:</p>
   <div class="data-table-wrap">
@@ -288,12 +289,12 @@
   <p>A thyroid nodule aspirated under real-time ultrasound is 10005 for the first lesion and 10006 for each additional lesion biopsied the same session, and both codes already include the guidance work. Billing 76942 (ultrasonic guidance for needle placement, imaging supervision and interpretation) alongside either one doesn't unbundle a Column 1/Column 2 pair; it double-bills a component the base code already paid for. There's no modifier that fixes this, because there's nothing to override, the correction is removing the 76942 line, not appending 59 or an X-modifier and hoping the edit clears. Contrast that with a genuine PTP pair elsewhere on the claim: there, indicator 1 means documentation of true distinctness earns separate payment. Here, no documentation changes the outcome, because the guidance was never a separate service to begin with.</p>
   <p>Two documentation points that decide which row of the table even applies. First, real-time ultrasound use has to be explicitly stated in the procedure note, "ultrasound-guided FNA" or equivalent language describing simultaneous imaging during needle placement. A note that only says a prior diagnostic ultrasound identified the nodule, without documenting guidance during the aspiration itself, supports 10021 (palpation-guided), not 10005, regardless of what equipment was in the room. Second, multiple thyroid nodules aspirated the same session are reported as one unit of the first-lesion code plus one unit of the additional-lesion code per nodule beyond the first, not as repeated first-lesion codes, which is the pattern that trips MUE logic on this family. ⚠️ The current MAI value for 10006 and the other additional-lesion codes wasn't independently confirmed against CMS's live MUE table during this build; confirm it before setting a hard unit-cap rule in your scrubber.</p>
 
-  <h2>Same-day E/M with a thyroid biopsy: what actually earns modifier 25</h2>
+  <h2 id="same-day-em-with-a-thyroid-biopsy-what-actually-earns-modifi">Same-day E/M with a thyroid biopsy: what actually earns modifier 25</h2>
   <p>Like the joint-injection-and-E/M question in other specialties, this one is frequently filed under NCCI when it isn't governed by the PTP file at all. FNA biopsy codes carry a minor-procedure global period, and it's the global surgery package rules in the NCCI Policy Manual's general policy chapter, not a specific Column 1/Column 2 value you can look up for 99213-99215 against 10005, that require a same-day E/M to be significant and separately identifiable before modifier 25 makes it payable.</p>
   <p>The routine pre-procedure work is already inside the biopsy code's own valuation: confirming the correct nodule, obtaining and documenting informed consent, positioning the patient, and the brief exam performed specifically to plan the aspiration. An E/M billed for exactly that work, with no other content, doesn't support modifier 25 no matter how it's coded. What does support it: the same visit also addressing a new symptom unrelated to the nodule, adjusting levothyroxine or antithyroid medication dosing based on current labs, managing a comorbid endocrine condition (diabetes, adrenal insufficiency), or working up findings on the thyroid ultrasound beyond the nodule being biopsied that day. The distinguishing test an auditor applies is whether the E/M note would stand on its own as a complete, medically necessary visit if the biopsy weren't happening at all, if it would, 25 is defensible; if the entire note is scaffolding around the decision to biopsy, it isn't.</p>
   <p>Because this rule lives in the global-period policy rather than a PTP pair, a scrubber tuned only to catch Column 1/Column 2 edits won't flag a mismatch here, and an appeal for a denied same-day E/M has to lead with the note's actual content, not with an indicator value, since there isn't one attached to this particular combination.</p>
 
-  <h2>CCM (99490) and same-month E/M: the double-counting rule, not a bundling edit</h2>
+  <h2 id="ccm-99490-and-same-month-em-the-double-counting-rule-not-a-b">CCM (99490) and same-month E/M: the double-counting rule, not a bundling edit</h2>
   <p>Chronic care management is where endocrinology practices most often assume a bundling restriction exists that doesn't. 99490 (non-complex CCM, at least 20 minutes of clinical staff time under general supervision, per calendar month) is not blocked from being billed in the same month as an office E/M visit for the same patient, Medicare's own CCM guidance permits both. What's actually restricted is time double-counting and same-day E/M stacking, not the CCM-plus-E/M combination itself.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Time can't be counted twice.</b> Minutes spent during a face-to-face E/M encounter, reviewing labs with the patient, adjusting insulin or GLP-1 dosing during the visit, can't also be logged toward the 20-minute CCM threshold for that month. CCM time has to be genuinely separate, typically non-face-to-face care coordination work performed outside the visit.</span></li>
@@ -303,7 +304,7 @@
   </ul>
   <p>The other condition that's easy to miss on audit: the E/M, annual wellness visit, or initial preventive physical exam has to have actually included a documented discussion of chronic care management, the patient's consent, the care-management services being offered, cost-sharing, before it can serve as CCM's required initiating visit. A qualifying E/M that never raised CCM doesn't retroactively become the initiating encounter just because CCM starts the following month. None of this is an NCCI Procedure-to-Procedure edit; it's Medicare's own CCM billing policy, and it belongs in your care-management workflow documentation, not in a PTP-only claims scrubber.</p>
 
-  <h2>DSMT (G0108/G0109) same day as an E/M visit</h2>
+  <h2 id="dsmt-g0108g0109-same-day-as-an-em-visit">DSMT (G0108/G0109) same day as an E/M visit</h2>
   <p>Diabetes self-management training runs on a coverage and same-NPI billing rule rather than a Column 1/Column 2 edit, and the outcome turns on who bills the E/M relative to who bills the education session.</p>
   <ul class="check-list">
     <li><span class="check">1</span><span><b>Same billing NPI, same day.</b> When the physician or practice that bills the office E/M is the same billing entity furnishing the DSMT that day, Medicare typically treats the visit and the education session as one bundled encounter unless the E/M documents medically necessary work distinct from, and beyond, the diabetes education content itself.</span></li>
@@ -340,7 +341,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Is billing 76942 alongside 10005 for a thyroid FNA an NCCI edit we can bypass with a modifier?</summary><p>No, and this is the single most common bundling mistake in endocrinology billing. 10005 (fine needle aspiration biopsy, first lesion, including ultrasound guidance) already has real-time ultrasound guidance built into its own code descriptor, it replaced the old 10022-plus-76942 combination when CPT restructured the FNA family in 2019. Billing 76942 on top of 10005 or 10006 isn't a Column 1/Column 2 pair with a modifier indicator to look up; it's double-billing a component of a single code. There's no override modifier because there's nothing to override, the fix is dropping the separate guidance line, not appending 59 or an X-modifier to it.</p></details>
     <details class="faq-item"><summary>Can we bill an E/M visit the same day as a thyroid FNA biopsy?</summary><p>Yes, with modifier 25 on the E/M code, but only when the note supports it. FNA codes carry a minor-procedure global period, so the global surgery package rules, not a specific NCCI Procedure-to-Procedure pair, require the E/M to be a significant, separately identifiable service beyond the routine pre-procedure assessment (confirming the nodule, obtaining consent, prepping the site) that's already bundled into the biopsy code. A visit that also works up a new symptom, manages thyroid hormone dosing, or evaluates an unrelated endocrine complaint supports 25; a visit that's solely "here to biopsy the nodule" does not.</p></details>
@@ -353,13 +354,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates and quarterly NCCI/MUE updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, your MAC's local coverage guidance, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-endocrinology.html">Endocrinology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="medical-coding.html">Medical coding overview <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="prior-auth.html">Prior authorization <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -408,6 +410,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

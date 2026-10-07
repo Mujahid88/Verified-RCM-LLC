@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Practice licensing, Practice guide">
+  <defs>
+    <linearGradient id="bgpracticelicensing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e293b"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient>
+    <radialGradient id="glpracticelicensing" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#5eead4" stop-opacity="0.5"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+    <pattern id="grpracticelicensing" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cppracticelicensing"><rect x="860" y="55" width="250" height="250" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bgpracticelicensing)"/>
+  <rect width="1200" height="360" fill="url(#grpracticelicensing)"/>
+  <rect width="1200" height="360" fill="url(#glpracticelicensing)"/>
+  <circle cx="1040" cy="60" r="170" fill="#5eead4" fill-opacity="0.14"/>
+  <circle cx="1110" cy="280" r="110" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="860" y="55" width="250" height="250" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cppracticelicensing)"><g transform="translate(880 75) scale(0.4375)">
+  
+  <circle cx="240" cy="190" r="65" fill="none" stroke="#5eead4" stroke-width="5.10"/>
+
+  
+  <circle cx="240" cy="190" r="48" fill="none" stroke="#ffffff" stroke-width="3.40"/>
+
+  
+  <line x1="308" y1="190" x2="316" y2="190" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <line x1="298.9" y1="224" x2="305.8" y2="228" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <line x1="274" y1="248.9" x2="278" y2="255.8" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <line x1="240" y1="258" x2="240" y2="266" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <line x1="206" y1="248.9" x2="202" y2="255.8" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <line x1="181.1" y1="224" x2="174.2" y2="228" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <line x1="172" y1="190" x2="164" y2="190" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <line x1="181.1" y1="156" x2="174.2" y2="152" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <line x1="206" y1="131.1" x2="202" y2="124.2" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <line x1="240" y1="122" x2="240" y2="114" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <line x1="274" y1="131.1" x2="278" y2="124.2" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+  <line x1="298.9" y1="156" x2="305.8" y2="152" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round"/>
+
+  
+  <path d="M 212,250 L 196,350 L 210,332 L 224,346" fill="none" stroke="#ffffff" stroke-width="4.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 268,250 L 284,350 L 270,332 L 256,346" fill="none" stroke="#ffffff" stroke-width="4.25" stroke-linecap="round" stroke-linejoin="round"/>
+
+  
+  <circle cx="240" cy="190" r="4" fill="#5eead4"/>
+</g></g>
+  <rect x="90" y="46" width="72" height="8" rx="4" fill="#5eead4"/>
+  <text x="90" y="78" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">PRACTICE MANAGEMENT</text>
+  <text x="90" y="138" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="70" font-weight="800" fill="#ffffff" letter-spacing="-2">Practice</text>
+  <text x="90" y="214" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="70" font-weight="800" fill="#ffffff" letter-spacing="-2">licensing</text>
+  <text x="90" y="256" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#ffffff" fill-opacity="0.85">Practice guide</text>
+  <text x="90" y="336" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>

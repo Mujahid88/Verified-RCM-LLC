@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="NCCI Edits and Bundling in Physical Therapy Billing: 97140, 97530, and Beyond | Verified RCM">
 <meta name="twitter:description" content="How to read a PT NCCI edit pair, the 97140/97530 same-day rule, MUE unit caps, eval-vs-treatment bundling, and the modifier 25 vs 59 decision.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,27 +225,27 @@
       <p class="lede">Every PT bundling decision comes down to reading two separate CMS edit systems correctly: the Procedure-to-Procedure (PTP) edit that decides whether two codes billed the same day can both be paid, and the Medically Unlikely Edit (MUE) that caps how many units of one code can be billed in a day, independent of anything else on the claim. This guide walks through both, in full, using the highest-volume PT pairing, 97140 and 97530, as the worked example, then covers where the same logic applies across the rest of the 97000 series.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of <a href="specialty-physical-therapy.html">the complete physical therapy billing guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line-art icon of a range-of-motion arc, like a protractor sweep, for physical therapy">
-  <!-- baseline limb segment -->
-  <line x1="250" y1="300" x2="120" y2="300" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- moved limb segment (primary) -->
-  <line x1="250" y1="300" x2="330" y2="161" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round"/>
-  <!-- joint pivot -->
-  <circle cx="250" cy="300" r="8" fill="none" stroke="var(--color-text)" stroke-width="2.5"/>
-  <!-- range-of-motion sweep arc -->
-  <path d="M160,300 A90,90 0 0,1 295,222.1" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
-  <!-- tick marks along the sweep -->
-  <line x1="163.4" y1="250" x2="180.7" y2="260" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="200" y1="213.4" x2="210" y2="230.7" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="250" y1="200" x2="250" y2="220" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- accent highlight on final measured segment of the arc -->
-  <path d="M234.4,211.4 A90,90 0 0,1 295,222.1" fill="none" stroke="var(--cat-therapy)" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- accent marker at the measured endpoint -->
-  <circle cx="295" cy="222.1" r="6" fill="var(--cat-therapy)"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-physical-therapy-wide.svg" alt="Physical therapy: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#how-to-read-a-ptp-edit-column-1-column-2-and-the-modifier-in">How to read a PTP edit: Column 1, Column 2, and the modifier indicator</a></li>
+      <li><a href="#the-9714097530-rule-same-day-separate-15-minute-blocks">The 97140/97530 rule: same day, separate 15-minute blocks</a></li>
+      <li><a href="#mue-unit-caps-the-other-edit-system">MUE unit caps: the other edit system</a></li>
+      <li><a href="#same-day-evaluation-and-treatment-modifier-25-vs-59">Same-day evaluation and treatment: modifier 25 vs. 59</a></li>
+      <li><a href="#is-there-an-apta-or-cms-exempt-pair-list">Is there an APTA or CMS exempt-pair list?</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#sources-and-verification">Sources and verification</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -257,7 +256,7 @@
     </ul>
   </section>
 
-  <h2>How to read a PTP edit: Column 1, Column 2, and the modifier indicator</h2>
+  <h2 id="how-to-read-a-ptp-edit-column-1-column-2-and-the-modifier-in">How to read a PTP edit: Column 1, Column 2, and the modifier indicator</h2>
   <p>CMS's free NCCI Procedure-to-Procedure Edits Lookup Tool returns three things for any code pair billed the same date, same patient, same provider: a Column 1 code (the one that gets paid), a Column 2 code (the one bundled into it, meaning not separately payable on top of Column 1), and a modifier indicator that governs whether an override is even possible.</p>
   <ul class="check-list">
     <li><span class="warn">0</span><span><b>Never bypassable.</b> No modifier, however well-documented, overrides it. If a pair carries a 0, the Column 2 code simply isn't separately payable that date, full stop, and there's no documentation standard that changes that.</span></li>
@@ -267,7 +266,7 @@
   <p>A related but separate category is the <b>mutually exclusive edit</b>: two codes that, by definition, can't both have been performed on the same patient in the same session (for example, two different approaches to the same procedure). These follow the same Column 1/Column 2 and modifier-indicator structure, but the underlying reason for the bundle is clinical implausibility of both happening together, not one being a component of the other, worth knowing the distinction exists, even though the practical workflow (check the indicator before appending a modifier) is identical either way.</p>
   <p>The tool is free and public, updated quarterly, and pair-specific, the indicator for one code pair tells you nothing about a different pair involving the same code. Look up the actual pair before billing it together, not after a denial arrives.</p>
 
-  <h2>The 97140/97530 rule: same day, separate 15-minute blocks</h2>
+  <h2 id="the-9714097530-rule-same-day-separate-15-minute-blocks">The 97140/97530 rule: same day, separate 15-minute blocks</h2>
   <p><b>97140</b> (manual therapy techniques, mobilization/manipulation, manual lymphatic drainage, manual traction) and <b>97530</b> (therapeutic activities, dynamic activities using multiple body parts to improve functional performance) are reported as an NCCI-edited Column 1/Column 2 pair whenever both are billed for the same patient, same date of service. Industry billing references consistently describe the pair's modifier indicator as bypassable, an indicator of 1, not 0, meaning 59 or the more specific X{EPSU} modifier can unbundle it. ⚠️ This build could not open CMS's primary NCCI Procedure-to-Procedure edit file or the physical medicine and rehabilitation chapter of the NCCI Policy Manual directly to confirm the literal indicator digit against the source (CMS's coding-and-billing pages returned an access error to every automated retrieval attempt made while researching this page). Treat "bypassable, indicator 1" as reported-but-not-independently-confirmed, and check the current value in the <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits" rel="noopener">CMS NCCI PTP Edits Lookup Tool</a> before building it into a scrubber rule, since these values are revised quarterly.</p>
   <p>Assuming the pair is bypassable, the override is only defensible when the record shows the manual therapy and the therapeutic activities happening in genuinely <b>separate, non-overlapping time blocks</b>, not two labels stamped onto one continuous stretch of hands-on treatment. This is a temporal distinction, not an anatomic one, which is exactly why CMS purposes typically express it with 59 rather than a structure-specific X-modifier like XS.</p>
   <div class="dodont">
@@ -284,7 +283,7 @@
   </div>
   <p>The test an auditor applies isn't "did the clinician genuinely do two different things", most visits, they did. It's whether the chart shows two temporally distinct treatment segments, each independently timed. A visit can absolutely include real manual therapy and real therapeutic activity and still fail this test on documentation alone, if the note never separates the two in time.</p>
 
-  <h2>MUE unit caps: the other edit system</h2>
+  <h2 id="mue-unit-caps-the-other-edit-system">MUE unit caps: the other edit system</h2>
   <p>A Medically Unlikely Edit caps the number of units of a single code payable for one patient on one date of service, it has nothing to do with what other code was billed alongside it. A code can clear every PTP pair check on the claim and still deny for exceeding its own MUE. Two values matter for any MUE denial: the unit cap itself, and the MUE Adjudication Indicator (MAI) that governs whether a denial above the cap is even appealable.</p>
   <ul class="check-list">
     <li><span class="check">MAI 1</span><span><b>Claim-line edit.</b> Units above the cap deny that line, but a genuinely repeated, separately timed service can often be split across additional lines with the correct modifier and supporting documentation.</span></li>
@@ -305,7 +304,7 @@
   </div>
   <p>Where MUE denials actually show up most in PT: a complete evaluation-linked treatment session billed alongside a same-day duplicate or follow-up unit of the same code, or a high-acuity visit genuinely running long enough to push one code past four units. Most of the time it's a workflow issue, two separate orders for what should have been one combined treatment session, rather than a coding decision, and the fix is upstream scheduling and order consolidation, not a modifier.</p>
 
-  <h2>Same-day evaluation and treatment: modifier 25 vs. 59</h2>
+  <h2 id="same-day-evaluation-and-treatment-modifier-25-vs-59">Same-day evaluation and treatment: modifier 25 vs. 59</h2>
   <p>A new patient getting a brief round of treatment the same day as the initial evaluation is routine in PT, and the evaluation codes are untimed, so they don't compete for the same time block as 97110/97140/97530 the way two timed procedure codes compete with each other. Where the confusion happens is when a specific payer's own edit set bundles the evaluation with same-day treatment codes, because the evaluation codes are E/M-adjacent service codes, not procedure codes, the correct override there is typically <b>modifier 25</b> (significant, separately identifiable service), not 59.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -320,10 +319,10 @@
   </div>
   <p>Applying 59 to an eval-versus-treatment bundle, or reaching for 25 between two procedure codes, is a common enough error that it's worth a specific chart-audit pass if a practice bills a high volume of same-day eval-plus-treatment visits. The underlying logic is simple once it's named: modifier 25 answers "was this E/M-type service separately identifiable," and modifier 59 answers "was this procedure distinct in time, structure, or session", two different questions, asked of two different code types, and neither modifier substitutes for the other.</p>
 
-  <h2>Is there an APTA or CMS exempt-pair list?</h2>
+  <h2 id="is-there-an-apta-or-cms-exempt-pair-list">Is there an APTA or CMS exempt-pair list?</h2>
   <p>We could not independently confirm a published APTA or CMS list of PT code pairs specifically exempted from needing a 59/X-modifier, the way some other specialties or code families have documented exemption lists elsewhere in Medicare policy. Treat any claim of a blanket PT exemption list, a vendor's marketing material, a coding cheat-sheet circulating without a citation, with the same skepticism this page asks you to apply to every other unverified figure in it, and default to checking the specific pair in the CMS lookup tool rather than assuming an exemption exists because a pair "always seems to pay together" in your own claims history. A pattern of a pair paying without a modifier isn't confirmation the edit doesn't apply; it can just as easily mean the payer's own edit implementation lags CMS's quarterly file, which is a data-quality risk, not a coverage guarantee.</p>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Check the modifier indicator for a pair before appending any override modifier, every time, not just the first time.</li>
@@ -352,7 +351,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Can we always bill 97140 and 97530 together if we add modifier 59?</summary><p>No. The modifier only overrides the edit if the pair's modifier indicator actually allows an override, and even then only when the documentation genuinely supports it. Appending 59 as a default response to a bundling edit, without the record showing manual therapy and therapeutic activities in separate, non-overlapping 15-minute time blocks, is exactly the pattern that draws a modifier-59 post-payment review. The modifier doesn't make the billing correct; the documentation does, and the modifier just states it.</p></details>
     <details class="faq-item"><summary>How is an MUE denial different from an NCCI bundling denial?</summary><p>They're separate edit systems entirely. An NCCI Procedure-to-Procedure edit compares two different codes billed the same date and decides whether the second is bundled into the first. A Medically Unlikely Edit compares the units billed of one single code against that code's own per-day cap, independent of what else was billed. A code can clear every PTP edit on the claim and still deny on its own MUE if too many units of it were billed in one day, and the two edits require entirely different fixes.</p></details>
@@ -364,16 +363,17 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates and quarterly NCCI/MUE revisions. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Sources and verification</h2>
+  <h2 id="sources-and-verification">Sources and verification</h2>
   <p>CMS's coding-and-billing pages, including the NCCI Procedure-to-Procedure Edits Lookup Tool and the MUE table, returned access errors to automated retrieval attempts made while researching this page, consistent with what the rest of this content cluster has encountered from the same domain. The modifier-indicator value for the 97140/97530 pair, and the specific MUE unit caps and MAI values for 97110, 97112, 97140, and 97530, are therefore reported from industry billing references rather than confirmed against CMS's primary files, and are flagged inline wherever cited. Verify current values in the CMS NCCI PTP Edits Lookup Tool and MUE table before relying on any of them operationally. Dated 2026-08-28.</p>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-physical-therapy.html">Physical therapy billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-physical-therapy-denials-appeals.html">Physical Therapy Claim Denials: Top Reasons and How to Appeal Them <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-physical-therapy-icd-10-diagnosis-coding.html">ICD-10 Codes for Physical Therapy: Specificity Rules That Prevent Denials <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="denials-management.html">Denial management services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -422,6 +422,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

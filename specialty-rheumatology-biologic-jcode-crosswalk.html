@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Rheumatology Biologic J-Code Crosswalk: HCPCS to Diagnosis | Verified RCM">
 <meta name="twitter:description" content="Rheumatology biologic J-code crosswalk: seven biologics matched to HCPCS J-code, administration code, and the specific ICD-10-CM diagnosis each covers.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,35 +225,25 @@
       <p class="lede">A biologic infusion claim can carry the right J-code, the right units, and a clean JW or JZ modifier and still deny, because the diagnosis code doesn't sit inside what the drug is actually FDA-labeled and payer-covered to treat. This guide crosswalks seven rheumatology biologics carrying real revenue: the HCPCS J-code, the administration-code family each one actually belongs to, and the specific ICD-10-CM subcode each labeled indication maps to, going past the five-drug summary in our main guide to cover the giant cell arteritis, ANCA vasculitis, and non-radiographic axial spondyloarthritis indications most crosswalks skip.</p>
       <div class="post-meta"><span class="muted">Reviewed by Phares A., MD &middot; Physiotherapist, CPC (AAPC) &middot; Part of our <a href="specialty-rheumatology.html">rheumatology billing and coding guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of a joint hinge with orbiting markers representing rheumatology">
-  <!-- upper limb segment -->
-  <path d="M150,140 L232,220" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-  <!-- lower limb segment -->
-  <path d="M232,220 L300,340" fill="none" stroke="var(--color-text)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- secondary parallel bone contours -->
-  <path d="M164,150 L246,228" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M246,232 L314,350" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- joint capsule -->
-  <circle cx="232" cy="220" r="34" fill="none" stroke="var(--muted)" stroke-width="2" />
-
-  <!-- range-of-motion arc -->
-  <path d="M180,268 A100,100 0 0 1 232,150" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" />
-
-  <!-- secondary hinge lines suggesting cartilage striations -->
-  <path d="M206,196 L212,242" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
-  <path d="M256,198 L252,244" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" />
-
-  <!-- orbiting inflammation marker dots (accent) -->
-  <circle cx="232" cy="220" r="58" fill="none" stroke="var(--muted)" stroke-width="1" stroke-dasharray="1 10" stroke-linecap="round" />
-  <circle cx="290" cy="188" r="5" fill="var(--cat-medical)" />
-  <circle cx="276" cy="266" r="3.5" fill="var(--cat-medical)" />
-  <circle cx="188" cy="196" r="3" stroke="var(--cat-medical)" stroke-width="2" fill="none" />
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/specialty-rheumatology-wide.svg" alt="Rheumatology: billing and coding guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#why-the-diagnosis-line-is-the-real-audit-target">Why the diagnosis line is the real audit target</a></li>
+      <li><a href="#the-seven-biologic-hcpcs-to-diagnosis-crosswalk">The seven-biologic HCPCS-to-diagnosis crosswalk</a></li>
+      <li><a href="#icd-10-specificity-inside-each-indication">ICD-10 specificity inside each indication</a></li>
+      <li><a href="#units-and-waste-have-to-trace-back-to-the-same-diagnosis-dri">Units and waste have to trace back to the same diagnosis-driven dose</a></li>
+      <li><a href="#do-and-dont">Do and don't</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -265,10 +254,10 @@
     </ul>
   </section>
 
-  <h2>Why the diagnosis line is the real audit target</h2>
+  <h2 id="why-the-diagnosis-line-is-the-real-audit-target">Why the diagnosis line is the real audit target</h2>
   <p>A payer's claims engine checks the J-code against the administered drug's NDC automatically, and a missing JW or JZ modifier kicks an unprocessable claim back within days, both are mechanical checks that fire regardless of clinical judgment. The diagnosis-to-drug match is different: it's a coverage decision, not a data-validation rule, and it's where CO-50 medical-necessity denials concentrate on biologic claims specifically. A claim can be flawless on units and modifiers and still deny because the diagnosis code doesn't sit inside the drug's FDA label, or inside the specific MAC's LCD-covered diagnosis list for that drug. Building the crosswalk once, per biologic, and checking every claim against it before submission is materially cheaper than working a CO-50 denial after the fact.</p>
 
-  <h2>The seven-biologic HCPCS-to-diagnosis crosswalk</h2>
+  <h2 id="the-seven-biologic-hcpcs-to-diagnosis-crosswalk">The seven-biologic HCPCS-to-diagnosis crosswalk</h2>
   <p>Five of these seven, infliximab, rituximab, tocilizumab, abatacept, and belimumab, appear in our main rheumatology guide's crosswalk table under their most common RA and SLE indications. This table adds golimumab and certolizumab pegol, and extends all seven to the indications outside RA and SLE a rheumatology practice is most likely to also bill: giant cell arteritis, ANCA-associated vasculitis, and axial spondyloarthritis in both its radiographic and non-radiographic forms.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -291,7 +280,7 @@
     <div><div class="protip-label">Pro tip</div><p>Certolizumab pegol (Cimzia) has no IV formulation, it's given as a subcutaneous injection, in-office or self-administered. J0717's own code descriptor limits it to when the drug is administered under the direct supervision of a physician, not when it's self-administered, meaning the code applies to the in-office scenario billed with 96372 and never alongside an infusion administration code. Crosswalking it into 96365/96366 because it sits next to infusion biologics on the same fee schedule is one of the more specific, avoidable errors in rheumatology J-code billing.</p></div>
   </div>
 
-  <h2>ICD-10 specificity inside each indication</h2>
+  <h2 id="icd-10-specificity-inside-each-indication">ICD-10 specificity inside each indication</h2>
   <p>The drug-to-diagnosis match isn't satisfied by billing any code from the right family, several of these indications have a specific-versus-unspecified split that a payer's coverage policy or step-therapy edit checks directly.</p>
   <ul class="check-list">
     <li><span class="check">RA</span><span><b>Seropositive versus seronegative.</b> Already covered in depth in our ICD-10 specificity guide for rheumatology, M05 for confirmed RF- or anti-CCP-positive disease, M06 for seronegative and unspecified presentations. It applies to every RA indication in the table above, not just infliximab.</span></li>
@@ -301,7 +290,7 @@
     <li><span class="check">SLE</span><span><b>Organ involvement, not just M32.10.</b> Also covered in the ICD-10 specificity guide, the specific M32.1x subcodes (M32.14 glomerular disease, M32.15 tubulo-interstitial nephropathy) are what support belimumab's lupus nephritis indication, where M32.10 alone does not.</span></li>
   </ul>
 
-  <h2>Units and waste have to trace back to the same diagnosis-driven dose</h2>
+  <h2 id="units-and-waste-have-to-trace-back-to-the-same-diagnosis-dri">Units and waste have to trace back to the same diagnosis-driven dose</h2>
   <p>Every biologic in the crosswalk above is dosed differently, and the billed units, the JW/JZ line, and the diagnosis code all have to reconcile against the same encounter. A units total that doesn't match the dose implied by the weight and diagnosis on file is as much of a red flag to a payer's system as a J-code that doesn't match the diagnosis at all.</p>
   <div class="data-table-wrap">
     <table class="data-table">
@@ -315,7 +304,7 @@
   </div>
   <p>The mechanics of JW and JZ themselves, mandatory since October 1, 2023, and the reason a missing modifier returns a single-dose-container claim as unprocessable rather than denied, are covered in full in our rheumatology infusion billing guide, with sequential-versus-concurrent infusion scenarios and start/stop-time documentation.</p>
 
-  <h2>Do and don't</h2>
+  <h2 id="do-and-dont">Do and don't</h2>
   <div class="dodont">
     <div class="dodont-col do"><div class="dodont-head"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L19 8"></path></svg> Do</div><ul>
       <li>Match every biologic claim's diagnosis code to the specific FDA-labeled indication being treated, not the practice's default diagnosis for that drug.</li>
@@ -339,7 +328,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Does the ICD-10 code on a biologic infusion claim have to match the drug's FDA label exactly?</summary><p>It has to fall within the drug's FDA-labeled indications and, separately, within whatever diagnosis list the payer's coverage policy or LCD names for that drug, the two aren't always identical, and a payer can cover a narrower set of diagnoses than the FDA label allows. Billing rituximab for an off-label rheumatologic use, for instance, is far more likely to trigger a CO-50 medical-necessity denial than billing it for RA, GPA, or MPA, even though the drug itself is administered identically either way.</p></details>
     <details class="faq-item"><summary>What's the ICD-10 coding difference between certolizumab for ankylosing spondylitis and for non-radiographic axial spondyloarthritis?</summary><p>Established ankylosing spondylitis is coded M45.0 through M45.9 by spinal region, while non-radiographic axial spondyloarthritis, disease with objective inflammation but without the sacroiliac joint damage that defines radiographic AS, has its own separate family, M45.A0 through M45.AB. Certolizumab pegol is FDA-labeled for both, but a payer's coverage policy for the nr-axSpA indication specifically checks for an M45.A code; billing the general M45.9 unspecified-AS code instead doesn't satisfy that check even when the clinical picture is genuinely non-radiographic.</p></details>
@@ -351,13 +340,14 @@
     <p><b>Verify before billing.</b> CPT is a registered trademark of the American Medical Association; codes here are paraphrased, not reproduced from the CPT Professional edition. CPT, HCPCS and ICD-10 codes, coverage policy, and bundling edits change, including annual code-set updates. This page reflects standard industry practice and is provided for general education, it is not a substitute for your own compliance review, your current payer contracts, or the current-year code sets. Confirm requirements against your specific payer mix before submitting claims.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="specialty-rheumatology.html">Our complete rheumatology billing and coding guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-rheumatology-biologic-infusion-billing.html">Rheumatology infusion billing: 96365&ndash;96368 and J-code units <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-rheumatology-icd10-specificity.html">ICD-10 coding for rheumatology: M05, M06, M32 and beyond <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="specialty-rheumatology-modifiers.html">Rheumatology billing modifiers: 25, 59, 50, JW/JZ explained <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -406,6 +396,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

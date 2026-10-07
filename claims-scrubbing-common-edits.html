@@ -19,9 +19,8 @@
 <meta name="twitter:title" content="Pre-Submission Edit Categories: NPI, Modifiers, Duplicates | Verified RCM">
 <meta name="twitter:description" content="The five pre-submission edit categories that catch a claim before it reaches the payer: NPI/taxonomy, modifiers, diagnosis-procedure mismatch, missing fields, and duplicates.">
 <meta name="twitter:image" content="https://www.verifiedrcm.com/images/og-cover.jpg">
-<link rel="preload" href="fonts/Quicksand-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/NunitoSans-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/lake.css?v=2.0">
+<link rel="preload" href="fonts/Inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=3.0">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalBusiness","@id":"https://www.verifiedrcm.com/#organization","name":"Verified RCM","legalName":"Verified RCM LLC","url":"https://www.verifiedrcm.com","logo":"https://www.verifiedrcm.com/images/logo.jpg","image":"https://www.verifiedrcm.com/images/og-cover.jpg","description":"Full-service medical billing, coding, credentialing and revenue cycle management for US healthcare practices.","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","address":{"@type":"PostalAddress","streetAddress":"117 S Lexington St, Ste 100","addressLocality":"Harrisonville","addressRegion":"MO","postalCode":"64701","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"foundingDate":"2025","sameAs":["https://www.linkedin.com/company/verified-rcm-llc","https://www.facebook.com/people/Verifiedrcmcom/61593343105381/","https://www.trustpilot.com/review/verifiedrcm.com"],"priceRange":"$$","contactPoint":[{"@type":"ContactPoint","telephone":"+1 (626) 646-1230","email":"info@verifiedrcm.com","contactType":"sales","areaServed":"US","availableLanguage":["English"]}],"knowsAbout":["Medical billing","Medical coding","Revenue cycle management","Provider credentialing","Payer enrollment","Denial management","Prior authorization","Insurance eligibility verification"]}
 </script>
@@ -226,41 +225,23 @@
       <p class="lede">Every scrubber runs the same five categories of checks, whether it's set up to or not. Naming them explicitly, and knowing which ones are actually catching something in your claims, is the difference between a scrubber that quietly earns its keep and one that just runs in the background.</p>
       <div class="post-meta"><span class="muted">Reviewed by Elena Vasquez, CPC &middot; Certified Professional Coder (AAPC) &middot; Part of our <a href="claims-scrubbing.html">claims scrubbing guide</a></span></div>
     </div>
-    <figure class="article-cover"><svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract line art of scattered claim points funneling down through filtering stages to a single clean, submitted claim">
-  <!-- incoming claims: scattered points above the funnel -->
-  <circle cx="140" cy="106" r="5" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="172" cy="118" r="4" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="204" cy="100" r="5" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="240" cy="112" r="4" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="276" cy="100" r="5" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="308" cy="118" r="4" fill="none" stroke="var(--muted)" stroke-width="2"/>
-  <circle cx="340" cy="106" r="5" fill="none" stroke="var(--muted)" stroke-width="2"/>
-
-  <!-- funnel: primary outer walls -->
-  <path d="M150,132 L240,330" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M330,132 L240,330" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- funnel: secondary inner converging lines -->
-  <path d="M178,132 L240,330" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M206,136 L240,330" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M274,136 L240,330" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M302,132 L240,330" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-
-  <!-- filter stages: sieve bars crossing the funnel, narrowing with it -->
-  <path d="M177,190 L303,190" fill="none" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M195,230 L285,230" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M213,270 L267,270" fill="none" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- convergence point: the one clean, scrubbed claim -->
-  <circle cx="240" cy="330" r="7" fill="var(--cat-medical-billing)"/>
-
-  <!-- submission: accented line and arrow leaving the funnel -->
-  <path d="M240,338 L240,372" fill="none" stroke="var(--cat-medical-billing)" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M228,360 L240,374 L252,360" fill="none" stroke="var(--cat-medical-billing)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></figure>
+    <figure class="article-cover"><img src="images/covers/banner/claims-scrubbing-wide.svg" alt="Claims scrubbing: billing process guide" width="1200" height="360" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<article class="wrap article">
+<article class="wrap article article-layout">
+  <details class="toc" open>
+    <summary>In this guide</summary>
+    <nav aria-label="In this guide">
+    <ol>
+      <li><a href="#the-five-categories-and-what-each-one-actually-catches">The five categories, and what each one actually catches</a></li>
+      <li><a href="#why-the-cost-gap-between-catching-it-early-and-catching-it-l">Why the cost gap between catching it early and catching it late is so large</a></li>
+      <li><a href="#building-the-payer-specific-layer-from-your-own-data">Building the payer-specific layer from your own data</a></li>
+      <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+      <li><a href="#related-resources">Related resources</a></li>
+    </ol>
+    </nav>
+  </details>
+  <div class="article-main">
   <section class="takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -271,7 +252,7 @@
     </ul>
   </section>
 
-  <h2>The five categories, and what each one actually catches</h2>
+  <h2 id="the-five-categories-and-what-each-one-actually-catches">The five categories, and what each one actually catches</h2>
   <p>Most of what a working scrubber flags falls into one of five buckets. They're not equally common in every practice, and they're not equally expensive when missed, but together they account for the large majority of what shows up as a preventable rejection or denial.</p>
   <p><b>NPI and taxonomy mismatches.</b> The rendering or billing NPI on the claim doesn't match what's on file with the payer, or the taxonomy code doesn't align with the specialty the payer has enrolled for that provider. A common variant: a group NPI used where the payer expects the individual rendering provider's NPI, or vice versa. This is a pure data-matching problem, nothing clinical about it, and it's entirely preventable by validating identifiers against payer enrollment records before the claim is generated, not after it's rejected.</p>
   <p><b>Missing or invalid modifiers.</b> A procedure that needs a modifier to be paid correctly goes out without one, or carries one the code pair doesn't actually support. This covers a wide range: a bilateral indicator left off a procedure performed on both sides, a distinct-service modifier missing from a pair that would otherwise bundle, a component-split modifier omitted on a study performed on equipment the practice doesn't own. Modifier logic is specialty- and procedure-specific enough that a generic scrubber catches only the most obvious violations; the rest need rules built around the practice's actual procedure mix.</p>
@@ -293,12 +274,12 @@
     </table>
   </div>
 
-  <h2>Why the cost gap between catching it early and catching it late is so large</h2>
+  <h2 id="why-the-cost-gap-between-catching-it-early-and-catching-it-l">Why the cost gap between catching it early and catching it late is so large</h2>
   <p>The same underlying error costs wildly different amounts depending on where in the process it's caught. Caught at data entry or by a pre-submission edit, it's a flagged line item and a correction, a few minutes of staff time, often resubmitted the same day, with no formal process attached to it at all.</p>
   <p>Caught after the claim has gone to the clearinghouse but before it reaches the payer, it's a rejection: still cheap, but now there's a resubmission cycle and, depending on the clearinghouse, a short delay while the corrected file is regenerated and re-transmitted. Caught only after the payer has adjudicated the claim, it's a denial: someone has to pull the chart, identify exactly what went wrong, document the correction, and in the diagnosis-procedure mismatch category specifically, sometimes build a case for a formal appeal with its own deadline and its own documentation requirements. None of that work exists if the same error is caught before the claim ever leaves the building.</p>
   <p>This is why the return on writing a pre-submission rule is so favorable compared with the alternative of reworking the same denial every time it recurs. A rule, once written, runs on every claim going forward at effectively zero marginal cost. Reworking a denial by hand costs real staff time every single occurrence, with no compounding benefit, the fourth occurrence of the same preventable denial costs exactly as much to work as the first one did.</p>
 
-  <h2>Building the payer-specific layer from your own data</h2>
+  <h2 id="building-the-payer-specific-layer-from-your-own-data">Building the payer-specific layer from your own data</h2>
   <p>Generic edit libraries, whether built into a clearinghouse or a practice management system, catch the universal cases: deleted codes, obviously malformed identifiers, the most basic bundling edits. What they cannot know is what your specific payer mix rejects on top of those baseline rules, because that information doesn't exist anywhere except in your own remittance history.</p>
   <p>The process for building that layer is the same regardless of which category the error falls into: pull denials and rejections by payer and by CARC code, sort them by volume, and for each recurring pattern ask whether a pre-submission check could have caught it. Where the answer is yes, and for the five categories above, it usually is, write the rule. A category that appears to be catching nothing isn't necessarily a category with no problems in it; it can just as easily mean the check was never actually built, and the errors it should be catching are reaching the payer instead, showing up as denials rather than pre-submission flags.</p>
 
@@ -307,7 +288,7 @@
     <a href="about.html#contact" class="btn btn-accent btn-lg">Book a free claims review</a>
   </div>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="frequently-asked-questions">Frequently asked questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>What are the most common pre-submission edit categories?</summary><p>Five categories catch nearly everything preventable: NPI and taxonomy mismatches, missing or invalid modifiers, diagnosis-procedure mismatch, missing required fields, and duplicate claims. Together they cover most of what shows up as CARC CO-16 (a submission or billing error preventing correct adjudication) and CO-18 (duplicate claim) on remittance advices.</p></details>
     <details class="faq-item"><summary>Why is catching an error before submission so much cheaper than catching it after?</summary><p>A pre-submission edit costs a flagged claim and a quick correction, often resubmitted the same day. The same error caught after the payer adjudicates the claim means working a denial: pulling the chart, documenting the correction, and in medical-necessity cases, sometimes filing a formal appeal with its own deadline. The gap is an order of magnitude in staff time, not a marginal difference.</p></details>
@@ -319,7 +300,7 @@
     <p><b>Confirm before you rely on this.</b> Payer edit rules, clearinghouse requirements and timely filing limits change and vary by payer. The process information on this page reflects standard industry practice as of August 2026 and is provided for general education, verify current requirements directly with your clearinghouse and payer mix before relying on it.</p>
   </div>
 
-  <h2>Related resources</h2>
+  <h2 id="related-resources">Related resources</h2>
   <ul class="related-list">
     <li><a href="claims-scrubbing.html">Our complete claims scrubbing guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="claims-scrubbing-clearinghouse-role.html">What a clearinghouse actually does <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
@@ -327,6 +308,7 @@
     <li><a href="claims-scrubbing-timely-filing.html">Timely filing limits <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
     <li><a href="service-revenue-cycle-management.html">Revenue cycle management <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
   </ul>
+</div>
 </article>
 </main>
 <footer class="site-footer">
@@ -375,6 +357,6 @@
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <!-- End TrustBox script -->
 <script src="js/main.js?v=3.1"></script>
-<script src="js/lake.js?v=1.0"></script>
+<script src="js/lake.js?v=3.0"></script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="General surgery, Billing and coding guide">
+  <defs>
+    <linearGradient id="bgspecialtygeneralsurgery" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#312e81"/><stop offset="1" stop-color="#4338ca"/></linearGradient>
+    <radialGradient id="glspecialtygeneralsurgery" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#5eead4" stop-opacity="0.5"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+    <pattern id="grspecialtygeneralsurgery" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <clipPath id="cpspecialtygeneralsurgery"><rect x="860" y="55" width="250" height="250" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bgspecialtygeneralsurgery)"/>
+  <rect width="1200" height="360" fill="url(#grspecialtygeneralsurgery)"/>
+  <rect width="1200" height="360" fill="url(#glspecialtygeneralsurgery)"/>
+  <circle cx="1040" cy="60" r="170" fill="#5eead4" fill-opacity="0.14"/>
+  <circle cx="1110" cy="280" r="110" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="860" y="55" width="250" height="250" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2"/>
+  <g clip-path="url(#cpspecialtygeneralsurgery)"><g transform="translate(880 75) scale(0.4375)">
+  <path d="M120,410 A210,210 0 0,1 405,155" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2.55" stroke-linecap="round" />
+  <line x1="169.3" y1="296.5" x2="191.7" y2="316.5" stroke="#ffffff" stroke-width="4.25" stroke-linecap="round" />
+  <line x1="203.3" y1="258.5" x2="225.7" y2="278.5" stroke="#ffffff" stroke-width="4.25" stroke-linecap="round" />
+  <line x1="237.3" y1="220.5" x2="259.7" y2="240.5" stroke="#ffffff" stroke-width="4.25" stroke-linecap="round" />
+  <line x1="271.3" y1="182.5" x2="293.7" y2="202.5" stroke="#ffffff" stroke-width="4.25" stroke-linecap="round" />
+  <line x1="296.8" y1="154" x2="319.2" y2="174" stroke="#ffffff" stroke-width="3.40" stroke-linecap="round" />
+  <line x1="155" y1="335" x2="325" y2="145" stroke="#5eead4" stroke-width="5.95" stroke-linecap="round" />
+  <circle cx="155" cy="335" r="4" fill="#5eead4" />
+  <circle cx="325" cy="145" r="4" fill="#5eead4" />
+</g></g>
+  <rect x="90" y="46" width="72" height="8" rx="4" fill="#5eead4"/>
+  <text x="90" y="78" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">SURGICAL SPECIALTY</text>
+  <text x="90" y="138" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="70" font-weight="800" fill="#ffffff" letter-spacing="-2">General</text>
+  <text x="90" y="214" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="70" font-weight="800" fill="#ffffff" letter-spacing="-2">surgery</text>
+  <text x="90" y="256" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#ffffff" fill-opacity="0.85">Billing and coding guide</text>
+  <text x="90" y="336" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
+</svg>
