@@ -227,3 +227,58 @@
   window.addEventListener('resize', onScroll);
   update();
 })();
+
+/* Booking: buttons marked data-book open the Google Calendar appointment page
+   in an on-site modal on wider screens. Phones (and anyone without JS) follow
+   the link to the booking page in a new tab. */
+(function () {
+  var links = document.querySelectorAll('a[data-book]');
+  if (!links.length) return;
+  var wide = window.matchMedia('(min-width: 721px)');
+  var modal, frame, lastFocus;
+
+  function build() {
+    modal = document.createElement('div');
+    modal.className = 'book-modal';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-label', 'Schedule a meeting');
+    modal.innerHTML =
+      '<div class="book-panel">' +
+        '<div class="book-top"><b>Schedule a 1:1 meeting</b>' +
+        '<button type="button" class="x-btn" aria-label="Close">&times;</button></div>' +
+        '<iframe title="Verified RCM booking calendar" loading="lazy"></iframe>' +
+      '</div>';
+    document.body.appendChild(modal);
+    frame = modal.querySelector('iframe');
+    modal.querySelector('.x-btn').addEventListener('click', close);
+    modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
+    });
+  }
+  function open(url) {
+    if (!modal) build();
+    if (frame.getAttribute('src') !== url) frame.setAttribute('src', url);
+    lastFocus = document.activeElement;
+    modal.classList.add('is-open');
+    document.documentElement.style.overflow = 'hidden';
+    modal.querySelector('.x-btn').focus();
+  }
+  function close() {
+    modal.classList.remove('is-open');
+    document.documentElement.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  Array.prototype.forEach.call(links, function (a) {
+    a.addEventListener('click', function (e) {
+      if (!wide.matches || e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+      e.preventDefault();
+      // The mobile drawer may be open; close it before showing the calendar.
+      var dc = document.getElementById('drawerClose');
+      var dr = document.getElementById('drawer');
+      if (dc && dr && dr.classList.contains('is-open')) dc.click();
+      open(a.href);
+    });
+  });
+})();
