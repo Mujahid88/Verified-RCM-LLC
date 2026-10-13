@@ -22,8 +22,8 @@ import re
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 os.chdir(ROOT)
 
-BOOK_URL = ('https://calendar.google.com/calendar/appointments/'
-            'AcZssZ3U1C2KDYLlRBricu1gqJ_M11FL3HOU4BsHH_k=?gv=true')
+BOOK_URL = ('https://calendar.google.com/calendar/appointments/schedules/'
+            'AcZssZ2a44N2r4fljSPaTLIcoMnq53pWUouBU1IKBIKwUflVU9A74LvjPVu96xokfunv_WsCTVBapsjn?gv=true')
 ATTRS = 'href="book.html"'  # book.html embeds BOOK_URL inline
 
 CSS_FROM, CSS_TO = 'css/site.css?v=3.0', 'css/site.css?v=3.1'
