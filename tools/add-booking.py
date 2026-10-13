@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-"""Points the site's consultation buttons at the Google Calendar booking page.
+"""Points the site's consultation buttons at book.html, which embeds the
+Google Calendar booking page (weekly free slots) inline.
 
 On every .html file in the repo root:
   1. Header "Book a consultation" button opens the booking page.
@@ -23,7 +24,7 @@ os.chdir(ROOT)
 
 BOOK_URL = ('https://calendar.google.com/calendar/appointments/'
             'AcZssZ3U1C2KDYLlRBricu1gqJ_M11FL3HOU4BsHH_k=?gv=true')
-ATTRS = 'href="%s" target="_blank" rel="noopener" data-book' % BOOK_URL
+ATTRS = 'href="book.html"'  # book.html embeds BOOK_URL inline
 
 CSS_FROM, CSS_TO = 'css/site.css?v=3.0', 'css/site.css?v=3.1'
 JS_FROM, JS_TO = 'js/lake.js?v=3.0', 'js/lake.js?v=3.1'

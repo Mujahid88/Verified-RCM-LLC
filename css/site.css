@@ -923,11 +923,9 @@ a.card:hover .card-cover img, a.card:hover .post-photo img { transform: scale(1.
   .article-layout { display: block; padding-top: 0; }
 }
 
-/* Booking modal and footer booking line ----------------------------------- */
+/* Booking page and footer booking line ------------------------------------ */
 .foot-book { margin: 0 0 12px; font-weight: 600; color: var(--ink-soft) !important; }
-.book-modal { position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center; padding: 24px; background: rgba(15,23,42,.55); }
-.book-modal.is-open { display: flex; }
-.book-panel { display: flex; flex-direction: column; width: min(960px, 100%); height: min(760px, 100%); background: var(--paper); border-radius: var(--radius); box-shadow: var(--shadow-lg); overflow: hidden; }
-.book-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--line); color: var(--ink); }
-.book-panel iframe { flex: 1; width: 100%; border: 0; background: var(--paper); }
-@media print { .book-modal { display: none !important; } }
+.book-embed { padding: 0; overflow: hidden; }
+.book-embed iframe { display: block; width: 100%; height: 760px; border: 0; background: var(--paper); }
+.book-alt { margin-top: 16px; font-size: .92rem; color: var(--ink-faint); }
+@media (max-width: 760px) { .book-embed iframe { height: 1100px; } }
