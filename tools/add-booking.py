@@ -23,7 +23,7 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 os.chdir(ROOT)
 
 BOOK_URL = ('https://calendar.google.com/calendar/appointments/schedules/'
-            'AcZssZ2a44N2r4fljSPaTLIcoMnq53pWUouBU1IKBIKwUflVU9A74LvjPVu96xokfunv_WsCTVBapsjn?gv=true')
+            'AcZssZ1WGEwYotyzCV8tFyElInAXPAnP3IUPj0jI2WYHC8R4Z3RbSIG8gNWNQlGis3R0TBGORcKQ1-fc?gv=true')
 ATTRS = 'href="book.html"'  # book.html embeds BOOK_URL inline
 
 CSS_FROM, CSS_TO = 'css/site.css?v=3.0', 'css/site.css?v=3.1'
