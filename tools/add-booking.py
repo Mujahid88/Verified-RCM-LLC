@@ -31,10 +31,10 @@ JS_FROM, JS_TO = 'js/lake.js?v=3.0', 'js/lake.js?v=3.1'
 
 FOOTER_RE = re.compile(
     r'(<a class="foot-phone"[^>]*>[^<]*</a>\n)(\s*)'
-    r'<a class="btn btn-solid" href="about\.html#contact">Book a free consultation</a>')
-HEADER_OLD = '<a class="btn btn-solid" href="about.html#contact">Book a consultation</a>'
+    r'<a class="btn btn-solid" href="contact\.html">Book a free consultation</a>')
+HEADER_OLD = '<a class="btn btn-solid" href="contact.html">Book a consultation</a>'
 HEADER_NEW = '<a class="btn btn-solid" %s>Book a consultation</a>' % ATTRS
-FREE_RE = re.compile(r'<a ([^>]*?)href="about\.html#contact"([^>]*)>Book a free consultation</a>')
+FREE_RE = re.compile(r'<a ([^>]*?)href="contact\.html"([^>]*)>Book a free consultation</a>')
 
 
 def footer(m):

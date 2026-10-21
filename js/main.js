@@ -517,6 +517,16 @@
           fail('Use digits only, e.g. (626) 646-1230.');
         }
       });
+      // A phone number needs an explicit text-message choice (agree or decline),
+      // so there is always a record of what the person chose.
+      var phone = form.querySelector('#cf-phone');
+      var smsYes = form.querySelector('#cf-sms-yes');
+      var smsNo = form.querySelector('#cf-sms-no');
+      if (phone && smsYes && smsNo && (phone.value || '').trim() && !smsYes.checked && !smsNo.checked) {
+        showError(smsYes, 'Please choose whether we may text you at this number.');
+        ok = false;
+        if (!firstBad) firstBad = smsYes;
+      }
       return ok;
     }
 

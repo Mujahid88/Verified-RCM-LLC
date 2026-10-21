@@ -392,6 +392,7 @@ a.card:hover > .ico { background: var(--p600); color: #fff; }
 .spec-empty.is-shown { display: block; }
 
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center; }
+#contact > .split { align-items: start; }
 .split-wide { grid-template-columns: 1.25fr .75fr; }
 .photo { border-radius: var(--radius); overflow: hidden; background: var(--surface-3); box-shadow: var(--shadow-md); border: 1px solid var(--line); }
 .photo picture { display: block; height: 100%; }
@@ -822,6 +823,17 @@ a.card:hover .card-cover img, a.card:hover .post-photo img { transform: scale(1.
 .field-error { display: flex; align-items: flex-start; gap: 6px; font-size: .78rem; font-weight: 600; color: var(--danger); margin: 0; }
 .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .cf-turnstile { margin-top: 20px; }
+
+/* Text message opt-in / opt-out choice on the contact form */
+.consent-group { border: 1px solid var(--line); border-radius: 12px; padding: 6px 18px 8px; margin: 0; min-width: 0; background: var(--surface-2); }
+.consent-group legend { font-size: .86rem; font-weight: 650; padding: 0 8px; margin-left: -8px; color: var(--ink); }
+.consent-option { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; }
+.consent-option + .consent-option { border-top: 1px solid var(--line); }
+.consent-option input[type="radio"] { flex: none; width: 18px; height: 18px; margin: 3px 0 0; padding: 0; border: 0; accent-color: var(--p600); cursor: pointer; }
+.consent-option label { display: block; font-size: .84rem; font-weight: 400; line-height: 1.6; color: var(--ink-soft); cursor: pointer; }
+.consent-option label a { font-weight: 600; }
+.consent-note { grid-column: 1 / -1; font-size: .78rem; color: var(--ink-faint); line-height: 1.6; margin: 0; max-width: none; }
+.consent-note a { font-weight: 600; }
 .form-actions { margin-top: 22px; }
 .form-actions .btn { width: 100%; }
 .form-trust { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); font-size: .8rem; color: var(--ink-faint); }
@@ -853,6 +865,12 @@ a.card:hover .card-cover img, a.card:hover .post-photo img { transform: scale(1.
 @media (max-width: 620px) { .hub-group .grid-3 { grid-template-columns: 1fr; } }
 
 /* 18. Responsive ----------------------------------------------------------- */
+/* The header is tight between the burger breakpoint and a wide desktop */
+@media (max-width: 1360px) {
+  .nav-search-input { width: 118px; }
+  .nav-search-input:focus { width: 210px; }
+  .nav-main a.nav-link { padding: 9px 9px; }
+}
 @media (max-width: 1180px) {
   .nav-main, .nav-search { display: none; }
   .burger { display: flex; }
@@ -911,6 +929,9 @@ a.card:hover .card-cover img, a.card:hover .post-photo img { transform: scale(1.
   .feature img { min-height: 220px; }
   .page-head, .art-head { padding-top: 40px; }
   .form-grid { grid-template-columns: 1fr; }
+  .form-body { padding: 20px 18px 22px; }
+  .form-header { padding: 20px 18px; }
+  .consent-group { padding: 4px 14px 6px; }
   .cred-steps li { grid-template-columns: 32px 1fr; }
   .cred-steps li::before { width: 28px; height: 28px; border-radius: 8px; font-size: .85rem; }
   div.cta-band { padding: 22px 20px; }

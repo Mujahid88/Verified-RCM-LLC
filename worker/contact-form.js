@@ -36,7 +36,7 @@ const DEFAULT_TO = 'info@verifiedrcm.com';
 const DEFAULT_FROM = 'Verified RCM Website <noreply@verifiedrcm.com>';
 
 /** Fields we accept. Anything else in the payload is ignored rather than forwarded. */
-const FIELDS = ['name', 'email', 'phone', 'practice', 'specialty', 'message'];
+const FIELDS = ['name', 'email', 'phone', 'practice', 'specialty', 'message', 'sms_consent'];
 
 const REQUIRED = ['name', 'email', 'practice', 'message'];
 
@@ -91,6 +91,18 @@ export default {
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email)) {
       return json({ ok: false, error: 'That email address does not look right.' }, 400, request, env);
+    }
+
+    // Text-message consent is explicit. Someone who gives a phone number must
+    // say yes or no; carriers expect proof of exactly what each person chose.
+    if (!['', 'yes', 'no'].includes(data.sms_consent)) {
+      return json({ ok: false, error: 'Please choose whether we may text you.' }, 400, request, env);
+    }
+    if (data.phone && data.sms_consent === '') {
+      return json(
+        { ok: false, error: 'Please choose whether we may text you at that number.' },
+        400, request, env,
+      );
     }
 
     const sent = await sendViaResend(data, request, env);
@@ -159,19 +171,37 @@ async function sendViaResend(data, request, env) {
 
   const country = request.headers.get('CF-IPCountry') || 'unknown';
 
+  // Consent only means something when there is a number to text.
+  let textConsent = 'Not applicable (no phone number given)';
+  if (data.phone) {
+    textConsent = data.sms_consent === 'yes'
+      ? 'YES: agreed to receive text messages from Verified RCM'
+      : 'NO: declined text messages. Do not text this number.';
+  }
+
   const rows = [
     ['Name', data.name],
     ['Email', data.email],
     ['Phone', data.phone || '—'],
+    ['Text messages', textConsent],
     ['Practice', data.practice],
     ['Specialty', data.specialty || '—'],
+  ];
+
+  // Proof of the choice: when, from where, and which wording the form showed.
+  const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+  const consentRecord = [
+    ['Recorded at', new Date().toISOString()],
+    ['Page', 'https://www.verifiedrcm.com/contact.html'],
+    ['IP address', ip],
+    ['Consent wording', 'contact-form-v1 (opt-in and opt-out options shown with Privacy Policy and Messaging Terms links)'],
   ];
 
   const html = `
     <div style="font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#1a1f2b;max-width:640px">
       <h2 style="margin:0 0 4px;font-size:18px">New practice review request</h2>
       <p style="margin:0 0 20px;color:#6b7488;font-size:13px">
-        Submitted from verifiedrcm.com/about.html${country !== 'unknown' ? ` · ${escapeHtml(country)}` : ''}
+        Submitted from verifiedrcm.com/contact.html${country !== 'unknown' ? ` · ${escapeHtml(country)}` : ''}
       </p>
       <table style="border-collapse:collapse;font-size:14px;width:100%">
         ${rows.map(([label, value]) => `
@@ -182,6 +212,15 @@ async function sendViaResend(data, request, env) {
       </table>
       <p style="margin:22px 0 6px;color:#6b7488;font-size:13px">What they need help with</p>
       <div style="white-space:pre-wrap;background:#f6f7f9;border-radius:6px;padding:14px;font-size:14px;line-height:1.6">${escapeHtml(data.message)}</div>
+      ${data.phone ? `
+      <p style="margin:22px 0 6px;color:#6b7488;font-size:13px">Text-message consent record</p>
+      <table style="border-collapse:collapse;font-size:12px;color:#6b7488">
+        ${consentRecord.map(([label, value]) => `
+          <tr>
+            <td style="padding:3px 12px 3px 0;white-space:nowrap;vertical-align:top">${label}</td>
+            <td style="padding:3px 0">${escapeHtml(value)}</td>
+          </tr>`).join('')}
+      </table>` : ''}
       <p style="margin:22px 0 0;color:#6b7488;font-size:12px">
         Reply to this email and it goes straight to ${escapeHtml(data.email)}.
       </p>
@@ -194,6 +233,7 @@ async function sendViaResend(data, request, env) {
     '',
     'What they need help with:',
     data.message,
+    ...(data.phone ? ['', 'Text-message consent record:', ...consentRecord.map(([label, value]) => `${label}: ${value}`)] : []),
   ].join('\n');
 
   try {
