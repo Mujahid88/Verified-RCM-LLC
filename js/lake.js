@@ -12,7 +12,7 @@
 
   var lastFocus = null;
   function setInert(on) {
-    ['main', 'site-footer', 'topbar'].forEach(function (id) {
+    ['main', 'site-footer'].forEach(function (id) {
       var el = id === 'main' ? main : document.querySelector('.' + id);
       if (!el) return;
       if (on) el.setAttribute('inert', ''); else el.removeAttribute('inert');

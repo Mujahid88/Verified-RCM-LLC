@@ -30,6 +30,12 @@ not have to be rewritten.
   variant for cluster articles) in `images/covers/banner/`, loaded with `<img>`.
   Banners are generated, not hand edited.
 - House style: no em dashes anywhere in copy.
+- **Kept plain on purpose (2026-10-23):** no top bar above the header, no tagline
+  under the logo, no small uppercase labels above headings, no chips or pills, and
+  no gradient, tinted or glow backgrounds: sections are white or light grey, the
+  call to action is solid blue, and the footer is dark navy. Cover banners use three
+  shades of one blue. `tools/declutter.py` removes those elements and rebuilds the
+  footer from one template; re-run it if an old copy of a page is pasted back in.
 
 Adding or changing content:
 

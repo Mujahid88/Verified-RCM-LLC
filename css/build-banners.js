@@ -103,6 +103,16 @@ const GROUPS = {
   'practice-growth':    { eyebrow: 'Practice growth',       sub: 'Growth guide',             from: '#164e63', to: '#0e7490', accent: '#fcd34d' },
 };
 
+// One hue family so the directory pages do not read as a rainbow: three shades
+// of the brand blue, with a single teal accent.
+const PALETTE = { A: ['#1e3a8a', '#2563eb'], B: ['#172554', '#1d4ed8'], C: ['#0f172a', '#1e40af'] };
+const SHADE = {
+  medical: 'A', 'primary-care': 'A', dental: 'A',
+  surgical: 'B', behavioral: 'B', 'medical-coding': 'B',
+  credentialing: 'C', 'medical-billing': 'C', 'practice-mgmt': 'C', 'practice-resources': 'C', 'practice-growth': 'C', therapy: 'C',
+};
+for (const [k, g] of Object.entries(GROUPS)) { [g.from, g.to] = PALETTE[SHADE[k]]; g.accent = '#5eead4'; }
+
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 // Recolour a glyph drawn for a light page so it reads on the dark banner.
@@ -162,14 +172,14 @@ function banner({ slug, label, group, glyphSlug, sub, wide }) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(label)}, ${esc(sub)}">
   <defs>
     <linearGradient id="bg${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${g.from}"/><stop offset="1" stop-color="${g.to}"/></linearGradient>
-    <radialGradient id="gl${id}" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="${g.accent}" stop-opacity="0.5"/><stop offset="1" stop-color="${g.accent}" stop-opacity="0"/></radialGradient>
+    <radialGradient id="gl${id}" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
     <pattern id="gr${id}" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
     <clipPath id="cp${id}"><rect x="${panelX}" y="${panelY}" width="${panel}" height="${panel}" rx="28"/></clipPath>
   </defs>
   <rect width="${W}" height="${H}" fill="url(#bg${id})"/>
   <rect width="${W}" height="${H}" fill="url(#gr${id})"/>
   <rect width="${W}" height="${H}" fill="url(#gl${id})"/>
-  <circle cx="1040" cy="${wide ? 60 : 130}" r="${wide ? 170 : 220}" fill="${g.accent}" fill-opacity="0.14"/>
+  <circle cx="1040" cy="${wide ? 60 : 130}" r="${wide ? 170 : 220}" fill="#ffffff" fill-opacity="0.07"/>
   <circle cx="1110" cy="${H - 80}" r="${wide ? 110 : 150}" fill="#ffffff" fill-opacity="0.06"/>
   <rect x="${panelX}" y="${panelY}" width="${panel}" height="${panel}" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="${g.accent}" stroke-opacity="0.55" stroke-width="2"/>
   <g clip-path="url(#cp${id})"><g transform="translate(${panelX + 20} ${panelY + 20}) scale(${scale.toFixed(4)})">${glyph}</g></g>
