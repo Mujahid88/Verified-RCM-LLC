@@ -149,45 +149,36 @@ function banner({ slug, label, group, glyphSlug, sub, wide }) {
   const glyphSrc = fs.readFileSync(path.join(COVERS, glyphSlug + '.svg'), 'utf8').trim();
   const glyph = recolourGlyph(glyphSrc, g.accent);
 
+  // Title and glyph only. The kicker, subtitle and wordmark that used to sit here were
+  // unreadable at card size and repeated the heading printed next to the image.
   const lines = titleLines(label);
   const longest = Math.max(...lines.map(l => l.length));
   const maxW = wide ? 640 : 660;
-  const baseSize = wide ? (lines.length > 1 ? 70 : 84) : 112;
+  const baseSize = wide ? (lines.length > 1 ? 74 : 88) : 118;
   const size = Math.max(40, Math.min(baseSize, Math.floor(maxW / (longest * 0.6))));
   const lead = Math.round(size * 1.08);
 
   const panel = wide ? 250 : 340;
   const panelX = wide ? 860 : 800;
-  const panelY = wide ? 55 : 145;
+  const panelY = Math.round((H - panel) / 2);
   const scale = (panel - 40) / 480;
-  const titleTop = wide ? (lines.length > 1 ? 138 : 160) : 292;
-  const eyebrowY = wide ? 78 : 178;
-  const barY = wide ? 46 : 118;
-  const subY = titleTop + (lines.length - 1) * lead + (wide ? 42 : 62);
+  const firstBaseline = Math.round(H / 2 - ((lines.length - 1) * lead) / 2 + size * 0.35);
 
   const titleSvg = lines.map((l, i) =>
-    `<text x="90" y="${titleTop + i * lead}" font-family="${FONT}" font-size="${size}" font-weight="800" fill="#ffffff" letter-spacing="-2">${esc(l)}</text>`).join('\n  ');
+    `<text x="90" y="${firstBaseline + i * lead}" font-family="${FONT}" font-size="${size}" font-weight="800" fill="#ffffff" letter-spacing="-2">${esc(l)}</text>`).join('\n  ');
 
   const id = slug.replace(/[^a-z0-9]/g, '');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(label)}, ${esc(sub)}">
   <defs>
     <linearGradient id="bg${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${g.from}"/><stop offset="1" stop-color="${g.to}"/></linearGradient>
-    <radialGradient id="gl${id}" cx="0.85" cy="0.2" r="0.6"><stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
-    <pattern id="gr${id}" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+    <pattern id="gr${id}" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/></pattern>
     <clipPath id="cp${id}"><rect x="${panelX}" y="${panelY}" width="${panel}" height="${panel}" rx="28"/></clipPath>
   </defs>
   <rect width="${W}" height="${H}" fill="url(#bg${id})"/>
   <rect width="${W}" height="${H}" fill="url(#gr${id})"/>
-  <rect width="${W}" height="${H}" fill="url(#gl${id})"/>
-  <circle cx="1040" cy="${wide ? 60 : 130}" r="${wide ? 170 : 220}" fill="#ffffff" fill-opacity="0.07"/>
-  <circle cx="1110" cy="${H - 80}" r="${wide ? 110 : 150}" fill="#ffffff" fill-opacity="0.06"/>
-  <rect x="${panelX}" y="${panelY}" width="${panel}" height="${panel}" rx="28" fill="#ffffff" fill-opacity="0.09" stroke="${g.accent}" stroke-opacity="0.55" stroke-width="2"/>
+  <rect x="${panelX}" y="${panelY}" width="${panel}" height="${panel}" rx="28" fill="#ffffff" fill-opacity="0.08" stroke="${g.accent}" stroke-opacity="0.5" stroke-width="2"/>
   <g clip-path="url(#cp${id})"><g transform="translate(${panelX + 20} ${panelY + 20}) scale(${scale.toFixed(4)})">${glyph}</g></g>
-  <rect x="90" y="${barY}" width="72" height="8" rx="4" fill="${g.accent}"/>
-  <text x="90" y="${eyebrowY}" font-family="${FONT}" font-size="${wide ? 20 : 24}" font-weight="600" fill="#ffffff" fill-opacity="0.85" letter-spacing="4">${esc(g.eyebrow.toUpperCase())}</text>
   ${titleSvg}
-  <text x="90" y="${subY}" font-family="${FONT}" font-size="${wide ? 24 : 30}" fill="#ffffff" fill-opacity="0.85">${esc(sub)}</text>
-  <text x="90" y="${H - (wide ? 24 : 70)}" font-family="${FONT}" font-size="${wide ? 20 : 22}" font-weight="600" fill="#ffffff" fill-opacity="0.7">Verified RCM</text>
 </svg>
 `;
 }

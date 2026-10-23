@@ -26,9 +26,10 @@ not have to be rewritten.
 - **Contents navigation:** every article page has a sticky "In this guide" list
   built from its `<h2>` headings (collapsed on phones, current section
   highlighted). It is static HTML, so crawlers see the anchor links.
-- **Cover banners:** each topic has a 1200x630 banner (and a 1200x360 `-wide`
-  variant for cluster articles) in `images/covers/banner/`, loaded with `<img>`.
-  Banners are generated, not hand edited.
+- **Cover banners:** each topic has a 1200x630 banner (used on cards) and a 1200x360
+  `-wide` variant (used at the top of every article) in `images/covers/banner/`,
+  loaded with `<img>`. They carry the topic title and a line-art glyph only; no
+  small print. Banners are generated, not hand edited.
 - House style: no em dashes anywhere in copy.
 - **Kept plain on purpose (2026-10-23):** no top bar above the header, no tagline
   under the logo, no small uppercase labels above headings, no chips or pills, and
@@ -36,6 +37,13 @@ not have to be rewritten.
   call to action is solid blue, and the footer is dark navy. Cover banners use three
   shades of one blue. `tools/declutter.py` removes those elements and rebuilds the
   footer from one template; re-run it if an old copy of a page is pasted back in.
+- **UX pass (2026-10-23):** one accent colour (blue) on tiles, steps, pills and bars,
+  with teal kept for ticks and the single positive result; labels in sentence case
+  instead of tracked capitals; no coloured side or top stripes on cards; header, hero,
+  article head and contents column share one left edge (`--maxw`); the footer has a
+  top row (logo, blurb, both buttons) over five even columns, and the Trustpilot
+  badge is a plain link, because the Trustpilot iframe centres itself and cannot be
+  aligned. `tools/polish.py` holds the markup side of this pass.
 
 Adding or changing content:
 
@@ -43,6 +51,8 @@ Adding or changing content:
 node css/build-covers.js      # only for a NEW page: inlines its pillar's line-art cover
 node css/build-banners.js     # regenerates every banner from images/covers/*.svg
 python tools/apply-clean.py   # swaps covers for banners, adds ids + the contents list
+python tools/polish.py        # short banner on every article, home hero tidy-up
+python tools/declutter.py     # footer template and cache-busting version numbers
 ```
 
 `apply-clean.py` is idempotent and safe to re-run. A new topic needs an entry in

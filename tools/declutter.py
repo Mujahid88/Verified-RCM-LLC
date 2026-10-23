@@ -20,7 +20,7 @@ import re
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 os.chdir(ROOT)
 
-CSS_VERSION, JS_VERSION = '3.7', '3.3'
+CSS_VERSION, JS_VERSION = '3.9', '3.3'
 
 TOPBAR_RE = re.compile(r'[ \t]*<div class="topbar">\s*<div class="shell">.*?</div>\s*</div>[ \t]*\r?\n?', re.S)
 TAGLINE_RE = re.compile(r'(<span class="brand-name">[^<]*)<small>.*?</small>', re.S)
@@ -40,25 +40,27 @@ REVIEW = '<a class="foot-review" href="https://www.trustpilot.com/review/verifie
 
 FOOTER = '''<footer class="site-footer">
   <div class="shell">
-    <div class="foot-top">
+    <div class="foot-head">
       <div class="foot-intro">
         <a class="foot-brand" href="index.html" aria-label="Verified RCM home"><img src="images/logo.jpg" alt="" width="40" height="40"><b>Verified RCM</b></a>
         <p>We believe a practice should be paid correctly for the care it already delivers. Verified RCM closes the gap between the visit and the payment.</p>
-        <ul class="foot-contact">
-          <li>%(phone)s<a href="tel:+16266461230">+1 (626) 646-1230</a></li>
-          <li>%(mail)s<a href="mailto:info@verifiedrcm.com">info@verifiedrcm.com</a></li>
-          <li>%(pin)s<span>117 S Lexington St, Ste 100<br>Harrisonville, MO 64701</span></li>
-        </ul>
+      </div>
+      <div class="foot-actions">
         <a class="btn btn-sun" href="book.html">Schedule a meeting</a>
         %(widget)s
       </div>
-      <nav class="foot-cols" aria-label="Site">
-        <div><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="contact.html">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
-        <div><h4>Services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
-        <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
-        <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 30 specialties</a></li></ul></div>
-      </nav>
     </div>
+    <nav class="foot-cols" aria-label="Site">
+      <div><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="blog.html">Our blog</a></li><li><a href="contact.html">Contact us</a></li><li><a href="https://sams.verifiedrcm.com">SAMS</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="service-practice-management.html">Practice management</a></li><li><a href="service-revenue-cycle-management.html">Revenue cycle management</a></li><li><a href="service-credentialing-enrollment.html">Credentialing &amp; enrollment</a></li><li><a href="prior-auth.html">Prior authorization</a></li><li><a href="medical-coding.html">Medical coding</a></li></ul></div>
+      <div><h4>Growth &amp; technology</h4><ul><li><a href="digital-marketing.html">Digital marketing</a></li><li><a href="seo-services.html">Healthcare SEO</a></li><li><a href="google-business-profile.html">Google Business Profile</a></li><li><a href="social-media-management.html">Social media management</a></li><li><a href="web-development.html">Web development</a></li><li><a href="virtual-assistant.html">Virtual assistants</a></li></ul></div>
+      <div><h4>Specialties</h4><ul><li><a href="specialty-internal-medicine.html">Internal medicine</a></li><li><a href="specialty-family-medicine.html">Family medicine</a></li><li><a href="specialty-pediatrics.html">Pediatrics</a></li><li><a href="specialty-urgent-care.html">Urgent care</a></li><li><a href="specialty-cardiology.html">Cardiology</a></li><li><a href="specialties.html">All 30 specialties</a></li></ul></div>
+      <div class="foot-contact"><h4>Contact</h4><ul>
+        <li>%(phone)s<a href="tel:+16266461230">+1 (626) 646-1230</a></li>
+        <li>%(mail)s<a href="mailto:info@verifiedrcm.com">info@verifiedrcm.com</a></li>
+        <li>%(pin)s<span>117 S Lexington St, Ste 100<br>Harrisonville, MO 64701</span></li>
+      </ul></div>
+    </nav>
     <div class="foot-bottom">
       <span>&copy; 2026 Verified RCM LLC. All rights reserved.</span>
       <nav class="foot-legal" aria-label="Legal">
@@ -87,14 +89,8 @@ for path in sorted(glob.glob('*.html')):
     out = TAGLINE_RE.sub(r'\1', out)
     out = LABEL_RE.sub('', out)
     fm = FOOTER_RE.search(out)
-    if fm and 'class="foot-top"' not in fm.group(0):
+    if fm and 'class="foot-head"' not in fm.group(0):
         out = out.replace(fm.group(0), new_footer(fm.group(0), eol), 1)
-    elif fm and WIDGET_RE.search(fm.group(0)):
-        # footer already rebuilt: swap the Trustpilot iframe for the plain link
-        out = out.replace(fm.group(0), WIDGET_RE.sub(lambda _: REVIEW, fm.group(0), 1), 1)
-    elif fm and 'class="foot-review"' not in fm.group(0):
-        # a few pages never had the badge: add the link after the booking button
-        out = out.replace(fm.group(0), BOOK_RE.sub(lambda b: b.group(0) + eol + '        ' + REVIEW, fm.group(0), 1), 1)
     out = re.sub(r'css/site\.css\?v=[\d.]+', 'css/site.css?v=' + CSS_VERSION, out)
     out = re.sub(r'js/lake\.js\?v=[\d.]+', 'js/lake.js?v=' + JS_VERSION, out)
     if out != src:

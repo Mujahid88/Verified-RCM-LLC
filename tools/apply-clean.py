@@ -72,10 +72,9 @@ def swap_assets(src):
 
 
 def banner_img(base, pillar):
-    pillar_page = (base == pillar)
-    name = pillar + ('' if pillar_page else '-wide')
+    name = pillar + '-wide'   # the short banner on every article, pillar or cluster
     meta = MANIFEST[pillar]
-    h = 630 if pillar_page else 360
+    h = 360
     alt = htmllib.escape(f"{meta['label']}: {meta['sub'].lower()}", quote=True)
     return (f'<img src="images/covers/banner/{name}.svg" alt="{alt}" width="1200" height="{h}" '
             f'fetchpriority="high" decoding="async">')
