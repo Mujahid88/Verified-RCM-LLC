@@ -472,7 +472,11 @@ a.card:hover > .ico { background: var(--p600); color: #fff; }
 .foot-contact svg { flex: none; width: 17px; height: 17px; margin-top: 3px; color: var(--p300); }
 .foot-contact a { color: #fff; text-decoration: none; font-weight: 600; }
 .foot-contact a:hover { text-decoration: underline; text-underline-offset: 3px; }
-.trustpilot-widget { margin-top: 6px; min-height: 52px; width: 220px; max-width: 100%; }
+.foot-intro .btn, .foot-review { box-sizing: border-box; width: 210px; max-width: 100%; min-height: 46px; justify-content: center; }
+.foot-review { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; padding: 0 10px; height: 46px; border: 1px solid rgba(255,255,255,.32); border-radius: 10px; color: #fff; text-decoration: none; font-size: .92rem; }
+.foot-review:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.6); }
+.foot-review b { font-weight: 700; }
+.foot-review svg { flex: none; width: 16px; height: 16px; }
 .foot-cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
 .foot-cols h4 { margin: 0 0 16px; color: #fff; font-size: .95rem; font-weight: 650; letter-spacing: -.005em; }
 .foot-cols ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
