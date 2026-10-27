@@ -645,6 +645,12 @@ div.cta-band p { color: var(--ink-faint); margin: 0; font-size: .96rem; max-widt
 div.cta-band .btn { flex: none; background: var(--p600); color: #fff; border-color: var(--p600); }
 div.cta-band .btn:hover { background: var(--p700); border-color: var(--p700); }
 
+/* Paid placement: always labelled, and visibly separate from the editorial text around it */
+.sponsored { background: var(--surface-2); border: 1px solid var(--line-strong); border-radius: var(--radius); padding: 22px 26px; margin: 30px 0; }
+.sponsored-label { margin: 0 0 12px; font-size: .86rem; font-weight: 650; color: var(--ink-faint); }
+.sponsored p:not(.sponsored-label) { font-size: 1rem; }
+.sponsored p:last-child { margin-bottom: 0; }
+
 .content-disclaimer { display: flex; gap: 12px; align-items: flex-start; background: var(--surface-2); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin: 30px 0; font-size: .86rem; color: var(--ink-faint); }
 .content-disclaimer svg { flex: none; width: 18px; height: 18px; color: var(--p600); margin-top: 2px; }
 .content-disclaimer p { margin: 0; max-width: none; font-size: .86rem; line-height: 1.6; }

@@ -20,7 +20,7 @@ import re
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 os.chdir(ROOT)
 
-CSS_VERSION, JS_VERSION = '3.9', '3.3'
+CSS_VERSION, JS_VERSION = '3.10', '3.3'
 
 TOPBAR_RE = re.compile(r'[ \t]*<div class="topbar">\s*<div class="shell">.*?</div>\s*</div>[ \t]*\r?\n?', re.S)
 TAGLINE_RE = re.compile(r'(<span class="brand-name">[^<]*)<small>.*?</small>', re.S)
