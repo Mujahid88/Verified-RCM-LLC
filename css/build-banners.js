@@ -64,6 +64,7 @@ const TOPICS = {
   'claims-forms': ['Claim forms', 'medical-billing'],
   'denials-management': ['Denials management', 'medical-billing'],
   'accounts-receivable-recovery': ['A/R recovery', 'medical-billing'],
+  'care-management': ['Care management', 'medical-billing'],
   'medical-coding': ['Medical coding', 'medical-coding'],
   // Practice
   'practice-licensing': ['Practice licensing', 'practice-mgmt'],

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Care management, Billing process guide">
+  <defs>
+    <linearGradient id="bgcaremanagement" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e40af"/></linearGradient>
+    <pattern id="grcaremanagement" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/></pattern>
+    <clipPath id="cpcaremanagement"><rect x="860" y="55" width="250" height="250" rx="28"/></clipPath>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bgcaremanagement)"/>
+  <rect width="1200" height="360" fill="url(#grcaremanagement)"/>
+  <rect x="860" y="55" width="250" height="250" rx="28" fill="#ffffff" fill-opacity="0.08" stroke="#5eead4" stroke-opacity="0.5" stroke-width="2"/>
+  <g clip-path="url(#cpcaremanagement)"><g transform="translate(880 75) scale(0.4375)">
+  <rect x="140" y="120" width="200" height="250" rx="18" fill="none" stroke="#ffffff" stroke-width="5.10" stroke-linejoin="round"/>
+  <line x1="214" y1="348" x2="266" y2="348" stroke="#ffffff" stroke-opacity=".7" stroke-width="3.40" stroke-linecap="round"/>
+  <path d="M240,238 C198,210 202,166 226,166 C234,166 239,171 240,177 C241,171 246,166 254,166 C278,166 282,210 240,238 Z" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="4.25" stroke-linejoin="round"/>
+  <path d="M160,296 L204,296 L220,268 L238,322 L256,282 L268,296 L320,296" fill="none" stroke="#5eead4" stroke-width="5.10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="344" cy="142" r="34" fill="none" stroke="#5eead4" stroke-width="5.10"/>
+  <path d="M329,142 L340,153 L361,129" fill="none" stroke="#5eead4" stroke-width="5.95" stroke-linecap="round" stroke-linejoin="round"/>
+</g></g>
+  <text x="90" y="166" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="74" font-weight="800" fill="#ffffff" letter-spacing="-2">Care</text>
+  <text x="90" y="246" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="74" font-weight="800" fill="#ffffff" letter-spacing="-2">management</text>
+</svg>

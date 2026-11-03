@@ -209,6 +209,11 @@
   "sub": "Billing process guide",
   "group": "medical-billing"
  },
+ "care-management": {
+  "label": "Care management",
+  "sub": "Billing process guide",
+  "group": "medical-billing"
+ },
  "medical-coding": {
   "label": "Medical coding",
   "sub": "Coding guide",
